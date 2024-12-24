@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Divi Gear Logo Showcase
-Plugin URI:  https://www.divigear.com/
+Plugin URI:  https://tanvir.instawp.xyz/logo-showcase/
 Description: The Logo Showcase Module for Divi is a specialized module designed to help users display logos on their websites in an attractive and organized way.
 Version:     1.0.0
 Author:      http://tanvir.instawp.xyz/
