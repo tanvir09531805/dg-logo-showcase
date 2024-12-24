@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
 import $ from 'jquery';
-import dgls_process_bg from '../../../scripts/dgls_process_bg';
+// import dgls_process_bg from '../../../scripts/dgls_process_bg';
 // Internal Dependencies
 import './style.css';
 
@@ -75,12 +75,12 @@ class DgLogoShowcase extends Component {
         if(this.props.dgl_bg_gradient_use_gradient==='on'){
           
           let gColor1      = this.props.dgl_bg_gradient_color_gradient_1;
-          let gColor1Start = this.props.dgl_bg_gradient_start_position;
+          let gColor1Start = this.props.dgl_bg_gradient_start_position?this.props.dgl_bg_gradient_start_position:'0%';
           let gColor2      = this.props.dgl_bg_gradient_color_gradient_2;
-          let gColor2End   = this.props.dgl_bg_gradient_end_position;
+          let gColor2End   = this.props.dgl_bg_gradient_end_position?this.props.dgl_bg_gradient_end_position: '100%';
 
-          let gLinearDirection = this.props.dgl_bg_gradient_gradient_direction;
-          let gRadialDirection = this.props.dgl_bg_gradient_radial_direction;
+          let gLinearDirection = this.props.dgl_bg_gradient_gradient_direction?this.props.dgl_bg_gradient_gradient_direction:'180deg';
+          let gRadialDirection = this.props.dgl_bg_gradient_radial_direction ? this.props.dgl_bg_gradient_radial_direction : "center";
 
           if(this.props.dgl_bg_gradient_gradient_type==='radial'){
 
@@ -89,23 +89,21 @@ class DgLogoShowcase extends Component {
               const gRadialD = gRadialDirection.split('_');
               radialDirection = `${gRadialD[0]} ${gRadialD[1]}`;
             }else{
-              radialDirection = gRadialDirection ? gRadialDirection : "center";
+              radialDirection = gRadialDirection;
             }
-
             element.style.backgroundImage = `radial-gradient(circle at ${radialDirection}, ${gColor1} ${gColor1Start}, ${gColor2} ${gColor2End})`;
             
           }else{
             element.style.backgroundImage = `linear-gradient(${gLinearDirection}, ${gColor1} ${gColor1Start}, ${gColor2} ${gColor2End})`;
-            
           }
-
           element.style.backgroundColor = '';
-
         }else{
           element.style.backgroundImage = '';
           element.style.backgroundColor = `${bgColorToEachLogo}`;
-        }
 
+          // console.log('Gradient Off');
+        }
+        // console.log('Change background color each logo');
       });
     }
   }
@@ -278,10 +276,10 @@ class DgLogoShowcase extends Component {
       return {__html: this.state.logos};
   }
 
-  
+  /*
   static css(props) {
     const additionalCss = [];
-    /*
+    
     additionalCss.push([{
         selector:    '%%order_class%% .c4-izmir',
         declaration: `--border-radius: 0px;`,
@@ -293,34 +291,31 @@ class DgLogoShowcase extends Component {
           declaration: `--image-opacity: 1;`,
       }]);
     }
-    */
-   
-  /*
-  const defaults = {
-      'props': props,
-      'key': '',
-      'additionalCss': additionalCss,
-      'selector': '',
-      'hover': '',
-      'important': false,
-  }
-  // const settings = this.extend(defaults, options);
-
-  const background = new dgls_process_bg(defaults);
-  // background.set_style();
-
-    if(props.logo_bg_color !== 'on') {
-      additionalCss.push([{
-          selector:    '%%order_class%% .dgl-showcase',
-          declaration: background.set_style(), //`--image-opacity: 1;`,
-      }]);
+    
+      
+    const defaults = {
+        'props': props,
+        'key': '',
+        'additionalCss': additionalCss,
+        'selector': '',
+        'hover': '',
+        'important': false,
     }
-    return additionalCss;
-  */
+    // const settings = this.extend(defaults, options);
+
+    const background = new dgls_process_bg(defaults);
+    // background.set_style();
+
+      if(props.logo_bg_color !== 'on') {
+        additionalCss.push([{
+            selector:    '%%order_class%% .dgl-showcase',
+            declaration: background.set_style(), //`--image-opacity: 1;`,
+        }]);
+      }
+      return additionalCss;
 
   }
-  
-
+  */
 
   render() {
     
