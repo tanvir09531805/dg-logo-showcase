@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Divi Gear Logo Showcase
+Plugin Name: DG Logo Showcase 4-5
 Plugin URI:  https://www.divigear.com/
-Description: The Logo Showcase Module for Divi is a specialized module designed to help users display logos on their websites in an attractive and organized way.
+Description: The DG Logo Showcase Module for Divi is a specialized module designed to help users display logos on their websites in an attractive and organized way.
 Version:     1.0.0
 Author:      http://tanvir.instawp.xyz/
 Author URI:  mailto:tanvir@echoasoft.com
@@ -141,14 +141,6 @@ function dgls_logo_processing($logo_image_ids, $logo_info, $logo_info_position, 
  */
 function dgls_render_image() {
     // Check nonce for security
-    // check_ajax_referer('et_admin_load_nonce', 'et_admin_load_nonce');
-
-    // Get the image IDs from the request
-    // $logo_image_ids = isset($_POST['image_ids']) ? explode(',', sanitize_text_field($_POST['image_ids'])) : [];
-    // if (empty($logo_image_ids)) {
-    //     wp_send_json_error('No image IDs provided.');
-    //     wp_die();
-    // }
     
     // $logo_size = isset($_POST['logo_size']) ? sanitize_text_field($_POST['logo_size']) : 'medium'; // 'medium';
     $logo_image_ids= sanitize_text_field($_POST['image_ids']);
@@ -169,42 +161,7 @@ function dgls_render_image() {
     $show_description  = sanitize_text_field($_POST['show_description']);
     $stagger_animation = sanitize_text_field($_POST['stagger_animation']);
 
-  /*
-    $logoWidth  = '';
-    $logoHeight = '';
-    $default_image = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSI1NDAiIHZpZXdCb3g9IjAgMCAxMDgwIDU0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0iI0VCRUJFQiIgZD0iTTAgMGgxMDgwdjU0MEgweiIvPgogICAgICAgIDxwYXRoIGQ9Ik00NDUuNjQ5IDU0MGgtOTguOTk1TDE0NC42NDkgMzM3Ljk5NSAwIDQ4Mi42NDR2LTk4Ljk5NWwxMTYuMzY1LTExNi4zNjVjMTUuNjItMTUuNjIgNDAuOTQ3LTE1LjYyIDU2LjU2OCAwTDQ0NS42NSA1NDB6IiBmaWxsLW9wYWNpdHk9Ii4xIiBmaWxsPSIjMDAwIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz4KICAgICAgICA8Y2lyY2xlIGZpbGwtb3BhY2l0eT0iLjA1IiBmaWxsPSIjMDAwIiBjeD0iMzMxIiBjeT0iMTQ4IiByPSI3MCIvPgogICAgICAgIDxwYXRoIGQ9Ik0xMDgwIDM3OXYxMTMuMTM3TDcyOC4xNjIgMTQwLjMgMzI4LjQ2MiA1NDBIMjE1LjMyNEw2OTkuODc4IDU1LjQ0NmMxNS42Mi0xNS42MiA0MC45NDgtMTUuNjIgNTYuNTY4IDBMMTA4MCAzNzl6IiBmaWxsLW9wYWNpdHk9Ii4yIiBmaWxsPSIjMDAwIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz4KICAgIDwvZz4KPC9zdmc+Cg==';
-
-    // Prepare an array to store image data
-    $images_data = [];
-    $logoImages ='';
-    foreach ($image_ids as $id) {
-        $id          = intval($id); // Ensure it's an integer
-        // $logoUrl  = wp_get_attachment_url($id);
-        $image_url   = wp_get_attachment_image_src($id, $logo_size);
-        $logoUrl     = !empty($image_url) && !is_bool($image_url[0]) ? $image_url[0] : $default_image;
-        $logoAlt     = get_post_meta($id, '_wp_attachment_image_alt', true);
-        $logoUrlExtra= get_post_meta($id, 'df_ig_url', true); // this is out site url add by divi flash 
-        $logoTitle   = get_the_title($id);
-        $logoCaption = wp_get_attachment_caption($id);
-
-        if ($logoUrl) {
-            $logoImages .= sprintf(
-                '<span class="dgl-showcase">
-                    <img class="dgls-image" src="%1$s" alt="%2$s" class="" width="%3$s" height="%4$s"/>
-                </span>',
-                esc_attr( $logoUrl ),
-                esc_attr( $logoAlt ),
-                esc_attr( $logoWidth ),
-                esc_attr( $logoHeight )
-            );
-        }
-    }
-  */
-
     $logoImages = dgls_logo_processing($logo_image_ids, $logo_info, $logo_info_position, $show_description, $show_caption, $custom_link, $logo_bg_color, $logo_size,  $logo_width, $logo_height, $logo_padding, $logo_margin, $target_link, $h_alignment, $v_alignment, $hover_effects, $stagger_animation);
-	// echo '<pre>';
-	// var_dump($images_data);
-	// exit();
 
     // Send the image data as JSON response
     wp_send_json_success($logoImages);
@@ -256,14 +213,7 @@ trait LogoShowcaseFun {
      * 
      */
     function dgls_margin_padding(&$fields, $options, $type ) {
-        // $options = array(
-        //     'title'         => 'Button',
-        //     'key'           => 'button',
-        //     'toggle_slug'   => 'custom_spacing',
-        //     'show_if'       => array(
-        //         'type'      => 'button'
-        //     )
-        // );
+        
         $key = $options['key'] . '_' . $type;
  
         $fields[$key] = array(

@@ -32,7 +32,7 @@ class DGLS_LogoShowcase extends ET_Builder_Module {
 			// advanced = Design
             'advanced'   => array(
                 'toggles'=> array(
-                    'font_styles' => array (
+                    'font_styles'     => array (
                         'title'             => esc_html__('Font Styles', 'et_builder'),
                         'tabbed_subtoggles' => true,
                         'sub_toggles' => array(
@@ -44,11 +44,11 @@ class DGLS_LogoShowcase extends ET_Builder_Module {
                             )
                         ),
                     ),
-                    'dgls_adv_logo'  => esc_html__('Logos', 'et_builder'),  // this setting show in get_fields();
+                    'dgls_adv_logo'   => esc_html__('Logos', 'et_builder'),  // this setting show in get_fields();
                     'dgls_logo_filter'=> esc_html__('Logo Filter', 'et_builder'),
-                    'dgls_box_shadow'=> esc_html__('Logo Box Shadow', 'et_builder'),
-                    'dgls_borders'   => esc_html__('Logo Borders', 'et_builder'),
-                    'dgls_spacing'   => esc_html__('Logo Spacing', 'et_builder'),
+                    'dgls_box_shadow' => esc_html__('Logo Box Shadow', 'et_builder'),
+                    'dgls_borders'    => esc_html__('Logo Borders', 'et_builder'),
+                    'dgls_spacing'    => esc_html__('Logo Spacing', 'et_builder'),
                 ),
             ),
 			// custom_css = Advanced
@@ -73,8 +73,8 @@ class DGLS_LogoShowcase extends ET_Builder_Module {
 
 		// general > General Settings
         $general_settings = array (
-            'logos_in_a_row'    => array(
-                'label'    => esc_html__('Logos in a row', 'et_builder'),
+            'logos_in_a_row'  => array(
+                'label'         => esc_html__('Logos in a row', 'et_builder'),
                 'type'          => 'select',
                 'options'       => array (
                     'logo_1'    => esc_html__('Logo 1', 'et_builder'),
@@ -86,12 +86,12 @@ class DGLS_LogoShowcase extends ET_Builder_Module {
                     'logo_7'    => esc_html__('Logo 7', 'et_builder'),
                     'logo_8'    => esc_html__('Logo 8', 'et_builder'),
                     'logo_9'    => esc_html__('Logo 9', 'et_builder'),
-                    'logo_10'    => esc_html__('Logo 10', 'et_builder'),
-                    'logo_11'    => esc_html__('Logo 11', 'et_builder'),
-                    'logo_12'    => esc_html__('Logo 12', 'et_builder'),
+                    'logo_10'   => esc_html__('Logo 10', 'et_builder'),
+                    'logo_11'   => esc_html__('Logo 11', 'et_builder'),
+                    'logo_12'   => esc_html__('Logo 12', 'et_builder'),
                 ),
-                'default'       => 'logo_5',
-                'toggle_slug'   => 'general_settings',
+                'default'     => 'logo_5',
+                'toggle_slug' => 'general_settings',
             ),
             'use_logo_orientation' => array(
                 'label'       => esc_html__('Use Logo Orientation', 'et_builder'),
@@ -103,7 +103,7 @@ class DGLS_LogoShowcase extends ET_Builder_Module {
                 'default'     => 'off',
                 'toggle_slug' => 'general_settings',
             ),
-            'logo_orientation'    => array(
+            'logo_orientation'=> array(
                 'label'    => esc_html__('Logo Orientation', 'et_builder'),
                 'type'          => 'select',
                 'options'       => array (
@@ -205,25 +205,25 @@ class DGLS_LogoShowcase extends ET_Builder_Module {
             ),
 
             'logo_info' => array(
-                'label'       => esc_html__('Logo info', 'et_builder'),
-                'type'        => 'yes_no_button',
-                'options'     => array (
+                'label'   => esc_html__('Logo info', 'et_builder'),
+                'type'    => 'yes_no_button',
+                'options' => array (
                     'off' => esc_html__( 'Off', 'et_builder' ),
 					'on'  => esc_html__( 'On', 'et_builder' ),
                 ),
                 'default'     => 'off',
                 'toggle_slug' => 'general_settings',
             ),
-            'content_position'    => array(
+            'content_position'=> array(
                 'label'         => esc_html__('Content Position', 'et_builder'),
                 'type'          => 'select',
                 'options'       => array (
-                    'top-left'        => esc_html__('Top Left', 'et_builder'),
-                    'top-center'      => esc_html__('Top Center', 'et_builder'),
-                    'top-right'       => esc_html__('Top Right', 'et_builder'),
-                    'bottom-left'     => esc_html__('Bottom Left', 'et_builder'),
-                    'bottom-center'   => esc_html__('Bottom Center', 'et_builder'),
-                    'bottom-right'    => esc_html__('Bottom Right', 'et_builder')
+                    'top-left'     => esc_html__('Top Left', 'et_builder'),
+                    'top-center'   => esc_html__('Top Center', 'et_builder'),
+                    'top-right'    => esc_html__('Top Right', 'et_builder'),
+                    'bottom-left'  => esc_html__('Bottom Left', 'et_builder'),
+                    'bottom-center'=> esc_html__('Bottom Center', 'et_builder'),
+                    'bottom-right' => esc_html__('Bottom Right', 'et_builder')
                 ),
                 'default'       => 'bottom-center',
                 'toggle_slug'   => 'general_settings',
@@ -486,8 +486,6 @@ class DGLS_LogoShowcase extends ET_Builder_Module {
             $marginPadding,
             $dgl_bg_gradient
         );
-		
-
 	}
    
     public function get_advanced_fields_config() {
@@ -551,8 +549,6 @@ class DGLS_LogoShowcase extends ET_Builder_Module {
         
     }
  
-
- 
 	public function return_data_value($value) {
 		return (!empty($value)) ? $value : '';
 	}
@@ -572,17 +568,12 @@ class DGLS_LogoShowcase extends ET_Builder_Module {
 
     public function additional_css_styles($render_slug) {
         
-        // ET_Builder_Element::set_style($render_slug, array(
-        //     'selector' => '%%order_class%% .c4-izmir',
-        //     'declaration' => '--border-radius: 0px;'
-        // ));
-        
         // background: Logo Color
         $this->dgls_process_bg(array(
-            'render_slug'       => $render_slug,
-            'slug'              => 'dgl_bg_gradient',
-            'selector'          => '%%order_class%% .dgl-showcase',
-            'hover'             => '%%order_class%% .dgl-showcase:hover'
+            'render_slug' => $render_slug,
+            'slug'        => 'dgl_bg_gradient',
+            'selector'    => '%%order_class%% .dgl-showcase',
+            'hover'       => '%%order_class%% .dgl-showcase:hover'
         ));
 
     }
@@ -616,14 +607,6 @@ class DGLS_LogoShowcase extends ET_Builder_Module {
         $logo_info_position = $this->props['content_position'];
         $logo_bg_color = $this->props['logo_bg_color'];
         
-        /*
-            $dgl_bg_gradient = $this->props['dgl_bg_gradient'];
-            $dgl_bg_gradient = $this->props;
-            echo '<pre>';
-            var_dump($dgl_bg_gradient);
-            echo '</pre>';
-        */
-
         $logo_margin  = $this->props['logo_spacing_margin']; // 11px|17px|13px|15px|false|false
         $logo_padding = $this->props['logo_spacing_padding']; // 10px|16px|12px|14px|false|false
 

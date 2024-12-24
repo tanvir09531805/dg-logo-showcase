@@ -5,29 +5,29 @@ class DGLS_BG_PROCESS {
     private $important_text;
     private $seperator;
     public $settings = [
-        '_bgcolor'                      => '',
-        '_use_gradient'                 => 'off',
-        '_above_image'                  => 'off',
-        '_color_gradient_1'             => '#2b87da',
-        '_color_gradient_2'             => '#29c4a9',
-        '_gradient_type'                => 'leniar',
-        '_gradient_direction'           => '180deg',
-        '_start_position'               => '0%',
-        '_end_position'                 => '100%',
-        '_radial_direction'             => 'center',
-        '_background_image'             => '',
-        '_background_image_size'        => 'cover',
-        '_background_image_position'    => 'center',
-        '_background_image_repeat'      => 'no_repeat',
-        '_position_horizontal'          => '0%',
-        '_position_vertical'            => '0%',
-        '_size_width'                   => '50%',
-        '_size_height'                  => '50%'
+        '_bgcolor'                  => '',
+        '_use_gradient'             => 'off',
+        '_above_image'              => 'off',
+        '_color_gradient_1'         => '#2b87da',
+        '_color_gradient_2'         => '#29c4a9',
+        '_gradient_type'            => 'leniar',
+        '_gradient_direction'       => '180deg',
+        '_start_position'           => '0%',
+        '_end_position'             => '100%',
+        '_radial_direction'         => 'center',
+        '_background_image'         => '',
+        '_background_image_size'    => 'cover',
+        '_background_image_position'=> 'center',
+        '_background_image_repeat'  => 'no_repeat',
+        '_position_horizontal'      => '0%',
+        '_position_vertical'        => '0%',
+        '_size_width'               => '50%',
+        '_size_height'              => '50%'
     ];
     private $settings_hover = [];
 
     function __construct($module, $options) {
-        $this->module = $module;
+        $this->module  = $module;
         $this->options = $options;
     }
 
@@ -62,10 +62,7 @@ class DGLS_BG_PROCESS {
      */
     private function set_hover_settings_values() {
         foreach ($this->settings as $key => $value) {
-            if ( 
-                isset($this->module->props[$this->options['slug'] . $key . '__hover']) && 
-                !empty($this->module->props[$this->options['slug'] . $key . '__hover']) 
-            ) {
+            if ( isset($this->module->props[$this->options['slug'] . $key . '__hover']) && !empty($this->module->props[$this->options['slug'] . $key . '__hover']) ) {
                 $this->settings_hover[$key] = $this->module->props[$this->options['slug'] . $key . '__hover'];
             } else {
                 $this->settings_hover[$key] = $this->settings[$key];
@@ -81,10 +78,10 @@ class DGLS_BG_PROCESS {
         
         $this->set_settings_values();
         $this->set_important_text();
-
         $this->seperator = $this->settings['_use_gradient'] === 'on' &&
-            $this->settings['_background_image'] !== '' ? ', ' : null;
-        $background_size = $this->dgls_process_values($this->settings['_background_image_size']);
+        $this->settings['_background_image'] !== '' ? ', ' : null;
+
+        $background_size     = $this->dgls_process_values($this->settings['_background_image_size']);
         $background_position = $this->dgls_process_values($this->settings['_background_image_position']);
 
         if($this->dgls_process_values($this->settings['_background_image_position']) === 'custom') {
@@ -133,7 +130,7 @@ class DGLS_BG_PROCESS {
      * 
      */
     private function set_hover_styles() {
-        $background_size = $this->dgls_process_values($this->settings_hover['_background_image_size']);
+        $background_size     = $this->dgls_process_values($this->settings_hover['_background_image_size']);
         $background_position = $this->dgls_process_values($this->settings_hover['_background_image_position']);
 
         if($this->dgls_process_values($this->settings_hover['_background_image_position']) === 'custom') {
@@ -145,7 +142,7 @@ class DGLS_BG_PROCESS {
 
         if ($this->settings_hover['_bgcolor'] !== '') {
             ET_Builder_Element::set_style($this->options['render_slug'], array(
-                'selector' => $this->options['hover'],
+                'selector'    => $this->options['hover'],
                 'declaration' => sprintf( 'background-color: %1$s %2$s;',
                     $this->settings_hover['_bgcolor'], 
                     $this->important_text 
@@ -155,7 +152,7 @@ class DGLS_BG_PROCESS {
 
         if ($this->settings_hover['_use_gradient'] === 'on' || $this->settings_hover['_background_image'] !== '') {
             ET_Builder_Element::set_style($this->options['render_slug'], array(
-                'selector' => $this->options['hover'],
+                'selector'    => $this->options['hover'],
                 'declaration' => sprintf( 'background-image: %1$s %2$s;
                     background-size:%3$s %2$s;
                     background-position: %4$s %2$s;
