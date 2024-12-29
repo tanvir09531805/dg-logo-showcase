@@ -1,0 +1,186 @@
+{
+    "name": "Divi Gear Logo Showcase",
+    "slug": "dgls_logo_showcase",
+    "icon": "icon.svg",
+    "moduleCredits": {
+      "moduleUri": "https://www.divigear.com/",
+      "author": "Tanvir",
+      "authorUri": "mailto:tanvir@echoasoft.com"
+    },
+    "css": {
+      "mainCssElement": "%%order_class%%"
+    },
+    "settings": {
+      "toggles": {
+        "general": {
+          "toggles": {
+            "logos": "Logos",
+            "general_settings": "General Settings",
+            "hover_settings": "Hover Settings"
+          }
+        },
+        "advanced": {
+          "toggles": {
+            "font_styles": {
+              "title": "Font Styles",
+              "tabbedSubToggles": true,
+              "subToggles": {
+                "caption": {
+                  "name": "Caption"
+                },
+                "description": {
+                  "name": "Description"
+                }
+              }
+            },
+            "dgls_adv_logo": "Logos",
+            "dgls_logo_filter": "Logo Filter",
+            "dgls_box_shadow": "Logo Box Shadow",
+            "dgls_borders": "Logo Borders",
+            "dgls_spacing": "Logo Spacing"
+          }
+        }
+      },
+      "fields": {
+        "logos": {
+          "label": "Logos Images",
+          "description": "Choose images that you would like to appear in the logo showcase.",
+          "type": "upload-gallery",
+          "toggleSlug": "logos"
+        },
+        "logos_in_a_row": {
+          "label": "Logos in a row",
+          "type": "select",
+          "options": {
+            "logo_1": "Logo 1",
+            "logo_2": "Logo 2"
+          },
+          "default": "logo_2",
+          "toggleSlug": "general_settings"
+        },
+        "logo_size": {
+          "label": "Logo Size",
+          "type": "select",
+          "options": {
+            "medium": "Medium",
+            "large": "Large",
+            "original": "Original"
+          },
+          "default": "medium",
+          "toggleSlug": "general_settings"
+        },
+        "logo_info": {
+          "label": "Logo info",
+          "type": "yes_no_button",
+          "options": {
+            "off": "Off",
+            "on": "On"
+          },
+          "default": "off",
+          "toggleSlug": "general_settings"
+        },
+        "show_caption": {
+          "label": "Show Caption",
+          "type": "yes_no_button",
+          "options": {
+            "off": "Off",
+            "on": "On"
+          },
+          "default": "off",
+          "toggleSlug": "general_settings",
+          "showIf": {
+            "logo_info": "on"
+          }
+        },
+        "show_description": {
+          "label": "Show Description",
+          "type": "yes_no_button",
+          "options": {
+            "off": "Off",
+            "on": "On"
+          },
+          "default": "off",
+          "toggleSlug": "general_settings",
+          "showIf": {
+            "logo_info": "on"
+          }
+        },
+        "hover_effects": {
+          "label": "Hover Effects",
+          "type": "select",
+          "options": {
+            "no-image-scale": "None",
+            "dgls_bounce_h": "Bounce",
+            "dgls_flash_h": "Flash"
+          },
+          "default": "no-image-scale",
+          "toggleSlug": "hover_settings"
+        },
+        "enable_stagger_animation": {
+          "label": "Enable Stagger Animation",
+          "type": "yes_no_button",
+          "options": {
+            "off": "Off",
+            "on": "On"
+          },
+          "default": "off",
+          "toggleSlug": "hover_settings"
+        },
+        "enable_stagger_animation_types": {
+          "label": "Type",
+          "type": "select",
+          "options": {
+            "fadeIn": "Fade In",
+            "fadeInLeftShort": "Fade In Left",
+            "fadeInRightShort": "Fade In Right",
+            "fadeInUpShort": "Fade In Up",
+            "fadeInDownShort": "Fade In Down",
+            "zoomInShort": "Grow"
+          },
+          "default": "fadeInUpShort",
+          "toggleSlug": "hover_settings",
+          "showIf": {
+            "enable_stagger_animation": "on"
+          }
+        }
+      }
+    },
+    "advancedFields": {
+      "filters": {
+        "childFiltersTarget": {
+          "tabSlug": "advanced",
+          "toggleSlug": "dgls_logo_filter",
+          "css": {
+            "main": "%%order_class%% .dgl-showcase"
+          }
+        }
+      },
+      "boxShadow": {
+        "default": true,
+        "logoShadow": {
+          "css": {
+            "main": "%%order_class%% .dgl-showcase",
+            "hover": "%%order_class%% .dgl-showcase:hover"
+          },
+          "tabSlug": "advanced",
+          "toggleSlug": "dgls_box_shadow"
+        }
+      },
+      "borders": {
+        "default": true,
+        "imageLogo": {
+          "css": {
+            "main": {
+              "borderRadii": "%%order_class%% .dgl-showcase",
+              "borderStyles": "%%order_class%% .dgl-showcase",
+              "borderStylesHover": "%%order_class%% .dgl-showcase:hover"
+            }
+          },
+          "tabSlug": "advanced",
+          "toggleSlug": "dgls_borders",
+          "labelPrefix": "Logo"
+        }
+      }
+    }
+  }
+  

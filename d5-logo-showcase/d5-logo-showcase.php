@@ -34,7 +34,7 @@ function dtmc_enqueue_visual_builder_assets() {
   if ( et_core_is_fb_enabled() ) {
     wp_enqueue_script(
       'dtmc-visual-builder',
-      DTMC_URL . 'divi-4/visual-builder/build/d5-tutorial-module-conversion.js',
+      DTMC_URL . 'divi-4/visual-builder/build/d5-logo-showcase-module-conversion.js',
       array( 'react', 'jquery' ),
       '1.0.0',
       true
