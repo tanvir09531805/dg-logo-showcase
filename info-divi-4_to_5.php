@@ -39,7 +39,8 @@ Divi CLI, Hot-reloading and better debugging support
 >> Recommend using Typescript.
 >> 
 >> 
->> 
+
+npm install |=> E:\dg-logo-showcase\d5-logo-showcase\visual-builder
 
 when run npm build 
 
@@ -50,5 +51,7 @@ NODE_ENV=development webpack -w --config webpack.config.js --progress = set NODE
 npm run start | then run npm run build.
 
 # https://devalpha.elegantthemes.com/docs/tutorials/module/intermediate/converting-module/converting-static-module
+
+Frontend |=> https://devalpha.elegantthemes.com/docs/tutorials/module/intermediate/converting-module/converting-static-module#frontend
 
 */

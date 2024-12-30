@@ -1,0 +1,99 @@
+{
+  "name": "d5-ls/logo-showcase-module",
+  "d4Shortcode": "d5_ls",
+  "title": "Logo Showcase",
+  "titles": "Logo Showcases",
+  "category": "module",
+  "attributes": {
+      "module": {
+        "type": "object",
+        "selector": "{{selector}}",
+        "default": {
+          "meta": {
+            "adminLabel": {
+              "desktop": {
+                "value": "Divi Gear Logo Showcase Module"
+              }
+            }
+          }
+        }
+      },
+      "title": {
+        "type": "object",
+        "selector": "{{selector}} .d5_ls_title",
+        "attributes": {
+          "class": "d5_ls_title"
+        },
+        "tagName": "h2",
+        "inlineEditor": "plainText",
+        "elementType": "heading",
+        "childrenSanitizer": "et_core_esc_previously",
+        "default": {
+          "innerContent": {
+            "desktop": {
+              "value": "Default Title"
+            }
+          }
+        }
+      },
+      "content": {
+        "type": "object",
+        "selector": "{{selector}} .d5_ls_content",
+        "attributes": {
+          "class": "d5_ls_content"
+        },
+        "tagName": "div",
+        "inlineEditor": "richText",
+        "childrenSanitizer": "et_core_esc_previously",
+        "allowHtml": true,
+        "default": {
+          "innerContent": {
+            "desktop": {
+              "value": "<p>Default content for the logo showcase module.</p>"
+            }
+          }
+        }
+      },
+      "images": {
+          "type": "array",
+          "selector": "{{selector}} .d5_ls_module_images",
+          "attributes": {
+              "class": "d5_ls_module_images"
+          },
+          "items": {
+              "type": "object",
+              "default": {
+                  "src": "",
+                  "alt": ""
+              },
+              "properties": {
+                  "src": {
+                      "type": "string",
+                      "selector": "{{selector}} .d5_ls_module_image img",
+                      "attributes": {
+                          "src": "{{src}}"
+                      },
+                      "tagName": "img"
+                  },
+                  "alt": {
+                      "type": "string",
+                      "selector": "{{selector}} .d5_ls_module_image img",
+                      "attributes": {
+                          "alt": "{{alt}}"
+                      }
+                  }
+              }
+          }
+      }
+  },
+  
+  "customCssFields": {
+    "moduleQuickTitle": {
+      "label": "Logo Showcase Module Quick Title",
+      "subName": "moduleQuickTitle",
+      "selector": "div{{selector}}",
+      "selectorSuffix": " .d5_ls_title"
+    }
+  }
+}
+  
