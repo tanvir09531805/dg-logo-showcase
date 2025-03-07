@@ -1,0 +1,19 @@
+.et_pb_gutters3 .et_pb_column_4_4 .et_pb_module .difl_bento_grid_item{
+  margin-bottom: 0;
+}
+.difl_bento_grid_item{
+  overflow-y: auto;
+  width: 100%;
+  height: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &__button_wrapper{
+    .difl_bento_grid_item__button{
+      display: inline-block;
+    }
+
+  }
+}

@@ -1,0 +1,43 @@
+.diviflash_grid_layout{
+  position: relative;
+
+  &__fields{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 5px;
+    border: 2px dashed rgba(133, 131, 131, 0.4);
+    padding: 5px;
+    border-radius: 4px;
+
+    &__field{
+      background: rgba(133, 131, 131, 0.1);
+      width: 100%;
+      min-height: 20px;
+      border-radius: 2px;
+      transition: background-color 0.2s;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px, rgba(0, 0, 0, 0.1) 0px 0px 1px 1px;
+
+      &.highlighted {
+        background: var(--app-color-dark);
+      }
+
+      &.selected {
+        background: #0acfa0;
+      }
+    }
+  }
+  &__tooltip {
+    position: absolute;
+    z-index: 100000000000000000000;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    font-size: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+}

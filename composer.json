@@ -1,0 +1,9 @@
+{
+    "name": "divi/diviflash",
+    "autoload": {
+        "psr-4": {
+            "DIVIFLASH\\Modules\\": "modules/"
+        }
+    },
+    "require": {}
+}
