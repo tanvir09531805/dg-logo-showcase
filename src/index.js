@@ -8,6 +8,7 @@ const { registerModule } = window.divi.moduleLibrary;
 
 import { bentoGridItem } from './components/bento-grid-item';
 import { bentoGrid } from './components/bento-grid';
+
 import { logoShowcas } from './components/logo-showcase';
 
 import './module-icons';

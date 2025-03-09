@@ -20,6 +20,6 @@ add_action(
 	function ( $dependency_tree ) {
 		$dependency_tree->add_dependency( new BentoGrid() );
 		$dependency_tree->add_dependency( new BentoGridItem() );
-		$dependency_tree->add_dependency( new LogoShowcase() );
+    $dependency_tree->add_dependency( new LogoShowcase() );
 	}
 );

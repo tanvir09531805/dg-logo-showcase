@@ -3,7 +3,7 @@ const { StyleDeclarations } = window?.divi?.styleLibrary;
 export const gridLayoutStyleDeclaration = ({
 	                                         attrValue,
                                          }) => {
-	// console.log("attrValue", attrValue);
+
 	const declarations = new StyleDeclarations({
 		returnType: 'string',
 		important:  false,
