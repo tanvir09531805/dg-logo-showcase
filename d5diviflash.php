@@ -108,3 +108,46 @@ function difl_module_enqueue_frontend_scripts() {
 	wp_enqueue_style( 'difl-modules-builder-bundle-style', "{$plugin_dir_url}styles/bundle.css", array(), '1.0.0' );
 }
 add_action( 'wp_enqueue_scripts', 'difl_module_enqueue_frontend_scripts' );
+
+
+if(!function_exists('dgls_custom_attachment_fields_to_edit')) {
+
+	// Add custom fields to the media attachment edit screen
+	function dgls_custom_attachment_fields_to_edit($form_fields, $post) {
+		// Add Color Field
+		$form_fields['dgls_color'] = [
+			'label' => 'DGLS Color',
+			'input' => 'html', // Use custom HTML for input
+			'html'  => '<input type="color" name="attachments[' . $post->ID . '][dgls_color]" value="' . esc_attr(get_post_meta($post->ID, 'dgls_color', true)) . '">',
+			'helps' => 'Choose a color for this attachment.',
+		];
+
+		// Add Outside URL Field
+		$form_fields['dgls_outside_url'] = [
+			'label' => 'DGLS Outside URL',
+			'input' => 'url', // URL input field
+			'value' => get_post_meta($post->ID, 'dgls_outside_url', true),
+			'helps' => 'Enter an external URL related to this attachment.',
+		];
+
+		return $form_fields;
+	}
+}
+add_filter('attachment_fields_to_edit', 'dgls_custom_attachment_fields_to_edit', 10, 2);
+
+if(!function_exists('dgls_custom_attachment_fields_to_save')){
+	// Save custom fields when the attachment is saved
+	function dgls_custom_attachment_fields_to_save($post, $attachment) {
+		if (isset($attachment['dgls_color'])) {
+			update_post_meta($post['ID'], 'dgls_color', sanitize_text_field($attachment['dgls_color']));
+		}
+
+		if (isset($attachment['dgls_outside_url'])) {
+			update_post_meta($post['ID'], 'dgls_outside_url', esc_url_raw($attachment['dgls_outside_url']));
+		}
+
+		return $post;
+	}
+}
+add_filter('attachment_fields_to_save', 'dgls_custom_attachment_fields_to_save', 10, 2);
+

@@ -47,9 +47,10 @@ trait RenderCallback {
             $image_url = wp_get_attachment_image_src($id, $logo_size); // $logo_size='medium'
             $logoUrl = !empty($image_url) && !is_bool($image_url[0]) ? $image_url[0] : $default_image;
                 # code...
-            $images .= '<div key="'.$key.'" class="d5_ls_module_image">
-                    <img src="'.$logoUrl.'" alt="Logo '.$key.'" />
-                </div>';
+            $images .= '<span key="'.$key.'" class="dgl-showcase dgl-orientation ">
+                    <img src="'.$logoUrl.'" alt="Logo '.$key.'" class="dgls-image" />
+                    <span class="logo_info bottom-center"></span>
+                </span>';
         }
 
         $logos = '<div class="dg-logos logo_5" >'.$images.'</div>';

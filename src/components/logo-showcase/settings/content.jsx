@@ -19,9 +19,12 @@ const {
 	RichTextContainer,
 	TextContainer,
   UploadGallery,
-	UploadContainer,
-	UploadGalleryContainer,
-	DraggableListContainer
+	Range,
+  Toggle,
+  Select,
+  ColorPicker,
+	Gradient,
+  Spacing
 } = window?.divi?.fieldLibrary;
 
 import { GridLayoutField } from '../../../fields/grid-layout-field';
@@ -58,6 +61,30 @@ export const Content = ( {
         label="Logo Sub Title"
       >
         <RichTextContainer />
+      </FieldContainer>
+    </GroupContainer>
+    <GroupContainer
+      id="mainContent"
+      title="General Settings"
+    >
+      <FieldContainer
+        attrName="images.innerContent"
+        label="Range"
+      >
+        <Range />
+      </FieldContainer>
+      <FieldContainer
+        attrName="title.innerContent"
+        label="Toggle"
+        description="Enter Logo Section Title"
+      >
+        <Toggle />
+      </FieldContainer>
+      <FieldContainer
+        attrName="content.innerContent"
+        label="Logos in a row "
+      >
+        <Select />
       </FieldContainer>
     </GroupContainer>
     <BackgroundGroup />

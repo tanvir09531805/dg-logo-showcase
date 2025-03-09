@@ -13,5 +13,5 @@ yarn-error.log*
 .yarnrc.yml
 .env
 
-vendor
+#vendor
 modules-json

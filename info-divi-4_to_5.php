@@ -54,4 +54,6 @@ npm run start | then run npm run build.
 
 Frontend |=> https://devalpha.elegantthemes.com/docs/tutorials/module/intermediate/converting-module/converting-static-module#frontend
 
+add new field |=> https://devalpha.elegantthemes.com/docs/builder-api/js-beta/divi-field-library/package/
+
 */

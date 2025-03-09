@@ -28,8 +28,8 @@ import { Classnames } from "./classnames";
 import { Styles } from "./styles";
 
 // get image url by image ids
-const fetchImageUrls = async (idsArray) => {
-  // const idsArray = Array.isArray(imageIds) ? imageIds : imageIds.split(",");
+const fetchImageUrls = async (imageIds) => {
+  const idsArray = Array.isArray(imageIds) ? imageIds : imageIds.split(",");
   try {
     const imageUrls = await Promise.all(
       idsArray.map(async (id) => {
@@ -74,7 +74,7 @@ export const Edit = ( props ) => {
   useEffect(() => {
     const loadImageUrls = async () => {
       if (imageIds.length) {
-        const urls = await fetchImageUrls(idsArray);
+        const urls = await fetchImageUrls(imageIds);
         setImageUrls(urls);
       }
     };
@@ -113,10 +113,10 @@ export const Edit = ( props ) => {
 
               {imageUrls.length > 0 ? (
                 imageUrls.map((url, index) => (
-                  <div key={index} className="d5_ls_module_image">
-                    <img src={url} alt={`Logo ${index + 1}`} />
-                    <span>Logo Index: {index + 1}</span>
-                  </div>
+                  <span key={index} className="dgl-showcase dgl-orientation ">
+                    <img src={url} alt={`Logo ${index + 1}`} className="dgls-image" />
+                    <span className="logo_info bottom-center">Logo Index: {index + 1}</span>
+                  </span>
                 ))
               ) : (
                 <span>No images available.</span>
