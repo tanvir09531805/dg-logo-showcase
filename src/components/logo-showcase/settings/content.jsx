@@ -5,40 +5,45 @@ import React from 'react';
 const { __ } = window?.vendor?.wp?.i18n;
 
 // Divi dependencies.
-const {
-	AdminLabelGroup,
-	BackgroundGroup,
-	FieldContainer,
-	LinkGroup,
-	DraggableChildModuleListContainer
-} = window?.divi?.module;
-const { GroupContainer } = window?.divi?.modal;
-const {
-	IconPickerContainer,
-	RangeContainer,
-	RichTextContainer,
-	TextContainer,
+import {
+  AdminLabelGroup,
+  BackgroundGroup,
+  FieldContainer,
+} from '@divi/module';
+
+import { 
+  GroupContainer
+} from '@divi/modal';
+
+import { 
+  RichTextContainer,
+  TextContainer,
   UploadGallery,
-	Range,
+  Range,
   Toggle,
   Select,
-  ColorPicker,
-	Gradient,
-  Spacing
-} = window?.divi?.fieldLibrary;
+} from '@divi/field-library';
+
 
 import { GridLayoutField } from '../../../fields/grid-layout-field';
 import { GridLayoutManager } from '../../../fields/grid-layout-manager';
 
 const handleChange = ({ event, inputValue }) => {
-	console.log('Event:', event); // The click event
-	console.log('Selected Row & Column:', inputValue); // { row: <number>, column: <number> }
+  console.log('Event:', event); // The click event
+  console.log('Selected Row & Column:', inputValue); // { row: <number>, column: <number> }
 };
 
-export const Content = ( {
-	defaultSettingsAttrs,
-} ) => (
-	<React.Fragment>
+export const Content = ({
+  defaultSettingsAttrs,
+}) => { 
+  const options = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' }
+  ];
+
+  return (
+  <React.Fragment>
     <GroupContainer
       id="mainContent"
       title="Logo Title Text"
@@ -64,24 +69,32 @@ export const Content = ( {
       </FieldContainer>
     </GroupContainer>
     <GroupContainer
-      id="mainContent"
+      id="generalSettings"
       title="General Settings"
     >
       <FieldContainer
-        attrName="images.innerContent"
+        attrName="generalSettings.innerContent.range"
         label="Range"
       >
-        <Range />
+        <Range 
+          max={120}
+          min={0}
+          step={1}
+          defaultUnit={"px"}
+          allowedUnits={["px"]}
+        />
       </FieldContainer>
       <FieldContainer
-        attrName="title.innerContent"
+        attrName="generalSettings.innerContent.toggle"
         label="Toggle"
         description="Enter Logo Section Title"
       >
-        <Toggle />
+        <Toggle 
+          value="off"
+        />
       </FieldContainer>
       <FieldContainer
-        attrName="content.innerContent"
+        attrName="generalSettings.innerContent.select"
         label="Logos in a row "
       >
         <Select />
@@ -92,4 +105,4 @@ export const Content = ( {
       defaultGroupAttr={defaultSettingsAttrs?.adminLabel}
     />
   </React.Fragment>
-)
+)};

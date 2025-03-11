@@ -67,9 +67,6 @@ export const Edit = ( props ) => {
   let idsArray = imageIds.length?imageIds.split(","):[];
   
   // console.log('imageIds === ', idsArray); // imageIds = [101,102,92,92]
-
-  // let oneImg = fetchImageUrls([101]);
-  // console.log('oneImg === ', oneImg);
   
   useEffect(() => {
     const loadImageUrls = async () => {
@@ -81,12 +78,7 @@ export const Edit = ( props ) => {
     loadImageUrls();
   }, [imageIds]);
 
-  console.log('img urls === ', imageUrls);
-
-  // let nam = parseInt("10");
-  // let ber = Number('564');
-  // console.log( typeof nam);
-  // console.log(typeof ber);
+  // console.log('img urls === ', imageUrls);
      
 	return (
 		<ModuleContainer

@@ -56,4 +56,8 @@ Frontend |=> https://devalpha.elegantthemes.com/docs/tutorials/module/intermedia
 
 add new field |=> https://devalpha.elegantthemes.com/docs/builder-api/js-beta/divi-field-library/package/
 
+E:\laragon\www\divi5a\wp-content\themes\Divi\includes\builder-5\visual-builder\packages\module-library\src\components\accordion\module.json
+
+
+
 */
