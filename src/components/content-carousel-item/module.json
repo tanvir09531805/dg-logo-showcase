@@ -39,8 +39,21 @@
             "adminLabel": {}
           },
           "advanced": {
-            "link": {},
-            "htmlAttributes": {},
+            "link": {
+              "groupType": "group-item",
+              "item": {
+                "groupSlug": "contentLink",
+                "priority": 20,
+                "render": true,
+                "component": {
+                  "type": "group",
+                  "name": "divi/link",
+                  "props": {
+                    "grouped": false
+                  }
+                }
+              }
+            },
             "text": {
               "priority": 15,
               "component": {
@@ -59,43 +72,7 @@
                 }
               }
             },
-            "alignment": {
-              "groupType": "group-item",
-              "item": {
-                "groupSlug": "designAlignment",
-                "priority": 5,
-                "render": true,
-                "attrName": "module.advanced.alignment",
-                "label": "Button Alignment",
-                "description": "Here you can define the alignment of Button.",
-                "multipleChoices": false,
-                "features": {
-                  "hover": false,
-                  "sticky": false,
-                  "preset": [
-                    "html"
-                  ]
-                },
-                "component": {
-                  "type": "field",
-                  "name": "divi/button-options",
-                  "props": {
-                    "options": {
-                      "left": {
-                        "icon": "divi/align-left"
-                      },
-                      "center": {
-                        "icon": "divi/align-center"
-                      },
-                      "right": {
-                        "icon": "divi/align-right"
-                      }
-                    },
-                    "showLabel": false
-                  }
-                }
-              }
-            }
+            "htmlAttributes": {}
           },
           "decoration": {
             "animation": {},
@@ -200,6 +177,82 @@
           }
         },
         "tagName": "h4",
+        "elementType": "heading"
+      },
+      "subTitle": {
+        "type": "object",
+        "selector": "{{selector}} .df_cci_container .df_cc_subtitle",
+        "attributes": {
+          "class": ".df_cci_container .df_cc_subtitle"
+        },
+        "inlineEditor": "plainText",
+        "childrenSanitizer": "et_core_esc_previously",
+        "styleProps": {
+          "font": {
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "settings": {
+          "innerContent": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "contentText",
+              "attrName": "subTitle.innerContent",
+              "label": "Sub Title",
+              "description": "The sub title will appear above the content and when the toggle is open.",
+              "priority": 10,
+              "render": true,
+              "features": {
+                "dynamicContent": {
+                  "type": "text"
+                },
+                "sticky": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            }
+          },
+          "decoration": {
+            "font": {
+              "groupType": "group-item",
+              "item": {
+                "groupSlug": "designTitleText",
+                "priority": 10,
+                "render": true,
+                "component": {
+                  "type": "group",
+                  "name": "divi/font",
+                  "props": {
+                    "grouped": false,
+                    "groupLabel": "Title Text",
+                    "fieldLabel": "Title",
+                    "fields": {
+                      "color": {
+                        "priority": 5,
+                        "render": true
+                      },
+                      "headingLevel": {
+                        "render": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tagName": "h5",
         "elementType": "heading"
       },
       "content": {
@@ -335,8 +388,8 @@
             "selector": "{{selector}} .et_pb_image_wrap"
             },
             "boxShadow": {
-            "selector": "{{selector}} .et_pb_image_wrap",
-            "useOverlay": true
+              "selector": "{{selector}} .et_pb_image_wrap",
+              "useOverlay": true
             }
         },
         "styleComponentsProps": {
@@ -597,6 +650,197 @@
             }
           }
         }
+      },
+      
+      "imgOrder": {
+        "type": "object",
+        "settings": {
+          "innerContent": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "itemOrder",
+              "attrName": "imgOrder.innerContent",
+              "label": "Image Order",
+              "description": "Set image order will appear above the container.",
+              "priority": 10,
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 120,
+                  "allowedUnits": [
+                    "%",
+                    "em",
+                    "rem",
+                    "px",
+                    "cm",
+                    "mm",
+                    "in",
+                    "pt",
+                    "pc",
+                    "ex",
+                    "vh",
+                    "vw"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "titleOrder": {
+        "type": "object",
+        "settings": {
+          "innerContent": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "itemOrder",
+              "attrName": "titleOrder.innerContent",
+              "label": "Title Order",
+              "description": "Set Title order will appear above the container.",
+              "priority": 10,
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 120,
+                  "allowedUnits": [
+                    "%",
+                    "em",
+                    "rem",
+                    "px",
+                    "cm",
+                    "mm",
+                    "in",
+                    "pt",
+                    "pc",
+                    "ex",
+                    "vh",
+                    "vw"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "subTitleOrder": {
+        "type": "object",
+        "settings": {
+          "innerContent": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "itemOrder",
+              "attrName": "subTitleOrder.innerContent",
+              "label": "Sub Title Order",
+              "description": "Set Sub Title order will appear above the container.",
+              "priority": 10,
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 120,
+                  "allowedUnits": [
+                    "%",
+                    "em",
+                    "rem",
+                    "px",
+                    "cm",
+                    "mm",
+                    "in",
+                    "pt",
+                    "pc",
+                    "ex",
+                    "vh",
+                    "vw"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "contentOrder": {
+        "type": "object",
+        "settings": {
+          "innerContent": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "itemOrder",
+              "attrName": "contentOrder.innerContent",
+              "label": "Content Order",
+              "description": "Set Content order will appear above the container.",
+              "priority": 10,
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 120,
+                  "allowedUnits": [
+                    "%",
+                    "em",
+                    "rem",
+                    "px",
+                    "cm",
+                    "mm",
+                    "in",
+                    "pt",
+                    "pc",
+                    "ex",
+                    "vh",
+                    "vw"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "btnOrder": {
+        "type": "object",
+        "settings": {
+          "innerContent": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "itemOrder",
+              "attrName": "btnOrder.innerContent",
+              "label": "Button Order",
+              "description": "Set Button order will appear above the container.",
+              "priority": 10,
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 120,
+                  "allowedUnits": [
+                    "%",
+                    "em",
+                    "rem",
+                    "px",
+                    "cm",
+                    "mm",
+                    "in",
+                    "pt",
+                    "pc",
+                    "ex",
+                    "vh",
+                    "vw"
+                  ]
+                }
+              }
+            }
+          }
+        }
       }
       
     },
@@ -669,16 +913,26 @@
                 }
               }
             },
-            "designAlignment": {
+            "designButton": {
               "panel": "design",
-              "priority": 5,
-              "groupName": "alignment",
-              "multiElements": true,
+              "priority": 70,
+              "groupName": "designButton",
               "component": {
                 "name": "divi/composite",
                 "props": {
-                  "groupLabel": "Alignment",
-                  "clipboardCategory": "style"
+                  "groupLabel": "Button",
+                  "presetGroup": "divi/button"
+                }
+              }
+            },
+            "itemOrder": {
+              "panel": "content",
+              "priority": 20,
+              "groupName": "itemOrder",
+              "component": {
+                "name": "divi/composite",
+                "props": {
+                  "groupLabel": "Item Order"
                 }
               }
             }

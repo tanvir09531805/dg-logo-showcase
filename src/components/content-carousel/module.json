@@ -104,236 +104,548 @@
           }
         }
       },
-      "title": {
+      
+      "settingCarousel": {
         "type": "object",
-        "selector": "{{selector}} h1.et_pb_toggle_title, {{selector}} h2.et_pb_toggle_title, {{selector}} h3.et_pb_toggle_title, {{selector}} h4.et_pb_toggle_title, {{selector}} h5.et_pb_toggle_title, {{selector}} h6.et_pb_toggle_title",
+        "selector": "{{selector}} img",
         "settings": {
-          "decoration": {
-            "font": {
-              "groupType": "group-item",
-              "item": {
-                "groupSlug": "designTitleText",
-                "priority": 10,
-                "render": true,
-                "component": {
-                  "type": "group",
-                  "name": "divi/font",
-                  "props": {
-                    "grouped": false,
-                    "groupLabel": "Title Text",
-                    "fieldLabel": "Title",
-                    "fields": {
-                      "color": {
-                        "render": true,
-                        "priority": 5
-                      },
-                      "headingLevel": {
-                        "render": true
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "closedToggleIcon": {
-        "type": "object",
-        "selector": "{{selector}} .et_pb_toggle_close",
-        "styleProps": {
-          "icon": {
-            "selector": "{{selector}} .et_pb_toggle_title:before",
-            "important": {
-              "desktop": {
-                "value": {
-                  "font-family": true,
-                  "content": true,
-                  "font-weight": true
-                }
-              }
-            }
-          }
-        },
-        "settings": {
-          "decoration": {
-            "icon": {
-              "groupType": "group-items",
-              "items": {
-                "contentIcon": {
-                  "groupSlug": "contentToggleIcon",
-                  "attrName": "closedToggleIcon.decoration.icon",
-                  "priority": 10,
-                  "render": true,
-                  "component": {
-                    "type": "group",
-                    "name": "divi/icon",
-                    "props": {
-                      "grouped": false,
-                      "groupLabel": "Toggle Icon",
-                      "fields": {
-                        "icon": {
-                          "render": true
-                        },
-                        "color": {
-                          "render": false
-                        },
-                        "useSize": {
-                          "render": false
-                        },
-                        "size": {
-                          "render": false
-                        }
-                      }
-                    }
-                  }
+          "innerContent": {
+            "groupType": "group-items",
+            "items": {
+              "maxSlide": {
+                "groupSlug": "carouselSettings",
+                "attrName": "settingCarousel.innerContent.maxSlide",
+                "subName": "maxSlide",
+                "label": "Max Slide to Show",
+                "description": "Here you can set max Slide to Show.",
+                "features": {
+                  "hover": false,
+                  "sticky": false,
+                  "responsive": true,
+                  "preset": "content"
                 },
-                "designIcon": {
-                  "groupSlug": "designToggleIcon",
-                  "attrName": "closedToggleIcon.decoration.icon",
-                  "priority": 10,
-                  "render": true,
-                  "component": {
-                    "type": "group",
-                    "name": "divi/icon",
-                    "props": {
-                      "grouped": false,
-                      "fieldLabel": "Icon",
-                      "fields": {
-                        "icon": {
-                          "render": false
-                        },
-                        "color": {
-                          "render": true
-                        },
-                        "useSize": {
-                          "render": true
-                        },
-                        "size": {
-                          "render": true
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "content": {
-        "type": "object",
-        "selector": "{{selector}}.et_pb_accordion .et_pb_toggle_content",
-        "settings": {
-          "decoration": {
-            "bodyFont": {
-              "priority": 30,
-              "component": {
-                "props": {
-                  "groups": {
-                    "body": {
-                      "groupLabel": "Body Text",
-                      "fieldLabel": "Body"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "openToggle": {
-        "type": "object",
-        "selector": "{{selector}} .et_pb_toggle_open",
-        "styleProps": {
-          "font": {
-            "selector": "{{selector}}.et_pb_accordion .et_pb_toggle_open .et_pb_toggle_title"
-          }
-        },
-        "settings": {
-          "decoration": {
-            "background": {
-              "groupType": "group-item",
-              "item": {
-                "groupSlug": "designToggle",
-                "attrName": "openToggle.decoration.background",
-                "subName": "color",
-                "label": "Open Toggle Background Color",
-                "description": "You can pick unique background colors for toggles when they are in their open and closed states. Choose the open state background color here.",
-                "priority": 10,
                 "render": true,
+                "priority": 10,
                 "component": {
                   "type": "field",
-                  "name": "divi/color-picker"
-                }
-              }
-            },
-            "font": {
-              "groupType": "group-item",
-              "item": {
-                "groupSlug": "designTitleText",
-                "attrName": "openToggle.decoration.font.font",
-                "subName": "color",
-                "label": "Open Title Text Color",
-                "description": "You can pick unique text colors for toggle titles when they are open and closed. Choose the open state title color here.",
-                "priority": 5,
-                "render": true,
-                "component": {
-                  "type": "field",
-                  "name": "divi/color-picker"
-                }
-              }
-            }
-          }
-        }
-      },
-      "closedToggle": {
-        "type": "object",
-        "selector": "{{selector}} .et_pb_toggle_close",
-        "styleProps": {
-          "font": {
-            "selector": "{{selector}} .et_pb_toggle_close h1.et_pb_toggle_title,{{selector}} .et_pb_toggle_close h2.et_pb_toggle_title,{{selector}} .et_pb_toggle_close h3.et_pb_toggle_title,{{selector}} .et_pb_toggle_close h4.et_pb_toggle_title,{{selector}} .et_pb_toggle_close h5.et_pb_toggle_title,{{selector}} .et_pb_toggle_close h6.et_pb_toggle_title"
-          }
-        },
-        "settings": {
-          "decoration": {
-            "background": {
-              "groupType": "group-item",
-              "item": {
-                "groupSlug": "designToggle",
-                "attrName": "closedToggle.decoration.background",
-                "subName": "color",
-                "label": "Closed Toggle Background Color",
-                "description": "You can pick unique background colors for toggles when they are in their open and closed states. Choose the closed state background color here.",
-                "priority": 10,
-                "render": true,
-                "component": {
-                  "type": "field",
-                  "name": "divi/color-picker"
-                }
-              }
-            },
-            "font": {
-              "groupType": "group-item",
-              "item": {
-                "groupSlug": "designClosedTitleText",
-                "attrName": "closedToggle.decoration.font",
-                "priority": 10,
-                "render": true,
-                "component": {
-                  "type": "group",
-                  "name": "divi/font",
+                  "name": "divi/range",
                   "props": {
-                    "grouped": false,
-                    "groupLabel": "Closed Title Text",
-                    "fieldLabel": "Closed Title",
-                    "fields": {
-                      "color": {
-                        "priority": 5,
-                        "render": true
-                      }
-                    }
+                    "min": 1,
+                    "max": 7,
+                    "allowedUnits": [
+                      "%",
+                      "em",
+                      "rem",
+                      "px",
+                      "cm",
+                      "mm",
+                      "in",
+                      "pt",
+                      "pc",
+                      "ex",
+                      "vh",
+                      "vw"
+                    ]
                   }
+                }
+              },
+              "spacingPx": {
+                "groupSlug": "carouselSettings",
+                "attrName": "settingCarousel.innerContent.spacingPx",
+                "subName": "spacingPx",
+                "label": "Spacing (px)",
+                "description": "Here you can set spacing (px).",
+                "features": {
+                  "hover": false,
+                  "sticky": false,
+                  "responsive": true,
+                  "preset": "content"
+                },
+                "render": true,
+                "priority": 10,
+                "component": {
+                  "type": "field",
+                  "name": "divi/range",
+                  "props": {
+                    "min": 1,
+                    "max": 7,
+                    "allowedUnits": [
+                      "px"
+                    ]
+                  }
+                }
+              },
+              "speed": {
+                "groupSlug": "carouselSettings",
+                "attrName": "settingCarousel.innerContent.speed",
+                "subName": "speed",
+                "label": "Speed (ms)",
+                "description": "Here you can set Speed (ms).",
+                "features": {
+                  "hover": false,
+                  "sticky": false,
+                  "responsive": true,
+                  "preset": "content"
+                },
+                "render": true,
+                "priority": 10,
+                "component": {
+                  "type": "field",
+                  "name": "divi/range",
+                  "props": {
+                    "min": 1,
+                    "max": 7,
+                    "allowedUnits": [
+                      "%",
+                      "em",
+                      "rem",
+                      "px",
+                      "cm",
+                      "mm",
+                      "in",
+                      "pt",
+                      "pc",
+                      "ex",
+                      "vh",
+                      "vw"
+                    ]
+                  }
+                }
+              },
+              "centerSlides": {
+                "groupSlug": "carouselSettings",
+                "attrName": "settingCarousel.innerContent.centeredSlides",
+                "subName": "centerSlides",
+                "label": "Centered Slides",
+                "description": "Here you can choose whether the slides should be centered or not.",
+                "features": {
+                  "hover": false,
+                  "sticky": false,
+                  "responsive": false,
+                  "preset": "content"
+                },
+                "render": true,
+                "priority": 10,
+                "component": {
+                  "type": "field",
+                  "name": "divi/toggle"
+                }
+              },
+              "loop": {
+                "groupSlug": "carouselSettings",
+                "attrName": "settingCarousel.innerContent.loop",
+                "subName": "loop",
+                "label": "Loop",
+                "description": "Here you can on whether the slides should be loop or not.",
+                "features": {
+                  "hover": false,
+                  "sticky": false,
+                  "responsive": false,
+                  "preset": "content"
+                },
+                "render": true,
+                "priority": 10,
+                "component": {
+                  "type": "field",
+                  "name": "divi/toggle"
+                }
+              },
+              "autoplay": {
+                "groupSlug": "carouselSettings",
+                "attrName": "settingCarousel.innerContent.autoplay",
+                "subName": "autoplay",
+                "label": "Autoplay",
+                "description": "Here you can on whether the slides should be autoplay or not.",
+                "features": {
+                  "hover": false,
+                  "sticky": false,
+                  "responsive": true,
+                  "preset": "content"
+                },
+                "render": true,
+                "priority": 10,
+                "component": {
+                  "type": "field",
+                  "name": "divi/toggle"
+                }
+              },
+              "autoplaySpeed": {
+                "groupSlug": "carouselSettings",
+                "attrName": "settingCarousel.innerContent.autoplaySpeed",
+                "subName": "autoplaySpeed",
+                "label": "Autoplay Speed (ms)",
+                "description": "Here you can set autoplay speed (ms).",
+                "features": {
+                  "hover": false,
+                  "sticky": false,
+                  "responsive": true,
+                  "preset": "content"
+                },
+                "render": true,
+                "priority": 10,
+                "component": {
+                  "type": "field",
+                  "name": "divi/range",
+                  "props": {
+                    "min": 100,
+                    "max": 10000,
+                    "allowedUnits": [
+                      "%",
+                      "em",
+                      "rem",
+                      "px",
+                      "cm",
+                      "mm",
+                      "in",
+                      "pt",
+                      "pc",
+                      "ex",
+                      "vh",
+                      "vw"
+                    ]
+                  }
+                }
+              },
+              "pauseOnHover": {
+                "groupSlug": "carouselSettings",
+                "attrName": "settingCarousel.innerContent.pauseOnHover",
+                "subName": "pauseOnHover",
+                "label": "Pause OnHover",
+                "description": "Here you can on whether the slides should be pause on hover or not.",
+                "features": {
+                  "hover": false,
+                  "sticky": false,
+                  "responsive": true,
+                  "preset": "content"
+                },
+                "render": true,
+                "priority": 10,
+                "component": {
+                  "type": "field",
+                  "name": "divi/toggle"
+                }
+              },
+              "equalHeightItem": {
+                "groupSlug": "carouselSettings",
+                "attrName": "settingCarousel.innerContent.equalHeightItem",
+                "subName": "equalHeightItem",
+                "label": "Equal Height Item",
+                "description": "Here you can on whether the slides should be equal height or not.",
+                "features": {
+                  "hover": false,
+                  "sticky": false,
+                  "responsive": false,
+                  "preset": "content"
+                },
+                "render": true,
+                "priority": 10,
+                "component": {
+                  "type": "field",
+                  "name": "divi/toggle"
+                }
+              },
+              "useLightbox": {
+                "groupSlug": "carouselSettings",
+                "attrName": "settingCarousel.innerContent.useLightbox",
+                "subName": "useLightbox",
+                "label": "Use Lightbox",
+                "description": "Here you can on whether the slides should be use lightbox or not.",
+                "features": {
+                  "hover": false,
+                  "sticky": false,
+                  "responsive": false,
+                  "preset": "content"
+                },
+                "render": true,
+                "priority": 10,
+                "component": {
+                  "type": "field",
+                  "name": "divi/toggle"
+                }
+              },
+              "showTitleOnLightbox": {
+                "groupSlug": "carouselSettings",
+                "attrName": "settingCarousel.innerContent.showTitleOnLightbox",
+                "subName": "showTitleOnLightbox",
+                "label": "Use Lightbox",
+                "description": "Here you can on whether the slides should be use lightbox or not.",
+                "features": {
+                  "hover": false,
+                  "sticky": false,
+                  "responsive": false,
+                  "preset": "content"
+                },
+                "render": true,
+                "priority": 10,
+                "component": {
+                  "type": "field",
+                  "name": "divi/toggle"
+                }
+              }
+            }
+          },
+          "advanced": {},
+          "decoration": {}
+        }
+      },
+      "arrowNavigation": {
+        "type": "object",
+        "selector": "{{selector}} .et-pb-slider-arrows .et-pb-arrow-prev, {{selector}} .et-pb-slider-arrows .et-pb-arrow-next",
+        "settings": {
+          "advanced": {
+            "color": {
+              "groupType": "group-item",
+              "item": {
+                "groupSlug": "designNavigation",
+                "attrName": "arrows.advanced.color",
+                "label": "Arrow Color",
+                "description": "Pick a color to use for the slider arrows that are used to navigate through each slide.",
+                "priority": 10,
+                "render": true,
+                "component": {
+                  "type": "field",
+                  "name": "divi/color-picker"
+                }
+              }
+            },
+            "show": {
+              "groupType": "group-item",
+              "item": {
+                "groupSlug": "carouselSettings",
+                "attrName": "arrowNavigation.advanced.show",
+                "label": "Arrow Navigation",
+                "description": "This setting will turn on and off the navigation arrows.",
+                "priority": 10,
+                "render": true,
+                "features": {
+                  "sticky": false,
+                  "preset": [
+                    "html"
+                  ]
+                },
+                "component": {
+                  "type": "field",
+                  "name": "divi/toggle"
+                }
+              }
+            }
+          }
+        }
+      },
+      "dotNavigation": {
+        "type": "object",
+        "settings": {
+          "advanced": {
+            "show": {
+              "groupType": "group-item",
+              "item": {
+                "groupSlug": "carouselSettings",
+                "attrName": "dotNavigation.advanced.show",
+                "label": "Dot Navigation",
+                "description": "This setting will turn on and off the circle buttons at the bottom of the slider.",
+                "priority": 10,
+                "render": true,
+                "features": {
+                  "sticky": false,
+                  "preset": [
+                    "html"
+                  ]
+                },
+                "component": {
+                  "type": "field",
+                  "name": "divi/toggle"
+                }
+              }
+            }
+          }
+        }
+      },
+      
+      
+      "imgOrder": {
+        "type": "object",
+        "settings": {
+          "innerContent": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "itemOrder",
+              "attrName": "imgOrder.innerContent",
+              "label": "Image Order",
+              "description": "Set image order will appear above the container.",
+              "priority": 10,
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 120,
+                  "allowedUnits": [
+                    "%",
+                    "em",
+                    "rem",
+                    "px",
+                    "cm",
+                    "mm",
+                    "in",
+                    "pt",
+                    "pc",
+                    "ex",
+                    "vh",
+                    "vw"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "titleOrder": {
+        "type": "object",
+        "settings": {
+          "innerContent": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "itemOrder",
+              "attrName": "titleOrder.innerContent",
+              "label": "Title Order",
+              "description": "Set Title order will appear above the container.",
+              "priority": 10,
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 120,
+                  "allowedUnits": [
+                    "%",
+                    "em",
+                    "rem",
+                    "px",
+                    "cm",
+                    "mm",
+                    "in",
+                    "pt",
+                    "pc",
+                    "ex",
+                    "vh",
+                    "vw"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "subTitleOrder": {
+        "type": "object",
+        "settings": {
+          "innerContent": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "itemOrder",
+              "attrName": "subTitleOrder.innerContent",
+              "label": "Sub Title Order",
+              "description": "Set Sub Title order will appear above the container.",
+              "priority": 10,
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 120,
+                  "allowedUnits": [
+                    "%",
+                    "em",
+                    "rem",
+                    "px",
+                    "cm",
+                    "mm",
+                    "in",
+                    "pt",
+                    "pc",
+                    "ex",
+                    "vh",
+                    "vw"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "contentOrder": {
+        "type": "object",
+        "settings": {
+          "innerContent": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "itemOrder",
+              "attrName": "contentOrder.innerContent",
+              "label": "Content Order",
+              "description": "Set Content order will appear above the container.",
+              "priority": 10,
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 120,
+                  "allowedUnits": [
+                    "%",
+                    "em",
+                    "rem",
+                    "px",
+                    "cm",
+                    "mm",
+                    "in",
+                    "pt",
+                    "pc",
+                    "ex",
+                    "vh",
+                    "vw"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "btnOrder": {
+        "type": "object",
+        "settings": {
+          "innerContent": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "itemOrder",
+              "attrName": "btnOrder.innerContent",
+              "label": "Button Order",
+              "description": "Set Button order will appear above the container.",
+              "priority": 10,
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 120,
+                  "allowedUnits": [
+                    "%",
+                    "em",
+                    "rem",
+                    "px",
+                    "cm",
+                    "mm",
+                    "in",
+                    "pt",
+                    "pc",
+                    "ex",
+                    "vh",
+                    "vw"
+                  ]
                 }
               }
             }
@@ -373,60 +685,26 @@
       "design": "auto",
       "advanced": "auto",
       "groups": {
-        "contentToggleIcon": {
+        "carouselSettings": {
           "panel": "content",
           "priority": 10,
-          "groupName": "contentToggleIcon",
+          "groupName": "carouselSettings",
           "component": {
             "name": "divi/composite",
             "props": {
-              "groupLabel": "Toggle Icon"
+              "groupLabel": "Carousel Settings"
             }
           }
         },
-        "designToggleIcon": {
-          "panel": "design",
-          "priority": 5,
-          "groupName": "designToggleIcon",
-          "component": {
-            "name": "divi/composite",
-            "props": {
-              "groupLabel": "Icon"
-            }
-          }
-        },
-        "designToggle": {
-          "panel": "design",
-          "priority": 10,
-          "groupName": "designToggle",
-          "component": {
-            "name": "divi/composite",
-            "props": {
-              "groupLabel": "Toggle"
-            }
-          }
-        },
-        "designTitleText": {
-          "panel": "design",
+        
+        "itemOrder": {
+          "panel": "content",
           "priority": 20,
-          "groupName": "designTitleText",
+          "groupName": "itemOrder",
           "component": {
             "name": "divi/composite",
             "props": {
-              "groupLabel": "Title Text",
-              "presetGroup": "divi/font"
-            }
-          }
-        },
-        "designClosedTitleText": {
-          "panel": "design",
-          "priority": 30,
-          "groupName": "designClosedTitleText",
-          "component": {
-            "name": "divi/composite",
-            "props": {
-              "groupLabel": "Closed Title Text",
-              "presetGroup": "divi/font"
+              "groupLabel": "Item Order"
             }
           }
         }
