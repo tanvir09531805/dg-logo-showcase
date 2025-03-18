@@ -332,22 +332,22 @@
                         "subName": "src",
                         "label": "Image",
                         "description": "Upload an image.",
+                        "render": true,
+                        "priority": 10,
                         "features": {
                             "dynamicContent": {
                             "type": "image"
                             },
-                            "sticky": false,
                             "responsive": true,
                             "hover": true,
+                            "sticky": false,
                             "preset": "content"
                         },
-                        "render": true,
-                        "priority": 10,
                         "component": {
                             "type": "field",
                             "name": "divi/upload",
                             "props": {
-                            "syncImageData": true
+                              "syncImageData": true
                             }
                         }
                     },
@@ -357,19 +357,19 @@
                         "subName": "alt",
                         "label": "Image Alternative Text",
                         "description": "This defines the HTML ALT text. A short description of your image can be placed here.",
+                        "render": true,
+                        "priority": 10,
                         "features": {
                             "dynamicContent": {
                                 "type": "text"
                             },
-                            "sticky": false,
                             "responsive": false,
                             "hover": false,
+                            "sticky": false,
                             "preset": [
                                 "html"
                             ]
                         },
-                        "render": true,
-                        "priority": 10,
                         "component": {
                             "type": "field",
                             "name": "divi/text"
@@ -404,7 +404,7 @@
 
       "imageIcon": {
         "type": "object",
-        "selector": "{{selector}} img",
+        "selector": "{{selector}} .slide_image",
         "settings": {
           "innerContent": {
             "groupType": "group-items",
@@ -422,7 +422,7 @@
                   "preset": "content"
                 },
                 "render": true,
-                "priority": 10,
+                "priority": 20,
                 "component": {
                   "type": "field",
                   "name": "divi/toggle"
@@ -441,7 +441,7 @@
 
       "useIcon": {
         "type": "object",
-        "selector": "{{selector}} .difl_contentcarouselitem",
+        "selector": "{{selector}} .difl_contentcarouselitem .slide_image",
         "styleProps": {
           "icon": {
             "selector": "{{selector}} .df_cci_image_container .et-pb-icon",
@@ -670,20 +670,8 @@
                 "props": {
                   "min": 1,
                   "max": 120,
-                  "allowedUnits": [
-                    "%",
-                    "em",
-                    "rem",
-                    "px",
-                    "cm",
-                    "mm",
-                    "in",
-                    "pt",
-                    "pc",
-                    "ex",
-                    "vh",
-                    "vw"
-                  ]
+                  "defaultUnit": "",
+                  "allowedUnits": []
                 }
               }
             }
@@ -708,20 +696,8 @@
                 "props": {
                   "min": 1,
                   "max": 120,
-                  "allowedUnits": [
-                    "%",
-                    "em",
-                    "rem",
-                    "px",
-                    "cm",
-                    "mm",
-                    "in",
-                    "pt",
-                    "pc",
-                    "ex",
-                    "vh",
-                    "vw"
-                  ]
+                  "defaultUnit": "",
+                  "allowedUnits": []
                 }
               }
             }
@@ -746,20 +722,8 @@
                 "props": {
                   "min": 1,
                   "max": 120,
-                  "allowedUnits": [
-                    "%",
-                    "em",
-                    "rem",
-                    "px",
-                    "cm",
-                    "mm",
-                    "in",
-                    "pt",
-                    "pc",
-                    "ex",
-                    "vh",
-                    "vw"
-                  ]
+                  "defaultUnit": "",
+                  "allowedUnits": []
                 }
               }
             }
@@ -784,20 +748,8 @@
                 "props": {
                   "min": 1,
                   "max": 120,
-                  "allowedUnits": [
-                    "%",
-                    "em",
-                    "rem",
-                    "px",
-                    "cm",
-                    "mm",
-                    "in",
-                    "pt",
-                    "pc",
-                    "ex",
-                    "vh",
-                    "vw"
-                  ]
+                  "defaultUnit": "",
+                  "allowedUnits": []
                 }
               }
             }
@@ -822,20 +774,8 @@
                 "props": {
                   "min": 1,
                   "max": 120,
-                  "allowedUnits": [
-                    "%",
-                    "em",
-                    "rem",
-                    "px",
-                    "cm",
-                    "mm",
-                    "in",
-                    "pt",
-                    "pc",
-                    "ex",
-                    "vh",
-                    "vw"
-                  ]
+                  "defaultUnit": "",
+                  "allowedUnits": []
                 }
               }
             }

@@ -94,6 +94,25 @@ function difl_module_enqueue_vb_scripts() {
 		wp_enqueue_style( 'difl-modules-builder-vb-bundle-style', "{$plugin_dir_url}styles/vb-bundle.css", array(), '1.0.0' );wp_localize_script('dofl-modules-builder-bundle-script', 'DiviFlash', array(
 			'nonce' => wp_create_nonce('wp_rest')
 		));
+
+		\ET\Builder\VisualBuilder\Assets\PackageBuildManager::register_package_build(
+			[
+				'name'     => 'content-carousel',
+				'version'  => null,
+				'script'   => [
+					'src'  => "{$plugin_dir_url}scripts/content-carousel.js",
+					'deps' => [
+						'lodash',
+						'divi-vendor-wp-hooks'
+					],
+					'enqueue_top_window' => false,
+					'enqueue_app_window' => true,
+					'args'               => [
+						'in_footer' => false,
+					],
+				],
+			]
+		);
 	}
 }
 add_action( 'divi_visual_builder_assets_before_enqueue_scripts', 'difl_module_enqueue_vb_scripts' );
@@ -107,6 +126,7 @@ function difl_module_enqueue_frontend_scripts() {
 	$plugin_dir_url = plugin_dir_url( __FILE__ );
 	wp_enqueue_style( 'difl-modules-builder-bundle-style', "{$plugin_dir_url}styles/bundle.css", array(), '1.0.0' );
 	wp_enqueue_style( 'difl-modules-logo-showcase-style', "{$plugin_dir_url}styles/logo-showcase-style.css", array(), '1.0.0' );
+	wp_enqueue_style( 'difl-modules-content-carousel-style', "{$plugin_dir_url}styles/content-carousel.css", array(), '1.0.0' );
 }
 add_action( 'wp_enqueue_scripts', 'difl_module_enqueue_frontend_scripts' );
 

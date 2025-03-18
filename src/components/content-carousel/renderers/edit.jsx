@@ -4,10 +4,12 @@ import React, { Fragment, ReactElement, useState, useEffect, useRef } from 'reac
 // Divi Dependencies.
 import {
   ModuleContainer,
+  ChildModulesContainer,
 } from '@divi/module'
 
 const { useFetch } = window?.divi?.rest;
 
+import Swiper from '../../../../scripts/swiper.min';
 import { getAttrByMode } from '@divi/module-utils';
 import { map } from 'lodash';
 
@@ -17,29 +19,6 @@ import { ScriptData } from "./script";
 import { Classnames } from "./classnames";
 import { Styles } from "./styles";
 
-// get image url by image ids
-const fetchImageUrls = async (imageIds) => {
-  const idsArray = Array.isArray(imageIds) ? imageIds : imageIds.split(",");
-  try {
-    const imageUrls = await Promise.all(
-      idsArray.map(async (id) => {
-        let imgId = parseInt(id);
-        const response = await fetch(`/wp-json/wp/v2/media/${imgId}`, {
-          headers: {
-            'X-WP-Nonce': DiviFlash.nonce
-          }
-        });
-        if (!response.ok) throw new Error(`Error fetching image with ID: ${id}`);
-        const imageData = await response.json();
-        return imageData.source_url;
-      })
-    );
-    return imageUrls;
-  } catch (error) {
-    console.error("Error fetching image URLs:", error);
-    return [];
-  }
-};
 
 
 export const Edit = ( props ) => {
@@ -53,21 +32,15 @@ export const Edit = ( props ) => {
   
   const [imageUrls, setImageUrls] = useState([]);
    
-  const imageIds = attrs?.images?.innerContent?.desktop?.value || [];
-  // console.log('imageIds === ', idsArray); // imageIds = [101,102,92,92]
-  
-  useEffect(() => {
-    const loadImageUrls = async () => {
-      if (imageIds.length) {
-        const urls = await fetchImageUrls(imageIds);
-        setImageUrls(urls);
-      }
-    };
-    loadImageUrls();
-  }, [imageIds]);
+  // let parentData = attrs.settingCarousel?.innerContent?.carouselType?.desktop?.value || [];
+  let maxSlideToShowD = attrs.settingCarousel?.innerContent?.maxSlide?.desktop?.value || 3;
+  let maxSlideToShowT = attrs.settingCarousel?.innerContent?.maxSlide?.tablet?.value || 2;
+  let maxSlideToShowP = attrs.settingCarousel?.innerContent?.maxSlide?.phone?.value || 1;
+  // settingCarousel.innerContent.carouselType
+  // console.log('slid Desktop = ', maxSlideToShowD, 'Slid Tablet = ', maxSlideToShowT, 'Slid Phone = ', maxSlideToShowP);
 
-  // console.log('img urls === ', imageUrls);
-     
+  // console.log(maxSlideToShowD?.maxSlide);
+  
 	return (
 		<ModuleContainer
       attrs={attrs}
@@ -81,20 +54,16 @@ export const Edit = ( props ) => {
     >
       {elements.styleComponents({ attrName: 'module', })}
       <div className="et_pb_module_inner">
-        {elements.render({ attrName: 'title', })}
-        {elements.render({ attrName: 'content', })}
+        {/* {elements.render({ attrName: 'title', })}
+        {elements.render({ attrName: 'content', })} */}
 
-        <div className="dg-logos logo_5">
-          {imageUrls.length > 0 ? (
-            imageUrls.map((url, index) => (
-              <span key={index} className="dgl-showcase dgl-orientation ">
-                <img src={url} alt={`Logo ${index + 1}`} className="dgls-image" />
-                <span className="logo_info bottom-center">Logo Index: {index + 1}</span>
-              </span>
-            ))
-          ) : (
-            <span>No images available.</span>
-          )}
+        <div className="difl_contentcarousel">
+          <div className="df_cc_inner_wrapper">
+            <span>Slide To Show Desktop: {String(maxSlideToShowD?.maxSlide)}</span><br />
+            <span>Slide To Show Tablet: {String(maxSlideToShowT?.maxSlide)}</span><br /> 
+            <span>Slide To Show Phone: {String(maxSlideToShowP?.maxSlide)}</span><br />
+            <ChildModulesContainer ids={childrenIds}/>
+          </div>
         </div> 
       </div>
     </ModuleContainer>

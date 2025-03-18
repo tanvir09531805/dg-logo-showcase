@@ -54,49 +54,6 @@ Logo Showcase css on 7-3-2025 7:44:00
     grid-template-columns: repeat(12, 1fr);
 }
 
-/*
-  .dg-logos {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .dg-logos.logo_1 .dgl-showcase {
-    width: 100%;
-  }
-  .dg-logos.logo_2 .dgl-showcase {
-    width: 50%;
-  }
-  .dg-logos.logo_3 .dgl-showcase {
-    width: 33.33333%;
-  }
-  .dg-logos.logo_4 .dgl-showcase {
-    width: 25%;
-  }
-  .dg-logos.logo_5 .dgl-showcase {
-    width: 20%;
-  }
-  .dg-logos.logo_6 .dgl-showcase {
-    width: 16.6666%;
-  }
-  .dg-logos.logo_7 .dgl-showcase {
-    width: 14.285714%;
-  }
-  .dg-logos.logo_8 .dgl-showcase {
-    width: 12.5%;
-  }
-  .dg-logos.logo_9 .dgl-showcase {
-    width: 11.1111%;
-  }
-  .dg-logos.logo_10 .dgl-showcase {
-    width: 10%;
-  }
-  .dg-logos.logo_11 .dgl-showcase {
-    width: 9.0909%;
-  }
-  .dg-logos.logo_12 .dgl-showcase {
-    width: 8.333%;
-  }
-  */
-
 .logo_info.top-left,
 .logo_info.bottom-left {
     text-align: left;

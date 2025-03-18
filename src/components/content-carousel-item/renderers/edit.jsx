@@ -8,8 +8,12 @@ import {
 
 const { useFetch } = window?.divi?.rest;
 
+import { generateDefaultAttrs } from '@divi/module-library';
+
 import { getAttrByMode } from '@divi/module-utils';
-import { map } from 'lodash';
+import { processFontIcon } from '@divi/icon-library';
+import { isEmpty, merge, map } from 'lodash';
+import parentMetadata from '../../content-carousel/module.json';
 
 const { __ } = window?.vendor?.wp?.i18n;
 
@@ -17,60 +21,43 @@ import { ScriptData } from "./script";
 import { Classnames } from "./classnames";
 import { Styles } from "./styles";
 
-// get image url by image ids
-const fetchImageUrls = async (imageIds) => {
-  const idsArray = Array.isArray(imageIds) ? imageIds : imageIds.split(",");
-  try {
-    const imageUrls = await Promise.all(
-      idsArray.map(async (id) => {
-        let imgId = parseInt(id);
-        const response = await fetch(`/wp-json/wp/v2/media/${imgId}`, {
-          headers: {
-            'X-WP-Nonce': DiviFlash.nonce
-          }
-        });
-        if (!response.ok) throw new Error(`Error fetching image with ID: ${id}`);
-        const imageData = await response.json();
-        return imageData.source_url;
-      })
-    );
-    return imageUrls;
-  } catch (error) {
-    console.error("Error fetching image URLs:", error);
-    return [];
-  }
-};
-
 
 export const Edit = ( props ) => {
 	const {
 		attrs,
+		elements,
 		id,
 		name,
-		elements,
-		childrenIds
+		parentAttrs
 	} = props;
   
-  const [imageUrls, setImageUrls] = useState([]);
+  // const [imageUrls, setImageUrls] = useState([]);
    
-  const imageIds = attrs?.images?.innerContent?.desktop?.value || [];
-  // console.log('imageIds === ', idsArray); // imageIds = [101,102,92,92]
-  
-  useEffect(() => {
-    const loadImageUrls = async () => {
-      if (imageIds.length) {
-        const urls = await fetchImageUrls(imageIds);
-        setImageUrls(urls);
-      }
-    };
-    loadImageUrls();
-  }, [imageIds]);
+	const utils = window.ET_Builder.API.Utils;
+	// console.log(utils)
+	const parentDefaultAttrs = generateDefaultAttrs ( parentMetadata );
+	const parentAttrsWithDefault = merge ( parentDefaultAttrs, parentAttrs );
+	const parentIconContent = getAttrByMode ( parentAttrsWithDefault?.icon?.innerContent );
+	const iconContent = getAttrByMode ( attrs?.icon?.innerContent );
+	const icon = isEmpty ( iconContent ) ? parentIconContent : iconContent;
 
-  // console.log('img urls === ', imageUrls);
-     
+  // useImage.innerContent.items.src
+  const image = attrs?.useImage?.innerContent?.items?.src?.desktop?.value;
+  // imageIcon.innerContent
+  // const useIcon = attrs?.imageIcon?.innerContent?.desktop?.value?.useIcon;
+  // console.log('Use Icons Yes === ', useIcon);
+
+  // let title = attrs?.title?.innerContent?.desktop?.value || [];
+
+  // let hookImage = attrs?.useImage?.innerContent?.items?.src?.desktop?.value;
+  let hookImage = attrs?.image?.innerContent?.desktop?.value?.image;
+  // console.log('Hook icon = ', attrs?.icon?.innerContent?.desktop);
+
+
 	return (
 		<ModuleContainer
       attrs={attrs}
+			parentAttrs={parentAttrs}
       elements={elements}
       id={id}
       moduleClassName="d5_logo_showcase_module"
@@ -81,20 +68,22 @@ export const Edit = ( props ) => {
     >
       {elements.styleComponents({ attrName: 'module', })}
       <div className="et_pb_module_inner">
-        {elements.render({ attrName: 'title', })}
-        {elements.render({ attrName: 'content', })}
-
-        <div className="dg-logos logo_5">
-          {imageUrls.length > 0 ? (
-            imageUrls.map((url, index) => (
-              <span key={index} className="dgl-showcase dgl-orientation ">
-                <img src={url} alt={`Logo ${index + 1}`} className="dgls-image" />
-                <span className="logo_info bottom-center">Logo Index: {index + 1}</span>
-              </span>
-            ))
-          ) : (
-            <span>No images available.</span>
+        
+        <div className="slider-item">
+          {hookImage && (
+            <div className="slide_image">
+              <img key={ hookImage?.id } src={ hookImage?.src } alt={hookImage?.titleText} width={110} />
+            </div>
           )}
+          {elements.render ( {
+            attrName: 'title',
+          } )}
+          {elements.render ( {
+            attrName: 'subTitle',
+          } )}
+          {elements.render ( {
+						attrName: 'content',
+					} )}
         </div> 
       </div>
     </ModuleContainer>

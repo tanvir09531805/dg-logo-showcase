@@ -112,6 +112,34 @@
           "innerContent": {
             "groupType": "group-items",
             "items": {
+              "carouselType": {
+                "groupSlug": "carouselSettings",
+                "attrName": "settingCarousel.innerContent.carouselType",
+                "subName": "carouselType",
+                "label": "Carousel Type",
+                "description": "You can select the carousel type.",
+                "priority": 10,
+                "render": true,
+                "features": {
+                  "sticky": false,
+                  "responsive": false
+                },
+                "component": {
+                  "name": "divi/select",
+                  "type": "field",
+                  "props": {
+                    "defaultValue": "slide",
+                    "options": {
+                      "slide": {
+                        "label": "Slide"
+                      },
+                      "coverflow": {
+                        "label": "Coverflow"
+                      }
+                    }
+                  }
+                }
+              },
               "maxSlide": {
                 "groupSlug": "carouselSettings",
                 "attrName": "settingCarousel.innerContent.maxSlide",
@@ -132,20 +160,8 @@
                   "props": {
                     "min": 1,
                     "max": 7,
-                    "allowedUnits": [
-                      "%",
-                      "em",
-                      "rem",
-                      "px",
-                      "cm",
-                      "mm",
-                      "in",
-                      "pt",
-                      "pc",
-                      "ex",
-                      "vh",
-                      "vw"
-                    ]
+                    "defaultUnit": "",
+                    "allowedUnits": []
                   }
                 }
               },
@@ -168,7 +184,8 @@
                   "name": "divi/range",
                   "props": {
                     "min": 1,
-                    "max": 7,
+                    "max": 200,
+                    "defaultUnit": "px",
                     "allowedUnits": [
                       "px"
                     ]
@@ -195,26 +212,14 @@
                   "props": {
                     "min": 1,
                     "max": 7,
-                    "allowedUnits": [
-                      "%",
-                      "em",
-                      "rem",
-                      "px",
-                      "cm",
-                      "mm",
-                      "in",
-                      "pt",
-                      "pc",
-                      "ex",
-                      "vh",
-                      "vw"
-                    ]
+                    "defaultUnit": "",
+                    "allowedUnits": []
                   }
                 }
               },
               "centerSlides": {
                 "groupSlug": "carouselSettings",
-                "attrName": "settingCarousel.innerContent.centeredSlides",
+                "attrName": "settingCarousel.innerContent.centerSlides",
                 "subName": "centerSlides",
                 "label": "Centered Slides",
                 "description": "Here you can choose whether the slides should be centered or not.",
@@ -289,20 +294,8 @@
                   "props": {
                     "min": 100,
                     "max": 10000,
-                    "allowedUnits": [
-                      "%",
-                      "em",
-                      "rem",
-                      "px",
-                      "cm",
-                      "mm",
-                      "in",
-                      "pt",
-                      "pc",
-                      "ex",
-                      "vh",
-                      "vw"
-                    ]
+                    "defaultUnit": "",
+                    "allowedUnits": []
                   }
                 }
               },
@@ -480,20 +473,8 @@
                 "props": {
                   "min": 1,
                   "max": 120,
-                  "allowedUnits": [
-                    "%",
-                    "em",
-                    "rem",
-                    "px",
-                    "cm",
-                    "mm",
-                    "in",
-                    "pt",
-                    "pc",
-                    "ex",
-                    "vh",
-                    "vw"
-                  ]
+                  "defaultUnit": "",
+                  "allowedUnits": []
                 }
               }
             }
@@ -518,20 +499,8 @@
                 "props": {
                   "min": 1,
                   "max": 120,
-                  "allowedUnits": [
-                    "%",
-                    "em",
-                    "rem",
-                    "px",
-                    "cm",
-                    "mm",
-                    "in",
-                    "pt",
-                    "pc",
-                    "ex",
-                    "vh",
-                    "vw"
-                  ]
+                  "defaultUnit": "",
+                  "allowedUnits": []
                 }
               }
             }
@@ -556,20 +525,8 @@
                 "props": {
                   "min": 1,
                   "max": 120,
-                  "allowedUnits": [
-                    "%",
-                    "em",
-                    "rem",
-                    "px",
-                    "cm",
-                    "mm",
-                    "in",
-                    "pt",
-                    "pc",
-                    "ex",
-                    "vh",
-                    "vw"
-                  ]
+                  "defaultUnit": "",
+                  "allowedUnits": []
                 }
               }
             }
@@ -594,20 +551,8 @@
                 "props": {
                   "min": 1,
                   "max": 120,
-                  "allowedUnits": [
-                    "%",
-                    "em",
-                    "rem",
-                    "px",
-                    "cm",
-                    "mm",
-                    "in",
-                    "pt",
-                    "pc",
-                    "ex",
-                    "vh",
-                    "vw"
-                  ]
+                  "defaultUnit": "",
+                  "allowedUnits": []
                 }
               }
             }
@@ -632,20 +577,8 @@
                 "props": {
                   "min": 1,
                   "max": 120,
-                  "allowedUnits": [
-                    "%",
-                    "em",
-                    "rem",
-                    "px",
-                    "cm",
-                    "mm",
-                    "in",
-                    "pt",
-                    "pc",
-                    "ex",
-                    "vh",
-                    "vw"
-                  ]
+                  "defaultUnit": "",
+                  "allowedUnits": []
                 }
               }
             }
