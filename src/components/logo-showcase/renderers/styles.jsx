@@ -1,5 +1,4 @@
 import React from "react";
-import { gridLayoutStyleDeclaration } from "./styleDeclarations";
 const { CommonStyle, StyleContainer } = window?.divi?.module;
 
 export const Styles = ( {
@@ -11,7 +10,6 @@ export const Styles = ( {
 	                       state,
 	                       noStyleTag,
                        } ) => {
-	const proImgSelector = `${orderClass} .difl_bento_grid__inner__image .__image`;
 
 	return (
 		

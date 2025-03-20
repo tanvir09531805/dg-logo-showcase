@@ -90,10 +90,10 @@ export const Edit = ( props ) => {
 				attrName: 'module',
 			} )}
 
-			<ElementComponents
+			{/* <ElementComponents
 				attrs={attrs?.module?.decoration ?? {}}
 				id={id}
-			/>
+			/> */}
 			<div className="difl_bento_grid__inner">
 				<ChildModulesContainer ids={childrenIds}/>
 			</div>

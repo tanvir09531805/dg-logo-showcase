@@ -1,9 +1,11 @@
 (function(){
-    var difl_testimonialcarousel = document.querySelectorAll('.difl_contentcarousel');
+    var difl_testimonialcarousel = document.querySelectorAll('.difl_contentcarousel'); // diviflash_content_carousel 
     [].forEach.call(difl_testimonialcarousel, function(ele, index) {
         const container = ele.querySelector('.df_cc_container');
         const data = JSON.parse(container.dataset.settings);
         const selector = ele.querySelector('.swiper-container');
+console.log('Data: ', data);
+
 
         const item_spacing_tablet = '' !== data.item_spacing_tablet ? data.item_spacing_tablet : data.item_spacing;
         const item_spacing_phone = '' !== data.item_spacing_phone ? data.item_spacing_phone : item_spacing_tablet;
@@ -32,7 +34,7 @@
             breakpoints: {
                 // desktop
                 981: {
-                    slidesPerView: data.desktop,
+                    slidesPerView: data.desktop, // data.desktop,
                     spaceBetween : parseInt(data.item_spacing)
                 },
                 // tablet
@@ -200,7 +202,7 @@ const handleEmptyItem = () => {
 	const container = document.querySelectorAll( '.difl_contentcarouselitem' );
 	if ( ! container ) return;
 	[ ...container ].forEach( element => {
-		if ( ! element.querySelector( '.et_pb_module_inner .df_cci_container' ) ) {
+		if ( ! element.querySelector( '.df_cci_container' ) ) {
 			element.remove();
 		}
 	} )

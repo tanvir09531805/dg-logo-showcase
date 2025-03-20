@@ -58,6 +58,9 @@ add new field |=> https://devalpha.elegantthemes.com/docs/builder-api/js-beta/di
 
 E:\laragon\www\divi5a\wp-content\themes\Divi\includes\builder-5\visual-builder\packages\module-library\src\components\accordion\module.json
 
+"name": "Advanced Carousel",
+"plural": null,
+"slug": "difl_contentcarousel",
 
-
+"slug": "difl_contentcarouselitem",
 */

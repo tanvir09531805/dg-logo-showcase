@@ -56,7 +56,7 @@ export const Edit = ( props ) => {
 		parentAttrs,
 	} = props;
 	const utils = window.ET_Builder.API.Utils;
-	console.log(utils)
+	// console.log(utils)
 	const parentDefaultAttrs = generateDefaultAttrs ( parentMetadata );
 	const parentAttrsWithDefault = merge ( parentDefaultAttrs, parentAttrs );
 	const parentIconContent = getAttrByMode ( parentAttrsWithDefault?.icon?.innerContent );

@@ -24,7 +24,6 @@ import {
   Select,
 } from '@divi/field-library';
 
-
 import { GridLayoutField } from '../../../fields/grid-layout-field';
 import { GridLayoutManager } from '../../../fields/grid-layout-manager';
 
@@ -96,8 +95,24 @@ export const Content = ({
       <FieldContainer
         attrName="generalSettings.innerContent.select"
         label="Logos in a row "
+        options={ {
+          1: { label: __('Logo 1', 'divi_flash'), value: '1' },
+          2: { label: __('Logo 2', 'divi_flash'), value: '2' },
+          3: { label: __('Logo 3', 'divi_flash'), value: '3' },
+          4: { label: __('Logo 4', 'divi_flash'), value: '4' },
+          5: { label: __('Logo 5', 'divi_flash'), value: '5' },
+          6: { label: __('Logo 6', 'divi_flash'), value: '6' },
+          7: { label: __('Logo 7', 'divi_flash'), value: '7' },
+          8: { label: __('Logo 8', 'divi_flash'), value: '8' },
+          9: { label: __('Logo 9', 'divi_flash'), value: '9' },
+          10: { label: __('Logo 10', 'divi_flash'), value: '10' },
+          12: { label: __('Logo 12', 'divi_flash'), value: '12' }
+        } }
       >
-        <Select />
+        <Select
+          name="select-"
+          options={options}
+        />
       </FieldContainer>
     </GroupContainer>
     <BackgroundGroup />

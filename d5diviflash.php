@@ -81,17 +81,17 @@ function difl_module_enqueue_vb_scripts() {
 	if ( et_builder_d5_enabled() && et_core_is_fb_enabled() ) {
 		$plugin_dir_url = plugin_dir_url( __FILE__ );
 
-		wp_enqueue_script(
-			'dofl-modules-builder-bundle-script',
-			"{$plugin_dir_url}scripts/bundle.js",
+		wp_enqueue_script( 'dofl-modules-builder-bundle-script', "{$plugin_dir_url}scripts/bundle.js",
 			array(
 				'divi-module-library',
 				'divi-vendor-wp-hooks',
-			),
-			'1.0.0',
-			true
+			), '1.0.0', true
 		);
-		wp_enqueue_style( 'difl-modules-builder-vb-bundle-style', "{$plugin_dir_url}styles/vb-bundle.css", array(), '1.0.0' );wp_localize_script('dofl-modules-builder-bundle-script', 'DiviFlash', array(
+		// wp_enqueue_script( 'difl-swiper-script', "{$plugin_dir_url}scripts/swiper.min.js", array(), '1.0.0', true );
+		// wp_enqueue_script( 'difl-contentcarousel-script', "{$plugin_dir_url}scripts/contentcarousel.js", array(), '1.0.0', true );
+
+		wp_enqueue_style( 'difl-modules-builder-vb-bundle-style', "{$plugin_dir_url}styles/vb-bundle.css", array(), '1.0.0' );
+		wp_localize_script('dofl-modules-builder-bundle-script', 'DiviFlash', array(
 			'nonce' => wp_create_nonce('wp_rest')
 		));
 
@@ -123,10 +123,16 @@ add_action( 'divi_visual_builder_assets_before_enqueue_scripts', 'difl_module_en
  * @since ??
  */
 function difl_module_enqueue_frontend_scripts() {
+	$version = time();
 	$plugin_dir_url = plugin_dir_url( __FILE__ );
 	wp_enqueue_style( 'difl-modules-builder-bundle-style', "{$plugin_dir_url}styles/bundle.css", array(), '1.0.0' );
 	wp_enqueue_style( 'difl-modules-logo-showcase-style', "{$plugin_dir_url}styles/logo-showcase-style.css", array(), '1.0.0' );
 	wp_enqueue_style( 'difl-modules-content-carousel-style', "{$plugin_dir_url}styles/content-carousel.css", array(), '1.0.0' );
+
+	wp_enqueue_script( 'lightbox', $plugin_dir_url . 'scripts/lightgallery.js', array('jquery'), $version, true );
+	// Swiper Load
+	wp_enqueue_script( 'swiper', $plugin_dir_url . 'scripts/swiper.min.js', array('jquery'), $version, true );
+	wp_enqueue_script( 'swiper-content-carousel', $plugin_dir_url . 'scripts/contentcarousel.js', array('jquery', 'swiper'), $version, true );
 }
 add_action( 'wp_enqueue_scripts', 'difl_module_enqueue_frontend_scripts' );
 

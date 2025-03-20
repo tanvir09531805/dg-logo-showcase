@@ -2,23 +2,13 @@
 import React, { Fragment, ReactElement, useState, useEffect, useRef } from 'react';
 
 // Divi Dependencies.
-const {
-	ModuleContainer,
-	ElementComponents,
-	DynamicData,
-	ModuleClassnamesParams,
-	textOptionsClassnames,
-	ModuleScriptDataProps,
-	StylesProps,
-	StyleContainer,
-	CommonStyle,
-	elementClassnames,
-	ChildModulesContainer
-} = window?.divi?.module;
+import {
+  ModuleContainer,
+} from '@divi/module'
+
 const { useFetch } = window?.divi?.rest;
-const {
-	getAttrByMode,
-} = window?.divi?.moduleUtils;
+
+import { getAttrByMode } from '@divi/module-utils';
 import { map } from 'lodash';
 
 const { __ } = window?.vendor?.wp?.i18n;
@@ -64,8 +54,6 @@ export const Edit = ( props ) => {
   const [imageUrls, setImageUrls] = useState([]);
    
   const imageIds = attrs?.images?.innerContent?.desktop?.value || [];
-  let idsArray = imageIds.length?imageIds.split(","):[];
-  
   // console.log('imageIds === ', idsArray); // imageIds = [101,102,92,92]
   
   useEffect(() => {
@@ -82,42 +70,33 @@ export const Edit = ( props ) => {
      
 	return (
 		<ModuleContainer
-          attrs={attrs}
-          elements={elements}
-          id={id}
-          moduleClassName="d5_logo_showcase_module"
-          name={name}
-          scriptDataComponent={ScriptData}
-          stylesComponent={Styles}
-          classnamesFunction={Classnames}
-        >
-          {elements.styleComponents({ attrName: 'module', })}
-          <div className="et_pb_module_inner">
-            {elements.render({ attrName: 'title', })}
-            {elements.render({ attrName: 'content', })}
+      attrs={attrs}
+      elements={elements}
+      id={id}
+      moduleClassName="d5_logo_showcase_module"
+      name={name}
+      scriptDataComponent={ScriptData}
+      stylesComponent={Styles}
+      classnamesFunction={Classnames}
+    >
+      {elements.styleComponents({ attrName: 'module', })}
+      <div className="et_pb_module_inner">
+        {elements.render({ attrName: 'title', })}
+        {elements.render({ attrName: 'content', })}
 
-            <div className="dg-logos logo_5">
-              {/* {idsArray?.map((id, index) => (
-                <div key={index} className="d5_ls_module_image" width={100}>
-                  <span>Logo ID: {id} | Logo Index: {index + 1}</span>
-                </div>
-              ))}  */}
-
-              {imageUrls.length > 0 ? (
-                imageUrls.map((url, index) => (
-                  <span key={index} className="dgl-showcase dgl-orientation ">
-                    <img src={url} alt={`Logo ${index + 1}`} className="dgls-image" />
-                    <span className="logo_info bottom-center">Logo Index: {index + 1}</span>
-                  </span>
-                ))
-              ) : (
-                <span>No images available.</span>
-              )}
-
-            </div> 
-
-          </div>
-          
-        </ModuleContainer>
+        <div className="dg-logos logo_5">
+          {imageUrls.length > 0 ? (
+            imageUrls.map((url, index) => (
+              <span key={index} className="dgl-showcase dgl-orientation ">
+                <img src={url} alt={`Logo ${index + 1}`} className="dgls-image" />
+                <span className="logo_info bottom-center">Logo Index: {index + 1}</span>
+              </span>
+            ))
+          ) : (
+            <span>No images available.</span>
+          )}
+        </div> 
+      </div>
+    </ModuleContainer>
 	);
 }

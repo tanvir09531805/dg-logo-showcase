@@ -177,6 +177,8 @@ window.vendor.wp.hooks.addFilter('divi.moduleLibrary.moduleAttributes.diviflash.
       // Options Group on Module".
     },
   };
+
+
   attributes.useImage = {
     type:     'object',
     selector: '{{selector}} .df_cci_image_container img',
@@ -236,10 +238,32 @@ window.vendor.wp.hooks.addFilter('divi.moduleLibrary.moduleAttributes.diviflash.
           },
         },
       },
+      decoration: {
+          border: {},
+          boxShadow: {}
+      }
       // ... `advanced` property is omitted for brevity.
       // ... existing code from the previous example: "Adding Custom Option Field to New Custom
       // Options Group on Module".
     },
+    styleProps: {
+        selector: "{{selector}} img, {{selector}} .et_overlay",
+        border: {
+            selector: "{{selector}} .et_pb_image_wrap"
+        },
+        boxShadow: {
+            selector: "{{selector}} .et_pb_image_wrap",
+            useOverlay: true
+        }
+    },
+    styleComponentsProps: {
+        background: false,
+        boxShadow: {
+            settings: {
+                overlay: true
+            }
+        }
+    }
   };
 
   console.log('attributes', attributes);
