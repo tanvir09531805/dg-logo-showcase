@@ -60,16 +60,20 @@ trait RenderCallback {
 
 		// Image
 		$image = $attrs['image']['innerContent']['desktop']['value']['image'] ?? "";
+		// echo '<pre>';
+		// var_dump($image);
+		// echo '</pre>';
 		$image_markup = "";
 		if ( is_array($image) && !empty($image['src']) ) {
 			$image_markup = HTMLUtility::render(
 				[
 					'tag'               => 'div',
 					'attributes'        => [
-						'class' => 'difl_content_carouselitem__image',
+						'class' => 'df_cci_image_container',
+						'data-src' => $image['src'],
 					],
 					'childrenSanitizer' => 'et_core_esc_previously',
-					'children'          => "<img src='{$image['src']}' alt='{$image['alt']}' width='110' >",
+					'children'          => "<img src='{$image['src']}' alt='{$image['alt']}' title='{$image['titleText']}' />",
 				]
 			);
 		}
@@ -78,6 +82,19 @@ trait RenderCallback {
 		$title = $elements->render(
 			[
 				'attrName'      => 'title',
+				'attributes'        => [
+					'class' => 'df_cc_title',
+				],
+				'hoverSelector' => '{{parentSelector}}',
+			]
+		);
+		// Sub Title.
+		$subTitle = $elements->render(
+			[
+				'attrName'      => 'subTitle',
+				'attributes'        => [
+					'class' => 'df_cc_subtitle',
+				],
 				'hoverSelector' => '{{parentSelector}}',
 			]
 		);
@@ -87,6 +104,10 @@ trait RenderCallback {
 			[
 				'attrName'      => 'content',
 				'hoverSelector' => '{{parentSelector}}',
+				'tag'           => 'div',
+				'attributes'    => [
+					'class' => 'df_cc_content',
+				],
 			]
 		);
 
@@ -95,22 +116,28 @@ trait RenderCallback {
 			[
 				'tag'               => 'div',
 				'attributes'        => [
-					'class' => 'difl_content_carouselitem__content',
+					'class' => 'df_cc_content',
 				],
 				'childrenSanitizer' => 'et_core_esc_previously',
 				'children'          => $content,
 			]
 		);
-		$content_container = HTMLUtility::render(
-			[
-				'tag'               => 'div',
-				'attributes'        => [
-					'class' => 'difl_content_carouselitem__content-container',
-				],
-				'childrenSanitizer' => 'et_core_esc_previously',
-				'children'          => $title . $content_markup,
-			]
-		);
+		
+		
+		$difl_content_carousel_item = '
+		
+			<div class="df_cci_container" data-src="'.$image['src'].'">
+				' . $image_markup . '
+				'.$title.'
+				'.$subTitle.'
+				' . $content . '
+				<div class="df_cci_button_wrapper">
+					<a href="#" class="df_cci_button">More</a>
+				</div>
+			</div>
+			
+		';
+
 
 		return Module::render(
 			[
@@ -138,7 +165,7 @@ trait RenderCallback {
 							'orderIndex'    => $block->parsed_block['orderIndex'],
 							'storeInstance' => $block->parsed_block['storeInstance'],
 						]
-					) . $icon . $image_markup . $content_container, // . self::process_button_markup($attrs)
+					) .$difl_content_carousel_item, //  $icon . $image_markup . $content_container . self::process_button_markup($attrs)
 			]
 		);
 	}

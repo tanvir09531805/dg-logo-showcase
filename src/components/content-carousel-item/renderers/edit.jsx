@@ -60,32 +60,35 @@ export const Edit = ( props ) => {
 			parentAttrs={parentAttrs}
       elements={elements}
       id={id}
-      moduleClassName="d5_logo_showcase_module"
+      moduleClassName="difl_contentcarouselitem"
       name={name}
       scriptDataComponent={ScriptData}
       stylesComponent={Styles}
       classnamesFunction={Classnames}
     >
       {elements.styleComponents({ attrName: 'module', })}
-      <div className="et_pb_module_inner">
-        
-        <div className="slider-item">
+      
+        <div class="df_cci_container">
           {hookImage && (
-            <div className="slide_image">
+            <div className="df_cci_image_container">
               <img key={ hookImage?.id } src={ hookImage?.src } alt={hookImage?.titleText} width={110} />
             </div>
           )}
-          {elements.render ( {
+          <h4 class="df_cc_title">{elements.render ( {
             attrName: 'title',
-          } )}
+          } )}</h4>
           {elements.render ( {
             attrName: 'subTitle',
           } )}
-          {elements.render ( {
+          <div class="df_cc_content">{elements.render ( {
 						attrName: 'content',
-					} )}
-        </div> 
-      </div>
+					} )}</div>
+          <div class="df_cci_button_wrapper">
+            <a href="#" class="df_cci_button">Read</a>
+          </div>
+        </div>
+
+      
     </ModuleContainer>
 	);
 }

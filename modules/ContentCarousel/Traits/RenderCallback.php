@@ -30,15 +30,107 @@ trait RenderCallback {
 		$parent       = BlockParserStore::get_parent( $block->parsed_block['id'], $block->parsed_block['storeInstance'] );
 		$parent_attrs = $parent->attrs ?? [];
 
+
+
+		// process data
+
+		// $order_number    = str_replace('_', '', str_replace($this->slug, '', $order_class));
+		$order_number  = $block->parsed_block['orderIndex'];
+
+		$arrowNavigation = $attrs['arrowNavigation']['advanced']['show']['desktop']['value']?"on":"off";
+		$dotNavigation = $attrs['dotNavigation']['advanced']['show']['desktop']['value']?"on":"off";
+
+		$ccData = $attrs['settingCarousel']['innerContent'];
+		$loop   = $ccData['loop']['desktop']['value']['loop'] === 'on' ? true : false; 
+		$speed  = $ccData['speed']['desktop']['value']['speed'] ?: '500';
+		$carouselType 	= $ccData['carouselType']['desktop']['value']['carouselType'] ?: 'slide'; // coverflow
+		$maxSlideDesktop= $ccData['maxSlide']['desktop']['value']['maxSlide'] ?: '3';
+		$maxSlideTablet = $ccData['maxSlide']['tablet']['value']['maxSlide'] ?: '2';
+		$maxSlidePhone  = $ccData['maxSlide']['phone']['value']['maxSlide'] ?: '1'; 
+		$centerSlides 	= $ccData['centerSlides']['desktop']['value']['centerSlides'] ?: 'off'; 
+		$useLightbox 	= $ccData['useLightbox']['desktop']['value']['useLightbox'] ?: 'off'; 
+		$titleLightbox  = $ccData['showTitleOnLightbox']['desktop']['value']['showTitleOnLightbox'] ?? 'off';
+
+		$auto_play = isset($ccData['autoplay']['desktop']['value']['autoplay']) ? $ccData['autoplay']['desktop']['value']['autoplay'] : 'off';
+		$autoplay_tablet = isset($ccData['autoplay']['tablet']['value']['autoplay']) ? $ccData['autoplay']['tablet']['value']['autoplay'] : $auto_play;
+		$autoplay_phone = isset($ccData['autoplay']['phone']['value']['autoplay']) ? $ccData['autoplay']['phone']['value']['autoplay'] : $auto_play;
+
+		$pause_hover = isset($ccData['pauseOnHover']['desktop']['value']['pauseOnHover']) ? $ccData['pauseOnHover']['desktop']['value']['pauseOnHover'] : 'off';
+		$pause_hover_tablet = isset($ccData['pauseOnHover']['tablet']['value']['pauseOnHover']) ? $ccData['pauseOnHover']['tablet']['value']['pauseOnHover'] : $pause_hover;
+		$pause_hover_phone = isset($ccData['pauseOnHover']['phone']['value']['pauseOnHover']) ? $ccData['pauseOnHover']['phone']['value']['pauseOnHover'] : $pause_hover_tablet;
+
+		$auto_delay = isset($ccData['autoplaySpeed']['desktop']['value']['autoplaySpeed']) ? $ccData['autoplaySpeed']['desktop']['value']['autoplaySpeed'] : '2000';
+		$auto_delay_tablet = isset($ccData['autoplaySpeed']['tablet']['value']['autoplaySpeed']) ? $ccData['autoplaySpeed']['tablet']['value']['autoplaySpeed'] : $auto_delay;
+		$auto_delay_phone = isset($ccData['autoplaySpeed']['phone']['value']['autoplaySpeed']) ? $ccData['autoplaySpeed']['phone']['value']['autoplaySpeed'] : $auto_delay_tablet;
+
+		$item_spacing = isset($ccData['spacingPx']['desktop']['value']['spacingPx']) ? $ccData['spacingPx']['desktop']['value']['spacingPx'] : '30';
+		$item_spacing_tablet = isset($ccData['spacingPx']['tablet']['value']['spacingPx']) ? $ccData['spacingPx']['tablet']['value']['spacingPx'] : $item_spacing;
+		$item_spacing_phone = isset($ccData['spacingPx']['phone']['value']['spacingPx']) ? $ccData['spacingPx']['phone']['value']['spacingPx'] : $item_spacing_tablet;
+
+		$difl_cc_dots  = '<div class="swiper-pagination cc-dots-0"></div>';
+		$difl_cc_arrow = '<div class="df_cc_arrows">
+                <div class="swiper-button-next cc-next-0" data-icon="5"></div>
+                <div class="swiper-button-prev cc-prev-0" data-icon="4"></div>
+            </div>';
+		$classArrowPosition = 'arrow-middle';
+		$equalHeightItem    = $ccData['equalHeightItem']['desktop']['value']['equalHeightItem'] ?? 'off'; 
+
+        $carouselSetting = [
+            'effect' => $carouselType, // $this->props['carousel_type'],
+            'desktop' => $maxSlideDesktop,
+            'tablet' => $maxSlideTablet,
+            'mobile' => $maxSlidePhone,
+            'loop' => $loop,
+            'item_spacing' => $item_spacing,
+            'item_spacing_tablet' => $item_spacing_tablet,
+            'item_spacing_phone' => $item_spacing_phone,
+            'arrow' => $arrowNavigation,
+            'dots' => $dotNavigation,
+            'autoplay' => $auto_play,
+            'autoplay_tablet' => $autoplay_tablet,
+            'autoplay_phone' => $autoplay_phone,
+            'auto_delay' => $auto_delay,
+            'auto_delay_tablet' => $auto_delay_tablet,
+            'auto_delay_phone' => $auto_delay_phone,
+            'speed' => $speed,
+            'pause_hover' => $pause_hover,
+            'pause_hover_tablet' => $pause_hover_tablet,
+            'pause_hover_phone' => $pause_hover_phone,
+            'centeredSlides' => $centerSlides,
+            'order' => $order_number,
+            'use_lightbox' => $useLightbox,
+            'use_lightbox_title' => $titleLightbox
+        ];
+
+
 		$child_items = HTMLUtility::render(
 			[
 				'tag'               => 'div',
 				'attributes'        => [
-					'class'  => 'difl_content_carousel_inner',
+					'class'  => 'swiper-wrapper',
 				],
 				'childrenSanitizer' => 'et_core_esc_previously',
 				'children'          => $content,
 			]
+		);
+		
+		$child_all_items = sprintf('<div class="df_cc_container %8$s" data-settings=\'%1$s\' data-item="%2$s" data-itemtablet="%3$s" data-itemphone="%4$s" >
+                <div class="df_cc_inner_wrapper">
+                    <div class="swiper-container">
+						%5$s
+                    </div>
+					%6$s 
+                </div>
+					%7$s 
+            </div>',
+			wp_json_encode($carouselSetting),
+			$maxSlideDesktop,
+			$maxSlideTablet,
+			$maxSlidePhone,
+			$child_items,
+			$difl_cc_arrow,
+			$difl_cc_dots,
+			$classArrowPosition
 		);
 
 		return Module::render(
@@ -68,7 +160,7 @@ trait RenderCallback {
 							'orderIndex'    => $block->parsed_block['orderIndex'],
 							'storeInstance' => $block->parsed_block['storeInstance'],
 						]
-					) . $child_items,
+					) . $child_all_items,
 				'childrenIds'         => $children_ids,
 			]
 		);
