@@ -41,15 +41,15 @@ trait RenderCallback {
 		$dotNavigation = $attrs['dotNavigation']['advanced']['show']['desktop']['value']?"on":"off";
 
 		$ccData = $attrs['settingCarousel']['innerContent'];
-		$loop   = $ccData['loop']['desktop']['value']['loop'] === 'on' ? true : false; 
-		$speed  = $ccData['speed']['desktop']['value']['speed'] ?: '500';
-		$carouselType 	= $ccData['carouselType']['desktop']['value']['carouselType'] ?: 'slide'; // coverflow
-		$maxSlideDesktop= $ccData['maxSlide']['desktop']['value']['maxSlide'] ?: '3';
-		$maxSlideTablet = $ccData['maxSlide']['tablet']['value']['maxSlide'] ?: '2';
-		$maxSlidePhone  = $ccData['maxSlide']['phone']['value']['maxSlide'] ?: '1'; 
-		$centerSlides 	= $ccData['centerSlides']['desktop']['value']['centerSlides'] ?: 'off'; 
-		$useLightbox 	= $ccData['useLightbox']['desktop']['value']['useLightbox'] ?: 'off'; 
-		$titleLightbox  = $ccData['showTitleOnLightbox']['desktop']['value']['showTitleOnLightbox'] ?? 'off';
+		$loop   = isset($ccData['loop']['desktop']['value']['loop']) && $ccData['loop']['desktop']['value']['loop'] === 'on' ? true : false; 
+		$speed  = isset($ccData['speed']['desktop']['value']['speed']) ? $ccData['speed']['desktop']['value']['speed'] : '500';
+		$carouselType 	= isset($ccData['carouselType']['desktop']['value']['carouselType']) ? $ccData['carouselType']['desktop']['value']['carouselType']: 'slide'; // coverflow
+		$maxSlideDesktop= isset($ccData['maxSlide']['desktop']['value']['maxSlide']) ? $ccData['maxSlide']['desktop']['value']['maxSlide'] : '3';
+		$maxSlideTablet = isset($ccData['maxSlide']['tablet']['value']['maxSlide']) ? $ccData['maxSlide']['tablet']['value']['maxSlide'] : $maxSlideDesktop;
+		$maxSlidePhone  = isset($ccData['maxSlide']['phone']['value']['maxSlide']) ? $ccData['maxSlide']['phone']['value']['maxSlide'] : $maxSlideTablet; 
+		$centerSlides 	= isset($ccData['centerSlides']['desktop']['value']['centerSlides']) ? $ccData['centerSlides']['desktop']['value']['centerSlides']: 'off'; 
+		$useLightbox 	= isset($ccData['useLightbox']['desktop']['value']['useLightbox']) ? $ccData['useLightbox']['desktop']['value']['useLightbox'] : 'off'; 
+		$titleLightbox  = isset($ccData['showTitleOnLightbox']['desktop']['value']['showTitleOnLightbox']) ? $ccData['showTitleOnLightbox']['desktop']['value']['showTitleOnLightbox'] : 'off';
 
 		$auto_play = isset($ccData['autoplay']['desktop']['value']['autoplay']) ? $ccData['autoplay']['desktop']['value']['autoplay'] : 'off';
 		$autoplay_tablet = isset($ccData['autoplay']['tablet']['value']['autoplay']) ? $ccData['autoplay']['tablet']['value']['autoplay'] : $auto_play;
