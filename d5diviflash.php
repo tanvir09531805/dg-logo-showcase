@@ -90,7 +90,7 @@ function difl_module_enqueue_vb_scripts() {
 		// wp_enqueue_script( 'difl-swiper-script', "{$plugin_dir_url}scripts/swiper.min.js", array(), '1.0.0', true );
 		// wp_enqueue_script( 'difl-contentcarousel-script', "{$plugin_dir_url}scripts/contentcarousel.js", array(), '1.0.0', true );
 
-		wp_enqueue_style( 'difl-modules-builder-vb-bundle-style', "{$plugin_dir_url}styles/vb-bundle.css", array(), '1.0.0' );
+		wp_enqueue_style( 'difl-modules-builder-vb-bundle-style', "{$plugin_dir_url}styles/bundle.css", array(), '1.0.0' );
 		wp_localize_script('dofl-modules-builder-bundle-script', 'DiviFlash', array(
 			'nonce' => wp_create_nonce('wp_rest')
 		));

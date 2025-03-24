@@ -362,7 +362,7 @@
               "groupSlug": "carouselSettings",
               "attrName": "settingCarousel.innerContent.showTitleOnLightbox",
               "subName": "showTitleOnLightbox",
-              "label": "Use Lightbox",
+              "label": "Show Title on Lightbox",
               "description": "Here you can on whether the slides should be use lightbox or not.",
               "features": {
                 "hover": false,
@@ -729,7 +729,174 @@
         }
       }
     },
-    
+    "addSettingCarousel": {
+      "type": "object",
+      "selector": "{{selector}} .df_cc_container",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            
+            "slideShadows": {
+              "groupSlug": "advancedSettings",
+              "attrName": "addSettingCarousel.innerContent.slideShadows",
+              "subName": "slideShadows",
+              "label": "Enables slides Shadows",
+              "description": "Here you can on whether the slides should be enable slide shadows or not.",
+              "features": {
+                "hover": false,
+                "sticky": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "render": true,
+              "priority": 10,
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "shadowDarkColor": {
+              
+              "groupSlug": "advancedSettings",
+              "attrName": "addSettingCarousel.innerContent.shadowDarkColor",
+              "label": "Shadow color dark",
+              "description": "Pick a color to use for the slid shadow dark color.",
+              "priority": 10,
+              "render": true,
+              "features":{
+                "hover": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+              
+            },
+            "shadowLightColor": {
+              
+              "groupSlug": "advancedSettings",
+              "attrName": "addSettingCarousel.innerContent.shadowLightColor",
+              "label": "Shadow color light",
+              "description": "Pick a color to use for the slid shadow light color.",
+              "priority": 10,
+              "render": true,
+              "features":{
+                "hover": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+              
+            },
+            "rotateInDegrees": {
+              "groupSlug": "advancedSettings",
+              "attrName": "addSettingCarousel.innerContent.rotateInDegrees",
+              "subName": "rotateInDegrees",
+              "label": "Slide rotate in degrees",
+              "description": "Here you can set rotate.",
+              "features": {
+                "hover": false,
+                "sticky": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "render": true,
+              "priority": 10,
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 30,
+                  "max": 100,
+                  "defaultUnit": "",
+                  "allowedUnits": []
+                }
+              }
+            },
+            "spaceBetween": {
+              "groupSlug": "advancedSettings",
+              "attrName": "addSettingCarousel.innerContent.spaceBetween",
+              "subName": "spaceBetween",
+              "label": "Stretch space between slides (in px)",
+              "description": "Here you can set rotate.",
+              "features": {
+                "hover": false,
+                "sticky": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "render": true,
+              "priority": 10,
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 30,
+                  "max": 100,
+                  "defaultUnit": "",
+                  "allowedUnits": []
+                }
+              }
+            },
+            "stretchDepth": {
+              "groupSlug": "advancedSettings",
+              "attrName": "addSettingCarousel.innerContent.stretchDepth",
+              "subName": "stretchDepth",
+              "label": "StreDepth offset in px (slides translate in Z axis)",
+              "description": "Here you can set rotate.",
+              "features": {
+                "hover": false,
+                "sticky": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "render": true,
+              "priority": 10,
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 30,
+                  "max": 100,
+                  "defaultUnit": "",
+                  "allowedUnits": []
+                }
+              }
+            },
+            "effectMultipler": {
+              "groupSlug": "advancedSettings",
+              "attrName": "addSettingCarousel.innerContent.effectMultipler",
+              "subName": "effectMultipler",
+              "label": "Effect multipler",
+              "description": "Here you can set rotate.",
+              "features": {
+                "hover": false,
+                "sticky": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "render": true,
+              "priority": 10,
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 8,
+                  "defaultUnit": "",
+                  "allowedUnits": []
+                }
+              }
+            }
+            
+          }
+        },
+        "advanced": {},
+        "decoration": {}
+      }
+    },
     
     "imgOrder": {
       "type": "object",
@@ -902,6 +1069,17 @@
           "name": "divi/composite",
           "props": {
             "groupLabel": "Carousel Settings"
+          }
+        }
+      },
+      "advancedSettings": {
+        "panel": "content",
+        "priority": 10,
+        "groupName": "advancedSettings",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Advanced Settings"
           }
         }
       },

@@ -16,6 +16,55 @@ function iconPickerInvisible({
   return ('on' === attrs?.imageIcon?.innerContent?.desktop?.value?.useIcon) ? false : true;
 }
 
+function enablesSlidesShadows({
+  attrs,
+  attrName,
+  responsiveMode,
+  stateMode,
+}) { 
+  return ('on' === attrs.addSettingCarousel?.innerContent?.slideShadows.desktop?.value?.slideShadows) ? true : false;
+}
+function carouselTypeCoverFlow({
+  attrs,
+  attrName,
+  responsiveMode,
+  stateMode,
+}) { 
+  // attrs.settingCarousel?.innerContent?.carouselType?.desktop?.value?.carouselType
+  return ("coverflow" === attrs.settingCarousel?.innerContent?.carouselType?.desktop?.value?.carouselType) ? true : false;
+}
+function carouselSettingAutoplay({
+  attrs,
+  attrName,
+  responsiveMode,
+  stateMode,
+}) { 
+  // ccData?.autoplay?.desktop?.value?.autoplay
+  return ("on" === attrs.settingCarousel?.innerContent?.autoplay?.desktop?.value?.autoplay) ? true : false;
+}
+function carouselSettingLightbox({
+  attrs,
+  attrName,
+  responsiveMode,
+  stateMode,
+}) { 
+  // ccData?.autoplay?.desktop?.value?.autoplay
+  return ("on" === attrs.settingCarousel?.innerContent?.useLightbox?.desktop?.value?.useLightbox) ? true : false;
+}
+
+
+function imageAltTextHas({
+  attrs,
+  attrName,
+  responsiveMode,
+  stateMode,
+}) { 
+  // attrs.settingCarousel?.innerContent?.carouselType?.desktop?.value?.carouselType
+  let imageAlt = attrs?.useImage?.innerContent?.items?.src?.desktop?.value?.alt;
+  let imgSetAlt = attrs?.useImage?.innerContent?.items?.alt?.desktop?.value?.alt;
+  return imgSetAlt ? imgSetAlt : imageAlt;
+}
+
 // imageIcon.innerContent
 // const useIcon = attrs?.imageIcon?.innerContent?.desktop?.value?.useIcon;
 
@@ -178,95 +227,28 @@ window.vendor.wp.hooks.addFilter('divi.moduleLibrary.moduleAttributes.diviflash.
     },
   };
 
+  
+  // let hookImage = attrs?.useImage?.innerContent?.items?.src?.desktop?.value;
+  attributes.useImage.settings.innerContent.items.src.visible = iconPickerInvisible;
+  attributes.useImage.settings.innerContent.items.alt.visible = iconPickerInvisible;
+  // attributes.useImage.settings.innerContent.items.alt.desktop.value.alt = imageAltTextHas;
+  // attributes.useImage.settings.innerContent.items.alt.defaultValue = imageAltTextHas;
+  // console.log('attributes img alt --- ', attributes.useImage.settings.innerContent.items.alt);
 
-  attributes.useImage = {
-    type:     'object',
-    selector: '{{selector}} .df_cci_image_container img',
-    elementType: 'imageLink',
-    settings: {
-      innerContent: {
-        groupType: 'group-items',
-        items:     {
-          image: {
-            groupSlug:   'contentImageIcon',
-            attrName:    'image.innerContent',
-            subName:     'image',
-            label:       'Image (Image Upload)',
-            description: 'Upload an image to display.',
-            render:      true,
-            priority:    10,
-            visible:     iconPickerInvisible,
-            features:    {
-              dynamicContent: {
-                  type: "image"
-              },
-              responsive: true,
-              hover: true,
-              sticky: false,
-              preset: "content",
-            },
-            component: {
-              type: 'field',
-              name: 'divi/upload',
-              props: {
-                syncImageData: true
-              }
-            },
-          },
-          alt: {
-            groupSlug:   'contentImageIcon',
-            attrName:    'alt.innerContent',
-            subName:     'alt',
-            label:       'Alt (Image Alternative Text)',
-            description: 'This defines the HTML ALT text. A short description of your image can be placed here.',
-            priority:    10,
-            render:      true,
-            visible:     iconPickerInvisible,
-            features:    {
-              dynamicContent: {
-                  type: "text"
-              },
-              responsive: false,
-              hover: false,
-              sticky: false,
-              preset: [ "html" ],
-            },
-            component: {
-              type: 'field',
-              name: 'divi/text'
-            },
-          },
-        },
-      },
-      decoration: {
-          border: {},
-          boxShadow: {}
-      }
-      // ... `advanced` property is omitted for brevity.
-      // ... existing code from the previous example: "Adding Custom Option Field to New Custom
-      // Options Group on Module".
-    },
-    styleProps: {
-        selector: "{{selector}} img, {{selector}} .et_overlay",
-        border: {
-            selector: "{{selector}} .et_pb_image_wrap"
-        },
-        boxShadow: {
-            selector: "{{selector}} .et_pb_image_wrap",
-            useOverlay: true
-        }
-    },
-    styleComponentsProps: {
-        background: false,
-        boxShadow: {
-            settings: {
-                overlay: true
-            }
-        }
-    }
-  };
+  return attributes;
+});
 
-  console.log('attributes', attributes);
+window.vendor.wp.hooks.addFilter('divi.moduleLibrary.moduleAttributes.diviflash.content-carousel', 'divi', (attributes, metadata) => {
 
+  attributes.addSettingCarousel.settings.innerContent.items.shadowDarkColor.visible = enablesSlidesShadows;
+  attributes.addSettingCarousel.settings.innerContent.items.shadowLightColor.visible = enablesSlidesShadows;
+
+  attributes.settingCarousel.settings.innerContent.items.autoplaySpeed.visible = carouselSettingAutoplay;
+  attributes.settingCarousel.settings.innerContent.items.pauseOnHover.visible = carouselSettingAutoplay;
+  attributes.settingCarousel.settings.innerContent.items.showTitleOnLightbox.visible = carouselSettingLightbox;
+
+  metadata.settings.groups.advancedSettings.component.props.visible = carouselTypeCoverFlow;
+
+  // console.log('attributes Advanced Carousel setting', attributes.addSettingCarousel);
   return attributes;
 });

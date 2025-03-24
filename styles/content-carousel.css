@@ -42,6 +42,7 @@
 }
 .df_cci_image_container img {
     vertical-align: top;
+    width: auto;
 }
 .difl_contentcarousel .df_cc_container .difl_contentcarouselitem {
     margin-bottom: 0 !important;

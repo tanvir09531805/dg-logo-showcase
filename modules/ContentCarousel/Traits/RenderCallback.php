@@ -102,6 +102,23 @@ trait RenderCallback {
             'use_lightbox_title' => $titleLightbox
         ];
 
+		// attrs.addSettingCarousel?.innerContent?.slideShadows.desktop?.value?.slideShadows
+		
+
+		if ($carouselType === 'coverflow') {
+			$ccAdvancedData = $attrs['addSettingCarousel']['innerContent'];
+			$slideShadows   = isset($ccAdvancedData['slideShadows']['desktop']['value']['slideShadows']) ? $ccAdvancedData['slideShadows']['desktop']['value']['slideShadows'] : 'off';
+			$rotateInDegrees   = isset($ccAdvancedData['rotateInDegrees']['desktop']['value']['rotateInDegrees']) ? $ccAdvancedData['rotateInDegrees']['desktop']['value']['rotateInDegrees'] : '30';
+			$stretchDepth   = isset($ccAdvancedData['stretchDepth']['desktop']['value']['stretchDepth']) ? $ccAdvancedData['stretchDepth']['desktop']['value']['stretchDepth'] : '20';
+			$spaceBetween   = isset($ccAdvancedData['spaceBetween']['desktop']['value']['spaceBetween']) ? $ccAdvancedData['spaceBetween']['desktop']['value']['spaceBetween'] : '16';
+			$effectMultipler   = isset($ccAdvancedData['effectMultipler']['desktop']['value']['effectMultipler']) ? $ccAdvancedData['effectMultipler']['desktop']['value']['effectMultipler'] : '3';
+
+            $carouselSetting['slideShadows'] = $slideShadows;
+            $carouselSetting['rotate'] = $rotateInDegrees;
+            $carouselSetting['stretch'] = $spaceBetween;
+            $carouselSetting['depth'] = $stretchDepth;
+            $carouselSetting['modifier'] = $effectMultipler;
+        }
 
 		$child_items = HTMLUtility::render(
 			[
@@ -113,6 +130,10 @@ trait RenderCallback {
 				'children'          => $content,
 			]
 		);
+
+		
+		// data-my="{&quot;effect&quot;:&quot;coverflow&quot;,&quot;desktop&quot;:&quot;5&quot;,&quot;tablet&quot;:&quot;3&quot;,&quot;mobile&quot;:&quot;1&quot;,&quot;loop&quot;:true,&quot;item_spacing&quot;:&quot;30px&quot;,&quot;item_spacing_tablet&quot;:&quot;30px&quot;,&quot;item_spacing_phone&quot;:&quot;30px&quot;,&quot;arrow&quot;:&quot;on&quot;,&quot;dots&quot;:&quot;on&quot;,&quot;autoplay&quot;:&quot;off&quot;,&quot;autoplay_tablet&quot;:&quot;off&quot;,&quot;autoplay_phone&quot;:&quot;off&quot;,&quot;auto_delay&quot;:&quot;2000&quot;,&quot;auto_delay_tablet&quot;:&quot;2000&quot;,&quot;auto_delay_phone&quot;:&quot;2000&quot;,&quot;speed&quot;:&quot;500&quot;,&quot;pause_hover&quot;:&quot;off&quot;,&quot;pause_hover_tablet&quot;:&quot;off&quot;,&quot;pause_hover_phone&quot;:&quot;off&quot;,&quot;centeredSlides&quot;:&quot;off&quot;,&quot;order&quot;:&quot;0&quot;,&quot;use_lightbox&quot;:&quot;on&quot;,&quot;use_lightbox_title&quot;:&quot;off&quot;,&quot;slideShadows&quot;:&quot;on&quot;,&quot;rotate&quot;:&quot;30&quot;,&quot;stretch&quot;:&quot;20&quot;,&quot;depth&quot;:&quot;16&quot;,&quot;modifier&quot;:&quot;3&quot;}"
+				
 		
 		$child_all_items = sprintf('<div class="df_cc_container %8$s" data-settings=\'%1$s\' data-item="%2$s" data-itemtablet="%3$s" data-itemphone="%4$s" >
                 <div class="df_cc_inner_wrapper">

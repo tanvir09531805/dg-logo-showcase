@@ -42,16 +42,21 @@ export const Edit = ( props ) => {
 	const icon = isEmpty ( iconContent ) ? parentIconContent : iconContent;
 
   // useImage.innerContent.items.src
-  const image = attrs?.useImage?.innerContent?.items?.src?.desktop?.value;
+  const image     = attrs?.useImage?.innerContent?.items?.src?.desktop?.value;
+  const imgSetAlt = attrs?.useImage?.innerContent?.items?.alt?.desktop?.value?.alt;
+  const imgAltText= imgSetAlt ? imgSetAlt : image?.alt;
+
+  let title = attrs?.title?.innerContent?.desktop?.value || [];
+
   // imageIcon.innerContent
   // const useIcon = attrs?.imageIcon?.innerContent?.desktop?.value?.useIcon;
   // console.log('Use Icons Yes === ', useIcon);
-
-  // let title = attrs?.title?.innerContent?.desktop?.value || [];
-
   // let hookImage = attrs?.useImage?.innerContent?.items?.src?.desktop?.value;
-  let hookImage = attrs?.image?.innerContent?.desktop?.value?.image;
+  // let hookImage = attrs?.image?.innerContent?.desktop?.value?.image;
   // console.log('Hook icon = ', attrs?.icon?.innerContent?.desktop);
+  let btn = attrs.button?.innerContent?.desktop?.value;
+  let linkTarget = 'on' === btn?.linkTarget ? '_blank':'_self';
+  // console.log('all attrs = ', attrs);
 
 
 	return (
@@ -69,9 +74,9 @@ export const Edit = ( props ) => {
       {elements.styleComponents({ attrName: 'module', })}
       
         <div class="df_cci_container">
-          {hookImage && (
+          {image && (
             <div className="df_cci_image_container">
-              <img key={ hookImage?.id } src={ hookImage?.src } alt={hookImage?.titleText} width={110} />
+              <img key={ image?.id } src={ image?.src } alt={imgAltText} title={image?.titleText} />
             </div>
           )}
           <h4 class="df_cc_title">{elements.render ( {
@@ -83,9 +88,13 @@ export const Edit = ( props ) => {
           <div class="df_cc_content">{elements.render ( {
 						attrName: 'content',
 					} )}</div>
-          <div class="df_cci_button_wrapper">
-            <a href="#" class="df_cci_button">Read</a>
-          </div>
+
+          {btn?.text && (
+            <div class="df_cci_button_wrapper">
+              <a href={btn?.linkUrl} class="df_cci_button" target={linkTarget}>{btn.text}</a>
+            </div>
+          )}
+
         </div>
 
       

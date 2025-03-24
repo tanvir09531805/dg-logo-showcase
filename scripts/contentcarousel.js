@@ -4,8 +4,7 @@
         const container = ele.querySelector('.df_cc_container');
         const data = JSON.parse(container.dataset.settings);
         const selector = ele.querySelector('.swiper-container');
-console.log('Data: ', data);
-
+        // console.log('Data: ', data);
 
         const item_spacing_tablet = '' !== data.item_spacing_tablet ? data.item_spacing_tablet : data.item_spacing;
         const item_spacing_phone = '' !== data.item_spacing_phone ? data.item_spacing_phone : item_spacing_tablet;
@@ -207,6 +206,4 @@ const handleEmptyItem = () => {
 		}
 	} )
 }
-
-
 window.addEventListener( 'DOMContentLoaded', handleEmptyItem )

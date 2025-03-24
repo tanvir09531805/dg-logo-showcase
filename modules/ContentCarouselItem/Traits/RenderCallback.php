@@ -57,9 +57,18 @@ trait RenderCallback {
 			);
 		}
 
+		// btn 
+		$btn =  isset($attrs['button']['innerContent']['desktop']['value'])?$attrs['button']['innerContent']['desktop']['value']:$attrs;
+  		$linkTarget = (isset($btn['linkTarget']) && 'on' === $btn['linkTarget']) ? '_blank':'_self';
 
+		$btnMarkup = isset($btn['text']) ? '<div class="df_cci_button_wrapper">
+					<a href="'.$btn['linkUrl'].'" class="df_cci_button" target="'.$linkTarget.'">'.$btn['text'].'</a>
+				</div>' : '';
 		// Image
-		$image = $attrs['image']['innerContent']['desktop']['value']['image'] ?? "";
+		// $image = $attrs['image']['innerContent']['desktop']['value']['image'] ?? "";
+		$image = $attrs['useImage']['innerContent']['items']['src']['desktop']['value'] ?? "";
+		$imgSetAlt = $attrs['useImage']['innerContent']['items']['alt']['desktop']['value']['alt'] ?? "";
+		$imgAltText= $imgSetAlt?:$image['alt'];
 		// echo '<pre>';
 		// var_dump($image);
 		// echo '</pre>';
@@ -73,7 +82,7 @@ trait RenderCallback {
 						'data-src' => $image['src'],
 					],
 					'childrenSanitizer' => 'et_core_esc_previously',
-					'children'          => "<img src='{$image['src']}' alt='{$image['alt']}' title='{$image['titleText']}' />",
+					'children'          => "<img src='{$image['src']}' alt='{$imgAltText}' title='{$image['titleText']}' />",
 				]
 			);
 		}
@@ -131,9 +140,7 @@ trait RenderCallback {
 				'.$title.'
 				'.$subTitle.'
 				' . $content . '
-				<div class="df_cci_button_wrapper">
-					<a href="#" class="df_cci_button">More</a>
-				</div>
+				' . $btnMarkup . '
 			</div>
 			
 		';
