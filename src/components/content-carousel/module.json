@@ -19,23 +19,16 @@
       "selector": "{{selector}}",
       "styleProps": {
         "border": {
-          "selector": "{{selector}} .difl_contentcarousel .difl_contentcarouselitem"
+          "selector": "{{selector}} "
         },
         "boxShadow": {
-          "selector": "{{selector}} .et_pb_toggle"
+          "selector": "{{selector}}"
         },
         "spacing": {
           "propertySelectors": {
             "desktop": {
               "value": {
-                "padding": "{{selector}} .difl_contentcarouselitem .df_cci_container"
-              }
-            }
-          },
-          "important": {
-            "desktop": {
-              "value": {
-                "margin": true
+                "padding": "{{selector}} "
               }
             }
           }
@@ -46,26 +39,7 @@
           "adminLabel": {}
         },
         "advanced": {
-          "link": {},
-          "htmlAttributes": {},
-          "text": {
-            "priority": 15,
-            "component": {
-              "props": {
-                "fields": {
-                  "color": {
-                    "render": false
-                  },
-                  "textShadowGroup": {
-                    "render": true
-                  },
-                  "orientation": {
-                    "render": true
-                  }
-                }
-              }
-            }
-          }
+          "htmlAttributes": {}
         },
         "decoration": {
           "animation": {},
@@ -77,26 +51,6 @@
           "boxShadow": {},
           "overflow": {},
           "position": {},
-          "scroll": {
-            "groupType": "group-item",
-            "item": {
-              "priority": 10,
-              "render": true,
-              "groupSlug": "advancedScrollModule",
-              "component": {
-                "type": "group",
-                "name": "divi/scroll",
-                "props": {
-                  "grouped": false,
-                  "fields": {
-                    "gridMotion": {
-                      "render": true
-                    }
-                  }
-                }
-              }
-            }
-          },
           "sizing": {},
           "spacing": {},
           "sticky": {},
@@ -106,7 +60,6 @@
         }
       }
     },
-    
     "settingCarousel": {
       "type": "object",
       "selector": "{{selector}} .df_cc_container",
@@ -333,7 +286,7 @@
                 "preset": "content"
               },
               "render": true,
-              "priority": 10,
+              "priority": 20,
               "component": {
                 "type": "field",
                 "name": "divi/toggle"
@@ -352,7 +305,7 @@
                 "preset": "content"
               },
               "render": true,
-              "priority": 10,
+              "priority": 20,
               "component": {
                 "type": "field",
                 "name": "divi/toggle"
@@ -409,7 +362,6 @@
               }
             }
           },
-
           "arrowIconColor": {
             "groupType": "group-item",
             "item": {
@@ -446,7 +398,6 @@
               }
             }
           },
-          
           "arrowPosition": {
             "groupType": "group-item",
             "item": {
@@ -597,7 +548,6 @@
               }
             }
           },
-          
           "dotsColor": {
             "groupType": "group-item",
             "item": {
@@ -897,7 +847,622 @@
         "decoration": {}
       }
     },
-    
+    "title": {
+      "type": "object",
+      "selector": "{{selector}} .difl_contentcarouselitem .df_cc_title",
+      "attributes": {
+        "class": "difl_contentcarouselitem .df_cc_title"
+      },
+      "inlineEditor": "plainText",
+      "childrenSanitizer": "et_core_esc_previously",
+      "styleProps": {},
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designTitleText",
+              "priority": 10,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "groupLabel": "Title Text",
+                  "fieldLabel": "Title",
+                  "fields": {
+                    "color": {
+                      "priority": 5,
+                      "render": true
+                    },
+                    "headingLevel": {
+                      "render": false
+                    },
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designTitleText",
+              "priority": 5,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "attrName": "title.decoration"
+                }
+              }
+            }
+          }
+        }
+      },
+      "elementType": "heading"
+    },
+    "subTitle": {
+      "type": "object",
+      "selector": "{{selector}} .df_cci_container .df_cc_subtitle",
+      "attributes": {
+        "class": ".df_cci_container .df_cc_subtitle"
+      },
+      "inlineEditor": "plainText",
+      "childrenSanitizer": "et_core_esc_previously",
+      "styleProps": {
+        "font": {
+          "important": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designSubTitleText",
+              "priority": 10,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "groupLabel": "Sub Title",
+                  "fieldLabel": "Sub Title",
+                  "fields": {
+                    "color": {
+                      "priority": 10,
+                      "render": true
+                    },
+                    "headingLevel": {
+                      "render": false
+                    },
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designSubTitleText",
+              "priority": 5,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "attrName": "subTitle.decoration"
+                }
+              }
+            }
+          }
+        }
+      },
+      "elementType": "heading"
+    },
+    "content": {
+      "type": "object",
+      "selector": "{{selector}} .df_cci_container",
+      "elementType": "content",
+      "attributes": {
+        "class": "df_cc_content"
+      },
+      "styleProps": {},
+      "settings": {
+        "decoration": {
+          "bodyFont": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designContentHeading",
+              "priority": 5,
+              "render": true,
+              "component": {
+                "name": "divi/font-header",
+                "type": "group",
+                "props": {
+                  "grouped": false,
+                  "fields": {}
+                }
+              }
+            }
+          },
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designContentStyle",
+              "priority": 5,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "attrName": "content.decoration.background"
+                }
+              }
+            }
+          },
+          "contentBodyFont": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designContent",
+              "priority": 5,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font-body",
+                "props": {
+                  "grouped": false,
+                  "attrName": "content.decoration.contentBodyFont",
+                  "fields":{
+                    "body": {
+                      "textShadowGroup": {
+                        "render": false
+                      },
+                      "textAlign": {
+                        "render": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "button": {
+      "type": "object",
+      "selector": " {{selector}} .df_cci_button_wrapper .df_cci_button",
+      "attributes": {
+        "class": "df_cci_button"
+      },
+      "elementType": "button",
+      "elementProps": {
+        "allowEmptyUrl": false,
+        "hasWrapper": false
+      },
+      "styleProps": {
+        "selector": " {{selectorPrefix}} .df_cci_button_wrapper .df_cci_button",
+        "spacing": {
+          "important": false
+        },
+        "font": {
+          "important": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        
+        "decoration": {
+          "fullWidth": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designButton",
+              "attrName": "button.decoration.fullWidth",
+              "label": "Full Width",
+              "description": "This setting will turn on and off the button will full or not.",
+              "priority": 10,
+              "render": true,
+              "features": {
+                "hover": false,
+                "sticky": false,
+                "responsive": false,
+                "preset": [
+                  "html"
+                ]
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            }
+          },
+          "button": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designButton",
+              "priority": 10,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/button",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Button",
+                  "attrName": "button",
+                  "fields": {
+                    "fontGroup": {
+                      "component": {
+                        "props": {
+                          "fields": {
+                            "lineHeight": {
+                              "render": true
+                            },
+                            "textAlign": {
+                              "render": true
+                            }
+                            
+                          }
+                        }
+                      }
+                    },
+                    "borderGroup": {
+                      "component": {
+                        "props": {
+                          "fields": {
+                            "styles": {
+                              "render": false
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "carouselWPadding": {
+      "type": "object",
+      "selector": "{{selector}} .swiper-container",
+      "elementType": "content",
+      "attributes": {
+        "class": "swiper-container"
+      },
+      "styleProps": {
+        "spacing": {
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": true,
+                "margin": false
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "cwPadding": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designCustomWrapperSpacing",
+              "priority": 80,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "attrName": "carouselWPadding.decoration.cwPadding",
+                  "groupLabel": "Carousel Wrapper",
+                  "fieldLabel": "Carousel Wrapper",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "itemWrapperSpacing": {
+      "type": "object",
+      "selector": "{{selector}} .difl_contentcarouselitem .df_cci_container",
+      "elementType": "content",
+      "attributes": {
+        "class": "df_cci_container"
+      },
+      "styleProps": {
+        "spacing": {
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": true,
+                "margin": true
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "itemWrapper": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designCustomWrapperSpacing",
+              "priority": 80,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "attrName": "itemWrapperSpacing.decoration.itemWrapper",
+                  "groupLabel": "Item Wrapper",
+                  "fieldLabel": "Item Wrapper",
+                  "fields": {}
+                }
+              }
+            }
+          }
+          
+        }
+      }
+    },
+    "imageWrapperSpacing": {
+      "type": "object",
+      "selector": "{{selector}} .df_cci_image_container",
+      "elementType": "content",
+      "attributes": {
+        "class": "df_cci_image_container"
+      },
+      "styleProps": {
+        "spacing": {
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": true,
+                "margin": true
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "imageWrapper": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designCustomWrapperSpacing",
+              "priority": 80,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "attrName": "imageWrapperSpacing.decoration.imageWrapper",
+                  "groupLabel": "Image Wrapper",
+                  "fieldLabel": "Image Wrapper",
+                  "fields": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "cImageSpacing": {
+      "type": "object",
+      "selector": "{{selector}} .df_cci_image_container img",
+      "elementType": "content",
+      "attributes": {
+        "class": "df_cci_image_container"
+      },
+      "styleProps": {
+        "spacing": {
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": false,
+                "margin": true
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "imgSpacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designCustomContentSpacing",
+              "priority": 80,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "attrName": "cImageSpacing.decoration.imgSpacing",
+                  "groupLabel": "Image",
+                  "fieldLabel": "Image",
+                  "fields": {
+                    "padding": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "cTitleSpacing": {
+      "type": "object",
+      "selector": "{{selector}} .df_cc_title",
+      "elementType": "content",
+      "attributes": {
+        "class": "df_cc_title"
+      },
+      "styleProps": {
+        "spacing": {
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": true,
+                "margin": true
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "titleSpacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designCustomContentSpacing",
+              "priority": 80,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "attrName": "cTitleSpacing.decoration.titleSpacing",
+                  "groupLabel": "Title",
+                  "fieldLabel": "Title",
+                  "fields": {}
+                }
+              }
+            }
+          }
+          
+        }
+      }
+    },
+    "cSubTitleSpacing": {
+      "type": "object",
+      "selector": "{{selector}} .df_cc_subtitle",
+      "elementType": "content",
+      "attributes": {
+        "class": "df_cc_subtitle"
+      },
+      "styleProps": {
+        "spacing": {
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": true,
+                "margin": true
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "subtitleSpacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designCustomContentSpacing",
+              "priority": 80,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "attrName": "cSubTitleSpacing.decoration.subtitleSpacing",
+                  "groupLabel": "Subtitle",
+                  "fieldLabel": "Subtitle",
+                  "fields": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "contentSpacing": {
+      "type": "object",
+      "selector": "{{selector}} .df_cc_content",
+      "elementType": "content",
+      "attributes": {
+        "class": "df_cc_content"
+      },
+      "styleProps": {
+        "spacing": {
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": true,
+                "margin": true
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "ccSpacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designCustomContentSpacing",
+              "priority": 80,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "attrName": "contentSpacing.decoration.ccSpacing",
+                  "groupLabel": "Content",
+                  "fieldLabel": "Content",
+                  "fields": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "imgOrder": {
       "type": "object",
       "settings": {
@@ -1094,7 +1659,73 @@
           }
         }
       },
-
+      "designTitleText": {
+        "panel": "design",
+        "priority": 20,
+        "groupName": "designTitleText",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Title"
+          }
+        }
+      },
+      "designSubTitleText": {
+        "panel": "design",
+        "priority": 20,
+        "groupName": "designSubTitleText",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Sub Title"
+          }
+        }
+      },
+      "designContentStyle": {
+        "panel": "design",
+        "priority": 20,
+        "groupName": "designContentStyle",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Content Style"
+          }
+        }
+      },
+      "designContentHeading": {
+        "panel": "design",
+        "priority": 20,
+        "groupName": "designContentHeading",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Content Heading Text"
+          }
+        }
+      },
+      "designContent": {
+        "panel": "design",
+        "priority": 20,
+        "groupName": "designContent",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Content"
+          }
+        }
+      },
+      "designButton": {
+        "panel": "design",
+        "priority": 20,
+        "groupName": "designButton",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Button",
+            "presetGroup": "divi/button"
+          }
+        }
+      },
       "designArrows": {
         "panel": "design",
         "priority": 20,
@@ -1114,6 +1745,28 @@
           "name": "divi/composite",
           "props": {
             "groupLabel": "Dots"
+          }
+        }
+      },
+      "designCustomWrapperSpacing": {
+        "panel": "design",
+        "priority": 20,
+        "groupName": "designCustomWrapperSpacing",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Custom Wrapper Spacing"
+          }
+        }
+      },
+      "designCustomContentSpacing": {
+        "panel": "design",
+        "priority": 20,
+        "groupName": "designCustomContentSpacing",
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Custom Content Spacing"
           }
         }
       }

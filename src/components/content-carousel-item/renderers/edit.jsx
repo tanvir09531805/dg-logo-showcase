@@ -48,6 +48,11 @@ export const Edit = ( props ) => {
 
   let title = attrs?.title?.innerContent?.desktop?.value || [];
 
+  let titleInfo = attrs?.title;
+
+  console.log('title info. = =', titleInfo);
+
+  
   // imageIcon.innerContent
   // const useIcon = attrs?.imageIcon?.innerContent?.desktop?.value?.useIcon;
   // console.log('Use Icons Yes === ', useIcon);
@@ -82,6 +87,9 @@ export const Edit = ( props ) => {
           <h4 class="df_cc_title">{elements.render ( {
             attrName: 'title',
           } )}</h4>
+          {elements.render ( {
+            attrName: 'title',
+          } )}
           {elements.render ( {
             attrName: 'subTitle',
           } )}
