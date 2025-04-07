@@ -46,11 +46,11 @@ export const Edit = ( props ) => {
   const imgSetAlt = attrs?.useImage?.innerContent?.items?.alt?.desktop?.value?.alt;
   const imgAltText= imgSetAlt ? imgSetAlt : image?.alt;
 
-  let title = attrs?.title?.innerContent?.desktop?.value || [];
+  // let title = attrs?.title?.innerContent?.desktop?.value || [];
 
-  let titleInfo = attrs?.title;
+  // let titleInfo = attrs?.title;
 
-  console.log('title info. = =', titleInfo);
+  // console.log('title info. = =', titleInfo);
 
   
   // imageIcon.innerContent
@@ -84,18 +84,16 @@ export const Edit = ( props ) => {
               <img key={ image?.id } src={ image?.src } alt={imgAltText} title={image?.titleText} />
             </div>
           )}
-          <h4 class="df_cc_title">{elements.render ( {
-            attrName: 'title',
-          } )}</h4>
+          
           {elements.render ( {
             attrName: 'title',
           } )}
           {elements.render ( {
             attrName: 'subTitle',
           } )}
-          <div class="df_cc_content">{elements.render ( {
+          {elements.render ( {
 						attrName: 'content',
-					} )}</div>
+					} )}
 
           {btn?.text && (
             <div class="df_cci_button_wrapper">

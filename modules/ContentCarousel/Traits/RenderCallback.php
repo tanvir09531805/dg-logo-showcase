@@ -72,8 +72,22 @@ trait RenderCallback {
                 <div class="swiper-button-next cc-next-0" data-icon="5"></div>
                 <div class="swiper-button-prev cc-prev-0" data-icon="4"></div>
             </div>';
+			// arrows.advanced.arrowPosition
 		$classArrowPosition = 'arrow-middle';
 		$equalHeightItem    = $ccData['equalHeightItem']['desktop']['value']['equalHeightItem'] ?? 'off'; 
+		
+		if (isset($attrs['arrows']['advanced']['arrowPosition']['desktop']['value']['arrowPosition'])) {
+			$classArrowPosition = 'arrow-'.$attrs['arrows']['advanced']['arrowPosition']['desktop']['value']['arrowPosition'];
+		}
+
+		if (isset($attrs['arrows']['advanced']['arrowAlignment']['desktop']['value']['arrowAlignment'])) {
+			$arrowAlignment = $attrs['arrows']['advanced']['arrowAlignment']['desktop']['value']['arrowAlignment'];
+		}else{
+			$arrowAlignment = 'space-between';
+		}
+		// echo '<pre>';
+		// 	var_dump($attrs['arrows']['advanced']['arrowAlignment']);
+		// echo '</pre>';
 
         $carouselSetting = [
             'effect' => $carouselType, // $this->props['carousel_type'],

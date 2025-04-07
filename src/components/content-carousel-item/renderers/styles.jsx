@@ -16,23 +16,34 @@ export const Styles = ( {
 		<StyleContainer mode={mode} state={state} noStyleTag={noStyleTag}>
 			{/* Element: Module */}
 			{elements.style({
-			attrName: 'module',
-			styleProps: {
-				disabledOn: {
-				disabledModuleVisibility: settings?.disabledModuleVisibility
+				attrName: 'module',
+				styleProps: {
+					disabledOn: {
+						disabledModuleVisibility: settings?.disabledModuleVisibility
+					}
 				}
-			}
 			})}
 		
 			{/* Element: Title */}
 			{elements.style({
-			attrName: 'title',
+				attrName: 'title',
+			})}
+		
+			{/* Element: Sub Title */}
+			{elements.style({
+				attrName: 'subTitle',
 			})}
 		
 			{/* Element: Content */}
 			{elements.style({
-			attrName: 'content',
+				attrName: 'content',
 			})}
+
+			{/* Element: button */}
+			{elements.style({
+				attrName: 'button',
+			})}
+
 		</StyleContainer>
 	);
 }

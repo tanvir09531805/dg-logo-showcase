@@ -48,6 +48,14 @@ trait Styles {
 		$icon_selector  = "{$order_class} .et-pb-icon";
 		$proImgSelector = "{$order_class} .difl_bento_grid__inner__image .__image";
 
+		
+		// error_log(print_r( '$settingskjkkkkk', true));
+		// test_log('parent mosule settings');
+
+		// $attrs['arrows']['advanced']['arrowPosition']['desktop']['value']['arrowPosition']
+		// test_log($attrs['settingCarousel']['arrows']['advanced']);
+
+
 		Style::add(
 			[
 				'id'            => $args['id'],
@@ -89,10 +97,104 @@ trait Styles {
 							'declarationFunction' => [ self::class, 'grid_layout_style_declaration' ],
 						]
 					),
+					
+					/*
+					 * We need to add CssStyle at the very bottom of other
+					 * components so that custom css can override module styles
+					 * till we find a more elegant solution.
+					 
+						CssStyle::style(
+							[
+								// 'atRules'   => '@media only screen and (max-width: 767px)', // false,
+								'atRules'   => false,
+								'selector'  => "{$order_class} .df_cc_arrows",
+								'declaration' => self::df_arrow_pos_styles($pos), // 'color: red;'
+							]
+						),
+					*/
+
+					CommonStyle::style(
+						[
+							'selector'  		  => "{$order_class} .df_cc_arrows",
+							'attr'                => $attrs['arrows']['advanced']['arrowPosition'] ?? [],
+							'declarationFunction' => [ self::class, 'df_arrow_pos_styles' ], 
+						]
+					),
+					CommonStyle::style(
+						[
+							'selector'  		  => "{$order_class} .df_cc_arrows",
+							'attr'                => $attrs['arrows']['advanced']['arrowAlignment'] ?? [],
+							'declarationFunction' => [ self::class, 'df_arrow_alignment_styles' ], 
+						]
+					),
+					// CommonStyle::style(
+					// 	[
+					// 		'selector'  		  => "{$order_class} .df_cc_arrows",
+					// 		'attr'                => $attrs['arrows']['advanced']['arrowAlignment'] ?? [], 
+					// 		'property'			  => 'justify-content',
+					// 	]
+					// ),
+
+
 				],
 			]
 		);
 	}
+
+
+	/**
+     * Arrow Position styles
+     *
+     * @param String | position
+     * @return String
+     */
+    public static function df_arrow_pos_styles(array $args ): string {
+
+		$arrowPosition = $args['attrValue']['arrowPosition']?:'middle'; // default value
+		
+        $options = array(
+            'top' 	 => 'position: relative;
+						top: auto;
+						left: auto;
+						right: auto;
+						transform: translateY(0);
+						order: 0;',
+            'middle' => 'position: absolute;
+						top: 50%;
+						left: 0;
+						right: 0;
+						transform: translateY(-50%);',
+            'bottom' => 'position: relative;
+						top: auto;
+						left: auto;
+						right: auto;
+						transform: translateY(0);
+						order: 2;',
+        );
+        return $options[$arrowPosition];
+    }
+
+	/**
+     * Arrow Alignment styles
+     *
+     * @param String | Alignment
+     * @return String
+     */
+    public static function df_arrow_alignment_styles(array $args ): string {
+
+		$arrowAlign = $args['attrValue']['arrowAlignment']?:'space-between'; // default value
+		$style_set  = new StyleDeclarations(
+			[
+				'returnType' => 'string',
+				'important'  => false,
+			]
+		);
+        
+		$style_set->add( 'justify-content', $arrowAlign );
+		
+		return $style_set->value();
+    }
+
 
 	public static function grid_layout_style_declaration( array $args ): string {
 		$columnCount = $args['attrValue']['columnCount'] ?? [];

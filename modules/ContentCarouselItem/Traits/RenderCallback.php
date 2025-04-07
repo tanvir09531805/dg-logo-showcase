@@ -77,12 +77,12 @@ trait RenderCallback {
 			$image_markup = HTMLUtility::render(
 				[
 					'tag'               => 'div',
-					'attributes'        => [
-						'class' => 'df_cci_image_container',
-						'data-src' => $image['src'],
-					],
 					'childrenSanitizer' => 'et_core_esc_previously',
 					'children'          => "<img src='{$image['src']}' alt='{$imgAltText}' title='{$image['titleText']}' />",
+					'attributes'        => [
+						'class'    => 'df_cci_image_container',
+						'data-src' => $image['src'],
+					],
 				]
 			);
 		}
@@ -90,31 +90,28 @@ trait RenderCallback {
 		// Title.
 		$title = $elements->render(
 			[
-				'attrName'      => 'title',
-				'attributes'        => [
+				'attrName'   => 'title',
+				'attributes' => [
 					'class' => 'df_cc_title',
 				],
-				'hoverSelector' => '{{parentSelector}}',
 			]
 		);
 		// Sub Title.
 		$subTitle = $elements->render(
 			[
-				'attrName'      => 'subTitle',
-				'attributes'        => [
+				'attrName'   => 'subTitle',
+				'attributes' => [
 					'class' => 'df_cc_subtitle',
 				],
-				'hoverSelector' => '{{parentSelector}}',
 			]
 		);
 
 		// Content.
 		$content = $elements->render(
 			[
-				'attrName'      => 'content',
-				'hoverSelector' => '{{parentSelector}}',
-				'tag'           => 'div',
-				'attributes'    => [
+				'attrName'   => 'content',
+				'tag'        => 'div',
+				'attributes' => [
 					'class' => 'df_cc_content',
 				],
 			]
@@ -124,11 +121,11 @@ trait RenderCallback {
 		$content_markup = HTMLUtility::render(
 			[
 				'tag'               => 'div',
+				'childrenSanitizer' => 'et_core_esc_previously',
+				'children'          => $content,
 				'attributes'        => [
 					'class' => 'df_cc_content',
 				],
-				'childrenSanitizer' => 'et_core_esc_previously',
-				'children'          => $content,
 			]
 		);
 		

@@ -94,6 +94,13 @@ trait Styles {
 						]
 					),
 
+					// Sub Title.
+					$elements->style(
+						[
+							'attrName' => 'subTitle',
+						]
+					),
+
 					// Content.
 					$elements->style(
 						[
@@ -153,6 +160,7 @@ trait Styles {
 							'declarationFunction' => [ ContentCarouselItem::class, 'grid_span_declaration' ],
 						]
 					),
+					
 					/* Image Style */
 					$elements->style(
 						[

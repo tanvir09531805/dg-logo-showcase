@@ -372,7 +372,8 @@
               "priority": 10,
               "render": true,
               "features":{
-                "hover": true
+                "hover": true,
+                "responsive": false
               },
               "component": {
                 "type": "field",
@@ -390,7 +391,8 @@
               "priority": 10,
               "render": true,
               "features":{
-                "hover": true
+                "hover": true,
+                "responsive": false
               },
               "component": {
                 "type": "field",
@@ -450,18 +452,18 @@
                 "name": "divi/select",
                 "type": "field",
                 "props": {
-                  "defaultValue": "justified",
+                  "defaultValue": "space-between",
                   "options": {
-                    "left": {
+                    "flex-start": {
                       "label": "Left"
                     },
                     "center": {
                       "label": "Center"
                     },
-                    "right": {
+                    "flex-end": {
                       "label": "Right"
                     },
-                    "justified": {
+                    "space-between": {
                       "label": "Justified"
                     }
                   }
@@ -1173,7 +1175,7 @@
       },
       "settings": {
         "decoration": {
-          "cwPadding": {
+          "spacing": {
             "groupType": "group-item",
             "item": {
               "groupSlug": "designCustomWrapperSpacing",
@@ -1184,7 +1186,6 @@
                 "name": "divi/spacing",
                 "props": {
                   "grouped": false,
-                  "attrName": "carouselWPadding.decoration.cwPadding",
                   "groupLabel": "Carousel Wrapper",
                   "fieldLabel": "Carousel Wrapper",
                   "fields": {
@@ -1220,7 +1221,7 @@
       },
       "settings": {
         "decoration": {
-          "itemWrapper": {
+          "spacing": {
             "groupType": "group-item",
             "item": {
               "groupSlug": "designCustomWrapperSpacing",
@@ -1231,7 +1232,6 @@
                 "name": "divi/spacing",
                 "props": {
                   "grouped": false,
-                  "attrName": "itemWrapperSpacing.decoration.itemWrapper",
                   "groupLabel": "Item Wrapper",
                   "fieldLabel": "Item Wrapper",
                   "fields": {}
@@ -1251,6 +1251,7 @@
         "class": "df_cci_image_container"
       },
       "styleProps": {
+        "selector": "{{selector}} .df_cci_image_container",
         "spacing": {
           "important": {
             "desktop": {
@@ -1264,7 +1265,7 @@
       },
       "settings": {
         "decoration": {
-          "imageWrapper": {
+          "spacing": {
             "groupType": "group-item",
             "item": {
               "groupSlug": "designCustomWrapperSpacing",
@@ -1275,7 +1276,6 @@
                 "name": "divi/spacing",
                 "props": {
                   "grouped": false,
-                  "attrName": "imageWrapperSpacing.decoration.imageWrapper",
                   "groupLabel": "Image Wrapper",
                   "fieldLabel": "Image Wrapper",
                   "fields": {}
@@ -1307,7 +1307,7 @@
       },
       "settings": {
         "decoration": {
-          "imgSpacing": {
+          "spacing": {
             "groupType": "group-item",
             "item": {
               "groupSlug": "designCustomContentSpacing",
@@ -1318,7 +1318,6 @@
                 "name": "divi/spacing",
                 "props": {
                   "grouped": false,
-                  "attrName": "cImageSpacing.decoration.imgSpacing",
                   "groupLabel": "Image",
                   "fieldLabel": "Image",
                   "fields": {
@@ -1341,6 +1340,7 @@
         "class": "df_cc_title"
       },
       "styleProps": {
+        "selector": "{{selector}} .df_cc_title",
         "spacing": {
           "important": {
             "desktop": {
@@ -1354,7 +1354,7 @@
       },
       "settings": {
         "decoration": {
-          "titleSpacing": {
+          "spacing": {
             "groupType": "group-item",
             "item": {
               "groupSlug": "designCustomContentSpacing",
@@ -1365,7 +1365,6 @@
                 "name": "divi/spacing",
                 "props": {
                   "grouped": false,
-                  "attrName": "cTitleSpacing.decoration.titleSpacing",
                   "groupLabel": "Title",
                   "fieldLabel": "Title",
                   "fields": {}
@@ -1385,6 +1384,7 @@
         "class": "df_cc_subtitle"
       },
       "styleProps": {
+        "selector": "{{selector}} .df_cc_subtitle",
         "spacing": {
           "important": {
             "desktop": {
@@ -1398,7 +1398,7 @@
       },
       "settings": {
         "decoration": {
-          "subtitleSpacing": {
+          "spacing": {
             "groupType": "group-item",
             "item": {
               "groupSlug": "designCustomContentSpacing",
@@ -1409,7 +1409,6 @@
                 "name": "divi/spacing",
                 "props": {
                   "grouped": false,
-                  "attrName": "cSubTitleSpacing.decoration.subtitleSpacing",
                   "groupLabel": "Subtitle",
                   "fieldLabel": "Subtitle",
                   "fields": {}
@@ -1428,6 +1427,7 @@
         "class": "df_cc_content"
       },
       "styleProps": {
+        "selector": "{{selector}} .df_cc_content",
         "spacing": {
           "important": {
             "desktop": {
@@ -1441,7 +1441,7 @@
       },
       "settings": {
         "decoration": {
-          "ccSpacing": {
+          "spacing": {
             "groupType": "group-item",
             "item": {
               "groupSlug": "designCustomContentSpacing",
@@ -1452,7 +1452,6 @@
                 "name": "divi/spacing",
                 "props": {
                   "grouped": false,
-                  "attrName": "contentSpacing.decoration.ccSpacing",
                   "groupLabel": "Content",
                   "fieldLabel": "Content",
                   "fields": {}

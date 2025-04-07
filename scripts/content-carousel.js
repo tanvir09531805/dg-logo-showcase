@@ -235,6 +235,10 @@ window.vendor.wp.hooks.addFilter('divi.moduleLibrary.moduleAttributes.diviflash.
   // attributes.useImage.settings.innerContent.items.alt.defaultValue = imageAltTextHas;
   // console.log('attributes img alt --- ', attributes.useImage.settings.innerContent.items.alt);
 
+  console.log(' Use icon ===---', attributes.useIcon.settings);
+  console.log(' Use Image ==-- ', attributes.useImage.settings);
+
+
   return attributes;
 });
 

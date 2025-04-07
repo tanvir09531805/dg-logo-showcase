@@ -70,20 +70,37 @@
       },
       "title": {
         "type": "object",
-        "selector": "{{selector}}.difl_contentcarouselitem .df_cc_title",
+        "selector": "{{selector}} .df_cci_container .df_cc_title",
         "attributes": {
-          "class": "difl_contentcarouselitem .df_cc_title"
+          "class": "df_cc_title"
         },
         "inlineEditor": "plainText",
         "childrenSanitizer": "et_core_esc_previously",
         "styleProps": {
+          "selector": "{{selector}} .df_cc_title",
           "font": {
             "important": {
               "font": {
                 "desktop": {
                   "value": {
-                    "color": true
+                    "color": true,
+                    "font-size": true,
+                    "font-weight": true,
+                    "letter-spacing": true,
+                    "line-height": true,
+                    "text-align": true
                   }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "selector": "{{selector}} .df_cc_title",
+            "important": {
+              "desktop": {
+                "value": {
+                  "padding": true,
+                  "margin": true
                 }
               }
             }
@@ -123,8 +140,7 @@
                   "type": "group",
                   "name": "divi/background",
                   "props": {
-                    "grouped": false,
-                    "attrName": "title.decoration"
+                    "grouped": false
                   }
                 }
               }
@@ -158,7 +174,7 @@
                 }
               }
             },
-            "titleSpacing": {
+            "spacing": {
               "groupType": "group-item",
               "item": {
                 "groupSlug": "designCustomContentSpacing",
@@ -169,7 +185,6 @@
                   "name": "divi/spacing",
                   "props": {
                     "grouped": false,
-                    "attrName": "title.decoration.titleSpacing",
                     "groupLabel": "Title",
                     "fieldLabel": "Title",
                     "fields": {}
@@ -186,18 +201,35 @@
         "type": "object",
         "selector": "{{selector}} .df_cci_container .df_cc_subtitle",
         "attributes": {
-          "class": ".df_cci_container .df_cc_subtitle"
+          "class": "df_cc_subtitle"
         },
         "inlineEditor": "plainText",
         "childrenSanitizer": "et_core_esc_previously",
         "styleProps": {
+          "selector": "{{selector}} .df_cc_subtitle",
           "font": {
             "important": {
               "font": {
                 "desktop": {
                   "value": {
-                    "color": true
+                    "color": true,
+                    "font-size": true,
+                    "font-weight": true,
+                    "letter-spacing": true,
+                    "line-height": true,
+                    "text-align": true
                   }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "selector": "{{selector}} .df_cc_subtitle",
+            "important": {
+              "desktop": {
+                "value": {
+                  "padding": true,
+                  "margin": true
                 }
               }
             }
@@ -237,8 +269,7 @@
                   "type": "group",
                   "name": "divi/background",
                   "props": {
-                    "grouped": false,
-                    "attrName": "subTitle.decoration"
+                    "grouped": false
                   }
                 }
               }
@@ -272,7 +303,7 @@
                 }
               }
             },
-            "subtitleSpacing": {
+            "spacing": {
               "groupType": "group-item",
               "item": {
                 "groupSlug": "designCustomContentSpacing",
@@ -283,7 +314,6 @@
                   "name": "divi/spacing",
                   "props": {
                     "grouped": false,
-                    "attrName": "subTitle.decoration.subtitleSpacing",
                     "groupLabel": "Subtitle",
                     "fieldLabel": "Subtitle",
                     "fields": {}
@@ -298,19 +328,113 @@
       },
       "content": {
         "type": "object",
-        "selector": "{{selector}}.difl_contentcarouselitem .df_cc_content",
+        "selector": "{{selector}} .df_cc_content",
         "elementType": "content",
         "attributes": {
           "class": "df_cc_content"
         },
         "styleProps": {
+          "selector": "{{selector}} .df_cc_content",
+          "headingFont": {
+            "important": {
+              "h1": {
+                "font": {
+                  "desktop": {
+                    "value": {
+                      "color": true,
+                      "font-size": true,
+                      "font-weight": true,
+                      "letter-spacing": true,
+                      "line-height": true,
+                      "text-align": true
+                    }
+                  }
+                }
+              },
+              "h2": {
+                "font": {
+                  "desktop": {
+                    "value": {
+                      "color": true,
+                      "font-size": true,
+                      "font-weight": true,
+                      "letter-spacing": true,
+                      "line-height": true,
+                      "text-align": true
+                    }
+                  }
+                }
+              },
+              "h3": {
+                "font": {
+                  "desktop": {
+                    "value": {
+                      "color": true,
+                      "font-size": true,
+                      "font-weight": true,
+                      "letter-spacing": true,
+                      "line-height": true,
+                      "text-align": true
+                    }
+                  }
+                }
+              },
+              "h4": {
+                "font": {
+                  "desktop": {
+                    "value": {
+                      "color": true,
+                      "font-size": true,
+                      "font-weight": true,
+                      "letter-spacing": true,
+                      "line-height": true,
+                      "text-align": true
+                    }
+                  }
+                }
+              },
+              "h5": {
+                "font": {
+                  "desktop": {
+                    "value": {
+                      "color": true,
+                      "font-size": true,
+                      "font-weight": true,
+                      "letter-spacing": true,
+                      "line-height": true,
+                      "text-align": true
+                    }
+                  }
+                }
+              },
+              "h6": {
+                "font": {
+                  "desktop": {
+                    "value": {
+                      "color": true,
+                      "font-size": true,
+                      "font-weight": true,
+                      "letter-spacing": true,
+                      "line-height": true,
+                      "text-align": true
+                    }
+                  }
+                }
+              }
+            }
+          },
           "bodyFont": {
             "important": {
               "body": {
                 "font": {
                   "desktop": {
                     "value": {
-                      "color": true
+                      "color": true,
+                      "font-size": true,
+                      "font-weight": true,
+                      "letter-spacing": true,
+                      "line-height": true,
+                      "text-align": true
                     }
                   }
                 }
@@ -355,13 +479,12 @@
                   "type": "group",
                   "name": "divi/background",
                   "props": {
-                    "grouped": false,
-                    "attrName": "background.decoration"
+                    "grouped": false
                   }
                 }
               }
             },
-            "bodyHeading": {
+            "headingFont": {
               "groupType": "group-item",
               "item": {
                 "groupSlug": "designContentHeading",
@@ -372,7 +495,6 @@
                   "name": "divi/font-header",
                   "props": {
                     "grouped": false,
-                    "attrName": "bodyHeading.decoration",
                     "groupLabel": "Heading",
                     "fieldLabel": "Heading",
                     "fields": {
@@ -382,15 +504,13 @@
                       },
                       "headingLevel": {
                         "render": true
-
-
                       }
                     }
                   }
                 }
               }
             },
-            "ccSpacing": {
+            "spacing": {
               "groupType": "group-item",
               "item": {
                 "groupSlug": "designCustomContentSpacing",
@@ -401,7 +521,6 @@
                   "name": "divi/spacing",
                   "props": {
                     "grouped": false,
-                    "attrName": "content.decoration.ccSpacing",
                     "groupLabel": "Content",
                     "fieldLabel": "Content",
                     "fields": {}
@@ -409,7 +528,7 @@
                 }
               }
             },
-            "contentBodyFont": {
+            "bodyFont": {
               "groupType": "group-item",
               "item": {
                 "groupSlug": "designContent",
@@ -420,7 +539,6 @@
                   "name": "divi/font-body",
                   "props": {
                     "grouped": false,
-                    "attrName": "content.decoration.contentBodyFont",
                     "fields":{
                       "body": {
                         "textShadowGroup": {
@@ -639,7 +757,7 @@
                   }
                 }
               },
-              "imgSpacing": {
+              "spacing": {
                 "groupType": "group-item",
                 "item": {
                   "groupSlug": "designCustomContentSpacing",
@@ -650,7 +768,6 @@
                     "name": "divi/spacing",
                     "props": {
                       "grouped": false,
-                      "attrName": "useImage.decoration.imgSpacing",
                       "groupLabel": "Image",
                       "fieldLabel": "Image",
                       "fields": {
@@ -675,12 +792,12 @@
             }
         },
         "styleComponentsProps": {
-            "background": false,
-            "boxShadow": {
+          "background": false,
+          "boxShadow": {
             "settings": {
                 "overlay": true
             }
-            }
+          }
         }
       },
       "imageIcon": {
@@ -849,7 +966,7 @@
           "hasWrapper": true
         },
         "styleProps": {
-          "selector": " {{selectorPrefix}} .df_cci_button_wrapper  .df_cci_button",
+          "selector": " {{selector}} .df_cci_button_wrapper  .df_cci_button",
           "spacing": {
             "important": true
           },
@@ -858,7 +975,10 @@
               "font": {
                 "desktop": {
                   "value": {
-                    "color": true
+                    "color": true,
+                    "font-size": true,
+                    "letter-spacing": true,
+                    "line-height": true
                   }
                 }
               }
@@ -1107,12 +1227,12 @@
         "inlineEditor": "plainText",
         "childrenSanitizer": "et_core_esc_previously",
         "styleProps": {
-          
+          "selector": "{{selector}} .df_cci_container"
         },
         "settings": {
           "innerContent": {},
           "decoration": {
-            "itemSpacing": {
+            "spacing": {
               "groupType": "group-item",
               "item": {
                 "groupSlug": "designCustomWrapperSpacing",
@@ -1123,7 +1243,6 @@
                   "name": "divi/spacing",
                   "props": {
                     "grouped": false,
-                    "attrName": "cWrapItem.decoration.itemSpacing",
                     "groupLabel": "Item Wrapper",
                     "fieldLabel": "Item Wrapper",
                     "fields": {}
@@ -1144,12 +1263,13 @@
         "inlineEditor": "plainText",
         "childrenSanitizer": "et_core_esc_previously",
         "styleProps": {
-          
+          "selector": "{{selector}} .df_cci_image_container"
+
         },
         "settings": {
           "innerContent": {},
           "decoration": {
-            "imageSpacing": {
+            "spacing": {
               "groupType": "group-item",
               "item": {
                 "groupSlug": "designCustomWrapperSpacing",
@@ -1160,7 +1280,6 @@
                   "name": "divi/spacing",
                   "props": {
                     "grouped": false,
-                    "attrName": "cWrapImage.decoration.imageSpacing",
                     "groupLabel": "Image Wrapper",
                     "fieldLabel": "Image Wrapper",
                     "fields": {}
@@ -1180,12 +1299,12 @@
         "inlineEditor": "plainText",
         "childrenSanitizer": "et_core_esc_previously",
         "styleProps": {
-          
+          "selector": "{{selector}} .df_cci_image_container .et-pb-icon"
         },
         "settings": {
           "innerContent": {},
           "decoration": {
-            "iconSpacing": {
+            "spacing": {
               "groupType": "group-item",
               "item": {
                 "groupSlug": "designCustomWrapperSpacing",
@@ -1196,7 +1315,6 @@
                   "name": "divi/spacing",
                   "props": {
                     "grouped": false,
-                    "attrName": "cWrapIcon.decoration.iconSpacing",
                     "groupLabel": "Icon Wrapper",
                     "fieldLabel": "Icon Wrapper",
                     "fields": {}
