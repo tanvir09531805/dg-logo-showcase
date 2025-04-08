@@ -562,58 +562,58 @@
         "elementType": "imageLink",
         "settings": {
             "innerContent": {
-                "groupType": "group-items",
-                "items": {
-                    "src": {
-                        "groupSlug": "contentImageIcon",
-                        "attrName": "useImage.innerContent.items.src",
-                        "subName": "src",
-                        "label": "Image",
-                        "description": "Upload an image.",
-                        "render": true,
-                        "priority": 10,
-                        "features": {
-                            "dynamicContent": {
-                            "type": "image"
-                            },
-                            "responsive": true,
-                            "hover": true,
-                            "sticky": false,
-                            "preset": "content"
+              "groupType": "group-items",
+              "items": {
+                "src": {
+                    "groupSlug": "contentImageIcon",
+                    "attrName": "useImage.innerContent.items.src",
+                    "subName": "src",
+                    "label": "Image",
+                    "description": "Upload an image.",
+                    "render": true,
+                    "priority": 10,
+                    "features": {
+                        "dynamicContent": {
+                        "type": "image"
                         },
-                        "component": {
-                            "type": "field",
-                            "name": "divi/upload",
-                            "props": {
-                              "syncImageData": true
-                            }
-                        }
+                        "responsive": true,
+                        "hover": true,
+                        "sticky": false,
+                        "preset": "content"
                     },
-                    "alt": {
-                        "groupSlug": "contentImageIcon",
-                        "attrName": "useImage.innerContent.items.alt",
-                        "subName": "alt",
-                        "label": "Image Alternative Text",
-                        "description": "This defines the HTML ALT text. A short description of your image can be placed here.",
-                        "render": true,
-                        "priority": 10,
-                        "features": {
-                            "dynamicContent": {
-                                "type": "text"
-                            },
-                            "responsive": false,
-                            "hover": false,
-                            "sticky": false,
-                            "preset": [
-                                "html"
-                            ]
-                        },
-                        "component": {
-                            "type": "field",
-                            "name": "divi/text"
+                    "component": {
+                        "type": "field",
+                        "name": "divi/upload",
+                        "props": {
+                          "syncImageData": true
                         }
                     }
+                },
+                "alt": {
+                    "groupSlug": "contentImageIcon",
+                    "attrName": "useImage.innerContent.items.alt",
+                    "subName": "alt",
+                    "label": "Image Alternative Text",
+                    "description": "This defines the HTML ALT text. A short description of your image can be placed here.",
+                    "render": true,
+                    "priority": 10,
+                    "features": {
+                        "dynamicContent": {
+                            "type": "text"
+                        },
+                        "responsive": false,
+                        "hover": false,
+                        "sticky": false,
+                        "preset": [
+                            "html"
+                        ]
+                    },
+                    "component": {
+                        "type": "field",
+                        "name": "divi/text"
+                    }
                 }
+              }
             },
             "decoration": {
               "imageAlignment": {
@@ -811,6 +811,8 @@
                 "groupSlug": "contentImageIcon",
                 "attrName": "imageIcon.innerContent",
                 "subName": "useIcon",
+                "render": true,
+                "priority": 10,
                 "label": "Use Icon",
                 "description": "Here you can choose whether icon set below should be used.",
                 "features": {
@@ -819,8 +821,6 @@
                   "responsive": false,
                   "preset": "content"
                 },
-                "render": true,
-                "priority": 20,
                 "component": {
                   "type": "field",
                   "name": "divi/toggle"
@@ -832,52 +832,15 @@
               "animation": {}
             }
           },
-          "decoration": {
-            
-            "border": {
-              "groupType": "group-item",
-              "item": {
-                "groupSlug": "designIconStyle",
-                "attrName": "imageIcon.decoration.border",
-                "label": "Icon Border",
-                "description": "Increasing the border will increase the roundness of the overlay corners. Setting this value to 0 will result in squared corners.",
-                "priority": 10,
-                "render": true,
-                "component": {
-                  "type": "group",
-                  "name": "divi/border",
-                  "props": {
-                    "grouped": false,
-                    "fieldLabel": "Icon"
-                  }
-                }
-              }
-            },
-            "boxShadow": {
-              "groupType": "group-item",
-              "item": {
-                "groupSlug": "designIconStyle",
-                "attrName": "imageIcon.decoration.boxShadow",
-                "priority": 20,
-                "render": true,
-                "component": {
-                  "type": "group",
-                  "name": "divi/box-shadow",
-                  "props": {
-                    "grouped": false,
-                    "fieldLabel": "Icon"
-                  }
-                }
-              }
-            }
-          },
+          "decoration": {},
           "advanced": {}
         }
       },
       "useIcon": {
         "type": "object",
-        "selector": "{{selector}} .difl_contentcarouselitem .slide_image",
+        "selector": "{{selector}} .df_cci_image_container .et-pb-icon",
         "styleProps": {
+          "selector": "{{selector}} .df_cci_image_container .et-pb-icon",
           "icon": {
             "selector": "{{selector}} .df_cci_image_container .et-pb-icon",
             "propertySelectors": {
@@ -897,6 +860,26 @@
                 }
               }
             }
+          },
+          "spacing": {
+            "selector": "{{selector}}  .df_cci_image_container .et-pb-icon",
+            "important": {
+              "desktop": {
+                "value": {
+                  "padding": true,
+                  "margin": true
+                }
+              }
+            }
+          },
+          "sizing": {
+            "propertySelectors": {
+              "desktop": {
+                "value": {
+                  "font-size": "{{selector}} .df_cci_image_container .et-pb-icon"
+                }
+              }
+            }
           }
         },
         "settings": {
@@ -908,9 +891,16 @@
                   "groupSlug": "contentImageIcon",
                   "attrName": "useIcon.decoration.icon",
                   "label": "Icon",
-                  "priority": 10,
+                  "description": "Here you can choose whether icon set below should be used.",
+                  "priority": 20,
                   "render": true,
                   "features": {
+                    "hover": false,
+                    "sticky": false,
+                    "responsive": false,
+                    "dynamicContent": {
+                      "type": "icon"
+                    },
                     "preset": [
                       "style",
                       "html"
@@ -924,7 +914,7 @@
                 "iconAttributes": {
                   "groupSlug": "contentImageIcon",
                   "attrName": "useIcon.decoration.icon",
-                  "priority": 10,
+                  "priority": 20,
                   "render": true,
                   "component": {
                     "type": "group",
@@ -940,17 +930,135 @@
                           "render": true
                         },
                         "useSize": {
-                          "render": true
+                          "render": false
                         },
                         "size": {
-                          "render": true
+                          "render": false
                         }
                       }
                     }
                   }
                 }
               }
+            },
+            "background": {
+              "groupType": "group-item",
+              "item": {
+                "groupSlug": "contentImageIcon",
+                "priority": 30,
+                "render": true,
+                "component": {
+                  "type": "group",
+                  "name": "divi/background",
+                  "props": {
+                    "grouped": false,
+                    "groupLabel": "Icon",
+                    "fieldLabel": "Icon"
+                  }
+                }
+              }
+            },
+            "spacing": {
+              "groupType": "group-item",
+              "item": {
+                "groupSlug": "designCustomWrapperSpacing",
+                "priority": 80,
+                "render": true,
+                "component": {
+                  "type": "group",
+                  "name": "divi/spacing",
+                  "props": {
+                    "grouped": false,
+                    "groupLabel": "Icon Wrapper",
+                    "fieldLabel": "Icon Wrapper",
+                    "fields": {}
+                  }
+                }
+              }
+            },
+            "sizing": {
+              "groupType": "group-items",
+              "items": {
+                "fontSize": {
+                  "groupSlug": "contentImageIcon",
+                  "priority": 20,
+                  "attrName": "useIcon.decoration.sizing",
+                  "label": "Icon Size",
+                  "description": "Adjust the size of the featured icon.",
+                  "render": true,
+                  "features": {
+                    "responsive": true,
+                    "hover": false,
+                    "sticky": false
+                  },
+                  "component": {
+                    "name": "divi/range",
+                    "type": "field",
+                    "props": {
+                      "max": 120,
+                      "min": 1,
+                      "step": 1,
+                      "defaultUnit": "px",
+                      "allowedUnits": ["px"]
+                    }
+                  }
+                },
+                "alignment": {
+                  "groupSlug": "contentImageIcon",
+                  "priority": 20,
+                  "render": true,
+                  "attrName": "useIcon.decoration.sizing",
+                  "subName": "alignment",
+                  "label": "Icon Alignment",
+                  "description": "Align Icon to the left, right or center.",
+                  "features": {
+                    "responsive": true,
+                    "hover": false,
+                    "sticky": false
+                  },
+                  "multipleChoices": false,
+                  "component": {
+                    "name": "divi/button-options",
+                    "type": "field",
+                    "props": {
+                      "allowClickToUnset": false,
+                      "options": {
+                        "left": {
+                          "icon": "divi/align-left"
+                        },
+                        "center": {
+                          "icon": "divi/align-center"
+                        },
+                        "right": {
+                          "icon": "divi/align-right"
+                        }
+                      },
+                      "showLabel": false
+                    }
+                  }
+                },
+                "circleIcon": {
+                  "groupSlug": "contentImageIcon",
+                  "attrName": "useIcon.decoration.circleIcon",
+                  "subName": "circleIcon",
+                  "render": true,
+                  "priority": 40,
+                  "label": "Circle Icon",
+                  "description": "Icon background will be a circle.",
+                  "features": {
+                    "hover": false,
+                    "sticky": false,
+                    "responsive": false,
+                    "preset": "content"
+                  },
+                  "component": {
+                    "type": "field",
+                    "name": "divi/toggle"
+                  }
+                }
+              }
             }
+            
           }
         }
       },
@@ -1289,42 +1397,8 @@
             }
           }
         }
-      },
-      "cWrapIcon": {
-        "type": "object",
-        "selector": "{{selector}} .df_cci_image_container .et-pb-icon",
-        "attributes": {
-          "class": "df_cci_image_container"
-        },
-        "inlineEditor": "plainText",
-        "childrenSanitizer": "et_core_esc_previously",
-        "styleProps": {
-          "selector": "{{selector}} .df_cci_image_container .et-pb-icon"
-        },
-        "settings": {
-          "innerContent": {},
-          "decoration": {
-            "spacing": {
-              "groupType": "group-item",
-              "item": {
-                "groupSlug": "designCustomWrapperSpacing",
-                "priority": 80,
-                "render": true,
-                "component": {
-                  "type": "group",
-                  "name": "divi/spacing",
-                  "props": {
-                    "grouped": false,
-                    "groupLabel": "Icon Wrapper",
-                    "fieldLabel": "Icon Wrapper",
-                    "fields": {}
-                  }
-                }
-              }
-            }
-          }
-        }
       }
+      
     },
     "customCssFields": {
       "contentContainer": {
@@ -1469,17 +1543,6 @@
                 "name": "divi/composite",
                 "props": {
                   "groupLabel": "Image"
-                }
-              }
-            },
-            "designIconStyle": {
-              "panel": "design",
-              "priority": 10,
-              "groupName": "designIconStyle",
-              "component": {
-                "name": "divi/composite",
-                "props": {
-                  "groupLabel": "Icon"
                 }
               }
             },

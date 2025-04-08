@@ -41,22 +41,12 @@ trait RenderCallback {
 		$parent_default_attributes = ModuleRegistration::get_default_attrs( 'diviflash/bento-grid' );
 		$parent_attrs_with_default = array_replace_recursive( $parent_default_attributes, $parent_attrs );
 
-		// Icon.
-		$icon_value = $attrs['icon']['innerContent']['desktop']['value'] ?? $parent_attrs_with_default['icon']['innerContent']['desktop']['value'] ?? [];
-		$icon = "";
-		if( !empty($icon_value)){
-			$icon       = HTMLUtility::render(
-				[
-					'tag'               => 'div',
-					'attributes'        => [
-						'class' => 'difl_content_carouselitem__icon et-pb-icon',
-					],
-					'childrenSanitizer' => 'esc_html',
-					'children'          => Utils::process_font_icon( $icon_value ),
-				]
-			);
-		}
+		// Icon. | useIcon.decoration.icon
 
+		$icon_value = isset($attrs['useIcon']['decoration']['icon']['desktop']['value']) ? $attrs['useIcon']['decoration']['icon']['desktop']['value'] : '';
+
+		$iconHasValue = isset($attrs['imageIcon']['innerContent']['desktop']['value']['useIcon']) ? $attrs['imageIcon']['innerContent']['desktop']['value']['useIcon']: 'off';
+		
 		// btn 
 		$btn =  isset($attrs['button']['innerContent']['desktop']['value'])?$attrs['button']['innerContent']['desktop']['value']:$attrs;
   		$linkTarget = (isset($btn['linkTarget']) && 'on' === $btn['linkTarget']) ? '_blank':'_self';
@@ -85,6 +75,22 @@ trait RenderCallback {
 					],
 				]
 			);
+		}
+
+		$icon = "";
+		if( !empty($icon_value) && $iconHasValue==='on'){
+			$icon = HTMLUtility::render(
+				[
+					'tag'               => 'span',
+					'childrenSanitizer' => 'esc_html',
+					'children'          => Utils::process_font_icon( $icon_value ),
+					'attributes'        => [
+						'class' => 'et-pb-icon',
+					],
+				]
+			);
+
+			$image_markup = '<div class="df_cci_image_container">'.$icon.'</div>';
 		}
 
 		// Title.
