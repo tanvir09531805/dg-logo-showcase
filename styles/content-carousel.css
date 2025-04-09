@@ -159,7 +159,23 @@
 }
 
 /* Swiper */
-
+.difl_fa {
+    font-family: 'FontAwesome';
+    speak: none;
+    font-weight: 400;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 96px;
+    font-style: normal;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+}
 
 @media (min-width: 981px) { 
     [data-item="1"] .swiper-slide{

@@ -11,35 +11,14 @@ use ET\Builder\Packages\Module\Options\Text\TextStyle;
 use ET\Builder\Packages\Module\Options\Css\CssStyle;
 use ET\Builder\Packages\Module\Layout\Components\StyleCommon\CommonStyle;
 use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
+use ET\Builder\Packages\IconLibrary\IconFont\Utils;
+use ET\Builder\Packages\StyleLibrary\Utils\StyleDeclarations;
 use DIVIFLASH\modules\ContentCarouselItem\ContentCarouselItem;
 
 trait Styles {
 	use CustomCss;
 	use StyleDeclaration;
 
-	/**
-	 * Child Module's style components.
-	 *
-	 * This function is equivalent of JS function ModuleStyles located in
-	 * src/components/child-module/styles.tsx.
-	 *
-	 * @param array $args {
-	 *     An array of arguments.
-	 *
-	 * @type string $id Module ID. In VB, the ID of module is UUIDV4. In FE, the ID is order index.
-	 * @type string $name Module name.
-	 * @type string $attrs Module attributes.
-	 * @type string $parentAttrs Parent attrs.
-	 * @type string $orderClass Selector class name.
-	 * @type string $parentOrderClass Parent selector class name.
-	 * @type string $wrapperOrderClass Wrapper selector class name.
-	 * @type string $settings Custom settings.
-	 * @type string $state Attributes state.
-	 * @type string $mode Style mode.
-	 * @type ModuleElements $elements ModuleElements instance.
-	 * }
-	 * @since ??
-	 */
 	public static function styles( $args ) {
 		$attrs        = $args['attrs'] ?? [];
 		$order_class  = $args['orderClass'];
@@ -50,7 +29,7 @@ trait Styles {
 		$parent_default_attributes = ModuleRegistration::get_default_attrs( 'diviflash/bento-grid' );
 		$parent_attrs_with_default = array_replace_recursive( $parent_default_attributes, $parent_attrs );
 
-		$icon_selector              = "{$order_class} .difl_bento_grid_item__icon.et-pb-icon";
+		$icon_selector              = "{$order_class} .df_cci_image_container .et-pb-icon";
 		$content_container_selector = "{$order_class} .difl_bento_grid_item__content-container";
 		$pro_img_selector = "{$order_class} .difl_bento_grid_item__image img";
 		$child_item = "{$order_class}";
@@ -115,17 +94,25 @@ trait Styles {
 						]
 					),
 
+
 					// Icon.
 					CommonStyle::style(
 						[
-							'selector'            => $icon_selector,
-							'attr'                => $attrs['icon']['innerContent'] ?? $parent_attrs_with_default['icon']['innerContent'] ?? [],
-							'declarationFunction' => [ ContentCarouselItem::class, 'icon_font_declaration' ],
+							'selector' => $icon_selector,
+							'attr'     => $attrs['useIcon']['decoration']['icon'] ?? [],
+							'declarationFunction' => [ self::class, 'icon_font_declaration' ],
 						]
 					),
 					CommonStyle::style(
 						[
 							'selector' => $icon_selector,
+							'attr'     => isset($attrs['useIcon']['decoration']['icon']) ? (string) $attrs['useIcon']['decoration']['icon'] : '',
+							'property' => 'color',
+						]
+					),
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df_cci_image_container",
 							'attr'     => $attrs['icon']['advanced']['color'] ?? $parent_attrs_with_default['icon']['advanced']['color'] ?? [],
 							'property' => 'color',
 						]
@@ -133,10 +120,12 @@ trait Styles {
 					CommonStyle::style(
 						[
 							'selector' => $icon_selector,
-							'attr'     => $attrs['icon']['advanced']['size'] ?? $parent_attrs_with_default['icon']['advanced']['size'] ?? [],
+							'attr'     => $attrs['useIcon']['decoration']['sizing']  ?? [],
 							'property' => 'font-size',
 						]
 					),
+
+
 					/* Image Size */
 					CommonStyle::style(
 						[
@@ -167,24 +156,66 @@ trait Styles {
 							'attrName' => 'imageStyle',
 						]
 					),
-
-					// ATTENTION: The code is intentionally added and commented in FE only as an example of expected value format.
-					// If you have custom style processing, the style output should be passed as an `array` of style declarations
-					// to the `styles` property of the `Style::add` method. For example:
-					// [
-					// 	[
-					// 		'atRules'     => false,
-					// 		'selector'    => $icon_selector,
-					// 		'declaration' => 'color: red;'
-					// 	],
-					// 	[
-					// 		'atRules'     => '@media only screen and (max-width: 767px)',
-					// 		'selector'    => $icon_selector,
-					// 		'declaration' => 'color: green;'
-					// 	],
-					// ],
+					
 				],
 			]
 		);
 	}
+
+	
+	/**
+     * Arrow Position styles
+     *
+     * @param String | position
+     * @return String
+     */
+    public static function df_use_icon(array $args ): string {
+
+		$arrowPosition = $args['attrValue']['arrowPosition']?:'middle'; // default value
+		
+        $options = array(
+            'top' 	 => 'position: relative;
+						top: auto;
+						left: auto;
+						right: auto;
+						transform: translateY(0);
+						order: 0;',
+            'middle' => 'position: absolute;
+						top: 50%;
+						left: 0;
+						right: 0;
+						transform: translateY(-50%);',
+            'bottom' => 'position: relative;
+						top: auto;
+						left: auto;
+						right: auto;
+						transform: translateY(0);
+						order: 2;',
+        );
+        return $options[$arrowPosition];
+    }
+
+
+	public static function icon_font_declaration(array $args ): string {
+		$icon_attr = $args['attrValue'] ?? [];
+
+		$style_declarations = new StyleDeclarations(
+			[
+				'returnType' => 'string',
+				'important'  => [
+					'font-family' => true,
+					'content'     => true,
+				],
+			]
+		);
+
+		if ( ! empty( $icon_attr ) ) {
+			$style_declarations->add( 'content', '"' . Utils::process_font_icon( $icon_attr ) . '"' );
+			$font_family = isset( $icon_attr['type'] ) && 'fa' === $icon_attr['type'] ? 'FontAwesome' : 'ETmodules';
+			$style_declarations->add( 'font-family', $font_family );
+		}
+
+		return $style_declarations->value();
+	}
+
 }

@@ -861,6 +861,9 @@
               }
             }
           },
+          "background": {
+            "selector": "{{selector}} .df_cci_image_container"
+          },
           "spacing": {
             "selector": "{{selector}}  .df_cci_image_container .et-pb-icon",
             "important": {
@@ -1007,7 +1010,7 @@
                   "groupSlug": "contentImageIcon",
                   "priority": 20,
                   "render": true,
-                  "attrName": "useIcon.decoration.sizing",
+                  "attrName": "useIcon.decoration.alignment",
                   "subName": "alignment",
                   "label": "Icon Alignment",
                   "description": "Align Icon to the left, right or center.",

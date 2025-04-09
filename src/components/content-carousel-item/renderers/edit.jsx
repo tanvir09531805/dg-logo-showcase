@@ -10,7 +10,10 @@ const { useFetch } = window?.divi?.rest;
 
 import { generateDefaultAttrs } from '@divi/module-library';
 
-import { getAttrByMode } from '@divi/module-utils';
+// import { getAttrByMode } from '@divi/module-utils';
+
+const { getAttrByMode } = window?.divi?.moduleUtils;
+
 import { processFontIcon } from '@divi/icon-library';
 import { isEmpty, merge, map } from 'lodash';
 import parentMetadata from '../../content-carousel/module.json';
@@ -45,28 +48,33 @@ export const Edit = ( props ) => {
   const btn       = attrs.button?.innerContent?.desktop?.value;
   const linkTarget= 'on' === btn?.linkTarget ? '_blank':'_self';
 
-  const iconValue = attrs?.useIcon?.decoration?.icon?.desktop?.value ?? '';
+  const iconVContent = getAttrByMode ( attrs?.useIcon?.decoration?.icon?.desktop?.value );
+  // const iconValue = isEmpty ( iconVContent ) ? parentIconContent : iconVContent;
+  const iconValue = attrs?.useIcon?.decoration?.icon?.desktop?.value;
   const iconHas   = attrs?.imageIcon?.innerContent?.desktop?.value?.useIcon ?? 'off';
 
   let iconMarkup = null;
+  
   if (!isEmpty(iconValue) && iconHas === 'on') {
     iconMarkup = (
       <div className="df_cci_image_container">
         <span className="et-pb-icon">
-          {processFontIcon(iconValue)}
+          { processFontIcon (iconValue) }
         </span>
       </div>
     );
+  }else{
+    if (!isEmpty(image)) {
+      iconMarkup = (
+        <div className="df_cci_image_container">
+          <img key={ image?.id } src={ image?.src } alt={imgAltText} title={image?.titleText} />
+        </div>
+      );
+    }
+    
   }
-  // if (!isEmpty(image)) {
-  //   iconMarkup = (
-  //     <div className="df_cci_image_container">
-  //       <img key={ image?.id } src={ image?.src } alt={imgAltText} title={image?.titleText} />
-  //     </div>
-  //   );
-  // }
+  
 
- 
 	return (
 		<ModuleContainer
       attrs={attrs}
@@ -82,12 +90,9 @@ export const Edit = ( props ) => {
       {elements.styleComponents({ attrName: 'module', })}
       
         <div class="df_cci_container">
-          {image && (
-            <div className="df_cci_image_container">
-              <img key={ image?.id } src={ image?.src } alt={imgAltText} title={image?.titleText} />
-            </div>
-          )}
+          
           {iconMarkup}
+          
           {elements.render ( {
             attrName: 'title',
           } )}

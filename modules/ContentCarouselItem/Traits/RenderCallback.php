@@ -59,9 +59,7 @@ trait RenderCallback {
 		$image = $attrs['useImage']['innerContent']['items']['src']['desktop']['value'] ?? "";
 		$imgSetAlt = $attrs['useImage']['innerContent']['items']['alt']['desktop']['value']['alt'] ?? "";
 		$imgAltText= $imgSetAlt?:$image['alt'];
-		// echo '<pre>';
-		// var_dump($image);
-		// echo '</pre>';
+		
 		$image_markup = "";
 		if ( is_array($image) && !empty($image['src']) ) {
 			$image_markup = HTMLUtility::render(
@@ -79,13 +77,19 @@ trait RenderCallback {
 
 		$icon = "";
 		if( !empty($icon_value) && $iconHasValue==='on'){
+
+			$processIcon = Utils::process_font_icon( $icon_value );
+			
+			// $iconClass = $icon_value['type'] === 'fa' ? 'difl_fa' : 'et-pb-icon';
+			$iconClass = 'et-pb-icon';
+
 			$icon = HTMLUtility::render(
 				[
 					'tag'               => 'span',
 					'childrenSanitizer' => 'esc_html',
-					'children'          => Utils::process_font_icon( $icon_value ),
+					'children'          => $processIcon,
 					'attributes'        => [
-						'class' => 'et-pb-icon',
+						'class' => $iconClass,
 					],
 				]
 			);
