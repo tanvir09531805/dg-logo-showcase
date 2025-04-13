@@ -52,6 +52,14 @@ function carouselSettingLightbox({
   return ("on" === attrs.settingCarousel?.innerContent?.useLightbox?.desktop?.value?.useLightbox) ? true : false;
 }
 
+function arrowIconPrev({ attrs, }) { 
+  return ("on" === attrs.arrowPrevIcon?.innerContent?.desktop?.value) ? true : false;
+}
+function arrowIconNext({ attrs, }) { 
+  // attrs.arrowNextIcon?.innerContent?.desktop?.value
+  return ("on" === attrs.arrowNextIcon?.innerContent?.desktop?.value) ? true : false;
+}
+
 
 function imageAltTextHas({
   attrs,
@@ -92,8 +100,16 @@ window.vendor.wp.hooks.addFilter('divi.moduleLibrary.moduleAttributes.diviflash.
   attributes.settingCarousel.settings.innerContent.items.pauseOnHover.visible = carouselSettingAutoplay;
   attributes.settingCarousel.settings.innerContent.items.showTitleOnLightbox.visible = carouselSettingLightbox;
 
+  // console.log('arrow next icon _ ', attributes.arrowNextIcon.settings.decoration.icon);
+  
+  attributes.arrowPrevIcon.settings.decoration.icon.items.arrowPrevIcon.component.props.visible = arrowIconPrev;
+  attributes.arrowPrevIcon.settings.decoration.prevIconSize.item.visible = arrowIconPrev;
+
+  attributes.arrowNextIcon.settings.decoration.icon.items.icon.visible = arrowIconNext;
+  attributes.arrowNextIcon.settings.decoration.sizing.items.fontSize.visible = arrowIconNext;
+
   metadata.settings.groups.advancedSettings.component.props.visible = carouselTypeCoverFlow;
 
-  // console.log('attributes Advanced Carousel setting', attributes.addSettingCarousel);
+
   return attributes;
 });

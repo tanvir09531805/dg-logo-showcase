@@ -41,6 +41,10 @@ export const Edit = ( props ) => {
   const mobileBreakpoint = window.matchMedia('screen and (max-width: 400px)').matches;
 
   const ccData = attrs.settingCarousel?.innerContent;
+  // const ccArrowsData = attrs.arrowPrevIcon?.innerContent?.desktop?.value;
+  // const ccArrowsData = attrs.arrowNextIcon?.innerContent;
+  // console.log('Arrow data _ ', ccArrowsData);
+  
 
   let next_icon = 4;
   let prev_icon = 5;
