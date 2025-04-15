@@ -841,6 +841,9 @@
         "selector": "{{selector}} .df_cci_image_container .et-pb-icon",
         "styleProps": {
           "selector": "{{selector}} .df_cci_image_container .et-pb-icon",
+          "background": {
+            "selector": "{{selector}} .df_cci_image_container .et-pb-icon"
+          },
           "icon": {
             "selector": "{{selector}} .df_cci_image_container .et-pb-icon",
             "propertySelectors": {
@@ -860,9 +863,6 @@
                 }
               }
             }
-          },
-          "background": {
-            "selector": "{{selector}} .df_cci_image_container"
           },
           "spacing": {
             "selector": "{{selector}}  .df_cci_image_container .et-pb-icon",
@@ -919,6 +919,11 @@
                   "attrName": "useIcon.decoration.icon",
                   "priority": 20,
                   "render": true,
+                  "features": {
+                    "hover": true,
+                    "sticky": false,
+                    "responsive": false
+                  },
                   "component": {
                     "type": "group",
                     "name": "divi/icon",
@@ -948,8 +953,14 @@
               "groupType": "group-item",
               "item": {
                 "groupSlug": "contentImageIcon",
+                "attrName": "useIcon.decoration.background",
                 "priority": 30,
                 "render": true,
+                "features": {
+                  "hover": true,
+                  "sticky": false,
+                  "responsive": false
+                },
                 "component": {
                   "type": "group",
                   "name": "divi/background",
@@ -1015,7 +1026,7 @@
                   "label": "Icon Alignment",
                   "description": "Align Icon to the left, right or center.",
                   "features": {
-                    "responsive": true,
+                    "responsive": false,
                     "hover": false,
                     "sticky": false
                   },

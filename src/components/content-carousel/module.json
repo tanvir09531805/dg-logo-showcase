@@ -512,6 +512,8 @@
               "render": true,
               "features": {
                 "sticky": false,
+                "responsive": false,
+                "hover": false,
                 "preset": [
                   "html"
                 ]
@@ -556,7 +558,13 @@
           }
         },
         "sizing": {
-          "selector": "{{selector}} .df_cc_arrows div.swiper-button-prev:after"
+          "propertySelectors": {
+            "desktop": {
+              "value": {
+                "font-size": "{{selector}} .df_cc_arrows div.swiper-button-prev:after"
+              }
+            }
+          }
         }
       },
       "settings": {
@@ -591,7 +599,7 @@
               "arrowPrevIcon": {
                 "groupSlug": "designArrows",
                 "attrName": "arrowPrevIcon.decoration.icon",
-                "label": "Arrow Prev Icon",
+                "label": "Prev Icon",
                 "description": "Choose an icon to display",
                 "render": true,
                 "priority": 10,
@@ -600,7 +608,7 @@
                   "type": "group",
                   "props": {
                     "grouped": false,
-                    "fieldLabel": "Arrow Prev Icon",
+                    "fieldLabel": "Prev Icon",
                     "fields": {
                       "color": {
                         "render": false
@@ -626,7 +634,7 @@
               "groupSlug": "designArrows",
               "attrName": "arrowPrevIcon.decoration.prevIconSize",
               "subName": "prevIconSize",
-              "label": "Icon Size 44444",
+              "label": "Prev Icon Size",
               "description": "Here you can define Icon Size of dots wrapper.",
               "features": {
                 "hover": true,

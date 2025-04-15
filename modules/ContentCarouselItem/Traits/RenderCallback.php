@@ -44,6 +44,10 @@ trait RenderCallback {
 		// Icon. | useIcon.decoration.icon
 
 		$icon_value = isset($attrs['useIcon']['decoration']['icon']['desktop']['value']) ? $attrs['useIcon']['decoration']['icon']['desktop']['value'] : '';
+		// echo '<pre>';
+		// 		// var_dump($attrs['useIcon']['decoration']);
+		// 		var_dump($attrs['titleOrder']['innerContent']);
+		// echo '</pre>';
 
 		$iconHasValue = isset($attrs['imageIcon']['innerContent']['desktop']['value']['useIcon']) ? $attrs['imageIcon']['innerContent']['desktop']['value']['useIcon']: 'off';
 		
@@ -80,21 +84,30 @@ trait RenderCallback {
 
 			$processIcon = Utils::process_font_icon( $icon_value );
 			
-			// $iconClass = $icon_value['type'] === 'fa' ? 'difl_fa' : 'et-pb-icon';
-			$iconClass = 'et-pb-icon';
-
 			$icon = HTMLUtility::render(
 				[
 					'tag'               => 'span',
 					'childrenSanitizer' => 'esc_html',
-					'children'          => $processIcon,
+					'children'          => $processIcon, // $processIcon,
 					'attributes'        => [
-						'class' => $iconClass,
+						'class' => 'et-pb-icon',
 					],
 				]
 			);
 
 			$image_markup = '<div class="df_cci_image_container">'.$icon.'</div>';
+			// $image_markup = '<div class="df_cci_image_container"><span className="et-pb-icon">'.$processIcon.'</span></div>';
+			// $image_markup = HTMLUtility::render(
+			// 	[
+			// 		'tag'               => 'div',
+			// 		'childrenSanitizer' => 'et_core_esc_previously',
+			// 		'children'          => '<span class="et-pb-icon">'.$processIcon.'</span>',
+			// 		'attributes'        => [
+			// 			'class'    => 'df_cci_image_container',
+			// 			'data-src' => $image['src'],
+			// 		],
+			// 	]
+			// );
 		}
 
 		// Title.

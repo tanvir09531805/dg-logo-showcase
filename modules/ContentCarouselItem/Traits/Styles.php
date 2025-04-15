@@ -14,6 +14,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 use ET\Builder\Packages\IconLibrary\IconFont\Utils;
 use ET\Builder\Packages\StyleLibrary\Utils\StyleDeclarations;
 use DIVIFLASH\modules\ContentCarouselItem\ContentCarouselItem;
+use Endroid\QrCode\Logo\Logo;
 
 trait Styles {
 	use CustomCss;
@@ -94,34 +95,77 @@ trait Styles {
 						]
 					),
 
-
-					// Icon.
-					CommonStyle::style(
+					// icon style.
+					$elements->style(
 						[
-							'selector' => $icon_selector,
-							'attr'     => $attrs['useIcon']['decoration']['icon'] ?? [],
-							'declarationFunction' => [ self::class, 'icon_font_declaration' ],
+							'attrName' => 'useIcon',
 						]
 					),
+
+					
+					// Icon.
+					// CommonStyle::style(
+					// 	[
+					// 		'selector' => $icon_selector,
+					// 		'attr'     => $attrs['useIcon']['decoration']['icon'] ?? [],
+					// 		'declarationFunction' => [ self::class, 'icon_font_declaration' ],
+					// 	]
+					// ),
 					CommonStyle::style(
 						[
 							'selector' => $icon_selector,
-							'attr'     => isset($attrs['useIcon']['decoration']['icon']) ? (string) $attrs['useIcon']['decoration']['icon'] : '',
-							'property' => 'color',
+							'attr'     => $attrs['useIcon']['decoration']['circleIcon'] ?? [],
+							'declarationFunction' => [ self::class, 'df_circle_icon' ],
 						]
 					),
 					CommonStyle::style(
 						[
 							'selector' => "{$order_class} .df_cci_image_container",
-							'attr'     => $attrs['icon']['advanced']['color'] ?? $parent_attrs_with_default['icon']['advanced']['color'] ?? [],
-							'property' => 'color',
+							'attr'     => $attrs['useIcon']['decoration']['alignment'] ?? [],
+							'declarationFunction' => [ self::class, 'df_icon_alignment' ],
 						]
 					),
 					CommonStyle::style(
 						[
 							'selector' => $icon_selector,
-							'attr'     => $attrs['useIcon']['decoration']['sizing']  ?? [],
+							'attr'     => $attrs['useIcon']['decoration']['sizing'] ?? '',
 							'property' => 'font-size',
+						]
+					),
+
+					CommonStyle::style(
+						[
+							'selector' => ".difl_contentcarousel {$order_class} .df_cci_image_container",
+							'attr'     => $attrs['imgOrder']['innerContent'] ?? '',
+							'property' => 'order',
+						]
+					),
+					CommonStyle::style(
+						[
+							'selector' => ".difl_contentcarousel {$order_class} .df_cc_title",
+							'attr'     => $attrs['titleOrder']['innerContent'] ?? '',
+							'property' => 'order',
+						]
+					),
+					CommonStyle::style(
+						[
+							'selector' => ".difl_contentcarousel {$order_class} .df_cc_subtitle",
+							'attr'     => $attrs['subTitleOrder']['innerContent'] ?? '',
+							'property' => 'order',
+						]
+					),
+					CommonStyle::style(
+						[
+							'selector' => ".difl_contentcarousel {$order_class} .df_cc_content",
+							'attr'     => $attrs['contentOrder']['innerContent'] ?? '',
+							'property' => 'order',
+						]
+					),
+					CommonStyle::style(
+						[
+							'selector' => ".difl_contentcarousel {$order_class} .df_cci_button_wrapper",
+							'attr'     => $attrs['btnOrder']['innerContent'] ?? '',
+							'property' => 'order',
 						]
 					),
 
@@ -164,41 +208,46 @@ trait Styles {
 
 	
 	/**
-     * Arrow Position styles
+     * Icon bg radius styles
      *
-     * @param String | position
+     * @param String test_log($args['attrValue']['circleIcon']);
      * @return String
      */
-    public static function df_use_icon(array $args ): string {
+    public static function df_circle_icon(array $args ): string {
 
-		$arrowPosition = $args['attrValue']['arrowPosition']?:'middle'; // default value
-		
-        $options = array(
-            'top' 	 => 'position: relative;
-						top: auto;
-						left: auto;
-						right: auto;
-						transform: translateY(0);
-						order: 0;',
-            'middle' => 'position: absolute;
-						top: 50%;
-						left: 0;
-						right: 0;
-						transform: translateY(-50%);',
-            'bottom' => 'position: relative;
-						top: auto;
-						left: auto;
-						right: auto;
-						transform: translateY(0);
-						order: 2;',
-        );
-        return $options[$arrowPosition];
+		$iconRadius = ($args['attrValue']['circleIcon'] === 'on') ? 'border-radius: 50%;' : '';
+        
+        return $iconRadius;
+    }
+
+	/**
+     * Icon Alignment styles
+     *
+     * @param String test_log($args['attrValue']);
+     * @return String
+     */
+    public static function df_icon_alignment(array $args ): string {
+		$icon_attr = $args['attrValue'] ?? [];
+		$style_declare = new StyleDeclarations(
+			[
+				'returnType' => 'string',
+				'important'  => [
+					'content'     => true,
+				],
+			]
+		);
+
+        if ( ! empty( $icon_attr ) ) {
+			$iconAlign  = isset( $icon_attr['alignment'] ) ? $icon_attr['alignment'] : '';
+			$style_declare->add( 'text-align', $iconAlign);
+		}
+
+		return $style_declare->value();
     }
 
 
 	public static function icon_font_declaration(array $args ): string {
 		$icon_attr = $args['attrValue'] ?? [];
-
 		$style_declarations = new StyleDeclarations(
 			[
 				'returnType' => 'string',
@@ -208,11 +257,15 @@ trait Styles {
 				],
 			]
 		);
+		$font_icon = Utils::process_font_icon( $icon_attr );
 
 		if ( ! empty( $icon_attr ) ) {
-			$style_declarations->add( 'content', '"' . Utils::process_font_icon( $icon_attr ) . '"' );
+			$style_declarations->add( 'content', $font_icon );
 			$font_family = isset( $icon_attr['type'] ) && 'fa' === $icon_attr['type'] ? 'FontAwesome' : 'ETmodules';
+			// $iconColor   = isset( $icon_attr['color'] ) ? $icon_attr['color'] : '';
+
 			$style_declarations->add( 'font-family', $font_family );
+			// $style_declarations->add( 'color', $iconColor );
 		}
 
 		return $style_declarations->value();

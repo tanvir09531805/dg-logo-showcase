@@ -74,6 +74,43 @@ trait Styles {
 							],
 						]
 					),
+					
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df_cci_image_container",
+							'attr'     => $attrs['imgOrder']['innerContent'] ?? '',
+							'property' => 'order',
+						]
+					),
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df_cc_title",
+							'attr'     => $attrs['titleOrder']['innerContent'] ?? '',
+							'property' => 'order',
+						]
+					),
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df_cc_subtitle",
+							'attr'     => $attrs['subTitleOrder']['innerContent'] ?? '',
+							'property' => 'order',
+						]
+					),
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df_cc_content",
+							'attr'     => $attrs['contentOrder']['innerContent'] ?? '',
+							'property' => 'order',
+						]
+					),
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df_cci_button_wrapper",
+							'attr'     => $attrs['btnOrder']['innerContent'] ?? '',
+							'property' => 'order',
+						]
+					),
+
 					// Profile Image Size
 					CommonStyle::style(
 						[
@@ -89,15 +126,80 @@ trait Styles {
 							'property' => 'height',
 						]
 					),
-					/* Row/Column Span */
 					CommonStyle::style(
 						[
-							'selector'            => "{$order_class} .difl_bento_grid__inner",
-							'attr'                => $attrs['gridLayout']['decoration'] ?? [],
-							'declarationFunction' => [ self::class, 'grid_layout_style_declaration' ],
+							'selector' => "{$order_class} .df_cc_arrows div:after",
+							'attr'     => $attrs['arrows']['advanced']['arrowIconColor'] ?? '',
+							'property' => 'color',
+						]
+					),
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df_cc_arrows div",
+							'attr'     => $attrs['arrows']['advanced']['arrowBgColor'] ?? '',
+							'property' => 'background-color',
+						]
+					),
+
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df_cc_arrows>div",
+							'attr'     => $attrs['arrows']['advanced']['circleArrow'] ?? [],
+							'declarationFunction' => [ self::class, 'df_circle_icon' ],
+						]
+					),
+
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df_cc_arrows div",
+							'attr'     => $attrs['arrows']['advanced']['arrowOpacity'] ?? [],
+							'declarationFunction' => [ self::class, 'df_arrow_opacity' ],
+						]
+					),
+					CommonStyle::style(
+						[
+							'selector'  		  => "{$order_class} .df_cc_arrows",
+							'attr'                => $attrs['arrows']['advanced']['arrowPosition'] ?? [],
+							'declarationFunction' => [ self::class, 'df_arrow_pos_styles' ], 
+						]
+					),
+					CommonStyle::style(
+						[
+							'selector'  		  => "{$order_class} .df_cc_arrows",
+							'attr'                => $attrs['arrows']['advanced']['arrowAlignment'] ?? [],
+							'declarationFunction' => [ self::class, 'df_arrow_alignment_styles' ], 
 						]
 					),
 					
+					// Prev icon style.
+					$elements->style(
+						[
+							'attrName' => 'arrowPrevIcon',
+						]
+					),
+					// Next icon style.
+					$elements->style(
+						[
+							'attrName' => 'arrowNextIcon',
+						]
+					),
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df_cc_arrows div.swiper-button-next:after",
+							'attr'     => $attrs['arrowNextIcon']['decoration']['sizing'] ?? '',
+							'property' => 'font-size',
+						]
+					),
+					// CommonStyle::style(
+					// 	[
+					// 		'selector' => "{$order_class} .df_cc_arrows div.swiper-button-prev:after",
+					// 		'attr'     => $attrs['arrowPrevIcon']['decoration']['prevIconSize'] ?? '',
+					// 		'property' => 'font-size',
+					// 	]
+					// ),
+
+					
+
 					/*
 					 * We need to add CssStyle at the very bottom of other
 					 * components so that custom css can override module styles
@@ -113,34 +215,46 @@ trait Styles {
 						),
 					*/
 
+					/* Row/Column Span */
 					CommonStyle::style(
 						[
-							'selector'  		  => "{$order_class} .df_cc_arrows",
-							'attr'                => $attrs['arrows']['advanced']['arrowPosition'] ?? [],
-							'declarationFunction' => [ self::class, 'df_arrow_pos_styles' ], 
+							'selector'            => "{$order_class} .difl_bento_grid__inner",
+							'attr'                => $attrs['gridLayout']['decoration'] ?? [],
+							'declarationFunction' => [ self::class, 'grid_layout_style_declaration' ],
 						]
 					),
-					CommonStyle::style(
-						[
-							'selector'  		  => "{$order_class} .df_cc_arrows",
-							'attr'                => $attrs['arrows']['advanced']['arrowAlignment'] ?? [],
-							'declarationFunction' => [ self::class, 'df_arrow_alignment_styles' ], 
-						]
-					),
-					// CommonStyle::style(
-					// 	[
-					// 		'selector'  		  => "{$order_class} .df_cc_arrows",
-					// 		'attr'                => $attrs['arrows']['advanced']['arrowAlignment'] ?? [], 
-					// 		'property'			  => 'justify-content',
-					// 	]
-					// ),
-
-
 				],
 			]
 		);
 	}
 
+	public static function df_circle_icon(array $args ): string {
+
+		// test_log($args['attrValue']);
+
+		$iconRadius = ($args['attrValue'] === 'on') ? 'border-radius: 50%;' : '';
+        
+        return $iconRadius;
+    }
+	public static function df_arrow_opacity(array $args ): string {
+
+        $icon_attr = $args['attrValue'] ?? [];
+		$style_declare = new StyleDeclarations(
+			[
+				'returnType' => 'string',
+				'important'  => [
+					'content'     => true,
+				],
+			]
+		);
+
+        if ( ! empty( $icon_attr ) ) {
+			$arrowOpacity  = isset( $icon_attr['arrowOpacity'] ) ? $icon_attr['arrowOpacity'] : '';
+			$style_declare->add( 'opacity', $arrowOpacity);
+		}
+
+		return $style_declare->value();
+    }
 
 	/**
      * Arrow Position styles
