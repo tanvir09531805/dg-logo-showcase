@@ -621,7 +621,6 @@
                 "item": {
                   "groupSlug": "designImageStyle",
                   "attrName": "useImage.decoration.imageAlignment",
-                  "subName": "imageAlignment",
                   "label": "Alignment",
                   "description": "Here you can define the horizontal alignment of dots wrapper.",
                   "features": {
@@ -678,8 +677,7 @@
                 "groupType": "group-item",
                 "item": {
                   "groupSlug": "designImageStyle",
-                  "attrName": "useImage.advanced.maxWidth",
-                  "subName": "maxWidth",
+                  "attrName": "useImage.decoration.maxWidth",
                   "label": "Max Width",
                   "description": "Here you can define max width.",
                   "features": {
@@ -719,7 +717,6 @@
                 "groupType": "group-item",
                 "item": {
                   "groupSlug": "designImageStyle",
-                  "attrName": "useImage.decoration.border",
                   "label": "Image Border",
                   "description": "Increasing the border will increase the roundness of the overlay corners. Setting this value to 0 will result in squared corners.",
                   "features": {
@@ -744,7 +741,6 @@
                 "groupType": "group-item",
                 "item": {
                   "groupSlug": "designImageStyle",
-                  "attrName": "useImage.decoration.boxShadow",
                   "priority": 20,
                   "render": true,
                   "component": {
@@ -784,11 +780,22 @@
         "styleProps": {
             "selector": "{{selector}} img, {{selector}} .et_overlay",
             "border": {
-            "selector": "{{selector}} .et_pb_image_wrap"
+              "selector": ".difl_contentcarousel {{selector}} .df_cci_image_container"
             },
             "boxShadow": {
-              "selector": "{{selector}} .et_pb_image_wrap",
+              "selector": ".difl_contentcarousel {{selector}} .df_cci_image_container",
               "useOverlay": true
+            },
+            "spacing": {
+              "selector": "{{selector}} .df_cci_image_container img",
+              "important": {
+                "desktop": {
+                  "value": {
+                    "padding": false,
+                    "margin": true
+                  }
+                }
+              }
             }
         },
         "styleComponentsProps": {
@@ -1349,7 +1356,7 @@
         "inlineEditor": "plainText",
         "childrenSanitizer": "et_core_esc_previously",
         "styleProps": {
-          "selector": "{{selector}} .df_cci_container"
+          "selector": ".difl_contentcarousel {{selector}} .df_cci_container"
         },
         "settings": {
           "innerContent": {},

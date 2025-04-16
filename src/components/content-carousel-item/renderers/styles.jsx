@@ -13,6 +13,12 @@ const dfCircleIcon = ({ attrValue, }) => {
 
 	return iconRadius;
 };
+const dfImgForceFullWidth = ({ attrValue, }) => {
+
+	const imgForceFullWidth = (attrValue === 'on') ? 'width: 100%;' : '';
+
+	return imgForceFullWidth;
+};
 
 const dfIconAlignment = ({ attrValue, }) => {
 
@@ -101,6 +107,10 @@ export const Styles = ( {
 			{elements.style({
 				attrName: 'useIcon',
 			})}
+			{/* Image Spacing */}
+			{elements.style({
+				attrName: 'useImage',
+			})}
 
 			{/* ?? parentAttrs?.icon?.innerContent */}
 			{/* <CommonStyle
@@ -154,6 +164,49 @@ export const Styles = ( {
 				attr={attrs?.btnOrder?.innerContent}
 				property='order'
 			/>
+{
+	attrs?.useImage?.decoration?.fullWidth?.desktop?.value === 'off' ? (
+		<CommonStyle
+			selector={`${orderClass} .df_cci_image_container img`}
+			attr={attrs?.useImage?.decoration?.maxWidth}
+			property='max-width'
+		/>
+	) : null
+}
+{
+	attrs?.useImage?.decoration?.fullWidth?.desktop?.value === 'off' ? (
+		<CommonStyle
+			selector={`${orderClass} .df_cci_image_container`}
+			attr={attrs?.useImage?.decoration?.imageAlignment}
+			property='text-align'
+		/>
+	) : null
+}
+			{/* <CommonStyle
+				selector={`${orderClass} .df_cci_image_container img`}
+				attr={attrs?.useImage?.decoration?.maxWidth}
+				property='max-width'
+			/>
+			<CommonStyle
+				selector={`${orderClass} .df_cci_image_container`}
+				attr={attrs?.useImage?.decoration?.imageAlignment}
+				property='text-align'
+			/> */}
+
+			<CommonStyle
+				selector={`${orderClass} .df_cci_image_container img`}
+				attr={attrs?.useImage?.decoration?.fullWidth}
+				declarationFunction={dfImgForceFullWidth}
+			/>
+			{/* Item Wrapper Spacing */}
+			{elements.style({
+				attrName: 'cWrapItem',
+			})}
+			{/* Image Wrapper Spacing */}
+			{elements.style({
+				attrName: 'cWrapImage',
+			})}
+			
 
 		</StyleContainer>
 	);

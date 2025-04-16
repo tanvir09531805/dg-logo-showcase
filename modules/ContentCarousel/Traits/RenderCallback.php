@@ -85,9 +85,9 @@ trait RenderCallback {
 		}else{
 			$arrowAlignment = 'space-between';
 		}
-		echo '<pre>';
-			var_dump($attrs['arrows']['advanced']['circleArrow']);
-		echo '</pre>';
+		// echo '<pre>'; // arrowPrevIcon.decoration.prevIconSize
+		// 	var_dump($attrs['dotNavigation']['decoration']['verticalPosition']);
+		// echo '</pre>';
 
         $carouselSetting = [
             'effect' => $carouselType, // $this->props['carousel_type'],

@@ -59,6 +59,10 @@ function arrowIconNext({ attrs, }) {
   // attrs.arrowNextIcon?.innerContent?.desktop?.value
   return ("on" === attrs.arrowNextIcon?.innerContent?.desktop?.value) ? true : false;
 }
+function imgFullWidth({ attrs, }) { 
+  // attrs.useImage?.decoration?.fullWidth
+  return ("on" === attrs.useImage?.decoration?.fullWidth?.desktop?.value) ? false : true;
+}
 
 
 function imageAltTextHas({
@@ -82,6 +86,12 @@ window.vendor.wp.hooks.addFilter('divi.moduleLibrary.moduleAttributes.diviflash.
   attributes.useIcon.settings.decoration.sizing.items.circleIcon.visible = iconPickerVisible;
   attributes.useIcon.settings.decoration.sizing.items.fontSize.visible = iconPickerVisible;
 
+  attributes.useImage.settings.decoration.imageAlignment.item.visible = imgFullWidth;
+  attributes.useImage.settings.decoration.maxWidth.item.visible = imgFullWidth;
+
+  // console.log('image full width _ ', imgFullWidth);
+  
+
   attributes.useImage.settings.innerContent.items.src.visible = iconPickerInvisible;
   attributes.useImage.settings.innerContent.items.alt.visible = iconPickerInvisible;
   // attributes.useImage.settings.innerContent.items.alt.desktop.value.alt = imageAltTextHas;
@@ -103,7 +113,8 @@ window.vendor.wp.hooks.addFilter('divi.moduleLibrary.moduleAttributes.diviflash.
   // console.log('arrow next icon _ ', attributes.arrowNextIcon.settings.decoration.icon);
   
   attributes.arrowPrevIcon.settings.decoration.icon.items.arrowPrevIcon.component.props.visible = arrowIconPrev;
-  attributes.arrowPrevIcon.settings.decoration.prevIconSize.item.visible = arrowIconPrev;
+  attributes.arrowPrevIcon.settings.decoration.sizing.item.visible = arrowIconPrev;
+  // attributes.arrowPrevIcon.settings.decoration.prevIconSize.item.visible = arrowIconPrev;
 
   attributes.arrowNextIcon.settings.decoration.icon.items.icon.visible = arrowIconNext;
   attributes.arrowNextIcon.settings.decoration.sizing.items.fontSize.visible = arrowIconNext;

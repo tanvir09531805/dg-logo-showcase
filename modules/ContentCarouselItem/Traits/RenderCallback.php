@@ -45,8 +45,8 @@ trait RenderCallback {
 
 		$icon_value = isset($attrs['useIcon']['decoration']['icon']['desktop']['value']) ? $attrs['useIcon']['decoration']['icon']['desktop']['value'] : '';
 		// echo '<pre>';
-		// 		// var_dump($attrs['useIcon']['decoration']);
-		// 		var_dump($attrs['titleOrder']['innerContent']);
+		// 		// maxWidth | useImage.decoration.fullWidth
+		// 		var_dump($attrs['useImage']['decoration']['fullWidth']);
 		// echo '</pre>';
 
 		$iconHasValue = isset($attrs['imageIcon']['innerContent']['desktop']['value']['useIcon']) ? $attrs['imageIcon']['innerContent']['desktop']['value']['useIcon']: 'off';

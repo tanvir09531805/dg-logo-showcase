@@ -183,6 +183,7 @@ trait Styles {
 							'attrName' => 'arrowNextIcon',
 						]
 					),
+					
 					CommonStyle::style(
 						[
 							'selector' => "{$order_class} .df_cc_arrows div.swiper-button-next:after",
@@ -190,15 +191,116 @@ trait Styles {
 							'property' => 'font-size',
 						]
 					),
-					// CommonStyle::style(
-					// 	[
-					// 		'selector' => "{$order_class} .df_cc_arrows div.swiper-button-prev:after",
-					// 		'attr'     => $attrs['arrowPrevIcon']['decoration']['prevIconSize'] ?? '',
-					// 		'property' => 'font-size',
-					// 	]
-					// ),
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df_cc_arrows div.swiper-button-prev:after",
+							'attr'     => $attrs['arrowPrevIcon']['decoration']['sizing'] ?? '',
+							'property' => 'font-size',
+						]
+					),
 
-					
+					// dot navigation color.
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .swiper-pagination span",
+							'attr'     => $attrs['dotNavigation']['decoration']['dotsColor'] ?? '',
+							'property' => 'background',
+						]
+					),
+					// dot navigation active color.
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .swiper-pagination span.swiper-pagination-bullet-active",
+							'attr'     => $attrs['dotNavigation']['decoration']['activeDotsColor'] ?? '',
+							'property' => 'background',
+						]
+					),
+					// dot navigation large active dots.
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .swiper-pagination span.swiper-pagination-bullet-active",
+							'attr'     => $attrs['dotNavigation']['decoration']['largeActiveDots'] ?? [],
+							'declarationFunction' => [ self::class, 'df_large_active_dot' ], 
+						]
+					),
+					// dot navigation alignment
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .swiper-pagination",
+							'attr'     => $attrs['dotNavigation']['decoration']['dotsAlignment'] ?? '',
+							'property' => 'text-align',
+						]
+					),
+					// dot navigation vertical position
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .swiper-pagination",
+							'attr'     => $attrs['dotNavigation']['decoration']['verticalPosition'] ?? '',
+							'property' => 'top',
+						]
+					),
+
+					// carousel wrapper spacing
+					$elements->style(
+						[
+							'attrName' => 'carouselWPadding',
+						]
+					),
+					// Item wrapper spacing
+					$elements->style(
+						[
+							'attrName' => 'itemWrapperSpacing',
+						]
+					),
+					// Image wrapper spacing
+					$elements->style(
+						[
+							'attrName' => 'imageWrapperSpacing',
+						]
+					),
+					// Image Margin
+					$elements->style(
+						[
+							'attrName' => 'cImageSpacing',
+						]
+					),
+					// Title spacing
+					$elements->style(
+						[
+							'attrName' => 'cTitleSpacing',
+						]
+					),
+					// Subtitle spacing
+					$elements->style(
+						[
+							'attrName' => 'cSubTitleSpacing',
+						]
+					),
+					// Content spacing
+					$elements->style(
+						[
+							'attrName' => 'contentSpacing',
+						]
+					),
+
+					// Title
+					$elements->style(
+						[
+							'attrName' => 'title',
+						]
+					),
+					// SubTitle
+					$elements->style(
+						[
+							'attrName' => 'subTitle',
+						]
+					),
+					// Content
+					$elements->style(
+						[
+							'attrName' => 'content',
+						]
+					),
 
 					/*
 					 * We need to add CssStyle at the very bottom of other
@@ -235,6 +337,14 @@ trait Styles {
 		$iconRadius = ($args['attrValue'] === 'on') ? 'border-radius: 50%;' : '';
         
         return $iconRadius;
+    }
+	public static function df_large_active_dot(array $args ): string {
+
+		// test_log($args['attrValue']);
+
+		$large_dot = ($args['attrValue'] === 'on') ? 'width: 40px; border-radius: 20px;' : '';
+        
+        return $large_dot;
     }
 	public static function df_arrow_opacity(array $args ): string {
 

@@ -35,6 +35,7 @@ trait Styles {
 		$pro_img_selector = "{$order_class} .difl_bento_grid_item__image img";
 		$child_item = "{$order_class}";
 
+		
 		Style::add(
 			[
 				'id'            => $args['id'],
@@ -101,7 +102,12 @@ trait Styles {
 							'attrName' => 'useIcon',
 						]
 					),
-
+					/* Image Spacing */
+					$elements->style(
+						[
+							'attrName' => 'useImage',
+						]
+					),
 					
 					// Icon.
 					// CommonStyle::style(
@@ -169,6 +175,31 @@ trait Styles {
 						]
 					),
 
+					// useImage.decoration.fullWidth
+					($attrs['useImage']['decoration']['fullWidth']['desktop']['value'] ?? "off") ==='off' ? 
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df_cci_image_container img",
+							'attr'     => $attrs['useImage']['decoration']['maxWidth'] ?? '',
+							'property' => 'max-width',
+						]
+					) : [],
+					($attrs['useImage']['decoration']['fullWidth']['desktop']['value'] ?? "off") ==='off' ? 
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df_cci_image_container",
+							'attr'     => $attrs['useImage']['decoration']['imageAlignment'] ?? '',
+							'property' => 'text-align',
+						]
+					) : [],
+					
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df_cci_image_container img",
+							'attr'     => $attrs['useImage']['decoration']['fullWidth'] ?? '',
+							'declarationFunction' => [ self::class, 'df_img_force_full_width' ],
+						]
+					),
 
 					/* Image Size */
 					CommonStyle::style(
@@ -194,12 +225,19 @@ trait Styles {
 						]
 					),
 					
-					/* Image Style */
+					/* Item Wrapper Spacing */
 					$elements->style(
 						[
-							'attrName' => 'imageStyle',
+							'attrName' => 'cWrapItem',
 						]
 					),
+					/* Image Wrapper Spacing */
+					$elements->style(
+						[
+							'attrName' => 'cWrapImage',
+						]
+					),
+					
 					
 				],
 			]
@@ -218,6 +256,19 @@ trait Styles {
 		$iconRadius = ($args['attrValue']['circleIcon'] === 'on') ? 'border-radius: 50%;' : '';
         
         return $iconRadius;
+    }
+
+	/**
+     * Force Full Width image styles
+     *
+     * @param String test_log($args['attrValue']);
+     * @return String
+     */
+    public static function df_img_force_full_width(array $args ): string {
+
+		$imgFullWidth = ($args['attrValue'] === 'on') ? 'width: 100%;' : '';
+        
+        return $imgFullWidth;
     }
 
 	/**

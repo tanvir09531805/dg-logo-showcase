@@ -628,12 +628,11 @@
               }
             }
           },
-          "prevIconSize": {
+          "sizing": {
             "groupType": "group-item",
             "item": {
               "groupSlug": "designArrows",
-              "attrName": "arrowPrevIcon.decoration.prevIconSize",
-              "subName": "prevIconSize",
+              "attrName": "arrowPrevIcon.decoration.sizing",
               "label": "Prev Icon Size",
               "description": "Here you can define Icon Size of dots wrapper.",
               "features": {
@@ -758,7 +757,7 @@
               "icon": {
                 "groupSlug": "designArrows",
                 "attrName": "arrowNextIcon.decoration.icon",
-                "label": "Icon",
+                "label": "Next Icon",
                 "description": "Here you can choose whether icon set below should be used.",
                 "priority": 10,
                 "render": true,
@@ -789,7 +788,7 @@
                 "groupSlug": "designArrows",
                 "priority": 20,
                 "attrName": "arrowNextIcon.decoration.sizing",
-                "label": "Icon Size",
+                "label": "Next Icon Size",
                 "description": "Adjust the size of the featured icon.",
                 "render": true,
                 "features": {
@@ -842,6 +841,18 @@
     "dotNavigation": {
       "type": "object",
       "selector": "{{selector}} .swiper-pagination .swiper-pagination-bullet",
+      "styleProps":{
+        "color": {
+          "selector": "{{selector}} .swiper-pagination .swiper-pagination-bullet",
+          "propertySelectors": {
+            "desktop": {
+              "value": {
+                "background-color": "{{selector}} .swiper-pagination .swiper-pagination-bullet"
+              }
+            }
+          }
+        }
+      },
       "settings": {
         "advanced": {
           "show": {
@@ -864,12 +875,14 @@
                 "name": "divi/toggle"
               }
             }
-          },
+          }
+        },
+        "decoration":{
           "dotsColor": {
             "groupType": "group-item",
             "item": {
               "groupSlug": "designDots",
-              "attrName": "dotNavigation.advanced.dotsColor",
+              "attrName": "dotNavigation.decoration.dotsColor",
               "label": "Dots color",
               "description": "Pick a color to use for the slider Dots.",
               "priority": 10,
@@ -890,7 +903,7 @@
             "groupType": "group-item",
             "item": {
               "groupSlug": "designDots",
-              "attrName": "dotNavigation.advanced.activeDotsColor",
+              "attrName": "dotNavigation.decoration.activeDotsColor",
               "label": "Active dots color",
               "description": "Pick a color to use for the slider Dots.",
               "priority": 10,
@@ -911,7 +924,7 @@
             "groupType": "group-item",
             "item": {
               "groupSlug": "designDots",
-              "attrName": "dotNavigation.advanced.largeActiveDots",
+              "attrName": "dotNavigation.decoration.largeActiveDots",
               "label": "Large Active Dot",
               "description": "This setting will turn on and off the dots will br large or small.",
               "priority": 10,
@@ -932,8 +945,7 @@
             "groupType": "group-item",
             "item": {
               "groupSlug": "designDots",
-              "attrName": "dotNavigation.advanced.dotsAlignment",
-              "subName": "dotsAlignment",
+              "attrName": "dotNavigation.decoration.dotsAlignment",
               "label": "Alignment",
               "description": "Here you can define the horizontal alignment of dots wrapper.",
               "features": {
@@ -967,8 +979,7 @@
             "groupType": "group-item",
             "item": {
               "groupSlug": "designDots",
-              "attrName": "dotNavigation.advanced.verticalPosition",
-              "subName": "verticalPosition",
+              "attrName": "dotNavigation.decoration.verticalPosition",
               "label": "Vertical Position",
               "description": "Here you can define vertical position of dots wrapper.",
               "features": {
@@ -979,12 +990,18 @@
               },
               "render": true,
               "priority": 10,
+              "defaultAttr": {
+                "desktop": {
+                  "value": "0px"
+                }
+              },
               "component": {
                 "type": "field",
                 "name": "divi/range",
                 "props": {
-                  "min": 1,
-                  "max": 200,
+                  "min": -100,
+                  "max": 100,
+                  "step": 1,
                   "defaultUnit": "px",
                   "allowedUnits": [
                     "px"
@@ -1172,7 +1189,36 @@
       },
       "inlineEditor": "plainText",
       "childrenSanitizer": "et_core_esc_previously",
-      "styleProps": {},
+      "styleProps": {
+        "selector": "{{selector}} .df_cc_title",
+          "font": {
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true,
+                    "font-size": true,
+                    "font-weight": true,
+                    "letter-spacing": true,
+                    "line-height": true,
+                    "text-align": true
+                  }
+                }
+              }
+            }
+          }, 
+          "background": {
+            "important": {
+              "background": {
+                "desktop": {
+                  "value": {
+                    "background-color": true
+                  }
+                }
+              }
+            }
+          }
+      },
       "settings": {
         "decoration": {
           "font": {
@@ -1214,8 +1260,7 @@
                 "type": "group",
                 "name": "divi/background",
                 "props": {
-                  "grouped": false,
-                  "attrName": "title.decoration"
+                  "grouped": false
                 }
               }
             }
@@ -1233,12 +1278,29 @@
       "inlineEditor": "plainText",
       "childrenSanitizer": "et_core_esc_previously",
       "styleProps": {
+        "selector": "{{selector}} .df_cc_subtitle",
         "font": {
           "important": {
             "font": {
               "desktop": {
                 "value": {
-                  "color": true
+                  "color": true,
+                  "font-size": true,
+                  "font-weight": true,
+                  "letter-spacing": true,
+                  "line-height": true,
+                  "text-align": true
+                }
+              }
+            }
+          }
+        },
+        "background": {
+          "important": {
+            "background": {
+              "desktop": {
+                "value": {
+                  "background-color": true
                 }
               }
             }
@@ -1286,8 +1348,7 @@
                 "type": "group",
                 "name": "divi/background",
                 "props": {
-                  "grouped": false,
-                  "attrName": "subTitle.decoration"
+                  "grouped": false
                 }
               }
             }
@@ -1303,10 +1364,144 @@
       "attributes": {
         "class": "df_cc_content"
       },
-      "styleProps": {},
+      "styleProps": {
+        "selector": "{{selector}} .df_cc_content",
+          "headingFont": {
+            "important": {
+              "h1": {
+                "font": {
+                  "desktop": {
+                    "value": {
+                      "color": true,
+                      "font-size": true,
+                      "font-weight": true,
+                      "letter-spacing": true,
+                      "line-height": true,
+                      "text-align": true
+                    }
+                  }
+                }
+              },
+              "h2": {
+                "font": {
+                  "desktop": {
+                    "value": {
+                      "color": true,
+                      "font-size": true,
+                      "font-weight": true,
+                      "letter-spacing": true,
+                      "line-height": true,
+                      "text-align": true
+                    }
+                  }
+                }
+              },
+              "h3": {
+                "font": {
+                  "desktop": {
+                    "value": {
+                      "color": true,
+                      "font-size": true,
+                      "font-weight": true,
+                      "letter-spacing": true,
+                      "line-height": true,
+                      "text-align": true
+                    }
+                  }
+                }
+              },
+              "h4": {
+                "font": {
+                  "desktop": {
+                    "value": {
+                      "color": true,
+                      "font-size": true,
+                      "font-weight": true,
+                      "letter-spacing": true,
+                      "line-height": true,
+                      "text-align": true
+                    }
+                  }
+                }
+              },
+              "h5": {
+                "font": {
+                  "desktop": {
+                    "value": {
+                      "color": true,
+                      "font-size": true,
+                      "font-weight": true,
+                      "letter-spacing": true,
+                      "line-height": true,
+                      "text-align": true
+                    }
+                  }
+                }
+              },
+              "h6": {
+                "font": {
+                  "desktop": {
+                    "value": {
+                      "color": true,
+                      "font-size": true,
+                      "font-weight": true,
+                      "letter-spacing": true,
+                      "line-height": true,
+                      "text-align": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "bodyFont": {
+            "important": {
+              "body": {
+                "font": {
+                  "desktop": {
+                    "value": {
+                      "color": true,
+                      "font-size": true,
+                      "font-weight": true,
+                      "letter-spacing": true,
+                      "line-height": true,
+                      "text-align": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "background": {
+            "important": {
+              "background": {
+                "desktop": {
+                  "value": {
+                    "background-color": true
+                  }
+                }
+              }
+            }
+          }
+      },
       "settings": {
         "decoration": {
-          "bodyFont": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designContentStyle",
+              "priority": 5,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "headingFont": {
             "groupType": "group-item",
             "item": {
               "groupSlug": "designContentHeading",
@@ -1322,23 +1517,7 @@
               }
             }
           },
-          "background": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "designContentStyle",
-              "priority": 5,
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/background",
-                "props": {
-                  "grouped": false,
-                  "attrName": "content.decoration.background"
-                }
-              }
-            }
-          },
-          "contentBodyFont": {
+          "bodyFont": {
             "groupType": "group-item",
             "item": {
               "groupSlug": "designContent",
@@ -1349,7 +1528,6 @@
                 "name": "divi/font-body",
                 "props": {
                   "grouped": false,
-                  "attrName": "content.decoration.contentBodyFont",
                   "fields":{
                     "body": {
                       "textShadowGroup": {

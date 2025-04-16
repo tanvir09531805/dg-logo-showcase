@@ -8,6 +8,12 @@ const dfCircleIcon = ({ attrValue, }) => {
 
 	return iconRadius;
 };
+const dfLargeActiveDot = ({ attrValue, }) => {
+
+	const largeDot = (attrValue === 'on') ? 'width: 40px; border-radius: 20px;' : '';
+
+	return largeDot;
+};
 
 const dfArrowOpacity = ({ attrValue, }) => {
 
@@ -160,15 +166,88 @@ export const Styles = ( {
 				attrName: 'arrowNextIcon',
 			})}
 
+			<CommonStyle
+				selector={`${orderClass} .df_cc_arrows div.swiper-button-next:after`}
+				attr={attrs?.arrowNextIcon?.decoration?.sizing ?? {}}
+				property='font-size'
+			/>
+			<CommonStyle
+				selector={`${orderClass} .df_cc_arrows div.swiper-button-prev:after`}
+				attr={attrs?.arrowPrevIcon?.decoration?.sizing ?? {}}
+				property='font-size'
+			/>
+			{/* // dot navigation color. */}
+			<CommonStyle
+				selector={`${orderClass} .swiper-pagination span`}
+				attr={attrs?.dotNavigation?.decoration?.dotsColor ?? {}}
+				property='background'
+			/>
+			{/* // dot navigation active color. */}
+			<CommonStyle
+				selector={`${orderClass} .swiper-pagination span.swiper-pagination-bullet-active`}
+				attr={attrs?.dotNavigation?.decoration?.activeDotsColor ?? {}}
+				property='background'
+			/>
+			{/* // dot navigation large active dots. */}
+			<CommonStyle
+				selector={`${orderClass} .swiper-pagination span.swiper-pagination-bullet-active`}
+				attr={attrs?.dotNavigation?.decoration?.largeActiveDots ?? {}}
+				declarationFunction={dfLargeActiveDot}
+			/>
+			{/* // dot navigation alignment */}
+			<CommonStyle
+				selector={`${orderClass} .swiper-pagination`}
+				attr={attrs?.dotNavigation?.decoration?.dotsAlignment ?? {}}
+				property='text-align'
+			/>
+			{/* // dot navigation vertical position */}
+			<CommonStyle
+				selector={`${orderClass} .swiper-pagination`}
+				attr={attrs?.dotNavigation?.decoration?.verticalPosition ?? {}}
+				property='top'
+			/>
+
+			{/* carousel wrapper spacing */}
+			{elements.style({
+				attrName: 'carouselWPadding',
+			})}
+			{/* Item wrapper spacing */}
+			{elements.style({
+				attrName: 'itemWrapperSpacing',
+			})}
+			{/* Image wrapper spacing */}
+			{elements.style({
+				attrName: 'imageWrapperSpacing',
+			})}
+			{/* Image Margin */}
+			{elements.style({
+				attrName: 'cImageSpacing',
+			})}
+			{/* Title spacing */}
+			{elements.style({
+				attrName: 'cTitleSpacing',
+			})}
+			{/* Subtitle spacing */}
+			{elements.style({
+				attrName: 'cSubTitleSpacing',
+			})}
+			{/* Content spacing */}
+			{elements.style({
+				attrName: 'contentSpacing',
+			})}
+
 
 			{/* Element: Title */}
 			{elements.style({
-			attrName: 'title',
+				attrName: 'title',
 			})}
-		
+			{/* Element: subTitle */}
+			{elements.style({
+				attrName: 'subTitle',
+			})}
 			{/* Element: Content */}
 			{elements.style({
-			attrName: 'content',
+				attrName: 'content',
 			})}
 
 
