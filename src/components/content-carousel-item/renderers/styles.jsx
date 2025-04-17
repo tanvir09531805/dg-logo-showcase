@@ -7,6 +7,36 @@ const {
 } = window?.divi?.iconLibrary;
 const { CommonStyle, StyleContainer } = window?.divi?.module;
 
+const dfBtnIconSizing = ({ attrValue, }) => {
+
+	const sizeIcon = attrValue?.slice(0, -2); // Remove last 2 characters (e.g., 'px')
+	let iconSize = '';
+
+	if (attrValue && parseInt(sizeIcon) > 0) {
+		iconSize = `
+		font-size: ${attrValue} !important;
+		line-height: 0 !important;
+		position: relative;`;
+	}
+
+	return iconSize;
+};
+
+const dfBtnIconSpacing = ({ attrValue, }) => {
+
+	let iconSpacing = '';
+
+	if (attrValue && attrValue.margin) {
+		iconSpacing = `
+		top: ${attrValue.margin.top};
+		right: ${attrValue.margin.right};
+		left: ${attrValue.margin.left};
+		bottom: ${attrValue.margin.bottom};`;
+	}
+
+	return iconSpacing;
+};
+
 const dfCircleIcon = ({ attrValue, }) => {
 
 	const iconRadius = (attrValue.circleIcon === 'on') ? 'border-radius: 50%;' : '';
@@ -164,24 +194,24 @@ export const Styles = ( {
 				attr={attrs?.btnOrder?.innerContent}
 				property='order'
 			/>
-{
-	attrs?.useImage?.decoration?.fullWidth?.desktop?.value === 'off' ? (
-		<CommonStyle
-			selector={`${orderClass} .df_cci_image_container img`}
-			attr={attrs?.useImage?.decoration?.maxWidth}
-			property='max-width'
-		/>
-	) : null
-}
-{
-	attrs?.useImage?.decoration?.fullWidth?.desktop?.value === 'off' ? (
-		<CommonStyle
-			selector={`${orderClass} .df_cci_image_container`}
-			attr={attrs?.useImage?.decoration?.imageAlignment}
-			property='text-align'
-		/>
-	) : null
-}
+			{
+				attrs?.useImage?.decoration?.fullWidth?.desktop?.value === 'off' ? (
+					<CommonStyle
+						selector={`${orderClass} .df_cci_image_container img`}
+						attr={attrs?.useImage?.decoration?.maxWidth}
+						property='max-width'
+					/>
+				) : null
+			}
+			{
+				attrs?.useImage?.decoration?.fullWidth?.desktop?.value === 'off' ? (
+					<CommonStyle
+						selector={`${orderClass} .df_cci_image_container`}
+						attr={attrs?.useImage?.decoration?.imageAlignment}
+						property='text-align'
+					/>
+				) : null
+			}
 			{/* <CommonStyle
 				selector={`${orderClass} .df_cci_image_container img`}
 				attr={attrs?.useImage?.decoration?.maxWidth}
@@ -207,6 +237,16 @@ export const Styles = ( {
 				attrName: 'cWrapImage',
 			})}
 			
+			<CommonStyle
+				selector={`.difl_contentcarousel ${orderClass} .df_cci_button:before, .difl_contentcarousel ${orderClass} .df_cci_button:after`}
+				attr={attrs?.btnIconSizeMargin?.decoration?.sizing ?? {}}
+				declarationFunction={dfBtnIconSizing}
+			/>
+			<CommonStyle
+				selector={`.difl_contentcarousel ${orderClass} .df_cci_button:before, .difl_contentcarousel ${orderClass} .df_cci_button:after`}
+				attr={attrs?.btnIconSizeMargin?.decoration?.spacing ?? {}}
+				declarationFunction={dfBtnIconSpacing}
+			/>
 
 		</StyleContainer>
 	);

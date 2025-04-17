@@ -2,6 +2,43 @@ import React from "react";
 const { CommonStyle, StyleContainer } = window?.divi?.module;
 const { StyleDeclarations } = window?.divi?.styleLibrary;
 
+
+const dfBtnIconSizing = ({ attrValue, }) => {
+
+	const sizeIcon = attrValue?.slice(0, -2); // Remove last 2 characters (e.g., 'px')
+	let iconSize = '';
+
+	if (attrValue && parseInt(sizeIcon) > 0) {
+		iconSize = `
+		font-size: ${attrValue} !important;
+		line-height: 0 !important;
+		position: relative;`;
+	}
+
+	return iconSize;
+};
+
+const dfBtnIconSpacing = ({ attrValue, }) => {
+
+	let iconSpacing = '';
+
+	if (attrValue && attrValue.margin) {
+		iconSpacing = `
+		top: ${attrValue.margin.top};
+		right: ${attrValue.margin.right};
+		left: ${attrValue.margin.left};
+		bottom: ${attrValue.margin.bottom};`;
+	}
+
+	return iconSpacing;
+};
+
+const dfBtnFullWidth = ({ attrValue, }) => {
+
+	const btnFullWidth = (attrValue === 'on') ? 'width: 100%;' : '';
+
+	return btnFullWidth;
+};
 const dfCircleIcon = ({ attrValue, }) => {
 
 	const iconRadius = (attrValue === 'on') ? 'border-radius: 50%;' : '';
@@ -68,6 +105,20 @@ const dfArrowAlignmentStyles = ({ attrValue }) => {
 	declarations.add('justify-content', arrowAlign);
 	
 	return declarations.value;
+};
+
+const dfIconSize = ({ attrValue }) => {
+	// Remove the "px" unit and convert to a number
+	const sizeIcon = parseInt(attrValue, 10);
+
+	// Check if the size is valid and greater than 0
+	const iconSize = sizeIcon > 0
+		? `font-size: ${attrValue} !important;
+		   line-height: 0 !important;
+		   position: relative;`
+		: '';
+
+	return iconSize;
 };
 
 
@@ -250,6 +301,26 @@ export const Styles = ( {
 				attrName: 'content',
 			})}
 
+			{/* Element: button */}
+			{elements.style({
+				attrName: 'button',
+			})}
+
+			<CommonStyle
+				selector={`${orderClass} .df_cci_button`}
+				attr={attrs?.button?.decoration?.fullWidth}
+				declarationFunction={dfBtnFullWidth}
+			/>
+			<CommonStyle
+				selector={`${orderClass} .df_cci_button:before, ${orderClass} .df_cci_button:after`}
+				attr={attrs?.btnIconSizeMargin?.decoration?.sizing ?? {}}
+				declarationFunction={dfBtnIconSizing}
+			/>
+			<CommonStyle
+				selector={`${orderClass} .df_cci_button:before, ${orderClass} .df_cci_button:after`}
+				attr={attrs?.btnIconSizeMargin?.decoration?.spacing ?? {}}
+				declarationFunction={dfBtnIconSpacing}
+			/>
 
 		</StyleContainer>
 	);

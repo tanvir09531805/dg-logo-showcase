@@ -48,13 +48,15 @@ export const Edit = ( props ) => {
   const btn       = attrs.button?.innerContent?.desktop?.value;
   const linkTarget= 'on' === btn?.linkTarget ? '_blank':'_self';
 
-  const iconVContent = getAttrByMode ( attrs?.useIcon?.decoration?.icon?.desktop?.value );
+  // const iconVContent = getAttrByMode ( attrs?.useIcon?.decoration?.icon?.desktop?.value );
   // const iconValue = isEmpty ( iconVContent ) ? parentIconContent : iconVContent;
   const iconValue = attrs?.useIcon?.decoration?.icon?.desktop?.value;
   const iconHas   = attrs?.imageIcon?.innerContent?.desktop?.value?.useIcon ?? 'off';
 
   let iconMarkup = null;
   
+  // console.log('my Fa icon _ ', processFontIcon (iconValue));
+
   if (!isEmpty(iconValue) && iconHas === 'on') {
     iconMarkup = (
       <div className="df_cci_image_container">
@@ -73,6 +75,7 @@ export const Edit = ( props ) => {
     }
     
   }
+
   
 
 	return (

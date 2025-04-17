@@ -30,8 +30,6 @@ trait RenderCallback {
 		$parent       = BlockParserStore::get_parent( $block->parsed_block['id'], $block->parsed_block['storeInstance'] );
 		$parent_attrs = $parent->attrs ?? [];
 
-
-
 		// process data
 
 		// $order_number    = str_replace('_', '', str_replace($this->slug, '', $order_class));
@@ -67,10 +65,10 @@ trait RenderCallback {
 		$item_spacing_tablet = isset($ccData['spacingPx']['tablet']['value']['spacingPx']) ? $ccData['spacingPx']['tablet']['value']['spacingPx'] : $item_spacing;
 		$item_spacing_phone = isset($ccData['spacingPx']['phone']['value']['spacingPx']) ? $ccData['spacingPx']['phone']['value']['spacingPx'] : $item_spacing_tablet;
 
-		$difl_cc_dots  = '<div class="swiper-pagination cc-dots-0"></div>';
+		$difl_cc_dots  = '<div class="swiper-pagination cc-dots-'.$order_number.'"></div>';
 		$difl_cc_arrow = '<div class="df_cc_arrows">
-                <div class="swiper-button-next cc-next-0" data-icon="5"></div>
-                <div class="swiper-button-prev cc-prev-0" data-icon="4"></div>
+                <div class="swiper-button-next cc-next-'.$order_number.'" data-icon="5"></div>
+                <div class="swiper-button-prev cc-prev-'.$order_number.'" data-icon="4"></div>
             </div>';
 			// arrows.advanced.arrowPosition
 		$classArrowPosition = 'arrow-middle';
@@ -85,8 +83,9 @@ trait RenderCallback {
 		}else{
 			$arrowAlignment = 'space-between';
 		}
-		// echo '<pre>'; // arrowPrevIcon.decoration.prevIconSize
-		// 	var_dump($attrs['dotNavigation']['decoration']['verticalPosition']);
+		// echo '<pre>'; // btnIconSizeMargin.decoration.sizing | spacing
+		// 	var_dump($attrs['btnIconSizeMargin']['decoration']['sizing']);
+		// 	var_dump($attrs['btnIconSizeMargin']['decoration']['spacing']);
 		// echo '</pre>';
 
         $carouselSetting = [
@@ -168,6 +167,8 @@ trait RenderCallback {
 			$classArrowPosition
 		);
 
+		self::register_divi_assets();
+
 		return Module::render(
 			[
 				// FE only.
@@ -198,6 +199,45 @@ trait RenderCallback {
 					) . $child_all_items,
 				'childrenIds'         => $children_ids,
 			]
+		);
+	}
+	
+	public static function difl_load_required_divi_assets( $assets_list, $assets_args, $instance  ) {
+		$assets_prefix  = et_get_dynamic_assets_path();
+		// echo ' kjjjjjjjjjjjjjjjjjj '.$assets_prefix;
+
+
+		if ( ! isset( $assets_list['et_icons_all'] ) ) {
+			$assets_list['et_icons_all'] = [
+				'css' => "{$assets_prefix}/css/icons_all.css",
+			];
+		}
+
+		if ( ! isset( $assets_list['et_icons_fa'] ) ) {
+			$assets_list['et_icons_fa'] = [
+				'css' => "{$assets_prefix}/css/icons_fa_all.css",
+			];
+		}
+
+		return $assets_list;
+	}
+
+	// Register the required Divi assets dynamically.
+	public static function register_divi_assets() {
+		// divi_frontend_assets_dynamic_assets_global_assets_list == et_global_assets_list
+		add_filter(
+			'et_global_assets_list',
+			[ self::class, 'difl_load_required_divi_assets' ],
+			10,
+			3
+		);
+
+		// divi_frontend_assets_dynamic_assets_late_global_assets_list == et_late_global_assets_list
+		add_filter(
+			'et_late_global_assets_list',
+			[ self::class, 'difl_load_required_divi_assets' ],
+			10,
+			3
 		);
 	}
 }

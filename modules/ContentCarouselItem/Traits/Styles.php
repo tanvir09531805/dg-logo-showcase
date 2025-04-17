@@ -200,6 +200,20 @@ trait Styles {
 							'declarationFunction' => [ self::class, 'df_img_force_full_width' ],
 						]
 					),
+					CommonStyle::style(
+						[
+							'selector' => ".difl_contentcarousel {$order_class} .df_cci_button:before, .difl_contentcarousel {$order_class} .df_cci_button:after",
+							'attr'     => $attrs['btnIconSizeMargin']['decoration']['sizing'] ?? [],
+							'declarationFunction' => [ self::class, 'df_btn_icon_sizing' ],
+						]
+					),
+					CommonStyle::style(
+						[
+							'selector' => ".difl_contentcarousel {$order_class} .df_cci_button:before, .difl_contentcarousel {$order_class} .df_cci_button:after",
+							'attr'     => $attrs['btnIconSizeMargin']['decoration']['spacing'] ?? [],
+							'declarationFunction' => [ self::class, 'df_btn_icon_spacing' ],
+						]
+					),
 
 					/* Image Size */
 					CommonStyle::style(
@@ -243,8 +257,38 @@ trait Styles {
 			]
 		);
 	}
-
 	
+	/**
+     * Button Icon size
+     *
+     * @param String test_log($args['attrValue']);
+     * @return String
+     */
+    public static function df_btn_icon_sizing(array $args ): string {
+
+		$sizeIcon = substr($args['attrValue'], 0, -2);
+		$iconSize = ( isset( $args['attrValue'] ) && (int)$sizeIcon>0 ) ? 
+			'font-size: '.$args['attrValue'].' !important;
+			line-height: 0 !important;
+			position: relative;' : '';
+        return $iconSize;
+    }
+
+	/**
+     * Button Icon spacing
+     *
+     * @param String test_log($args['attrValue']);
+     * @return String
+     */
+    public static function df_btn_icon_spacing(array $args ): string {
+		$iconSpacing = isset( $args['attrValue']['margin'] ) ? 
+			'top: '.$args['attrValue']['margin']['top'].';
+			right: '.$args['attrValue']['margin']['right'].';
+			left: '.$args['attrValue']['margin']['left'].';
+			bottom: '.$args['attrValue']['margin']['bottom'].'; ' : '';
+        return $iconSpacing;
+    }
+
 	/**
      * Icon bg radius styles
      *

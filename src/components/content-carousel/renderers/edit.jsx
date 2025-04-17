@@ -46,8 +46,8 @@ export const Edit = ( props ) => {
   // console.log('Arrow data _ ', ccArrowsData);
   
 
-  let next_icon = 4;
-  let prev_icon = 5;
+  let next_icon = 5;
+  let prev_icon = 4;
   let arrowNav  = attrs.arrowNavigation?.advanced?.show?.desktop?.value === 'on'? 
                 <div className="df_cc_arrows">
                   <div className={"swiper-button-prev cc-prev-" + id} data-icon={prev_icon}></div>

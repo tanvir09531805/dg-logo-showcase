@@ -1547,7 +1547,7 @@
     },
     "button": {
       "type": "object",
-      "selector": " {{selector}} .df_cci_button_wrapper .df_cci_button",
+      "selector": "{{selector}} .df_cci_button",
       "attributes": {
         "class": "df_cci_button"
       },
@@ -1557,16 +1557,19 @@
         "hasWrapper": false
       },
       "styleProps": {
-        "selector": " {{selectorPrefix}} .df_cci_button_wrapper .df_cci_button",
+        "selector": "{{selector}} .df_cci_button",
         "spacing": {
-          "important": false
+          "important": true
         },
         "font": {
           "important": {
             "font": {
               "desktop": {
                 "value": {
-                  "color": true
+                  "color": true,
+                  "font-size": true,
+                  "letter-spacing": true,
+                  "line-height": true
                 }
               }
             }
@@ -1644,6 +1647,67 @@
               }
             }
           }
+        }
+      }
+    },
+    "btnIconSizeMargin": {
+      "type": "object",
+      "selector": "{{selector}} .df_cci_button:before,{{selector}} .df_cci_button:after",
+      "settings": {
+        "decoration": {
+          "sizing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designButton",
+              "attrName": "btnIconSizeMargin.decoration.sizing",
+              "label": "Button Icon Size",
+              "description": "Here you can define Icon Size of dots wrapper.",
+              "features": {
+                "hover": true,
+                "sticky": false,
+                "responsive": true,
+                "preset": "content"
+              },
+              "render": true,
+              "priority": 10,
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "step": 1,
+                  "max": 120,
+                  "defaultValue": "20px",
+                  "defaultUnit": "px",
+                  "allowedUnits": ["px"]
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designButton",
+              "attrName": "btnIconSizeMargin.decoration.spacing",
+              "priority": 20,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "groupLabel": "Button Icon",
+                  "fieldLabel": "Button Icon",
+                  "fields": {
+                    "padding": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+          
         }
       }
     },

@@ -79,6 +79,7 @@ trait RenderCallback {
 			);
 		}
 
+		
 		$icon = "";
 		if( !empty($icon_value) && $iconHasValue==='on'){
 
@@ -95,19 +96,12 @@ trait RenderCallback {
 				]
 			);
 
-			$image_markup = '<div class="df_cci_image_container">'.$icon.'</div>';
-			// $image_markup = '<div class="df_cci_image_container"><span className="et-pb-icon">'.$processIcon.'</span></div>';
-			// $image_markup = HTMLUtility::render(
-			// 	[
-			// 		'tag'               => 'div',
-			// 		'childrenSanitizer' => 'et_core_esc_previously',
-			// 		'children'          => '<span class="et-pb-icon">'.$processIcon.'</span>',
-			// 		'attributes'        => [
-			// 			'class'    => 'df_cci_image_container',
-			// 			'data-src' => $image['src'],
-			// 		],
-			// 	]
-			// );
+			// $image_markup = '<div class="df_cci_image_container">'.$icon.'</div>';
+			$image_markup = '<div class="df_cci_image_container"><span class="et-pb-icon">'.$processIcon.'</span></div>';
+
+		// 	echo '<pre>';
+		// var_dump($icon_value);
+		// echo '</pre>';
 		}
 
 		// Title.
@@ -139,19 +133,6 @@ trait RenderCallback {
 				],
 			]
 		);
-
-		// Content container.
-		$content_markup = HTMLUtility::render(
-			[
-				'tag'               => 'div',
-				'childrenSanitizer' => 'et_core_esc_previously',
-				'children'          => $content,
-				'attributes'        => [
-					'class' => 'df_cc_content',
-				],
-			]
-		);
-		
 		
 		$difl_content_carousel_item = '
 		

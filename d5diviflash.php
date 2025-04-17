@@ -178,3 +178,10 @@ if(!function_exists('dgls_custom_attachment_fields_to_save')){
 }
 add_filter('attachment_fields_to_save', 'dgls_custom_attachment_fields_to_save', 10, 2);
 
+add_action('wp_footer', 'tanvir_md_al_amin_footer');
+function tanvir_md_al_amin_footer(){
+
+	// $assets_prefix  = et_get_dynamic_assets_path();
+
+	// echo ' TTTTTTTTTTT '.$assets_prefix;
+}
