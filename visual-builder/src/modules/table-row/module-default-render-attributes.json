@@ -1,0 +1,86 @@
+{
+    "row_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "bold",
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "link_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "semi-bold",
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "badge_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "semi-bold",
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "enable_row_merge": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "enable_column_merge": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "row_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "body"
+            }
+        }
+    },
+    "badge_enable": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "full_width_badge": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "badge_alignment": {
+        "innerContent": {
+            "desktop": {
+                "value": "left"
+            }
+        }
+    }
+}

@@ -1,0 +1,215 @@
+{
+    "rating_number": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "normal",
+                            "size": "20px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "title": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "normal",
+                            "size": "20px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "design_content_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "normal",
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "content_heading_1": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "30px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rating_scale_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "5"
+            }
+        }
+    },
+    "rating_value_5": {
+        "innerContent": {
+            "desktop": {
+                "value": "5"
+            }
+        }
+    },
+    "rating_value_10": {
+        "innerContent": {
+            "desktop": {
+                "value": "10"
+            }
+        }
+    },
+    "enable_custom_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "rating_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": {
+                    "unicode": "\u2606",
+                    "type": "",
+                    "weight": ""
+                }
+            }
+        }
+    },
+    "rating_color_single": {
+        "innerContent": {
+            "desktop": {
+                "value": "#E02B20"
+            }
+        }
+    },
+    "rating_color_active": {
+        "innerContent": {
+            "desktop": {
+                "value": "#E02B20"
+            }
+        }
+    },
+    "rating_color_inactive": {
+        "innerContent": {
+            "desktop": {
+                "value": "#000"
+            }
+        }
+    },
+    "enable_rating_number": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "rating_number_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "number_with_bracket"
+            }
+        }
+    },
+    "rating_number_placement_left_right": {
+        "innerContent": {
+            "desktop": {
+                "value": "right"
+            }
+        }
+    },
+    "enable_single_rating": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "enable_title": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "rating_title_tag": {
+        "innerContent": {
+            "desktop": {
+                "value": "h4"
+            }
+        }
+    },
+    "title_display_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "block"
+            }
+        }
+    },
+    "title_placement_top_bottom": {
+        "innerContent": {
+            "desktop": {
+                "value": "top"
+            }
+        }
+    },
+    "title_placement_left_right": {
+        "innerContent": {
+            "desktop": {
+                "value": "left"
+            }
+        }
+    },
+    "rating_icon_align": {
+        "innerContent": {
+            "desktop": {
+                "value": "center"
+            }
+        }
+    },
+    "rating_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "30px"
+            }
+        }
+    },
+    "rating_icon_space": {
+        "innerContent": {
+            "desktop": {
+                "value": "0px"
+            }
+        }
+    },
+    "enable_content": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "enable_schema": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    }
+}

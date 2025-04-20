@@ -1,0 +1,722 @@
+{
+    "line_top_txt": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "18px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "line_bottom_txt": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "18px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "title": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "24px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "subtitle": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "18px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "design_content_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "content_button": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "18px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "date_title": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "24px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "date_subtitle": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "18px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "layout_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "middle"
+            }
+        }
+    },
+    "layout_type_mobile": {
+        "innerContent": {
+            "desktop": {
+                "value": "left"
+            }
+        }
+    },
+    "module_area_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "80%"
+            }
+        }
+    },
+    "blurb_area_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "50%"
+            }
+        }
+    },
+    "date_area_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "40%"
+            }
+        }
+    },
+    "disable_date": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "item_horizontal_alignment": {
+        "innerContent": {
+            "desktop": {
+                "value": "center"
+            }
+        }
+    },
+    "item_horizontal_gap": {
+        "innerContent": {
+            "desktop": {
+                "value": "50px"
+            }
+        }
+    },
+    "item_vertical_alignment": {
+        "innerContent": {
+            "desktop": {
+                "value": "center"
+            }
+        }
+    },
+    "item_vertical_gap": {
+        "innerContent": {
+            "desktop": {
+                "value": "50px"
+            }
+        }
+    },
+    "enable_date_in_blurb": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "date_horizontal_alignment": {
+        "innerContent": {
+            "desktop": {
+                "value": "left"
+            }
+        }
+    },
+    "disable_date_mobile": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "arrow_marker_vertical_align": {
+        "innerContent": {
+            "desktop": {
+                "value": "middle"
+            }
+        }
+    },
+    "marker_postion_mobile": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "line_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#ccc"
+            }
+        }
+    },
+    "line_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "3px"
+            }
+        }
+    },
+    "line_start_from": {
+        "innerContent": {
+            "desktop": {
+                "value": "first_marker"
+            }
+        }
+    },
+    "enable_line_top_marker": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "line_top_marker_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "icon"
+            }
+        }
+    },
+    "line_top_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": {
+                    "unicode": "&#xe00a;",
+                    "type": "divi",
+                    "weight": "400"
+                }
+            }
+        }
+    },
+    "line_top_icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#333"
+            }
+        }
+    },
+    "line_top_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "24px"
+            }
+        }
+    },
+    "line_top_img_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "30px"
+            }
+        }
+    },
+    "line_top_marker_vertical_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "0px"
+            }
+        }
+    },
+    "enable_line_bottom_marker": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "line_bottom_marker_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "icon"
+            }
+        }
+    },
+    "line_bottom_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": {
+                    "unicode": "&#xe00a;",
+                    "type": "divi",
+                    "weight": "400"
+                }
+            }
+        }
+    },
+    "line_bottom_icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#333"
+            }
+        }
+    },
+    "line_bottom_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "24px"
+            }
+        }
+    },
+    "line_bottom_img_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "30px"
+            }
+        }
+    },
+    "line_bottom_marker_vertical_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "0px"
+            }
+        }
+    },
+    "enable_arrow": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "arrow_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "arrow_caret"
+            }
+        }
+    },
+    "arrow_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": "&#x24;||divi||400"
+            }
+        }
+    },
+    "arrow_line_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "solid"
+            }
+        }
+    },
+    "arrow_thick": {
+        "innerContent": {
+            "desktop": {
+                "value": "2px"
+            }
+        }
+    },
+    "arrow_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "20px"
+            }
+        }
+    },
+    "arrow_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#ddd"
+            }
+        }
+    },
+    "arrow_vertical_alignment": {
+        "innerContent": {
+            "desktop": {
+                "value": "middle"
+            }
+        }
+    },
+    "arrow_vertical_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "50%"
+            }
+        }
+    },
+    "arrow_horizontal_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "0px"
+            }
+        }
+    },
+    "reverse_arrow": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "disable_arrow_mobile": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "enable_date_arrow": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "date_arrow_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "arrow_caret"
+            }
+        }
+    },
+    "date_arrow_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": "&#x24;||divi||400"
+            }
+        }
+    },
+    "date_arrow_line_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "solid"
+            }
+        }
+    },
+    "date_arrow_thick": {
+        "innerContent": {
+            "desktop": {
+                "value": "2px"
+            }
+        }
+    },
+    "date_arrow_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "10px"
+            }
+        }
+    },
+    "date_arrow_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#ddd"
+            }
+        }
+    },
+    "date_arrow_vertical_align": {
+        "innerContent": {
+            "desktop": {
+                "value": "middle"
+            }
+        }
+    },
+    "date_arrow_vertical_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "50%"
+            }
+        }
+    },
+    "date_arrow_horizontal_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "0px"
+            }
+        }
+    },
+    "reverse_date_arrow": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "disable_date_arrow_mobile": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "button_icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#333"
+            }
+        }
+    },
+    "button_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "18px"
+            }
+        }
+    },
+    "timeline_button_padding": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "padding": {
+                            "top": "5px",
+                            "right": "5px",
+                            "bottom": "5px",
+                            "left": "5px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "enable_item_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "tmln_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "fade_in"
+            }
+        }
+    },
+    "enable_scroll_line": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "scroll_line_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#333"
+            }
+        }
+    },
+    "enable_marker_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "active_marker_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#ddd"
+            }
+        }
+    },
+    "order_enable": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "date_order": {
+        "innerContent": {
+            "desktop": {
+                "value": "-1"
+            }
+        }
+    },
+    "title_order": {
+        "innerContent": {
+            "desktop": {
+                "value": "9"
+            }
+        }
+    },
+    "sub_title_order": {
+        "innerContent": {
+            "desktop": {
+                "value": "9"
+            }
+        }
+    },
+    "media_order": {
+        "innerContent": {
+            "desktop": {
+                "value": "9"
+            }
+        }
+    },
+    "content_order": {
+        "innerContent": {
+            "desktop": {
+                "value": "9"
+            }
+        }
+    },
+    "button_order": {
+        "innerContent": {
+            "desktop": {
+                "value": "9"
+            }
+        }
+    },
+    "marker_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "50px"
+            }
+        }
+    },
+    "marker_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "50px"
+            }
+        }
+    },
+    "marker_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "24px"
+            }
+        }
+    },
+    "item_wrapper_padding": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "padding": {
+                            "top": "10px",
+                            "right": "10px",
+                            "bottom": "10px",
+                            "left": "10px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "date_wrapper_padding": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "padding": {
+                            "top": "10px",
+                            "right": "10px",
+                            "bottom": "10px",
+                            "left": "10px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "line_top_wrapper_padding": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "padding": {
+                            "top": "5px",
+                            "right": "5px",
+                            "bottom": "5px",
+                            "left": "5px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "line_bottom_wrapper_padding": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "padding": {
+                            "top": "5px",
+                            "right": "5px",
+                            "bottom": "5px",
+                            "left": "5px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

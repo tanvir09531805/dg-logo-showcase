@@ -1,0 +1,77 @@
+{
+    "text-body": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "header": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "30px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "settings__content": {
+        "innerContent": {
+            "desktop": {
+                "value": "Your content goes here. Edit or remove this text inline or in the module Content settings. You can also style every aspect of this content in the module Design settings and even apply custom CSS to this text in the module Advanced settings."
+            }
+        }
+    },
+    "settings__trigger_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "with-scroll"
+            }
+        }
+    },
+    "settings__split_content": {
+        "innerContent": {
+            "desktop": {
+                "value": "df_text_reveal_letter_by_letter"
+            }
+        }
+    },
+    "settings__reveal_by": {
+        "innerContent": {
+            "desktop": {
+                "value": "df_text_reveal_by_opacity_animationr"
+            }
+        }
+    },
+    "settings__reveal_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#0038f0"
+            }
+        }
+    },
+    "settings__reveal_duration": {
+        "innerContent": {
+            "desktop": {
+                "value": "1000"
+            }
+        }
+    },
+    "settings__reveal_initial_opacity": {
+        "innerContent": {
+            "desktop": {
+                "value": 0.20000000000000001
+            }
+        }
+    }
+}

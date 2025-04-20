@@ -1,0 +1,785 @@
+{
+    "name": "difl/testimonialcarouselitem",
+    "d4Shortcode": "difl_testimonialcarouselitem",
+    "title": "Testimonial Carousel Item",
+    "titles": "Testimonial Carousel Items",
+    "category": "child-module",
+    "settings": {
+        "content": "auto",
+        "design": "auto",
+        "advanced": "auto",
+        "groups": {
+            "content": {
+                "panel": "content",
+                "groupName": "content",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Content"
+                    }
+                }
+            },
+            "images": {
+                "panel": "content",
+                "groupName": "images",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Images"
+                    }
+                }
+            },
+            "settings": {
+                "panel": "content",
+                "groupName": "settings",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Settings"
+                    }
+                }
+            },
+            "image": {
+                "panel": "content",
+                "groupName": "image",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Author Image"
+                    }
+                }
+            },
+            "company_logo": {
+                "panel": "content",
+                "groupName": "company_logo",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Company Logo"
+                    }
+                }
+            },
+            "rating": {
+                "panel": "content",
+                "groupName": "rating",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Rating"
+                    }
+                }
+            },
+            "contentLink": {
+                "panel": "content",
+                "groupName": "link",
+                "priority": 100,
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Link",
+                        "preset": "content"
+                    }
+                }
+            },
+            "font": {
+                "panel": "design",
+                "groupName": "font",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Font Style"
+                    }
+                }
+            }
+        }
+    },
+    "customCssFields": {
+        "title": {
+            "label": "Label 1"
+        },
+        "content": {
+            "label": "Label 2"
+        }
+    },
+    "attributes": {
+        "module": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "meta": {
+                    "adminLabel": {
+                        "component": {
+                            "type": "group",
+                            "name": "divi/admin-label"
+                        }
+                    }
+                },
+                "advanced": {
+                    "link": {
+                        "item": {
+                            "groupSlug": "contentLink",
+                            "component": {
+                                "props": {
+                                    "fieldLabel": ""
+                                }
+                            }
+                        }
+                    }
+                },
+                "decoration": {
+                    "background": {
+                        "component": {
+                            "type": "group",
+                            "name": "divi/background",
+                            "props": {
+                                "hidePanels": []
+                            }
+                        }
+                    },
+                    "border": {}
+                }
+            },
+            "default": {
+                "meta": {
+                    "adminLabel": {
+                        "desktop": {
+                            "value": "Testimonial Carousel Item"
+                        }
+                    }
+                }
+            }
+        },
+        "name": {
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "font",
+                            "attrName": "name.decoration.font",
+                            "label": "Name",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Name",
+                                    "fields": {
+                                        "headingLevel": {
+                                            "render": false
+                                        },
+                                        "textAlign": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": ".difl_testimonialcarousel {{selector}} .df_tc_author_info .author_name",
+                            "hover": ".difl_testimonialcarousel {{selector}}:hover .df_tc_author_info .author_name"
+                        }
+                    },
+                    "important": {
+                        "desktop": {
+                            "value": true
+                        }
+                    }
+                }
+            }
+        },
+        "title": {
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "font",
+                            "attrName": "title.decoration.font",
+                            "label": "Job Title",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Job Title",
+                                    "fields": {
+                                        "headingLevel": {
+                                            "render": false
+                                        },
+                                        "textAlign": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": ".difl_testimonialcarousel {{selector}} .tc_job_title",
+                            "hover": ".difl_testimonialcarousel {{selector}}:hover .tc_job_title"
+                        }
+                    },
+                    "important": {
+                        "desktop": {
+                            "value": true
+                        }
+                    }
+                }
+            }
+        },
+        "company": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "content",
+                        "render": true,
+                        "attrName": "company.innerContent",
+                        "label": "Company",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/text"
+                        }
+                    }
+                }
+            }
+        },
+        "body": {
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "font",
+                            "attrName": "body.decoration.font",
+                            "label": "Body",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Body",
+                                    "fields": {
+                                        "headingLevel": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": ".difl_testimonialcarousel {{selector}} .df_tc_content",
+                            "hover": ".difl_testimonialcarousel {{selector}}:hover .df_tc_content"
+                        }
+                    },
+                    "important": {
+                        "desktop": {
+                            "value": true
+                        }
+                    }
+                }
+            }
+        },
+        "admin_label": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "admin_label",
+                        "render": true,
+                        "attrName": "admin_label.innerContent",
+                        "label": "Admin Label",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/text"
+                        }
+                    }
+                }
+            }
+        },
+        "author": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "content",
+                        "render": true,
+                        "attrName": "author.innerContent",
+                        "label": "Author",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/text"
+                        }
+                    }
+                }
+            }
+        },
+        "job_title": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "content",
+                        "render": true,
+                        "attrName": "job_title.innerContent",
+                        "label": "Job Title",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/text"
+                        }
+                    }
+                }
+            }
+        },
+        "company_url": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "content",
+                        "render": true,
+                        "attrName": "company_url.innerContent",
+                        "label": "Company Url",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/text"
+                        }
+                    }
+                }
+            }
+        },
+        "content": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "content",
+                        "render": true,
+                        "attrName": "content.innerContent",
+                        "label": "Body",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/richtext"
+                        }
+                    }
+                }
+            }
+        },
+        "image": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "images",
+                        "render": true,
+                        "attrName": "image.innerContent",
+                        "label": "Author Image",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/upload"
+                        }
+                    }
+                }
+            }
+        },
+        "author_image_alt_text": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "images",
+                        "render": true,
+                        "attrName": "author_image_alt_text.innerContent",
+                        "label": "Author Image Alt Text",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/text"
+                        }
+                    }
+                }
+            },
+            "show_if_not": {
+                "image": [
+                    ""
+                ]
+            }
+        },
+        "company_logo": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "images",
+                        "render": true,
+                        "attrName": "company_logo.innerContent",
+                        "label": "Company Logo",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/upload"
+                        }
+                    }
+                }
+            }
+        },
+        "company_logo_alt_text": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "images",
+                        "render": true,
+                        "attrName": "company_logo_alt_text.innerContent",
+                        "label": "Company Logo Alt Text",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/text"
+                        }
+                    }
+                }
+            },
+            "show_if_not": {
+                "company_logo": [
+                    ""
+                ]
+            }
+        },
+        "rating": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "settings",
+                        "render": true,
+                        "attrName": "rating.innerContent",
+                        "label": "Enable Rating",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            }
+        },
+        "rating_scale_type": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "settings",
+                        "render": true,
+                        "attrName": "rating_scale_type.innerContent",
+                        "label": "Rating Scale Type",
+                        "description": "Choose Rating Scale Type",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "5": {
+                                        "label": "0-5"
+                                    },
+                                    "10": {
+                                        "label": "0-10"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "rating": "on"
+            }
+        },
+        "rating_value_5": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "settings",
+                        "render": true,
+                        "attrName": "rating_value_5.innerContent",
+                        "label": "Rating Value",
+                        "description": "Set Rating Value",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "min": "0.1",
+                                "max": "5",
+                                "minLimit": "0.1",
+                                "maxLimit": "5",
+                                "step": "0.1"
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "rating": "on",
+                "rating_scale_type": "5"
+            }
+        },
+        "rating_value_10": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "settings",
+                        "render": true,
+                        "attrName": "rating_value_10.innerContent",
+                        "label": "Rating Value",
+                        "description": "Set Rating Value",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "min": "0.1",
+                                "max": "10",
+                                "minLimit": "0.1",
+                                "maxLimit": "10",
+                                "step": "0.1"
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "rating": "on",
+                "rating_scale_type": "10"
+            }
+        },
+        "quote_icon_image": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "settings",
+                        "render": true,
+                        "attrName": "quote_icon_image.innerContent",
+                        "label": "Image for Quote Icon",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/upload"
+                        }
+                    }
+                }
+            }
+        },
+        "quote_icon_alt_text": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "settings",
+                        "render": true,
+                        "attrName": "quote_icon_alt_text.innerContent",
+                        "label": "Image Alt Text",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/text"
+                        }
+                    }
+                }
+            }
+        },
+        "quote_icon_use_icon": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "settings",
+                        "render": true,
+                        "attrName": "quote_icon_use_icon.innerContent",
+                        "label": "Enable Quote Icon",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            }
+        },
+        "quote_icon_font_icon": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "settings",
+                        "render": true,
+                        "attrName": "quote_icon_font_icon.innerContent",
+                        "label": "Icon",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/icon-picker"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "content_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "Text"
+            }
+        }
+    },
+    "content_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": {
+                    "unicode": "&#xe08a;",
+                    "type": "divi",
+                    "weight": ""
+                }
+            }
+        }
+    }
+}

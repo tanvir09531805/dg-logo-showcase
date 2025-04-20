@@ -1,0 +1,1697 @@
+{
+    "name": "difl/ratingbox",
+    "d4Shortcode": "difl_ratingbox",
+    "title": "Star Rating",
+    "titles": "Star Ratings",
+    "category": "module",
+    "moduleIcon": "difl/star-rating",
+    "settings": {
+        "content": "auto",
+        "design": "auto",
+        "advanced": "auto",
+        "groups": {
+            "rating": {
+                "panel": "content",
+                "groupName": "rating",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Rating"
+                    }
+                }
+            },
+            "contentLink": {
+                "panel": "content",
+                "groupName": "link",
+                "priority": 100,
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Link",
+                        "preset": "content"
+                    }
+                }
+            },
+            "design_rating": {
+                "panel": "design",
+                "groupName": "design_rating",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Rating"
+                    }
+                }
+            },
+            "design_rating_number": {
+                "panel": "design",
+                "groupName": "design_rating_number",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Rating Number"
+                    }
+                }
+            },
+            "design_title": {
+                "panel": "design",
+                "groupName": "design_title",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Title Style"
+                    }
+                }
+            },
+            "design_content": {
+                "panel": "design",
+                "groupName": "design_content",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Content Style"
+                    }
+                }
+            },
+            "design_content_text": {
+                "panel": "design",
+                "groupName": "design_content_text",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Content Text"
+                    }
+                }
+            },
+            "design_content_heading": {
+                "panel": "design",
+                "groupName": "design_content_heading",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Content Heading Text"
+                    }
+                }
+            },
+            "custom_spacing": {
+                "panel": "design",
+                "groupName": "custom_spacing",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Custom Spacing"
+                    }
+                }
+            }
+        }
+    },
+    "customCssFields": {
+        "title": {
+            "label": "Label 1"
+        },
+        "content": {
+            "label": "Label 2"
+        }
+    },
+    "attributes": {
+        "module": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "meta": {
+                    "adminLabel": {
+                        "component": {
+                            "type": "group",
+                            "name": "divi/admin-label"
+                        }
+                    }
+                },
+                "advanced": {
+                    "link": {
+                        "item": {
+                            "groupSlug": "contentLink",
+                            "component": {
+                                "props": {
+                                    "fieldLabel": ""
+                                }
+                            }
+                        }
+                    }
+                },
+                "decoration": {
+                    "background": {},
+                    "border": {},
+                    "boxShadow": {},
+                    "spacing": {}
+                }
+            },
+            "default": {
+                "meta": {
+                    "adminLabel": {
+                        "desktop": {
+                            "value": "Star Rating"
+                        }
+                    }
+                }
+            }
+        },
+        "rating": {
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_rating",
+                            "attrName": "rating.decoration.font",
+                            "label": "Rating",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Rating",
+                                    "fields": {
+                                        "headingLevel": {
+                                            "render": false
+                                        },
+                                        "size": {
+                                            "render": false
+                                        },
+                                        "textAlign": {
+                                            "render": false
+                                        },
+                                        "family": {
+                                            "render": false
+                                        },
+                                        "lineHeight": {
+                                            "render": false
+                                        },
+                                        "color": {
+                                            "render": false
+                                        },
+                                        "letterSpacing": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_rating_icon .et-pb-icon, {{selector}} span.df_rating_icon_fill::before, {{selector}} span.df_rating_icon_empty::after",
+                            "hover": "{{selector}} .df_rating_icon .et-pb-icon:hover, {{selector}} span.df_rating_icon_fill:hover::before, {{selector}} span.df_rating_icon_empty:hover::after"
+                        }
+                    }
+                }
+            }
+        },
+        "rating_number": {
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_rating_number",
+                            "attrName": "rating_number.decoration.font",
+                            "label": "Rating Number",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Rating Number",
+                                    "fields": {
+                                        "headingLevel": {
+                                            "render": false
+                                        },
+                                        "textAlign": {
+                                            "render": false
+                                        },
+                                        "lineHeight": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} span.df_rating_number, {{selector}} .df_rating_bracket",
+                            "hover": "{{selector}} span.df_rating_number:hover, {{selector}} .df_rating_bracket:hover"
+                        }
+                    },
+                    "important": {
+                        "desktop": {
+                            "value": true
+                        }
+                    }
+                }
+            }
+        },
+        "title": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "title.innerContent",
+                        "label": "Title",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/text"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "enable_title": "on"
+            }
+        },
+        "design_content_text": {
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_content_text",
+                            "attrName": "design_content_text.decoration.font",
+                            "label": "Content",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Content",
+                                    "fields": {
+                                        "headingLevel": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_rating_content",
+                            "hover": "{{selector}} .df_rating_content"
+                        }
+                    },
+                    "important": {
+                        "desktop": {
+                            "value": true
+                        }
+                    }
+                }
+            }
+        },
+        "content_heading_1": {
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_content_heading",
+                            "attrName": "content_heading_1.decoration.font",
+                            "label": "Heading 1",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font-header",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Heading 1",
+                                    "fields": {
+                                        "headingLevel": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_rating_content h1",
+                            "hover": "{{selector}} .df_rating_content h1:hover"
+                        }
+                    }
+                }
+            }
+        },
+        "rating_icon_border": {
+            "settings": {
+                "decoration": {
+                    "border": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_rating",
+                            "attrName": "rating_icon_border.decoration.border",
+                            "label": "",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/border",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": null
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "border": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_rating_icon",
+                            "hover": "{{selector}} .df_rating_icon:hover"
+                        }
+                    }
+                }
+            }
+        },
+        "title_border": {
+            "settings": {
+                "decoration": {
+                    "border": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_title",
+                            "attrName": "title_border.decoration.border",
+                            "label": "",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/border",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": null
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "border": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_rating_title",
+                            "hover": "{{selector}} .df_rating_title:hover"
+                        }
+                    }
+                }
+            }
+        },
+        "content_border": {
+            "settings": {
+                "decoration": {
+                    "border": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_content",
+                            "attrName": "content_border.decoration.border",
+                            "label": "",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/border",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": null
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "border": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_rating_content",
+                            "hover": "{{selector}} .df_rating_content:hover"
+                        }
+                    }
+                }
+            }
+        },
+        "rating_box_shadow": {
+            "settings": {
+                "decoration": {
+                    "boxShadow": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_rating",
+                            "attrName": "rating_box_shadow.decoration.boxShadow",
+                            "label": "Rating Box Shadow",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/box-shadow",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Rating Box Shadow"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "boxShadow": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_rating_icon",
+                            "hover": "{{selector}} .df_rating_icon:hover"
+                        }
+                    }
+                }
+            }
+        },
+        "title_box_shadow": {
+            "settings": {
+                "decoration": {
+                    "boxShadow": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_title",
+                            "attrName": "title_box_shadow.decoration.boxShadow",
+                            "label": "Title Box Shadow",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/box-shadow",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Title Box Shadow"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "boxShadow": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_rating_title",
+                            "hover": "{{selector}} .df_rating_title:hover"
+                        }
+                    }
+                }
+            }
+        },
+        "content_box_shadow": {
+            "settings": {
+                "decoration": {
+                    "boxShadow": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_content",
+                            "attrName": "content_box_shadow.decoration.boxShadow",
+                            "label": "Content Box Shadow",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/box-shadow",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Content Box Shadow"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "boxShadow": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_rating_content",
+                            "hover": "{{selector}} .df_rating_content:hover"
+                        }
+                    }
+                }
+            }
+        },
+        "child_filters_target": {
+            "settings": {
+                "decoration": {
+                    "filters": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "filter",
+                            "attrName": "child_filters_target.decoration.filters",
+                            "label": "Filter",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/filters",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Filter"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "rating_bg": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "background": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_rating",
+                            "render": true,
+                            "attrName": "rating_bg.innerContent",
+                            "label": "Rating Background",
+                            "features": {
+                                "sticky": false,
+                                "responsive": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/background",
+                                "props": {
+                                    "grouped": false,
+                                    "hidePanels": [
+                                        "video",
+                                        "mask",
+                                        "pattern"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "rating_scale_type": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "rating_scale_type.innerContent",
+                        "label": "Rating Scale Type",
+                        "description": "Choose Rating Scale Type",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "5": {
+                                        "label": "0-5"
+                                    },
+                                    "10": {
+                                        "label": "0-10"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "rating_value_5": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "rating_value_5.innerContent",
+                        "label": "Rating Value",
+                        "description": "Set Rating Value",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "min": "0.1",
+                                "max": "5",
+                                "minLimit": "0.1",
+                                "maxLimit": "5",
+                                "step": "0.1"
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "rating_scale_type": "5"
+            }
+        },
+        "rating_value_10": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "rating_value_10.innerContent",
+                        "label": "Rating Value",
+                        "description": "Set Rating Value",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "min": "0.1",
+                                "max": "10",
+                                "minLimit": "0.1",
+                                "maxLimit": "10",
+                                "step": "0.1"
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "rating_scale_type": "10"
+            }
+        },
+        "enable_custom_icon": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "enable_custom_icon.innerContent",
+                        "label": "Use Custom Icon",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            }
+        },
+        "rating_icon": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "rating_icon.innerContent",
+                        "label": "Rating Icon",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/icon-picker"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "enable_custom_icon": "on"
+            }
+        },
+        "rating_color_single": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "design_rating",
+                        "render": true,
+                        "attrName": "rating_color_single.innerContent",
+                        "label": "Rating Icon Color",
+                        "features": {
+                            "sticky": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/color-picker"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "enable_single_rating": "on"
+            }
+        },
+        "rating_color_active": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "design_rating",
+                        "render": true,
+                        "attrName": "rating_color_active.innerContent",
+                        "label": "Active Rating Icon color",
+                        "features": {
+                            "sticky": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/color-picker"
+                        }
+                    }
+                }
+            },
+            "show_if_not": {
+                "enable_single_rating": "on"
+            }
+        },
+        "rating_color_inactive": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "design_rating",
+                        "render": true,
+                        "attrName": "rating_color_inactive.innerContent",
+                        "label": "Inactive Rating Icon color",
+                        "features": {
+                            "sticky": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/color-picker"
+                        }
+                    }
+                }
+            },
+            "show_if_not": {
+                "enable_single_rating": "on"
+            }
+        },
+        "enable_rating_number": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "enable_rating_number.innerContent",
+                        "label": "Show Rating number",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            }
+        },
+        "rating_number_type": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "rating_number_type.innerContent",
+                        "label": "Rating Number Type",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "number_with_bracket": {
+                                        "label": "Number With Bracket"
+                                    },
+                                    "number_without_bracket": {
+                                        "label": "Number Without Bracket"
+                                    },
+                                    "number_single_value": {
+                                        "label": "Number Single Value"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "enable_rating_number": "on"
+            },
+            "show_if_not": {
+                "enable_single_rating": "on"
+            }
+        },
+        "rating_number_placement_left_right": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "rating_number_placement_left_right.innerContent",
+                        "label": "Rating Number Placement",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "right": {
+                                        "label": "Right"
+                                    },
+                                    "left": {
+                                        "label": "Left"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "enable_rating_number": "on"
+            }
+        },
+        "enable_single_rating": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "enable_single_rating.innerContent",
+                        "label": "Enable Single Rating",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            }
+        },
+        "enable_title": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "enable_title.innerContent",
+                        "label": "Enable Title",
+                        "description": "Enable Rating box title.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            }
+        },
+        "rating_title_tag": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "rating_title_tag.innerContent",
+                        "label": "Title Tag",
+                        "description": "Choose a tag to display your title.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "h1": {
+                                        "label": "H1 tag"
+                                    },
+                                    "h2": {
+                                        "label": "H2 tag"
+                                    },
+                                    "h3": {
+                                        "label": "H3 tag"
+                                    },
+                                    "h4": {
+                                        "label": "H4 tag"
+                                    },
+                                    "h5": {
+                                        "label": "H5 tag"
+                                    },
+                                    "h6": {
+                                        "label": "H6 tag"
+                                    },
+                                    "p": {
+                                        "label": "P tag"
+                                    },
+                                    "span": {
+                                        "label": "Span tag"
+                                    },
+                                    "div": {
+                                        "label": "Div tag"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "enable_title": "on"
+            }
+        },
+        "title_display_type": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "title_display_type.innerContent",
+                        "label": "Title Display Type",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "block": {
+                                        "label": "Block"
+                                    },
+                                    "inline": {
+                                        "label": "Inline"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "enable_title": "on"
+            }
+        },
+        "title_placement_top_bottom": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "title_placement_top_bottom.innerContent",
+                        "label": "Title Placement",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "top": {
+                                        "label": "Top"
+                                    },
+                                    "bottom": {
+                                        "label": "Bottom"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "title_display_type": "block",
+                "enable_title": "on"
+            }
+        },
+        "title_placement_left_right": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "title_placement_left_right.innerContent",
+                        "label": "Title Placement",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "right": {
+                                        "label": "Right"
+                                    },
+                                    "left": {
+                                        "label": "Left"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "enable_title": "on",
+                "title_display_type": "inline"
+            }
+        },
+        "rating_icon_align": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "design_rating",
+                        "render": true,
+                        "attrName": "rating_icon_align.innerContent",
+                        "label": "Rating Alignment",
+                        "features": {
+                            "sticky": false,
+                            "hover": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/button-options",
+                            "props": {
+                                "showLabel": true,
+                                "options": {
+                                    "left": {
+                                        "icon": "divi/text-align-left"
+                                    },
+                                    "center": {
+                                        "icon": "divi/text-align-center"
+                                    },
+                                    "right": {
+                                        "icon": "divi/text-align-right"
+                                    }
+                                }
+                            }
+                        },
+                        "multipleChoices": false
+                    }
+                }
+            }
+        },
+        "rating_icon_size": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "design_rating",
+                        "render": true,
+                        "attrName": "rating_icon_size.innerContent",
+                        "label": "Rating Icon Size",
+                        "features": {
+                            "sticky": false,
+                            "hover": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [
+                                    "px"
+                                ],
+                                "defaultUnit": "px",
+                                "min": "1",
+                                "max": "100",
+                                "minLimit": "1",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "rating_icon_space": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "design_rating",
+                        "render": true,
+                        "attrName": "rating_icon_space.innerContent",
+                        "label": "Space between rating icons",
+                        "features": {
+                            "sticky": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [
+                                    "px"
+                                ],
+                                "defaultUnit": "0px",
+                                "min": "0",
+                                "max": "100",
+                                "minLimit": "0",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if_not": {
+                "enable_single_rating": "on"
+            }
+        },
+        "rating_title_bg": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "background": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_title",
+                            "render": true,
+                            "attrName": "rating_title_bg.innerContent",
+                            "label": "Rating Title Background",
+                            "features": {
+                                "sticky": false,
+                                "responsive": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/background",
+                                "props": {
+                                    "grouped": false,
+                                    "hidePanels": [
+                                        "video",
+                                        "mask",
+                                        "pattern"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "enable_title": "on"
+            }
+        },
+        "rating_content_bg": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "background": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_content",
+                            "render": true,
+                            "attrName": "rating_content_bg.innerContent",
+                            "label": "Rating Content Background",
+                            "features": {
+                                "sticky": false,
+                                "responsive": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/background",
+                                "props": {
+                                    "grouped": false,
+                                    "hidePanels": [
+                                        "video",
+                                        "mask",
+                                        "pattern"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "enable_content": "on"
+            }
+        },
+        "enable_content": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "enable_content.innerContent",
+                        "label": "Enable Content",
+                        "description": "Enable rating box content.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            }
+        },
+        "content": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "content.innerContent",
+                        "label": "Content",
+                        "description": "Rating box description.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/richtext"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "enable_content": "on"
+            }
+        },
+        "enable_schema": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "rating",
+                        "render": true,
+                        "attrName": "enable_schema.innerContent",
+                        "label": "Enable Schema",
+                        "description": "Enable Schema for SEO",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            }
+        },
+        "rating_wrapper_margin": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "spacing": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "margin_padding",
+                            "render": true,
+                            "attrName": "rating_wrapper_margin.innerContent",
+                            "label": "Rating Margin",
+                            "features": {
+                                "sticky": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/spacing",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Rating ",
+                                    "fields": {
+                                        "padding": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "rating_wrapper_padding": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "spacing": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "margin_padding",
+                            "render": true,
+                            "attrName": "rating_wrapper_padding.innerContent",
+                            "label": "Rating Padding",
+                            "features": {
+                                "sticky": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/spacing",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Rating ",
+                                    "fields": {
+                                        "margin": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "rating_box_number_margin": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "spacing": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "margin_padding",
+                            "render": true,
+                            "attrName": "rating_box_number_margin.innerContent",
+                            "label": "Rating Number Margin",
+                            "features": {
+                                "sticky": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/spacing",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Rating Number ",
+                                    "fields": {
+                                        "padding": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "enable_rating_number": "on"
+            }
+        },
+        "rating_box_title_margin": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "spacing": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "margin_padding",
+                            "render": true,
+                            "attrName": "rating_box_title_margin.innerContent",
+                            "label": "Rating Title Margin",
+                            "features": {
+                                "sticky": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/spacing",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Rating Title ",
+                                    "fields": {
+                                        "padding": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "enable_title": "on"
+            }
+        },
+        "rating_box_title_padding": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "spacing": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "margin_padding",
+                            "render": true,
+                            "attrName": "rating_box_title_padding.innerContent",
+                            "label": "Rating Title Padding",
+                            "features": {
+                                "sticky": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/spacing",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Rating Title ",
+                                    "fields": {
+                                        "margin": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "enable_title": "on"
+            }
+        },
+        "rating_box_content_margin": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "spacing": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "margin_padding",
+                            "render": true,
+                            "attrName": "rating_box_content_margin.innerContent",
+                            "label": "Rating Content Margin",
+                            "features": {
+                                "sticky": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/spacing",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Rating Content ",
+                                    "fields": {
+                                        "padding": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "enable_content": "on"
+            }
+        },
+        "rating_box_content_padding": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "spacing": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "margin_padding",
+                            "render": true,
+                            "attrName": "rating_box_content_padding.innerContent",
+                            "label": "Rating Content Padding",
+                            "features": {
+                                "sticky": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/spacing",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Rating Content ",
+                                    "fields": {
+                                        "margin": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "enable_content": "on"
+            }
+        }
+    }
+}

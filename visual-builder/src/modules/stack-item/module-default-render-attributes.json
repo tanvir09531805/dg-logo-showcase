@@ -1,0 +1,41 @@
+{
+    "field_content_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "icon"
+            }
+        }
+    },
+    "field_font_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": {
+                    "unicode": "&#xe08a;",
+                    "type": "divi",
+                    "weight": ""
+                }
+            }
+        }
+    },
+    "field_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "30px"
+            }
+        }
+    },
+    "field_rating_number": {
+        "innerContent": {
+            "desktop": {
+                "value": "5"
+            }
+        }
+    },
+    "field_text_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "center"
+            }
+        }
+    }
+}

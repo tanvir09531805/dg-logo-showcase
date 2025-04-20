@@ -1,0 +1,22 @@
+{
+    "label": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "12px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "icon_font_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "16px"
+            }
+        }
+    }
+}

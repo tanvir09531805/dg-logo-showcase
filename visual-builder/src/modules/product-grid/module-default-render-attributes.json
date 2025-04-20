@@ -1,0 +1,234 @@
+{
+    "on_sale_font": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "on_after_sale_font": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "on_suffix_sale_font": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "active_pagination": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "pagination_result_count": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "pagination_sorting": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "use_current_loop": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "related": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "posts_number": {
+        "innerContent": {
+            "desktop": {
+                "value": "12"
+            }
+        }
+    },
+    "orderby": {
+        "innerContent": {
+            "desktop": {
+                "value": "date-desc"
+            }
+        }
+    },
+    "show_pagination": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "show_pagination_result_count": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "show_pagination_sorting": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "show_badge": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "show_badge_in_image": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "badge_placement": {
+        "innerContent": {
+            "desktop": {
+                "value": "top_left"
+            }
+        }
+    },
+    "after_sale_text_enable": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "after_sale_text_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "price-percentise"
+            }
+        }
+    },
+    "enable_custom_soldout_text": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "layout": {
+        "innerContent": {
+            "desktop": {
+                "value": "grid"
+            }
+        }
+    },
+    "column": {
+        "innerContent": {
+            "desktop": {
+                "value": "3"
+            }
+        }
+    },
+    "gutter": {
+        "innerContent": {
+            "desktop": {
+                "value": "20px"
+            }
+        }
+    },
+    "equal_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "pagination_align": {
+        "innerContent": {
+            "desktop": {
+                "value": "center"
+            }
+        }
+    },
+    "next_prev_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": "set_1"
+            }
+        }
+    },
+    "next_prev_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "outer_wrpper_visibility": {
+        "innerContent": {
+            "desktop": {
+                "value": "default"
+            }
+        }
+    },
+    "inner_wrpper_visibility": {
+        "innerContent": {
+            "desktop": {
+                "value": "default"
+            }
+        }
+    }
+}

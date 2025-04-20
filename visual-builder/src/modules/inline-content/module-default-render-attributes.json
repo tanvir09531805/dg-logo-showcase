@@ -1,0 +1,64 @@
+{
+    "content_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#2ea3f2"
+            }
+        }
+    },
+    "icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "24px"
+            }
+        }
+    },
+    "media_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "40px"
+            }
+        }
+    },
+    "content_alignment": {
+        "innerContent": {
+            "desktop": {
+                "value": "flex-start"
+            }
+        }
+    },
+    "main_wrapper_tag": {
+        "innerContent": {
+            "desktop": {
+                "value": "div"
+            }
+        }
+    },
+    "column_gap": {
+        "innerContent": {
+            "desktop": {
+                "value": "5px"
+            }
+        }
+    },
+    "row_gap": {
+        "innerContent": {
+            "desktop": {
+                "value": "5px"
+            }
+        }
+    }
+}

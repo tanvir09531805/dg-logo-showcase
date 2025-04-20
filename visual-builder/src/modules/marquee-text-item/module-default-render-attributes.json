@@ -1,0 +1,107 @@
+{
+    "title": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "admin_title": {
+        "innerContent": {
+            "desktop": {
+                "value": "Marquee Text Item"
+            }
+        }
+    },
+    "text_tag": {
+        "innerContent": {
+            "desktop": {
+                "value": "p"
+            }
+        }
+    },
+    "text_clip_enable_clip": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "text_clip_enable_bg_clip": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "text_clip_fill_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "rgba(255,255,255,0)"
+            }
+        }
+    },
+    "text_clip_stroke_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "1px"
+            }
+        }
+    },
+    "enable_text_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "text_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": {
+                    "unicode": "&#x5c;",
+                    "type": "divi",
+                    "weight": "400"
+                }
+            }
+        }
+    },
+    "text_img_alt_txt": {
+        "innerContent": {
+            "desktop": {
+                "value": "Image Alt"
+            }
+        }
+    },
+    "set_media_after_text": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "item_wrapper_margin": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "margin": {
+                            "top": "0px",
+                            "right": "0px",
+                            "bottom": "0px",
+                            "left": "0px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

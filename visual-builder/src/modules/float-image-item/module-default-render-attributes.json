@@ -1,0 +1,72 @@
+{
+    "fii_max_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "fii_max_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "horizontal_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "0%"
+            }
+        }
+    },
+    "vertical_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "0%"
+            }
+        }
+    },
+    "animation_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "fi-up-down"
+            }
+        }
+    },
+    "vertical_anime_distance": {
+        "innerContent": {
+            "desktop": {
+                "value": "20px"
+            }
+        }
+    },
+    "horizontal_anime_distance": {
+        "innerContent": {
+            "desktop": {
+                "value": "20px"
+            }
+        }
+    },
+    "duration": {
+        "innerContent": {
+            "desktop": {
+                "value": "4000"
+            }
+        }
+    },
+    "delay": {
+        "innerContent": {
+            "desktop": {
+                "value": "0ms"
+            }
+        }
+    },
+    "animation_function": {
+        "innerContent": {
+            "desktop": {
+                "value": "linear"
+            }
+        }
+    }
+}

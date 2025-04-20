@@ -1,0 +1,256 @@
+{
+    "title": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "18"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "content": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "title_back": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "18px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "content_back": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "button": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "change_view": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "fb_front_align": {
+        "innerContent": {
+            "desktop": {
+                "value": "flex-start"
+            }
+        }
+    },
+    "fb_back_align": {
+        "innerContent": {
+            "desktop": {
+                "value": "flex-start"
+            }
+        }
+    },
+    "front_title_tag": {
+        "innerContent": {
+            "desktop": {
+                "value": "h4"
+            }
+        }
+    },
+    "back_title_tag": {
+        "innerContent": {
+            "desktop": {
+                "value": "h4"
+            }
+        }
+    },
+    "use_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "fb_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "500px"
+            }
+        }
+    },
+    "fb_btn_button_url_new_window": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "image_front_icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#2ea3f2"
+            }
+        }
+    },
+    "image_front_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "48px"
+            }
+        }
+    },
+    "image_front_full_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "image_front_max_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "100%"
+            }
+        }
+    },
+    "image_front_icon_bg": {
+        "innerContent": {
+            "desktop": {
+                "value": "rgba(0,0,0,0)"
+            }
+        }
+    },
+    "fb_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "rotate"
+            }
+        }
+    },
+    "fb_flip_direction": {
+        "innerContent": {
+            "desktop": {
+                "value": "rotate_left"
+            }
+        }
+    },
+    "fb_slide_direction": {
+        "innerContent": {
+            "desktop": {
+                "value": "slide_left"
+            }
+        }
+    },
+    "fb_zoom_direction": {
+        "innerContent": {
+            "desktop": {
+                "value": "zoom_center"
+            }
+        }
+    },
+    "fb_cf_translate": {
+        "innerContent": {
+            "desktop": {
+                "value": "50px"
+            }
+        }
+    },
+    "fb_cf_scale": {
+        "innerContent": {
+            "desktop": {
+                "value": ".9"
+            }
+        }
+    },
+    "fb_transition_duration": {
+        "innerContent": {
+            "desktop": {
+                "value": "600ms"
+            }
+        }
+    },
+    "fb_transition_delay": {
+        "innerContent": {
+            "desktop": {
+                "value": "0ms"
+            }
+        }
+    },
+    "fb_transition_curve": {
+        "innerContent": {
+            "desktop": {
+                "value": "ease_in_out"
+            }
+        }
+    },
+    "image_back_icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#2ea3f2"
+            }
+        }
+    },
+    "image_back_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "48px"
+            }
+        }
+    },
+    "image_back_full_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "image_back_max_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "100%"
+            }
+        }
+    },
+    "image_back_icon_bg": {
+        "innerContent": {
+            "desktop": {
+                "value": "rgba(0,0,0,0)"
+            }
+        }
+    }
+}

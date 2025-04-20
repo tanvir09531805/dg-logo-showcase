@@ -1,0 +1,156 @@
+{
+    "head_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "normal",
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "row_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "semi-bold",
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "row_first_column_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "semi-bold",
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "row_last_column_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "semi-bold",
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "footer_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "semi-bold",
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "link_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "semi-bold",
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "responsive_mode": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "make_head_cell_equal_border": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "make_row_cell_equal_border": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "make_foot_cell_equal_border": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "make_row_last_cell_border_right_0": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "make_row_first_cell_border_left_0": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "40px"
+            }
+        }
+    },
+    "image_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "50px"
+            }
+        }
+    },
+    "exclude_head_foot": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "exclude_head_foot_last_col": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    }
+}

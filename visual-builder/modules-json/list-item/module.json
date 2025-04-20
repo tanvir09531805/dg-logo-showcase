@@ -1,0 +1,3263 @@
+{
+    "name": "difl/iconlistitem",
+    "d4Shortcode": "difl_iconlistitem",
+    "title": "List Item",
+    "titles": "List Items",
+    "category": "child-module",
+    "settings": {
+        "content": "auto",
+        "design": "auto",
+        "advanced": "auto",
+        "groups": {
+            "main_content": {
+                "panel": "content",
+                "groupName": "main_content",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Content"
+                    }
+                }
+            },
+            "child_image_icon": {
+                "panel": "design",
+                "groupName": "child_image_icon",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Icon Styles"
+                    }
+                }
+            },
+            "child_lottie_element": {
+                "panel": "design",
+                "groupName": "child_lottie_element",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Icon Lottie Styles"
+                    }
+                }
+            },
+            "child_tooltip_element": {
+                "panel": "design",
+                "groupName": "child_tooltip_element",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Tooltip Styles"
+                    }
+                }
+            },
+            "admin_label": {
+                "panel": "content",
+                "groupName": "admin_label",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Admin Label"
+                    }
+                }
+            },
+            "contentLink": {
+                "panel": "content",
+                "groupName": "link",
+                "priority": 100,
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Link",
+                        "preset": "content"
+                    }
+                }
+            },
+            "child_wrapper_element": {
+                "panel": "design",
+                "groupName": "child_wrapper_element",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Item Wrapper Styles"
+                    }
+                }
+            },
+            "child_icon_text": {
+                "panel": "design",
+                "groupName": "child_icon_text",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Icon Text"
+                    }
+                }
+            },
+            "child_title_icon": {
+                "panel": "design",
+                "groupName": "child_title_icon",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Title Icon"
+                    }
+                }
+            },
+            "child_title_element": {
+                "panel": "design",
+                "groupName": "child_title_element",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Title Styles"
+                    }
+                }
+            },
+            "child_title_text": {
+                "panel": "design",
+                "groupName": "child_title_text",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Title Text"
+                    }
+                }
+            },
+            "child_content_element": {
+                "panel": "design",
+                "groupName": "child_content_element",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Body Styles"
+                    }
+                }
+            },
+            "child_content_text": {
+                "panel": "design",
+                "groupName": "child_content_text",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Body Text"
+                    }
+                }
+            },
+            "child_content_heading": {
+                "panel": "design",
+                "groupName": "child_content_heading",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Body Heading Text"
+                    }
+                }
+            },
+            "child_tooltip_text": {
+                "panel": "design",
+                "groupName": "child_tooltip_text",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Tooltip Text"
+                    }
+                }
+            },
+            "child_tooltip_heading": {
+                "panel": "design",
+                "groupName": "child_tooltip_heading",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Tooltip Heading Text"
+                    }
+                }
+            },
+            "custom_spacing": {
+                "panel": "design",
+                "groupName": "custom_spacing",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Custom Spacing"
+                    }
+                }
+            }
+        }
+    },
+    "customCssFields": {
+        "title": {
+            "label": "Label 1"
+        },
+        "content": {
+            "label": "Label 2"
+        }
+    },
+    "attributes": {
+        "module": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "meta": {
+                    "adminLabel": {
+                        "component": {
+                            "type": "group",
+                            "name": "divi/admin-label"
+                        }
+                    }
+                },
+                "advanced": {
+                    "link": {
+                        "item": {
+                            "groupSlug": "contentLink",
+                            "component": {
+                                "props": {
+                                    "fieldLabel": ""
+                                }
+                            }
+                        }
+                    }
+                },
+                "decoration": {
+                    "background": {
+                        "component": {
+                            "type": "group",
+                            "name": "divi/background",
+                            "props": {
+                                "hidePanels": []
+                            }
+                        }
+                    },
+                    "border": {},
+                    "boxShadow": {},
+                    "spacing": {}
+                }
+            },
+            "default": {
+                "meta": {
+                    "adminLabel": {
+                        "desktop": {
+                            "value": "List Item"
+                        }
+                    }
+                }
+            }
+        },
+        "child_icon_text": {
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_icon_text",
+                            "attrName": "child_icon_text.decoration.font",
+                            "label": "Icon",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Icon",
+                                    "fields": {
+                                        "headingLevel": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}}.difl_iconlistitem .item-elements .difl_icon_item_container .difl_icon_item_icon_wrapper .difl_list_icon_text, {{selector}}.difl_iconlistitem .item-elements .difl_icon_item_container .difl_icon_item_icon_wrapper .difl_list_icon_text a",
+                            "hover": "{{selector}}.difl_iconlistitem .item-elements .difl_icon_item_container .difl_icon_item_icon_wrapper .difl_list_icon_text, {{selector}}.difl_iconlistitem .item-elements:hover .difl_icon_item_container .difl_icon_item_icon_wrapper .difl_list_icon_text a"
+                        }
+                    }
+                }
+            }
+        },
+        "child_title_text": {
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_title_text",
+                            "attrName": "child_title_text.decoration.font",
+                            "label": "Title",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Title",
+                                    "fields": {
+                                        "headingLevel": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}}.difl_iconlistitem .item-elements .difl_icon_item_container .difl_icon_item_header, {{selector}}.difl_iconlistitem .item-elements .difl_icon_item_container .difl_icon_item_header a",
+                            "hover": "{{selector}}.difl_iconlistitem .item-elements:hover .difl_icon_item_container .difl_icon_item_header, {{selector}}.difl_iconlistitem .item-elements:hover .difl_icon_item_container .difl_icon_item_header a"
+                        }
+                    }
+                }
+            }
+        },
+        "child_content_text": {
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_content_text",
+                            "attrName": "child_content_text.decoration.font",
+                            "label": "Body",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Body",
+                                    "fields": {
+                                        "headingLevel": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}}.difl_iconlistitem div .item-elements .difl_icon_item_body, {{selector}}.difl_iconlistitem div .item-elements .difl_icon_item_body p",
+                            "hover": "{{selector}}.difl_iconlistitem div .item-elements:hover .difl_icon_item_body, {{selector}}.difl_iconlistitem div .item-elements:hover .difl_icon_item_body p"
+                        }
+                    }
+                }
+            }
+        },
+        "content_heading_1": {
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_content_heading",
+                            "attrName": "content_heading_1.decoration.font",
+                            "label": "Heading 1",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font-header",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Heading 1",
+                                    "fields": {
+                                        "headingLevel": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}}.difl_iconlistitem div .item-elements .difl_icon_item_body h1",
+                            "hover": "{{selector}}.difl_iconlistitem div .item-elements:hover .difl_icon_item_body h1"
+                        }
+                    }
+                }
+            }
+        },
+        "child_tooltip_text": {
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_tooltip_text",
+                            "attrName": "child_tooltip_text.decoration.font",
+                            "label": "Tooltip",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Tooltip",
+                                    "fields": {
+                                        "headingLevel": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": ".tippy-box[data-theme~='{{selector}}']",
+                            "hover": ".tippy-box[data-theme~='{{selector}}']:hover"
+                        }
+                    }
+                }
+            }
+        },
+        "child_image_icon": {
+            "settings": {
+                "decoration": {
+                    "border": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_image_icon",
+                            "attrName": "child_image_icon.decoration.border",
+                            "label": "",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/border",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": null
+                                }
+                            }
+                        }
+                    },
+                    "boxShadow": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_image_icon",
+                            "attrName": "child_image_icon.decoration.boxShadow",
+                            "label": "Icon Box Shadow",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/box-shadow",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Icon Box Shadow"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "border": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}}.difl_iconlistitem .item-elements .difl_icon_item_icon_wrapper .icon-element",
+                            "hover": "{{selector}}.difl_iconlistitem .item-elements:hover .difl_icon_item_icon_wrapper .icon-element"
+                        }
+                    }
+                },
+                "boxShadow": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}}.difl_iconlistitem div .item-elements .difl_icon_item_icon_wrapper .icon-element",
+                            "hover": "{{selector}}.difl_iconlistitem div .item-elements:hover .difl_icon_item_icon_wrapper .icon-element"
+                        }
+                    }
+                }
+            }
+        },
+        "child_title_element": {
+            "settings": {
+                "decoration": {
+                    "border": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_title_element",
+                            "attrName": "child_title_element.decoration.border",
+                            "label": "",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/border",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": null
+                                }
+                            }
+                        }
+                    },
+                    "boxShadow": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_title_element",
+                            "attrName": "child_title_element.decoration.boxShadow",
+                            "label": "Title Box Shadow",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/box-shadow",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Title Box Shadow"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "border": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}}.difl_iconlistitem div .item-elements .difl_icon_item_header",
+                            "hover": "{{selector}}.difl_iconlistitem div .item-elements:hover .difl_icon_item_header"
+                        }
+                    }
+                },
+                "boxShadow": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}}.difl_iconlistitem div .item-elements .difl_icon_item_header",
+                            "hover": "{{selector}}.difl_iconlistitem div .item-elements:hover .difl_icon_item_header"
+                        }
+                    }
+                }
+            }
+        },
+        "child_content_element": {
+            "settings": {
+                "decoration": {
+                    "border": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_content_element",
+                            "attrName": "child_content_element.decoration.border",
+                            "label": "",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/border",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": null
+                                }
+                            }
+                        }
+                    },
+                    "boxShadow": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_content_element",
+                            "attrName": "child_content_element.decoration.boxShadow",
+                            "label": "Body Box Shadow",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/box-shadow",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Body Box Shadow"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "border": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}}.difl_iconlistitem div .item-elements .difl_icon_item_body",
+                            "hover": "{{selector}}.difl_iconlistitem div .item-elements:hover .difl_icon_item_body"
+                        }
+                    }
+                },
+                "boxShadow": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}}.difl_iconlistitem div .item-elements .difl_icon_item_body",
+                            "hover": "{{selector}}.difl_iconlistitem div .item-elements:hover .difl_icon_item_body"
+                        }
+                    }
+                }
+            }
+        },
+        "child_wrapper_element": {
+            "settings": {
+                "decoration": {
+                    "border": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_wrapper_element",
+                            "attrName": "child_wrapper_element.decoration.border",
+                            "label": "",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/border",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": null
+                                }
+                            }
+                        }
+                    },
+                    "boxShadow": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_wrapper_element",
+                            "attrName": "child_wrapper_element.decoration.boxShadow",
+                            "label": "Wrapper Box Shadow",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/box-shadow",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Wrapper Box Shadow"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "border": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}}.difl_iconlistitem div .item-elements",
+                            "hover": "{{selector}}.difl_iconlistitem div .item-elements:hover"
+                        }
+                    }
+                },
+                "boxShadow": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}}.difl_iconlistitem div .item-elements",
+                            "hover": "{{selector}}.difl_iconlistitem div .item-elements:hover"
+                        }
+                    }
+                }
+            }
+        },
+        "child_tooltip_element": {
+            "settings": {
+                "decoration": {
+                    "border": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_tooltip_element",
+                            "attrName": "child_tooltip_element.decoration.border",
+                            "label": "",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/border",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": null
+                                }
+                            }
+                        }
+                    },
+                    "boxShadow": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_tooltip_element",
+                            "attrName": "child_tooltip_element.decoration.boxShadow",
+                            "label": "Tooltip Box Shadow",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/box-shadow",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Tooltip Box Shadow"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "border": {
+                    "selectors": {
+                        "desktop": {
+                            "value": ".tippy-box[data-theme~='{{selector}}']",
+                            "hover": ".tippy-box[data-theme~='{{selector}}']:hover"
+                        }
+                    }
+                },
+                "boxShadow": {
+                    "selectors": {
+                        "desktop": {
+                            "value": ".tippy-box[data-theme~='{{selector}}']",
+                            "hover": ".tippy-box[data-theme~='{{selector}}']:hover"
+                        }
+                    }
+                }
+            }
+        },
+        "child_filters_target": {
+            "settings": {
+                "decoration": {
+                    "filters": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_image_icon",
+                            "attrName": "child_filters_target.decoration.filters",
+                            "label": null,
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/filters",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": ""
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_title": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "main_content",
+                        "render": true,
+                        "attrName": "list_item_title.innerContent",
+                        "label": "Title",
+                        "description": "The title of your list item will appear in with your item image.",
+                        "features": {
+                            "sticky": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/text"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off"
+            }
+        },
+        "content": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "main_content",
+                        "render": true,
+                        "attrName": "content.innerContent",
+                        "label": "Body",
+                        "description": "Input the main text content for your module here.",
+                        "features": {
+                            "sticky": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/richtext"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off"
+            }
+        },
+        "list_item_title_tag": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "main_content",
+                        "render": true,
+                        "attrName": "list_item_title_tag.innerContent",
+                        "label": "Title Tag",
+                        "description": "Choose a tag to display with your title.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "h1": {
+                                        "label": "H1 tag"
+                                    },
+                                    "h2": {
+                                        "label": "H2 tag"
+                                    },
+                                    "h3": {
+                                        "label": "H3 tag"
+                                    },
+                                    "h4": {
+                                        "label": "H4 tag"
+                                    },
+                                    "h5": {
+                                        "label": "H5 tag"
+                                    },
+                                    "h6": {
+                                        "label": "H6 tag"
+                                    },
+                                    "p": {
+                                        "label": "P tag"
+                                    },
+                                    "span": {
+                                        "label": "Span tag"
+                                    },
+                                    "div": {
+                                        "label": "Div tag"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off"
+            }
+        },
+        "list_item_use_tooltip": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "main_content",
+                        "render": true,
+                        "attrName": "list_item_use_tooltip.innerContent",
+                        "label": "Show Tooltip",
+                        "description": "Enable your desired item tooltip content for view.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_tooltip_content": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "main_content",
+                        "render": true,
+                        "attrName": "list_item_tooltip_content.innerContent",
+                        "label": "Tooltip Content",
+                        "description": "Input the tooltip content for your module here.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/richtext"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_use_tooltip": "on"
+            }
+        },
+        "list_item_title_background": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "background": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_title_element",
+                            "render": true,
+                            "attrName": "list_item_title_background.innerContent",
+                            "label": "Title Background",
+                            "features": {
+                                "sticky": false,
+                                "responsive": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/background",
+                                "props": {
+                                    "grouped": false,
+                                    "hidePanels": [
+                                        "video",
+                                        "mask",
+                                        "pattern"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off"
+            }
+        },
+        "list_item_content_background": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "background": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_content_element",
+                            "render": true,
+                            "attrName": "list_item_content_background.innerContent",
+                            "label": "Body Background",
+                            "features": {
+                                "sticky": false,
+                                "responsive": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/background",
+                                "props": {
+                                    "grouped": false,
+                                    "hidePanels": [
+                                        "video",
+                                        "mask",
+                                        "pattern"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off"
+            }
+        },
+        "list_item_wrapper_background": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "background": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_wrapper_element",
+                            "render": true,
+                            "attrName": "list_item_wrapper_background.innerContent",
+                            "label": "Wrapper Background",
+                            "features": {
+                                "sticky": false,
+                                "responsive": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/background",
+                                "props": {
+                                    "grouped": false,
+                                    "hidePanels": [
+                                        "video",
+                                        "mask",
+                                        "pattern"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_tooltip_background": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "background": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "child_tooltip_element",
+                            "render": true,
+                            "attrName": "list_item_tooltip_background.innerContent",
+                            "label": "Tooltip Background",
+                            "features": {
+                                "sticky": false,
+                                "responsive": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/background",
+                                "props": {
+                                    "grouped": false,
+                                    "hidePanels": [
+                                        "video",
+                                        "mask",
+                                        "pattern"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_use_tooltip": "on"
+            }
+        },
+        "list_item_text_orientation": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_wrapper_element",
+                        "render": true,
+                        "attrName": "list_item_text_orientation.innerContent",
+                        "label": "Text Alignment",
+                        "description": "This controls how your text is aligned within the module.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/button-options",
+                            "props": {
+                                "showLabel": true,
+                                "options": {
+                                    "left": {
+                                        "icon": "divi/text-align-left"
+                                    },
+                                    "center": {
+                                        "icon": "divi/text-align-center"
+                                    },
+                                    "right": {
+                                        "icon": "divi/text-align-right"
+                                    },
+                                    "justify": {
+                                        "icon": "divi/text-align-justify"
+                                    }
+                                }
+                            }
+                        },
+                        "multipleChoices": false
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off"
+            }
+        },
+        "list_item_content_max_width": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "width",
+                        "render": true,
+                        "attrName": "list_item_content_max_width.innerContent",
+                        "label": "Item Content Width",
+                        "description": "Adjust the width of the content within the list item.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [
+                                    "%",
+                                    "em",
+                                    "rem",
+                                    "px",
+                                    "cm",
+                                    "mm",
+                                    "in",
+                                    "pt",
+                                    "pc",
+                                    "ex",
+                                    "vh",
+                                    "vw"
+                                ],
+                                "min": "0",
+                                "max": "1100",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off"
+            }
+        },
+        "list_item_icon_type": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_icon_type.innerContent",
+                        "label": "Icon Type",
+                        "description": "Choose an icon type to display with your list item.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "icon": {
+                                        "label": "Icon"
+                                    },
+                                    "image": {
+                                        "label": "Image"
+                                    },
+                                    "text": {
+                                        "label": "Text"
+                                    },
+                                    "lottie": {
+                                        "label": "Lottie"
+                                    },
+                                    "none": {
+                                        "label": "None"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_icon": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_icon.innerContent",
+                        "label": "Choose an icon",
+                        "description": "Choose an icon to display with your list item.",
+                        "features": {
+                            "sticky": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/icon-picker"
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_image": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_image.innerContent",
+                        "label": "Image",
+                        "description": "Upload an image to display at the top of your list item.",
+                        "features": {
+                            "sticky": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/upload"
+                        }
+                    }
+                }
+            }
+        },
+        "alt": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "alt.innerContent",
+                        "label": "Image Alt Text",
+                        "description": "Define the HTML ALT text for your image here.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/text"
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_icon_text": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_icon_text.innerContent",
+                        "label": "Text",
+                        "description": "The title of your list item will appear in bold below your list item image.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/text"
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_icon_lottie_src_type": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_icon_lottie_src_type.innerContent",
+                        "label": "Lottie File Location",
+                        "description": "Choose a file location to display from your lottie.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "select": {
+                                        "label": "Select type"
+                                    },
+                                    "remote": {
+                                        "label": "External File URL"
+                                    },
+                                    "local": {
+                                        "label": "Upload"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_icon_lottie_src_remote": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_icon_lottie_src_remote.innerContent",
+                        "label": "URL",
+                        "description": "The external file url of your lottie image.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/text"
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_icon_lottie_src_upload": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_icon_lottie_src_upload.innerContent",
+                        "label": "Upload",
+                        "description": "A json file is chosen for lottie.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/upload"
+                        }
+                    }
+                }
+            }
+        },
+        "json_ex_notice": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/df_json_ex_notice"
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_icon_lottie_trigger_method": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_lottie_element",
+                        "render": true,
+                        "attrName": "list_item_icon_lottie_trigger_method.innerContent",
+                        "label": "Animation Trigger",
+                        "description": "Here you can choose animation trigger for your Lottie animation.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "viewport": {
+                                        "label": "Viewport"
+                                    },
+                                    "click": {
+                                        "label": "On Click"
+                                    },
+                                    "hover": {
+                                        "label": "On Hover"
+                                    },
+                                    "scroll": {
+                                        "label": "On Scroll"
+                                    },
+                                    "none": {
+                                        "label": "None"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_type": "lottie"
+            }
+        },
+        "list_item_icon_lottie_mouseout_action": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_lottie_element",
+                        "render": true,
+                        "attrName": "list_item_icon_lottie_mouseout_action.innerContent",
+                        "label": "Pause Animation Mouse Leave",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_lottie_trigger_method": "hover"
+            }
+        },
+        "list_item_icon_lottie_scroll_effect": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_lottie_element",
+                        "render": true,
+                        "attrName": "list_item_icon_lottie_scroll_effect.innerContent",
+                        "label": "Track Divi Scroll Effect",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_lottie_trigger_method": "scroll"
+            }
+        },
+        "list_item_icon_lottie_delay": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_lottie_element",
+                        "render": true,
+                        "attrName": "list_item_icon_lottie_delay.innerContent",
+                        "label": "Threshold",
+                        "description": "It has a default value of zero, which means that as soon as a user approaches the target element and it becomes visible",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "min": "0",
+                                "max": "8000",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_type": "lottie",
+                "list_item_icon_lottie_trigger_method": "viewport"
+            }
+        },
+        "list_item_icon_lottie_loop": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_lottie_element",
+                        "render": true,
+                        "attrName": "list_item_icon_lottie_loop.innerContent",
+                        "label": "Loop",
+                        "description": "Here you can choose whether or not your Lottie will animate in loop.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_type": "lottie"
+            }
+        },
+        "list_item_icon_lottie_speed": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_lottie_element",
+                        "render": true,
+                        "attrName": "list_item_icon_lottie_speed.innerContent",
+                        "label": "Animation Speed",
+                        "description": "The speed of the animation.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "min": "0.1",
+                                "max": "2.5",
+                                "step": "0.1"
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_type": "lottie"
+            }
+        },
+        "list_item_icon_lottie_direction": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_lottie_element",
+                        "render": true,
+                        "attrName": "list_item_icon_lottie_direction.innerContent",
+                        "label": "Reverse Direction",
+                        "description": "Here you can enable play reverse direction for your Lottie animation.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_icon_lottie_renderer": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_lottie_element",
+                        "render": true,
+                        "attrName": "list_item_icon_lottie_renderer.innerContent",
+                        "label": "Renderer",
+                        "description": "Here you can choose renderer for your Lottie animation.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "svg": {
+                                        "label": "SVG"
+                                    },
+                                    "canvas": {
+                                        "label": "Canvas"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_icon_lottie_color": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_lottie_element",
+                        "render": true,
+                        "attrName": "list_item_icon_lottie_color.innerContent",
+                        "label": "Lottie Color",
+                        "description": "Here you can define a custom color for lottie image.",
+                        "features": {
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/color-picker"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_type": "lottie",
+                "list_item_icon_lottie_renderer": "svg"
+            }
+        },
+        "list_item_icon_lottie_background_color": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_lottie_element",
+                        "render": true,
+                        "attrName": "list_item_icon_lottie_background_color.innerContent",
+                        "label": "Lottie Background Color",
+                        "description": "Here you can define a custom background color for lottie image.",
+                        "features": {
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/color-picker"
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_icon_lottie_width": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_lottie_element",
+                        "render": true,
+                        "attrName": "list_item_icon_lottie_width.innerContent",
+                        "label": "Lottie Width",
+                        "description": "Here you can choose lottie width.",
+                        "features": {
+                            "hover": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [
+                                    "%",
+                                    "em",
+                                    "rem",
+                                    "px",
+                                    "cm",
+                                    "mm",
+                                    "in",
+                                    "pt",
+                                    "pc",
+                                    "ex",
+                                    "vh",
+                                    "vw"
+                                ],
+                                "min": "1",
+                                "max": "200",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_icon_lottie_height": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_lottie_element",
+                        "render": true,
+                        "attrName": "list_item_icon_lottie_height.innerContent",
+                        "label": "Lottie Height",
+                        "description": "Here you can choose lottie height.",
+                        "features": {
+                            "hover": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [
+                                    "%",
+                                    "em",
+                                    "rem",
+                                    "px",
+                                    "cm",
+                                    "mm",
+                                    "in",
+                                    "pt",
+                                    "pc",
+                                    "ex",
+                                    "vh",
+                                    "vw"
+                                ],
+                                "min": "1",
+                                "max": "200",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_icon_only": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_icon_only.innerContent",
+                        "label": "Show Icon Only",
+                        "description": "Enable your desired item icon only.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_type": [
+                    "image",
+                    "icon",
+                    "lottie"
+                ]
+            }
+        },
+        "list_item_icon_on_hover": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_icon_on_hover.innerContent",
+                        "label": "Icon Show On Hover",
+                        "description": "By default, item icon to always be displayed. If you would like item icon are displayed on hover, then you can enable this option.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off",
+                "list_item_icon_type": [
+                    "image",
+                    "icon",
+                    "lottie"
+                ]
+            }
+        },
+        "list_item_title_icon_enable": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_title_icon_enable.innerContent",
+                        "label": "Use Icon For Title",
+                        "description": "Here you can choose whether or not use icon for the item title.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off"
+            }
+        },
+        "list_item_title_icon": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_title_icon.innerContent",
+                        "label": "Choose An Icon",
+                        "description": "Choose an icon to display with your item title.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/icon-picker"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_title_icon_enable": "on"
+            }
+        },
+        "list_item_title_icon_on_hover": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_title_icon_on_hover.innerContent",
+                        "label": "Title Icon Show On Hover",
+                        "description": "By default, item title icon on hover be displayed. If you would like item icon is displayed all time, then you can enable this option.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_title_icon_enable": "on"
+            }
+        },
+        "list_item_icon_color": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_icon_color.innerContent",
+                        "label": "Icon Color",
+                        "description": "Here you can define a custom color for your icon.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/color-picker"
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_icon_bg_color": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_icon_bg_color.innerContent",
+                        "label": "Icon Background Color",
+                        "description": "Here you can define a custom background color.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/color-picker"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_type": [
+                    "icon",
+                    "text"
+                ]
+            }
+        },
+        "list_item_title_icon_color": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_title_icon_color.innerContent",
+                        "label": "Title Icon Color",
+                        "description": "Here you can define a custom color for your icon.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/color-picker"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_title_icon_enable": "on"
+            }
+        },
+        "list_item_icon_size": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_icon_size.innerContent",
+                        "label": "Icon Size",
+                        "description": "Here you can choose icon size.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [
+                                    "%",
+                                    "em",
+                                    "rem",
+                                    "px",
+                                    "cm",
+                                    "mm",
+                                    "in",
+                                    "pt",
+                                    "pc",
+                                    "ex",
+                                    "vh",
+                                    "vw"
+                                ],
+                                "min": "1",
+                                "max": "200",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_title_icon_size": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_title_icon_size.innerContent",
+                        "label": "Title Icon Size",
+                        "description": "Here you can choose icon size.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [
+                                    "%",
+                                    "em",
+                                    "rem",
+                                    "px",
+                                    "cm",
+                                    "mm",
+                                    "in",
+                                    "pt",
+                                    "pc",
+                                    "ex",
+                                    "vh",
+                                    "vw"
+                                ],
+                                "min": "1",
+                                "max": "200",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_title_icon_enable": "on"
+            }
+        },
+        "list_item_image_width": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_image_width.innerContent",
+                        "label": "Image Width",
+                        "description": "Here you can choose image width.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [
+                                    "%",
+                                    "em",
+                                    "rem",
+                                    "px",
+                                    "cm",
+                                    "mm",
+                                    "in",
+                                    "pt",
+                                    "pc",
+                                    "ex",
+                                    "vh",
+                                    "vw"
+                                ],
+                                "min": "1",
+                                "max": "200",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_image_height": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_image_height.innerContent",
+                        "label": "Image Height",
+                        "description": "Here you can choose image height.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [
+                                    "%",
+                                    "em",
+                                    "rem",
+                                    "px",
+                                    "cm",
+                                    "mm",
+                                    "in",
+                                    "pt",
+                                    "pc",
+                                    "ex",
+                                    "vh",
+                                    "vw"
+                                ],
+                                "min": "1",
+                                "max": "200",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_icon_text_gap": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_icon_text_gap.innerContent",
+                        "label": "Gap Between Icon and Text",
+                        "description": "Here you can choose gap between icon and text.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [
+                                    "%",
+                                    "em",
+                                    "rem",
+                                    "px",
+                                    "cm",
+                                    "mm",
+                                    "in",
+                                    "pt",
+                                    "pc",
+                                    "ex",
+                                    "vh",
+                                    "vw"
+                                ],
+                                "defaultUnit": "px",
+                                "min": "1",
+                                "max": "200",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off"
+            }
+        },
+        "list_item_icon_placement": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_icon_placement.innerContent",
+                        "label": "Icon Placement",
+                        "description": "Here you can choose where to place the icon.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "inherit": {
+                                        "label": "Default"
+                                    },
+                                    "column": {
+                                        "label": "Top"
+                                    },
+                                    "row": {
+                                        "label": "Left"
+                                    },
+                                    "row-reverse": {
+                                        "label": "Right"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off"
+            },
+            "show_if_not": {
+                "list_item_icon_type": "none"
+            }
+        },
+        "list_item_icon_alignment": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_icon_alignment.innerContent",
+                        "label": "Icon Alignment",
+                        "description": "Align icon to the left, right or center.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/align"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_placement": "column"
+            },
+            "show_if_not": {
+                "list_item_icon_only": "on"
+            }
+        },
+        "list_item_icon_alignment_alt": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_icon_alignment_alt.innerContent",
+                        "label": "Icon Alignment",
+                        "description": "Align icon to the left, right or center.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/align"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "on"
+            }
+        },
+        "list_item_icon_vertical_placement": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_icon_vertical_placement.innerContent",
+                        "label": "Vertical Placement",
+                        "description": "Here you can choose where to place the icon.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "inherit": {
+                                        "label": "Default"
+                                    },
+                                    "flex-start": {
+                                        "label": "Top"
+                                    },
+                                    "center": {
+                                        "label": "Center"
+                                    },
+                                    "flex-end": {
+                                        "label": "bottom"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off",
+                "list_item_icon_placement": [
+                    "row",
+                    "row-reverse"
+                ]
+            },
+            "show_if_not": {
+                "list_item_icon_type": "none"
+            }
+        },
+        "list_item_content_outside_wrapper": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_image_icon",
+                        "render": true,
+                        "attrName": "list_item_content_outside_wrapper.innerContent",
+                        "label": "Show Content Outside The Wrapper",
+                        "description": "Here you can choose whether or not your content will display outside the wrapper.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off"
+            },
+            "show_if_not": {
+                "list_item_icon_placement": "column",
+                "list_item_icon_type": "none"
+            }
+        },
+        "tooltip_arrow": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_tooltip_element",
+                        "render": true,
+                        "attrName": "tooltip_arrow.innerContent",
+                        "label": "Arrow",
+                        "description": "Here you can choose whether or not show arrow for tooltip.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_use_tooltip": "on"
+            }
+        },
+        "tooltip_placement": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_tooltip_element",
+                        "render": true,
+                        "attrName": "tooltip_placement.innerContent",
+                        "label": "Placement",
+                        "description": "Here you can choose where to place the tooltip.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "top": {
+                                        "label": "Top"
+                                    },
+                                    "top-start": {
+                                        "label": "Top Start"
+                                    },
+                                    "top-end": {
+                                        "label": "Top End"
+                                    },
+                                    "right": {
+                                        "label": "Right"
+                                    },
+                                    "right-start": {
+                                        "label": "Right Start"
+                                    },
+                                    "right-end": {
+                                        "label": "Right End"
+                                    },
+                                    "bottom": {
+                                        "label": "Bottom"
+                                    },
+                                    "bottom-start": {
+                                        "label": "Bottom Start"
+                                    },
+                                    "bottom-end": {
+                                        "label": "Bottom End"
+                                    },
+                                    "left": {
+                                        "label": "Left"
+                                    },
+                                    "left-start": {
+                                        "label": "Left Start"
+                                    },
+                                    "left-end": {
+                                        "label": "Left End"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_use_tooltip": "on"
+            }
+        },
+        "tooltip_animation": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_tooltip_element",
+                        "render": true,
+                        "attrName": "tooltip_animation.innerContent",
+                        "label": "Animation",
+                        "description": "Here you can choose animation for the tooltip.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "fade": {
+                                        "label": "fade"
+                                    },
+                                    "scale": {
+                                        "label": "Scale"
+                                    },
+                                    "rotate": {
+                                        "label": "Rotate"
+                                    },
+                                    "shift-away": {
+                                        "label": "Shift-away"
+                                    },
+                                    "shift-toward": {
+                                        "label": "Shift-toward"
+                                    },
+                                    "perspective": {
+                                        "label": "perspective"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_use_tooltip": "on"
+            }
+        },
+        "tooltip_trigger": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_tooltip_element",
+                        "render": true,
+                        "attrName": "tooltip_trigger.innerContent",
+                        "label": "Trigger",
+                        "description": "Here you can choose trigger for the tooltip.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "mouseenter focus": {
+                                        "label": "Hover"
+                                    },
+                                    "click": {
+                                        "label": "Click"
+                                    },
+                                    "mouseenter click": {
+                                        "label": "Hover And Click"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_use_tooltip": "on"
+            }
+        },
+        "tooltip_interactive": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_tooltip_element",
+                        "render": true,
+                        "attrName": "tooltip_interactive.innerContent",
+                        "label": "Hover Over Tooltip",
+                        "description": "Tooltip allowing you to hover over and click inside it.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_use_tooltip": "on"
+            }
+        },
+        "tooltip_interactive_border": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_tooltip_element",
+                        "render": true,
+                        "attrName": "tooltip_interactive_border.innerContent",
+                        "label": "Tooltip Hover Area",
+                        "description": "Determines the size of the invisible border around the tooltip that will prevent it from hiding if the cursor left it.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [],
+                                "min": "0",
+                                "max": "100",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "tooltip_interactive": "on",
+                "list_item_use_tooltip": "on"
+            }
+        },
+        "tooltip_interactive_debounce": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_tooltip_element",
+                        "render": true,
+                        "attrName": "tooltip_interactive_debounce.innerContent",
+                        "label": "Tooltip Content Hide Delay",
+                        "description": "Determines the time in ms to debounce the Tooltip content hide handler when the cursor leaves.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [],
+                                "min": "0",
+                                "max": "1000",
+                                "step": "10"
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "tooltip_interactive": "on",
+                "list_item_use_tooltip": "on"
+            }
+        },
+        "tooltip_follow_cursor": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_tooltip_element",
+                        "render": true,
+                        "attrName": "tooltip_follow_cursor.innerContent",
+                        "label": "Follow Cursor",
+                        "description": "Tooltip move with mouse courser.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_use_tooltip": "on",
+                "tooltip_trigger": "mouseenter focus"
+            }
+        },
+        "tooltip_custom_maxwidth": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_tooltip_element",
+                        "render": true,
+                        "attrName": "tooltip_custom_maxwidth.innerContent",
+                        "label": "Max Width",
+                        "description": "Specifies the maximum width of the tooltip. Useful to prevent it from being too horizontally wide to read.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [],
+                                "min": "0",
+                                "max": "1000",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_use_tooltip": "on"
+            }
+        },
+        "tooltip_offset_enable": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_tooltip_element",
+                        "render": true,
+                        "attrName": "tooltip_offset_enable.innerContent",
+                        "label": "Tooltip Distance",
+                        "description": "Displaces the tooltip from its reference element in pixels (skidding and distance).",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_use_tooltip": "on"
+            }
+        },
+        "tooltip_offset_skidding": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_tooltip_element",
+                        "render": true,
+                        "attrName": "tooltip_offset_skidding.innerContent",
+                        "label": "Tooltip Arrow Move",
+                        "description": "The vertical distance length from content to tooltip.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [],
+                                "min": "0",
+                                "max": "1000",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "tooltip_offset_enable": "on",
+                "list_item_use_tooltip": "on"
+            }
+        },
+        "tooltip_offset_distance": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_tooltip_element",
+                        "render": true,
+                        "attrName": "tooltip_offset_distance.innerContent",
+                        "label": "Tooltip Distance",
+                        "description": "The horizontal distance length from content to tooltip",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [],
+                                "min": "0",
+                                "max": "100",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "tooltip_offset_enable": "on",
+                "list_item_use_tooltip": "on"
+            }
+        },
+        "tooltip_arrow_color": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "child_tooltip_element",
+                        "render": true,
+                        "attrName": "tooltip_arrow_color.innerContent",
+                        "label": "Tooltip Arrow Color",
+                        "description": "Here you can define a custom color for your tooltip arrow.",
+                        "features": {
+                            "sticky": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/color-picker"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_use_tooltip": "on"
+            }
+        },
+        "list_item_title_url": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "link_options",
+                        "render": true,
+                        "attrName": "list_item_title_url.innerContent",
+                        "label": "Title Link URL",
+                        "description": "If you would like to make your item a link, input your destination URL here.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/text"
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_title_url_new_window": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "link_options",
+                        "render": true,
+                        "attrName": "list_item_title_url_new_window.innerContent",
+                        "label": "Title Link Target",
+                        "description": "Here you can choose whether or not your link opens in a new window",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/select",
+                            "props": {
+                                "options": {
+                                    "off": {
+                                        "label": "In The Same Window"
+                                    },
+                                    "on": {
+                                        "label": "In The New Tab"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_icon_margin": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "custom_spacing",
+                        "render": true,
+                        "attrName": "list_item_icon_margin.innerContent",
+                        "label": "Icon Margin",
+                        "description": "Here you can define a custom padding size for the icon wrapper.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/custom_margin"
+                        }
+                    }
+                }
+            },
+            "show_if_not": {
+                "list_item_icon_type": "none"
+            }
+        },
+        "list_item_icon_padding": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "custom_spacing",
+                        "render": true,
+                        "attrName": "list_item_icon_padding.innerContent",
+                        "label": "Icon Padding",
+                        "description": "Here you can define a custom padding size for the icon wrapper.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/custom_padding"
+                        }
+                    }
+                }
+            },
+            "show_if_not": {
+                "list_item_icon_type": "none"
+            }
+        },
+        "list_item_icon_wrapper_margin": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "custom_spacing",
+                        "render": true,
+                        "attrName": "list_item_icon_wrapper_margin.innerContent",
+                        "label": "Icon Wrapper Margin",
+                        "description": "Here you can define a custom padding size for the icon wrapper.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/custom_margin"
+                        }
+                    }
+                }
+            },
+            "show_if_not": {
+                "list_item_icon_type": "none"
+            }
+        },
+        "list_item_icon_wrapper_padding": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "custom_spacing",
+                        "render": true,
+                        "attrName": "list_item_icon_wrapper_padding.innerContent",
+                        "label": "Icon Wrapper Padding",
+                        "description": "Here you can define a custom padding size for the icon wrapper.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/custom_padding"
+                        }
+                    }
+                }
+            },
+            "show_if_not": {
+                "list_item_icon_type": "none"
+            }
+        },
+        "list_item_title_margin": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "custom_spacing",
+                        "render": true,
+                        "attrName": "list_item_title_margin.innerContent",
+                        "label": "Item Title Margin",
+                        "description": "Here you can define a custom padding size for the title.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/custom_margin"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off"
+            }
+        },
+        "list_item_title_padding": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "custom_spacing",
+                        "render": true,
+                        "attrName": "list_item_title_padding.innerContent",
+                        "label": "Item Title Padding",
+                        "description": "Here you can define a custom padding size for the title.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/custom_padding"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off"
+            }
+        },
+        "list_item_title_icon_margin": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "custom_spacing",
+                        "render": true,
+                        "attrName": "list_item_title_icon_margin.innerContent",
+                        "label": "Title Icon Margin",
+                        "description": "Here you can define a custom padding size for the icon wrapper.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/custom_margin"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_title_icon_enable": "on"
+            }
+        },
+        "list_item_title_icon_padding": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "custom_spacing",
+                        "render": true,
+                        "attrName": "list_item_title_icon_padding.innerContent",
+                        "label": "Title Icon Padding",
+                        "description": "Here you can define a custom padding size for the icon wrapper.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/custom_padding"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_title_icon_enable": "on"
+            }
+        },
+        "list_item_content_margin": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "custom_spacing",
+                        "render": true,
+                        "attrName": "list_item_content_margin.innerContent",
+                        "label": "Item Body Margin",
+                        "description": "Here you can define a custom padding size for the content.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/custom_margin"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off"
+            }
+        },
+        "list_item_content_padding": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "custom_spacing",
+                        "render": true,
+                        "attrName": "list_item_content_padding.innerContent",
+                        "label": "Item Body Padding",
+                        "description": "Here you can define a custom padding size for the content.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/custom_padding"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_icon_only": "off"
+            }
+        },
+        "list_item_wrapper_margin": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "custom_spacing",
+                        "render": true,
+                        "attrName": "list_item_wrapper_margin.innerContent",
+                        "label": "Item Wrapper Margin",
+                        "description": "Here you can define a custom padding size for the wrapper.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/custom_margin"
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_wrapper_padding": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "custom_spacing",
+                        "render": true,
+                        "attrName": "list_item_wrapper_padding.innerContent",
+                        "label": "Item Wrapper Padding",
+                        "description": "Here you can define a custom padding size for the wrapper.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/custom_padding"
+                        }
+                    }
+                }
+            }
+        },
+        "list_item_tooltip_padding": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "custom_spacing",
+                        "render": true,
+                        "attrName": "list_item_tooltip_padding.innerContent",
+                        "label": "Item Tooltip Padding",
+                        "description": "Here you can define a custom padding size for the tooltip.",
+                        "component": {
+                            "type": "field",
+                            "name": "divi/custom_padding"
+                        }
+                    }
+                }
+            },
+            "show_if": {
+                "list_item_use_tooltip": "on"
+            }
+        },
+        "admin_label": {
+            "type": "object",
+            "selector": "",
+            "inlineEditor": true,
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "admin_label",
+                        "render": true,
+                        "attrName": "admin_label.innerContent",
+                        "label": "Admin Label",
+                        "description": "This will change the label of the module in the builder for easy identification.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/text"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

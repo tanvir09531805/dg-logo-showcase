@@ -1,0 +1,123 @@
+{
+    "cc_title": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "24px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "cc_subtitle": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "20px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "cc_content": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "button": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "content_heading_1": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "30px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "title_tag": {
+        "innerContent": {
+            "desktop": {
+                "value": "h4"
+            }
+        }
+    },
+    "subtitle_tag": {
+        "innerContent": {
+            "desktop": {
+                "value": "h5"
+            }
+        }
+    },
+    "df_cci_icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#2ea3f2"
+            }
+        }
+    },
+    "df_cci_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "48px"
+            }
+        }
+    },
+    "df_cci_full_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "df_cci_max_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "100%"
+            }
+        }
+    },
+    "df_cci_icon_bg": {
+        "innerContent": {
+            "desktop": {
+                "value": "rgba(0,0,0,0)"
+            }
+        }
+    },
+    "cc_button_button_url_new_window": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    }
+}

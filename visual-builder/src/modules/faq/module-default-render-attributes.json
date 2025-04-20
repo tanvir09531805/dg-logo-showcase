@@ -1,0 +1,423 @@
+{
+    "question_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "normal",
+                            "size": "22px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "active_design_question_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "normal",
+                            "size": "22px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "design_answer_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "normal",
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "ans_button": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "normal",
+                            "size": "18px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "content_heading_1": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "30px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "faq_layout": {
+        "innerContent": {
+            "desktop": {
+                "value": "accordion"
+            }
+        }
+    },
+    "faq_layout_grid": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "faq_item_per_column": {
+        "innerContent": {
+            "desktop": {
+                "value": "2"
+            }
+        }
+    },
+    "faq_item_gap": {
+        "innerContent": {
+            "desktop": {
+                "value": "20px"
+            }
+        }
+    },
+    "faq_item_equal_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "faq_item_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "50%"
+            }
+        }
+    },
+    "activate_on_first_time": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "disable_faq_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "faq_que_swap": {
+        "innerContent": {
+            "desktop": {
+                "value": "inherit"
+            }
+        }
+    },
+    "faq_que_alignment": {
+        "innerContent": {
+            "desktop": {
+                "value": "space-between"
+            }
+        }
+    },
+    "enable_schema": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "output_html": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "close_faq_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": {
+                    "unicode": "&#x4c;",
+                    "type": "divi",
+                    "weight": "400"
+                }
+            }
+        }
+    },
+    "close_icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#b8b9bb"
+            }
+        }
+    },
+    "close_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "24px"
+            }
+        }
+    },
+    "open_faq_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": {
+                    "unicode": "&#x4b;",
+                    "type": "divi",
+                    "weight": "400"
+                }
+            }
+        }
+    },
+    "close_que_img_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "35px"
+            }
+        }
+    },
+    "open_que_img_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "35px"
+            }
+        }
+    },
+    "faq_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "slide"
+            }
+        }
+    },
+    "faq_anime_duration": {
+        "innerContent": {
+            "desktop": {
+                "value": "300"
+            }
+        }
+    },
+    "icon_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "fade"
+            }
+        }
+    },
+    "que_img_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "fade"
+            }
+        }
+    },
+    "content_animation_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "fade_in"
+            }
+        }
+    },
+    "content_anime_duration": {
+        "innerContent": {
+            "desktop": {
+                "value": "250"
+            }
+        }
+    },
+    "que_wrapper_padding": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "padding": {
+                            "top": "5px",
+                            "right": "5px",
+                            "bottom": "5px",
+                            "left": "5px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "que_text_margin": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "margin": {
+                            "top": "5px",
+                            "right": "5px",
+                            "bottom": "5px",
+                            "left": "5px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "que_icon_margin": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "margin": {
+                            "top": "5px",
+                            "right": "5px",
+                            "bottom": "5px",
+                            "left": "5px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "que_img_margin": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "margin": {
+                            "top": "5px",
+                            "right": "5px",
+                            "bottom": "5px",
+                            "left": "5px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "ans_wrapper_padding": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "padding": {
+                            "top": "5px",
+                            "right": "5px",
+                            "bottom": "5px",
+                            "left": "5px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "ans_text_padding": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "padding": {
+                            "top": "5px",
+                            "right": "5px",
+                            "bottom": "5px",
+                            "left": "5px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "ans_img_padding": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "padding": {
+                            "top": "5px",
+                            "right": "5px",
+                            "bottom": "5px",
+                            "left": "5px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "button_icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#fff"
+            }
+        }
+    },
+    "button_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "18px"
+            }
+        }
+    },
+    "ans_button_margin": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "margin": {
+                            "top": "5px",
+                            "right": "0px",
+                            "bottom": "5px",
+                            "left": "0px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "ans_button_padding": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "padding": {
+                            "top": "5px",
+                            "right": "5px",
+                            "bottom": "5px",
+                            "left": "5px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

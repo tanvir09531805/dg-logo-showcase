@@ -1,0 +1,208 @@
+{
+    "text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "prefix": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "typed_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "suffix": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "main_wrap_tag": {
+        "innerContent": {
+            "desktop": {
+                "value": "div"
+            }
+        }
+    },
+    "speed": {
+        "innerContent": {
+            "desktop": {
+                "value": "100"
+            }
+        }
+    },
+    "deletespeed": {
+        "innerContent": {
+            "desktop": {
+                "value": "100"
+            }
+        }
+    },
+    "next_delay": {
+        "innerContent": {
+            "desktop": {
+                "value": "1500"
+            }
+        }
+    },
+    "cursor": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "cursorchar": {
+        "innerContent": {
+            "desktop": {
+                "value": "|"
+            }
+        }
+    },
+    "loop": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "display_props_prefix": {
+        "innerContent": {
+            "desktop": {
+                "value": "inline-block"
+            }
+        }
+    },
+    "display_props_typed": {
+        "innerContent": {
+            "desktop": {
+                "value": "inline-block"
+            }
+        }
+    },
+    "display_props_suffix": {
+        "innerContent": {
+            "desktop": {
+                "value": "inline-block"
+            }
+        }
+    },
+    "prefix_clip_enable_clip": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "prefix_clip_enable_bg_clip": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "prefix_clip_fill_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "rgba(255,255,255,0)"
+            }
+        }
+    },
+    "prefix_clip_stroke_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "1px"
+            }
+        }
+    },
+    "typed_clip_enable_clip": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "typed_clip_enable_bg_clip": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "typed_clip_fill_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "rgba(255,255,255,0)"
+            }
+        }
+    },
+    "typed_clip_stroke_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "1px"
+            }
+        }
+    },
+    "suffix_clip_enable_clip": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "suffix_clip_enable_bg_clip": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "suffix_clip_fill_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "rgba(255,255,255,0)"
+            }
+        }
+    },
+    "suffix_clip_stroke_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "1px"
+            }
+        }
+    }
+}

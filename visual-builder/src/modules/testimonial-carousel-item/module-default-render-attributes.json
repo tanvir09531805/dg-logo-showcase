@@ -1,0 +1,82 @@
+{
+    "name": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "18px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "title": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "company": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "body": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rating": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "rating_scale_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "5"
+            }
+        }
+    },
+    "rating_value_5": {
+        "innerContent": {
+            "desktop": {
+                "value": "5"
+            }
+        }
+    },
+    "rating_value_10": {
+        "innerContent": {
+            "desktop": {
+                "value": "10"
+            }
+        }
+    }
+}

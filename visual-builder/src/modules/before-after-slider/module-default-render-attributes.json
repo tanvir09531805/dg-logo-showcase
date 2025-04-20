@@ -1,0 +1,133 @@
+{
+    "before_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "after_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "cm_sarting_point": {
+        "innerContent": {
+            "desktop": {
+                "value": "50"
+            }
+        }
+    },
+    "cm_vertical_mode": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "cm_control_hover": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "cm_control_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#333333"
+            }
+        }
+    },
+    "cm_control_shadow": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "cm_add_circle": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "cm_add_circle_blur": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "cm_smoothing": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "cm_smoothing_amount": {
+        "innerContent": {
+            "desktop": {
+                "value": "100"
+            }
+        }
+    },
+    "cm_enable_show_lebel": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "cm_level_show_on_hover": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "use_lebel_top_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "lebel_top_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "90%"
+            }
+        }
+    },
+    "use_lebel_left_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "lebel_left_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "0%"
+            }
+        }
+    }
+}

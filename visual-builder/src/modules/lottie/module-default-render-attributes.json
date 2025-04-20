@@ -1,0 +1,58 @@
+{
+    "lottie_file_options": {
+        "innerContent": {
+            "desktop": {
+                "value": "external"
+            }
+        }
+    },
+    "animation_trigger": {
+        "innerContent": {
+            "desktop": {
+                "value": "viewport"
+            }
+        }
+    },
+    "scroll_effect": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "stop_on_mouse_out": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "loop": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "speed": {
+        "innerContent": {
+            "desktop": {
+                "value": "1"
+            }
+        }
+    },
+    "direction_reverse": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "renderer": {
+        "innerContent": {
+            "desktop": {
+                "value": "svg"
+            }
+        }
+    }
+}

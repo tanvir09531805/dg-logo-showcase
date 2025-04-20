@@ -1,0 +1,30 @@
+{
+    "mask_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "80"
+            }
+        }
+    },
+    "mask_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "center"
+            }
+        }
+    },
+    "mask_select": {
+        "innerContent": {
+            "desktop": {
+                "value": "mask_image_01"
+            }
+        }
+    },
+    "image_full_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    }
+}
