@@ -1,1 +1,0 @@
-export * as BentoGridIcon from './bento-grid';

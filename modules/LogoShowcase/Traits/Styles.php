@@ -46,7 +46,6 @@ trait Styles {
 		$settings     = $args['settings'] ?? [];
 
 		$icon_selector  = "{$order_class} .et-pb-icon";
-		$proImgSelector = "{$order_class} .difl_bento_grid__inner__image .__image";
 
 		Style::add(
 			[
@@ -66,29 +65,7 @@ trait Styles {
 							],
 						]
 					),
-					// Profile Image Size
-					CommonStyle::style(
-						[
-							'selector' => $proImgSelector,
-							'attr'     => $attrs['profile']['innerContent']['size'] ?? [],
-							'property' => 'width',
-						]
-					),
-					CommonStyle::style(
-						[
-							'selector' => $proImgSelector,
-							'attr'     => $attrs['profile']['innerContent']['size'] ?? [],
-							'property' => 'height',
-						]
-					),
-					/* Row/Column Span */
-					CommonStyle::style(
-						[
-							'selector'            => "{$order_class} .difl_bento_grid__inner",
-							'attr'                => $attrs['gridLayout']['decoration'] ?? [],
-							'declarationFunction' => [ self::class, 'grid_layout_style_declaration' ],
-						]
-					),
+					
 				],
 			]
 		);

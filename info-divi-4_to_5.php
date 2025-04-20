@@ -63,4 +63,9 @@ E:\laragon\www\divi5a\wp-content\themes\Divi\includes\builder-5\visual-builder\p
 "slug": "difl_contentcarousel",
 
 "slug": "difl_contentcarouselitem",
+
+
+https://github.com/echoasoftltd/diviflash/pull/328/files#diff-48693779d11e3cf68d94b6f5f4b0c61338cbc6205a20bb6b1e335ebbbd664d4b
+
+need to flow conversion outline for Spacing, Background, Icon etc.
 */

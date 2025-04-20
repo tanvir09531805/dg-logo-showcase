@@ -24,9 +24,6 @@ import {
   Select,
 } from '@divi/field-library';
 
-import { GridLayoutField } from '../../../fields/grid-layout-field';
-import { GridLayoutManager } from '../../../fields/grid-layout-manager';
-
 const handleChange = ({ event, inputValue }) => {
   console.log('Event:', event); // The click event
   console.log('Selected Row & Column:', inputValue); // { row: <number>, column: <number> }

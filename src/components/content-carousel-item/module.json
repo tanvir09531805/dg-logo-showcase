@@ -621,7 +621,6 @@
                 "item": {
                   "groupSlug": "designImageStyle",
                   "attrName": "useImage.decoration.imageAlignment",
-                  "subName": "imageAlignment",
                   "label": "Alignment",
                   "description": "Here you can define the horizontal alignment of dots wrapper.",
                   "features": {
@@ -678,8 +677,7 @@
                 "groupType": "group-item",
                 "item": {
                   "groupSlug": "designImageStyle",
-                  "attrName": "useImage.advanced.maxWidth",
-                  "subName": "maxWidth",
+                  "attrName": "useImage.decoration.maxWidth",
                   "label": "Max Width",
                   "description": "Here you can define max width.",
                   "features": {
@@ -719,7 +717,6 @@
                 "groupType": "group-item",
                 "item": {
                   "groupSlug": "designImageStyle",
-                  "attrName": "useImage.decoration.border",
                   "label": "Image Border",
                   "description": "Increasing the border will increase the roundness of the overlay corners. Setting this value to 0 will result in squared corners.",
                   "features": {
@@ -744,7 +741,6 @@
                 "groupType": "group-item",
                 "item": {
                   "groupSlug": "designImageStyle",
-                  "attrName": "useImage.decoration.boxShadow",
                   "priority": 20,
                   "render": true,
                   "component": {
@@ -784,11 +780,22 @@
         "styleProps": {
             "selector": "{{selector}} img, {{selector}} .et_overlay",
             "border": {
-            "selector": "{{selector}} .et_pb_image_wrap"
+              "selector": ".difl_contentcarousel {{selector}} .df_cci_image_container"
             },
             "boxShadow": {
-              "selector": "{{selector}} .et_pb_image_wrap",
+              "selector": ".difl_contentcarousel {{selector}} .df_cci_image_container",
               "useOverlay": true
+            },
+            "spacing": {
+              "selector": "{{selector}} .df_cci_image_container img",
+              "important": {
+                "desktop": {
+                  "value": {
+                    "padding": false,
+                    "margin": true
+                  }
+                }
+              }
             }
         },
         "styleComponentsProps": {
@@ -841,6 +848,9 @@
         "selector": "{{selector}} .df_cci_image_container .et-pb-icon",
         "styleProps": {
           "selector": "{{selector}} .df_cci_image_container .et-pb-icon",
+          "background": {
+            "selector": "{{selector}} .df_cci_image_container .et-pb-icon"
+          },
           "icon": {
             "selector": "{{selector}} .df_cci_image_container .et-pb-icon",
             "propertySelectors": {
@@ -860,9 +870,6 @@
                 }
               }
             }
-          },
-          "background": {
-            "selector": "{{selector}} .df_cci_image_container"
           },
           "spacing": {
             "selector": "{{selector}}  .df_cci_image_container .et-pb-icon",
@@ -919,6 +926,11 @@
                   "attrName": "useIcon.decoration.icon",
                   "priority": 20,
                   "render": true,
+                  "features": {
+                    "hover": true,
+                    "sticky": false,
+                    "responsive": false
+                  },
                   "component": {
                     "type": "group",
                     "name": "divi/icon",
@@ -948,8 +960,14 @@
               "groupType": "group-item",
               "item": {
                 "groupSlug": "contentImageIcon",
+                "attrName": "useIcon.decoration.background",
                 "priority": 30,
                 "render": true,
+                "features": {
+                  "hover": true,
+                  "sticky": false,
+                  "responsive": false
+                },
                 "component": {
                   "type": "group",
                   "name": "divi/background",
@@ -1015,7 +1033,7 @@
                   "label": "Icon Alignment",
                   "description": "Align Icon to the left, right or center.",
                   "features": {
-                    "responsive": true,
+                    "responsive": false,
                     "hover": false,
                     "sticky": false
                   },
@@ -1067,7 +1085,7 @@
       },
       "button": {
         "type": "object",
-        "selector": " {{selector}} .df_cci_button_wrapper .df_cci_button",
+        "selector": ".difl_contentcarousel {{selector}} .df_cci_button",
         "attributes": {
           "class": "df_cci_button"
         },
@@ -1077,7 +1095,7 @@
           "hasWrapper": true
         },
         "styleProps": {
-          "selector": " {{selector}} .df_cci_button_wrapper  .df_cci_button",
+          "selector": ".difl_contentcarousel {{selector}} .df_cci_button",
           "spacing": {
             "important": true
           },
@@ -1190,6 +1208,66 @@
                             }
                           }
                         }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "btnIconSizeMargin": {
+        "type": "object",
+        "selector": ".difl_contentcarousel {{selector}} .df_cci_button:before,.difl_contentcarousel {{selector}} .df_cci_button:after",
+        "settings": {
+          "decoration": {
+            "sizing": {
+              "groupType": "group-item",
+              "item": {
+                "groupSlug": "designButton",
+                "attrName": "btnIconSizeMargin.decoration.sizing",
+                "label": "Button Icon Size",
+                "description": "Here you can define Icon Size of dots wrapper.",
+                "features": {
+                  "hover": true,
+                  "sticky": false,
+                  "responsive": true,
+                  "preset": "content"
+                },
+                "render": true,
+                "priority": 10,
+                "component": {
+                  "type": "field",
+                  "name": "divi/range",
+                  "props": {
+                    "min": 1,
+                    "step": 1,
+                    "max": 120,
+                    "defaultValue": "20px",
+                    "defaultUnit": "px",
+                    "allowedUnits": ["px"]
+                  }
+                }
+              }
+            },
+            "spacing": {
+              "groupType": "group-item",
+              "item": {
+                "groupSlug": "designButton",
+                "attrName": "btnIconSizeMargin.decoration.spacing",
+                "priority": 20,
+                "render": true,
+                "component": {
+                  "type": "group",
+                  "name": "divi/spacing",
+                  "props": {
+                    "grouped": false,
+                    "groupLabel": "Button Icon",
+                    "fieldLabel": "Button Icon",
+                    "fields": {
+                      "padding": {
+                        "render": false
                       }
                     }
                   }
@@ -1338,7 +1416,7 @@
         "inlineEditor": "plainText",
         "childrenSanitizer": "et_core_esc_previously",
         "styleProps": {
-          "selector": "{{selector}} .df_cci_container"
+          "selector": ".difl_contentcarousel {{selector}} .df_cci_container"
         },
         "settings": {
           "innerContent": {},

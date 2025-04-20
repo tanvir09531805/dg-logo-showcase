@@ -10,7 +10,6 @@ import './styles.scss';
 
 export const logoShowcas = {
 	metadata: metadata,
-	// childrenName: ['diviflash/bento-grid-item'],
 	settings: {
 		content: Content,
 		design: Design,

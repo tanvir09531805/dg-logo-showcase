@@ -9,7 +9,7 @@ use ET\Builder\Framework\DependencyManagement\Interfaces\DependencyInterface;
 use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 
 class ContentCarousel implements DependencyInterface {
-	use Traits\RenderCallback;
+	use RenderCallback;
 
 	/**
 	 * Loads `ParentModule` and registers Front-End render callback and REST API Endpoints.
