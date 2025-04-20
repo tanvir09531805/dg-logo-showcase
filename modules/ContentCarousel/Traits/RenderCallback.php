@@ -83,10 +83,6 @@ trait RenderCallback {
 		}else{
 			$arrowAlignment = 'space-between';
 		}
-		// echo '<pre>'; // btnIconSizeMargin.decoration.sizing | spacing
-		// 	var_dump($attrs['btnIconSizeMargin']['decoration']['sizing']);
-		// 	var_dump($attrs['btnIconSizeMargin']['decoration']['spacing']);
-		// echo '</pre>';
 
         $carouselSetting = [
             'effect' => $carouselType, // $this->props['carousel_type'],
@@ -115,9 +111,6 @@ trait RenderCallback {
             'use_lightbox_title' => $titleLightbox
         ];
 
-		// attrs.addSettingCarousel?.innerContent?.slideShadows.desktop?.value?.slideShadows
-		
-
 		if ($carouselType === 'coverflow') {
 			$ccAdvancedData = $attrs['addSettingCarousel']['innerContent'];
 			$slideShadows   = isset($ccAdvancedData['slideShadows']['desktop']['value']['slideShadows']) ? $ccAdvancedData['slideShadows']['desktop']['value']['slideShadows'] : 'off';
@@ -144,10 +137,6 @@ trait RenderCallback {
 			]
 		);
 
-		
-		// data-my="{&quot;effect&quot;:&quot;coverflow&quot;,&quot;desktop&quot;:&quot;5&quot;,&quot;tablet&quot;:&quot;3&quot;,&quot;mobile&quot;:&quot;1&quot;,&quot;loop&quot;:true,&quot;item_spacing&quot;:&quot;30px&quot;,&quot;item_spacing_tablet&quot;:&quot;30px&quot;,&quot;item_spacing_phone&quot;:&quot;30px&quot;,&quot;arrow&quot;:&quot;on&quot;,&quot;dots&quot;:&quot;on&quot;,&quot;autoplay&quot;:&quot;off&quot;,&quot;autoplay_tablet&quot;:&quot;off&quot;,&quot;autoplay_phone&quot;:&quot;off&quot;,&quot;auto_delay&quot;:&quot;2000&quot;,&quot;auto_delay_tablet&quot;:&quot;2000&quot;,&quot;auto_delay_phone&quot;:&quot;2000&quot;,&quot;speed&quot;:&quot;500&quot;,&quot;pause_hover&quot;:&quot;off&quot;,&quot;pause_hover_tablet&quot;:&quot;off&quot;,&quot;pause_hover_phone&quot;:&quot;off&quot;,&quot;centeredSlides&quot;:&quot;off&quot;,&quot;order&quot;:&quot;0&quot;,&quot;use_lightbox&quot;:&quot;on&quot;,&quot;use_lightbox_title&quot;:&quot;off&quot;,&quot;slideShadows&quot;:&quot;on&quot;,&quot;rotate&quot;:&quot;30&quot;,&quot;stretch&quot;:&quot;20&quot;,&quot;depth&quot;:&quot;16&quot;,&quot;modifier&quot;:&quot;3&quot;}"
-				
-		
 		$child_all_items = sprintf('<div class="df_cc_container %8$s" data-settings=\'%1$s\' data-item="%2$s" data-itemtablet="%3$s" data-itemphone="%4$s" >
                 <div class="df_cc_inner_wrapper">
                     <div class="swiper-container">
@@ -203,38 +192,37 @@ trait RenderCallback {
 	}
 	
 	public static function difl_load_required_divi_assets( $assets_list, $assets_args, $instance  ) {
-		$assets_prefix  = et_get_dynamic_assets_path();
-		// echo ' kjjjjjjjjjjjjjjjjjj '.$assets_prefix;
-
-
-		if ( ! isset( $assets_list['et_icons_all'] ) ) {
-			$assets_list['et_icons_all'] = [
-				'css' => "{$assets_prefix}/css/icons_all.css",
-			];
-		}
-
-		if ( ! isset( $assets_list['et_icons_fa'] ) ) {
-			$assets_list['et_icons_fa'] = [
-				'css' => "{$assets_prefix}/css/icons_fa_all.css",
-			];
-		}
+	   
+		$temp_url	  = get_template_directory_uri();
+ 		$icons_all 	  = $temp_url."/includes/builder/feature/dynamic-assets/assets/css/icons_all.css";
+ 		$icons_fa_all = $temp_url."/includes/builder/feature/dynamic-assets/assets/css/icons_fa_all.css";
+ 	
+ 		if ( ! isset( $assets_list['et_icons_all'] ) ) {
+ 			$assets_list['et_icons_all'] = [
+ 				'css' => $icons_all,
+ 			];
+ 		}
+ 
+ 		if ( ! isset( $assets_list['et_icons_fa'] ) ) {
+ 			$assets_list['et_icons_fa'] = [
+ 				'css' => $icons_fa_all,
+ 			];
+ 		}
 
 		return $assets_list;
 	}
 
 	// Register the required Divi assets dynamically.
 	public static function register_divi_assets() {
-		// divi_frontend_assets_dynamic_assets_global_assets_list == et_global_assets_list
+		
 		add_filter(
-			'et_global_assets_list',
+			'divi_frontend_assets_dynamic_assets_global_assets_list',
 			[ self::class, 'difl_load_required_divi_assets' ],
 			10,
 			3
 		);
-
-		// divi_frontend_assets_dynamic_assets_late_global_assets_list == et_late_global_assets_list
 		add_filter(
-			'et_late_global_assets_list',
+			'divi_frontend_assets_dynamic_assets_late_global_assets_list',
 			[ self::class, 'difl_load_required_divi_assets' ],
 			10,
 			3
