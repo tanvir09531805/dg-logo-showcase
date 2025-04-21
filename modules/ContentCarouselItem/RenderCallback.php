@@ -1,6 +1,6 @@
 <?php
 
-namespace DIVIFLASH\Modules\ContentCarouselItem;
+namespace DIFL\Modules\ContentCarouselItem;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Direct access forbidden.' );
@@ -13,7 +13,7 @@ use ET\Builder\Packages\IconLibrary\IconFont\Utils;
 use ET\Builder\Packages\Module\Options\Element\ElementComponents;
 use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 use ET\Builder\Packages\ModuleLibrary\Button\ButtonModuleUtils;
-use DIVIFLASH\modules\ContentCarouselItem\ContentCarouselItem;
+use DIFL\modules\ContentCarouselItem\ContentCarouselItem;
 
 trait RenderCallback {
 	
@@ -29,17 +29,25 @@ trait RenderCallback {
 		$icon_value   = isset($attrs['useIcon']['decoration']['icon']['desktop']['value']) ? $attrs['useIcon']['decoration']['icon']['desktop']['value'] : '';
 		$iconHasValue = isset($attrs['imageIcon']['innerContent']['desktop']['value']['useIcon']) ? $attrs['imageIcon']['innerContent']['desktop']['value']['useIcon']: 'off';
 		
-		// btn 
+		// Button.
 		$btn 	   =  isset($attrs['button']['innerContent']['desktop']['value'])?$attrs['button']['innerContent']['desktop']['value']:$attrs;
   		$linkTarget= (isset($btn['linkTarget']) && 'on' === $btn['linkTarget']) ? '_blank':'_self';
 		$btnMarkup = isset($btn['text']) ?
 				'<div class="df_cci_button_wrapper">
 					<a href="'.$btn['linkUrl'].'" class="df_cci_button" target="'.$linkTarget.'">'.$btn['text'].'</a>
 				</div>' : '';
+		/*
+		echo '<pre>';
+			var_dump($attrs['button']['innerContent']);
+			// var_dump($attrs['useIcon']['decoration']['icon']);
+		echo '</pre>';
+		*/
+		
 		// Image
-		$image 	   = $attrs['useImage']['innerContent']['items']['src']['desktop']['value'] ?? "";
-		$imgSetAlt = $attrs['useImage']['innerContent']['items']['alt']['desktop']['value']['alt'] ?? "";
-		$imgAltText= $imgSetAlt?:$image['alt'];
+		$image 	   = $attrs['useImage']['innerContent']['desktop']['value'] ?? "";
+		$img_src   = $attrs['useImage']['innerContent']['desktop']['value']['src'] ?? "";
+		$imgSetAlt = $attrs['useImage']['innerContent']['desktop']['value']['alt'] ?? "";
+		$imgAltText= $imgSetAlt?:"";
 		
 		$image_markup = "";
 		if ( is_array($image) && !empty($image['src']) ) {
@@ -47,10 +55,10 @@ trait RenderCallback {
 				[
 					'tag'               => 'div',
 					'childrenSanitizer' => 'et_core_esc_previously',
-					'children'          => "<img src='{$image['src']}' alt='{$imgAltText}' title='{$image['titleText']}' />",
+					'children'          => "<img src='{$img_src}' alt='{$imgAltText}' title='{$image['titleText']}' />",
 					'attributes'        => [
 						'class'    => 'df_cci_image_container',
-						'data-src' => $image['src'],
+						'data-src' => $img_src,
 					],
 				]
 			);
@@ -93,7 +101,7 @@ trait RenderCallback {
 		);
 		
 		$difl_content_carousel_item = '
-			<div class="df_cci_container" data-src="'.$image['src'].'">
+			<div class="df_cci_container" data-src="'.$img_src.'">
 				' . $image_markup . '
 				'.$title.'
 				'.$subTitle.'

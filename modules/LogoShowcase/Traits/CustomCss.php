@@ -1,6 +1,6 @@
 <?php
 
-namespace DIVIFLASH\Modules\LogoShowcase\Traits;
+namespace DIFL\Modules\LogoShowcase\Traits;
 
 trait CustomCss {
 	/**
@@ -14,6 +14,6 @@ trait CustomCss {
 	 * @since ??
 	 */
 	public static function custom_css() {
-		return \WP_Block_Type_Registry::get_instance()->get_registered( 'diviflash/logo-showcase' )->customCssFields;
+		return \WP_Block_Type_Registry::get_instance()->get_registered( 'difl/logo-showcase' )->customCssFields;
 	}
 }

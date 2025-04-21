@@ -65,10 +65,9 @@ E:\laragon\www\divi5a\wp-content\themes\Divi\includes\builder-5\visual-builder\p
 "slug": "difl_contentcarouselitem",
 
 
-https://github.com/echoasoftltd/diviflash/pull/328/files#diff-48693779d11e3cf68d94b6f5f4b0c61338cbc6205a20bb6b1e335ebbbd664d4b
+https://github.com/echoasoftltd/difl/pull/328/files#diff-48693779d11e3cf68d94b6f5f4b0c61338cbc6205a20bb6b1e335ebbbd664d4b
 
 need to flow conversion outline for Spacing, Background, Icon etc.
 
-https://github.com/echoasoftltd/diviflash/blob/421249ddef5b80982bf9db3a7a05a60d76a2991f/divi-5/visual-builder/src/modules/advanced-button/conversion-outline.js
-
+NODE_ENV=production webpack --config webpack.config.js --progress
 */

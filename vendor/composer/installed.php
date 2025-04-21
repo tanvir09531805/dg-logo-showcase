@@ -1,6 +1,6 @@
 <?php return array(
     'root' => array(
-        'name' => 'divi/diviflash',
+        'name' => 'divi/difl',
         'pretty_version' => '1.0.0+no-version-set',
         'version' => '1.0.0.0',
         'reference' => null,
@@ -10,7 +10,7 @@
         'dev' => true,
     ),
     'versions' => array(
-        'divi/diviflash' => array(
+        'divi/difl' => array(
             'pretty_version' => '1.0.0+no-version-set',
             'version' => '1.0.0.0',
             'reference' => null,

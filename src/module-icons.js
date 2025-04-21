@@ -18,8 +18,8 @@ const icons = importAll(require.context('./icons/module-icons', false, /\.svg$/)
 // Generate the icon configurations for the Divi library
 const iconConfigs = Object.keys(icons).reduce((acc, iconName) => {
     const IconComponent = icons[iconName];
-    acc[`diviflash/${iconName}`] = {
-        name: `diviflash/${iconName}`,
+    acc[`difl/${iconName}`] = {
+        name: `difl/${iconName}`,
         viewBox: "0 0 64 64", // Adjust the viewBox if needed
         component: () => <IconComponent width="64" height="65" />, // Use the component here
     };
@@ -27,7 +27,7 @@ const iconConfigs = Object.keys(icons).reduce((acc, iconName) => {
 }, {});
 
 // Add module icons to the icon library.
-addFilter('divi.iconLibrary.icon.map', 'DIVIFLASH', (icons) => {
+addFilter('divi.iconLibrary.icon.map', 'DIFL', (icons) => {
 	return {
 		...icons, // This is important. Without this, all other icons will be overwritten.
         ...iconConfigs,

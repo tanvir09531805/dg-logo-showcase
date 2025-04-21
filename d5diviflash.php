@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: D5 DiviFlash
-Plugin URI:  http://www.diviflash.com
+Plugin URI:  http://www.difl.com
 Description: Most advanced Divi plugin with powerful Divi modules, extensions, and premade layouts.
 Version:     1.0.2
 Author:      DiviFlash
-Author URI:  http://www.diviflash.com
+Author URI:  http://www.difl.com
 License:     GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: divi_flash

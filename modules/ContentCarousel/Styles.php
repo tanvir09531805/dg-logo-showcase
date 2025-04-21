@@ -1,6 +1,6 @@
 <?php
 
-namespace DIVIFLASH\Modules\ContentCarousel;
+namespace DIFL\Modules\ContentCarousel;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Direct access forbidden.' );
@@ -10,7 +10,7 @@ use ET\Builder\FrontEnd\Module\Style;
 use ET\Builder\Packages\Module\Layout\Components\StyleCommon\CommonStyle;
 use ET\Builder\Packages\Module\Options\Css\CssStyle;
 use ET\Builder\Packages\StyleLibrary\Utils\StyleDeclarations;
-use DIVIFLASH\Modules\ContentCarousel\ContentCarousel;
+use DIFL\Modules\ContentCarousel\ContentCarousel;
 
 trait Styles {
 	use CustomCss;
@@ -104,21 +104,21 @@ trait Styles {
 					CommonStyle::style(
 						[
 							'selector' => "{$order_class} .df_cc_arrows div",
-							'attr'     => $attrs['arrows']['advanced']['arrowOpacity'] ?? [],
+							'attr'     => $attrs['arrows']['advanced'] ?? [],
 							'declarationFunction' => [ self::class, 'df_arrow_opacity' ],
 						]
 					),
 					CommonStyle::style(
 						[
 							'selector'  		  => "{$order_class} .df_cc_arrows",
-							'attr'                => $attrs['arrows']['advanced']['arrowPosition'] ?? [],
+							'attr'                => $attrs['arrows']['advanced'] ?? [],
 							'declarationFunction' => [ self::class, 'df_arrow_pos_styles' ], 
 						]
 					),
 					CommonStyle::style(
 						[
 							'selector'  		  => "{$order_class} .df_cc_arrows",
-							'attr'                => $attrs['arrows']['advanced']['arrowAlignment'] ?? [],
+							'attr'                => $attrs['arrows']['advanced'] ?? [],
 							'declarationFunction' => [ self::class, 'df_arrow_alignment_styles' ], 
 						]
 					),

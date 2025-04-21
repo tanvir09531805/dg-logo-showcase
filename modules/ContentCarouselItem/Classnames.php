@@ -1,6 +1,6 @@
 <?php
 
-namespace DIVIFLASH\Modules\ContentCarouselItem;
+namespace DIFL\Modules\ContentCarouselItem;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Direct access forbidden.' );

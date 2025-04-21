@@ -1,7 +1,25 @@
-export const convertInlineValue = (value) => {
-	return _.isString(value) ? value.split(',') : [];
-};
 
+export const convertIcon = ( value ) => {
+	value = value.split("|");
+	value = {
+		unicode:value[0],
+		type:value[2],
+		weight:value[4],
+	}
+	return value
+}
+export const convertSpacing = ( value ) => {
+	value = value.split("|");
+	value = {
+		top:value[0],
+		right:value[1],
+		bottom:value[2],
+		left:value[3],
+		syncHorizontal:value[4],
+		syncVertical:value[5],
+	}
+	return value
+}
 export const convertBackground = ( d4Key, d5Key ) => {
 	return {
 		[`${d4Key}_bgcolor`]:`${d5Key}.decoration.background.*.color`,
@@ -25,30 +43,7 @@ export const convertBackground = ( d4Key, d5Key ) => {
 	}
 }
 
-export const convertSpacing = ( value ) => {
-	value = value.split( "|" );
-	value = {
-		top: value[ 0 ],
-		right: value[ 1 ],
-		bottom: value[ 2 ],
-		left: value[ 3 ],
-		syncHorizontal: value[ 4 ],
-		syncVertical: value[ 5 ],
-	}
-	return value
-}
-
-export const convertIcon = ( value ) => {
-	value = value.split( "|" );
-	value = {
-		unicode: value[ 0 ],
-		type: value[ 2 ],
-		weight: value[ 4 ],
-	}
-	return value
-}
-
-export const convertRoundedCorner = ( value ) => {
+export const D4ToD5RoundedCorner = ( value ) => {
 	value = value.split( "|" );
 	value = {
 		radius: {
@@ -61,8 +56,7 @@ export const convertRoundedCorner = ( value ) => {
 	}
 	return value
 }
-
-export const convertCustomMargin = ( value ) => {
+export const D4ToD5CustomMargin = ( value ) => {
 	value = value.split( "|" );
 	value = {
 		padding: {
@@ -76,3 +70,4 @@ export const convertCustomMargin = ( value ) => {
 	}
 	return value
 }
+

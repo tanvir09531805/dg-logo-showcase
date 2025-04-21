@@ -194,17 +194,17 @@ export const Styles = ( {
 			/>
 			<CommonStyle
 				selector={`${orderClass} .df_cc_arrows div`}
-				attr={attrs?.arrows?.advanced?.arrowOpacity}
+				attr={attrs?.arrows?.advanced}
 				declarationFunction={dfArrowOpacity}
 			/>
 			<CommonStyle
 				selector={`${orderClass} .df_cc_arrows`}
-				attr={attrs?.arrows?.advanced?.arrowPosition ?? {}}
+				attr={attrs?.arrows?.advanced ?? {}}
 				declarationFunction={dfArrowPosStyles}
 			/>
 			<CommonStyle
 				selector={`${orderClass} .df_cc_arrows`}
-				attr={attrs?.arrows?.advanced?.arrowAlignment ?? {}}
+				attr={attrs?.arrows?.advanced ?? {}}
 				declarationFunction={dfArrowAlignmentStyles}
 			/>
 			

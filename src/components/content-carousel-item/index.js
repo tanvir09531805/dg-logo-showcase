@@ -8,7 +8,7 @@ export const advancedCarouselItem = {
 	renderers: {
 		edit: Edit,
 	},
-	parentsName: [ 'diviflash/content-carousel' ],
+	parentsName: [ 'difl/content-carousel' ],
 	conversionOutline,
 };
 
@@ -46,7 +46,7 @@ function imageAltTextHas({
 	return imgSetAlt ? imgSetAlt : imageAlt;
 }
   
-window.vendor.wp.hooks.addFilter('divi.moduleLibrary.moduleAttributes.diviflash.content-carousel-item', 'divi', (attributes, metadata) => {
+window.vendor.wp.hooks.addFilter('divi.moduleLibrary.moduleAttributes.difl.content-carousel-item', 'divi', (attributes, metadata) => {
   
 	attributes.useIcon.settings.decoration.background.item.component.props.visible = iconPickerVisible;
 	attributes.useIcon.settings.decoration.icon.items.icon.visible = iconPickerVisible;

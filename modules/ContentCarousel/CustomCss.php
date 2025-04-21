@@ -1,6 +1,6 @@
 <?php
 
-namespace DIVIFLASH\Modules\ContentCarousel;
+namespace DIFL\Modules\ContentCarousel;
 
 trait CustomCss {
 	// Custom CSS fields

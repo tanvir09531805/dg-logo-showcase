@@ -1,6 +1,6 @@
 <?php
 
-namespace DIVIFLASH\Modules\LogoShowcase\Traits;
+namespace DIFL\Modules\LogoShowcase\Traits;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Direct access forbidden.' );

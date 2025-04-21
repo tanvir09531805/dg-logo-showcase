@@ -60,17 +60,17 @@ export const Edit = ( props ) => {
     };
 
     let selector = wrapper.current.querySelector('.swiper-container');
-    let cc_speed = ccData?.speed?.desktop?.value?.speed ?? '500';
-    let cc_loop  = ccData?.loop?.desktop?.value?.loop === 'on' ? true : false;
-    let centerSlides = ccData?.centerSlides?.desktop?.value?.centerSlides === 'on' ? true : false;
-    let carouselType = ccData?.carouselType?.desktop?.value?.carouselType ? ccData?.carouselType?.desktop?.value?.carouselType : 'slide';
+    let cc_speed = ccData?.desktop?.value?.speed ?? '500';
+    let cc_loop  = ccData?.desktop?.value?.loop === 'on' ? true : false;
+    let centerSlides = ccData?.desktop?.value?.centerSlides === 'on' ? true : false;
+    let carouselType = ccData?.desktop?.value?.carouselType ? ccData?.desktop?.value?.carouselType : 'slide';
 
-    let slideToShowD = ccData?.maxSlide?.desktop?.value?.maxSlide ?? 3;
-    let slideToShowT = ccData?.maxSlide?.tablet?.value?.maxSlide ?? 2;
-    let slideToShowP = ccData?.maxSlide?.phone?.value?.maxSlide ?? 1;
-    let item_spacing = ccData?.spacingPx?.desktop?.value?.spacingPx ?? '30px';
-    let item_spacingT= ccData?.spacingPx?.tablet?.value?.spacingPx ? ccData?.spacingPx?.tablet?.value?.spacingPx : item_spacing;
-    let item_spacingP= ccData?.spacingPx?.phone?.value?.spacingPx ? ccData?.spacingPx?.phone?.value?.spacingPx : item_spacingT;
+    let slideToShowD = ccData?.desktop?.value?.maxSlide ?? 3;
+    let slideToShowT = ccData?.tablet?.value?.maxSlide ?? 2;
+    let slideToShowP = ccData?.phone?.value?.maxSlide ?? 1;
+    let item_spacing = ccData?.desktop?.value?.spacingPx ?? '30px';
+    let item_spacingT= ccData?.tablet?.value?.spacingPx ? ccData?.tablet?.value?.spacingPx : item_spacing;
+    let item_spacingP= ccData?.phone?.value?.spacingPx ? ccData?.phone?.value?.spacingPx : item_spacingT;
 
     let config = {
         init: false,
@@ -78,16 +78,16 @@ export const Edit = ( props ) => {
         loop: cc_loop,
         effect: carouselType,
         centeredSlides: centerSlides,
-        // autoplay: false,
-        threshold: 15,
         slideClass: 'difl_contentcarouselitem',
-        observer: true,
-        observeParents: true,
-        observeSlideChildren: true,
-        watchSlidesVisibility: true,
-        preventClicks : true,
-        preventClicksPropagation: true,
-        slideToClickedSlide: false,
+        // autoplay: false,
+        // threshold: 15,
+        // observer: true,
+        // observeParents: true,
+        // observeSlideChildren: true,
+        // watchSlidesVisibility: true,
+        // preventClicks : true,
+        // preventClicksPropagation: true,
+        // slideToClickedSlide: false,
         breakpoints: {
             // desktop
             981: {
@@ -110,11 +110,11 @@ export const Edit = ( props ) => {
     // effect
     if (carouselType === 'coverflow') {
       const ccAdvancedData = attrs.addSettingCarousel?.innerContent;
-      const slideShadows   = ccAdvancedData?.slideShadows?.desktop?.value?.slideShadows ?? 'off';
-      const rotateInDegrees= ccAdvancedData?.rotateInDegrees?.desktop?.value?.rotateInDegrees ?? '30';
-      const stretchDepth   = ccAdvancedData?.stretchDepth?.desktop?.value?.stretchDepth ?? '20';
-      const spaceBetween   = ccAdvancedData?.spaceBetween?.desktop?.value?.spaceBetween ?? '16';
-      const effectMultipler= ccAdvancedData?.effectMultipler?.desktop?.value?.effectMultipler ?? '3';
+      const slideShadows   = ccAdvancedData?.desktop?.value?.slideShadows ?? 'off';
+      const rotateInDegrees= ccAdvancedData?.desktop?.value?.rotateInDegrees ?? '30';
+      const stretchDepth   = ccAdvancedData?.desktop?.value?.stretchDepth ?? '20';
+      const spaceBetween   = ccAdvancedData?.desktop?.value?.spaceBetween ?? '16';
+      const effectMultipler= ccAdvancedData?.desktop?.value?.effectMultipler ?? '3';
 
       config['coverflowEffect'] = {
         slideShadows: slideShadows === 'on' ? true : false,
@@ -126,30 +126,30 @@ export const Edit = ( props ) => {
     }
     
 
-    if (('off' === ccData?.autoplay?.desktop?.value?.autoplay && desktopBreakpoint)
-      || ('off' === ccData?.autoplay?.tablet?.value?.autoplay && tabletBreakpoint)
-      || ('off' === ccData?.autoplay?.phone?.value?.autoplay && mobileBreakpoint)) {
+    if (('off' === ccData?.desktop?.value?.autoplay && desktopBreakpoint)
+      || ('off' === ccData?.tablet?.value?.autoplay && tabletBreakpoint)
+      || ('off' === ccData?.phone?.value?.autoplay && mobileBreakpoint)) {
       config['autoplay'] = false
     }
 
-    if ('on' === ccData?.autoplay?.desktop?.value?.autoplay && desktopBreakpoint) {
+    if ('on' === ccData?.desktop?.value?.autoplay && desktopBreakpoint) {
       config['autoplay'] = {
-        delay : parseInt(ccData?.autoplaySpeed?.desktop?.value?.autoplaySpeed),
+        delay : parseInt(ccData?.desktop?.value?.autoplaySpeed),
         disableOnInteraction: false
       }
     }
 
 
-    if ('on' === ccData?.autoplay?.tablet?.value?.autoplay && tabletBreakpoint) {
+    if ('on' === ccData?.tablet?.value?.autoplay && tabletBreakpoint) {
       config['autoplay'] = {
-        delay: parseInt(ccData?.autoplaySpeed?.tablet?.value?.autoplaySpeed),
+        delay: parseInt(ccData?.tablet?.value?.autoplaySpeed),
         disableOnInteraction: false
       }
     }
 
-    if ('on' === ccData?.autoplay?.phone?.value?.autoplay && mobileBreakpoint) {
+    if ('on' === ccData?.phone?.value?.autoplay && mobileBreakpoint) {
       config['autoplay'] = {
-        delay: parseInt(ccData?.autoplaySpeed?.phone?.value?.autoplaySpeed),
+        delay: parseInt(ccData?.phone?.value?.autoplaySpeed),
         disableOnInteraction: false
       }
     }

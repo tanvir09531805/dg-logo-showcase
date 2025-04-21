@@ -13,7 +13,7 @@ import { advancedCarouselItem } from './components/content-carousel-item';
 import './module-icons';
 
 // Register modules.
-addAction('divi.moduleLibrary.registerModuleLibraryStore.after', 'DIVIFLASH', () => {
+addAction('divi.moduleLibrary.registerModuleLibraryStore.after', 'DIFL', () => {
 	registerModule(logoShowcas.metadata, omit(logoShowcas, 'metadata'));
 	registerModule(advancedCarousel.metadata, omit(advancedCarousel, 'metadata'));
 	registerModule(advancedCarouselItem.metadata, omit(advancedCarouselItem, 'metadata'));

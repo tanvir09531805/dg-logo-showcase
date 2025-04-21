@@ -1,6 +1,6 @@
 <?php
 
-namespace DIVIFLASH\Modules\LogoShowcase\Traits;
+namespace DIFL\Modules\LogoShowcase\Traits;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Direct access forbidden.' );
@@ -12,7 +12,7 @@ use ET\Builder\FrontEnd\BlockParser\BlockParserStore;
 use ET\Builder\Packages\Module\Module;
 use ET\Builder\Packages\Module\Options\Element\ElementComponents;
 use ET\Builder\Framework\Utility\HTMLUtility;
-use DIVIFLASH\modules\LogoShowcase\LogoShowcase;
+use DIFL\modules\LogoShowcase\LogoShowcase;
 
 trait RenderCallback {
 	use Classnames;

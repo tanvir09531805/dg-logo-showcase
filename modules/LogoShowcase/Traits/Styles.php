@@ -1,6 +1,6 @@
 <?php
 
-namespace DIVIFLASH\Modules\LogoShowcase\Traits;
+namespace DIFL\Modules\LogoShowcase\Traits;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Direct access forbidden.' );
@@ -10,7 +10,7 @@ use ET\Builder\FrontEnd\Module\Style;
 use ET\Builder\Packages\Module\Layout\Components\StyleCommon\CommonStyle;
 use ET\Builder\Packages\Module\Options\Css\CssStyle;
 use ET\Builder\Packages\StyleLibrary\Utils\StyleDeclarations;
-use DIVIFLASH\Modules\LogoShowcase\LogoShowcase;
+use DIFL\Modules\LogoShowcase\LogoShowcase;
 
 trait Styles {
 	use CustomCss;

@@ -1,6 +1,6 @@
 <?php
 
-namespace DIVIFLASH\Modules\ContentCarouselItem;
+namespace DIFL\Modules\ContentCarouselItem;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Direct access forbidden.' );
@@ -13,7 +13,7 @@ use ET\Builder\Packages\Module\Layout\Components\StyleCommon\CommonStyle;
 use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 use ET\Builder\Packages\IconLibrary\IconFont\Utils;
 use ET\Builder\Packages\StyleLibrary\Utils\StyleDeclarations;
-use DIVIFLASH\modules\ContentCarouselItem\ContentCarouselItem;
+use DIFL\modules\ContentCarouselItem\ContentCarouselItem;
 use Endroid\QrCode\Logo\Logo;
 
 trait Styles {
@@ -27,7 +27,7 @@ trait Styles {
 		$settings     = $args['settings'] ?? [];
 		$parent_attrs = $args['parentAttrs'] ?? [];
 
-		$parent_default_attributes = ModuleRegistration::get_default_attrs( 'diviflash/bento-grid' );
+		$parent_default_attributes = ModuleRegistration::get_default_attrs( 'difl/bento-grid' );
 		$parent_attrs_with_default = array_replace_recursive( $parent_default_attributes, $parent_attrs );
 
 		$icon_selector              = "{$order_class} .df_cci_image_container .et-pb-icon";
@@ -106,14 +106,14 @@ trait Styles {
 					CommonStyle::style(
 						[
 							'selector' => $icon_selector,
-							'attr'     => $attrs['useIcon']['decoration']['circleIcon'] ?? [],
+							'attr'     => $attrs['useIcon']['decoration'] ?? [],
 							'declarationFunction' => [ self::class, 'df_circle_icon' ],
 						]
 					),
 					CommonStyle::style(
 						[
 							'selector' => "{$order_class} .df_cci_image_container",
-							'attr'     => $attrs['useIcon']['decoration']['alignment'] ?? [],
+							'attr'     => $attrs['useIcon']['decoration'] ?? [],
 							'declarationFunction' => [ self::class, 'df_icon_alignment' ],
 						]
 					),

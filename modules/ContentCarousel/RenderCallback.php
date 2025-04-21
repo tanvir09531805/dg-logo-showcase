@@ -1,6 +1,6 @@
 <?php
 
-namespace DIVIFLASH\Modules\ContentCarousel;
+namespace DIFL\Modules\ContentCarousel;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Direct access forbidden.' );
@@ -10,7 +10,7 @@ use ET\Builder\FrontEnd\BlockParser\BlockParserStore;
 use ET\Builder\Packages\Module\Module;
 use ET\Builder\Packages\Module\Options\Element\ElementComponents;
 use ET\Builder\Framework\Utility\HTMLUtility;
-use DIVIFLASH\modules\ContentCarousel\ContentCarousel;
+use DIFL\modules\ContentCarousel\ContentCarousel;
 
 trait RenderCallback {
 	use Classnames;
@@ -34,31 +34,31 @@ trait RenderCallback {
 		$dotNavigation   = $attrs['dotNavigation']['advanced']['show']['desktop']['value']?"on":"off";
 
 		$ccData = $attrs['settingCarousel']['innerContent'];
-		$loop   = isset($ccData['loop']['desktop']['value']['loop']) && $ccData['loop']['desktop']['value']['loop'] === 'on' ? true : false; 
-		$speed  = isset($ccData['speed']['desktop']['value']['speed']) ? $ccData['speed']['desktop']['value']['speed'] : '500';
-		$carouselType 	= isset($ccData['carouselType']['desktop']['value']['carouselType']) ? $ccData['carouselType']['desktop']['value']['carouselType']: 'slide'; // coverflow
-		$maxSlideDesktop= isset($ccData['maxSlide']['desktop']['value']['maxSlide']) ? $ccData['maxSlide']['desktop']['value']['maxSlide'] : '3';
-		$maxSlideTablet = isset($ccData['maxSlide']['tablet']['value']['maxSlide']) ? $ccData['maxSlide']['tablet']['value']['maxSlide'] : $maxSlideDesktop;
-		$maxSlidePhone  = isset($ccData['maxSlide']['phone']['value']['maxSlide']) ? $ccData['maxSlide']['phone']['value']['maxSlide'] : $maxSlideTablet; 
-		$centerSlides 	= isset($ccData['centerSlides']['desktop']['value']['centerSlides']) ? $ccData['centerSlides']['desktop']['value']['centerSlides']: 'off'; 
-		$useLightbox 	= isset($ccData['useLightbox']['desktop']['value']['useLightbox']) ? $ccData['useLightbox']['desktop']['value']['useLightbox'] : 'off'; 
-		$titleLightbox  = isset($ccData['showTitleOnLightbox']['desktop']['value']['showTitleOnLightbox']) ? $ccData['showTitleOnLightbox']['desktop']['value']['showTitleOnLightbox'] : 'off';
+		$loop   = isset($ccData['desktop']['value']['loop']) && $ccData['desktop']['value']['loop'] === 'on' ? true : false; 
+		$speed  = isset($ccData['desktop']['value']['speed']) ? $ccData['desktop']['value']['speed'] : '500';
+		$carouselType 	= isset($ccData['desktop']['value']['carouselType']) ? $ccData['desktop']['value']['carouselType']: 'slide'; // coverflow
+		$maxSlideDesktop= isset($ccData['desktop']['value']['maxSlide']) ? $ccData['desktop']['value']['maxSlide'] : '3';
+		$maxSlideTablet = isset($ccData['tablet']['value']['maxSlide']) ? $ccData['tablet']['value']['maxSlide'] : $maxSlideDesktop;
+		$maxSlidePhone  = isset($ccData['phone']['value']['maxSlide']) ? $ccData['phone']['value']['maxSlide'] : $maxSlideTablet; 
+		$centerSlides 	= isset($ccData['desktop']['value']['centerSlides']) ? $ccData['desktop']['value']['centerSlides']: 'off'; 
+		$useLightbox 	= isset($ccData['desktop']['value']['useLightbox']) ? $ccData['desktop']['value']['useLightbox'] : 'off'; 
+		$titleLightbox  = isset($ccData['desktop']['value']['showTitleOnLightbox']) ? $ccData['desktop']['value']['showTitleOnLightbox'] : 'off';
 
-		$auto_play = isset($ccData['autoplay']['desktop']['value']['autoplay']) ? $ccData['autoplay']['desktop']['value']['autoplay'] : 'off';
-		$autoplay_tablet = isset($ccData['autoplay']['tablet']['value']['autoplay']) ? $ccData['autoplay']['tablet']['value']['autoplay'] : $auto_play;
-		$autoplay_phone = isset($ccData['autoplay']['phone']['value']['autoplay']) ? $ccData['autoplay']['phone']['value']['autoplay'] : $auto_play;
+		$auto_play = isset($ccData['desktop']['value']['autoplay']) ? $ccData['desktop']['value']['autoplay'] : 'off';
+		$autoplay_tablet = isset($ccData['tablet']['value']['autoplay']) ? $ccData['tablet']['value']['autoplay'] : $auto_play;
+		$autoplay_phone = isset($ccData['phone']['value']['autoplay']) ? $ccData['phone']['value']['autoplay'] : $auto_play;
 
-		$pause_hover = isset($ccData['pauseOnHover']['desktop']['value']['pauseOnHover']) ? $ccData['pauseOnHover']['desktop']['value']['pauseOnHover'] : 'off';
-		$pause_hover_tablet = isset($ccData['pauseOnHover']['tablet']['value']['pauseOnHover']) ? $ccData['pauseOnHover']['tablet']['value']['pauseOnHover'] : $pause_hover;
-		$pause_hover_phone = isset($ccData['pauseOnHover']['phone']['value']['pauseOnHover']) ? $ccData['pauseOnHover']['phone']['value']['pauseOnHover'] : $pause_hover_tablet;
+		$pause_hover = isset($ccData['desktop']['value']['pauseOnHover']) ? $ccData['desktop']['value']['pauseOnHover'] : 'off';
+		$pause_hover_tablet = isset($ccData['tablet']['value']['pauseOnHover']) ? $ccData['tablet']['value']['pauseOnHover'] : $pause_hover;
+		$pause_hover_phone = isset($ccData['phone']['value']['pauseOnHover']) ? $ccData['phone']['value']['pauseOnHover'] : $pause_hover_tablet;
 
-		$auto_delay = isset($ccData['autoplaySpeed']['desktop']['value']['autoplaySpeed']) ? $ccData['autoplaySpeed']['desktop']['value']['autoplaySpeed'] : '2000';
-		$auto_delay_tablet = isset($ccData['autoplaySpeed']['tablet']['value']['autoplaySpeed']) ? $ccData['autoplaySpeed']['tablet']['value']['autoplaySpeed'] : $auto_delay;
-		$auto_delay_phone = isset($ccData['autoplaySpeed']['phone']['value']['autoplaySpeed']) ? $ccData['autoplaySpeed']['phone']['value']['autoplaySpeed'] : $auto_delay_tablet;
+		$auto_delay = isset($ccData['desktop']['value']['autoplaySpeed']) ? $ccData['desktop']['value']['autoplaySpeed'] : '2000';
+		$auto_delay_tablet = isset($ccData['tablet']['value']['autoplaySpeed']) ? $ccData['tablet']['value']['autoplaySpeed'] : $auto_delay;
+		$auto_delay_phone = isset($ccData['phone']['value']['autoplaySpeed']) ? $ccData['phone']['value']['autoplaySpeed'] : $auto_delay_tablet;
 
-		$item_spacing = isset($ccData['spacingPx']['desktop']['value']['spacingPx']) ? $ccData['spacingPx']['desktop']['value']['spacingPx'] : '30';
-		$item_spacing_tablet = isset($ccData['spacingPx']['tablet']['value']['spacingPx']) ? $ccData['spacingPx']['tablet']['value']['spacingPx'] : $item_spacing;
-		$item_spacing_phone = isset($ccData['spacingPx']['phone']['value']['spacingPx']) ? $ccData['spacingPx']['phone']['value']['spacingPx'] : $item_spacing_tablet;
+		$item_spacing = isset($ccData['desktop']['value']['spacingPx']) ? $ccData['desktop']['value']['spacingPx'] : '30';
+		$item_spacing_tablet = isset($ccData['tablet']['value']['spacingPx']) ? $ccData['tablet']['value']['spacingPx'] : $item_spacing;
+		$item_spacing_phone = isset($ccData['phone']['value']['spacingPx']) ? $ccData['phone']['value']['spacingPx'] : $item_spacing_tablet;
 
 		$difl_cc_dots  = '<div class="swiper-pagination cc-dots-'.$order_number.'"></div>';
 		$difl_cc_arrow = '<div class="df_cc_arrows">
@@ -67,14 +67,14 @@ trait RenderCallback {
             </div>';
 			// arrows.advanced.arrowPosition
 		$classArrowPosition = 'arrow-middle';
-		$equalHeightItem    = $ccData['equalHeightItem']['desktop']['value']['equalHeightItem'] ?? 'off'; 
+		$equalHeightItem    = $ccData['desktop']['value']['equalHeightItem'] ?? 'off'; 
 		
-		if (isset($attrs['arrows']['advanced']['arrowPosition']['desktop']['value']['arrowPosition'])) {
-			$classArrowPosition = 'arrow-'.$attrs['arrows']['advanced']['arrowPosition']['desktop']['value']['arrowPosition'];
+		if (isset($attrs['arrows']['advanced']['desktop']['value']['arrowPosition'])) {
+			$classArrowPosition = 'arrow-'.$attrs['arrows']['advanced']['desktop']['value']['arrowPosition'];
 		}
 
-		if (isset($attrs['arrows']['advanced']['arrowAlignment']['desktop']['value']['arrowAlignment'])) {
-			$arrowAlignment = $attrs['arrows']['advanced']['arrowAlignment']['desktop']['value']['arrowAlignment'];
+		if (isset($attrs['arrows']['advanced']['desktop']['value']['arrowAlignment'])) {
+			$arrowAlignment = $attrs['arrows']['advanced']['desktop']['value']['arrowAlignment'];
 		}else{
 			$arrowAlignment = 'space-between';
 		}
@@ -107,12 +107,13 @@ trait RenderCallback {
         ];
 
 		if ($carouselType === 'coverflow') {
+			
 			$ccAdvancedData = $attrs['addSettingCarousel']['innerContent'];
-			$slideShadows   = isset($ccAdvancedData['slideShadows']['desktop']['value']['slideShadows']) ? $ccAdvancedData['slideShadows']['desktop']['value']['slideShadows'] : 'off';
-			$rotateInDegrees   = isset($ccAdvancedData['rotateInDegrees']['desktop']['value']['rotateInDegrees']) ? $ccAdvancedData['rotateInDegrees']['desktop']['value']['rotateInDegrees'] : '30';
-			$stretchDepth   = isset($ccAdvancedData['stretchDepth']['desktop']['value']['stretchDepth']) ? $ccAdvancedData['stretchDepth']['desktop']['value']['stretchDepth'] : '20';
-			$spaceBetween   = isset($ccAdvancedData['spaceBetween']['desktop']['value']['spaceBetween']) ? $ccAdvancedData['spaceBetween']['desktop']['value']['spaceBetween'] : '16';
-			$effectMultipler   = isset($ccAdvancedData['effectMultipler']['desktop']['value']['effectMultipler']) ? $ccAdvancedData['effectMultipler']['desktop']['value']['effectMultipler'] : '3';
+			$slideShadows   = isset($ccAdvancedData['desktop']['value']['slideShadows']) ? $ccAdvancedData['desktop']['value']['slideShadows'] : 'off';
+			$rotateInDegrees= isset($ccAdvancedData['desktop']['value']['rotateInDegrees']) ? $ccAdvancedData['desktop']['value']['rotateInDegrees'] : '30';
+			$stretchDepth   = isset($ccAdvancedData['desktop']['value']['stretchDepth']) ? $ccAdvancedData['desktop']['value']['stretchDepth'] : '20';
+			$spaceBetween   = isset($ccAdvancedData['desktop']['value']['spaceBetween']) ? $ccAdvancedData['desktop']['value']['spaceBetween'] : '16';
+			$effectMultipler= isset($ccAdvancedData['desktop']['value']['effectMultipler']) ? $ccAdvancedData['desktop']['value']['effectMultipler'] : '3';
 
             $carouselSetting['slideShadows'] = $slideShadows;
             $carouselSetting['rotate'] = $rotateInDegrees;

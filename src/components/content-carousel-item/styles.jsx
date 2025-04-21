@@ -150,12 +150,12 @@ export const Styles = ( {
 
 			<CommonStyle
 				selector={iconSelector}
-				attr={attrs?.useIcon?.decoration?.circleIcon}
+				attr={attrs?.useIcon?.decoration}
 				declarationFunction={dfCircleIcon}
 			/>
 			<CommonStyle
 				selector={iconAliSelect}
-				attr={attrs?.useIcon?.decoration?.alignment}
+				attr={attrs?.useIcon?.decoration}
 				declarationFunction={dfIconAlignment}
 			/>
 

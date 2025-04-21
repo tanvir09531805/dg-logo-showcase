@@ -4,7 +4,7 @@ import { Edit } from "./edit";
 
 export const advancedCarousel = {
 	metadata: metadata,
-	childrenName: ['diviflash/content-carousel-item'],
+	childrenName: ['difl/content-carousel-item'],
 	settings: {},
 	renderers: {
 		edit: Edit,
@@ -19,7 +19,7 @@ function enablesSlidesShadows({
 	responsiveMode,
 	stateMode,
   }) { 
-	return ('on' === attrs.addSettingCarousel?.innerContent?.slideShadows.desktop?.value?.slideShadows) ? true : false;
+	return ('on' === attrs.addSettingCarousel?.innerContent.desktop?.value?.slideShadows) ? true : false;
 }
 
 function carouselSettingAutoplay({
@@ -28,7 +28,7 @@ function carouselSettingAutoplay({
 	responsiveMode,
 	stateMode,
   }) {
-	return ("on" === attrs.settingCarousel?.innerContent?.autoplay?.desktop?.value?.autoplay) ? true : false;
+	return ("on" === attrs.settingCarousel?.innerContent?.desktop?.value?.autoplay) ? true : false;
 }
 
 function carouselSettingLightbox({
@@ -37,7 +37,7 @@ function carouselSettingLightbox({
 	responsiveMode,
 	stateMode,
   }) { 
-	return ("on" === attrs.settingCarousel?.innerContent?.useLightbox?.desktop?.value?.useLightbox) ? true : false;
+	return ("on" === attrs.settingCarousel?.innerContent?.desktop?.value?.useLightbox) ? true : false;
 }
 
 function arrowIconPrev({ attrs, }) { 
@@ -55,10 +55,10 @@ function carouselTypeCoverFlow({
 	stateMode,
   }) { 
 
-	return ("coverflow" === attrs.settingCarousel?.innerContent?.carouselType?.desktop?.value?.carouselType) ? true : false;
+	return ("coverflow" === attrs.settingCarousel?.innerContent?.desktop?.value?.carouselType) ? true : false;
 }
 
-window.vendor.wp.hooks.addFilter('divi.moduleLibrary.moduleAttributes.diviflash.content-carousel', 'divi', (attributes, metadata) => {
+window.vendor.wp.hooks.addFilter('divi.moduleLibrary.moduleAttributes.difl.content-carousel', 'divi', (attributes, metadata) => {
 
 	attributes.addSettingCarousel.settings.innerContent.items.shadowDarkColor.visible = enablesSlidesShadows;
 	attributes.addSettingCarousel.settings.innerContent.items.shadowLightColor.visible = enablesSlidesShadows;

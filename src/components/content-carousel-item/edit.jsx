@@ -40,8 +40,8 @@ export const Edit = ( props ) => {
 	const iconContent = getAttrByMode ( attrs?.icon?.innerContent );
 	const icon = isEmpty ( iconContent ) ? parentIconContent : iconContent;
 
-  const image     = attrs?.useImage?.innerContent?.items?.src?.desktop?.value;
-  const imgSetAlt = attrs?.useImage?.innerContent?.items?.alt?.desktop?.value?.alt;
+  const image     = attrs?.useImage?.innerContent?.desktop?.value;
+  const imgSetAlt = attrs?.useImage?.innerContent?.desktop?.value?.alt;
   const imgAltText= imgSetAlt ? imgSetAlt : image?.alt;
   const btn       = attrs.button?.innerContent?.desktop?.value;
   const linkTarget= 'on' === btn?.linkTarget ? '_blank':'_self';
@@ -49,6 +49,7 @@ export const Edit = ( props ) => {
   const iconHas   = attrs?.imageIcon?.innerContent?.desktop?.value?.useIcon ?? 'off';
   let iconMarkup = null;
   
+ 
   if (!isEmpty(iconValue) && iconHas === 'on') {
     iconMarkup = (
       <div className="df_cci_image_container">
