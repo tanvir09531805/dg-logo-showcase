@@ -1,0 +1,208 @@
+{
+    "question_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "normal",
+                            "size": "22px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "active_design_question_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "normal",
+                            "size": "22px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "design_answer_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "normal",
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "ans_button": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "normal",
+                            "size": "18px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "content_heading_1": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "30px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "enable_question_image": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "close_que_img_alt_txt": {
+        "innerContent": {
+            "desktop": {
+                "value": "Closed image alt text"
+            }
+        }
+    },
+    "open_que_img_alt_txt": {
+        "innerContent": {
+            "desktop": {
+                "value": "Opened image alt text"
+            }
+        }
+    },
+    "question_image_placement": {
+        "innerContent": {
+            "desktop": {
+                "value": "inherit"
+            }
+        }
+    },
+    "enable_answer_image": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "answer_image_alt_text": {
+        "innerContent": {
+            "desktop": {
+                "value": "Answer image alt text"
+            }
+        }
+    },
+    "answer_image_placement": {
+        "innerContent": {
+            "desktop": {
+                "value": "column-reverse"
+            }
+        }
+    },
+    "answer_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "50%"
+            }
+        }
+    },
+    "answer_image_width_top_bottom": {
+        "innerContent": {
+            "desktop": {
+                "value": "100%"
+            }
+        }
+    },
+    "answer_image_full_width_mobile": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "answer_image_alignment": {
+        "innerContent": {
+            "desktop": {
+                "value": "left"
+            }
+        }
+    },
+    "enable_answer_button": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "button_text": {
+        "innerContent": {
+            "desktop": {
+                "value": "Button"
+            }
+        }
+    },
+    "button_url": {
+        "innerContent": {
+            "desktop": {
+                "value": "#"
+            }
+        }
+    },
+    "button_full_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "use_button_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "button_font_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": {
+                    "unicode": "5",
+                    "type": "",
+                    "weight": ""
+                }
+            }
+        }
+    },
+    "button_icon_placement": {
+        "innerContent": {
+            "desktop": {
+                "value": "right"
+            }
+        }
+    },
+    "show_icon_hover": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    }
+}

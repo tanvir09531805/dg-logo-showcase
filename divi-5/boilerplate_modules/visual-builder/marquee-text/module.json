@@ -1,0 +1,784 @@
+{
+    "name": "difl/marqueetext",
+    "d4Shortcode": "difl_marqueetext",
+    "title": "Marquee Text",
+    "titles": "Marquee Texts",
+    "category": "module",
+    "moduleIcon": "difl/marquee-text",
+    "childModuleName": "difl/marqueetextitem",
+    "childrenName": [
+        "difl/marqueetextitem"
+    ],
+    "settings": {
+        "content": "auto",
+        "design": "auto",
+        "advanced": "auto",
+        "groups": {
+            "settings": {
+                "panel": "content",
+                "groupName": "settings",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Settings"
+                    }
+                }
+            },
+            "background": {
+                "panel": "content",
+                "groupName": "background",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Background"
+                    }
+                }
+            },
+            "link_options": {
+                "panel": "content",
+                "groupName": "link_options",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Link"
+                    }
+                }
+            },
+            "admin_label": {
+                "panel": "content",
+                "groupName": "admin_label",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Admin Label"
+                    }
+                }
+            },
+            "contentLink": {
+                "panel": "content",
+                "groupName": "link",
+                "priority": 100,
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Link",
+                        "preset": "content"
+                    }
+                }
+            },
+            "design_text": {
+                "panel": "design",
+                "groupName": "design_text",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Content"
+                    }
+                }
+            },
+            "design_media": {
+                "panel": "design",
+                "groupName": "design_media",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Image &amp; Icon"
+                    }
+                }
+            },
+            "border": {
+                "panel": "design",
+                "groupName": "border",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Border"
+                    }
+                }
+            },
+            "box_shadow": {
+                "panel": "design",
+                "groupName": "box_shadow",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Box Shadow"
+                    }
+                }
+            },
+            "transform": {
+                "panel": "design",
+                "groupName": "transform",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Transform"
+                    }
+                }
+            },
+            "width": {
+                "panel": "design",
+                "groupName": "width",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Sizing"
+                    }
+                }
+            },
+            "margin_padding": {
+                "panel": "design",
+                "groupName": "margin_padding",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Spacing"
+                    }
+                }
+            },
+            "filters": {
+                "panel": "design",
+                "groupName": "filters",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Filters"
+                    }
+                }
+            },
+            "animation": {
+                "panel": "design",
+                "groupName": "animation",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Animation"
+                    }
+                }
+            }
+        }
+    },
+    "customCssFields": {
+        "title": {
+            "label": "Label 1"
+        },
+        "content": {
+            "label": "Label 2"
+        }
+    },
+    "attributes": {
+        "module": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "meta": {
+                    "adminLabel": {
+                        "component": {
+                            "type": "group",
+                            "name": "divi/admin-label"
+                        }
+                    }
+                },
+                "advanced": {
+                    "link": {
+                        "item": {
+                            "groupSlug": "contentLink",
+                            "component": {
+                                "props": {
+                                    "fieldLabel": ""
+                                }
+                            }
+                        }
+                    }
+                },
+                "decoration": {
+                    "background": {
+                        "component": {
+                            "type": "group",
+                            "name": "divi/background",
+                            "props": {
+                                "hidePanels": []
+                            }
+                        }
+                    },
+                    "border": {},
+                    "boxShadow": {},
+                    "spacing": {}
+                }
+            },
+            "default": {
+                "meta": {
+                    "adminLabel": {
+                        "desktop": {
+                            "value": "Marquee Text"
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "spacing": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}}.et_pb_module"
+                        }
+                    }
+                }
+            }
+        },
+        "title": {
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_text",
+                            "attrName": "title.decoration.font",
+                            "label": null,
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "",
+                                    "fields": {
+                                        "headingLevel": {
+                                            "render": false
+                                        },
+                                        "textAlign": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_marqueetext_wrapper .df_marquee_text>*:not(.df_marquee_media)",
+                            "hover": "{{selector}} .df_marqueetext_wrapper .df_marquee_text:hover>*:not(.df_marquee_media)"
+                        }
+                    }
+                }
+            }
+        },
+        "text_media_border": {
+            "settings": {
+                "decoration": {
+                    "border": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_media",
+                            "attrName": "text_media_border.decoration.border",
+                            "label": "",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/border",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": null
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "border": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_marqueetext_wrapper .df_marquee_text .df_marquee_media",
+                            "hover": "{{selector}} .df_marqueetext_wrapper .df_marquee_text:hover .df_marquee_media"
+                        }
+                    }
+                }
+            }
+        },
+        "text_media_boxshadow": {
+            "settings": {
+                "decoration": {
+                    "boxShadow": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_media",
+                            "attrName": "text_media_boxshadow.decoration.boxShadow",
+                            "label": "Box Shadow",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/box-shadow",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Box Shadow"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "boxShadow": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_marqueetext_wrapper .df_marquee_text .df_marquee_media",
+                            "hover": "{{selector}} .df_marqueetext_wrapper .df_marquee_text:hover .df_marquee_media"
+                        }
+                    }
+                }
+            }
+        },
+        "ticker_hover": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "settings",
+                        "render": true,
+                        "attrName": "ticker_hover.innerContent",
+                        "label": "Pause On Hover",
+                        "description": "Animation will pause on mouse hover.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            }
+        },
+        "ticker_loop": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "settings",
+                        "render": true,
+                        "attrName": "ticker_loop.innerContent",
+                        "label": "Loop",
+                        "description": "The marquee will be duplicated to show the effect of continuous flow.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            }
+        },
+        "ticker_gap": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "settings",
+                        "render": true,
+                        "attrName": "ticker_gap.innerContent",
+                        "label": "Gap",
+                        "description": "Here, you can control the space in pixels between the items.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [
+                                    "px"
+                                ],
+                                "defaultUnit": "px",
+                                "min": "0",
+                                "max": "1000",
+                                "minLimit": "0",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ticker_speed": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "settings",
+                        "render": true,
+                        "attrName": "ticker_speed.innerContent",
+                        "label": "Speed (ms)",
+                        "description": "Here you can control the speed of animation.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [
+                                    ""
+                                ],
+                                "defaultUnit": "",
+                                "min": 1,
+                                "max": 50000,
+                                "minLimit": 1,
+                                "step": 1
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ticker_direction": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "settings",
+                        "render": true,
+                        "attrName": "ticker_direction.innerContent",
+                        "label": "Animation Direction Reverse ",
+                        "description": "Here you can set animation direction.",
+                        "features": {
+                            "sticky": false,
+                            "hover": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/toggle"
+                        }
+                    }
+                }
+            }
+        },
+        "text_background": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "background": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_text",
+                            "render": true,
+                            "attrName": "text_background.innerContent",
+                            "label": "Background",
+                            "features": {
+                                "sticky": false,
+                                "responsive": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/background",
+                                "props": {
+                                    "grouped": false,
+                                    "hidePanels": [
+                                        "video",
+                                        "mask",
+                                        "pattern"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "text_media_bg": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "background": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_media",
+                            "render": true,
+                            "attrName": "text_media_bg.innerContent",
+                            "label": "Background",
+                            "features": {
+                                "sticky": false,
+                                "responsive": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/background",
+                                "props": {
+                                    "grouped": false,
+                                    "hidePanels": [
+                                        "video",
+                                        "mask",
+                                        "pattern"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "text_icon_color": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "design_media",
+                        "render": true,
+                        "attrName": "text_icon_color.innerContent",
+                        "label": "Icon Color",
+                        "description": "Here you can define a color for text icon.",
+                        "features": {
+                            "sticky": false,
+                            "responsive": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/color-picker"
+                        }
+                    }
+                }
+            }
+        },
+        "text_icon_size": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "design_media",
+                        "render": true,
+                        "attrName": "text_icon_size.innerContent",
+                        "label": "Icon Size",
+                        "description": "Here you can control icon size of text.",
+                        "features": {
+                            "sticky": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [
+                                    "px"
+                                ],
+                                "min": "0",
+                                "max": "100",
+                                "minLimit": "0",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "text_image_width": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "design_media",
+                        "render": true,
+                        "attrName": "text_image_width.innerContent",
+                        "label": "Image Width",
+                        "description": "Here you can control image size of text.",
+                        "features": {
+                            "sticky": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/range",
+                            "props": {
+                                "allowedUnits": [
+                                    "%",
+                                    "px"
+                                ],
+                                "defaultUnit": "px",
+                                "min": "0",
+                                "max": "100",
+                                "step": "1"
+                            }
+                        }
+                    }
+                }
+            },
+            "show_if_not": {
+                "enable_text_icon": "on"
+            }
+        },
+        "marquee_text_margin": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "spacing": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_text",
+                            "render": true,
+                            "attrName": "marquee_text_margin.innerContent",
+                            "label": "Text Margin",
+                            "features": {
+                                "sticky": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/spacing",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Text ",
+                                    "fields": {
+                                        "padding": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "marquee_text_padding": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "spacing": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_text",
+                            "render": true,
+                            "attrName": "marquee_text_padding.innerContent",
+                            "label": "Text Padding",
+                            "features": {
+                                "sticky": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/spacing",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Text ",
+                                    "fields": {
+                                        "margin": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "marquee_text_media_margin": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "spacing": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_media",
+                            "render": true,
+                            "attrName": "marquee_text_media_margin.innerContent",
+                            "label": "Wrapper Margin",
+                            "features": {
+                                "sticky": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/spacing",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Wrapper ",
+                                    "fields": {
+                                        "padding": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "marquee_text_media_padding": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "spacing": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "design_media",
+                            "render": true,
+                            "attrName": "marquee_text_media_padding.innerContent",
+                            "label": "Wrapper Padding",
+                            "features": {
+                                "sticky": false
+                            },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/spacing",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": "Wrapper ",
+                                    "fields": {
+                                        "margin": {
+                                            "render": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

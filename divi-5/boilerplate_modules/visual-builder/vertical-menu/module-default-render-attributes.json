@@ -1,0 +1,284 @@
+{
+    "style_settings__menu__typography": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "style_settings__menu__badge__typography": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "0.8em"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "style_settings__sub_menu__badge__typography": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "0.8em"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "style_settings__menu__tooltip__typography": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "style_settings__sub_menu__tooltip__typography": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "style_settings__hamburger_typography": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "settings__select_menu_slug": {
+        "innerContent": {
+            "desktop": {
+                "value": "none"
+            }
+        }
+    },
+    "settings__builder_visiblity": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "settings__submenu_reveal_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "df-vertical-sub-menu-reveal-flyout"
+            }
+        }
+    },
+    "settings__submenu_reveal_dir": {
+        "innerContent": {
+            "desktop": {
+                "value": "df-vertical-sub-menu-reveal-right"
+            }
+        }
+    },
+    "settings__clicked_menu_element_style": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "settings__badge_visiblity": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "settings__tooltip_visiblity": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "settings__menu_item_hover_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "settings__select_animation_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "item-hover-1"
+            }
+        }
+    },
+    "settings__use_hamburger_for_mobile": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "settings__hamburger_menu_reveal_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "df_hamburger_reveal_on_click"
+            }
+        }
+    },
+    "settings__hamburger_icon_preset": {
+        "innerContent": {
+            "desktop": {
+                "value": "icon1"
+            }
+        }
+    },
+    "settings__hamburger_icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#000"
+            }
+        }
+    },
+    "style_settings__hamburger_icon_font_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "settings__select_animation_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#0038f0"
+            }
+        }
+    },
+    "settings__animation__line_weight": {
+        "innerContent": {
+            "desktop": {
+                "value": "2px"
+            }
+        }
+    },
+    "style_settings__alignment": {
+        "innerContent": {
+            "desktop": {
+                "value": "df-vertical-menu-alignment-justified"
+            }
+        }
+    },
+    "style_settings__menu__item_gap": {
+        "innerContent": {
+            "desktop": {
+                "value": "0px"
+            }
+        }
+    },
+    "style_settings__menu__icon_font_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "style_settings__menu__item_spacing_padding": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "padding": {
+                            "top": "10px",
+                            "right": "10px",
+                            "bottom": "10px",
+                            "left": "10px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "style_settings__sub_menu__item_gap": {
+        "innerContent": {
+            "desktop": {
+                "value": "inherit"
+            }
+        }
+    },
+    "style_settings__sub_menu__tree_view": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "style_settings__sub_menu__tree_view_spacing": {
+        "innerContent": {
+            "desktop": {
+                "value": "10px"
+            }
+        }
+    },
+    "style_settings__mega_menu__columns": {
+        "innerContent": {
+            "desktop": {
+                "value": "0px"
+            }
+        }
+    },
+    "style_settings__mega_menu__wrapper_spacing_padding": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "padding": {
+                            "top": "15px",
+                            "right": "15px",
+                            "bottom": "15px",
+                            "left": "15px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "style_settings__mega_menu__item_gap": {
+        "innerContent": {
+            "desktop": {
+                "value": "inherit"
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "enable_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "difl_animation_types": {
+        "innerContent": {
+            "desktop": {
+                "value": "fadeInUpShort"
+            }
+        }
+    },
+    "difl_animation_delay": {
+        "innerContent": {
+            "desktop": {
+                "value": "200ms"
+            }
+        }
+    },
+    "difl_animation_duration": {
+        "innerContent": {
+            "desktop": {
+                "value": "500ms"
+            }
+        }
+    },
+    "feature_text_tooltip_placement": {
+        "innerContent": {
+            "desktop": {
+                "value": "right"
+            }
+        }
+    },
+    "feature_text_tooltip_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "scale"
+            }
+        }
+    },
+    "feature_text_tooltip_trigger": {
+        "innerContent": {
+            "desktop": {
+                "value": "mouseenter focus"
+            }
+        }
+    },
+    "feature_text_tooltip_mouse_style": {
+        "innerContent": {
+            "desktop": {
+                "value": "help"
+            }
+        }
+    },
+    "feature_text_tooltip_duration": {
+        "innerContent": {
+            "desktop": {
+                "value": 300
+            }
+        }
+    },
+    "feature_text_tooltip_interactive": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "feature_text_tooltip_interactive_border": {
+        "innerContent": {
+            "desktop": {
+                "value": 2
+            }
+        }
+    },
+    "feature_text_tooltip_max_width": {
+        "innerContent": {
+            "desktop": {
+                "value": 350
+            }
+        }
+    },
+    "feature_text_tooltip_offset_distance": {
+        "innerContent": {
+            "desktop": {
+                "value": 10
+            }
+        }
+    }
+}

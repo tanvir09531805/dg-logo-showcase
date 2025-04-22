@@ -1,0 +1,384 @@
+{
+    "primary_label_font": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "18px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "secondary_label_font": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "18px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "active_label_font": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "18px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "primary_button_font": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "secondary_button_font": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "active_button_font": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "primary_badge_font": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "secondary_badge_font": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "header": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "30px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "content_switcher_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "content_base"
+            }
+        }
+    },
+    "library_id_primary": {
+        "innerContent": {
+            "desktop": {
+                "value": "none"
+            }
+        }
+    },
+    "library_id_secondary": {
+        "innerContent": {
+            "desktop": {
+                "value": "none"
+            }
+        }
+    },
+    "switcher_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "round"
+            }
+        }
+    },
+    "switcher_control_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "18px"
+            }
+        }
+    },
+    "swicher_bar_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "100%"
+            }
+        }
+    },
+    "use_custom_spacing": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "title_spacing": {
+        "innerContent": {
+            "desktop": {
+                "value": "20px"
+            }
+        }
+    },
+    "primary_title_icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#2ea3f2"
+            }
+        }
+    },
+    "primary_title_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "16px"
+            }
+        }
+    },
+    "primary_title_full_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "primary_icon_align": {
+        "innerContent": {
+            "desktop": {
+                "value": "left"
+            }
+        }
+    },
+    "primary_icon_hide_on_mobile": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "secondary_title_icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#2ea3f2"
+            }
+        }
+    },
+    "secondary_title_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "16px"
+            }
+        }
+    },
+    "secondary_title_full_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "secondary_icon_align": {
+        "innerContent": {
+            "desktop": {
+                "value": "left"
+            }
+        }
+    },
+    "secondary_icon_hide_on_mobile": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "enable_active_icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "enable_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "content_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "fade_in"
+            }
+        }
+    },
+    "content_animation_duration": {
+        "innerContent": {
+            "desktop": {
+                "value": "200"
+            }
+        }
+    },
+    "enable_primary_badge": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "primary_badge_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "-40%"
+            }
+        }
+    },
+    "primary_badge_top_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "-100%"
+            }
+        }
+    },
+    "primary_badge_arrow_placement": {
+        "innerContent": {
+            "desktop": {
+                "value": "arrow-bottom"
+            }
+        }
+    },
+    "primary_badge_arrow_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "5px"
+            }
+        }
+    },
+    "primary_badge_arrow_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "50%"
+            }
+        }
+    },
+    "primary_badge_arrow_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#333"
+            }
+        }
+    },
+    "enable_secondary_badge": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "secondary_badge_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "-40%"
+            }
+        }
+    },
+    "secondary_badge_top_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "-100%"
+            }
+        }
+    },
+    "secondary_badge_arrow_placement": {
+        "innerContent": {
+            "desktop": {
+                "value": "arrow-bottom"
+            }
+        }
+    },
+    "secondary_badge_arrow_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "5px"
+            }
+        }
+    },
+    "secondary_badge_arrow_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "50%"
+            }
+        }
+    },
+    "secondary_badge_arrow_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#333"
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+{
+    "title": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "ticker_hover": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "ticker_loop": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "ticker_gap": {
+        "innerContent": {
+            "desktop": {
+                "value": "10px"
+            }
+        }
+    },
+    "ticker_speed": {
+        "innerContent": {
+            "desktop": {
+                "value": "10000"
+            }
+        }
+    },
+    "ticker_direction": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "text_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "text_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "20px"
+            }
+        }
+    },
+    "marquee_text_margin": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "margin": {
+                            "top": "0px",
+                            "right": "10px",
+                            "bottom": "0px",
+                            "left": "10px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "marquee_text_media_margin": {
+        "decoration": {
+            "spacing": {
+                "desktop": {
+                    "value": {
+                        "margin": {
+                            "top": "0px",
+                            "right": "5px",
+                            "bottom": "0px",
+                            "left": "5px",
+                            "syncHorizontal": "",
+                            "syncVertical": ""
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+{
+    "break_point": {
+        "innerContent": {
+            "desktop": {
+                "value": "980"
+            }
+        }
+    },
+    "mslide_bg_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "mslide_bg_image_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "show_mobile_slide": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "trow_hide_on_sticky": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "top_row_bg_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "top_row_bg_image_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "top_row_inner_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "100%"
+            }
+        }
+    },
+    "crow_hide_on_sticky": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "center_row_bg_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "center_row_bg_image_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "center_row_inner_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "100%"
+            }
+        }
+    },
+    "brow_hide_on_sticky": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "bottom_row_bg_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "bottom_row_bg_image_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "bottom_row_inner_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "100%"
+            }
+        }
+    }
+}

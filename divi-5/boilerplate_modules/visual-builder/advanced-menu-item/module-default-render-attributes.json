@@ -1,0 +1,667 @@
+{
+    "content_body": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "content_link": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "content_unorder_list": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "content_order_list": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "content_quote": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "content_input": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "menu_items": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "submenu_items": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "mslide_items": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "mslide_button": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "megamenu_item": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "first_level_parent": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "second_level_parent": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "third_level_parent": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "first_level_child": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "second_level_child": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "third_level_child": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "type": {
+        "innerContent": {
+            "desktop": {
+                "value": "select"
+            }
+        }
+    },
+    "divider_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "2px"
+            }
+        }
+    },
+    "cart_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "search_style": {
+        "innerContent": {
+            "desktop": {
+                "value": "df-searchbox-style-1"
+            }
+        }
+    },
+    "search_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": {
+                    "unicode": "U",
+                    "type": "",
+                    "weight": ""
+                }
+            }
+        }
+    },
+    "search_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "search_tr_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": {
+                    "unicode": "U",
+                    "type": "",
+                    "weight": ""
+                }
+            }
+        }
+    },
+    "search_tr_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "icon_btn_font_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": {
+                    "unicode": "9",
+                    "type": "",
+                    "weight": ""
+                }
+            }
+        }
+    },
+    "icon_btn_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "use_button_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "button_font_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": {
+                    "unicode": "5",
+                    "type": "",
+                    "weight": ""
+                }
+            }
+        }
+    },
+    "button_icon_on_left": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "button_show_icon_on_hover": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "menu_id": {
+        "innerContent": {
+            "desktop": {
+                "value": "none"
+            }
+        }
+    },
+    "desktop_menu": {
+        "innerContent": {
+            "desktop": {
+                "value": "normal"
+            }
+        }
+    },
+    "mobile_menu": {
+        "innerContent": {
+            "desktop": {
+                "value": "mobile_menu"
+            }
+        }
+    },
+    "submenu_reveal_anime": {
+        "innerContent": {
+            "desktop": {
+                "value": "animtaion-submenu-1"
+            }
+        }
+    },
+    "use_item_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "menu_item_hover_anim": {
+        "innerContent": {
+            "desktop": {
+                "value": "item-hover-1"
+            }
+        }
+    },
+    "line_weight": {
+        "innerContent": {
+            "desktop": {
+                "value": "2px"
+            }
+        }
+    },
+    "line_space_between_item": {
+        "innerContent": {
+            "desktop": {
+                "value": "7px"
+            }
+        }
+    },
+    "line_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#0038F0"
+            }
+        }
+    },
+    "mm_trigger_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": {
+                    "unicode": "a",
+                    "type": "",
+                    "weight": ""
+                }
+            }
+        }
+    },
+    "mm_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "32px"
+            }
+        }
+    },
+    "mm_trigger_bg_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "mm_trigger_bg_image_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "mslide_use_button_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "mslide_button_font_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": {
+                    "unicode": "5",
+                    "type": "",
+                    "weight": ""
+                }
+            }
+        }
+    },
+    "mslide_button_icon_on_left": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "mslide_button_bg_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "mslide_button_bg_image_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "menu_item_gap": {
+        "innerContent": {
+            "desktop": {
+                "value": "20px"
+            }
+        }
+    },
+    "menu_item_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "menu_item_bg_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "menu_item_bg_image_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "submenu_item_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "submenu_item_bg_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "submenu_item_bg_image_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "submenu_container_bg_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "submenu_container_bg_image_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "maga_menu_columgap": {
+        "innerContent": {
+            "desktop": {
+                "value": "30px"
+            }
+        }
+    },
+    "megamenu_item_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "mega_menu_bg_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "mega_menu_bg_image_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "mega_menuitem_bg_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "mega_menuitem_bg_image_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "menu_1st_parent_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "menu_2nd_parent_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "menu_3rd_parent_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "menu_1st_child_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "menu_2nd_child_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "menu_3rd_child_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "top_lebel_menu_active_link_bg_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "top_lebel_menu_active_link_bg_image_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "sub_menu_active_link_bg_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "sub_menu_active_link_bg_image_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "mm_item_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "mslide_item_bg_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    },
+    "mslide_item_bg_image_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "auto"
+            }
+        }
+    }
+}

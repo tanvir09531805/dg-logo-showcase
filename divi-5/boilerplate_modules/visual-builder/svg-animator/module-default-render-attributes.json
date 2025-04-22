@@ -1,0 +1,93 @@
+{
+    "alignment": {
+        "innerContent": {
+            "desktop": {
+                "value": "center"
+            }
+        }
+    },
+    "svg_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "100%"
+            }
+        }
+    },
+    "svg_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "100%"
+            }
+        }
+    },
+    "svg_weight": {
+        "innerContent": {
+            "desktop": {
+                "value": "2px"
+            }
+        }
+    },
+    "delay_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "0ms"
+            }
+        }
+    },
+    "duration_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "100"
+            }
+        }
+    },
+    "animation_timing_func": {
+        "innerContent": {
+            "desktop": {
+                "value": "LINEAR"
+            }
+        }
+    },
+    "enable_loop": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "loop_time": {
+        "innerContent": {
+            "desktop": {
+                "value": "1"
+            }
+        }
+    },
+    "path_timing_func": {
+        "innerContent": {
+            "desktop": {
+                "value": "LINEAR"
+            }
+        }
+    },
+    "animation_start": {
+        "innerContent": {
+            "desktop": {
+                "value": "inViewport"
+            }
+        }
+    },
+    "enable_replay": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "replay_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "click"
+            }
+        }
+    }
+}

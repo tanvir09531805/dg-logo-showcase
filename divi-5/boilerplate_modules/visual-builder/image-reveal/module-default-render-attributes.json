@@ -1,0 +1,244 @@
+{
+    "overlay_title": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "18px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "overlay_description": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "caption": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "field_link_target": {
+        "innerContent": {
+            "desktop": {
+                "value": "same_window"
+            }
+        }
+    },
+    "field_reveal_directions": {
+        "innerContent": {
+            "desktop": {
+                "value": "reveal_ltr"
+            }
+        }
+    },
+    "field_reveal_animation_time": {
+        "innerContent": {
+            "desktop": {
+                "value": "1"
+            }
+        }
+    },
+    "field_reveal_view_port": {
+        "innerContent": {
+            "desktop": {
+                "value": "25"
+            }
+        }
+    },
+    "field_rounded_corner": {
+        "innerContent": {
+            "desktop": {
+                "value": "on|0px|0px|0px|0px"
+            }
+        }
+    },
+    "field_overlay_enable": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "field_overlay_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#FFFFFF"
+            }
+        }
+    },
+    "field_overlay_opacity": {
+        "innerContent": {
+            "desktop": {
+                "value": "0.15"
+            }
+        }
+    },
+    "field_hover_overlay_enable": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "field_hover_overlay_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#FFFFFF"
+            }
+        }
+    },
+    "field_hover_overlay_opacity": {
+        "innerContent": {
+            "desktop": {
+                "value": "0.3"
+            }
+        }
+    },
+    "field_hover_overlay_arrive_from": {
+        "innerContent": {
+            "desktop": {
+                "value": "right"
+            }
+        }
+    },
+    "field_hover_overlay_content_arrive_from": {
+        "innerContent": {
+            "desktop": {
+                "value": "right"
+            }
+        }
+    },
+    "field_hover_overlay_transition_time": {
+        "innerContent": {
+            "desktop": {
+                "value": "0.6"
+            }
+        }
+    },
+    "field_hover_overlay_content_enable": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "field_hover_overlay_content_placement": {
+        "innerContent": {
+            "desktop": {
+                "value": "center"
+            }
+        }
+    },
+    "field_hover_overlay_content_alignment": {
+        "innerContent": {
+            "desktop": {
+                "value": "center"
+            }
+        }
+    },
+    "field_hover_image_effect_enable": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "field_effect_style": {
+        "innerContent": {
+            "desktop": {
+                "value": "default_n"
+            }
+        }
+    },
+    "field_zoom_scale": {
+        "innerContent": {
+            "desktop": {
+                "value": "1.5"
+            }
+        }
+    },
+    "field_zooming_time": {
+        "innerContent": {
+            "desktop": {
+                "value": "0.25"
+            }
+        }
+    },
+    "field_zooming_blur_out_time": {
+        "innerContent": {
+            "desktop": {
+                "value": "0.25"
+            }
+        }
+    },
+    "field_zooming_blur_level": {
+        "innerContent": {
+            "desktop": {
+                "value": "2"
+            }
+        }
+    },
+    "field_grayscale": {
+        "innerContent": {
+            "desktop": {
+                "value": "100"
+            }
+        }
+    },
+    "field_Speed_curve": {
+        "innerContent": {
+            "desktop": {
+                "value": "ease-in"
+            }
+        }
+    },
+    "field_zoom_rotate": {
+        "innerContent": {
+            "desktop": {
+                "value": "25"
+            }
+        }
+    },
+    "field_caption_placement": {
+        "innerContent": {
+            "desktop": {
+                "value": "bottom"
+            }
+        }
+    },
+    "field_reveal_effects": {
+        "innerContent": {
+            "desktop": {
+                "value": "none"
+            }
+        }
+    },
+    "field_reveal_effect_animation_time": {
+        "innerContent": {
+            "desktop": {
+                "value": "1"
+            }
+        }
+    }
+}

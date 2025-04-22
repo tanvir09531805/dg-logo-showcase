@@ -1,0 +1,131 @@
+{
+    "title": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "22px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "sub_title": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "18px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "content": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "button": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "change_view": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "hb_btn_button_url_new_window": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "title_on_hover": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "subtitle_on_hover": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "content_on_hover": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "button_on_hover": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "background_scale": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "anim_direction": {
+        "innerContent": {
+            "desktop": {
+                "value": "bottom"
+            }
+        }
+    },
+    "vertical_align": {
+        "innerContent": {
+            "desktop": {
+                "value": "flex-start"
+            }
+        }
+    },
+    "title_tag": {
+        "innerContent": {
+            "desktop": {
+                "value": "h4"
+            }
+        }
+    },
+    "subtitle_tag": {
+        "innerContent": {
+            "desktop": {
+                "value": "h6"
+            }
+        }
+    }
+}

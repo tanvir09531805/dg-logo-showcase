@@ -1,0 +1,125 @@
+{
+    "left_button": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "20px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "right_button": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "20px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "separator": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "btn_left_icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#2ea3f2"
+            }
+        }
+    },
+    "btn_left_icon_placement": {
+        "innerContent": {
+            "desktop": {
+                "value": "right"
+            }
+        }
+    },
+    "btn_left_icon_gap": {
+        "innerContent": {
+            "desktop": {
+                "value": "7px"
+            }
+        }
+    },
+    "btn_right_icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#2ea3f2"
+            }
+        }
+    },
+    "btn_right_icon_placement": {
+        "innerContent": {
+            "desktop": {
+                "value": "right"
+            }
+        }
+    },
+    "btn_right_icon_gap": {
+        "innerContent": {
+            "desktop": {
+                "value": "7px"
+            }
+        }
+    },
+    "left_button_target": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "right_button_target": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "button_separator": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#2ea3f2"
+            }
+        }
+    },
+    "icon_font_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "18px"
+            }
+        }
+    },
+    "button_style": {
+        "innerContent": {
+            "desktop": {
+                "value": "row"
+            }
+        }
+    }
+}

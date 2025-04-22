@@ -1,0 +1,63 @@
+{
+    "caption": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "button": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "caption_tag": {
+        "innerContent": {
+            "desktop": {
+                "value": "h4"
+            }
+        }
+    },
+    "vertical_align": {
+        "innerContent": {
+            "desktop": {
+                "value": "default"
+            }
+        }
+    },
+    "content_hover": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "anim_direction": {
+        "innerContent": {
+            "desktop": {
+                "value": "top"
+            }
+        }
+    },
+    "ic_button_button_url_new_window": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    }
+}

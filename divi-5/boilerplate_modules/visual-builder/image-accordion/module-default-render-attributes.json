@@ -1,0 +1,176 @@
+{
+    "title": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "bold",
+                            "size": "24px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "sub_title": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "semi-bold",
+                            "size": "18px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "description": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "weight": "semi-bold",
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "button": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "accordion_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "horizontal"
+            }
+        }
+    },
+    "vertical_at_mobile": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "event_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "click"
+            }
+        }
+    },
+    "active_on_first_time": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "active_item_order_number": {
+        "innerContent": {
+            "desktop": {
+                "value": "1"
+            }
+        }
+    },
+    "outer_click_close_item": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "accordion_container_height": {
+        "innerContent": {
+            "desktop": {
+                "value": "450px"
+            }
+        }
+    },
+    "enable_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "content_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "fade_in"
+            }
+        }
+    },
+    "duration": {
+        "innerContent": {
+            "desktop": {
+                "value": "1000"
+            }
+        }
+    },
+    "delay": {
+        "innerContent": {
+            "desktop": {
+                "value": "200"
+            }
+        }
+    },
+    "animation_function": {
+        "innerContent": {
+            "desktop": {
+                "value": "linear"
+            }
+        }
+    },
+    "enable_stagger": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "stagger": {
+        "innerContent": {
+            "desktop": {
+                "value": "100"
+            }
+        }
+    },
+    "vertical_align": {
+        "innerContent": {
+            "desktop": {
+                "value": "flex-start"
+            }
+        }
+    },
+    "icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "50px"
+            }
+        }
+    },
+    "image_as_icon_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "50px"
+            }
+        }
+    }
+}

@@ -1,0 +1,227 @@
+{
+    "text_title": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "20px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "text_subtitle": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "20px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rating_label": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "14px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tooltip_text_a": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tooltip_text_h1": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "32px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tooltip_text_body": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "field_stack_spacing": {
+        "innerContent": {
+            "desktop": {
+                "value": "0px"
+            }
+        }
+    },
+    "field_icon_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#7EBEC5"
+            }
+        }
+    },
+    "field_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "30px"
+            }
+        }
+    },
+    "field_icon_background": {
+        "innerContent": {
+            "desktop": {
+                "value": "#ffffff"
+            }
+        }
+    },
+    "field_text_background": {
+        "innerContent": {
+            "desktop": {
+                "value": "#ffffff"
+            }
+        }
+    },
+    "field_rating_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "center"
+            }
+        }
+    },
+    "field_rating_alignment": {
+        "innerContent": {
+            "desktop": {
+                "value": "left"
+            }
+        }
+    },
+    "field_rating_icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "14px"
+            }
+        }
+    },
+    "field_rating_background": {
+        "innerContent": {
+            "desktop": {
+                "value": "#ffffff"
+            }
+        }
+    },
+    "field_tooltip_enable": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "field_tooltip_arrow": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "field_tooltip_placement": {
+        "innerContent": {
+            "desktop": {
+                "value": "top"
+            }
+        }
+    },
+    "field_tooltip_animation": {
+        "innerContent": {
+            "desktop": {
+                "value": "fade"
+            }
+        }
+    },
+    "field_tooltip_trigger": {
+        "innerContent": {
+            "desktop": {
+                "value": "mouseenter focus"
+            }
+        }
+    },
+    "field_tooltip_interactive": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "field_tooltip_interactive_border": {
+        "innerContent": {
+            "desktop": {
+                "value": 2
+            }
+        }
+    },
+    "field_tooltip_content_delay": {
+        "innerContent": {
+            "desktop": {
+                "value": 300
+            }
+        }
+    },
+    "field_tooltip_follow_cursor": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "field_tooltip_custom_maxwidth": {
+        "innerContent": {
+            "desktop": {
+                "value": 350
+            }
+        }
+    },
+    "field_tooltip_offset_enable": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "field_tooltip_offset_distance": {
+        "innerContent": {
+            "desktop": {
+                "value": 10
+            }
+        }
+    }
+}
