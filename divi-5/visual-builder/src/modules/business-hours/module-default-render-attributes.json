@@ -1,0 +1,115 @@
+{
+    "day_name": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "time_div": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "start_time": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "end_time": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "time_separetor": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "title_text": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "24"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "title_on_off": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "day_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "50%"
+            }
+        }
+    },
+    "day_time_separator_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#000000"
+            }
+        }
+    },
+    "day_time_separator_style": {
+        "innerContent": {
+            "desktop": {
+                "value": "solid"
+            }
+        }
+    },
+    "day_time_separator_hight": {
+        "innerContent": {
+            "desktop": {
+                "value": "1px"
+            }
+        }
+    }
+}
