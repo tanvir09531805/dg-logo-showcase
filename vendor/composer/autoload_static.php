@@ -9,12 +9,12 @@ class ComposerStaticInitd1b56006d6756c9d269ee77fbb1e53c5
     public static $prefixLengthsPsr4 = array (
         'D' => 
         array (
-            'DIVIFLASH\\Modules\\' => 18,
+            'DIFL\\Modules\\' => 18,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'DIVIFLASH\\Modules\\' => 
+        'DIFL\\Modules\\' => 
         array (
             0 => __DIR__ . '/../..' . '/modules',
         ),

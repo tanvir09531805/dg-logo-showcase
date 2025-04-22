@@ -63,4 +63,8 @@ E:\laragon\www\divi5a\wp-content\themes\Divi\includes\builder-5\visual-builder\p
 "slug": "difl_contentcarousel",
 
 "slug": "difl_contentcarouselitem",
+
+need to flow conversion outline for Spacing, Background, Icon etc.
+
+NODE_ENV=production webpack --config webpack.config.js --progress
 */

@@ -1,17 +1,17 @@
 {
   "_comment": "!!! THIS IS AN AUTOMATICALLY GENERATED FILE - DO NOT EDIT !!!",
-  "name": "diviflash/content-carousel",
+  "name": "difl/content-carousel",
   "d4Shortcode": "difl_contentcarousel",
   "title": "Advanced Carousel",
   "titles": "Advanced Carousels",
   "moduleClassName": "difl_contentcarousel",
   "moduleOrderClassName": "difl_contentcarousel",
-  "moduleIcon": "diviflash/src/icons/module-icons/content-carousel.svg",
-  "childModuleName": "diviflash/content-carousel-item",
+  "moduleIcon": "difl/content-carousel",
+  "childModuleName": "difl/content-carousel-item",
   "childModuleTitle": "Advanced Carousel Item",
   "category": "module",
   "childrenName": [
-    "diviflash/content-carousel-item"
+    "difl/content-carousel-item"
   ],
   "attributes": {
     "module": {
@@ -69,7 +69,7 @@
           "items": {
             "carouselType": {
               "groupSlug": "carouselSettings",
-              "attrName": "settingCarousel.innerContent.carouselType",
+              "attrName": "settingCarousel.innerContent",
               "subName": "carouselType",
               "label": "Carousel Type",
               "description": "You can select the carousel type.",
@@ -97,7 +97,7 @@
             },
             "maxSlide": {
               "groupSlug": "carouselSettings",
-              "attrName": "settingCarousel.innerContent.maxSlide",
+              "attrName": "settingCarousel.innerContent",
               "subName": "maxSlide",
               "label": "Max Slide to Show",
               "description": "Here you can set max Slide to Show.",
@@ -122,7 +122,7 @@
             },
             "spacingPx": {
               "groupSlug": "carouselSettings",
-              "attrName": "settingCarousel.innerContent.spacingPx",
+              "attrName": "settingCarousel.innerContent",
               "subName": "spacingPx",
               "label": "Spacing (px)",
               "description": "Here you can set spacing (px).",
@@ -149,7 +149,7 @@
             },
             "speed": {
               "groupSlug": "carouselSettings",
-              "attrName": "settingCarousel.innerContent.speed",
+              "attrName": "settingCarousel.innerContent",
               "subName": "speed",
               "label": "Speed (ms)",
               "description": "Here you can set Speed (ms).",
@@ -174,7 +174,7 @@
             },
             "centerSlides": {
               "groupSlug": "carouselSettings",
-              "attrName": "settingCarousel.innerContent.centerSlides",
+              "attrName": "settingCarousel.innerContent",
               "subName": "centerSlides",
               "label": "Centered Slides",
               "description": "Here you can choose whether the slides should be centered or not.",
@@ -193,7 +193,7 @@
             },
             "loop": {
               "groupSlug": "carouselSettings",
-              "attrName": "settingCarousel.innerContent.loop",
+              "attrName": "settingCarousel.innerContent",
               "subName": "loop",
               "label": "Loop",
               "description": "Here you can on whether the slides should be loop or not.",
@@ -212,7 +212,7 @@
             },
             "autoplay": {
               "groupSlug": "carouselSettings",
-              "attrName": "settingCarousel.innerContent.autoplay",
+              "attrName": "settingCarousel.innerContent",
               "subName": "autoplay",
               "label": "Autoplay",
               "description": "Here you can on whether the slides should be autoplay or not.",
@@ -231,7 +231,7 @@
             },
             "autoplaySpeed": {
               "groupSlug": "carouselSettings",
-              "attrName": "settingCarousel.innerContent.autoplaySpeed",
+              "attrName": "settingCarousel.innerContent",
               "subName": "autoplaySpeed",
               "label": "Autoplay Speed (ms)",
               "description": "Here you can set autoplay speed (ms).",
@@ -256,7 +256,7 @@
             },
             "pauseOnHover": {
               "groupSlug": "carouselSettings",
-              "attrName": "settingCarousel.innerContent.pauseOnHover",
+              "attrName": "settingCarousel.innerContent",
               "subName": "pauseOnHover",
               "label": "Pause OnHover",
               "description": "Here you can on whether the slides should be pause on hover or not.",
@@ -275,7 +275,7 @@
             },
             "equalHeightItem": {
               "groupSlug": "carouselSettings",
-              "attrName": "settingCarousel.innerContent.equalHeightItem",
+              "attrName": "settingCarousel.innerContent",
               "subName": "equalHeightItem",
               "label": "Equal Height Item",
               "description": "Here you can on whether the slides should be equal height or not.",
@@ -294,7 +294,7 @@
             },
             "useLightbox": {
               "groupSlug": "carouselSettings",
-              "attrName": "settingCarousel.innerContent.useLightbox",
+              "attrName": "settingCarousel.innerContent",
               "subName": "useLightbox",
               "label": "Use Lightbox",
               "description": "Here you can on whether the slides should be use lightbox or not.",
@@ -313,7 +313,7 @@
             },
             "showTitleOnLightbox": {
               "groupSlug": "carouselSettings",
-              "attrName": "settingCarousel.innerContent.showTitleOnLightbox",
+              "attrName": "settingCarousel.innerContent",
               "subName": "showTitleOnLightbox",
               "label": "Show Title on Lightbox",
               "description": "Here you can on whether the slides should be use lightbox or not.",
@@ -404,7 +404,7 @@
             "groupType": "group-item",
             "item": {
               "groupSlug": "designArrows",
-              "attrName": "arrows.advanced.arrowPosition",
+              "attrName": "arrows.advanced",
               "subName": "arrowPosition",
               "label": "Arrow Position",
               "description": "You can select the arrow position.",
@@ -438,7 +438,7 @@
             "groupType": "group-item",
             "item": {
               "groupSlug": "designArrows",
-              "attrName": "arrows.advanced.arrowAlignment",
+              "attrName": "arrows.advanced",
               "subName": "arrowAlignment",
               "label": "Arrow Alignment",
               "description": "You can select the arrow position.",
@@ -475,7 +475,7 @@
             "groupType": "group-item",
             "item": {
               "groupSlug": "designArrows",
-              "attrName": "arrows.advanced.arrowOpacity",
+              "attrName": "arrows.advanced",
               "subName": "arrowOpacity",
               "label": "Opacity",
               "description": "Here you can define Opacity of dots wrapper.",
@@ -1020,10 +1020,9 @@
         "innerContent": {
           "groupType": "group-items",
           "items": {
-            
             "slideShadows": {
               "groupSlug": "advancedSettings",
-              "attrName": "addSettingCarousel.innerContent.slideShadows",
+              "attrName": "addSettingCarousel.innerContent",
               "subName": "slideShadows",
               "label": "Enables slides Shadows",
               "description": "Here you can on whether the slides should be enable slide shadows or not.",
@@ -1076,7 +1075,7 @@
             },
             "rotateInDegrees": {
               "groupSlug": "advancedSettings",
-              "attrName": "addSettingCarousel.innerContent.rotateInDegrees",
+              "attrName": "addSettingCarousel.innerContent",
               "subName": "rotateInDegrees",
               "label": "Slide rotate in degrees",
               "description": "Here you can set rotate.",
@@ -1101,7 +1100,7 @@
             },
             "spaceBetween": {
               "groupSlug": "advancedSettings",
-              "attrName": "addSettingCarousel.innerContent.spaceBetween",
+              "attrName": "addSettingCarousel.innerContent",
               "subName": "spaceBetween",
               "label": "Stretch space between slides (in px)",
               "description": "Here you can set rotate.",
@@ -1126,7 +1125,7 @@
             },
             "stretchDepth": {
               "groupSlug": "advancedSettings",
-              "attrName": "addSettingCarousel.innerContent.stretchDepth",
+              "attrName": "addSettingCarousel.innerContent",
               "subName": "stretchDepth",
               "label": "StreDepth offset in px (slides translate in Z axis)",
               "description": "Here you can set rotate.",
@@ -1151,7 +1150,7 @@
             },
             "effectMultipler": {
               "groupSlug": "advancedSettings",
-              "attrName": "addSettingCarousel.innerContent.effectMultipler",
+              "attrName": "addSettingCarousel.innerContent",
               "subName": "effectMultipler",
               "label": "Effect multipler",
               "description": "Here you can set rotate.",
@@ -1181,6 +1180,7 @@
         "decoration": {}
       }
     },
+
     "title": {
       "type": "object",
       "selector": "{{selector}} .difl_contentcarouselitem .df_cc_title",
@@ -1577,7 +1577,6 @@
         }
       },
       "settings": {
-        
         "decoration": {
           "fullWidth": {
             "groupType": "group-item",
@@ -2019,6 +2018,7 @@
         }
       }
     },
+    
     "imgOrder": {
       "type": "object",
       "settings": {

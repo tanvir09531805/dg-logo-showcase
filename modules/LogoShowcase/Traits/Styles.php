@@ -1,6 +1,6 @@
 <?php
 
-namespace DIVIFLASH\Modules\LogoShowcase\Traits;
+namespace DIFL\Modules\LogoShowcase\Traits;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Direct access forbidden.' );
@@ -10,7 +10,7 @@ use ET\Builder\FrontEnd\Module\Style;
 use ET\Builder\Packages\Module\Layout\Components\StyleCommon\CommonStyle;
 use ET\Builder\Packages\Module\Options\Css\CssStyle;
 use ET\Builder\Packages\StyleLibrary\Utils\StyleDeclarations;
-use DIVIFLASH\Modules\LogoShowcase\LogoShowcase;
+use DIFL\Modules\LogoShowcase\LogoShowcase;
 
 trait Styles {
 	use CustomCss;
@@ -46,7 +46,6 @@ trait Styles {
 		$settings     = $args['settings'] ?? [];
 
 		$icon_selector  = "{$order_class} .et-pb-icon";
-		$proImgSelector = "{$order_class} .difl_bento_grid__inner__image .__image";
 
 		Style::add(
 			[
@@ -66,29 +65,7 @@ trait Styles {
 							],
 						]
 					),
-					// Profile Image Size
-					CommonStyle::style(
-						[
-							'selector' => $proImgSelector,
-							'attr'     => $attrs['profile']['innerContent']['size'] ?? [],
-							'property' => 'width',
-						]
-					),
-					CommonStyle::style(
-						[
-							'selector' => $proImgSelector,
-							'attr'     => $attrs['profile']['innerContent']['size'] ?? [],
-							'property' => 'height',
-						]
-					),
-					/* Row/Column Span */
-					CommonStyle::style(
-						[
-							'selector'            => "{$order_class} .difl_bento_grid__inner",
-							'attr'                => $attrs['gridLayout']['decoration'] ?? [],
-							'declarationFunction' => [ self::class, 'grid_layout_style_declaration' ],
-						]
-					),
+					
 				],
 			]
 		);

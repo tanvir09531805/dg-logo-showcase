@@ -1,5 +1,5 @@
 <?php
-namespace DIVIFLASH\Modules\ContentCarouselItem;
+namespace DIFL\Modules\ContentCarouselItem;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Direct access forbidden.' );
@@ -9,15 +9,8 @@ use ET\Builder\Framework\DependencyManagement\Interfaces\DependencyInterface;
 use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 
 class ContentCarouselItem implements DependencyInterface {
-	use Traits\RenderCallback;
+	use RenderCallback;
 
-	/**
-	 * Loads `ChildModule` and registers Front-End render callback and REST API Endpoints.
-	 *
-	 * @since ??
-	 *
-	 * @return void
-	 */
 	public function load() {
 		$module_json_folder_path = DIFL_MODULES_JSON_PATH . 'content-carousel-item/';
 

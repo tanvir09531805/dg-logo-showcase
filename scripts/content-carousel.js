@@ -1,126 +1,73 @@
 
-function iconPickerVisible({
-  attrs,
-  attrName,
-  responsiveMode,
-  stateMode,
-}) {
-  return 'on' === attrs?.imageIcon?.innerContent?.desktop?.value?.useIcon;
+export const convertIcon = ( value ) => {
+	value = value.split("|");
+	value = {
+		unicode:value[0],
+		type:value[2],
+		weight:value[4],
+	}
+	return value
 }
-function iconPickerInvisible({
-  attrs,
-  attrName,
-  responsiveMode,
-  stateMode,
-}) {
-  return ('on' === attrs?.imageIcon?.innerContent?.desktop?.value?.useIcon) ? false : true;
+export const convertSpacing = ( value ) => {
+	value = value.split("|");
+	value = {
+		top:value[0],
+		right:value[1],
+		bottom:value[2],
+		left:value[3],
+		syncHorizontal:value[4],
+		syncVertical:value[5],
+	}
+	return value
 }
-
-function enablesSlidesShadows({
-  attrs,
-  attrName,
-  responsiveMode,
-  stateMode,
-}) { 
-  return ('on' === attrs.addSettingCarousel?.innerContent?.slideShadows.desktop?.value?.slideShadows) ? true : false;
-}
-function carouselTypeCoverFlow({
-  attrs,
-  attrName,
-  responsiveMode,
-  stateMode,
-}) { 
-  // attrs.settingCarousel?.innerContent?.carouselType?.desktop?.value?.carouselType
-  return ("coverflow" === attrs.settingCarousel?.innerContent?.carouselType?.desktop?.value?.carouselType) ? true : false;
-}
-function carouselSettingAutoplay({
-  attrs,
-  attrName,
-  responsiveMode,
-  stateMode,
-}) { 
-  // ccData?.autoplay?.desktop?.value?.autoplay
-  return ("on" === attrs.settingCarousel?.innerContent?.autoplay?.desktop?.value?.autoplay) ? true : false;
-}
-function carouselSettingLightbox({
-  attrs,
-  attrName,
-  responsiveMode,
-  stateMode,
-}) { 
-  // ccData?.autoplay?.desktop?.value?.autoplay
-  return ("on" === attrs.settingCarousel?.innerContent?.useLightbox?.desktop?.value?.useLightbox) ? true : false;
+export const convertBackground = ( d4Key, d5Key ) => {
+	return {
+		[`${d4Key}_bgcolor`]:`${d5Key}.decoration.background.*.color`,
+		[`${d4Key}_use_gradient`]:`${d5Key}.decoration.background.*.gradient.enabled`,
+		[`${d4Key}_color_gradient_1`]:`${d5Key}.decoration.background.*.gradient.stops[0].color`,
+		[`${d4Key}_color_gradient_2`]:`${d5Key}.decoration.background.*.gradient.stops[1].color`,
+		[`${d4Key}_gradient_type`]:`${d5Key}.decoration.background.*.gradient.type`,
+		[`${d4Key}_radial_direction`]:`${d5Key}.decoration.background.*.gradient.directionRadial`,
+		[`${d4Key}_gradient_direction`]:`${d5Key}.decoration.background.*.gradient.direction`,
+		[`${d4Key}_start_position`]:`${d5Key}.decoration.background.*.gradient.stops[0].position`,
+		[`${d4Key}_end_position`]:`${d5Key}.decoration.background.*.gradient.stops[1].position`,
+		[`${d4Key}_above_image`]:`${d5Key}.decoration.background.*.gradient.overlaysImage`,
+		[`${d4Key}_background_image`]:`${d5Key}.decoration.background.*.image.url`,
+		[`${d4Key}_background_image_size`]:`${d5Key}.decoration.background.*.image.size`,
+		[`${d4Key}_size_width`]:`${d5Key}.decoration.background.*.image.width`,
+		[`${d4Key}_size_height`]:`${d5Key}.decoration.background.*.image.height`,
+		[`${d4Key}_background_image_position`]:`${d5Key}.decoration.background.*.image.position`,
+		[`${d4Key}_position_horizontal`]:`${d5Key}.decoration.background.*.image.horizontalOffset`,
+		[`${d4Key}_position_vertical`]:`${d5Key}.decoration.background.*.image.verticalOffset`,
+		[`${d4Key}_background_image_repeat`]:`${d5Key}.decoration.background.*.image.repeat`,
+	}
 }
 
-function arrowIconPrev({ attrs, }) { 
-  return ("on" === attrs.arrowPrevIcon?.innerContent?.desktop?.value) ? true : false;
+export const D4ToD5RoundedCorner = ( value ) => {
+	value = value.split( "|" );
+	value = {
+		radius: {
+			topLeft: value[ 1 ],
+			topRight: value[ 2 ],
+			bottomLeft: value[ 3 ],
+			bottomRight: value[ 4 ],
+			sync: value[ 0 ]
+		}
+	}
+	return value
 }
-function arrowIconNext({ attrs, }) { 
-  // attrs.arrowNextIcon?.innerContent?.desktop?.value
-  return ("on" === attrs.arrowNextIcon?.innerContent?.desktop?.value) ? true : false;
-}
-function imgFullWidth({ attrs, }) { 
-  // attrs.useImage?.decoration?.fullWidth
-  return ("on" === attrs.useImage?.decoration?.fullWidth?.desktop?.value) ? false : true;
-}
-
-
-function imageAltTextHas({
-  attrs,
-  attrName,
-  responsiveMode,
-  stateMode,
-}) { 
-  // attrs.settingCarousel?.innerContent?.carouselType?.desktop?.value?.carouselType
-  let imageAlt = attrs?.useImage?.innerContent?.items?.src?.desktop?.value?.alt;
-  let imgSetAlt = attrs?.useImage?.innerContent?.items?.alt?.desktop?.value?.alt;
-  return imgSetAlt ? imgSetAlt : imageAlt;
+export const D4ToD5CustomMargin = ( value ) => {
+	value = value.split( "|" );
+	value = {
+		padding: {
+			top: value[ 0 ],
+			right: value[ 1 ],
+			bottom: value[ 2 ],
+			left: value[ 3 ],
+			syncVertical: "true" === value[ 4 ] ?  "on" : "off",
+			syncHorizontal: "true" === value[ 5 ] ?  "on" : "off"
+		}
+	}
+	return value
 }
 
-window.vendor.wp.hooks.addFilter('divi.moduleLibrary.moduleAttributes.diviflash.content-carousel-item', 'divi', (attributes, metadata) => {
-
-  attributes.useIcon.settings.decoration.background.item.component.props.visible = iconPickerVisible;
-  attributes.useIcon.settings.decoration.icon.items.icon.visible = iconPickerVisible;
-  attributes.useIcon.settings.decoration.icon.items.iconAttributes.component.props.visible = iconPickerVisible;
-  attributes.useIcon.settings.decoration.sizing.items.alignment.visible = iconPickerVisible;
-  attributes.useIcon.settings.decoration.sizing.items.circleIcon.visible = iconPickerVisible;
-  attributes.useIcon.settings.decoration.sizing.items.fontSize.visible = iconPickerVisible;
-
-  attributes.useImage.settings.decoration.imageAlignment.item.visible = imgFullWidth;
-  attributes.useImage.settings.decoration.maxWidth.item.visible = imgFullWidth;
-
-  // console.log('image full width _ ', imgFullWidth);
-  
-
-  attributes.useImage.settings.innerContent.items.src.visible = iconPickerInvisible;
-  attributes.useImage.settings.innerContent.items.alt.visible = iconPickerInvisible;
-  // attributes.useImage.settings.innerContent.items.alt.desktop.value.alt = imageAltTextHas;
-  // attributes.useImage.settings.innerContent.items.alt.defaultValue = imageAltTextHas;
-
-  return attributes;
-  
-});
-
-window.vendor.wp.hooks.addFilter('divi.moduleLibrary.moduleAttributes.diviflash.content-carousel', 'divi', (attributes, metadata) => {
-
-  attributes.addSettingCarousel.settings.innerContent.items.shadowDarkColor.visible = enablesSlidesShadows;
-  attributes.addSettingCarousel.settings.innerContent.items.shadowLightColor.visible = enablesSlidesShadows;
-
-  attributes.settingCarousel.settings.innerContent.items.autoplaySpeed.visible = carouselSettingAutoplay;
-  attributes.settingCarousel.settings.innerContent.items.pauseOnHover.visible = carouselSettingAutoplay;
-  attributes.settingCarousel.settings.innerContent.items.showTitleOnLightbox.visible = carouselSettingLightbox;
-
-  // console.log('arrow next icon _ ', attributes.arrowNextIcon.settings.decoration.icon);
-  
-  attributes.arrowPrevIcon.settings.decoration.icon.items.arrowPrevIcon.component.props.visible = arrowIconPrev;
-  attributes.arrowPrevIcon.settings.decoration.sizing.item.visible = arrowIconPrev;
-  // attributes.arrowPrevIcon.settings.decoration.prevIconSize.item.visible = arrowIconPrev;
-
-  attributes.arrowNextIcon.settings.decoration.icon.items.icon.visible = arrowIconNext;
-  attributes.arrowNextIcon.settings.decoration.sizing.items.fontSize.visible = arrowIconNext;
-
-  metadata.settings.groups.advancedSettings.component.props.visible = carouselTypeCoverFlow;
-
-
-  return attributes;
-});

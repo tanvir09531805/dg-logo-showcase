@@ -1,9 +1,9 @@
 {
-  "name": "diviflash/logo-showcase",
+  "name": "difl/logo-showcase",
   "d4Shortcode": "difl_logo_showcase",
   "title": "Logo Showcase",
   "titles": "Logo Showcase",
-  "moduleIcon": "diviflash/bento-grid",
+  "moduleIcon": "difl/logo-showcase",
   "moduleClassName": "difl_logo_showcase",
   "moduleOrderClassName": "difl_logo_showcase",
   "category": "module",
