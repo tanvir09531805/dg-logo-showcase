@@ -1,0 +1,9 @@
+.df_ab_preview_support_wrapper{
+    display: block;
+    margin: 0;
+    font-weight: 600;
+    color: #4c5866 !important;
+    line-height: 1.5em;
+    font-size: 13px;
+    pointer-events: none;
+}

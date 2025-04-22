@@ -1,0 +1,64 @@
+.et_pb_gutters3 .et_pb_column .et_pb_module.difl_inline_contents_item,
+.et_pb_gutters3.et_pb_row .et_pb_column .et_pb_module.difl_inline_contents_item{
+    margin: unset;
+    padding: unset;
+}
+.difl_inline_contents_item{
+    float: left;
+    border-style: solid;
+}
+.difl_inline_contents_item:has( div > .difl_inline_content_image ){
+    line-height: 0;
+}
+.difl_inline_contents_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.difl_inline_contents_item.difl_inline_content_text {
+    font-size: 14px;
+    color: #888;
+}
+.difl_inline_contents_item.difl_inline_content_icon {
+    font-size: 24px;
+    color: #2ea3f2;
+}
+.difl_inline_contents_item .difl_inline_content_image {
+    height: 100%;
+    width: 40px;
+    object-fit: cover;
+    object-position: center;
+}
+.difl_inline_contents_item.df_break_line{
+    flex-basis: 100%;
+    height: 1px;
+    width: 100%;
+    background: unset !important;
+    box-shadow: unset !important;
+    border: unset !important;
+}
+
+/* For Builder */
+.difl_inline_contents_item > div:first-of-type{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.difl_inline_contents_item .difl_inline_content_text {
+    font-size: 14px;
+    color: #888;
+}
+.difl_inline_contents_item .difl_inline_content_icon {
+    font-size: 24px;
+    color: #2ea3f2;
+}
+.difl_inline_contents_item:has( div > .df_break_line){
+    flex-basis: 100%;
+    height: 1px;
+    width: 100%;
+    background: unset !important;
+    box-shadow: unset !important;
+    border: unset !important;
+}

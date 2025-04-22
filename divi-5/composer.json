@@ -1,0 +1,9 @@
+{
+    "name": "divi/difl",
+    "autoload": {
+        "psr-4": {
+            "DIFL\\Modules\\": "server/Modules/"
+        }
+    },
+    "require": {}
+}

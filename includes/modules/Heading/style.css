@@ -1,0 +1,99 @@
+.df-heading-container .df-heading {
+    position: relative;
+    z-index: 3;
+}
+.df-heading-container h1.df-heading {
+    font-size: 30px;
+}
+.df-heading-container h2.df-heading {
+    font-size: 26px;
+}
+.df-heading-container h3.df-heading {
+    font-size: 24px;
+}
+.df-heading-container h4.df-heading {
+    font-size: 18px;
+}
+.df-heading-container h5.df-heading {
+    font-size: 16px;
+}
+.df-heading-container h6.df-heading {
+    font-size: 14px;
+}
+.df-heading-container .df-heading > span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.df-heading-container .df-heading > span {
+    border-style: solid;
+}
+
+/* Divider styles */
+.df-heading-divider {
+    position: relative;
+    text-align: center;
+    line-height: 1em;
+}
+.df-heading-divider .df-divider-line {
+    box-sizing: content-box;
+    width: 100%;
+    height: 5px;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 5px;
+}
+.df-heading-divider .df-divider-line::before {
+    content: '';
+    box-sizing: border-box;
+    border-top: 5px solid #efefef;
+    width: 100%;
+    /* height: 5px; */
+    display: block;
+}
+.df-heading-divider span {
+    z-index: 9;
+    position: relative;
+}
+.df-heading-divider img {
+    max-width:100px;
+    position: relative;
+}
+
+/* Mirror text */
+.df-heading-container.has-dual-text .df-heading-dual_text {
+    transform: translateY(50%);
+}
+.df-heading-dual_text {
+    font-size:30px;
+    font-weight: bold;
+}
+.df-heading-dual_text::before {
+    content:attr(data-title);
+    font-size:inherit;
+    font-weight:inherit;
+}
+/* For only builder */
+.df-heading-container .df-heading span.prefix span,
+.df-heading-container .df-heading span.infix span,
+.df-heading-container .df-heading span.suffix span {
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    text-transform: inherit !important;
+    text-align: inherit !important;
+    color: inherit !important;
+    text-shadow: inherit !important;
+    margin-top: initial !important;
+    margin-bottom: initial !important;
+    margin-left: initial !important;
+    margin-right: initial !important;
+    padding-top: initial !important;
+    padding-bottom: initial !important;
+    padding-left: initial !important;
+    padding-right: initial !important;
+}

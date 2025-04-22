@@ -1,0 +1,83 @@
+.df_dt_container > * {
+  border-width: 0px;
+  border-style: solid;
+  border-color: #333;
+}
+
+.difl_datatable *{
+  border-width:0px;
+  border-style:solid;
+  border-color:#333;
+}
+.difl_datatable table.df_dt_table {
+  border: none !important;
+}
+table.df_dt_content {
+  border:0px solid gray;
+  border-collapse: separate;
+}
+.difl_datatable .et_pb_module.difl_datatableitem {
+  margin-bottom: 0;
+}
+/* Cell Styling*/
+tr td.df_dt_table_body_column_cell img,
+tr td.df_dt_table_body_column_cell span,
+tr td.df_dt_table_body_column_cell a{
+  border-width:0px;
+  border-style:solid !important;
+  border-color:#333;
+}
+table.df_dt_content tr .df_dt_table_body_column_cell {
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0;
+}
+table.df_dt_content tr:first-child .df_dt_table_body_column_cell,
+table.df_dt_content tr:not(:first-child) .df_dt_table_body_column_cell{
+  border-style: solid;
+  border-color: #333;
+}
+.df_dt_table_body_column_cell .et-pb-icon,
+.df_dt_table_body_column_cell img {
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 767px) {
+  .difl_datatable .df_dt_container.scroll_mode_active {
+    overflow-x: auto;
+    padding-top: 100px;
+  }
+  /* responsiveness title styling */
+  .difl_datatable .df_dt_container.responsive_mode_active table.df_dt_content{
+    border: 0;
+  }
+  .difl_datatable .df_dt_container.responsive_mode_active table.df_dt_content caption {
+    font-size: 1.3em;
+  } 
+  .difl_datatable .df_dt_container.responsive_mode_active table.df_dt_content thead tr:first-child{
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+  }
+  .difl_datatable .df_dt_container.responsive_mode_active table.df_dt_content tr {
+    display: block;
+  }  
+  .difl_datatable .df_dt_container.responsive_mode_active table.df_dt_content td {
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }  
+  .difl_datatable .df_dt_container.responsive_mode_active table.df_dt_content td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+}
+

@@ -1,0 +1,51 @@
+.bx-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: none !important;
+    border:none !important;
+    background-color: transparent !important;
+    margin-bottom:0 !important;
+}
+.difl_logocarousel .bx-wrapper .bx-controls-direction a {
+    margin-top: 0;
+    transform: translateY(-50%);
+}
+
+.bx-wrapper img {
+    margin:0 auto;
+}
+.df_lc_container .difl_logocarouselitem {
+    margin-bottom: 0 !important;
+}
+.difl_logocarousel .bx-controls-direction .bx-prev,
+.difl_logocarousel .bx-controls-direction .bx-next {
+    background-color: #fff;
+    font-family: ETmodules;
+    text-indent: 0;
+    font-size: 32px;
+    line-height: 31px;
+}
+.difl_logocarousel .bx-wrapper .bx-controls-direction a.disabled{
+    display: unset;
+    opacity: .5;
+}
+.difl_logocarousel .bx-controls-direction .bx-prev:before,
+.difl_logocarousel .bx-controls-direction .bx-next:before {
+    font-family: ETmodules;
+}
+.df_lc_container {
+    display: -ms-flexbox;
+    display: flex;
+}
+.difl_logocarouselitem {
+    border-width: 0px;
+    border-style: solid;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    height:100%;
+}
+
+#et-boc .et-l div.df_lc_container{
+    transition: initial;
+}

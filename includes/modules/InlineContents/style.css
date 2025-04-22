@@ -1,0 +1,13 @@
+.et-fb-form__toggle[data-name="alignment"] .et-fb-form__group .et-fb-multiple-buttons-container {
+    width: 100% !important;
+}
+.difl_inline_contents{}
+.difl_inline_contents_container{
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 5px;
+}

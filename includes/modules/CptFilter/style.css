@@ -1,0 +1,755 @@
+@import "./../../../public/css/lib/ion.rangeSlider.min.css";
+.et-fb-form__toggle[data-name="loader_settings"] .et-fb-form__group .et-fb-multiple-buttons-container {
+    width: 100% !important;
+}
+.df-cpts-inner-wrap {
+    --itemHeight: 1px;
+    transition: height 700ms;
+}
+.difl_cptfilter .df_cptfilter_container .df-cpts-wrap.layout-grid .df-cpts-inner-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.difl_cptitem {
+    overflow: hidden;
+}
+.difl_cptfilter .df-cpt-item{
+    width: 33.33%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.layout-grid .df-cpt-item {
+    height: 100%;
+}
+.difl_cptfilter .difl_cptitem.et_pb_module {
+    display: none;
+}
+
+/* Load more button */
+.difl_cptfilter .df-load-more-icon {
+    font-size: inherit;
+}
+
+/* CPT filter navigation */
+.df-cpt-filter-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0 !important;
+}
+.df-cpt-filter-nav li {
+    list-style: none;
+    cursor: pointer;
+}
+.df-cpt-filter-nav-item {
+    border: 0px solid;
+    padding: 6px 6px;
+}
+.df-cptfilter-load-more {
+    text-align: center;
+    display: inline-block;
+    border: 0px solid;
+}
+
+/* Height Equal */
+.difl_cptfilter .layout-grid .df-cpt-item.df-equal-height {
+    height: auto;
+}
+.df-cpt-outer-wrap{
+    border: 0px solid;
+    width: 100%;
+}
+.difl_cptfilter .df-cpt-item {
+    display: flex;
+}
+.difl_cptfilter .df-equal-height .df-cpt-outer-wrap {
+    height: auto;
+}
+
+/* Background image scale */
+.df-cpt-bg-on-hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+.df-cpt-bg-on-hover > div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scale(1);
+    transition: transform 1.3s ease;
+    z-index: -1;
+}
+.df-hover-trigger:hover .df-cpt-bg-on-hover > div {
+    transform: scale(1.5);
+}
+/* empty content */
+.df-empty-element {
+    display: none;
+}
+.df-filter-loading li {
+    pointer-events: none;
+}
+.difl_cptfilter .df-empty-notice {
+    background-color: #f2f2f2;
+    line-height: 1em;
+    padding: 18px 34px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* loading state */
+.load-more-pagintaion-container {
+    transition: opacity 500ms linear .8s;
+    opacity: 0;
+}
+.load-complete .load-more-pagintaion-container {
+    opacity: 1 !important;
+}
+.df-filter-loading .load-more-pagintaion-container {
+    opacity: 0 !important;
+}
+.df-filter-loading .df-cpt-filter-nav,
+.df-filter-loading ul.multi_filter_container li span.multi_filter_label,
+.df-filter-loading ul.multi_filter_container li .multi-select-component{
+    opacity: .6;
+    pointer-events: none;
+    cursor: not-allowed;
+
+}
+
+.difl_cptfilter .df-cpt-item {
+    min-height: var(--itemHeight);
+    transition: min-height .2s ease;
+}
+
+#left-area  .difl_cptfilter ul.multi_filter_container{
+    list-style-type: none !important;
+}
+#left-area  .difl_cptfilter ul.multi_filter_container li ul{
+    padding: 0 !important;
+}
+
+/* Multiple Taxonomy Filter */
+.difl_cptfilter ul.multi_filter_container{
+    list-style: none;
+    display:flex;
+    padding: 0;
+    flex-wrap: wrap;
+    overflow: visible;
+}
+
+
+.difl_cptfilter .df_cptfilter_container:not(.df_filter_sidebar) ul.multi_filter_container li:not(:last-child){
+    padding-right:10px;
+}
+.difl_cptfilter ul.multi_filter_container .autocomplete-list li{
+    display: block;
+    width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .difl_cptfilter .df_cptfilter_container:not(.df_filter_sidebar) ul.multi_filter_container > li{
+        display: inline-flex;
+        align-items: center;
+    }
+  }
+
+.difl_cptfilter .multi_filter_container li span.multi_filter_label,
+.difl_cptfilter .multi_filter_container li span.multi_filter_range_label{
+    border: 0 solid #333;
+    display: inline-block;
+    line-height: 1.7em;
+    width: 100%;
+}
+/***** Checkbox ******/
+.difl_cptfilter .filter_section{
+    overflow: visible !important;
+    border: 0 solid #000000;
+    height: max-content;
+}
+.difl_cptfilter .filter_section li .checkbox_container,
+.difl_cptfilter .filter_section li .dropdown-container{
+    width: 100%;
+    border: 0 solid #000000;
+}
+.difl_cptfilter .filter_section li .checkbox_container .checkbox_content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+}
+.difl_cptfilter .filter_section li .checkbox_container .multi_filter_label{
+    font-size: 18px;
+}
+
+.difl_cptfilter .filter_section li .checkbox_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.difl_cptfilter .filter_section li .checkbox_container .checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 2px;
+}
+
+.difl_cptfilter .filter_section li .checkbox_container .checkbox_content:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.difl_cptfilter .filter_section li .checkbox_container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.difl_cptfilter .filter_section li .checkbox_container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.difl_cptfilter .filter_section li .checkbox_container input:checked ~ .checkmark:after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+}
+
+/******* Range *******/
+
+.difl_cptfilter .filter_section li .irs {
+    width: 100%;
+}
+
+
+
+
+/*Sidebar System */
+
+.difl_cptfilter .df_cptfilter_container.df_filter_sidebar {
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-start; */
+    z-index: 99;
+}
+
+.df_filter_sidebar ul.multi_filter_container {
+    display: block;
+}
+
+.difl_cptfilter .multi_filter_container li select{
+    max-width: 100%;
+    color: #4e4e4e;
+    padding: 5px 0px;
+}
+.df_filter_sidebar .filter_section{
+    width: 30%;
+}
+.df_filter_sidebar .df-cpts-wrap {
+    width: 70%;
+}
+/*No Data notice */
+.difl_cptfilter .df_cptfilter_container .no-post-container .df-cpts-inner-wrap {
+    margin-left:0px;
+    margin-right:0px;
+}
+
+/* Multi Select */
+
+.difl_cptfilter select[data-multi-select-plugin] {
+    display: none !important;
+}
+/* .difl_cptfilter .multiple_taxonomy_filter .search-container .selected-input::placeholder{
+    color:inherit;
+} */
+.difl_cptfilter .dropdown-container {
+}
+.difl_cptfilter .multi-select-component {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    font-size: 14px;
+    padding-bottom: 0px;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    /* padding: 2px; */
+    color: #4e4e4e;
+    overflow: visible !important;
+    line-height: 1.7em;
+}
+
+
+/* .difl_cptfilter .multi-select-component:focus-within {
+    box-shadow: inset 0px 0px 0px 2px #78ABFE;
+} */
+
+.difl_cptfilter .multi-select-component .btn-group {
+    display: none !important;
+}
+
+.difl_cptfilter .multiselect-native-select .multiselect-container {
+    width: 100%;
+}
+
+.difl_cptfilter .selected-wrapper {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    border: 1px solid #d9d9d9;
+    background-color: #eaeaf6;
+    white-space: nowrap;
+    margin-right:2px;
+    /* margin: 3px; */
+    /* height: 22px; */
+    line-height: inherit;
+    vertical-align: top;
+    cursor: default;
+}
+
+.difl_cptfilter .selected-wrapper .selected-label {
+    max-width: 514px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 4px;
+    vertical-align: inherit;
+    line-height: 1.7em;
+}
+
+.difl_cptfilter .selected-wrapper .selected-close {
+    display: inline-block;
+    text-decoration: none;
+    font-size: inherit;
+    line-height: inherit;
+    margin-left: 5px;
+    padding-bottom: 0px;
+    height: 100%;
+    vertical-align: top;
+    padding-right: 4px;
+    opacity: 0.2;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    font-weight: 700;
+}
+
+.difl_cptfilter .search-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.difl_cptfilter .search-container .selected-input {
+    background: none;
+    border: 0;
+    /* height: 20px; */
+    line-height: inherit;
+    width: 100%;
+    padding: 0;
+    /* margin-bottom: 3px;
+    margin-top: 3px; */
+    margin-left: 2px;
+    box-shadow: none;
+}
+
+.difl_cptfilter .search-container .selected-input:focus {
+    outline: none;
+}
+
+.difl_cptfilter .search-container .dropdown-icon {
+    display: inline-block;
+    border: 0 !important;
+    font-family: ETmodules;
+    content: "3";
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -0.5em;
+    color:inherit;
+}
+.difl_cptfilter .search-container .dropdown-icon::after{
+    content: "3";
+}
+.difl_cptfilter .search-container .dropdown-icon.active::after{
+    content: "2";
+}
+.difl_cptfilter .search-container ul {
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    z-index: 3;
+    margin-top: 36px;
+    width: 100%;
+    right: 0px;
+    background: #fff;
+    border-top: none;
+    border-bottom: none;
+    box-shadow: 0px 4px 10px rgb(50 70 176 / 60%) !important;
+}
+
+.difl_cptfilter .search-container ul :focus {
+    outline: none;
+}
+
+.difl_cptfilter .search-container ul li {
+    display: block;
+    text-align: left;
+    padding: 8px 20px 8px 12px;
+    font-size: 14px;
+    min-height: 31px;
+    color:#343434;
+}
+
+
+.difl_cptfilter .search-container ul li:hover.not-cursor {
+    cursor: default;
+}
+
+.difl_cptfilter .search-container ul li:hover {
+    background-color: #eaeaf6;
+    color:rgba(109, 127, 224, 1);
+    border-color: #adadad;
+    cursor: pointer;
+}
+
+/* Adding scrool to select options */
+.difl_cptfilter .autocomplete-list {
+    max-height: 165px;
+    /* border-radius: 4px 0px 0px 4px; */
+    overflow-y: auto;
+    overflow-x: hidden;
+  
+}
+
+.difl_cptfilter .df_search_filter_input {
+    font-size: 14px;
+    text-align: left;
+    padding: 0.5em 1em;
+    background-color: #F1F1F1;
+    border-width: 1px;
+    border-color:#E6E6E6;
+    border-style: solid;
+}
+.difl_cptfilter .df_search_filter_input:focus{
+    border-color:transparent;
+}
+.difl_cptfilter input.df_search_filter_input::placeholder{
+    opacity:.4
+}
+.difl_cptfilter .search_bar_button {
+    display: flex;
+    background-color: #ddd;
+    line-height: normal;
+    border-left: 0px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    border-width: 1px;
+    border-color:#E6E6E6;
+    border-style: solid;
+}
+
+.difl_cptfilter .search_bar {
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    overflow: hidden;
+}
+.difl_cptfilter .et-pb-icon.search_icon{
+    font-size: 16px;
+}
+
+.difl_cptfilter .et-pb-icon.search_icon {
+    pointer-events: none
+ }
+
+ .df-filter-loading #overlay{
+    position: absolute; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    /* display: none; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.3); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+ }
+
+.difl_cptfilter .filter_section li .dropdown-container{
+    overflow: visible !important;
+}
+
+.difl_cptfilter .filter_section .filter_elements{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    column-gap: 5px;
+    padding: 5px;
+}
+.difl_cptfilter .filter_section .filter_element_card{
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgb(68, 93, 200);
+    border-radius: 16px;
+}
+.difl_cptfilter .filter_section .filter_element_card_text{
+    max-width: 207px;
+    margin-left: 10px;
+    margin-right: .5em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.difl_cptfilter .filter_section .filter_element_card_close{
+    display: inline-block;
+    margin-right: .5em;
+    color: unset;
+    font-size: 1.25em;
+    line-height: .8;
+}
+html.difl-cpt-stop-scrolling, body.difl-cpt-stop-scrolling {
+    overflow: hidden !important;
+}
+
+.filter_section.difl_cpt_sticky_filter_on, .filter_section.difl_cpt_sticky_filter_on + ul.df-cpt-filter-nav{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 767px) {
+    .difl_cptfilter .filter_section{
+        z-index: 999;
+    }
+    .difl_cptfilter .df_cptfilter_container .filter_section ul{
+        margin-bottom: 16px;
+    }
+    .df_cptfilter_container .df_phn_resp>*{
+        display: none !important;
+    }
+    .df_cptfilter_container .df_phn_resp{
+        width: fit-content !important;
+        margin-left: auto !important;
+        display: flex !important;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .df_cptfilter_container .df_phn_resp_builder{
+        position: relative !important;
+    }
+    .df_cptfilter_container .df_phn_resp_builder .difl_filter_short_desc_card{
+        position: relative !important;
+    }
+    .df_cptfilter_container .df_phn_resp_builder .multi_filter_container{
+        margin-bottom: 20px !important;
+    }
+    .df_cptfilter_container .df_phn_resp::before {
+        content: "f";
+        font-family: ETmodules;
+        font-size: 24px;
+        padding: 5px 0 5px 10px;
+    }
+    .df_cptfilter_container .df_phn_resp::after {
+        content:"Filter";
+        font-size: 16px;
+        padding: 5px 10px 5px 0;
+    }
+
+    .filter_section.df_phn_resp_cls{
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        width: 100%;
+        height: auto;
+        left: 0;
+        top: 80px;
+        bottom: 0;
+        right: 0;
+        box-sizing: border-box;
+        overflow: hidden !important;
+        background: #fff;
+    }
+
+    .df_cptfilter_container .df_phn_resp_cls::after{
+        content: "M";
+        font-family: ETmodules;
+        font-size: 24px;
+        position: absolute;
+        left: 9px;
+        top: 15px;
+        cursor: pointer;
+        background: #727272;
+        border-radius: 50%;
+        color: #fff;
+        padding: 2px;
+        z-index: 10;
+    }
+
+    .df_cptfilter_container .df_phn_resp_cls .filter_wrapper{
+        height: 100%;
+        display: block;
+        overflow-y: auto;
+    }
+
+    .df_cptfilter_container .df_phn_resp_cls .filter_wrapper .filter_field_wrapper{
+        min-height: 95%;
+    }
+
+    .df_phn_resp_cls .difl_filter_short_desc_card_header{
+        width: 100%;
+        min-height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        background: #fff;
+        border-bottom: 1px solid #f7f7f7;
+    }
+    .df_phn_resp_cls .difl_filter_short_desc_card_header h4{
+        margin: 0;
+        padding: 19px 0 10px 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .df_phn_resp_cls .difl_filter_short_desc_card{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        padding: 16px 16px;
+        z-index: 999999;
+        border-top: 1px solid #e4e4e4;
+        background: #fff;
+    }
+
+    .df_phn_resp_cls .difl_filter_short_desc_card .difl_filter_show_btn{
+        height: 100%;
+        width: 45%;
+        padding: 6px 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: .875em;
+        border-style: solid;
+        border-color: #445dc8;
+        background-color: #445dc8;
+        color: #f5f5f5;
+        border-radius: 0;
+    }
+    .df_phn_resp_cls .difl_filter_short_desc_card .difl_filter_cls_btn{
+        height: 100%;
+        width: 45%;
+        padding: 6px 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: .875em;
+        white-space: nowrap;
+        box-shadow: none;
+        background: #fff;
+        color: #727272;
+        border-radius: 0;
+        border: 1px solid #d8d8d8;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    .df_phn_resp_cls .difl_filter_short_desc_card_header h4{
+        display: none;
+    }
+    .df_phn_resp_cls .difl_filter_short_desc_card{
+        display: none;
+    }
+}
+
+/*Author Filter*/
+.difl_cptfilter .filter_section .df_author_filter:not(:has(.dropdown-container)){
+    width: 100%;
+    height: auto;
+}
+#left-area .df_author_filter:not(:has(.dropdown-container)) ul,
+.entry-content .df_author_filter:not(:has(.dropdown-container)) ul,
+.et-l--body .df_author_filter:not(:has(.dropdown-container)) ul,
+.et-l--footer .df_author_filter:not(:has(.dropdown-container)) ul,
+.et-l--header .df_author_filter:not(:has(.dropdown-container)) ul {
+    padding: unset;
+    list-style: none;
+    line-height: unset;
+}
+.difl_cptfilter .filter_section .df_author_filter:not(:has(.dropdown-container)) .df_author_label{
+
+}
+.difl_cptfilter .filter_section .df_author_filter:not(:has(.dropdown-container)) ul{
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+}
+.difl_cptfilter .filter_section .df_author_filter:not(:has(.dropdown-container)) ul li{
+    display: flex;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.difl_cptfilter .filter_section .df_author_filter:not(:has(.dropdown-container)) ul li:hover{
+    background: #e4e4e4;
+    color: #fff;
+}
+.difl_cptfilter .filter_section .df_author_filter:not(:has(.dropdown-container)) ul li.df_author_active{
+    background: #000000;
+    color: #fff;
+}
+.difl_cptfilter .filter_section .df_author_filter:not(:has(.dropdown-container)) .df_author_label,
+.difl_cptfilter .df_cptfilter_container .df_cpt_filter_nav_wrapper .df_tax_label{
+    font-size: 16px;
+    text-transform: capitalize;
+}

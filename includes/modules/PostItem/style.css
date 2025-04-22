@@ -1,0 +1,353 @@
+/* image hover */
+.df-post-outer-wrap.c4-izmir {
+    display: block;
+}
+.df-post-image-wrap {
+    overflow: hidden;
+}
+.df-post-image-wrap .has_overlay {
+    /* position: relative; */
+}
+
+/* hover styles */
+.df-hover-effect {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    /* border-radius: 3px; */
+    display: block;
+}
+.df-hover-effect *,
+.df-hover-effect :after,
+.df-hover-effect :before,
+.df-hover-effect:after,
+.df-hover-effect:before {
+    box-sizing: border-box;
+    transition: all 0.6s ease !important;
+}
+.df-hover-effect figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+    z-index: 1;
+}
+.df-hover-effect img {
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+.df-hover-trigger:focus .df-image-zoom-in img,
+.df-hover-trigger:hover .df-image-zoom-in img,
+:focus > .df-image-zoom-in img {
+    transform: scale(1.25);
+}
+.df-image-zoom-out img {
+    transform: scale(1.25);
+}
+.df-hover-trigger:focus .df-image-zoom-out img,
+.df-hover-trigger:hover .df-image-zoom-out img,
+:focus > .df-image-zoom-out img {
+    transform: scale(1);
+}
+.df-image-pan-up img {
+    transform-origin: top;
+    transform: scale(1.2) translate(0, 0);
+}
+.df-hover-trigger:focus .df-image-pan-up img,
+.df-hover-trigger:hover .df-image-pan-up img,
+:focus > .df-image-pan-up img {
+    transform: scale(1.2) translate(0, -15%);
+}
+.df-image-pan-down img {
+    transform-origin: bottom;
+    transform: scale(1.2) translate(0, 0);
+}
+.df-hover-trigger:hover .df-image-pan-down img,
+:focus > .df-image-pan-down img {
+    transform: scale(1.2) translate(0, 15%);
+}
+.df-image-pan-left img {
+    transform-origin: left;
+    transform: scale(1.2) translate(0, 0);
+}
+.df-hover-trigger:focus .df-image-pan-left img,
+.df-hover-trigger:hover .df-image-pan-left img,
+:focus > .df-image-pan-left img {
+    transform: scale(1.2) translate(-15%, 0);
+}
+.df-image-pan-right img {
+    transform-origin: right;
+    transform: scale(1.2) translate(0, 0);
+}
+.df-hover-trigger:focus .df-image-pan-right img,
+.df-hover-trigger:hover .df-image-pan-right img,
+:focus > .df-image-pan-right img {
+    transform: scale(1.2) translate(15%, 0);
+}
+.df-hover-trigger:focus .df-image-blur img,
+.df-hover-trigger:hover .df-image-blur img,
+:focus > .df-image-blur img {
+    filter: blur(4px);
+    transform: scale(1.1);
+}
+.df-image-rotate-left img {
+    transform: scale(1.1) translate(0, 0);
+}
+.df-hover-trigger:focus .df-image-rotate-left img,
+.df-hover-trigger:hover .df-image-rotate-left img,
+:focus > .df-image-rotate-left img {
+    transform: scale(1.3) rotate(-15deg);
+}
+.df-image-rotate-right img {
+    transform: scale(1.1) translate(0, 0);
+}
+.df-hover-trigger:focus .df-image-rotate-right img,
+.df-hover-trigger:hover .df-image-rotate-right img,
+:focus > .df-image-rotate-right img {
+    transform: scale(1.3) rotate(15deg);
+}
+.df-hover-effect .df-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.df-hover-trigger:hover .df-hover-effect .df-overlay,
+:focus > .df-hover-trigger .df-hover-effect .df-overlay {
+    opacity: 1;
+}
+.df-hover-trigger:focus .df-hover-effect.has_overlay > img,
+.df-hover-trigger:hover .df-hover-effect.has_overlay > img,
+:focus > .df-hover-trigger .df-hover-effect.has_overlay > img {
+    /* opacity: 0; */
+}
+
+.df-icon-overlay{
+    font-family: 'ETmodules';
+    speak: none;
+    font-weight: normal;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 96px;
+    font-style: normal;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    opacity: 0;
+    font-size: 35px;
+}
+.df-icon-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+    z-index: 1;
+}
+/* icon reveal */
+.df-fade-up {
+    transform: translateY(1.5rem);
+}
+.df-fade-down {
+    transform: translateY(-1.5rem);
+}
+.df-fade-left {
+    transform: translateX(1.5rem);
+}
+.df-fade-right {
+    transform: translateX(-1.5rem);
+}
+.df-hover-trigger:hover .df-icon-overlay{
+    opacity: 1;
+    transform: translate(0);
+}
+.df-rotate-up-right {
+    transform-origin: bottom left;
+    transform: rotate(90deg);
+}
+.df-rotate-up-left {
+    transform-origin: bottom right;
+    transform: rotate(-90deg);
+}
+.df-rotate-down-right {
+    transform-origin: top left;
+    transform: rotate(-90deg);
+}
+.df-rotate-down-left {
+    transform-origin: top right;
+    transform: rotate(90deg);
+}
+.df-zoom-in {
+    transform: scale(.3);
+}
+.df-hover-trigger:hover .df-icon-overlay{
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* icon */
+.df-item-wrap .et-pb-icon {
+    margin-right: 4px;
+}
+/* read more */
+.df-post-read-more {
+    display: block;
+}
+.df-post-read-more span.btn-text {
+    vertical-align: middle;
+}
+
+/* default spacing */
+.df-post-comments-wrap,
+.df-post-categories-wrap,
+.df-post-date-wrap,
+.df-post-author-wrap,
+.df-post-tags-wrap,
+.df-post-title-wrap,
+.df-post-image-wrap,
+.df-post-content-wrap,
+.df-post-button-wrap,
+.df-post-custom-text {
+    margin-bottom: 12px;
+}
+
+/* meta icon */
+.df_postgrid_container .df-item-wrap .et-pb-icon{
+    font-family: 'ETmodules';
+    display: inline-block;
+    font-size: 20px;
+}
+.df_postgrid_container .df-item-wrap:not(.df-post-button-wrap) .et-pb-icon {
+    vertical-align: middle;
+}
+
+/* author */
+.df-post-author-wrap {
+    position: relative;
+}
+.df-post-author-wrap a {
+    display: inline-block;
+    position: relative;
+}
+.df-post-image-wrap img {
+    display: block;
+}
+.df-post-author-wrap img {
+    border-radius: 50%;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+}
+
+/* ===== Video Post ===== */
+.df-post-outer-wrap .et_pb_video_overlay_hover,
+.df-post-outer-wrap .et_pb_video_overlay,
+.df-post-outer-wrap .et_pb_video_play {
+    pointer-events: none;
+}
+.df-hide-overlay {
+    opacity: 0;
+}
+.df-post-outer-wrap > .et_main_video_container {
+    position: relative;
+}
+
+/* common */
+.df-post-outer-wrap {
+    position: relative;
+}
+
+.df-item-wrap,
+.df-post-inner-wrap {
+    border: 0px solid;
+}
+.df-post-inner-wrap {
+    z-index: 1;
+}
+.df-post-inner-wrap,
+.df-post-outer-wrap {
+    overflow: visible;
+}
+.df-post-title {
+    padding-bottom: 0px;
+}
+.df-post-title-wrap,
+.df-post-image-wrap,
+.df-post-content-wrap,
+.df-post-button-wrap,
+.df-post-read-more,
+.df-post-custom-text {
+    position: relative;
+    border: 0px solid;
+}
+.df-post-comments-wrap,
+.df-post-categories-wrap,
+.df-post-date-wrap,
+.df-post-author-wrap,
+.df-post-tags-wrap,
+.df-post-custom-text {
+    margin-right: 3px;
+    display: inline-flex;
+    border: 0px solid;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.df-post-ele-divider {
+    position: relative;
+    border: 0px solid;
+    height: 3px;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.df-empty-element {
+    display: none;
+}
+
+.df-post-author-wrap .df-icon-image {
+    border-radius: 0;
+}
+
+/* Float Effect */
+.df-post-outer-wrap:before,
+.df-post-inner-wrap::before,
+.df-post-outer-wrap:after,
+.df-post-inner-wrap::after {
+    content: " ";
+    clear: both;
+    display: block;
+}

@@ -1,0 +1,38 @@
+.df_fi_container {
+    position: relative;
+}
+.difl_floatimageitem {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+}
+
+.difl_floatimageitem img {
+    margin-bottom: 0;
+    display: block;
+}
+/* .difl_floatimageitem:hover {
+    z-index: 9;
+} */
+.difl_floatimage .difl_floatimageitem {
+    margin-bottom: 0 !important;
+}
+/**********************
+    Animation
+**********************/
+@keyframes fi-up-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10%);
+    }
+}
+@keyframes fi-left-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(10%);
+    }
+}

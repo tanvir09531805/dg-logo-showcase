@@ -1,0 +1,120 @@
+.df-custom-select label,
+.df-custom-input label {
+    display: block;
+    margin: 0 0 5px;
+    color: #32373c;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    white-space: nowrap;
+    cursor: default;
+}
+.df-custom-select,
+.df-custom-input {
+    margin-bottom: 20px;
+}
+.df-custom-select select,
+.df-custom-input input {
+    background: #f1f5f9;
+    max-height: 30px;
+    border: 0;
+    border-radius: 3px;
+    padding: 7px 10px;
+    box-sizing: border-box;
+    transition: background .2s ease;
+    color: #4c5866;
+    font-family: Open Sans,Helvetica,Roboto,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: none;
+    line-height: normal;
+    box-shadow: none;
+    letter-spacing: normal;
+    width: 100%;
+}
+.df-custom-input input:focus {
+    box-shadow: none;
+    background: #e6ecf2;
+    text-transform: none;
+    letter-spacing: normal;
+}
+.df-custom-input.icon-search {
+    margin-bottom: 0;
+}
+.icon-popup-button {
+    background: #7d3bcf;
+    border: none;
+    color: #fff;
+    display: block;
+    width: 100%;
+    padding: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 3px;
+    box-shadow: 1px 1px 6px -1px #42117e !important;
+    cursor: pointer;
+}
+.icon-popup-button:after {
+    right: 0;
+    font-size: 20px;
+    color: #b5b5b5;
+    top: 50%;
+    margin-top: -.5em;
+    font-family: ETmodules !important;
+    font-weight: 400 !important;
+    content: "7" !important;
+    color: #fff;
+    vertical-align: bottom;
+}
+
+/* icon */
+.df-custom-selected-icon span:after {
+    content: attr(data-icon);
+    font-family: ETmodules!important;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    speak: none;
+}
+
+.df-custom-selected-icon span.et-pb-fa-icon:after {
+    font-family: FontAwesome!important;
+}
+.df-custom-selected-icon span.et-pb-black-icon:after {
+    font-weight: 900;
+}
+
+.df-custom-selected-icon {
+    border: 2px solid #f1f5f9;
+    padding: 4px 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: #f1f5f9;
+    border-radius: 3px;
+}
+.df-custom-selected-icon label {
+    display: block;
+    margin: 0;
+    color: #32373c;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    white-space: nowrap;
+    cursor: default;
+}
+.df-custom-selected-icon span {
+    background: #2b87da;
+    border-radius: 3px;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 36px;
+    line-height: 1em;
+}

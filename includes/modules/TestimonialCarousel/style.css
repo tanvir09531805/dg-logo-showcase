@@ -1,0 +1,285 @@
+.et-fb-form__toggle .et-fb-multiple-buttons-container > li .et-fb-icon{
+    margin: unset !important;
+}
+.df_tc_inner_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.difl_testimonialcarousel .swiper-container {
+    order: 1;
+    width: 100%;
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+.difl_testimonialcarousel .difl_testimonialcarouselitem.et_pb_module {
+    align-self: flex-start;
+    margin-bottom: 0;
+}
+.difl_testimonialcarousel .difl_testimonialcarouselitem {
+    height: auto;
+    margin-bottom: 0 !important;
+}
+.difl_testimonialcarouselitem > div {
+    border:0px solid;
+    height: 100%;
+}
+.df_tci_container {
+    height: 100%;
+    padding: 20px;
+}
+.difl_testimonialcarousel .swiper-slide img {
+    display: block;
+}
+.df_tci_inner {
+    display: flex;
+    flex-direction: column;
+}
+.df_tc_author_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 0;
+    border-style: solid;
+}
+.df_tc_author_info h4 {
+    padding-bottom: 0;
+}
+.df_tc_author_image {
+    max-width: 100px;
+    margin: 0 10px 0 0;
+}
+.df_tc_ratings,
+.df_tc_author_box,
+.df_tc_company_logo,
+.df_tc_content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.df_tc_author_image img,
+.df_tc_company_logo img {
+    display: inline-block !important;
+    border-style: solid;
+    border-width: 0;
+}
+.df_tc_author_image,
+.df_tc_company_logo {
+    line-height: 0;
+}
+
+/* Arrows */
+.df_tc_arrows {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    pointer-events: none;
+    order: 2;
+    width:100%;
+}
+.df_tc_arrows div {
+    background-image: none;
+}
+.df_tc_arrows .swiper-button-prev {
+    order: 1;
+}
+.df_tc_arrows .swiper-button-next {
+    order: 2;
+}
+.df_tc_arrows .swiper-button-next,
+.df_tc_arrows .swiper-button-prev {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-top: 0;
+    pointer-events: all;
+}
+.df_tc_arrows > div {
+    background-color: #ffffff;
+    width: auto;
+    height: 100%;
+    padding: 7px;
+    background-image: none;
+}
+.df_tc_arrows > div:after {
+    content: attr(data-icon);
+    font-family: ETmodules;
+    text-indent: 0;
+    font-size: 39px;
+    line-height: 1;
+}
+.df_tc_arrows {
+    z-index: 9;
+}
+.difl_testimonialcarousel .arrow-middle .df_tc_arrows * {
+    pointer-events: none;
+    transition-delay: .3s !important;
+}
+.difl_testimonialcarousel.df-ele-hover .df_tc_arrows *,
+.difl_testimonialcarousel:hover .df_tc_arrows * {
+    pointer-events: all;
+}
+/* Dots styles */
+.difl_testimonialcarousel .swiper-pagination{
+    position: relative !important;
+    pointer-events: none;
+}
+.difl_testimonialcarousel .swiper-pagination span {
+    margin-right: 8px;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    transition: all .3s ease;
+    pointer-events: all;
+    display: inline-block;
+	vertical-align: top;
+}
+.difl_testimonialcarousel .swiper-pagination span:last-child {
+    margin-right: 0px;
+}
+
+/* ratings */
+.difl_testimonialcarousel .df_tc_ratings{
+   display: flex;
+}
+
+/* .df_tc_ratings span:after {
+    content: "\2605";
+    color: gold;
+    font-size: 18px;
+} */
+
+/* Quote Icon */
+.difl_testimonialcarousel .df_tc_quote_image {
+    width: 100%;
+}
+.difl_testimonialcarousel .df_tc_quote_image img{
+    display: inline-block;
+    vertical-align: top;
+}
+.df_tc_quote_icon {
+    font-family: ETmodules!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 0 0;
+    /* position: absolute; */
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+.df_tc_quote_icon,
+.df_tc_quote_image {
+    z-index: 2;
+}
+
+.df_tc_content,
+.df_tc_author_box,
+.df_tc_company_logo,
+.df_tc_ratings {
+    z-index: 1;
+}
+
+
+/* ms */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .df_tc_author_box {
+        align-self:center;
+        height:100%;
+    }
+	.df_tc_author_image {
+		min-height:1px;
+	}
+}
+
+/* Icon */
+.difl_testimonialcarousel .df_tc_ratings {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .difl_testimonialcarousel .df_tc_ratings span.et-pb-icon{
+    line-height: 1em;
+    font-size: 30px;
+  }
+  
+  /* Inactive */
+  .difl_testimonialcarousel span.df_rating_icon_fill,
+  .difl_testimonialcarousel span.df_rating_icon_empty {
+    display: inline-block;
+    position: relative;
+    font-style: normal;
+    cursor: default;
+  }
+  
+  .difl_testimonialcarousel .df_tc_ratings span.df_rating_icon_fill::before {
+    content: "★";
+    display: block;
+    font-family: inherit;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+  
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_1::before,
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_9::after {
+    width: 10% !important;
+  }
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_2::before,
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_8::after {
+    width: 20% !important;
+  }
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_3::before,
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_7::after {
+    width: 30% !important;
+  }
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_4::before,
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_6::after {
+    width: 40% !important;
+  }
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_5::before,
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_5::after {
+    width: 50% !important;
+  }
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_6::before,
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_4::after {
+    width: 60% !important;
+  }
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_7::before,
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_3::after {
+    width: 70% !important;
+  }
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_8::before,
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_2::after {
+    width: 80% !important;
+  }
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_9::before,
+  .difl_testimonialcarousel .df_tc_ratings span.df_fill_1::after {
+    width: 90% !important;
+  }
+  
+  .difl_testimonialcarousel .df_tc_ratings span.df_rating_icon_empty::after {
+    content: "☆";
+    display: block;
+    font-family: inherit;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    right: 0px !important;
+    left: auto !important;
+    color:gray;
+}
+.difl_testimonialcarousel .df_rating_icon span.et-pb-icon.df_rating_icon_fill {
+    color: gold;
+} 

@@ -1,0 +1,204 @@
+.justified-gallery{
+    transition: height 700ms;
+}
+.df_jsg_item {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    filter: "alpha(opacity=10)";
+    opacity: 0.1;
+    margin: 0;
+    padding: 0;
+}
+.df_jsg_container.ig_has_lightbox .df_jsg_image {
+    cursor: pointer;
+}
+.df_jsg_image.image_loading {
+    display:none;
+}
+.df_jsg_image{
+    border-style: solid;
+    border-width: 0px;
+    border-color:#333;
+}
+.df_jsg_image[data-customurl]:not([data-customurl=""]) {
+    cursor: pointer;
+}
+.jsg-more-image-btn {
+    border-style: solid;
+    border-width: 0px;
+    border-color:#333;
+    padding: 6px 12px;
+    cursor: pointer;
+    position: relative;
+}
+.jsg-more-image-btn.loading,
+.jsg-more-image-btn.loading * {
+    pointer-events: none;
+}
+.jsg-more-image-btn .spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: all .2s ease;
+}
+.jsg-more-image-btn .spinner svg {
+    width: 1.4em;
+    height: 1.4em;
+    fill: #8300e9;
+    z-index: 9;
+    position: absolute;
+    top: calc(50% - .7em);
+    left: calc(50% - .7em);
+}
+.jsg-more-image-btn .spinner:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#fff;
+    opacity: .8;
+    z-index: 0;
+}
+.jsg-more-image-btn.loading .spinner {
+    opacity: 1;
+    z-index: 0;
+}
+.jsg-more-image-btn.has_icon {
+    padding: 6px 42px 6px 12px;
+}
+.df-jsg-load-more-icon {
+    font-family: ETmodules;
+    text-indent: 0;
+    font-size: 32px;
+    line-height: 31px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: auto;
+    margin-left: 5px;
+    pointer-events: none;  
+}
+/* lightbox styles */
+.df_jsg_image figure {
+    display: block;
+    border-radius: 0px;
+}
+.lg .lg-sub-html div {
+    display: block;
+}
+.lg .lg-sub-html * {
+    transform: none !important;
+    opacity: 1;
+}
+.lg .lg-sub-html {
+    padding: 20px 0;
+}
+.lg .lg-sub-html .df_jsg_caption {
+    font-size: 18px;
+    padding: 0;
+    color: #ffffff;
+    opacity: 1;
+    max-width: 600px;
+}
+.lg .lg-sub-html .df_jsg_description {
+    font-size: 14px;
+    padding: 0;
+    color: #ffffff;
+    opacity: 1;
+    max-width: 600px;
+}
+.lg-toolbar {
+    background-color: transparent !important;
+}
+.lg-close {
+    background-color: transparent !important;
+    border: none;
+    color: #ffffff !important;
+}
+.lg-backdrop {
+    background-color: rgba(0,0,0,.8) !important;
+}
+.df_jsg_lightbox .lg-next,
+.df_jsg_lightbox .lg-prev {
+    border: none;
+    background: transparent !important;
+    color: #ffffff !important;
+}
+
+.df_jsg_content .df-hide-title,
+.df_jsg_content .df-hide-description {
+    display: none !important;
+}
+
+/* Pagination */
+.df-jsg-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.df-jsg-pagination::after {
+    display: none !important;
+}
+.df-jsg-pagination .page-numbers {
+    font-size: 16px;
+    border: 0px solid;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.df-jsg-pagination .page-numbers:last-child {
+    margin-right: 0px !important;
+}
+.df-jsg-pagination a.older::before,
+.df-jsg-pagination a.prev::before {
+    font-family: 'ETmodules';
+    content: '4';
+    speak: none;
+    font-weight: normal;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    margin-right: 5px;
+}
+.df-jsg-pagination a.newer::after,
+.df-jsg-pagination a.next::after {
+    font-family: 'ETmodules';
+    content: '5';
+    speak: none;
+    font-weight: normal;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    margin-left: 5px;
+}
+.df-jsg-pagination.only_icon a.newer::after,
+.df-jsg-pagination.only_icon a.next::after,
+.df-jsg-pagination.only_icon a.older::before,
+.df-jsg-pagination.only_icon a.prev::before {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}

@@ -1,0 +1,148 @@
+.df_ic_inner_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.difl_imagecarousel.has_lightbox .difl_imagecarouselitem {
+    cursor: pointer;
+}
+.difl_imagecarousel .swiper-container {
+    order: 1;
+    width: 100%;
+}
+.difl_imagecarousel .difl_imagecarouselitem {
+    display: flex;
+    height: 100%;
+}
+.difl_imagecarousel .difl_imagecarouselitem img {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.difl_imagecarousel .difl_imagecarouselitem > div:first-of-type{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* overlay_wrapper */
+.difl_imagecarousel .overlay_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 9;
+}
+/* Varirable width */
+.difl_imagecarousel .variable-width .swiper-slide {
+    width: auto !important;
+}
+/* Shadow */
+.difl_imagecarousel .swiper-container-3d .swiper-slide-shadow-left {
+    background-image: linear-gradient(to left,rgba(0,0,0,1),rgba(0,0,0,0));
+}
+.difl_imagecarousel .swiper-container-3d .swiper-slide-shadow-right{
+    background-image: linear-gradient(to right,rgba(0,0,0,1),rgba(0,0,0,0));
+}
+/* Button */
+.df_ic_button {
+    display: inline-block;;
+    border-style: solid;
+    border-width: 0px;
+}
+.difl_imagecarouselitem {
+    margin-bottom: 0 !important;
+}
+.difl_imagecarouselitem:hover {
+    z-index: 9;
+}
+.difl_imagecarouselitem > div {
+    border-style: solid;
+    border-width: 0px;
+}
+.df_ici_container {
+    position: relative;
+}
+.df_ici_container .content {
+    transition: transform .3s ease, opacity .3s ease;
+}
+.ic_image_wrapper img {
+    transition: transform .3s ease;
+}
+.df_ici_container .empty_content {
+    display: none;
+}
+
+/* Arrows */
+.df_ic_arrows {
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    align-self: center;
+    order: 2;
+    width:100%;
+}
+.df_ic_arrows .swiper-button-prev {
+    order: 1;
+}
+.df_ic_arrows .swiper-button-next {
+    order: 2;
+}
+.df_ic_arrows .swiper-button-next,
+.df_ic_arrows .swiper-button-prev {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-top: 0;
+    pointer-events: all;
+}
+.df_ic_arrows > div {
+    background-color: #ffffff;
+    width: auto;
+    height: 100%;
+    padding: 7px;
+}
+.df_ic_arrows > div:after {
+    content: attr(data-icon);
+    font-family: ETmodules;
+    text-indent: 0;
+    font-size: 39px;
+    line-height: 1;
+}
+.df_ic_arrows {
+    z-index: 9;
+}
+.difl_imagecarousel .arrow-middle .df_ic_arrows * {
+    pointer-events: none;
+    transition-delay: .3s !important;
+}
+.difl_imagecarousel.df-ele-hover .df_ic_arrows *,
+.difl_imagecarousel:hover .df_ic_arrows * {
+    pointer-events: all;
+}
+/* Dots styles */
+.difl_imagecarousel .swiper-pagination{
+    position: relative !important;
+    pointer-events: none;
+}
+.difl_imagecarousel .swiper-pagination span {
+    margin-right: 8px;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    transition: all .3s ease;
+    pointer-events: all;
+    display: inline-block;
+	vertical-align: top;
+}
+.difl_imagecarousel .swiper-pagination span:last-child {
+    margin-right: 0px;
+}
+

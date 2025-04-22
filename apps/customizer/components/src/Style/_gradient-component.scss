@@ -1,0 +1,75 @@
+.customize-control .difl-color-component {
+	.components-popover {
+		position: fixed !important;
+		.components-custom-gradient-picker__inserter{
+		  z-index: 1;
+		}
+		.components-popover {
+			position: absolute !important;
+		}
+	}
+
+    .components-popover:not(.difl-color-picker-dropdown) {
+	  .components-base-control {
+		padding: 8px 0;
+	  }
+	}
+
+	.difl-color-picker-dropdown > .components-popover__content {
+		overflow: unset !important;
+		min-height: 420px;
+	    .components-popover__content {
+		  max-height: 450px!important;
+		}
+		> .components-spacer {
+		  position: sticky;
+		  z-index: 3;
+		  .components-angle-picker-control {
+			gap: calc(8px) !important;
+		  }
+		  .components-custom-gradient-picker > .components-custom-gradient-picker__ui-line {
+			gap: calc(8px) !important;
+		  }
+		}
+	}
+
+	.components-custom-gradient-picker__gradient-bar {
+		position: relative;
+		border-radius: 24px;
+		z-index: 1;
+
+		&:not(.has-gradient) {
+			opacity: 1;
+		}
+	}
+}
+
+/*
+ * Style fixes for color picker inside mega-menu.
+ */
+#nv-mm-app {
+  .modal {
+	.components-popover.global-colors-selector .components-popover__content {
+	  max-height: 420px!important;
+	}
+	.components-popover:not(.global-colors-selector) .components-popover__content {
+	  max-height: 520px!important;
+	  .components-base-control {
+		padding: 4px 0;
+	  }
+	}
+
+	.components-color-picker {
+	  .components-select-control .components-input-control__container {
+		max-width: 100%;
+	  }
+	}
+  }
+}
+@media screen and (max-height: 900px) {
+  #nv-mm-app {
+	.modal .components-popover:not(.global-colors-selector) .components-popover__content {
+	  max-height: 420px!important;
+	}
+  }
+}

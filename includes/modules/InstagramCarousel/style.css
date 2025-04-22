@@ -1,0 +1,157 @@
+.df_inc_inner_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.difl_instagramcarousel .swiper-container {
+    /* max-width: 100%; */
+    order: 1;
+    width: 100%;
+}
+.difl_instagramcarousel .media_item {
+    /* align-self: flex-start; */
+    display: flex;
+    height: 100%;
+}
+.difl_instagramcarousel .media_item img {
+    display: inline-block;
+    vertical-align: top;
+}
+.difl_instagramcarousel .media_item > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+/* overlay_wrapper */
+.difl_instagramcarousel .overlay_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 9;
+}
+/* Varirable width */
+.difl_instagramcarousel .variable-width .swiper-slide {
+    width: auto !important;
+}
+/* Shadow */
+.difl_instagramcarousel .swiper-container-3d .swiper-slide-shadow-left {
+    background-image: linear-gradient(to left,rgba(0,0,0,1),rgba(0,0,0,0));
+}
+.difl_instagramcarousel .swiper-container-3d .swiper-slide-shadow-right{
+    background-image: linear-gradient(to right,rgba(0,0,0,1),rgba(0,0,0,0));
+}
+/* Button */
+.df_ic_button {
+    display: inline-block;;
+    border-style: solid;
+    border-width: 0px;
+}
+.media_item {
+    margin-bottom: 0 !important;
+}
+.media_item:hover {
+    z-index: 9;
+}
+.media_item > div {
+    border-style: solid;
+    border-width: 0px;
+}
+.df_inci_container {
+    position: relative;
+}
+.overlay_wrapper .content {
+    font-size: 16px;
+    transition: transform .3s ease, opacity .3s ease;
+}
+.inc_image_wrapper img {
+    transition: transform .3s ease;
+}
+.df_inci_container .empty_content {
+    display: none;
+}
+
+/* Arrows */
+.df_inc_arrows {
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    align-self: center;
+    order: 2;
+    width:100%;
+}
+.df_inc_arrows .swiper-button-prev {
+    order: 1;
+}
+.df_inc_arrows .swiper-button-next {
+    order: 2;
+}
+.df_inc_arrows .swiper-button-next, 
+.df_inc_arrows .swiper-button-prev {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-top: 0;
+    pointer-events: all;
+}
+.df_inc_arrows > div {
+    background-color: #ffffff;
+    width: auto;
+    height: 100%;
+    padding: 7px;
+}
+.df_inc_arrows > div:after {
+    content: attr(data-icon);
+    font-family: ETmodules;
+    text-indent: 0;
+    font-size: 39px;
+    line-height: 1;
+}
+.df_inc_arrows {
+    z-index: 9;
+}
+.difl_instagramcarousel .arrow-middle .df_inc_arrows * {
+    pointer-events: none;
+    transition-delay: .3s !important;
+}
+.difl_instagramcarousel.df-ele-hover .df_inc_arrows *,
+.difl_instagramcarousel:hover .df_inc_arrows * {
+    pointer-events: all;
+}
+/* Dots styles */
+.difl_instagramcarousel .swiper-pagination{
+    position: relative !important;
+    pointer-events: none;
+}
+.difl_instagramcarousel .swiper-pagination span {
+    margin-right: 8px;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    pointer-events: all;
+    display: inline-block;
+	vertical-align: top;
+}
+.difl_instagramcarousel .swiper-pagination span:last-child {
+    margin-right: 0px;
+}
+
+.difl_instagramcarousel .instagram-carousel-error {
+    margin: 0 auto;
+    color:red;
+}
+
+.difl_instagramcarousel .media_item[data-url]:not([data-url=""]){
+    cursor: pointer;
+}
+.difl_instagramcarousel .media_item .et-pb-icon.hover_icon{
+    opacity: 0;
+    transition: transform .3s ease, opacity .3s ease;
+}
+

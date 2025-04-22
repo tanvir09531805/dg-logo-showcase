@@ -1,0 +1,12 @@
+.df_bh_item.day_tiem_separator_on {
+    align-items: center;
+}
+.df_bh_item.day_tiem_separator_on .df_bh_day, .df_bh_item.day_tiem_separator_on .df_bh_time {
+    width: fit-content;
+}
+.df_bh_day_time_separator {
+    flex-grow: 1;
+}
+.df_bh_day_time_separator hr {
+    border-bottom-width: 1px;
+}

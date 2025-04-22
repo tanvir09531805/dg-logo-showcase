@@ -1,0 +1,63 @@
+
+.df_bh_container > * {
+    border-width: 0px;
+    border-style: solid;
+    border-color: #333;
+  }
+  .difl_businesshours *{
+    border-width:0px;
+    border-style:solid;
+    border-color:#333;
+
+}
+  /* .difl_businesshours .difl_businesshoursitem{
+    margin-bottom:0px;
+  } */
+  .df_bh_container .df_bh_item{
+  display: flex;
+  flex-direction: row;
+}
+
+.df_bh_container .df_bh_day,
+.df_bh_container .df_bh_time {
+  width: 100%;
+  font-size:16px;
+}
+.df_bh_start_time,
+.df_bh_end_time,
+.df_bh_time_separetor{
+  display: inline-block;
+  vertical-align: top;
+}
+.df_bh_container h1.df_bh_title{
+
+  font-size: 30px;
+}
+
+.df_bh_container h2.df_bh_title{
+
+  font-size: 26px;
+}
+
+.df_bh_container h3.df_bh_title{
+
+  font-size: 24px;
+}
+
+
+.df_bh_container h4.df_bh_title{
+
+  font-size: 18px;
+}
+
+.df_bh_container h5.df_bh_title{
+
+  font-size: 16px;
+}
+
+.df_bh_container h6.df_bh_title{
+
+  font-size: 14px;
+}
+
+

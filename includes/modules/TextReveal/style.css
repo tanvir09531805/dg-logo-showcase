@@ -1,0 +1,12 @@
+.df_text_reveal_main_container p{
+  padding:0;
+  margin: 0;
+}
+
+.df_text_reveal_main_container{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  --secondary-reveal-color:red;
+  border-style: solid;
+}

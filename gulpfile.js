@@ -1,37 +1,59 @@
-const { src, dest } = require('gulp');
-const package = require('./package.json');
+const { src, dest, pipe, series } = require('gulp');
+const zip = require('gulp-zip');
+const clean = require('gulp-clean');
+const replace = require('gulp-replace');
 
-const files = [
-    '**/*',
+function clean_files() {
+    return src([
+        '**/.git',
+    ])
+    .pipe(clean());
+}
 
-    // Ignored folders.
-    '!**/.*/**', // Hidden files/dirs on Mac/Linux
-    '!**/__*/**', // Hidden dirs on Mac
-    '!.yarn/**',
+const ignode_files = [
+    '**/.git',
+    '**/**/*',
+    '!includes/modules/**/*.jsx',
+    '!includes/modules/**/*style.css',
+    '!includes/**/*index.js',
+    '!includes/**/*loader.js',
+    '!includes/fields/**',
+    '!scripts/df_scripts/**',
+    '!scripts/lib/**',
+    '!scripts/frontend.js',
+    '!**/.gitignore',
+    '!**/.git',
+    '!**/*.md',
     '!node_modules/**',
-    '!src/**',
-    '!test-config/**',
-    '!storybook-assets/**',
+    '!production/**',
+    '!**/yarn.lock',
+    '!**/package.json',
+    '!**/package-lock.json',
+    '!**/asset-manifest.json' ,
+    '!**/gulpfile.js',
+    '!apps/**',
+    '!marketplace-phpcs/**'
+]
 
-    // Ignored files.
-    '!**/*.zip',
-    '!**/*.map',
-    '!.gitignore',
-    '!.yarnrc.yml',
-    '!gulpfile.js',
-    '!package.json',
-    '!tsconfig.json',
-    '!webpack.config.js',
-    '!yarn.lock',
-    '!composer.json',
-    '!composer.lock',
-];
+function make_zip() {
+    return src([
+        ...ignode_files]
+    )
+    .pipe(replace("Requires PHP: 7.1", "Requires PHP: 7.1\n    Update URI: https://www.diviflash.com"))
+    .pipe(zip('diviflash.zip'))
+    .pipe(dest('production/webstore'));
+}
+function make_zip_marketplace() {
+    return src([
+        ...ignode_files,
+        '!admin/license/**']
+    ) // Here I'm excluding .min.js files
+    .pipe(zip('diviflash.zip'))
+    .pipe(dest('production/marketplace'));
+}
 
-const zip = async () => {
-    const gulpZip = (await import('gulp-zip')).default;
-    return src(files)
-        .pipe(gulpZip(package.name + '-v' + package.version + '.zip'))
-        .pipe(dest('./'));
-};
-
-exports.zip = zip;
+exports.default = series(
+    clean_files,
+    make_zip,
+    make_zip_marketplace
+);

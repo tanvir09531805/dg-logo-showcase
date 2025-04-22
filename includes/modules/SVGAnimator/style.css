@@ -1,0 +1,6 @@
+.difl-svg-animator-inner-wrapper {
+    display: flex;
+}
+.difl_svganimator .difl-svg-animator-container svg {
+    display: block;
+}

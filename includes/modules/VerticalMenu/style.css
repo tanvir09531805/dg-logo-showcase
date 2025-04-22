@@ -1,0 +1,1021 @@
+/**
+ * This CSS file contains styles for the main container and menu items of a vertical menu.
+ * The styles handle the layout, behavior, and appearance of the vertical menu, including
+ * handling sub-menus, column layouts, tooltips, badges, and hover animations.
+ * The styles are designed to work with the corresponding HTML structure and JavaScript
+ * functionality to create a fully functional vertical menu.
+ */
+.df_vertical_menu_main_container,
+.df_vertical_menu_main_container * {
+    border-style: solid;
+    border-width: 0px;
+}
+.df_vertical_menu_main_container {
+    position: relative;
+    overflow: visible !important;
+}
+.df_vertical_menu_main_container nav.df-vertical-menu-nav-wrap {
+    overflow: visible !important;
+}
+
+/* if humburger enable that time for sliding effect overflow need to hide initially . it will set to visible from js  */
+.df_vertical_menu_main_container.df_enabled_hamburger
+    nav.df-vertical-menu-nav-wrap.overflow_hidden {
+    overflow: hidden !important;
+}
+
+.df_vertical_menu_main_container .df-vertical-menu-nav-wrap {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"] {
+    overflow: visible !important;
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* position: relative; */
+}
+
+.df-text-badge-wrapper {
+    overflow: hidden !important;
+    background-color: green !important;
+    width: 100% !important;
+}
+
+.df_vertical_menu_main_container .df-vertical-col-added,
+.df_vertical_menu_main_container .df-vertical-menu-nav-wrap {
+    border-style: solid;
+    border-width: 0px;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"].df-vertical-menu-nav-level-0
+    > li:first-child {
+    margin-top: 0 !important;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    .df-vertical-sub-menu {
+    overflow: hidden !important;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    .df-vertical-sub-menu.overflow-visible {
+    overflow: visible !important;
+}
+
+.df_vertical_menu_main_container.df-vertical-sub-menu-reveal-flyout
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    .df-vertical-sub-menu.df-vertical-col-added {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    gap: 10px;
+    justify-content: space-between;
+    width: auto;
+    border-style: solid;
+}
+
+.df_vertical_menu_main_container.df-vertical-sub-menu-reveal-flyout
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    .df-vertical-sub-menu.df-vertical-col-added
+    .col {
+    flex-basis: 100%;
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+.df_vertical_menu_main_container.df-vertical-submenu-builder-visiblity
+    .df-vertical-menu-nav-wrap
+    ul.df-vertical-menu-nav
+    .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu):not(.df-vertical-mega-menu-item):not(.df-vertical-menu-nav-level-1),
+.df_vertical_menu_main_container.df-vertical-sub-menu-reveal-stack
+    .df-vertical-menu-nav-wrap
+    ul.df-vertical-menu-nav
+    .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu):not(.df-vertical-mega-menu-item):not(.df-vertical-menu-nav-level-1) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    .df-vertical-sub-menu.df-vertical-col-added
+    .col
+    li.df-vertical-menu-item {
+    padding: 0;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    .df-vertical-sub-menu.df-vertical-col-added
+    .col
+    li.df-vertical-menu-item
+    > a
+    > .dropdown-arrow {
+    display: none !important;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    .df-vertical-sub-menu.df-vertical-col-added
+    .col
+    ul.df-vertical-inside-mega-menu {
+    display: block !important;
+    overflow: visible !important;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    .df_vertical_menu_item_elements_wrapper {
+    padding: 10px;
+    overflow: visible !important;
+    position: relative !important;
+    width: 100%;
+    display: flex !important;
+    line-height: 1.4em;
+    font-size: 16px;
+    border-style: solid;
+    align-items: center;
+    padding-right: 30px !important;
+}
+
+/* Menu alignment left */
+.df_vertical_menu_main_container.df-vertical-menu-alignment-left
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    .df_vertical_menu_item_elements_wrapper {
+    justify-content: flex-start;
+}
+
+/* Menu alignment center */
+.df_vertical_menu_main_container.df-vertical-menu-alignment-center
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    .df_vertical_menu_item_elements_wrapper {
+    justify-content: center;
+}
+
+/* Menu alignment right */
+.df_vertical_menu_main_container.df-vertical-menu-alignment-right
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    .df_vertical_menu_item_elements_wrapper {
+    justify-content: flex-end;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a:hover
+    span.df-vertical-nav-item-tooltip[data-tooltip-positon="right"] {
+    opacity: 1;
+    transform: translateY(-50%) translateX(100%) scale(1);
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a:hover
+    span.df-vertical-nav-item-tooltip[data-tooltip-positon="bottom"] {
+    opacity: 1;
+    transform: translateY(100%) translateX(-50%) scale(1);
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a:hover
+    span.df-vertical-nav-item-tooltip[data-tooltip-positon="top"] {
+    opacity: 1;
+    transform: translateY(-100%) translateX(-50%) scale(1);
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a:hover
+    span.df-vertical-nav-item-tooltip[data-tooltip-positon="left"] {
+    opacity: 1;
+    transform: translateY(-50%) translateX(-100%) scale(1);
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    .dropdown-arrow {
+    order: 10;
+    right: 10px;
+    top: 0;
+    height: 100%;
+    display: flex !important;
+    align-items: center;
+    transition: transform 0.5s ease;
+    font-family: ETmodules;
+    font-weight: 400;
+    line-height: 0.7;
+    box-sizing: border-box;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Menu alignment left */
+.df_vertical_menu_main_container.df-vertical-menu-alignment-justified
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    .dropdown-arrow {
+    margin-left: auto;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    .dropdown-arrow.rotate-arrow-up {
+    transform: rotate(180deg);
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    .dropdown-arrow.rotate-arrow-left {
+    transform: rotate(90deg);
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    .dropdown-arrow.rotate-arrow-right {
+    transform: rotate(-90deg);
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    span.df-vertical-menu-icon {
+    font-size: 16px;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    span.df-vertical-nav-item-tooltip {
+    position: absolute;
+    z-index: 999;
+    font-size: 0.8em;
+    line-height: 0.8em;
+    padding: 7px;
+    border-radius: 3px;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    span.df-vertical-nav-item-tooltip:before {
+    background: inherit;
+    border-radius: 2px;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    span.df-vertical-nav-item-tooltip[data-tooltip-positon="right"] {
+    top: 50%;
+    right: -9px;
+    transform: translateY(-50%) translateX(0%) scale(0.5);
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    span.df-vertical-nav-item-tooltip[data-tooltip-positon="right"]::before {
+    left: -3px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    span.df-vertical-nav-item-tooltip[data-tooltip-positon="left"] {
+    top: 50%;
+    left: -9px;
+    transform: translateY(-50%) translateX(0%) scale(0.5);
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    span.df-vertical-nav-item-tooltip[data-tooltip-positon="left"]::before {
+    right: -3px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    span.df-vertical-nav-item-tooltip[data-tooltip-positon="top"] {
+    top: -5px;
+    left: 50%;
+    transform: translateY(0%) translateX(-50%) scale(0.5);
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    span.df-vertical-nav-item-tooltip[data-tooltip-positon="top"]::before {
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    span.df-vertical-nav-item-tooltip[data-tooltip-positon="bottom"] {
+    bottom: -5px;
+    left: 50%;
+    transform: translateY(0%) translateX(-50%) scale(0.5);
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    span.df-vertical-nav-item-tooltip[data-tooltip-positon="bottom"]::before {
+    top: -3px;
+    left: 50%;
+    transform: translateX(-51%) rotate(45deg);
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    .df-vertical-nav-item-badge {
+    font-size: 0.8em;
+    line-height: 0.8em;
+    padding: 7px;
+    border-radius: 3px;
+    opacity: 1;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    color: white;
+    background-color: #0038f0;
+    position: relative;
+    margin-left: 2px;
+    display: inline-block;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    .df-vertical-nav-item-badge.has-arrow:not(.left) {
+    margin-left: 10px;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    .df-vertical-nav-item-badge.has-arrow:before {
+    background: inherit;
+    border-radius: 2px;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    z-index: 1;
+    left: -3px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    .df-vertical-nav-item-badge.has-arrow.left {
+    margin-right: 10px;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item
+    a
+    .df-vertical-nav-item-badge.has-arrow.left:before {
+    left: auto;
+    right: -3px;
+}
+
+.df_vertical_menu_main_container
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    li.df-vertical-menu-item:not(.df-vertical-mega-menu) {
+    position: relative !important;
+}
+
+.df_vertical_menu_main_container.df-vertical-submenu-builder-hidden
+    .df-vertical-sub-menu {
+    display: none !important;
+    max-height: 0px;
+    overflow: hidden;
+}
+
+.df_vertical_menu_main_container.df-vertical-submenu-builder-visiblity
+    .df-vertical-menu-nav-wrap
+    ul {
+    overflow: visible !important;
+}
+
+.df_vertical_menu_main_container.df-vertical-submenu-builder-visiblity
+    .df-vertical-menu-nav-wrap
+    ul
+    .df-vertical-sub-menu {
+    overflow: visible !important;
+}
+
+.df_vertical_menu_main_container.df-vertical-sub-menu-reveal-flyout.df-vertical-sub-menu-reveal-right
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu) {
+    min-width: 200px;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: max-content;
+}
+
+.df_vertical_menu_main_container.df-vertical-sub-menu-reveal-flyout.df-vertical-sub-menu-reveal-right
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu).df-custom-submenu.df-vertical-mega-menu-item {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: max-content;
+}
+.df_vertical_menu_main_container.df-vertical-sub-menu-reveal-flyout.df-vertical-sub-menu-reveal-right
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    .df-vertical-sub-menu.df-vertical-col-added {
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+
+.df_vertical_menu_main_container.df-vertical-sub-menu-reveal-flyout.df-vertical-sub-menu-reveal-left
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu) {
+    min-width: 200px;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: max-content;
+}
+
+.df_vertical_menu_main_container.df-vertical-sub-menu-reveal-flyout.df-vertical-sub-menu-reveal-left
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu).df-custom-submenu.df-vertical-mega-menu-item {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: max-content;
+}
+.df_vertical_menu_main_container.df-vertical-sub-menu-reveal-flyout.df-vertical-sub-menu-reveal-left
+    .df-vertical-menu-nav-wrap
+    ul[class*="df-vertical-menu-nav-level-"]
+    .df-vertical-sub-menu.df-vertical-col-added {
+    position: absolute;
+    right: 100%;
+    top: 0;
+}
+
+
+
+.df_vertical_menu_main_container.badge-position-right
+    .df-vertical-nav-item-badge {
+    order: 4 !important;
+}
+
+.df_vertical_menu_main_container.badge-position-right
+    .df-vertical-nav-item-badge.has-arrow {
+    margin-left: 10px !important;
+}
+
+.df_vertical_menu_main_container.badge-position-right
+    .df-vertical-nav-item-badge.has-arrow:before {
+    left: -4px !important;
+    right: auto !important;
+}
+
+.df_vertical_menu_main_container.badge-position-left
+    .df-vertical-nav-item-badge {
+    order: -1 !important;
+}
+
+.df_vertical_menu_main_container.badge-position-left
+    .df-vertical-nav-item-badge.has-arrow {
+    margin-right: 10px !important;
+}
+
+.df_vertical_menu_main_container.badge-position-left
+    .df-vertical-nav-item-badge.has-arrow:before {
+    right: -4px !important;
+    left: auto !important;
+}
+
+.df_vertical_menu_main_container.df-vertical-has-item-animation
+    span.df_vertical_border_hover_effect {
+    position: absolute;
+    width: 100%;
+    overflow: hidden !important;
+    top: 0;
+    height: 100%;
+    left: 0;
+    border-radius: inherit;
+}
+
+/* item hover 1 */
+
+.df_vertical_menu_main_container.df-vertical-has-item-animation.item-hover-1
+    .df-vertical-menu-nav
+    .df-vertical-menu-item
+    > a
+    .df_vertical_border_hover_effect:after {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #0038f0;
+    transition: width 0.3s ease-in-out;
+}
+.df_vertical_menu_main_container.df-vertical-has-item-animation.item-hover-1
+    .df-vertical-menu-nav
+    .df-vertical-menu-item:hover
+    > a
+    .df_vertical_border_hover_effect:after {
+    width: 100%;
+}
+/* item hover 2 */
+.df_vertical_menu_main_container.df-vertical-has-item-animation.item-hover-2
+    .df-vertical-menu-nav
+    .df-vertical-menu-item
+    > a
+    .df_vertical_border_hover_effect:before,
+.df_vertical_menu_main_container.df-vertical-has-item-animation.item-hover-2
+    .df-vertical-menu-nav
+    .df-vertical-menu-item
+    > a
+    .df_vertical_border_hover_effect:after {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    height: 2px;
+    background-color: #0038f0;
+    transition: width 0.3s ease-in-out;
+}
+.df_vertical_menu_main_container.df-vertical-has-item-animation.item-hover-2
+    .df-vertical-menu-nav
+    .df-vertical-menu-item
+    > a
+    .df_vertical_border_hover_effect:before {
+    right: 0;
+    top: 0;
+}
+.df_vertical_menu_main_container.df-vertical-has-item-animation.item-hover-2
+    .df-vertical-menu-nav
+    .df-vertical-menu-item
+    > a
+    .df_vertical_border_hover_effect:after {
+    left: 0;
+    bottom: 0;
+}
+.df_vertical_menu_main_container.df-vertical-has-item-animation.item-hover-2
+    .df-vertical-menu-nav
+    .df-vertical-menu-item:hover
+    > a
+    .df_vertical_border_hover_effect:before,
+.df_vertical_menu_main_container.df-vertical-has-item-animation.item-hover-2
+    .df-vertical-menu-nav
+    .df-vertical-menu-item:hover
+    > a
+    .df_vertical_border_hover_effect:after {
+    width: 100%;
+}
+/* item hover 3 */
+.df_vertical_menu_main_container.df-vertical-has-item-animation.item-hover-3
+    .df-vertical-menu-nav
+    .df-vertical-menu-item
+    > a
+    .df_vertical_border_hover_effect:before,
+.df_vertical_menu_main_container.df-vertical-has-item-animation.item-hover-3
+    .df-vertical-menu-nav
+    .df-vertical-menu-item
+    > a
+    .df_vertical_border_hover_effect:after {
+    content: "";
+    display: block;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    height: 2px;
+    background-color: #0038f0;
+    transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out,
+        bottom 0.3s ease-in-out;
+    left: 0;
+    right: 0;
+}
+
+.df_vertical_menu_main_container.df-vertical-has-item-animation.item-hover-3
+    .df-vertical-menu-nav
+    .df-vertical-menu-item
+    > a
+    .df_vertical_border_hover_effect:before {
+    top: 25%;
+}
+.df_vertical_menu_main_container.df-vertical-has-item-animation.item-hover-3
+    .df-vertical-menu-nav
+    .df-vertical-menu-item
+    > a
+    .df_vertical_border_hover_effect:after {
+    bottom: 25%;
+}
+.df_vertical_menu_main_container.df-vertical-has-item-animation.item-hover-3
+    .df-vertical-menu-nav
+    .df-vertical-menu-item:hover
+    > a
+    .df_vertical_border_hover_effect:before {
+    top: 0;
+}
+.df_vertical_menu_main_container.df-vertical-has-item-animation.item-hover-3
+    .df-vertical-menu-nav
+    .df-vertical-menu-item:hover
+    > a
+    .df_vertical_border_hover_effect:after {
+    bottom: 0;
+}
+.df_vertical_menu_main_container.df-vertical-has-item-animation.item-hover-3
+    .df-vertical-menu-nav
+    .df-vertical-menu-item:hover
+    > a
+    .df_vertical_border_hover_effect:before,
+.df_vertical_menu_main_container.df-vertical-has-item-animation.item-hover-3
+    .df-vertical-menu-nav
+    .df-vertical-menu-item:hover
+    > a
+    .df_vertical_border_hover_effect:after {
+    opacity: 1;
+}
+
+@media (max-width: 980px) {
+    .df_vertical_menu_main_container
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df-vertical-sub-menu {
+        position: relative !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+    }
+
+    .df_vertical_menu_main_container
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df-vertical-sub-menu.df-vertical-col-added {
+        flex-direction: column !important;
+    }
+
+    /* Alignment Left */
+    .df_vertical_menu_main_container.df-vertical-menu-alignment-left-tablet
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df_vertical_menu_item_elements_wrapper {
+        justify-content: flex-start;
+    }
+    .df_vertical_menu_main_container.df-vertical-menu-alignment-left-tablet
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        a
+        .dropdown-arrow {
+        margin-left: unset;
+    }
+
+    /* Alignment Center */
+    .df_vertical_menu_main_container.df-vertical-menu-alignment-center-tablet
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df_vertical_menu_item_elements_wrapper {
+        justify-content: center;
+    }
+    .df_vertical_menu_main_container.df-vertical-menu-alignment-center-tablet
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df_vertical_menu_item_elements_wrapper
+        .dropdown-arrow {
+        margin-left: unset;
+    }
+
+    /* Alignment Right */
+    .df_vertical_menu_main_container.df-vertical-menu-alignment-right-tablet
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df_vertical_menu_item_elements_wrapper {
+        justify-content: flex-end;
+    }
+    .df_vertical_menu_main_container.df-vertical-menu-alignment-right-tablet
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df_vertical_menu_item_elements_wrapper
+        .dropdown-arrow {
+        margin-left: unset;
+    }
+
+    /* Menu alignment justified */
+    .df_vertical_menu_main_container.df-vertical-menu-alignment-justified-tablet
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df_vertical_menu_item_elements_wrapper {
+        justify-content: left;
+    }
+    .df_vertical_menu_main_container.df-vertical-menu-alignment-justified-tablet
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df_vertical_menu_item_elements_wrapper
+        .dropdown-arrow {
+        margin-left: auto;
+    }
+}
+
+/* Mobile Style */
+@media screen and (max-width: 767px) {
+    .df_vertical_menu_main_container
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df-vertical-sub-menu {
+        position: relative !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+    }
+
+    .df_vertical_menu_main_container
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df-vertical-sub-menu.df-vertical-col-added {
+        flex-direction: column !important;
+    }
+
+    /* Alignment Left */
+    .df_vertical_menu_main_container.df-vertical-menu-alignment-left-phone
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df_vertical_menu_item_elements_wrapper {
+        justify-content: flex-start;
+    }
+    .df_vertical_menu_main_container.df-vertical-menu-alignment-left-phone
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df_vertical_menu_item_elements_wrapper
+        .dropdown-arrow {
+        margin-left: unset;
+    }
+
+    /* Alignment Center */
+    .df_vertical_menu_main_container.df-vertical-menu-alignment-center-phone
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df_vertical_menu_item_elements_wrapper {
+        justify-content: center;
+    }
+    .df_vertical_menu_main_container.df-vertical-menu-alignment-center-phone
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        a
+        .dropdown-arrow {
+        margin-left: unset;
+    }
+
+    /* Alignment Right */
+    .df_vertical_menu_main_container.df-vertical-menu-alignment-right-phone
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df_vertical_menu_item_elements_wrapper {
+        justify-content: flex-end;
+    }
+    .df_vertical_menu_main_container.df-vertical-menu-alignment-right-phone
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df_vertical_menu_item_elements_wrapper
+        .dropdown-arrow {
+        margin-left: unset;
+    }
+
+    /* Menu alignment justified */
+    .df_vertical_menu_main_container.df-vertical-menu-alignment-justified-phone
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df_vertical_menu_item_elements_wrapper {
+        justify-content: left;
+    }
+    .df_vertical_menu_main_container.df-vertical-menu-alignment-justified-phone
+        .df-vertical-menu-nav-wrap
+        ul[class*="df-vertical-menu-nav-level-"]
+        li.df-vertical-menu-item
+        .df_vertical_menu_item_elements_wrapper
+        .dropdown-arrow {
+        margin-left: auto;
+    }
+}
+
+.df_vertical_menu_main_container.df_enabled_hamburger {
+    position: relative;
+}
+.df_vertical_menu_main_container.df_enabled_hamburger
+    span.df-vertical-humberger-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.df_vertical_menu_main_container.df_enabled_hamburger
+    span.df-vertical-humberger-container
+    .hamburger
+    svg {
+    border: none !important;
+}
+.df_vertical_menu_main_container.df_enabled_hamburger
+    span.df-vertical-menu-hamburger-icon
+    .hamburger {
+    width: 14px;
+    height: 14px;
+    display: block;
+    overflow: hidden;
+}
+.df_vertical_menu_main_container.df_enabled_hamburger
+    span.df-vertical-menu-hamburger-icon
+    .hamburger
+    div {
+    width: inherit;
+    height: 100%;
+}
+.df_vertical_menu_main_container.df_enabled_hamburger
+    span.df-vertical-menu-hamburger-icon
+    svg {
+    fill: black;
+    width: inherit;
+    display: block;
+}
+.df_vertical_menu_main_container.df_enabled_hamburger
+    span.df-vertical-menu-hamburger-icon
+    * {
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.df_vertical_menu_main_container.df_enabled_hamburger
+    span.df-vertical-menu-hamburger-icon
+    .open-hamburger {
+    height: 0%;
+}
+.df_vertical_menu_main_container.df_enabled_hamburger
+    span.df-vertical-menu-hamburger-icon
+    .close-hamburger {
+    height: 100%;
+}
+.df_vertical_menu_main_container.df_enabled_hamburger
+    span.df-vertical-menu-hamburger-icon
+    .is-active
+    .close-hamburger {
+    height: 0%;
+}
+.df_vertical_menu_main_container.df_enabled_hamburger
+    span.df-vertical-menu-hamburger-icon
+    .is-active
+    .open-hamburger {
+    height: 100%;
+}
+.df_vertical_menu_main_container.df_enabled_hamburger
+    nav.df-vertical-menu-nav-wrap {
+    width: 100%;
+}
+
+.df_vertical_menu_main_container{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

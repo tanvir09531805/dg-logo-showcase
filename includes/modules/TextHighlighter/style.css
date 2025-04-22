@@ -1,0 +1,130 @@
+.difl_text_highlighter .df-texthighlighter-container .df-heading {
+  position: relative;
+  z-index: 3;
+}
+
+.difl_text_highlighter .df-texthighlighter-container h1.df-heading {
+  font-size: 30px;
+}
+.difl_text_highlighter .df-texthighlighter-container h2.df-heading {
+  font-size: 26px;
+}
+.difl_text_highlighter .df-texthighlighter-container h3.df-heading {
+  font-size: 24px;
+}
+.difl_text_highlighter .df-texthighlighter-container h4.df-heading {
+  font-size: 18px;
+}
+.difl_text_highlighter .df-texthighlighter-container h5.df-heading {
+  font-size: 16px;
+}
+.difl_text_highlighter .df-texthighlighter-container h6.df-heading {
+  font-size: 14px;
+}
+.difl_text_highlighter .df-texthighlighter-container .df-heading > span {
+  vertical-align: middle;
+  border-style: solid;
+  z-index: -2;
+}
+
+/* Divider styles */
+.difl_text_highlighter .df-heading-divider {
+  position: relative;
+  text-align: center;
+  line-height: 1em;
+}
+
+.difl_text_highlighter .df-heading-divider .df-divider-line {
+  box-sizing: content-box;
+  width: 100%;
+  height: 5px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 5px;
+}
+
+.difl_text_highlighter .df-heading-divider .df-divider-line::before {
+  content: '';
+  box-sizing: border-box;
+  border-top: 5px solid #efefef;
+  width: 100%;
+  display: block;
+}
+
+.difl_text_highlighter .df-heading-divider span {
+  z-index: 9;
+  position: relative;
+}
+
+.difl_text_highlighter .df-heading-divider img {
+  max-width: 100px;
+  position: relative;
+}
+
+/* Mirror text */
+.difl_text_highlighter .difl_text_highlighter .df-texthighlighter-container.has-dual-text .df-heading-dual_text {
+  transform: translateY(50%);
+}
+
+.difl_text_highlighter .df-heading-dual_text {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.difl_text_highlighter .df-heading-dual_text::before {
+  content: attr(data-title);
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* For only builder */
+.difl_text_highlighter .df-texthighlighter-container .df-heading span.prefix span,
+.difl_text_highlighter .df-texthighlighter-container .df-heading span.infix span,
+.difl_text_highlighter .df-texthighlighter-container .df-heading span.suffix span {
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  text-transform: inherit !important;
+  text-align: inherit !important;
+  color: inherit !important;
+  text-shadow: inherit !important;
+  margin-top: initial !important;
+  margin-bottom: initial !important;
+  margin-left: initial !important;
+  margin-right: initial !important;
+  padding-top: initial !important;
+  padding-bottom: initial !important;
+  padding-left: initial !important;
+  padding-right: initial !important;
+}
+
+/* highlighter */
+.difl_text_highlighter .df-text-highlight {
+  position: relative;
+}
+
+.difl_text_highlighter .df-text-highlight svg {
+  overflow: visible;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  transform: translateX(calc(-100% + 10px + 0px)) scale(1);
+  width: calc(100% + 20px);
+  height: 100%;
+}
+
+.difl_text_highlighter .df-texthighlighter-container.active svg{
+  opacity: 0 !important;
+}
+
+.difl_text_highlighter .df-text-highlight svg path {
+  stroke-width: 15px;
+  stroke: red;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

@@ -1,0 +1,59 @@
+
+body.difl_compareimage:not(.divi_page_et_theme_builder):not(.et-fb){
+  overflow: visible !important;
+}
+.df_cm_container > * {
+  border-width: 0px;
+  border-style: solid;
+  border-color: #333;
+  color:#333;
+}
+.df_cm_container .df_cm_content > *{
+  border-width: 0px;
+  border-style: solid;
+  border-color: #333;
+  color:#333;
+}
+.df_cm_container .df_cm_content {
+  height: auto;
+  display:flex;
+}
+.df_cm_content .icv__label-after,
+.df_cm_content .icv__label-before{
+  font-size: 16px;
+}
+.df_cm_container .df_cm_content .icv__label {
+  cursor: pointer;
+  border-radius: 0px;
+  background:#f9f9f99e;
+   
+}
+.df_cm_container .df_cm_content.icv__icv--horizontal .icv__label{
+  top: 50%;
+  bottom: unset !important;
+} 
+.df_cm_content.icv__icv--vertical span.icv__label.vertical {
+  left: 50%;
+}
+.icv__label.on-hover {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: 0.3s cubic-bezier(0.68, 0.26, 0.58, 1.22)!important;
+  transition: 0.3s cubic-bezier(0.68, 0.26, 0.58, 1.22) !important;
+}
+
+/* fixed Image height small */
+.df_cm_container .icv__img-b {
+  height: 100% !important;
+  max-width: none !important;
+}
+.df_cm_container .icv__icv--vertical .icv__img-b {
+  width: 100%;
+  height: auto !important;
+  position: initial;
+}
+
+/* Safari browser issue fixed */
+img.before_image.icv__img.icv__img-a {
+  height: intrinsic;
+}

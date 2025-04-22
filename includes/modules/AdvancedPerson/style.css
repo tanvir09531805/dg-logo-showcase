@@ -1,0 +1,118 @@
+.df_ap_person_container {
+  /* max-width: 540px; */
+  margin: 0 auto;
+}
+
+.df_ap_person_container * {
+  border-width: 0px;
+  border-style: solid;
+  border-color:#333;
+}
+
+.df_person_photo_wrapper img.person_photo{
+  vertical-align: middle;
+  transition: .6s;
+}
+
+.df_person_photo_wrapper img.person_photo.ap_photo {
+  vertical-align: middle;
+}
+
+.difl_advanced_person .df_person_social_icon {
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  vertical-align: middle;
+  margin: 10px;
+}
+.difl_advanced_person .df_person_socail_wrapper:not(.vertical) .df_person_social_icon:not(:first-child){
+  margin-left:0px; 
+}
+.difl_advanced_person .df_person_name{
+  font-size: 24px;
+}
+.difl_advanced_person .df_person_role{
+  font-size: 18px; 
+}
+.difl_advanced_person .df_person_description{
+  font-size: 14px;
+}
+.df_person_overlay {
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  opacity: 0;
+}
+.df_ap_person_container:hover .df_person_overlay {
+  position: absolute;
+  top: 0;
+  opacity: 1;
+}
+.difl_advanced_person .df_ap_person_wrapper {
+  position: relative;
+}
+
+.difl_advanced_person .df_ap_person_container .df_ap_person_desc{
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  text-align: center;
+  right: 0;
+  left: 0;
+  opacity: 0;
+}
+.difl_advanced_person .df_ap_person_container:hover .df_ap_person_desc{
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  opacity: 1;
+  /* z-index: 100; */
+}
+
+.df_person_socail_wrapper.vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.difl_advanced_person .alter_image {
+  position: relative;
+  display: inline-block;
+}
+.difl_advanced_person .alter_image .img-top {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+ 
+}
+.difl_advanced_person .df_ap_person_container:hover .alter_image .img-top {
+  opacity: 1;
+  transition: all .3s linear;
+}
+.difl_advanced_person .c4-izmir {
+  border-radius: 0;
+}
+/* .difl_advanced_person .df_ap_person_wrapper:not(.no-image-scale){
+  overflow: hidden;
+} */
+.difl_advanced_person .df_ap_person_wrapper:not(.no-image-scale) .df_person_photo_wrapper{
+  overflow: hidden;
+}
+/* .df_ap_person_wrapper .c4-izmir{
+  overflow:visible;
+} */
+.difl_advanced_person .c4-image-rotate-right img,
+.difl_advanced_person .c4-image-rotate-left img{
+  transform: scale(1.0) translate(0,0);
+}
+.difl_advanced_person .df_ap_person_container.df_ap_ekip_style,
+.difl_advanced_person .df_ap_person_container.df_ap_ekip_style_2{
+  overflow: hidden;
+}
+.difl_advanced_person .df_ap_person_desc_wrapper,
+.difl_advanced_person .df_person_photo_wrapper{
+	position: relative;
+}

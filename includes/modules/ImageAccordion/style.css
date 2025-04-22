@@ -1,0 +1,109 @@
+.df_ic_inner_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.difl_imageaccordion *{
+    border-width:0px;
+    border-style:solid;
+    border-color:#333;
+
+}
+/* overlay_wrapper */
+.difl_imageaccordion .overlay_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0);
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    z-index: 9;
+}
+
+.difl_imageaccordion .difl_imageaccordionitem.df_ia_active {
+    flex: 10;
+}
+.difl_imageaccordion .item-wrapper.vertical .difl_imageaccordionitem{
+    height: 150px;
+}
+.difl_imageaccordion .item-wrapper.vertical{
+    flex-direction: column;
+}
+.difl_imageaccordion .difl_imageaccordionitem {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    /* transition: flex .4s; */
+    overflow: hidden;
+} 
+.difl_imageaccordionitem {
+    transition: flex .3s;
+    -webkit-transition: flex .3s;
+    -ms-transition: flex .3s;
+}
+.difl_imageaccordion .difl_imageaccordionitem .content{
+    opacity: 0;
+    height: fit-content;
+}
+
+.difl_imageaccordion .difl_imageaccordionitem.df_ia_active:before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.15);
+    left: 0;
+    top: 0;
+    transition: opacity .3s ease;
+    z-index: 0;
+    opacity: 1;
+}
+
+.difl_imageaccordion .difl_imageaccordionitem:before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: opacity .3s ease;
+    z-index: 0;
+    opacity: 1;
+}
+.difl_imageaccordion .item-wrapper.horizontal {
+   height:450px;
+}
+.difl_imageaccordion .item-wrapper.vertical {
+    height:550px;
+}
+.difl_imageaccordion .difl_imageaccordionitem{
+    margin-bottom: 0px !important;
+}
+
+.difl_imageaccordionitem > div ,
+.difl_imageaccordionitem .df_iai_container
+{
+    height:100%;
+}
+.difl_imageaccordion .difl_imageaccordionitem .df_ia_title{
+    font-size:24px;
+}
+.difl_imageaccordion .difl_imageaccordionitem .df_ia_sub_title{
+    font-size:18px;
+}
+.difl_imageaccordion .difl_imageaccordionitem .df_ia_description,
+.difl_imageaccordion .difl_imageaccordionitem .df_ia_button{
+    font-size:16px;
+}
+.difl_imageaccordion .difl_imageaccordionitem .df_ia_button {
+    display:inline-block
+}
+.difl_imageaccordion .et-pb-icon.df-image-accordion-icon{
+    font-size: 50px;
+}

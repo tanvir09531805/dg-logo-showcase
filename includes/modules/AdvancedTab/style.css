@@ -1,0 +1,202 @@
+
+
+.df_at_tab {
+    display: none;
+}
+.layout-selectd {
+    border: 3px solid rgb(106, 59, 182);
+    padding-top: 30px;
+    text-align: center;
+    margin: 25px;
+    width: 100%;
+}
+.layout-selectd h2 {
+    font-weight: 600;
+}
+.df-edit-layout-btn {
+    background: rgb(106, 59, 182);
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 23px;
+    box-shadow: none;
+    border: none;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.df_at_button {
+    padding: 10px 20px;
+    display: inline-block;
+    border-width: 0px;
+    border-style: solid;
+}
+/* Tab navigation */
+.difl_advancedtab {
+    border: 1px solid #f3f3f3;
+}
+.difl_advancedtab p:not(.has-background):last-of-type {
+    padding-bottom: 1em;
+}
+.df_at_container {
+    display: flex;
+    flex-direction: column;
+}
+/* .df_at_nav_wrap {
+    display: flex;
+    z-index: 1;
+    border: 0px solid;
+} */
+.df_at_nav_wrap {
+    display: flex;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    border: 0px solid;
+}
+/* .df_at_nav_wrap span:not(.at_nav_content):not(.at_icon_wrap) {
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    border: 0px solid;
+} */
+/* .df_at_nav_wrap span:not(.at_nav_content):not(.at_icon_wrap) {
+    width: 100%;
+} */
+.df_at_nav_container{
+    display: flex;
+    border: 0px solid;
+    max-width: 100%;
+    flex: 1;
+}
+.df_at_nav{
+    cursor: pointer;
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-width: 0px;
+    border-style: solid;
+    background-color: #eaeaea;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.df_at_title {
+    font-size: 16px;
+    font-weight: 500;
+}
+.df_at_all_tabs {
+    padding: 15px 30px;
+}
+.df_at_nav_active {
+    background-color: white;
+    z-index: 1;
+}
+.at_nav_content {
+    width: 100%;
+}
+.difl_advancedtab .df_at_all_tabs .difl_advancedtabitem {
+    margin-bottom: 0;
+}
+@media only screen and (max-width: 980px) {
+    .df_at_nav_container {
+        flex-direction: column;
+    }
+}
+/* Tab Content */
+.df_ati_container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.df_at_all_tabs_wrap {
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    border: 0px solid;
+}
+.df_at_all_tabs {
+    height: 100%;
+}
+.difl_advancedtabitem > div {
+    display: flex;
+    height: 100%;
+}
+.df_at_content_wrapper {
+    width: 100%;
+    border-width: 0px;
+    border-style: solid;
+}
+/* Icon */
+.at_icon_wrap {
+    line-height: 0;
+}
+.df_at_nav .et-pb-icon {
+    font-size: 40px;
+    color: #2ea3f2;
+    display: inline-block;
+}
+/* Image */
+.df_at_image {
+    display: block;
+    border: 0px solid;
+}
+
+/* Active styles */
+.difl_advancedtabitem:not([data-address]) {
+    display: none;
+}
+.difl_advancedtabitem.df_at_content_active {
+    display: block;
+}
+
+/* sticky */
+.df_has_sticky_nav .df_at_nav_container{
+   z-index: 999;
+}
+
+/* Active arrow */
+.df_at_nav svg {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 30px;
+    opacity: 0;
+}
+.df_at_nav.df_at_nav_active svg {
+    opacity: 1;
+}
+
+/* left */
+.df_at_nav.arrow_left svg {
+    left: 100%;
+    top: 0;
+}
+/* right */
+.df_at_nav.arrow_right svg {
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+}
+/* bottom */
+.df_at_nav.arrow_bottom svg {
+    left: 0;
+    transform: translateY(-100%);
+    top: 0;
+}
+
+
+@media only screen and (max-width: 980px) {
+    .df_at_nav svg {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .difl_advancedtab .difl_advancedtabitem .df_ati_container{
+        width: 100%;
+    }
+}
