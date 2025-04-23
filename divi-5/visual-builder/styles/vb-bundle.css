@@ -1,0 +1,279 @@
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/modules/content-carousel/style.css ***!
+  \*****************************************************************************************************************************************************************************************/
+.difl_contentcarousel .difl_contentcarouselitem .df_cci_image_container,
+.difl_contentcarousel .df_cc_arrows div {
+  border-width: 0px;
+  border-style: solid;
+  border-color: #333;
+}
+
+.df_cc_inner_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.df_cc_inner_wrapper .swiper-wrapper {
+  /* width: auto; */
+}
+
+.difl_contentcarousel.has_lightbox .difl_contentcarouselitem {
+  cursor: pointer;
+}
+
+.difl_contentcarousel .swiper-container {
+  order: 1;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.df_cci_container {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.df_cci_image_container img {
+  vertical-align: top;
+}
+
+.difl_contentcarousel .df_cc_container .difl_contentcarouselitem {
+  margin-bottom: 0 !important;
+}
+
+.difl_contentcarousel .difl_contentcarouselitem {
+  align-self: flex-start;
+  height: auto;
+}
+
+.difl_contentcarouselitem > div,
+.difl_contentcarouselitem .df_cci_container {
+  height: 100%;
+}
+
+.difl_contentcarouselitem > div {
+  border-width: 0px;
+  border-style: solid;
+}
+
+.difl_contentcarouselitem > div:first-child,
+.difl_contentcarouselitem .df_cci_container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* text */
+.df_cc_title {
+  font-size: 24px;
+}
+
+.df_cc_subtitle {
+  font-size: 20px;
+}
+
+.df_cc_content {
+  font-size: 14px;
+  line-height: 1.7em;
+}
+
+/* Arrows */
+.df_cc_arrows {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  pointer-events: none;
+  order: 2;
+  width: 100%;
+}
+
+.df_cc_arrows div {
+  background-image: none;
+}
+
+.df_cc_arrows .swiper-button-prev {
+  order: 1;
+}
+
+.df_cc_arrows .swiper-button-next {
+  order: 2;
+}
+
+.df_cc_arrows .swiper-button-next,
+.df_cc_arrows .swiper-button-prev {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  margin-top: 0;
+  pointer-events: all;
+}
+
+.df_cc_arrows > div {
+  background-color: #ffffff;
+  width: auto;
+  height: 100%;
+  padding: 7px;
+  background-image: none;
+}
+
+.df_cc_arrows > div:after {
+  content: attr(data-icon);
+  font-family: ETmodules;
+  text-indent: 0;
+  font-size: 39px;
+  line-height: 1;
+}
+
+.df_cc_arrows {
+  z-index: 9;
+}
+
+.difl_contentcarousel .arrow-middle .df_cc_arrows * {
+  pointer-events: none;
+  transition-delay: 0.3s !important;
+}
+
+.difl_contentcarousel.df-ele-hover .df_cc_arrows *,
+.difl_contentcarousel:hover .df_cc_arrows * {
+  pointer-events: all;
+}
+
+/* Dots styles */
+.difl_contentcarousel .swiper-pagination {
+  position: relative !important;
+  pointer-events: none;
+}
+
+.difl_contentcarousel .swiper-pagination span {
+  margin-right: 8px;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  transition: all 0.3s ease;
+  pointer-events: all;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.difl_contentcarousel .swiper-pagination span:last-child {
+  margin-right: 0px;
+}
+
+/* button */
+.df_cci_button {
+  border-style: solid;
+  border-width: 0px;
+  display: inline-block;
+  padding: 7px 15px;
+  font-size: 14px;
+  text-align: center;
+}
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/modules/content-carousel-item/style.css ***!
+  \**********************************************************************************************************************************************************************************************/
+span.df_cci_btn_text_icon_wrap {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+span.df_cci_btn_text_icon_wrap .df_cci_btn_text {
+  order: 1;
+}
+
+span.df_cci_btn_text_icon_wrap.df_cci_btn_place_left .df_cci_btn_icon {
+  order: 0;
+}
+
+span.df_cci_btn_text_icon_wrap.df_cci_btn_place_right .df_cci_btn_icon {
+  order: 2;
+}
+
+span.df_cci_btn_text_icon_wrap .df_cci_btn_icon {
+  font-family: "ETmodules";
+}
+
+a.df_cci_button span.df_cci_btn_icon.df_cci_btn_hover_on {
+  font-size: 0px;
+  transition: 0.3s;
+}
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/modules/business-hours/style.css ***!
+  \***************************************************************************************************************************************************************************************/
+.df_bh_container > * {
+  border-width: 0px;
+  border-style: solid;
+  border-color: #333;
+}
+
+.difl_businesshours * {
+  border-width: 0px;
+  border-style: solid;
+  border-color: #333;
+}
+
+/* .difl_businesshours .difl_businesshoursitem{
+  margin-bottom:0px;
+} */
+.df_bh_container .df_bh_item {
+  display: flex;
+  flex-direction: row;
+}
+
+.df_bh_container .df_bh_day,
+.df_bh_container .df_bh_time {
+  width: 100%;
+  font-size: 16px;
+}
+
+.df_bh_start_time,
+.df_bh_end_time,
+.df_bh_time_separetor {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.df_bh_container h1.df_bh_title {
+  font-size: 30px;
+}
+
+.df_bh_container h2.df_bh_title {
+  font-size: 26px;
+}
+
+.df_bh_container h3.df_bh_title {
+  font-size: 24px;
+}
+
+.df_bh_container h4.df_bh_title {
+  font-size: 18px;
+}
+
+.df_bh_container h5.df_bh_title {
+  font-size: 16px;
+}
+
+.df_bh_container h6.df_bh_title {
+  font-size: 14px;
+}
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/modules/business-hours-item/style.css ***!
+  \********************************************************************************************************************************************************************************************/
+.df_bh_item.day_tiem_separator_on {
+  align-items: center;
+}
+
+.df_bh_item.day_tiem_separator_on .df_bh_day, .df_bh_item.day_tiem_separator_on .df_bh_time {
+  width: fit-content;
+}
+
+.df_bh_day_time_separator {
+  flex-grow: 1;
+}
+
+.df_bh_day_time_separator hr {
+  border-bottom-width: 1px;
+}

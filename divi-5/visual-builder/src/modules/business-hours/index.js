@@ -1,10 +1,9 @@
 import { BusinessHoursEdit } from './edit';
 import metadata from './module.json';
-// import placeholderContent from './module-default-render-attributes.json';
 import { conversionOutline } from './conversion-outline';
 import { __ } from "@wordpress/i18n";
-
-// export const businessHoursMetadata = metadata;
+// Internal Dependencies
+import "./style.css";
 
 export const businessHours = {
     metadata: metadata,
@@ -12,11 +11,8 @@ export const businessHours = {
     renderers: {
         edit: BusinessHoursEdit,
     },
-    //   placeholderContent:placeholderContent,
     conversionOutline,
 };
-
-
 
 function checkVisiblity(props) {
     const attrObj = props.attrName.split('.');
@@ -54,7 +50,6 @@ function checkVisiblity(props) {
 
     return status_show_if && status_show_if_not;
 }
-
 
 //handle innerContent component show_if && show_if_not condition
 window.vendor.wp.hooks.addFilter(

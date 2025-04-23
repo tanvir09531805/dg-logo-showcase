@@ -11,6 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Direct access forbidden.' );
 }
 
+use DIFL\Modules\BusinessHours\BusinessHours;
+use DIFL\Modules\BusinessHoursItem\BusinessHoursItem;
 use DIFL\Modules\LogoShowcase\LogoShowcase;
 use DIFL\Modules\ContentCarousel\ContentCarousel;
 use DIFL\Modules\ContentCarouselItem\ContentCarouselItem;
@@ -21,5 +23,7 @@ add_action(
     	$dependency_tree->add_dependency( new LogoShowcase() );
     	$dependency_tree->add_dependency( new ContentCarousel() );
     	$dependency_tree->add_dependency( new ContentCarouselItem() );
+    	$dependency_tree->add_dependency( new BusinessHours() );
+    	$dependency_tree->add_dependency( new BusinessHoursItem() );
 	}
 );

@@ -63,7 +63,7 @@ function difl_module_enqueue_vb_scripts() {
 			), '1.0.0', true
 		);
 
-		wp_enqueue_style( 'difl-modules-builder-vb-bundle-style', "{$plugin_dir_url}visual-builder/styles/bundle.css", array(), '1.0.0' );
+		wp_enqueue_style( 'difl-modules-builder-vb-bundle-style', "{$plugin_dir_url}visual-builder/styles/vb-bundle.css", array(), '1.0.0' );
 		wp_localize_script('dofl-modules-builder-bundle-script', 'DiviFlash', array(
 			'nonce' => wp_create_nonce('wp_rest')
 		));

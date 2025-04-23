@@ -2,6 +2,8 @@ import metadata from './module.json';
 import { conversionOutline } from './conversion-outline';
 import { Edit } from "./edit";
 
+import "./style.css";
+
 export const advancedCarousel = {
 	metadata: metadata,
 	childrenName: ['difl/content-carousel-item'],

@@ -25,6 +25,12 @@ class BusinessHours implements DependencyInterface
 {
   use RenderCallback;
 
+  public static function custom_css()
+  {
+    return \WP_Block_Type_Registry::get_instance()->get_registered('difl/businesshours')->customCssFields;
+  }
+
+  
 	/**
 	 * Loads `ParentModule` and registers Front-End render callback and REST API Endpoints.
 	 *

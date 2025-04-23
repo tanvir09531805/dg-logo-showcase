@@ -20,8 +20,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
  * @package DIVIFLASH5\Modules\BusinessHoursItem
  */
 class BusinessHoursItem implements DependencyInterface {
-  use RenderCallback;
-  
+
   public static function custom_css()
   {
     return \WP_Block_Type_Registry::get_instance()->get_registered('difl/businesshoursitem')->customCssFields;
@@ -37,7 +36,7 @@ class BusinessHoursItem implements DependencyInterface {
         ModuleRegistration::register_module(
           $module_json_folder_path,
           [
-            'render_callback' => [BusinessHoursItem::class, 'render_callback'],
+            'render_callback' => [self::class, 'render_callback'],
           ]
         );
       }

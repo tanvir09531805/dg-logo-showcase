@@ -2,6 +2,8 @@ import metadata from './module.json';
 import { Edit } from "./edit";
 import { conversionOutline } from './conversion-outline';
 
+import "./style.css";
+
 export const advancedCarouselItem = {
 	metadata: metadata,
 	settings: {},
