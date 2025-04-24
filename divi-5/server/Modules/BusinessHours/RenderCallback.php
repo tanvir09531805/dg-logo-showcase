@@ -35,8 +35,12 @@ trait RenderCallback {
 
 		$title_on_off = isset($attrs['title_on_off']['innerContent']['desktop']['value'])?$attrs['title_on_off']['innerContent']['desktop']['value']:"off";
 		$title_text = isset($attrs['heading_title_text']['innerContent']['desktop']['value'])?$attrs['heading_title_text']['innerContent']['desktop']['value']:"";
-		
-    $heading_title = ('on' === $title_on_off) ? '<div class="df_bh_header"><h2 class="df_bh_title"> '.$title_text.'</h2></div>' : '';
+    // $heading_title = ('on' === $title_on_off) ? '<div class="df_bh_header"><h2 class="df_bh_title"> '.$title_text.'</h2></div>' : '';
+    $title_tag = $attrs['heading_title_text']['decoration']['font']['font']['desktop']['value']['headingLevel'] ?? 'h2';
+
+    $heading_title_text = ('on' === $title_on_off && $title_text) 
+    ? '<div class="df_bh_header"><' . esc_html($title_tag) . ' class="df_bh_title"> ' . esc_html($title_text) . ' </' . esc_html($title_tag) . '></div>' 
+    : '';
 
 		$child_items = HTMLUtility::render(
 			[
@@ -57,7 +61,7 @@ trait RenderCallback {
         </div>
       </div>
       ',
-			$heading_title,
+			$heading_title_text,
 			$child_items
 		);
     

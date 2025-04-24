@@ -41,38 +41,117 @@ trait Styles
             ]
           ),
 
-          // CommonStyle::style(
-          //   [
-          //     'selector' => "{$order_class} .df_cci_image_container",
-          //     'attr'     => $attrs['imgOrder']['innerContent'] ?? '',
-          //     'property' => 'order',
-          //   ]
-          // ),
-          
-          // CommonStyle::style(
-          //   [
-          //     'selector' => "{$order_class} .df_cc_arrows>div",
-          //     'attr'     => $attrs['arrows']['advanced']['circleArrow'] ?? [],
-          //     'declarationFunction' => [self::class, 'df_circle_icon'],
-          //   ]
-          // ),
+          CommonStyle::style(
+            [
+              'selector' => "{$order_class} .df_bh_day",
+              'attr'     => $attrs['day_width']['innerContent'] ?? '',
+              'property' => 'max-width',
+            ]
+          ),
+          CommonStyle::style(
+            [
+              'selector' => "{$order_class} .df_bh_time",
+              'attr'     => $attrs['day_width']['innerContent'] ?? [],
+              'declarationFunction' => [self::class, 'df_day_width_calc'],
+            ]
+          ),
 
-          // Prev icon style.
-          // $elements->style(
-          //   [
-          //     'attrName' => 'arrowPrevIcon',
-          //   ]
-          // ),
+          // boxShadow style.
+          $elements->style(['attrName' => 'day',]),
+          $elements->style(['attrName' => 'time',]),
+          $elements->style(['attrName' => 'title',]),
+          $elements->style(['attrName' => 'item',]),
+
+          // border style.
+          $elements->style(['attrName' => 'item_border',]),
+          $elements->style(['attrName' => 'title_border',]),
+          $elements->style(['attrName' => 'day_border',]),
+          $elements->style(['attrName' => 'time_border',]),
+          $elements->style(['attrName' => 'start_time_border',]),
+          $elements->style(['attrName' => 'end_time_border',]),
+          $elements->style(['attrName' => 'time_separetor_border',]),
+
+          // font style.
+          $elements->style(['attrName' => 'day_name',]),
+          $elements->style(['attrName' => 'time_dev',]),
+          $elements->style(['attrName' => 'heading_title_text',]),
+
+          // font & boxShadow style.
+          $elements->style(['attrName' => 'start_time',]),
+          $elements->style(['attrName' => 'end_time',]),
+          $elements->style(['attrName' => 'time_separetor',]),
+
+          // background style.
+          $elements->style(['attrName' => 'df_title_bg',]),
+          $elements->style(['attrName' => 'df_items_bg',]),
+          $elements->style(['attrName' => 'day_background_color',]),
+          $elements->style(['attrName' => 'time_background_color',]),
+          
+          CommonStyle::style(
+            [
+              'selector' => "{$order_class} .df_bh_start_time",
+              'attr'     => $attrs['start_time_background_color']['innerContent'] ?? '',
+              'property' => 'background-color',
+            ]
+          ),
+          CommonStyle::style(
+            [
+              'selector' => "{$order_class} .df_bh_end_time",
+              'attr'     => $attrs['end_time_background_color']['innerContent'] ?? '',
+              'property' => 'background-color',
+            ]
+          ),
+          CommonStyle::style(
+            [
+              'selector' => "{$order_class} .df_bh_time_separetor",
+              'attr'     => $attrs['time_separetor_background_color']['innerContent'] ?? '',
+              'property' => 'background-color',
+            ]
+          ),
+
+          // Spacing style.
+          $elements->style(['attrName' => 'title_spacing',]),
+          $elements->style(['attrName' => 'day_spacing',]),
+          $elements->style(['attrName' => 'time_spacing',]),
+          $elements->style(['attrName' => 'start_time_spacing',]),
+          $elements->style(['attrName' => 'end_time_spacing',]),
+          $elements->style(['attrName' => 'time_separetor_spacing',]),
+          $elements->style(['attrName' => 'main_wrapper_spacing',]),
+          $elements->style(['attrName' => 'item_wrapper_spacing',]),
+          $elements->style(['attrName' => 'title_wrapper_spacing',]),
+          $elements->style(['attrName' => 'day_time_separetor_margin',]),
+
+          CommonStyle::style(
+            [
+              'selector' => "{$order_class} .df_bh_day_time_separator hr",
+              'attr'     => $attrs['day_time_separator_color']['innerContent'] ?? '',
+              'property' => 'border-color',
+            ]
+          ),
+          CommonStyle::style(
+            [
+              'selector' => "{$order_class} .df_bh_day_time_separator hr",
+              'attr'     => $attrs['day_time_separator_hight']['innerContent'] ?? '',
+              'property' => 'border-bottom-width',
+            ]
+          ),
+          CommonStyle::style(
+            [
+              'selector' => ".difl_businesshours{$order_class} .df_bh_day_time_separator hr",
+              'attr'     => $attrs['day_time_separator_style']['innerContent'] ?? '',
+              'property' => 'border-style',
+            ]
+          ),
           
         ],
       ]
     );
   }
 
-  public static function df_circle_icon(array $args): string
+  public static function df_day_width_calc(array $args): string
   {
-    $iconRadius = ($args['attrValue'] === 'on') ? 'border-radius: 50%;' : '';
-    return $iconRadius;
+    $time_width_cal = $args['attrValue'] ? 'max-width: calc(100% - '.$args['attrValue'].');' : '';
+    return $time_width_cal;
   }
 
 }

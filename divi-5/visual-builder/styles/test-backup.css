@@ -1,3 +1,4 @@
+
 .difl_contentcarousel .difl_contentcarouselitem .df_cci_image_container,
 .difl_contentcarousel .df_cc_arrows div {
     border-width: 0px;
@@ -8,6 +9,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
+}
+.df_cc_inner_wrapper .swiper-wrapper {
+    /* width: auto; */
 }
 .difl_contentcarousel.has_lightbox .difl_contentcarouselitem {
     cursor: pointer;
@@ -230,7 +234,3 @@
         width: calc(100%/7);
     }
 }
-/*
-.df_cc_inner_wrapper .swiper-wrapper {
-  width: auto;
-}*/

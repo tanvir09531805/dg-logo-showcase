@@ -14,10 +14,6 @@
   flex-direction: column;
 }
 
-.df_cc_inner_wrapper .swiper-wrapper {
-  /* width: auto; */
-}
-
 .difl_contentcarousel.has_lightbox .difl_contentcarouselitem {
   cursor: pointer;
 }
@@ -33,10 +29,12 @@
   display: flex;
   flex-direction: column;
   overflow: auto;
+  width: inherit;
 }
 
 .df_cci_image_container img {
   vertical-align: top;
+  width: auto;
 }
 
 .difl_contentcarousel .df_cc_container .difl_contentcarouselitem {
@@ -71,7 +69,7 @@
 }
 
 .df_cc_subtitle {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .df_cc_content {
@@ -171,35 +169,99 @@
   font-size: 14px;
   text-align: center;
 }
-/*!**********************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/modules/content-carousel-item/style.css ***!
-  \**********************************************************************************************************************************************************************************************/
-span.df_cci_btn_text_icon_wrap {
-  display: flex;
-  align-content: center;
-  align-items: center;
+
+/* Swiper */
+.difl_fa {
+  font-family: "FontAwesome";
+  speak: none;
+  font-weight: 400;
+  -webkit-font-feature-settings: normal;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size: 96px;
+  font-style: normal;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  direction: ltr;
 }
 
-span.df_cci_btn_text_icon_wrap .df_cci_btn_text {
-  order: 1;
+@media (min-width: 981px) {
+  [data-item="1"] .swiper-slide {
+    width: 100%;
+  }
+  [data-item="2"] .swiper-slide {
+    width: 50%;
+  }
+  [data-item="3"] .swiper-slide {
+    width: 33.3333333333%;
+  }
+  [data-item="4"] .swiper-slide {
+    width: 25%;
+  }
+  [data-item="5"] .swiper-slide {
+    width: 20%;
+  }
+  [data-item="6"] .swiper-slide {
+    width: 16.6666666667%;
+  }
+  [data-item="7"] .swiper-slide {
+    width: 14.2857142857%;
+  }
 }
-
-span.df_cci_btn_text_icon_wrap.df_cci_btn_place_left .df_cci_btn_icon {
-  order: 0;
+@media (max-width: 980px) and (min-width: 768px) {
+  [data-itemtablet="1"] .swiper-slide {
+    width: 100%;
+  }
+  [data-itemtablet="2"] .swiper-slide {
+    width: 50%;
+  }
+  [data-itemtablet="3"] .swiper-slide {
+    width: 33.3333333333%;
+  }
+  [data-itemtablet="4"] .swiper-slide {
+    width: 25%;
+  }
+  [data-itemtablet="5"] .swiper-slide {
+    width: 20%;
+  }
+  [data-itemtablet="6"] .swiper-slide {
+    width: 16.6666666667%;
+  }
+  [data-itemtablet="7"] .swiper-slide {
+    width: 14.2857142857%;
+  }
 }
-
-span.df_cci_btn_text_icon_wrap.df_cci_btn_place_right .df_cci_btn_icon {
-  order: 2;
+@media (max-width: 767px) {
+  [data-itemphone="1"] .swiper-slide {
+    width: 100%;
+  }
+  [data-itemphone="2"] .swiper-slide {
+    width: 50%;
+  }
+  [data-itemphone="3"] .swiper-slide {
+    width: 33.3333333333%;
+  }
+  [data-itemphone="4"] .swiper-slide {
+    width: 25%;
+  }
+  [data-itemphone="5"] .swiper-slide {
+    width: 20%;
+  }
+  [data-itemphone="6"] .swiper-slide {
+    width: 16.6666666667%;
+  }
+  [data-itemphone="7"] .swiper-slide {
+    width: 14.2857142857%;
+  }
 }
-
-span.df_cci_btn_text_icon_wrap .df_cci_btn_icon {
-  font-family: "ETmodules";
-}
-
-a.df_cci_button span.df_cci_btn_icon.df_cci_btn_hover_on {
-  font-size: 0px;
-  transition: 0.3s;
-}
+/*
+.df_cc_inner_wrapper .swiper-wrapper {
+  width: auto;
+}*/
 /*!***************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/modules/business-hours/style.css ***!
   \***************************************************************************************************************************************************************************************/

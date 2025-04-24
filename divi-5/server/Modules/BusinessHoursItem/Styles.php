@@ -41,38 +41,83 @@ trait Styles
             ]
           ),
 
-          // CommonStyle::style(
-          //   [
-          //     'selector' => "{$order_class} .df_cci_image_container",
-          //     'attr'     => $attrs['imgOrder']['innerContent'] ?? '',
-          //     'property' => 'order',
-          //   ]
-          // ),
-          
-          // CommonStyle::style(
-          //   [
-          //     'selector' => "{$order_class} .df_cc_arrows>div",
-          //     'attr'     => $attrs['arrows']['advanced']['circleArrow'] ?? [],
-          //     'declarationFunction' => [self::class, 'df_circle_icon'],
-          //   ]
-          // ),
+          // Font style.
+          $elements->style(['attrName' => 'time_div',]),
 
-          // Prev icon style.
-          // $elements->style(
-          //   [
-          //     'attrName' => 'arrowPrevIcon',
-          //   ]
-          // ),
+          // boxShadow style.
+          $elements->style(['attrName' => 'item',]),
+          $elements->style(['attrName' => 'day',]),
+
+          // Border style.
+          $elements->style(['attrName' => 'item_border',]),
+          $elements->style(['attrName' => 'day_border',]),
+          $elements->style(['attrName' => 'time_border',]),
+          $elements->style(['attrName' => 'start_time_border',]),
+          $elements->style(['attrName' => 'end_time_border',]),
+          $elements->style(['attrName' => 'time_separetor_border',]),
+
+          // Background style.
+          $elements->style(['attrName' => 'day_background_color',]),
+          $elements->style(['attrName' => 'time_background_color',]),
+
+          CommonStyle::style(
+            [
+              'selector' => ".difl_businesshours {$order_class} .df_bh_start_time",
+              'attr'     => $attrs['start_time_background_color']['innerContent'] ?? '',
+              'property' => 'background-color',
+            ]
+          ),
+          CommonStyle::style(
+            [
+              'selector' => ".difl_businesshours {$order_class} .df_bh_end_time",
+              'attr'     => $attrs['end_time_background_color']['innerContent'] ?? '',
+              'property' => 'background-color',
+            ]
+          ),
+          CommonStyle::style(
+            [
+              'selector' => ".difl_businesshours {$order_class} .df_bh_time_separetor",
+              'attr'     => $attrs['time_separetor_background_color']['innerContent'] ?? '',
+              'property' => 'background-color',
+            ]
+          ),
+
+          // Spacing style.
+          $elements->style(['attrName' => 'item_wrapper_spacing',]),
+          $elements->style(['attrName' => 'item_padding',]),
+          $elements->style(['attrName' => 'day_spacing',]),
+          $elements->style(['attrName' => 'time_spacing',]),
+          $elements->style(['attrName' => 'start_time_spacing',]),
+          $elements->style(['attrName' => 'end_time_spacing',]),
+          $elements->style(['attrName' => 'time_separetor_spacing',]),
+          $elements->style(['attrName' => 'day_time_separetor_margin',]),
+
+          CommonStyle::style(
+            [
+              'selector' => ".difl_businesshours {$order_class} .df_bh_day_time_separator hr",
+              'attr'     => $attrs['day_time_separator_color']['innerContent'] ?? '',
+              'property' => 'border-color',
+            ]
+          ),
+          CommonStyle::style(
+            [
+              'selector' => ".difl_businesshours {$order_class} .df_bh_day_time_separator hr",
+              'attr'     => $attrs['day_time_separator_hight']['innerContent'] ?? '',
+              'property' => 'border-bottom-width',
+            ]
+          ),
+          CommonStyle::style(
+            [
+              'selector' => ".difl_businesshours .difl_businesshoursitem{$order_class} .df_bh_day_time_separator hr",
+              'attr'     => $attrs['day_time_separator_style']['innerContent'] ?? '',
+              'property' => 'border-style',
+            ]
+          ),
           
         ],
       ]
     );
   }
 
-  public static function df_circle_icon(array $args): string
-  {
-    $iconRadius = ($args['attrValue'] === 'on') ? 'border-radius: 50%;' : '';
-    return $iconRadius;
-  }
 
 }

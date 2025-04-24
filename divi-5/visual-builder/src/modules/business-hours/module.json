@@ -7,6 +7,1553 @@
   "moduleIcon": "difl/business-hours",
   "childModuleName": "difl/businesshoursitem",
   "childrenName": ["difl/businesshoursitem"],
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "meta": {
+          "adminLabel": {
+            "component": {
+              "type": "group",
+              "name": "divi/admin-label"
+            }
+          }
+        },
+        "advanced": {
+          "link": {
+            "item": {
+              "groupSlug": "contentLink",
+              "component": {
+                "props": {
+                  "fieldLabel": ""
+                }
+              }
+            }
+          },
+          "htmlAttributes": {}
+        },
+        "decoration": {
+          "animation": {},
+          "background": {},
+          "conditions": {},
+          "disabledOn": {},
+          "filters": {},
+          "border": {},
+          "boxShadow": {},
+          "overflow": {},
+          "position": {},
+          "sizing": {},
+          "spacing": {},
+          "sticky": {},
+          "transform": {},
+          "transition": {},
+          "zIndex": {}
+        }
+      },
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Business Hours"
+            }
+          }
+        }
+      }
+    },
+    "day_name": {
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "day_design",
+              "label": "Day",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Day",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_day",
+              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_day"
+            }
+          },
+          "important": {
+            "desktop": {
+              "value": true
+            }
+          }
+        }
+      }
+    },
+    "time_div": {
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "time_design",
+              "label": "Time",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Time",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_time",
+              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_time"
+            }
+          },
+          "important": {
+            "desktop": {
+              "value": true
+            }
+          }
+        }
+      }
+    },
+    "start_time": {
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "start_time_design",
+              "label": "Start Time",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Start Time",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "start_time_design",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_start_time",
+              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_start_time"
+            }
+          },
+          "important": {
+            "desktop": {
+              "value": true
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_start_time",
+              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_start_time"
+            }
+          }
+        }
+      }
+    },
+    "end_time": {
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "end_time_design",
+              "label": "End Time",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "End Time",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "end_time_design",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_end_time",
+              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_end_time"
+            }
+          },
+          "important": {
+            "desktop": {
+              "value": true
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_end_time",
+              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_end_time"
+            }
+          }
+        }
+      }
+    },
+    "time_separetor": {
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "time_separetor_design",
+              "label": "Time Separator",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Time Separator",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "time_separetor_design",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_time_separetor",
+              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_time_separetor"
+            }
+          },
+          "important": {
+            "desktop": {
+              "value": true
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_time_separetor",
+              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_time_separetor"
+            }
+          }
+        }
+      }
+    },
+    "item_border": {
+      "settings": {
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "item_design",
+              "attrName": "item_border.decoration.border",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .difl_businesshoursitem",
+              "hover": "{{selector}} .difl_businesshoursitem:hover"
+            }
+          }
+        }
+      }
+    },
+    "title_border": {
+      "settings": {
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "title_design",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_title",
+              "hover": "{{selector}} .df_bh_container:hover .df_bh_title"
+            }
+          }
+        }
+      }
+    },
+    "day_border": {
+      "settings": {
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "day_design",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_day",
+              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_day"
+            }
+          }
+        }
+      }
+    },
+    "time_border": {
+      "settings": {
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "time_design",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_time",
+              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_time"
+            }
+          }
+        }
+      }
+    },
+    "start_time_border": {
+      "settings": {
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "start_time_design",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_start_time",
+              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_start_time"
+            }
+          }
+        }
+      }
+    },
+    "end_time_border": {
+      "settings": {
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "end_time_design",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_end_time",
+              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_end_time"
+            }
+          }
+        }
+      }
+    },
+    "time_separetor_border": {
+      "settings": {
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "time_separetor_design",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_time_separetor",
+              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_time_separetor"
+            }
+          }
+        }
+      }
+    },
+    "day": {
+      "settings": {
+        "decoration": {
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "day_design",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_day",
+              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_day"
+            }
+          }
+        }
+      }
+    },
+    "time": {
+      "settings": {
+        "decoration": {
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "time_design",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_time",
+              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_time"
+            }
+          }
+        }
+      }
+    },
+    "title": {
+      "settings": {
+        "decoration": {
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "title_design",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_title",
+              "hover": "{{selector}} .df_bh_container:hover .df_bh_title"
+            }
+          }
+        }
+      }
+    },
+    "item": {
+      "settings": {
+        "decoration": {
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "item_design",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .difl_businesshoursitem",
+              "hover": "{{selector}} .df_bh_container .difl_businesshoursitem:hover"
+            }
+          }
+        }
+      }
+    },
+    "title_on_off": {
+      "type": "object",
+      "selector": "",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "general_settings",
+            "render": true,
+            "attrName": "title_on_off.innerContent",
+            "label": "Title On/Off ",
+            "features": {
+              "sticky": false,
+              "hover": false,
+              "responsive": false
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/toggle"
+            }
+          }
+        }
+      }
+    },
+
+    "heading_title_text": {
+      "type": "object",
+      "selector": "",
+      "inlineEditor": true,
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_bh_title",
+              "hover": "{{selector}} .df_bh_container:hover .df_bh_title"
+            }
+          },
+          "important": {
+            "desktop": {
+              "value": true
+            }
+          }
+        }
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "general_settings",
+            "render": true,
+            "attrName": "heading_title_text.innerContent",
+            "label": "Heading Title Text",
+            "features": {
+              "sticky": false,
+              "hover": false,
+              "responsive": false
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/text"
+            }
+          }
+        },
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "title_design",
+              "label": "Title",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Title",
+                  "fields": {
+                    "headingLevel": {
+                      "render": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "show_if": {
+        "title_on_off": "on"
+      }
+      
+    },
+    "df_title_bg": {
+      "type": "object",
+      "selector": "",
+      "styleProps": {
+        "background": {
+          "selector": "{{selector}} .df_bh_title"
+        }
+      },
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "title_design",
+              "render": true,
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": ["video", "mask", "pattern"]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "df_items_bg": {
+      "type": "object",
+      "selector": "",
+      "styleProps": {
+        "background": {
+          "selector": "{{selector}} .difl_businesshoursitem"
+        }
+      },
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "item_design",
+              "render": true,
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": ["video", "mask", "pattern"]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "day_background_color": {
+      "type": "object",
+      "selector": "",
+      "styleProps": {
+        "background": {
+          "selector": "{{selector}} .df_bh_day"
+        }
+      },
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "day_design",
+              "render": true,
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": ["video", "mask", "pattern"]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "time_background_color": {
+      "type": "object",
+      "selector": "",
+      "styleProps": {
+        "background": {
+          "selector": "{{selector}} .df_bh_time"
+        }
+      },
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "time_design",
+              "render": true,
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": ["video", "mask", "pattern"]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "day_width": {
+      "type": "object",
+      "selector": "",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "day_design",
+            "render": true,
+            "attrName": "day_width.innerContent",
+            "label": "Day Width",
+            "description": "Set Day Width",
+            "features": {
+              "sticky": false,
+              "hover": false
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "allowedUnits": ["%"],
+                "defaultUnit": "%",
+                "defaultValue": "50%",
+                "min": "0",
+                "max": "100",
+                "step": "1"
+              }
+            }
+          }
+        }
+      }
+    },
+    "start_time_background_color": {
+      "type": "object",
+      "selector": "",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "start_time_design",
+            "render": true,
+            "attrName": "start_time_background_color.innerContent",
+            "label": "Start Time background",
+            "features": {
+              "sticky": false,
+              "responsive": false
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "end_time_background_color": {
+      "type": "object",
+      "selector": "",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "end_time_design",
+            "render": true,
+            "attrName": "end_time_background_color.innerContent",
+            "label": "End Time background",
+            "features": {
+              "sticky": false,
+              "responsive": false
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "time_separetor_background_color": {
+      "type": "object",
+      "selector": "",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "time_separetor_design",
+            "render": true,
+            "attrName": "time_separetor_background_color.innerContent",
+            "label": "Time Separator background",
+            "features": {
+              "sticky": false,
+              "responsive": false
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "title_spacing": {
+      "type": "object",
+      "selector": "",
+      "styleProps": {
+        "selector": "{{selector}} .df_bh_day",
+        "spacing": {
+          "selector": "{{selector}} .df_bh_day",
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": true,
+                "margin": true
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Title "
+                }
+              }
+            }
+          }
+        }
+      },
+      "show_if": {
+        "title_on_off": "on"
+      }
+    },
+    "day_spacing": {
+      "type": "object",
+      "selector": "",
+      "styleProps": {
+        "selector": "{{selector}} .df_bh_day",
+        "spacing": {
+          "selector": "{{selector}} .df_bh_day",
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": true,
+                "margin": true
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Day "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "time_spacing": {
+      "type": "object",
+      "selector": "",
+      "styleProps": {
+        "selector": "{{selector}} .df_bh_time",
+        "spacing": {
+          "selector": "{{selector}} .df_bh_time",
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": true,
+                "margin": true
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Time "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "start_time_spacing": {
+      "type": "object",
+      "selector": "",
+      "styleProps": {
+        "selector": "{{selector}} .df_bh_start_time",
+        "spacing": {
+          "selector": "{{selector}} .df_bh_start_time",
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": true,
+                "margin": true
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Start Time "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "end_time_spacing": {
+      "type": "object",
+      "selector": "",
+      "styleProps": {
+        "selector": "{{selector}} .df_bh_end_time",
+        "spacing": {
+          "selector": "{{selector}} .df_bh_end_time",
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": true,
+                "margin": true
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "End Time "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "time_separetor_spacing": {
+      "type": "object",
+      "selector": "",
+      "styleProps": {
+        "selector": "{{selector}} .df_bh_time_separetor",
+        "spacing": {
+          "selector": "{{selector}} .df_bh_time_separetor",
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": true,
+                "margin": true
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Time Separator "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "main_wrapper_spacing": {
+      "type": "object",
+      "selector": "",
+      "styleProps": {
+        "selector": "{{selector}} .df_bh_wrapper",
+        "spacing": {
+          "selector": "{{selector}} .df_bh_wrapper",
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": true,
+                "margin": true
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Main Wrapper "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "item_wrapper_spacing": {
+      "type": "object",
+      "selector": "",
+      "styleProps": {
+        "selector": "{{selector}} .difl_businesshoursitem",
+        "spacing": {
+          "selector": "{{selector}} .difl_businesshoursitem",
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": true,
+                "margin": true
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Item Wrapper "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "title_wrapper_spacing": {
+      "type": "object",
+      "selector": "",
+      "styleProps": {
+        "selector": "{{selector}} .df_bh_header",
+        "spacing": {
+          "selector": "{{selector}} .df_bh_header",
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": true,
+                "margin": true
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Title Wrapper"
+                }
+              }
+            }
+          }
+        }
+      },
+      "show_if": {
+        "title_on_off": "on"
+      }
+    },
+    "day_time_separator_color": {
+      "type": "object",
+      "selector": "",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "day_time_separetor_design",
+            "render": true,
+            "attrName": "day_time_separator_color.innerContent",
+            "label": "Day-Time Separator Color",
+            "description": "Choose a color for the Day-Time separator.",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "day_time_separator_style": {
+      "type": "object",
+      "selector": "",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "day_time_separetor_design",
+            "render": true,
+            "attrName": "day_time_separator_style.innerContent",
+            "label": "Day-Time Separator Style",
+            "description": "The Day-Time Separator supports various styles, each of which changes the shape of the Day-Time separator.",
+            "features": {
+              "sticky": false,
+              "hover": false
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/select",
+              "props": {
+                "options": {
+                  "solid": {
+                    "label": "Solid"
+                  },
+                  "dashed": {
+                    "label": "Dashed"
+                  },
+                  "dotted": {
+                    "label": "Dotted"
+                  },
+                  "double": {
+                    "label": "Double"
+                  },
+                  "groove": {
+                    "label": "Groove"
+                  },
+                  "ridge": {
+                    "label": "Ridge"
+                  },
+                  "inset": {
+                    "label": "Inset"
+                  },
+                  "outset": {
+                    "label": "Outset"
+                  },
+                  "none": {
+                    "label": "None"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "day_time_separator_hight": {
+      "type": "object",
+      "selector": "",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "day_time_separetor_design",
+            "render": true,
+            "attrName": "day_time_separator_hight.innerContent",
+            "label": "Day-Time Separator Height",
+            "description": "This sets a static height value for the Day-Time separator.",
+            "features": {
+              "sticky": false
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "allowedUnits": [
+                  "em",
+                  "rem",
+                  "px",
+                  "cm",
+                  "mm",
+                  "in",
+                  "pt",
+                  "pc",
+                  "ex",
+                  "vh",
+                  "vw"
+                ],
+                "defaultUnit": "px"
+              }
+            }
+          }
+        }
+      }
+    },
+    "day_time_separetor_margin": {
+      "type": "object",
+      "selector": "",
+      "styleProps": {
+        "selector": "{{selector}} .df_bh_day_time_separator hr",
+        "spacing": {
+          "selector": "{{selector}} .df_bh_day_time_separator hr",
+          "important": {
+            "desktop": {
+              "value": {
+                "padding": false,
+                "margin": true
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "render": true,
+              "label": "Day-Time Separator Margin",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Day-Time Separator ",
+                  "fields": {
+                    "padding": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "customCssFields": {
+    "title": {
+      "label": "Label 1",
+      "selectorSuffix": ""
+    },
+    "content": {
+      "label": "Label 2",
+      "selectorSuffix": ""
+    }
+  },
   "settings": {
     "content": "auto",
     "design": "auto",
@@ -137,1771 +1684,9 @@
       }
     }
   },
-  "customCssFields": {
-    "title": {
-      "label": "Label 1"
-    },
-    "content": {
-      "label": "Label 2"
-    }
-  },
-  "attributes": {
-    "module": {
-      "type": "object",
-      "selector": "{{selector}}",
-      "settings": {
-        "meta": {
-          "adminLabel": {
-            "component": {
-              "type": "group",
-              "name": "divi/admin-label"
-            }
-          }
-        },
-        "advanced": {
-          "link": {
-            "item": {
-              "groupSlug": "contentLink",
-              "component": {
-                "props": {
-                  "fieldLabel": ""
-                }
-              }
-            }
-          }
-        },
-        "decoration": {
-          "background": {},
-          "border": {},
-          "boxShadow": {},
-          "filters": {}
-        }
-      },
-      "default": {
-        "meta": {
-          "adminLabel": {
-            "desktop": {
-              "value": "Business Hours"
-            }
-          }
-        }
-      }
-    },
-    "day_name": {
-      "settings": {
-        "decoration": {
-          "font": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "day_design",
-              "attrName": "day_name.decoration.font",
-              "label": "Day",
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/font",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Day",
-                  "fields": {
-                    "headingLevel": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "font": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_day",
-              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_day"
-            }
-          },
-          "important": {
-            "desktop": {
-              "value": true
-            }
-          }
-        }
-      }
-    },
-    "time_div": {
-      "settings": {
-        "decoration": {
-          "font": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "time_design",
-              "attrName": "time_div.decoration.font",
-              "label": "Time",
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/font",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Time",
-                  "fields": {
-                    "headingLevel": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "font": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_time",
-              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_time"
-            }
-          },
-          "important": {
-            "desktop": {
-              "value": true
-            }
-          }
-        }
-      }
-    },
-    "start_time": {
-      "settings": {
-        "decoration": {
-          "font": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "start_time_design",
-              "attrName": "start_time.decoration.font",
-              "label": "Start Time",
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/font",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Start Time",
-                  "fields": {
-                    "headingLevel": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "boxShadow": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "start_time_design",
-              "attrName": "start_time.decoration.boxShadow",
-              "label": null,
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/box-shadow",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": ""
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "font": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_start_time",
-              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_start_time"
-            }
-          },
-          "important": {
-            "desktop": {
-              "value": true
-            }
-          }
-        },
-        "boxShadow": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_start_time",
-              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_start_time"
-            }
-          }
-        }
-      }
-    },
-    "end_time": {
-      "settings": {
-        "decoration": {
-          "font": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "end_time_design",
-              "attrName": "end_time.decoration.font",
-              "label": "End Time",
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/font",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "End Time",
-                  "fields": {
-                    "headingLevel": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "boxShadow": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "end_time_design",
-              "attrName": "end_time.decoration.boxShadow",
-              "label": null,
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/box-shadow",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": ""
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "font": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_end_time",
-              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_end_time"
-            }
-          },
-          "important": {
-            "desktop": {
-              "value": true
-            }
-          }
-        },
-        "boxShadow": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_end_time",
-              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_end_time"
-            }
-          }
-        }
-      }
-    },
-    "time_separetor": {
-      "settings": {
-        "decoration": {
-          "font": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "time_separetor_design",
-              "attrName": "time_separetor.decoration.font",
-              "label": "Time Separator",
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/font",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Time Separator",
-                  "fields": {
-                    "headingLevel": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "boxShadow": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "time_separetor_design",
-              "attrName": "time_separetor.decoration.boxShadow",
-              "label": null,
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/box-shadow",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": ""
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "font": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_time_separetor",
-              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_time_separetor"
-            }
-          },
-          "important": {
-            "desktop": {
-              "value": true
-            }
-          }
-        },
-        "boxShadow": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_time_separetor",
-              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_time_separetor"
-            }
-          }
-        }
-      }
-    },
-    "title_text": {
-      "settings": {
-        "decoration": {
-          "font": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "title_design",
-              "attrName": "title_text.decoration.font",
-              "label": "Title",
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/font",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Title",
-                  "fields": {
-                    "headingLevel": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "font": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_title",
-              "hover": "{{selector}} .df_bh_container:hover .df_bh_title"
-            }
-          },
-          "important": {
-            "desktop": {
-              "value": true
-            }
-          }
-        }
-      }
-    },
-    "item_border": {
-      "settings": {
-        "decoration": {
-          "border": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "item_design",
-              "attrName": "item_border.decoration.border",
-              "label": "",
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/border",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": null
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "border": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .difl_businesshoursitem",
-              "hover": "{{selector}} .difl_businesshoursitem:hover"
-            }
-          }
-        }
-      }
-    },
-    "title_border": {
-      "settings": {
-        "decoration": {
-          "border": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "title_design",
-              "attrName": "title_border.decoration.border",
-              "label": "",
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/border",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": null
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "border": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_title",
-              "hover": "{{selector}} .df_bh_container:hover .df_bh_title"
-            }
-          }
-        }
-      }
-    },
-    "day_border": {
-      "settings": {
-        "decoration": {
-          "border": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "day_design",
-              "attrName": "day_border.decoration.border",
-              "label": "",
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/border",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": null
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "border": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_day",
-              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_day"
-            }
-          }
-        }
-      }
-    },
-    "time_border": {
-      "settings": {
-        "decoration": {
-          "border": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "time_design",
-              "attrName": "time_border.decoration.border",
-              "label": "",
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/border",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": null
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "border": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_time",
-              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_time"
-            }
-          }
-        }
-      }
-    },
-    "start_time_border": {
-      "settings": {
-        "decoration": {
-          "border": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "start_time_design",
-              "attrName": "start_time_border.decoration.border",
-              "label": "",
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/border",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": null
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "border": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_start_time",
-              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_start_time"
-            }
-          }
-        }
-      }
-    },
-    "end_time_border": {
-      "settings": {
-        "decoration": {
-          "border": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "end_time_design",
-              "attrName": "end_time_border.decoration.border",
-              "label": "",
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/border",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": null
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "border": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_end_time",
-              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_end_time"
-            }
-          }
-        }
-      }
-    },
-    "time_separetor_border": {
-      "settings": {
-        "decoration": {
-          "border": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "time_separetor_design",
-              "attrName": "time_separetor_border.decoration.border",
-              "label": "",
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/border",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": null
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "border": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_time_separetor",
-              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_time_separetor"
-            }
-          }
-        }
-      }
-    },
-    "day": {
-      "settings": {
-        "decoration": {
-          "boxShadow": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "day_design",
-              "attrName": "day.decoration.boxShadow",
-              "label": null,
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/box-shadow",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": ""
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "boxShadow": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_day",
-              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_day"
-            }
-          }
-        }
-      }
-    },
-    "time": {
-      "settings": {
-        "decoration": {
-          "boxShadow": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "time_design",
-              "attrName": "time.decoration.boxShadow",
-              "label": null,
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/box-shadow",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": ""
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "boxShadow": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_time",
-              "hover": "{{selector}} .difl_businesshoursitem:hover .df_bh_time"
-            }
-          }
-        }
-      }
-    },
-    "title": {
-      "settings": {
-        "decoration": {
-          "boxShadow": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "title_design",
-              "attrName": "title.decoration.boxShadow",
-              "label": null,
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/box-shadow",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": ""
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "boxShadow": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .df_bh_title",
-              "hover": "{{selector}} .df_bh_container:hover .df_bh_title"
-            }
-          }
-        }
-      }
-    },
-    "item": {
-      "settings": {
-        "decoration": {
-          "boxShadow": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "item_design",
-              "attrName": "item.decoration.boxShadow",
-              "label": null,
-              "render": true,
-              "component": {
-                "type": "group",
-                "name": "divi/box-shadow",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": ""
-                }
-              }
-            }
-          }
-        }
-      },
-      "styleProps": {
-        "boxShadow": {
-          "selectors": {
-            "desktop": {
-              "value": "{{selector}} .difl_businesshoursitem",
-              "hover": "{{selector}} .df_bh_container .difl_businesshoursitem:hover"
-            }
-          }
-        }
-      }
-    },
-    "title_on_off": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "innerContent": {
-          "groupType": "group-item",
-          "item": {
-            "groupSlug": "general_settings",
-            "render": true,
-            "attrName": "title_on_off.innerContent",
-            "label": "Title On/Off ",
-            "features": {
-              "sticky": false,
-              "hover": false,
-              "responsive": false
-            },
-            "component": {
-              "type": "field",
-              "name": "divi/toggle"
-            }
-          }
-        }
-      }
-    },
-    "heading_title_text": {
-      "type": "object",
-      "selector": "",
-      "inlineEditor": true,
-      "settings": {
-        "innerContent": {
-          "groupType": "group-item",
-          "item": {
-            "groupSlug": "general_settings",
-            "render": true,
-            "attrName": "heading_title_text.innerContent",
-            "label": "Heading Title Text",
-            "features": {
-              "sticky": false,
-              "hover": false,
-              "responsive": false
-            },
-            "component": {
-              "type": "field",
-              "name": "divi/text"
-            }
-          }
-        }
-      },
-      "show_if": {
-        "title_on_off": "on"
-      }
-    },
-    "df_title_bg": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "background": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "title_design",
-              "render": true,
-              "attrName": "df_title_bg.innerContent",
-              "label": "Background",
-              "features": {
-                "sticky": false,
-                "responsive": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/background",
-                "props": {
-                  "grouped": false,
-                  "hidePanels": ["video", "mask", "pattern"]
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "df_items_bg": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "background": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "item_design",
-              "render": true,
-              "attrName": "df_items_bg.innerContent",
-              "label": "Background",
-              "features": {
-                "sticky": false,
-                "responsive": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/background",
-                "props": {
-                  "grouped": false,
-                  "hidePanels": ["video", "mask", "pattern"]
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "day_background_color": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "background": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "day_design",
-              "render": true,
-              "attrName": "day_background_color.innerContent",
-              "label": "Background",
-              "features": {
-                "sticky": false,
-                "responsive": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/background",
-                "props": {
-                  "grouped": false,
-                  "hidePanels": ["video", "mask", "pattern"]
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "time_background_color": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "background": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "time_design",
-              "render": true,
-              "attrName": "time_background_color.innerContent",
-              "label": "Background",
-              "features": {
-                "sticky": false,
-                "responsive": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/background",
-                "props": {
-                  "grouped": false,
-                  "hidePanels": ["video", "mask", "pattern"]
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "day_width": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "innerContent": {
-          "groupType": "group-item",
-          "item": {
-            "groupSlug": "day_design",
-            "render": true,
-            "attrName": "day_width.innerContent",
-            "label": "Day Width",
-            "description": "Set Day Width",
-            "features": {
-              "sticky": false,
-              "hover": false
-            },
-            "component": {
-              "type": "field",
-              "name": "divi/range",
-              "props": {
-                "allowedUnits": ["%"],
-                "min": "0",
-                "max": "100",
-                "step": "1"
-              }
-            }
-          }
-        }
-      }
-    },
-    "start_time_background_color": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "innerContent": {
-          "groupType": "group-item",
-          "item": {
-            "groupSlug": "start_time_design",
-            "render": true,
-            "attrName": "start_time_background_color.innerContent",
-            "label": "Start Time background",
-            "features": {
-              "sticky": false,
-              "responsive": false
-            },
-            "component": {
-              "type": "field",
-              "name": "divi/color-picker"
-            }
-          }
-        }
-      }
-    },
-    "end_time_background_color": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "innerContent": {
-          "groupType": "group-item",
-          "item": {
-            "groupSlug": "end_time_design",
-            "render": true,
-            "attrName": "end_time_background_color.innerContent",
-            "label": "End Time background",
-            "features": {
-              "sticky": false,
-              "responsive": false
-            },
-            "component": {
-              "type": "field",
-              "name": "divi/color-picker"
-            }
-          }
-        }
-      }
-    },
-    "time_separetor_background_color": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "innerContent": {
-          "groupType": "group-item",
-          "item": {
-            "groupSlug": "time_separetor_design",
-            "render": true,
-            "attrName": "time_separetor_background_color.innerContent",
-            "label": "Time Separator background",
-            "features": {
-              "sticky": false,
-              "responsive": false
-            },
-            "component": {
-              "type": "field",
-              "name": "divi/color-picker"
-            }
-          }
-        }
-      }
-    },
-    "title_margin": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "title_margin.innerContent",
-              "label": "Title Margin",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Title ",
-                  "fields": {
-                    "padding": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "show_if": {
-        "title_on_off": "on"
-      }
-    },
-    "title_padding": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "title_padding.innerContent",
-              "label": "Title Padding",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Title ",
-                  "fields": {
-                    "margin": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "show_if": {
-        "title_on_off": "on"
-      }
-    },
-    "day_margin": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "day_margin.innerContent",
-              "label": "Day Margin",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Day ",
-                  "fields": {
-                    "padding": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "day_padding": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "day_padding.innerContent",
-              "label": "Day Padding",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Day ",
-                  "fields": {
-                    "margin": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "time_margin": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "time_margin.innerContent",
-              "label": "Time Margin",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Time ",
-                  "fields": {
-                    "padding": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "time_padding": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "time_padding.innerContent",
-              "label": "Time Padding",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Time ",
-                  "fields": {
-                    "margin": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "start_time_margin": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "start_time_margin.innerContent",
-              "label": "Start Time Margin",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Start Time ",
-                  "fields": {
-                    "padding": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "start_time_padding": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "start_time_padding.innerContent",
-              "label": "Start Time Padding",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Start Time ",
-                  "fields": {
-                    "margin": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "end_time_margin": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "end_time_margin.innerContent",
-              "label": "End Time Margin",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "End Time ",
-                  "fields": {
-                    "padding": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "end_time_padding": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "end_time_padding.innerContent",
-              "label": "End Time Padding",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "End Time ",
-                  "fields": {
-                    "margin": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "time_separetor_margin": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "time_separetor_margin.innerContent",
-              "label": "Time Separator Margin",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Time Separator ",
-                  "fields": {
-                    "padding": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "time_separetor_padding": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "time_separetor_padding.innerContent",
-              "label": "Time Separator Padding",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Time Separator ",
-                  "fields": {
-                    "margin": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "main_wrapper_margin": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "main_wrapper_margin.innerContent",
-              "label": "Main Wrapper Margin",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Main Wrapper ",
-                  "fields": {
-                    "padding": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "main_wrapper_padding": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "main_wrapper_padding.innerContent",
-              "label": "Main Wrapper Padding",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Main Wrapper ",
-                  "fields": {
-                    "margin": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "item_wrapper_margin": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "item_wrapper_margin.innerContent",
-              "label": "Item Wrapper Margin",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Item Wrapper ",
-                  "fields": {
-                    "padding": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "item_wrapper_padding": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "item_wrapper_padding.innerContent",
-              "label": "Item Wrapper Padding",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Item Wrapper ",
-                  "fields": {
-                    "margin": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "title_wrapper_margin": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "title_wrapper_margin.innerContent",
-              "label": "Title Wrapper Margin",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Title Wrapper ",
-                  "fields": {
-                    "padding": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "show_if": {
-        "title_on_off": "on"
-      }
-    },
-    "title_wrapper_padding": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "title_wrapper_padding.innerContent",
-              "label": "Title Wrapper Padding",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Title Wrapper ",
-                  "fields": {
-                    "margin": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "show_if": {
-        "title_on_off": "on"
-      }
-    },
-    "day_time_separator_color": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "innerContent": {
-          "groupType": "group-item",
-          "item": {
-            "groupSlug": "day_time_separetor_design",
-            "render": true,
-            "attrName": "day_time_separator_color.innerContent",
-            "label": "Day-Time Separator Color",
-            "description": "Choose a color for the Day-Time separator.",
-            "component": {
-              "type": "field",
-              "name": "divi/color-picker"
-            }
-          }
-        }
-      }
-    },
-    "day_time_separator_style": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "innerContent": {
-          "groupType": "group-item",
-          "item": {
-            "groupSlug": "day_time_separetor_design",
-            "render": true,
-            "attrName": "day_time_separator_style.innerContent",
-            "label": "Day-Time Separator Style",
-            "description": "The Day-Time Separator supports various styles, each of which changes the shape of the Day-Time separator.",
-            "features": {
-              "sticky": false,
-              "hover": false
-            },
-            "component": {
-              "type": "field",
-              "name": "divi/select",
-              "props": {
-                "options": {
-                  "solid": {
-                    "label": "Solid"
-                  },
-                  "dashed": {
-                    "label": "Dashed"
-                  },
-                  "dotted": {
-                    "label": "Dotted"
-                  },
-                  "double": {
-                    "label": "Double"
-                  },
-                  "groove": {
-                    "label": "Groove"
-                  },
-                  "ridge": {
-                    "label": "Ridge"
-                  },
-                  "inset": {
-                    "label": "Inset"
-                  },
-                  "outset": {
-                    "label": "Outset"
-                  },
-                  "none": {
-                    "label": "None"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "day_time_separator_hight": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "innerContent": {
-          "groupType": "group-item",
-          "item": {
-            "groupSlug": "day_time_separetor_design",
-            "render": true,
-            "attrName": "day_time_separator_hight.innerContent",
-            "label": "Day-Time Separator Height",
-            "description": "This sets a static height value for the Day-Time separator.",
-            "features": {
-              "sticky": false
-            },
-            "component": {
-              "type": "field",
-              "name": "divi/range",
-              "props": {
-                "allowedUnits": [
-                  "em",
-                  "rem",
-                  "px",
-                  "cm",
-                  "mm",
-                  "in",
-                  "pt",
-                  "pc",
-                  "ex",
-                  "vh",
-                  "vw"
-                ],
-                "defaultUnit": "px"
-              }
-            }
-          }
-        }
-      }
-    },
-    "day_time_separetor_margin": {
-      "type": "object",
-      "selector": "",
-      "settings": {
-        "decoration": {
-          "spacing": {
-            "groupType": "group-item",
-            "item": {
-              "groupSlug": "custom_spacing",
-              "render": true,
-              "attrName": "day_time_separetor_margin.innerContent",
-              "label": "Day-Time Separator Margin",
-              "features": {
-                "sticky": false
-              },
-              "component": {
-                "type": "group",
-                "name": "divi/spacing",
-                "props": {
-                  "grouped": false,
-                  "fieldLabel": "Day-Time Separator ",
-                  "fields": {
-                    "padding": {
-                      "render": false
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+  "mousetrap": {
+    "inner": {
+      "edited": true
     }
   }
 }

@@ -1,18 +1,21 @@
-import { BusinessHoursEdit } from './edit';
+
 import metadata from './module.json';
 import { conversionOutline } from './conversion-outline';
-import { __ } from "@wordpress/i18n";
+import { BusinessHoursEdit } from './edit';
+// import { __ } from "@wordpress/i18n";
 // Internal Dependencies
 import "./style.css";
 
 export const businessHours = {
     metadata: metadata,
     childrenName: ['difl/businesshoursitem'],
+    settings: {},
     renderers: {
         edit: BusinessHoursEdit,
     },
     conversionOutline,
 };
+
 
 function checkVisiblity(props) {
     const attrObj = props.attrName.split('.');
@@ -54,7 +57,7 @@ function checkVisiblity(props) {
 //handle innerContent component show_if && show_if_not condition
 window.vendor.wp.hooks.addFilter(
     'divi.moduleLibrary.moduleAttributes.difl.businesshours',
-    'difl',
+    'divi',
     (attributes, metadata) => {
         Object.entries(attributes).forEach(([key, singleAttr]) => {
             if (singleAttr.show_if || singleAttr.show_if_not) {
@@ -66,4 +69,3 @@ window.vendor.wp.hooks.addFilter(
         return attributes;
     }
 );
-

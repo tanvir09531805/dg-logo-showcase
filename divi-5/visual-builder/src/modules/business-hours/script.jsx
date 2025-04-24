@@ -1,11 +1,11 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 
 export const ModuleScriptData = ({
   elements,
 }) => (
-  <React.Fragment>
+  <Fragment>
     {elements.scriptData({
       attrName: 'module',
     })}
-  </React.Fragment>
+  </Fragment>
 );
