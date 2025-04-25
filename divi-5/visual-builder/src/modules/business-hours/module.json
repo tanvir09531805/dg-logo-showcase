@@ -62,6 +62,8 @@
       }
     },
     "day_name": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "font": {
@@ -104,6 +106,8 @@
       }
     },
     "time_div": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "font": {
@@ -146,6 +150,8 @@
       }
     },
     "start_time": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "font": {
@@ -212,6 +218,8 @@
       }
     },
     "end_time": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "font": {
@@ -278,6 +286,8 @@
       }
     },
     "time_separetor": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "font": {
@@ -344,6 +354,8 @@
       }
     },
     "item_border": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "border": {
@@ -377,6 +389,8 @@
       }
     },
     "title_border": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "border": {
@@ -409,6 +423,8 @@
       }
     },
     "day_border": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "border": {
@@ -441,6 +457,8 @@
       }
     },
     "time_border": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "border": {
@@ -473,6 +491,8 @@
       }
     },
     "start_time_border": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "border": {
@@ -505,6 +525,8 @@
       }
     },
     "end_time_border": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "border": {
@@ -537,6 +559,8 @@
       }
     },
     "time_separetor_border": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "border": {
@@ -569,6 +593,8 @@
       }
     },
     "day": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "boxShadow": {
@@ -601,6 +627,8 @@
       }
     },
     "time": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "boxShadow": {
@@ -633,6 +661,8 @@
       }
     },
     "title": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "boxShadow": {
@@ -665,6 +695,8 @@
       }
     },
     "item": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "boxShadow": {
@@ -1544,16 +1576,7 @@
       }
     }
   },
-  "customCssFields": {
-    "title": {
-      "label": "Label 1",
-      "selectorSuffix": ""
-    },
-    "content": {
-      "label": "Label 2",
-      "selectorSuffix": ""
-    }
-  },
+  "customCssFields": {},
   "settings": {
     "content": "auto",
     "design": "auto",

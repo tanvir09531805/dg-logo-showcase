@@ -1,11 +1,6 @@
 import React from "react";
-import { cssFields } from "./custom-css";
-
 const { CssStyle, StyleContainer, CommonStyle } = window?.divi?.module;
 
-/**
- * Module style component for static module
- */
 export const ModuleStyles = ({
   attrs,
   elements,
@@ -28,12 +23,7 @@ export const ModuleStyles = ({
           },
         },
       })}
-      <CssStyle
-        selector={orderClass}
-        attr={attrs.css}
-        cssFields={cssFields}
-      />
-
+      
       {/* Font */}
       {elements.style({
         attrName: "time_div",

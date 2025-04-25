@@ -36,7 +36,8 @@ export const BusinessHoursItemEdit = ({ attrs, id, name, elements }) => {
   const timeHtml = ('advanced' === timeStructure) ?
     <div className="df_bh_time">
       {startTime}
-      {separatorTime}{endTime}
+      {separatorTime}
+      {endTime}
     </div>
     :
     <div className="df_bh_time">
@@ -67,7 +68,7 @@ export const BusinessHoursItemEdit = ({ attrs, id, name, elements }) => {
       {elements.styleComponents({
         attrName: "module",
       })}
-      <div className={day_tiem_separator_on + " df_bh_item" + offDayClass}>
+      <div className={day_tiem_separator_on + " df_bh_item " + offDayClass}>
         {dayName}
         {dayTimeSeparatorHtml}
         {timeContainnerHtml}

@@ -1,5 +1,4 @@
 <?php
-
 namespace DIFL\Modules\BusinessHoursItem;
 
 if (! defined('ABSPATH')) {
@@ -13,6 +12,9 @@ use ET\Builder\Packages\StyleLibrary\Utils\StyleDeclarations;
 
 trait Styles
 {
+  use CustomCss;
+  use StyleDeclaration;
+
   public static function styles($args)
   {
     $attrs        = $args['attrs'] ?? [];
@@ -40,9 +42,11 @@ trait Styles
               ],
             ]
           ),
-
+        
           // Font style.
-          $elements->style(['attrName' => 'time_div',]),
+          $elements->style([
+            'attrName' => 'time_div',
+          ]),
 
           // boxShadow style.
           $elements->style(['attrName' => 'item',]),
@@ -113,7 +117,7 @@ trait Styles
               'property' => 'border-style',
             ]
           ),
-          
+        
         ],
       ]
     );

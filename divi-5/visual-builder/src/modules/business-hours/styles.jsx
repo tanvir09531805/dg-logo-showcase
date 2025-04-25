@@ -1,7 +1,5 @@
 import React from "react";
 
-import { cssFields } from "./custom-css";
-
 const { CssStyle, StyleContainer, CommonStyle } = window?.divi?.module;
 
 const dfDayWidthCalc = ({ attrValue, }) => {
@@ -44,11 +42,7 @@ export const ModuleStyles = ({
           },
         },
       })}
-      <CssStyle
-        selector={orderClass}
-        attr={attrs.css}
-        cssFields={cssFields}
-      />
+      
 
       <CommonStyle
 				selector={`${orderClass} .df_bh_time`}

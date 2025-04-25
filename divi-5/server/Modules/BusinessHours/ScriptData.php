@@ -1,5 +1,4 @@
 <?php
-
 namespace DIFL\Modules\BusinessHours;
 
 if ( ! defined( 'ABSPATH' ) ) {

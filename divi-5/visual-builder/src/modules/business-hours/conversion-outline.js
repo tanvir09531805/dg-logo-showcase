@@ -1,5 +1,5 @@
 // common.js
-import { convertBackground, convertIcon, convertSpacing } from '../../../scripts/common.js';
+import { convertBackground, convertSpacing } from '../../../scripts/common.js';
 
 const conversionOutlineProcess = () => {
   
@@ -7,10 +7,10 @@ const conversionOutlineProcess = () => {
     const general_field = {
       title_on_off: "title_on_off.innerContent.*",
       heading_title_text: "heading_title_text.innerContent.*",
-      df_title_bg: "df_title_bg.innerContent.*",
-      df_items_bg: "df_items_bg.innerContent.*",
-      day_background_color: "day_background_color.innerContent.*",
-      time_background_color: "time_background_color.innerContent.*",
+      df_title_bg: "df_title_bg.decoration.*",
+      df_items_bg: "df_items_bg.decoration.*",
+      day_background_color: "day_background_color.decoration.*",
+      time_background_color: "time_background_color.decoration.*",
       day_width: "day_width.innerContent.*",
       start_time_background_color: "start_time_background_color.innerContent.*",
       end_time_background_color: "end_time_background_color.innerContent.*",
@@ -40,9 +40,13 @@ const conversionOutlineProcess = () => {
     }
     const day_bg = convertBackground( 'day_background_color', 'day_background_color' );
 		const time_bg = convertBackground( 'time_background_color', 'time_background_color' );
+		const title_bg = convertBackground( 'df_title_bg', 'df_title_bg' );
+		const items_bg = convertBackground( 'df_items_bg', 'df_items_bg' );
 		return { 
       ...general_field, 
       ...day_bg,
+      ...title_bg,
+      ...items_bg,
       ...time_bg 
     };
   }

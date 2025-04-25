@@ -1,11 +1,4 @@
 <?php
-
-/**
- * BusinessHours Module class.
- *
- * @package DIVIFLASH5\Modules\BusinessHours;
- */
-
 namespace DIFL\Modules\BusinessHours;
 
 if (!defined('ABSPATH')) {
@@ -15,23 +8,10 @@ if (!defined('ABSPATH')) {
 use ET\Builder\Framework\DependencyManagement\Interfaces\DependencyInterface;
 use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 
-
-/**
- * Class BusinessHours
- *
- * @package DIFL\Modules\BusinessHours
- */
 class BusinessHours implements DependencyInterface
 {
   use RenderCallback;
 
-	/**
-	 * Loads `ParentModule` and registers Front-End render callback and REST API Endpoints.
-	 *
-	 * @since ??
-	 *
-	 * @return void
-	 */
   public function load()
   {
     $module_json_folder_path = DIFL_MODULES_JSON_PATH . 'business-hours/';

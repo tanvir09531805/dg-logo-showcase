@@ -84,6 +84,8 @@
       }
     },
     "time_div": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "font": {
@@ -213,6 +215,8 @@
       }
     },
     "item_border": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "border": {
@@ -245,6 +249,8 @@
       }
     },
     "day_border": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "border": {
@@ -276,6 +282,8 @@
       }
     },
     "time_border": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "border": {
@@ -307,6 +315,8 @@
       }
     },
     "start_time_border": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "border": {
@@ -338,6 +348,8 @@
       }
     },
     "end_time_border": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "border": {
@@ -369,6 +381,8 @@
       }
     },
     "time_separetor_border": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "border": {
@@ -400,6 +414,8 @@
       }
     },
     "item": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "boxShadow": {
@@ -433,6 +449,8 @@
       }
     },
     "day": {
+      "type": "object",
+      "inlineEditor": true,
       "settings": {
         "decoration": {
           "boxShadow": {
@@ -1034,8 +1052,6 @@
         }
       }
     },
-
-
     "on_separator_day_time": {
       "type": "object",
       "selector": "",
@@ -1234,16 +1250,7 @@
       }
     }
   },
-  "customCssFields": {
-    "title": {
-      "label": "Label 1",
-      "selectorSuffix": ""
-    },
-    "content": {
-      "label": "Label 2",
-      "selectorSuffix": ""
-    }
-  },
+  "customCssFields": {},
   "settings": {
     "content": "auto",
     "design": "auto",
