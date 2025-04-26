@@ -12,6 +12,7 @@ import { advancedCarousel } from './modules/content-carousel';
 import { advancedCarouselItem } from './modules/content-carousel-item';
 import { businessHours } from './modules/business-hours';
 import { businessHoursItem } from './modules/business-hours-item';
+import { advancedHeading } from './modules/advanced-heading';
 
 import './module-icons';
 
@@ -23,4 +24,5 @@ addAction('divi.moduleLibrary.registerModuleLibraryStore.after', 'DIFL', () => {
 	registerModule(advancedCarouselItem.metadata, omit(advancedCarouselItem, 'metadata'));
 	registerModule(businessHours.metadata, omit(businessHours, 'metadata'));
 	registerModule(businessHoursItem.metadata, omit(businessHoursItem, 'metadata'));
+	registerModule(advancedHeading.metadata, omit(advancedHeading, 'metadata'));
 });
