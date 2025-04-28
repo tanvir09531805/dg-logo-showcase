@@ -1,40 +1,31 @@
 <?php
-
 /**
- * BusinessHours Module class.
+ * AdvancedHeading Module class.
  *
- * @package DIVIFLASH5\Modules\BusinessHours;
+ * @package DIFL\Modules\AdvancedHeading;
  */
 
-namespace DIFL\Modules\BusinessHours;
+namespace DIFL\Modules\AdvancedHeading;
 
 if (!defined('ABSPATH')) {
-  die('Direct access forbidden.');
+    die('Direct access forbidden.');
 }
 
 use ET\Builder\Framework\DependencyManagement\Interfaces\DependencyInterface;
 use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 
-
 /**
- * Class BusinessHours
+ * Class AdvancedHeading
  *
- * @package DIFL\Modules\BusinessHours
+ * @package DIVIFLASH5\Modules\AdvancedHeading
  */
-class BusinessHours implements DependencyInterface
-{
+class AdvancedHeading implements DependencyInterface {
+  
   use RenderCallback;
-
-	/**
-	 * Loads `ParentModule` and registers Front-End render callback and REST API Endpoints.
-	 *
-	 * @since ??
-	 *
-	 * @return void
-	 */
+  
   public function load()
   {
-    $module_json_folder_path = DIFL_MODULES_JSON_PATH . 'business-hours/';
+    $module_json_folder_path = DIFL_MODULES_JSON_PATH . 'advanced-heading/';
 
     add_action(
       'init',

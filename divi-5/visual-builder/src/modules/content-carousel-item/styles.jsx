@@ -50,6 +50,7 @@ const dfImgForceFullWidth = ({ attrValue, }) => {
 	return imgForceFullWidth;
 };
 
+
 const dfIconAlignment = ({ attrValue, }) => {
 
 	const declarations = new StyleDeclarations({

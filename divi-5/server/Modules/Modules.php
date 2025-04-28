@@ -16,6 +16,7 @@ use DIFL\Modules\BusinessHoursItem\BusinessHoursItem;
 use DIFL\Modules\LogoShowcase\LogoShowcase;
 use DIFL\Modules\ContentCarousel\ContentCarousel;
 use DIFL\Modules\ContentCarouselItem\ContentCarouselItem;
+use DIFL\Modules\AdvancedHeading\AdvancedHeading;
 
 add_action(
 	'divi_module_library_modules_dependency_tree',
@@ -25,5 +26,6 @@ add_action(
     	$dependency_tree->add_dependency( new ContentCarouselItem() );
     	$dependency_tree->add_dependency( new BusinessHours() );
     	$dependency_tree->add_dependency( new BusinessHoursItem() );
+    	$dependency_tree->add_dependency( new AdvancedHeading() );
 	}
 );

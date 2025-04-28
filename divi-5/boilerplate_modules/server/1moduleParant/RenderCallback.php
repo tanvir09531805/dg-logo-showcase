@@ -1,4 +1,8 @@
 <?php
+
+// set NODE_ENV=development&& webpack -w --config webpack.config.js --progress
+// "cross-env": "^7.0.3", || "devDependencies"
+
 namespace DIFL\Modules\BusinessHours;
 
 if ( ! defined( 'ABSPATH' ) ) {

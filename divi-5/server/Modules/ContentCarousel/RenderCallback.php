@@ -30,10 +30,10 @@ trait RenderCallback {
 
 		// process data
 		$order_number    = $block->parsed_block['orderIndex'];
-		$arrowNavigation = $attrs['arrowNavigation']['advanced']['show']['desktop']['value']?"on":"off";
-		$dotNavigation   = $attrs['dotNavigation']['advanced']['show']['desktop']['value']?"on":"off";
+		$arrowNavigation = isset($attrs['arrowNavigation']['advanced']['show']['desktop']['value']) ? $attrs['arrowNavigation']['advanced']['show']['desktop']['value']:"off";
+		$dotNavigation   = isset($attrs['dotNavigation']['advanced']['show']['desktop']['value']) ? $attrs['dotNavigation']['advanced']['show']['desktop']['value']:"off";
 
-		$ccData = $attrs['settingCarousel']['innerContent'];
+		$ccData = isset($attrs['settingCarousel']['innerContent']) ? $attrs['settingCarousel']['innerContent'] : "";
 		$loop   = isset($ccData['desktop']['value']['loop']) && $ccData['desktop']['value']['loop'] === 'on' ? true : false; 
 		$speed  = isset($ccData['desktop']['value']['speed']) ? $ccData['desktop']['value']['speed'] : '500';
 		$carouselType 	= isset($ccData['desktop']['value']['carouselType']) ? $ccData['desktop']['value']['carouselType']: 'slide'; // coverflow
@@ -60,11 +60,11 @@ trait RenderCallback {
 		$item_spacing_tablet = isset($ccData['tablet']['value']['spacingPx']) ? $ccData['tablet']['value']['spacingPx'] : $item_spacing;
 		$item_spacing_phone = isset($ccData['phone']['value']['spacingPx']) ? $ccData['phone']['value']['spacingPx'] : $item_spacing_tablet;
 
-		$difl_cc_dots  = '<div class="swiper-pagination cc-dots-'.$order_number.'"></div>';
-		$difl_cc_arrow = '<div class="df_cc_arrows">
+		$difl_cc_dots  = ($dotNavigation === 'on') ? '<div class="swiper-pagination cc-dots-'.$order_number.'"></div>': '';
+		$difl_cc_arrow = ($arrowNavigation === 'on' ) ? '<div class="df_cc_arrows">
                 <div class="swiper-button-next cc-next-'.$order_number.'" data-icon="5"></div>
                 <div class="swiper-button-prev cc-prev-'.$order_number.'" data-icon="4"></div>
-            </div>';
+            </div>' : '';
 			// arrows.advanced.arrowPosition
 		$classArrowPosition = 'arrow-middle';
 		$equalHeightItem    = $ccData['desktop']['value']['equalHeightItem'] ?? 'off'; 

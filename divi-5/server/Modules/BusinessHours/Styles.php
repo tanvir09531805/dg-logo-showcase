@@ -13,8 +13,6 @@ use ET\Builder\Packages\StyleLibrary\Utils\StyleDeclarations;
 
 trait Styles
 {
-  use CustomCss;
-  
   public static function styles($args)
   {
     $attrs        = $args['attrs'] ?? [];
@@ -42,7 +40,7 @@ trait Styles
               ],
             ]
           ),
-        
+
           CommonStyle::style(
             [
               'selector' => "{$order_class} .df_bh_day",

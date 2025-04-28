@@ -1,6 +1,6 @@
 <?php
 
-namespace DIFL\Modules\BusinessHours;
+namespace DIFL\Modules\AdvancedHeading;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Direct access forbidden.' );
@@ -9,7 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 use ET\Builder\Packages\Module\Options\Text\TextClassnames;
 
 trait Classnames {
-	
 	public static function classnames( $args ) {
 		$classnames_instance = $args['classnamesInstance'];
 		$attrs               = $args['attrs'];

@@ -574,7 +574,7 @@
                     "priority": 10,
                     "features": {
                         "dynamicContent": {
-                        "type": "image"
+                          "type": "image"
                         },
                         "responsive": true,
                         "hover": true,

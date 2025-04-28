@@ -16,7 +16,6 @@ const dfDayWidthCalc = ({ attrValue, }) => {
 };
 
 
-
 /**
  * Module style component for static module
  */
