@@ -244,9 +244,10 @@ export const ModuleStyles = ({
         attr={attrs?.suffix_maxwidth?.innerContent}
         property="max-width"
       />
+    
       {
-				attrs?.df_prefix_enable_clip?.innerContent?.desktop?.value === 'on' ? (<>
-
+				attrs?.df_prefix_enable_clip?.innerContent?.desktop?.value === 'on' ? (
+        <>
 					<CommonStyle
             selector={`${orderClass} .df-heading .prefix`}
             attr={attrs?.df_prefix_enable_bg_clip?.innerContent}
@@ -267,12 +268,12 @@ export const ModuleStyles = ({
             attr={attrs?.df_prefix_stroke_width?.innerContent}
             property="-webkit-text-stroke-width"
           />
-          
-        </>) : null
+        </>
+        ) : null
 			}
       {
-				attrs?.df_infix_enable_clip?.innerContent?.desktop?.value === 'on' ? (<>
-
+				attrs?.df_infix_enable_clip?.innerContent?.desktop?.value === 'on' ? (
+        <>
 					<CommonStyle
             selector={`${orderClass} .df-heading .infix`}
             attr={attrs?.df_infix_enable_bg_clip?.innerContent}
@@ -293,12 +294,12 @@ export const ModuleStyles = ({
             attr={attrs?.df_infix_stroke_width?.innerContent}
             property="-webkit-text-stroke-width"
           />
-          
-        </>) : null
+        </>
+        ) : null
 			}
       {
-				attrs?.df_suffix_enable_clip?.innerContent?.desktop?.value === 'on' ? (<>
-
+				attrs?.df_suffix_enable_clip?.innerContent?.desktop?.value === 'on' ? (
+        <>
 					<CommonStyle
             selector={`${orderClass} .df-heading .suffix`}
             attr={attrs?.df_suffix_enable_bg_clip?.innerContent}
@@ -319,13 +320,25 @@ export const ModuleStyles = ({
             attr={attrs?.df_suffix_stroke_width?.innerContent}
             property="-webkit-text-stroke-width"
           />
-          
-        </>) : null
-			}
-
-
+        </>
+        ) : null
+			} 
+    
       {/* Font */}
       {elements.style({ attrName: "title", })}
+      {elements.style({ attrName: "t_prefix", })}
+      {elements.style({ attrName: "t_infix", })}
+      {elements.style({ attrName: "t_suffix", })}
+
+      {/* Border */}
+      {elements.style({ attrName: "prefix_border", })}
+      {elements.style({ attrName: "infix_border", })}
+      {elements.style({ attrName: "suffix_border", })}
+
+      {/* BoxShadow */}
+      {elements.style({ attrName: "prefix", })}
+      {elements.style({ attrName: "infix", })}
+      {elements.style({ attrName: "suffix", })}
 
 
       {/* Divider icon style. */}

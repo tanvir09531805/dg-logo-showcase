@@ -41,14 +41,248 @@ trait Styles
             ]
           ),
 
-          // CommonStyle::style(
-          //   [
-          //     'selector' => "{$order_class} .df_cci_image_container",
-          //     'attr'     => $attrs['imgOrder']['innerContent'] ?? '',
-          //     'property' => 'order',
-          //   ]
-          // ),
-          
+          // Background
+          $elements->style(['attrName' => 'divider_background',]),
+          $elements->style(['attrName' => 'prefix_background',]),
+          $elements->style(['attrName' => 'infix_background',]),
+          $elements->style(['attrName' => 'suffix_background',]),
+
+          // Spacing
+          $elements->style(['attrName' => 'heading_spacing',]),
+          $elements->style(['attrName' => 'prefix_spacing',]),
+          $elements->style(['attrName' => 'infix_spacing',]),
+          $elements->style(['attrName' => 'suffix_spacing',]),
+          $elements->style(['attrName' => 'divider_spacing',]),
+          $elements->style(['attrName' => 'divider_container_spacing',]),
+          $elements->style(['attrName' => 'divider_icon_image_spacing',]),
+          $elements->style(['attrName' => 'dual_text_spacing',]),
+
+          isset($attrs['divider_style']['innerContent']['desktop']['value']) ? 
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider .df-divider-line::before",
+							'attr'     => $attrs['divider_style']['innerContent'] ?? '',
+							'property' => 'border-top-style',
+						]
+					) : [],
+          isset($attrs['divider_color']['innerContent']['desktop']['value']) ? 
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider .df-divider-line::before",
+							'attr'     => $attrs['divider_color']['innerContent'] ?? '',
+							'property' => 'border-top-color',
+						]
+					) : [],
+
+          CommonStyle::style(
+            [
+              'selector' => "{$order_class} .df-heading-divider .df-divider-line",
+              'attr'     => $attrs['divider_height']['innerContent'] ?? [],
+              'declarationFunction' => [self::class, 'df_divider_height_calc'],
+            ]
+          ),
+
+          CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider .df-divider-line::before",
+							'attr'     => $attrs['divider_height']['innerContent'] ?? '',
+							'property' => 'border-top-width',
+						]
+          ),
+
+          CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider .df-divider-line",
+							'attr'     => $attrs['divider_height']['innerContent'] ?? '',
+							'property' => 'height',
+						]
+          ),
+
+          CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider",
+							'attr'     => $attrs['divider_width']['innerContent'] ?? '',
+							'property' => 'max-width',
+						]
+          ),
+
+          $attrs['divider_alignment']['innerContent']['desktop']['value'] ? 
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider",
+							'attr'     => $attrs['divider_alignment']['innerContent'] ?? '',
+              'declarationFunction' => [self::class, 'df_divider_alignment'],
+						]
+					) : [],
+
+          ($attrs['use_divider_icon']['innerContent']['desktop']['value'] !== 'on' && $attrs['use_divider_image']['innerContent']['desktop']['value'] !== 'on') ? 
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider::before",
+							'attr'     => $attrs['use_divider_icon']['innerContent'] ?? '',
+              'declarationFunction' => [self::class, 'df_divider_icon_img_not'],
+						]
+					) : [],
+
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider .et-pb-icon",
+							'attr'     => $attrs['use_divider_icon_circle']['innerContent'] ?? '',
+              'declarationFunction' => [self::class, 'df_circle_icon'],
+						]
+          ),
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider img",
+							'attr'     => $attrs['use_divider_image_circle']['innerContent'] ?? '',
+              'declarationFunction' => [self::class, 'df_circle_icon'],
+						]
+          ),
+
+          CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider .df-divider-line:before",
+							'attr'     => $attrs['divider_border_radius']['innerContent'] ?? '',
+							'property' => 'border-radius',
+						]
+          ),
+          CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider .df-divider-line",
+							'attr'     => $attrs['divider_border_radius']['innerContent'] ?? '',
+							'property' => 'border-radius',
+						]
+          ),
+          CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider .et-pb-icon",
+							'attr'     => $attrs['dvr_icon_font_size']['innerContent'] ?? '',
+							'property' => 'font-size',
+						]
+          ),
+          CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider .et-pb-icon",
+							'attr'     => $attrs['divider_icon_bgcolor']['innerContent'] ?? '',
+							'property' => 'background-color',
+						]
+          ),
+          CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider img.divider-image",
+							'attr'     => $attrs['divider_image_bgcolor']['innerContent'] ?? '',
+							'property' => 'background-color',
+						]
+          ),
+
+          ($attrs['divider_icon_alignment']['innerContent']['desktop']['value'] && $attrs['use_divider_icon']['innerContent']['desktop']['value'] === 'on') ? 
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider",
+							'attr'     => $attrs['divider_icon_alignment']['innerContent'] ?? '',
+							'property' => 'text-align',
+						]
+					) : [],
+          CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider img",
+							'attr'     => $attrs['divider_image_width']['innerContent'] ?? '',
+							'property' => 'max-width',
+						]
+          ),
+
+          ($attrs['divider_image_alignment']['innerContent']['desktop']['value'] && $attrs['use_divider_image']['innerContent']['desktop']['value'] === 'on') ? 
+					CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading-divider",
+							'attr'     => $attrs['divider_image_alignment']['innerContent'] ?? '',
+							'property' => 'text-align',
+						]
+					) : [],
+
+          $elements->style(
+            [
+              'attrName' => 't_dual',
+            ]
+          ),
+
+          CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading .prefix",
+							'attr'     => $attrs['title_prefix_block']['innerContent'] ?? '',
+							'property' => 'display',
+						]
+          ),
+          CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading .infix",
+							'attr'     => $attrs['title_infix_block']['innerContent'] ?? '',
+							'property' => 'display',
+						]
+          ),
+          CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading .suffix",
+							'attr'     => $attrs['title_suffix_block']['innerContent'] ?? '',
+							'property' => 'display',
+						]
+          ),
+          CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading .prefix",
+							'attr'     => $attrs['prefix_maxwidth']['innerContent'] ?? '',
+							'property' => 'max-width',
+						]
+          ),
+          CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading .infix",
+							'attr'     => $attrs['infix_maxwidth']['innerContent'] ?? '',
+							'property' => 'max-width',
+						]
+          ),
+          CommonStyle::style(
+						[
+							'selector' => "{$order_class} .df-heading .suffix",
+							'attr'     => $attrs['suffix_maxwidth']['innerContent'] ?? '',
+							'property' => 'max-width',
+						]
+          ),
+
+          ($attrs['df_prefix_enable_clip']['innerContent']['desktop']['value'] === 'on') ? 
+          CommonStyle::style(
+            [
+              'selector' => "{$order_class} .df-heading .prefix",
+              'attr'     => $attrs['df_prefix_enable_bg_clip']['innerContent'] ?? '',
+              'declarationFunction' => [self::class, 'df_enable_clip_bg'],
+            ]
+          ) : [],
+
+          ($attrs['df_prefix_enable_clip']['innerContent']['desktop']['value'] === 'on') ? 
+          CommonStyle::style(
+            [
+              'selector' => "{$order_class} .df-heading .prefix",
+              'attr'     => $attrs['df_prefix_fill_color']['innerContent'] ??'',
+              'property' => '-webkit-text-fill-color',
+            ]
+          ) : [],
+
+          ($attrs['df_prefix_enable_clip']['innerContent']['desktop']['value'] === 'on') ? 
+          CommonStyle::style(
+            [
+              'selector' => "{$order_class} .df-heading .prefix",
+                'attr'     => $attrs['df_prefix_stroke_color']['innerContent'] ?? '',
+                'property' => '-webkit-text-stroke-color',
+            ]
+          ) : [],
+          ($attrs['df_prefix_enable_clip']['innerContent']['desktop']['value'] === 'on') ? 
+          CommonStyle::style(
+            [
+              'selector' => "{$order_class} .df-heading .prefix",
+              'attr'     => $attrs['df_prefix_stroke_width']['innerContent'] ??'',
+              'property' => '-webkit-text-stroke-width',
+            ]
+          ) : [],
           // CommonStyle::style(
           //   [
           //     'selector' => "{$order_class} .df_cc_arrows>div",
@@ -56,6 +290,85 @@ trait Styles
           //     'declarationFunction' => [self::class, 'df_circle_icon'],
           //   ]
           // ),
+
+          ($attrs['df_infix_enable_clip']['innerContent']['desktop']['value'] === 'on') ?
+            [
+              CommonStyle::style(
+                [
+                  'selector' => "{$order_class} .df-heading .infix",
+                  'attr'     => $attrs['df_infix_enable_bg_clip']['innerContent'] ?? '',
+                  'declarationFunction' => [self::class, 'df_enable_clip_bg'],
+                ]
+              ),
+              CommonStyle::style(
+                [
+                  'selector' => "{$order_class} .df-heading .infix",
+                  'attr'     => $attrs['df_infix_fill_color']['innerContent'] ?? '',
+                  'property' => '-webkit-text-fill-color',
+                ]
+              ),
+              CommonStyle::style(
+                [
+                  'selector' => "{$order_class} .df-heading .infix",
+                  'attr'     => $attrs['df_infix_stroke_color']['innerContent'] ?? '',
+                  'property' => '-webkit-text-stroke-color',
+                ]
+              ),
+              CommonStyle::style(
+                [
+                  'selector' => "{$order_class} .df-heading .infix",
+                  'attr'     => $attrs['df_infix_stroke_width']['innerContent'] ?? '',
+                  'property' => '-webkit-text-stroke-width',
+                ]
+              ),
+            ] : [],
+
+          ($attrs['df_suffix_enable_clip']['innerContent']['desktop']['value'] === 'on') ?
+            [
+              CommonStyle::style(
+                [
+                  'selector' => "{$order_class} .df-heading .suffix",
+                  'attr'     => $attrs['df_suffix_enable_bg_clip']['innerContent'] ?? '',
+                  'declarationFunction' => [self::class, 'df_enable_clip_bg'],
+                ]
+              ),
+              CommonStyle::style(
+                [
+                  'selector' => "{$order_class} .df-heading .suffix",
+                  'attr'     => $attrs['df_suffix_fill_color']['innerContent'] ?? '',
+                  'property' => '-webkit-text-fill-color',
+                ]
+              ),
+              CommonStyle::style(
+                [
+                  'selector' => "{$order_class} .df-heading .suffix",
+                  'attr'     => $attrs['df_suffix_stroke_color']['innerContent'] ?? '',
+                  'property' => '-webkit-text-stroke-color',
+                ]
+              ),
+              CommonStyle::style(
+                [
+                  'selector' => "{$order_class} .df-heading .suffix",
+                  'attr'     => $attrs['df_suffix_stroke_width']['innerContent'] ?? '',
+                  'property' => '-webkit-text-stroke-width',
+                ]
+              ),
+            ] : [],
+          // Font
+          $elements->style(['attrName' => 'title',]),
+          $elements->style(['attrName' => 't_prefix',]),
+          $elements->style(['attrName' => 't_infix',]),
+          $elements->style(['attrName' => 't_suffix',]),
+
+          // Border
+          $elements->style(['attrName' => 'prefix_border',]),
+          $elements->style(['attrName' => 'infix_border',]),
+          $elements->style(['attrName' => 'suffix_border',]),
+
+          // BoxShadow
+          $elements->style(['attrName' => 'prefix',]),
+          $elements->style(['attrName' => 'infix',]),
+          $elements->style(['attrName' => 'suffix',]),
 
           // Divider icon style.
           $elements->style(
@@ -69,10 +382,47 @@ trait Styles
     );
   }
 
+  
+  public static function df_divider_height_calc(array $args): string
+  {
+    $arg   = $args['attrValue'] ?: '5px';
+    $value = intval($arg) / 2;
+    $unit  = str_replace((string)intval($arg), '', $arg);
+    $calcValue = $value . $unit;
+
+    $dividerThickness = $calcValue ? "top:calc(50% - {$calcValue});" :'';
+
+    return $dividerThickness;
+  }
+
+  public static function df_divider_alignment(array $args): string
+  {
+    
+    if($args['attrValue'] === 'right'){
+      $dividerAli = 'margin: 0 0 0 auto;';
+    } elseif ($args['attrValue'] === 'center'){
+      $dividerAli = 'margin: 0 auto;';
+    } else {
+      $dividerAli = 'margin: 0;';
+    }
+
+    return $dividerAli;
+  }
+
+  public static function df_divider_icon_img_not(array $args): string
+  {
+    return 'position: relative;';
+  }
   public static function df_circle_icon(array $args): string
   {
     $iconRadius = ($args['attrValue'] === 'on') ? 'border-radius: 50%;' : '';
     return $iconRadius;
+  }
+
+  public static function df_enable_clip_bg(array $args): string
+  {
+    $bgClip = ($args['attrValue'] === 'on') ? '-webkit-background-clip: text;' : '';
+    return $bgClip;
   }
 
 }
