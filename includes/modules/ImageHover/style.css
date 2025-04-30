@@ -1,0 +1,18 @@
+.difl_imagehover .df_ihb_image_wrap {
+    border-radius: 0px;
+}
+.difl_imagehover .df_ihb_title {
+    font-size: 30px;
+}
+.difl_imagehover .c4-izmir {
+    vertical-align: top;
+}
+.df_ihb_container .ihb_icon_wrap {
+    border-width: 0px;
+    border-style: solid;
+    border-color: #333;
+  }
+
+.difl_imagehover .always-show-title {
+    opacity: 1 !important;
+}

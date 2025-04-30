@@ -1,0 +1,35 @@
+.difl_cfseven label{
+    font-size: 16px;
+}
+
+.difl_cfseven input[type="text"],
+.difl_cfseven input[type="email"],
+.difl_cfseven input[type="number"],
+.difl_cfseven input[type="tel"],
+.difl_cfseven input[type="password"],
+.difl_cfseven textarea {
+    font-size: 16px;
+    max-width: 100%;
+}
+.difl_cfseven [type="submit"] {
+    border-style:solid;
+    cursor: pointer;
+}
+
+.difl_cfseven .wpcf7-form-control.wpcf7-text{
+    width:auto;
+}
+.difl_cfseven .wpcf7-form-control.wpcf7-email{
+    width:auto;
+}
+
+.difl_cfseven .wpcf7-form-control.wpcf7-submit{
+    width:auto;
+}
+.difl_cfseven .wpcf7-form-control.wpcf7-textarea{
+    width:auto;
+}
+
+.et_pb_hovered.difl_cfseven.et_pb_with_border{
+    overflow: hidden !important;
+}

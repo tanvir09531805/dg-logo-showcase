@@ -1,0 +1,33 @@
+.df-vb-generate-class-button {
+    padding: 5px 12px;
+    margin-right: 10px;
+    border: none;
+    font-size: 13px;
+    background: #2b87da;
+    color: white;
+    line-height: 1.6em;
+    font-weight: 700;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 1px 2px 10px -5px #18466e !important;
+}
+
+.df-vb-class-field{
+    background: #f1f5f9;
+    width: 50% !important;
+    display: inline-block !important;
+    max-height: 30px;
+    /* border: 0 !IMPORTANT; */
+    border-radius: 3px;
+    padding: 7px 10px !important;
+    box-sizing: border-box !important;
+    color: #4c5866 !IMPORTANT;
+    font-family: Open Sans,Helvetica,Roboto,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: none;
+    line-height: normal;
+    box-shadow: none;
+    letter-spacing: normal;
+    margin-right: 10px !important;
+}

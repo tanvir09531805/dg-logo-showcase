@@ -1,0 +1,16 @@
+{
+    "mask_position": {
+        "innerContent": {
+            "desktop": {
+                "value": "center"
+            }
+        }
+    },
+    "mask_select": {
+        "innerContent": {
+            "desktop": {
+                "value": "mask_image_01"
+            }
+        }
+    }
+}

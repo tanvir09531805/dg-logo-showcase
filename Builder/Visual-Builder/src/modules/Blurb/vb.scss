@@ -1,0 +1,183 @@
+//Style for Both VB and Frontend
+
+/* .blurb_image_wrapper img.blurb_image_img.center {
+    display: block;
+    margin: 0 auto;
+}
+.blurb_image_wrapper img.blurb_image_img.right {
+    display: block;
+    margin: 0 0 0 auto;
+}
+.blurb_image_wrapper img.blurb_image_img.left {
+    display: block;
+    margin: auto 0;
+} */
+.df_ab_blurb_container {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.df_ab_blurb_container > * {
+  border-width: 0px;
+  border-style: solid;
+}
+
+.df_ab_blurb_container .df_ab_blurb_content_container > * {
+  border-width: 0px;
+  border-style: solid;
+}
+
+.df_ab_blurb_container h1.df_ab_blurb_title,
+.df_ab_blurb_container h1.df_ab_blurb_sub_title {
+
+  font-size: 30px;
+}
+
+.df_ab_blurb_container h2.df_ab_blurb_title,
+.df_ab_blurb_container h2.df_ab_blurb_sub_title {
+
+  font-size: 26px;
+}
+
+.df_ab_blurb_container h3.df_ab_blurb_title,
+.df_ab_blurb_container h3.df_ab_blurb_sub_title {
+
+  font-size: 24px;
+}
+
+
+.df_ab_blurb_container h4.df_ab_blurb_title,
+.df_ab_blurb_container h4.df_ab_blurb_sub_title {
+
+  font-size: 18px;
+}
+
+.df_ab_blurb_container h5.df_ab_blurb_title,
+.df_ab_blurb_container h5.df_ab_blurb_sub_title {
+
+  font-size: 16px;
+}
+
+.df_ab_blurb_container h6.df_ab_blurb_title,
+.df_ab_blurb_container h6.df_ab_blurb_sub_title {
+
+  font-size: 14px;
+}
+
+.df_ab_blurb_container .df_ab_blurb_description {
+  font-size: 14px;
+}
+
+.df_ab_blurb_container .df_ab_blurb_button,
+.df_ab_blurb_container .df_ab_blurb_badge {
+  font-size: 18px;
+}
+
+.df_ab_blurb_container .df_ab_blurb_button,
+.df_ab_blurb_container .df_ab_blurb_badge,
+.df_ab_blurb_badge span.badge_text_1,
+.df_ab_blurb_badge span.badge_text_2,
+.df_ab_blurb_container .df_ab_blurb_image .df_ab_blurb_image_img,
+.df_ab_blurb_container .et-pb-icon {
+  border-width: 0px;
+  border-style: solid;
+  border-color: #333;
+}
+
+.df_ab_blurb_container .df_ab_blurb_image img {
+  vertical-align: top;
+}
+
+a.blurb_button.full_width {
+  display: block;
+}
+
+.df_ab_blurb_container a.df_ab_blurb_button {
+  display: inline-flex;
+  vertical-align: top;
+}
+
+.df_ab_blurb_container .et-pb-icon {
+  vertical-align: top;
+}
+
+.df_ab_blurb_container {
+  display: flex;
+
+  &:has(.placement_icon_flex_top, .placement_image_flex_top ) {
+    flex-direction: column;
+  }
+
+  &:has(.placement_icon_flex_left, .placement_image_flex_left) {
+    flex-direction: row;
+  }
+
+  &:has(.placement_icon_flex_right, .placement_image_flex_right) {
+    flex-direction: row-reverse;
+  }
+
+  &:has(.placement_icon_flex_bottom, .placement_image_flex_bottom) {
+    flex-direction: column-reverse;
+  }
+}
+
+/* .df_ab_blurb_container.image_icon_position_top {
+    flex-direction: column;
+}
+
+.df_ab_blurb_container.image_icon_position_left {
+    flex-direction: row;
+}
+
+.df_ab_blurb_container.image_icon_position_right {
+    flex-direction: row-reverse;
+} */
+
+/* .df_ab_blurb_image {
+  order: 1;
+} */
+
+.df_ab_blurb_content_container {
+  order: 15;
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+}
+
+.df_ab_blurb_containe .df_ab_blurb_image {
+  height: auto;
+}
+
+.df_ab_blurb_image.placement_image_flex_left,
+.df_ab_blurb_image.placement_image_flex_right {
+  height: auto;
+}
+
+
+.df_ab_blurb_image.icon {
+  width: 100%;
+}
+
+/* badge */
+
+.df_ab_blurb_badge {
+  background: #afafaf;
+  color: #333;
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.df_ab_blurb_badge_wrapper {
+  order: 1;
+}
+
+span.badge_text_1,
+span.badge_text_2,
+.df_ab_blurb_badge .badge_icon {
+  display: inline-block;
+}
+
+.badge_text_wrapper {
+  display: inline-block;
+}

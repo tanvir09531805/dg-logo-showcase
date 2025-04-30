@@ -1,0 +1,10 @@
+{
+  "name": "divi/diviflash",
+  "autoload": {
+    "psr-4": {
+      "DIFL\\": "Server/"
+    },
+    "classmap": ["Server"]
+  },
+  "require": {}
+}

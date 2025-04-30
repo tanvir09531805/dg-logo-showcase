@@ -1,0 +1,627 @@
+{
+  "name": "difl/social-share",
+  "d4Shortcode": "difl_social_share",
+  "title": "Social Share",
+  "titles": "Social Shares",
+  "moduleIcon": "difl/social-share",
+  "moduleClassName": "difl_social_share",
+  "moduleOrderClassName": "difl_social_share",
+  "category": "module",
+  "folder": "diviflash-modules",
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Social Share by DiviFlash"
+            }
+          }
+        }
+      }
+    },
+    "settings": {
+      "type": "object",
+      "innerContent": {},
+      "decoration": {
+        "spacing": {},
+        "border": {},
+        "boxShadow": {}
+      },
+      "default": {
+        "innerContent": {
+          "item_view": {
+            "desktop": {
+              "value": "iconAndText"
+            }
+          },
+          "enable_header": {
+            "desktop": {
+              "value": "off"
+            }
+          },
+          "column_view": {
+            "desktop": {
+              "value": "auto"
+            }
+          },
+          "url_new_window": {
+            "desktop": {
+              "value": "on"
+            }
+          }
+        },
+        "decoration": {
+          "columns_gap": {
+            "desktop": {
+              "value": "10px"
+            }
+          },
+          "rows_gap": {
+            "desktop": {
+              "value": "10px"
+            }
+          },
+          "button_height": {
+            "desktop": {
+              "value": "auto"
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper",
+              "hover": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper{{:hover}}"
+            }
+          }
+        },
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper",
+              "hover": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper{{:hover}}"
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper",
+              "hover": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper{{:hover}}"
+            }
+          }
+        }
+      }
+    },
+    "header": {
+      "type": "object",
+      "innerContent": {
+        "header_icon": {}
+      },
+      "decoration": {
+        "header_icon_font_size": {},
+        "header_icon_position": {},
+        "header_icon_alignment": {},
+        "spacing": {},
+        "font": {}
+      },
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+            }
+          }
+        },
+        "decoration": {
+          "header_icon_font_size": {
+            "desktop": {
+              "value": "16px"
+            }
+          },
+          "header_icon_position": {
+            "desktop": {
+              "value": "row"
+            }
+          },
+          "header_icon_alignment": {
+            "desktop": {
+              "value": "center"
+            }
+          },
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-header-container.difl_social_share_header_container .difl_social_share_header_content",
+              "hover": "{{selector}} #difl-social-share-header-container.difl_social_share_header_container{{:hover}} .difl_social_share_header_content"
+            }
+          }
+        },
+        "font": {
+          "selector": "{{selector}} #difl-social-share-header #difl-social-share-header-container.difl_social_share_header_container .difl_social_share_header_icon",
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-header #difl-social-share-header-container.difl_social_share_header_container .difl_social_share_header_icon",
+              "hover": "{{selector}} #difl-social-share-header #difl-social-share-header-container.difl_social_share_header_container{{:hover}} .difl_social_share_header_icon"
+            }
+          }
+        }
+      }
+    },
+    "header_title": {
+      "type": "object",
+      "decoration": {
+        "font": {}
+      },
+      "default": {
+        "decoration": {
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "size": "16px",
+                  "lineHeight": "1em"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-header-container .difl_social_share_header_content .difl_social_share_header_title",
+              "hover": "{{selector}} #difl-social-share-header-container{{:hover}} .difl_social_share_header_content .difl_social_share_header_title"
+            }
+          },
+          "important": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "header_sub_title": {
+      "type": "object",
+      "decoration": {
+        "font": {}
+      },
+      "default": {
+        "decoration": {
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "size": "13px",
+                  "lineHeight": "1em"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-header-container .difl_social_share_header_content .difl_social_share_header_sub_title",
+              "hover": "{{selector}} #difl-social-share-header-container{{:hover}} .difl_social_share_header_content .difl_social_share_header_sub_title"
+            }
+          },
+          "important": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "header_container": {
+      "type": "object",
+      "innerContent": {},
+      "decoration": {
+        "header_content_gap": {},
+        "header_alignment": {},
+        "spacing": {},
+        "border": {},
+        "boxShadow": {},
+        "background": {}
+      },
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+            }
+          }
+        },
+        "decoration": {
+          "header_content_gap": {
+            "desktop": {
+              "value": "5px"
+            }
+          },
+          "header_alignment": {
+            "desktop": {
+              "value": "flex-start"
+            }
+          },
+          "background": {
+            "desktop": {
+              "value": {
+                "gradient": {
+                  "stops": [
+                    {
+                      "color": "#7CDA24",
+                      "position": "0"
+                    },
+                    {
+                      "color": "#E02B20",
+                      "position": "100"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-header-container.difl_social_share_header_container",
+              "hover": "{{selector}} #difl-social-share-header-container.difl_social_share_header_container{{:hover}}"
+            }
+          }
+        },
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-header-container.difl_social_share_header_container",
+              "hover": "{{selector}} #difl-social-share-header-container.difl_social_share_header_container{{:hover}}"
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-header-container.difl_social_share_header_container",
+              "hover": "{{selector}} #difl-social-share-header-container.difl_social_share_header_container{{:hover}}"
+            }
+          }
+        },
+        "background": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-header-container.difl_social_share_header_container",
+              "hover": "{{selector}} #difl-social-share-header-container.difl_social_share_header_container{{:hover}}"
+            }
+          }
+        }
+      }
+    },
+    "alignment": {
+      "type": "object",
+      "innerContent": {},
+      "decoration": {
+        "column_auto_child_item_alignment": {},
+        "child_content_alignment": {},
+        "content_alignment": {}
+      },
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": {}
+          }
+        },
+        "decoration": {
+          "content_alignment": {
+            "desktop": {
+              "value": "left"
+            }
+          },
+          "column_auto_child_item_alignment": {
+            "desktop": {
+              "value": "center"
+            }
+          },
+          "child_content_alignment": {
+            "desktop": {
+              "value": "center"
+            }
+          }
+        }
+      }
+    },
+    "icon": {
+      "type": "object",
+      "innerContent": {
+        "use_icon_font_size": {}
+      },
+      "decoration": {
+        "icon_position": {},
+        "icon_alignment": {},
+        "background": {},
+        "font": {
+          "textShadow": {}
+        },
+        "border": {},
+        "boxShadow": {},
+        "spacing": {}
+      },
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "use_icon_font_size": "off"
+            }
+          }
+        },
+        "decoration": {
+          "icon_position": {
+            "desktop": {
+              "value": "row"
+            }
+          },
+          "icon_alignment": {
+            "desktop": {
+              "value": "center"
+            }
+          },
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "size": "16px",
+                  "color": ""
+                }
+              }
+            }
+          },
+          "border": {
+            "desktop": {
+              "value": {
+                "radius": {
+                  "topLeft": "0px",
+                  "topRight": "0px",
+                  "bottomLeft": "0px",
+                  "bottomRight": "0px"
+                },
+                "styles": {
+                  "all": {
+                    "width":"0px",
+                    "color": "#333333",
+                    "style" : "solid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_icon",
+              "hover": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper{{:hover}} .difl_social_share_icon"
+            }
+          }
+        },
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_icon",
+              "hover": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper{{:hover}} .difl_social_share_icon"
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_icon",
+              "hover": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper{{:hover}} .difl_social_share_icon"
+            }
+          }
+        },
+        "font": {
+          "selector": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_icon i:before",
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_icon i:before",
+              "hover": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper{{:hover}} .difl_social_share_icon i:before"
+            }
+          }
+        },
+        "spacing": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_icon",
+              "hover": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper{{:hover}} .difl_social_share_icon"
+            }
+          }
+        }
+      }
+    },
+    "label": {
+      "type": "object",
+      "decoration": {
+        "font": {}
+      },
+      "default": {
+        "decoration": {
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "size": "12px",
+                  "lineHeight": "1.7em"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_content .difl_social_share_text",
+              "hover": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper{{:hover}} .difl_social_share_content .difl_social_share_text"
+            }
+          },
+          "important": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "label_container": {
+      "type": "object",
+      "decoration": {
+        "spacing": {},
+        "background": {},
+        "border": {},
+        "boxShadow": {}
+      },
+      "default": {
+        "decoration": {
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "propertySelectors": {
+            "desktop": {
+              "value": {
+                "margin": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_content_container",
+                "padding": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_content"
+              },
+              "hover": {
+                "margin": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper{{:hover}} .difl_social_share_content_container",
+                "padding": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper{{:hover}} .difl_social_share_content"
+              }
+            }
+          }
+        },
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_content",
+              "hover": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper{{:hover}} .difl_social_share_content"
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_content",
+              "hover": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper{{:hover}} .difl_social_share_content"
+            }
+          }
+        },
+        "background": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_content",
+              "hover": "{{selector}} #difl-social-share-container .difl_social_share_item_wrapper{{:hover}} .difl_social_share_content"
+            }
+          }
+        }
+      }
+    }
+  },
+  "customCssFields": {
+    "button_container": {
+      "label": "Share Button",
+      "subName": "share_button",
+      "selectorSuffix": " #difl-social-share-container .difl_social_share_item_wrapper"
+    },
+    "button_container_hover": {
+      "label": "Share Button Hover",
+      "subName": "share_button_hover",
+      "selectorSuffix": " #difl-social-share-container .difl_social_share_item_wrapper{{:hover}}"
+    },
+    "icon_image_container": {
+      "label": "Icon/Image Container",
+      "subName": "media_container",
+      "selectorSuffix": " #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_icon"
+    },
+    "icon_image_container_hover": {
+      "label": "Icon/Image Container Hover",
+      "subName": "media_container_hover",
+      "selectorSuffix": " #difl-social-share-container .difl_social_share_item_wrapper{{:hover}} .difl_social_share_icon"
+    },
+    "label_container": {
+      "label": "Label Container",
+      "subName": "label_container",
+      "selectorSuffix": " #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_content"
+    },
+    "label_container_hover": {
+      "label": "Label Container Hover",
+      "subName": "label_container_hover",
+      "selectorSuffix": " #difl-social-share-container .difl_social_share_item_wrapper{{:hover}} .difl_social_share_content"
+    },
+    "icon": {
+      "label": "Icon",
+      "subName": "icon",
+      "selectorSuffix": " #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_icon i:before"
+    },
+    "icon_hover": {
+      "label": "Icon Hover",
+      "subName": "icon_hover",
+      "selectorSuffix": " #difl-social-share-container .difl_social_share_item_wrapper{{:hover}} .difl_social_share_icon i:before"
+    },
+    "image": {
+      "label": "Image",
+      "subName": "image",
+      "selectorSuffix": " #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_icon img"
+    },
+    "image_hover": {
+      "label": "Image Hover",
+      "subName": "image_hover",
+      "selectorSuffix": " #difl-social-share-container .difl_social_share_item_wrapper{{:hover}} .difl_social_share_icon img"
+    },
+    "label": {
+      "label": "Label",
+      "subName": "label",
+      "selectorSuffix": " #difl-social-share-container .difl_social_share_item_wrapper .difl_social_share_content .difl_social_share_text"
+    },
+    "label_hover": {
+      "label": "Label Hover",
+      "subName": "label_hover",
+      "selectorSuffix": " #difl-social-share-container .difl_social_share_item_wrapper{{:hover}} .difl_social_share_content .difl_social_share_text"
+    }
+  }
+}

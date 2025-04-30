@@ -1,0 +1,2979 @@
+.difl_advanced_button > div:first-of-type {
+  line-height: 1em !important;
+}
+
+a.difl_advanced_button_container {
+  display: inline-block;
+  border: 2px solid #2ea3f2;
+  border-radius: 3px;
+  padding: 5px 14px 5px 14px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+
+  /*- Hover Background -*/
+  --dfab-bg-hover-background-color: transparent;
+  --dfab-bg-hover-hypen-color: #333;
+  --dfab-bg-hover-background-secondary-color: transparent;
+  --dfab-bg-hover-background-transtion-time: 0.5s;
+  --dfab-bg-hover-background-transtion-delay: 0.0s;
+  --dfab-bg-hover-background-transition-timimg-function: cubic-bezier(0.2, 1, 0.3, 1);
+
+  /* 2D */
+  --dfab-two-d-animation-duration: 1s;
+  --dfab-two-d-animation-delay: 0s;
+
+  /*- Hover Border -*/
+  --dfab-border-hover-background-color: #666;
+  --dfab-border-hover-background-transtion-time: 0.3s;
+  --dfab-border-hover-background-transtion-delay: 0.0s;
+  --dfab-border-hover-background-transition-timimg-function: cubic-bezier(0.2, 1, 0.3, 1);
+
+  /*- Hover Media -*/
+  --dfab-media-wrapper-width: 30px;
+  --dfab-media-wrapper-height: 30px;
+  --dfab-media-hover-transition-duration: 0.5s;
+  --dfab-media-hover-transition-delay: 0s;
+  --dfab-media-hover-transition-function: ease-in-out;
+}
+
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_media_wrapper{
+  z-index: 9;
+  width: var(--dfab-media-wrapper-width);
+  height: var(--dfab-media-wrapper-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_icon {
+  font-size: 20px;
+  color: #2ea3f2;
+}
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_icon_hover {
+  font-size: 20px;
+  border-style: solid;
+  color: #2ea3f2;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hover Icon */
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_media_wrapper:has(.difl_adv_btn_icon_hover) .difl_adv_btn_icon_hover {
+  transition: opacity 0.8s ease-in-out;
+}
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_media_wrapper:has(.difl_adv_btn_icon_hover) .difl_adv_btn_icon {
+  transition: opacity 0.8s ease-in-out;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container .difl_adv_btn_media_wrapper:has(.difl_adv_btn_icon_hover) .difl_adv_btn_icon_hover,
+.difl_advanced_button .difl_advanced_button_container:not(.builder_view):hover .difl_adv_btn_media_wrapper:has(.difl_adv_btn_icon_hover) .difl_adv_btn_icon_hover{
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container .difl_adv_btn_media_wrapper:has(.difl_adv_btn_icon_hover) .difl_adv_btn_icon,
+.difl_advanced_button .difl_advanced_button_container:not(.builder_view):hover .difl_adv_btn_media_wrapper:has(.difl_adv_btn_icon_hover) .difl_adv_btn_icon{
+  height: 0;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+/* Hover Icon */
+
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_text_wrapper {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+
+}
+
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_text_wrapper .difl_adv_btn_text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #2ea3f2;
+  line-height: 1.7em;
+  width: 100%;
+  display: block;
+}
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_text_wrapper .difl_adv_btn_text_hover {
+  font-size: 20px;
+  font-weight: 500;
+  color: #2ea3f2;
+  line-height: 1.7em;
+  width: 100%;
+  display: block;
+  height: 0;
+  opacity: 0;
+}
+/* Hover Text */
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_text_wrapper:has(.difl_adv_btn_text_hover) .difl_adv_btn_text{
+  opacity: 1;
+  height: auto;
+  visibility: visible;
+  transition: opacity 0.8s ease-in-out;
+}
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_text_wrapper:has(.difl_adv_btn_text_hover) .difl_adv_btn_text_hover{
+  transition: opacity 0.8s ease-in-out;
+  visibility: hidden;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container .difl_adv_btn_text_wrapper:has(.difl_adv_btn_text_hover) .difl_adv_btn_text,
+.difl_advanced_button .difl_advanced_button_container:not(.builder_view):hover .difl_adv_btn_text_wrapper:has(.difl_adv_btn_text_hover) .difl_adv_btn_text{
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container .difl_adv_btn_text_wrapper:has(.difl_adv_btn_text_hover) .difl_adv_btn_text_hover,
+.difl_advanced_button .difl_advanced_button_container:not(.builder_view):hover .difl_adv_btn_text_wrapper:has(.difl_adv_btn_text_hover) .difl_adv_btn_text_hover{
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+/* Hover Text */
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_sub_text {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: block;
+  font-size: 16px;
+}
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_sub_text {
+  font-size: 16px;
+}
+
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_sub_text_hover {
+  position: relative;
+  font-size: 16px;
+  width: 100%;
+  z-index: 10;
+  display: block;
+  height: 0;
+  opacity: 0;
+}
+/* Hover Sub Text */
+.difl_advanced_button .difl_advanced_button_container:has(.difl_adv_btn_sub_text_hover) .difl_adv_btn_sub_text{
+  opacity: 1;
+  height: auto;
+  visibility: visible;
+  transition: opacity 0.8s ease-in-out;
+}
+.difl_advanced_button .difl_advanced_button_container:has(.difl_adv_btn_sub_text_hover) .difl_adv_btn_sub_text_hover{
+  transition: opacity 0.8s ease-in-out;
+  visibility: hidden;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container:has(.difl_adv_btn_sub_text_hover) .difl_adv_btn_sub_text,
+.difl_advanced_button .difl_advanced_button_container:not(.builder_view):hover:has(.difl_adv_btn_sub_text_hover) .difl_adv_btn_sub_text{
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+}
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container:has(.difl_adv_btn_sub_text_hover) .difl_adv_btn_sub_text_hover,
+.difl_advanced_button .difl_advanced_button_container:not(.builder_view):hover:has(.difl_adv_btn_sub_text_hover) .difl_adv_btn_sub_text_hover{
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+/* Hover Sub Text */
+
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_bg_anim {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-style: solid;
+  z-index: 7;
+  /*border-radius: inherit;*/
+  transition: all var(--dfab-bg-hover-background-transtion-time) var(--dfab-bg-hover-background-transition-timimg-function);
+  transition-delay: var(--dfab-bg-hover-background-transtion-delay);
+}
+
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_border_anim,
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_border_anim_2{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-style: solid;
+  z-index: 8;
+  border-radius: inherit;
+  transition: all var(--dfab-bg-hover-background-transtion-time) var(--dfab-bg-hover-background-transition-timimg-function);
+  transition-delay: var(--dfab-bg-hover-background-transtion-delay);
+}
+
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_media_wrapper .difl_adv_btn_img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_media_wrapper .difl_adv_btn_img_hover {
+  width: 0;
+  object-fit: cover;
+  object-position: center;
+  height: 0;
+  opacity: 0;
+}
+/* Hover Image */
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_media_wrapper:has(.difl_adv_btn_img_hover) .difl_adv_btn_img{
+  opacity: 1;
+  height: 100%;
+  visibility: visible;
+  transition: opacity 0.8s ease-in-out;
+}
+.difl_advanced_button .difl_advanced_button_container .difl_adv_btn_media_wrapper:has(.difl_adv_btn_img_hover) .difl_adv_btn_img_hover{
+  transition: opacity 0.8s ease-in-out;
+  visibility: hidden;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container .difl_adv_btn_media_wrapper:has(.difl_adv_btn_img_hover) .difl_adv_btn_img,
+.difl_advanced_button .difl_advanced_button_container:not(.builder_view):hover .difl_adv_btn_media_wrapper:has(.difl_adv_btn_img_hover) .difl_adv_btn_img{
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container .difl_adv_btn_media_wrapper:has(.difl_adv_btn_img_hover) .difl_adv_btn_img_hover,
+.difl_advanced_button .difl_advanced_button_container:not(.builder_view):hover .difl_adv_btn_media_wrapper:has(.difl_adv_btn_img_hover) .difl_adv_btn_img_hover{
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+}
+/* Hover Image */
+
+/*====================================
+*******      Icon Effects      *******
+=====================================*/
+.difl_advanced_button .difl_advanced_button_container.dfab_hover_media .difl_adv_btn_media_wrapper{
+  opacity: 0;
+  transform: scale(0);
+  transition: width var(--dfab-media-hover-transition-duration) var(--dfab-media-hover-transition-function);
+  transition-delay: var(--dfab-media-hover-transition-delay);
+  width: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_hover_media .difl_adv_btn_media_wrapper,
+.difl_advanced_button .difl_advanced_button_container.dfab_hover_media:not(.builder_view):hover .difl_adv_btn_media_wrapper{
+  opacity: 1;
+  transform: scale(1);
+  width: var(--dfab-media-wrapper-width);
+}
+
+
+/* ======== Media Reveal Effect ======= */
+/* ---Media left--- */
+.difl_advanced_button .difl_advanced_button_container.media_left.dfab_media_reveal .difl_adv_btn_media_wrapper{
+  opacity: 0;
+  transition: all var(--dfab-media-hover-transition-duration) var(--dfab-media-hover-transition-function);
+  transition-delay: var(--dfab-media-hover-transition-delay);
+  width: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.media_left.dfab_media_reveal .difl_adv_btn_media_wrapper,
+.difl_advanced_button .difl_advanced_button_container.media_left.dfab_media_reveal:not(.builder_view):hover .difl_adv_btn_media_wrapper{
+  opacity: 1;
+  width: var(--dfab-media-wrapper-width);
+}
+/*From Left*/
+.difl_advanced_button .difl_advanced_button_container.media_left.dfab_media_reveal.dfab_mr_left .difl_adv_btn_media_wrapper{
+  transform: translateX(-100px);
+}
+/*From Right*/
+.difl_advanced_button .difl_advanced_button_container.media_left.dfab_media_reveal.dfab_mr_right .difl_adv_btn_media_wrapper{
+  transform: translateX(100px);
+}
+/*From Top*/
+.difl_advanced_button .difl_advanced_button_container.media_left.dfab_media_reveal.dfab_mr_top .difl_adv_btn_media_wrapper{
+  transform: translateY(-100px);
+}
+/*From Bottom*/
+.difl_advanced_button .difl_advanced_button_container.media_left.dfab_media_reveal.dfab_mr_bottom .difl_adv_btn_media_wrapper{
+  transform: translateY(100px);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.media_left.dfab_media_reveal .difl_adv_btn_media_wrapper,
+.difl_advanced_button .difl_advanced_button_container.media_left.dfab_media_reveal.dfab_mr_left:not(.builder_view):hover .difl_adv_btn_media_wrapper,
+.difl_advanced_button .difl_advanced_button_container.media_left.dfab_media_reveal.dfab_mr_right:not(.builder_view):hover .difl_adv_btn_media_wrapper,
+.difl_advanced_button .difl_advanced_button_container.media_left.dfab_media_reveal.dfab_mr_top:not(.builder_view):hover .difl_adv_btn_media_wrapper,
+.difl_advanced_button .difl_advanced_button_container.media_left.dfab_media_reveal.dfab_mr_bottom:not(.builder_view):hover .difl_adv_btn_media_wrapper{
+  transform: translateX(0) translateY(0);
+}
+
+/* ----Media right---- */
+.difl_advanced_button .difl_advanced_button_container.media_right.dfab_media_reveal .difl_adv_btn_media_wrapper{
+  opacity: 0;
+  transition: all var(--dfab-media-hover-transition-duration) var(--dfab-media-hover-transition-function);
+  transition-delay: var(--dfab-media-hover-transition-delay);
+  width: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.media_right.dfab_media_reveal .difl_adv_btn_media_wrapper,
+.difl_advanced_button .difl_advanced_button_container.media_right.dfab_media_reveal:not(.builder_view):hover .difl_adv_btn_media_wrapper{
+  opacity: 1;
+  width: var(--dfab-media-wrapper-width);
+}
+/*From Left*/
+.difl_advanced_button .difl_advanced_button_container.media_right.dfab_media_reveal.dfab_mr_left .difl_adv_btn_media_wrapper{
+  transform: translateX(-100px);
+}
+/*From Right*/
+.difl_advanced_button .difl_advanced_button_container.media_right.dfab_media_reveal.dfab_mr_right .difl_adv_btn_media_wrapper{
+  transform: translateX(100px);
+}
+/*From Top*/
+.difl_advanced_button .difl_advanced_button_container.media_right.dfab_media_reveal.dfab_mr_top .difl_adv_btn_media_wrapper{
+  transform: translateY(-100px);
+}
+/*From Bottom*/
+.difl_advanced_button .difl_advanced_button_container.media_right.dfab_media_reveal.dfab_mr_bottom .difl_adv_btn_media_wrapper{
+  transform: translateY(100px);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.media_right.dfab_media_reveal .difl_adv_btn_media_wrapper,
+.difl_advanced_button .difl_advanced_button_container.media_right.dfab_media_reveal.dfab_mr_left:not(.builder_view):hover .difl_adv_btn_media_wrapper,
+.difl_advanced_button .difl_advanced_button_container.media_right.dfab_media_reveal.dfab_mr_right:not(.builder_view):hover .difl_adv_btn_media_wrapper,
+.difl_advanced_button .difl_advanced_button_container.media_right.dfab_media_reveal.dfab_mr_top:not(.builder_view):hover .difl_adv_btn_media_wrapper,
+.difl_advanced_button .difl_advanced_button_container.media_right.dfab_media_reveal.dfab_mr_bottom:not(.builder_view):hover .difl_adv_btn_media_wrapper{
+  transform: translateX(0) translateY(0);
+}
+
+/* ======== Media Slide Effect ======= */
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide .difl_adv_btn_media_wrapper .difl_adv_btn_img{
+  width: var(--dfab-media-wrapper-width);
+  height: var(--dfab-media-wrapper-height);
+}
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide .difl_adv_btn_media_wrapper{
+  position: absolute;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+  transition: all var(--dfab-media-hover-transition-duration) var(--dfab-media-hover-transition-function);
+  transition-delay: var(--dfab-media-hover-transition-delay);
+  border-radius: unset !important;
+}
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_left .difl_adv_btn_media_wrapper .difl_adv_btn_media,
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_right .difl_adv_btn_media_wrapper .difl_adv_btn_media,
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_top .difl_adv_btn_media_wrapper .difl_adv_btn_media,
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_bottom .difl_adv_btn_media_wrapper .difl_adv_btn_media{
+  opacity: 0;
+  transition: all var(--dfab-media-hover-transition-duration) var(--dfab-media-hover-transition-function);
+  transition-delay: var(--dfab-media-hover-transition-delay);
+}
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_left .difl_adv_btn_media_wrapper{
+  width: 0;
+  height: 100% !important;
+  top: 0;
+  left: 0;
+  transform: translateX(-101%);
+}
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_right .difl_adv_btn_media_wrapper{
+  width: 0;
+  height: 100% !important;
+  top: 0;
+  right:0;
+  transform: translateX(101%);
+}
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_top .difl_adv_btn_media_wrapper{
+  width: 100% !important;
+  height: 0;
+  top: 0;
+  left:0;
+  right:0;
+  transform: translateY(-101%);
+}
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_bottom .difl_adv_btn_media_wrapper{
+  width: 100% !important;
+  height: 0;
+  bottom: 0;
+  left:0;
+  transform: translateY(101%);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_media_slide.dfab_mr_left .difl_adv_btn_media_wrapper,
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_left:not(.builder_view):hover .difl_adv_btn_media_wrapper,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_media_slide.dfab_mr_right .difl_adv_btn_media_wrapper,
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_right:not(.builder_view):hover .difl_adv_btn_media_wrapper{
+  width: 100% !important;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_media_slide.dfab_mr_top .difl_adv_btn_media_wrapper,
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_top:not(.builder_view):hover .difl_adv_btn_media_wrapper,
+.difl_advanced_button.et_vb_hover .difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_bottom .difl_adv_btn_media_wrapper,
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_bottom:not(.builder_view):hover .difl_adv_btn_media_wrapper{
+  height: 100% !important;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_media_slide .difl_adv_btn_media_wrapper .difl_adv_btn_media,
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_left:not(.builder_view):hover .difl_adv_btn_media_wrapper .difl_adv_btn_media,
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_right:not(.builder_view):hover .difl_adv_btn_media_wrapper .difl_adv_btn_media,
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_top:not(.builder_view):hover .difl_adv_btn_media_wrapper .difl_adv_btn_media,
+.difl_advanced_button .difl_advanced_button_container.dfab_media_slide.dfab_mr_bottom:not(.builder_view):hover .difl_adv_btn_media_wrapper .difl_adv_btn_media{
+  opacity: 1;
+  /*transition: all var(--dfab-media-hover-transition-duration) var(--dfab-media-hover-transition-function);*/
+  /*transition-delay: var(--dfab-media-hover-transition-delay);*/
+}
+
+
+/*====================================
+*******   Background Effects   *******
+=====================================*/
+
+/*------ Reveal Effect ------*/
+.difl_advanced_button .difl_advanced_button_container.dfab_reveal .difl_adv_btn_bg_anim{
+  background-color: var(--dfab-bg-hover-background-color);
+}
+/* Reveal From Left */
+.difl_advanced_button .difl_advanced_button_container.dfab_reveal.dfab_left .difl_adv_btn_bg_anim{
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_reveal.dfab_left .difl_adv_btn_bg_anim,
+.difl_advanced_button .difl_advanced_button_container.dfab_reveal.dfab_left:not(.builder_view):hover .difl_adv_btn_bg_anim{
+  width: 100%;
+}
+/* Reveal From Right */
+.difl_advanced_button .difl_advanced_button_container.dfab_reveal.dfab_right .difl_adv_btn_bg_anim {
+  right: 0;
+  left:unset;
+  top: 0;
+  height: 100%;
+  width: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_reveal.dfab_right .difl_adv_btn_bg_anim,
+.difl_advanced_button .difl_advanced_button_container.dfab_reveal.dfab_right:not(.builder_view):hover .difl_adv_btn_bg_anim {
+  width: 100%;
+}
+/* Reveal From Top */
+.difl_advanced_button .difl_advanced_button_container.dfab_reveal.dfab_top .difl_adv_btn_bg_anim {
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_reveal.dfab_top .difl_adv_btn_bg_anim,
+.difl_advanced_button .difl_advanced_button_container.dfab_reveal.dfab_top:not(.builder_view):hover .difl_adv_btn_bg_anim {
+  height: 100%;
+}
+/* Reveal From Bottom */
+.difl_advanced_button .difl_advanced_button_container.dfab_reveal.dfab_bottom .difl_adv_btn_bg_anim {
+  left: 0;
+  top: unset;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_reveal.dfab_bottom .difl_adv_btn_bg_anim,
+.difl_advanced_button .difl_advanced_button_container.dfab_reveal.dfab_bottom:not(.builder_view):hover .difl_adv_btn_bg_anim {
+  height: 100%;
+}
+
+/*------ Ripple Effect ------*/
+.difl_advanced_button .difl_advanced_button_container.dfab_ripple .difl_adv_btn_bg_anim::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  background-color: var(--dfab-bg-hover-background-color);
+  transition: all var(--dfab-bg-hover-background-transtion-time) var(--dfab-bg-hover-background-transition-timimg-function);
+  transition-delay: var(--dfab-bg-hover-background-transtion-delay);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_ripple .difl_adv_btn_bg_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_ripple:not(.builder_view):hover .difl_adv_btn_bg_anim::before {
+  transform: translate(-50%, -50%) scale(2);
+  width: 100%;
+  height: 100%;
+}
+
+/*------ Ripple Position Aware Effect ------*/
+.difl_advanced_button .difl_advanced_button_container .dfab_position_aware_bg {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: var(--dfab-bg-hover-background-color);
+  transition-property: width, height;
+  transition-duration: var(--dfab-bg-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-bg-hover-background-transition-timimg-function);
+  transform: translate(-50%, -50%);
+  z-index: 7;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_ripple_position_aware .dfab_position_aware_bg,
+.difl_advanced_button .difl_advanced_button_container.dfab_ripple_position_aware:not(.builder_view):hover .dfab_position_aware_bg {
+  width: 225%;
+  height: 562.5px;
+}
+
+/*------ Hover on Collision 2 dots Effect ------*/
+.difl_advanced_button .difl_advanced_button_container.dfab_ripple_two_dot .difl_adv_btn_bg_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_ripple_two_dot .difl_adv_btn_bg_anim::before {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: var(--dfab-bg-hover-background-color);
+  border-radius: 50%;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_ripple_two_dot .difl_adv_btn_bg_anim::before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+.difl_advanced_button .difl_advanced_button_container.dfab_ripple_two_dot .difl_adv_btn_bg_anim::after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_ripple_two_dot .difl_adv_btn_bg_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_ripple_two_dot:not(.builder_view):hover .difl_adv_btn_bg_anim::before {
+  animation: dfab-cross-left var(--dfab-bg-hover-background-transtion-time) both;
+  animation-direction: alternate;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_ripple_two_dot .difl_adv_btn_bg_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_ripple_two_dot:not(.builder_view):hover .difl_adv_btn_bg_anim::after {
+  animation: dfab-cross-right var(--dfab-bg-hover-background-transtion-time) both;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes dfab-cross-left {
+  0% {
+    left: -20px;
+  }
+
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  100% {
+    left: 50%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes dfab-cross-left {
+  0% {
+    left: -20px;
+  }
+
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  100% {
+    left: 50%;
+    width: 150%;
+    height: 300%;
+  }
+}
+
+@-webkit-keyframes dfab-cross-right {
+  0% {
+    right: -20px;
+  }
+
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  100% {
+    right: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+@keyframes dfab-cross-right {
+  0% {
+    right: -20px;
+  }
+
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  75% {
+    /*border-radius: 50%;*/
+  }
+  100% {
+    right: 50%;
+    width: 150%;
+    height: 300%;
+  }
+}
+
+/*------ Door Open Effect ------*/
+.difl_advanced_button .difl_advanced_button_container.dfab_door_open .difl_adv_btn_bg_anim::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dfab-bg-hover-background-color);
+  z-index: 7;
+  opacity: 0;
+  transform: scale3d(0.7, 1, 1);
+  transition-property: transform, opacity;
+  transition-duration: var(--dfab-bg-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-bg-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_door_open .difl_adv_btn_bg_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_door_open:not(.builder_view):hover .difl_adv_btn_bg_anim::before {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/*------ Skew Effect ------*/
+.difl_advanced_button .difl_advanced_button_container.dfab_skew .difl_adv_btn_bg_anim::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 100%;
+  z-index: 7;
+  background-color: var(--dfab-bg-hover-background-color);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_skew .difl_adv_btn_bg_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_skew:not(.builder_view):hover .difl_adv_btn_bg_anim::before {
+  opacity: 1;
+  transition-property: all;
+  transition-duration: var(--dfab-bg-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-bg-hover-background-transition-timimg-function);
+}
+/* From Top Left */
+.difl_advanced_button .difl_advanced_button_container.dfab_skew.dfab_top_left .difl_adv_btn_bg_anim::before {
+  top: 0;
+  left: 0;
+  transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -5em, 0);
+  transform-origin: 0 100%;
+  transition-property: transform, opacity, background-color;
+  transition-duration: var(--dfab-bg-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-bg-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_skew.dfab_top_left .difl_adv_btn_bg_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_skew.dfab_top_left:not(.builder_view):hover .difl_adv_btn_bg_anim::before {
+  transform: rotate3d(0, 0, 1, 0deg);
+}
+/* From Top Right */
+.difl_advanced_button .difl_advanced_button_container.dfab_skew.dfab_top_right .difl_adv_btn_bg_anim::before {
+  top: 0;
+  right: 0;
+  transform: rotate3d(0, 0, 1, 45deg) translate3d(5em, -5em, 0);
+  transform-origin: 100% 0;
+  transition-property: transform, opacity, background-color;
+  transition-duration: var(--dfab-bg-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-bg-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_skew.dfab_top_right .difl_adv_btn_bg_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_skew.dfab_top_right:not(.builder_view):hover .difl_adv_btn_bg_anim::before {
+  transform: rotate3d(0, 0, 1, 0deg);
+}
+/* From Bottom Left */
+.difl_advanced_button .difl_advanced_button_container.dfab_skew.dfab_bottom_left .difl_adv_btn_bg_anim::before {
+  left: 0;
+  bottom: 0;
+  transform: rotate3d(0, 0, 1, 45deg) translate3d(-5em, 5em, 0);
+  transform-origin: 0 100%;
+  transition-property: transform, opacity, background-color;
+  transition-duration: var(--dfab-bg-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-bg-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_skew.dfab_bottom_left .difl_adv_btn_bg_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_skew.dfab_bottom_left:not(.builder_view):hover .difl_adv_btn_bg_anim::before {
+  transform: rotate3d(0, 0, 1, 0deg);
+}
+/* From Bottom Right */
+.difl_advanced_button .difl_advanced_button_container.dfab_skew.dfab_bottom_right .difl_adv_btn_bg_anim::before {
+  right: 0;
+  bottom: 0;
+  transform: rotate3d(0, 0, 1, -45deg) translate3d(0, 5em, 0);
+  transform-origin: 100% 0;
+  transition-property: transform, opacity, background-color;
+  transition-duration: var(--dfab-bg-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-bg-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_skew.dfab_bottom_right .difl_adv_btn_bg_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_skew.dfab_bottom_right:not(.builder_view):hover .difl_adv_btn_bg_anim::before {
+  transform: rotate3d(0, 0, 1, 0deg);
+}
+
+/*------ Two Shade Effect ------*/
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade .difl_adv_btn_bg_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade .difl_adv_btn_bg_anim::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 7;
+  transition-property: transform;
+  transition-duration: var(--dfab-bg-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-bg-hover-background-transition-timimg-function);
+  border-radius: inherit;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade .difl_adv_btn_bg_anim::before {
+  background-color: var(--dfab-bg-hover-background-color);
+}
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade .difl_adv_btn_bg_anim::after {
+  background-color: var(--dfab-bg-hover-background-secondary-color);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_two_shade .difl_adv_btn_bg_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade:not(.builder_view):hover .difl_adv_btn_bg_anim::after {
+  transition-delay: 175ms;
+}
+/* From Top */
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade.dfab_top .difl_adv_btn_bg_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade.dfab_top .difl_adv_btn_bg_anim::before {
+  bottom: 100%;
+  left: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_two_shade.dfab_top .difl_adv_btn_bg_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_two_shade.dfab_top .difl_adv_btn_bg_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade.dfab_top:not(.builder_view):hover .difl_adv_btn_bg_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade.dfab_top:not(.builder_view):hover .difl_adv_btn_bg_anim::before {
+  transform: translate3d(0, 100%, 0);
+}
+/* From Bottom */
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade.dfab_bottom .difl_adv_btn_bg_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade.dfab_bottom .difl_adv_btn_bg_anim::before {
+  top: 100%;
+  left: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_two_shade.dfab_bottom .difl_adv_btn_bg_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_two_shade.dfab_bottom .difl_adv_btn_bg_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade.dfab_bottom:not(.builder_view):hover .difl_adv_btn_bg_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade.dfab_bottom:not(.builder_view):hover .difl_adv_btn_bg_anim::before {
+  transform: translate3d(0, -100%, 0);
+}
+/* From Left */
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade.dfab_left .difl_adv_btn_bg_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade.dfab_left .difl_adv_btn_bg_anim::before {
+  top: 0;
+  right: 100%;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_two_shade.dfab_left .difl_adv_btn_bg_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_two_shade.dfab_left .difl_adv_btn_bg_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade.dfab_left:not(.builder_view):hover .difl_adv_btn_bg_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade.dfab_left:not(.builder_view):hover .difl_adv_btn_bg_anim::before {
+  transform: translate3d(100%, 0, 0);
+}
+/* From Right */
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade.dfab_right .difl_adv_btn_bg_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade.dfab_right .difl_adv_btn_bg_anim::before {
+  top: 0;
+  left: 100%;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_two_shade.dfab_right .difl_adv_btn_bg_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_two_shade.dfab_right .difl_adv_btn_bg_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade.dfab_right:not(.builder_view):hover .difl_adv_btn_bg_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_two_shade.dfab_right:not(.builder_view):hover .difl_adv_btn_bg_anim::before {
+  transform: translate3d(-100%, 0, 0);
+}
+
+
+/*------ Reveal with Hypen ------*/
+.difl_advanced_button .difl_advanced_button_container.dfab_hypen .difl_adv_btn_bg_anim::after {
+  content: "";
+  position: absolute;
+  transition-property: all;
+  transition-duration: var(--dfab-bg-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-bg-hover-background-transition-timimg-function);
+  left: 10px;
+  top: 50%;
+  width: 0;
+  height: 1px;
+  background-color: var(--dfab-bg-hover-hypen-color, #333);
+  backface-visibility: hidden;
+  z-index: 1;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_hypen .difl_adv_btn_bg_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_hypen:not(.builder_view):hover .difl_adv_btn_bg_anim::after {
+  width: 20px;
+  transition-delay: 0.2s;
+}
+
+
+/*====================================
+*******     Border Effects     *******
+=====================================*/
+.difl_advanced_button .difl_advanced_button_container[class^="dfab_border_"]{
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+  transition-delay: var(--dfab-border-hover-background-transtion-delay);
+}
+/* Ripple In */
+.difl_advanced_button .difl_advanced_button_container.dfab_border_ripple_in .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_ripple_out .difl_adv_btn_border_anim::before {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  border-style: inherit;
+  border-color: var(--dfab-border-hover-background-color);
+  border-width: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation-duration: 1s;
+  transition-property: color, box-shadow, background-color, background-image;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container .difl_adv_btn_border_anim,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_ripple_in:hover .difl_adv_btn_border_anim,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_ripple_out:hover .difl_adv_btn_border_anim{
+  overflow: visible;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_ripple_in .difl_adv_btn_border_anim::before {
+  border: inherit;
+  border-radius: inherit;
+  top: -12px;
+  right: -12px;
+  bottom: -12px;
+  left: -12px;
+  opacity: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_ripple_in .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_ripple_in:hover .difl_adv_btn_border_anim::before {
+  -webkit-animation-name: dfab_anim_border_ripple_in;
+  animation-name: dfab_anim_border_ripple_in;
+}
+
+@-webkit-keyframes dfab_anim_border_ripple_in {
+  from {
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0
+  }
+}
+
+@keyframes dfab_anim_border_ripple_in {
+  from {
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0
+  }
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_ripple_out .difl_adv_btn_border_anim::before {
+  opacity: 0;
+  border: inherit;
+  border-radius: inherit;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_ripple_out .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_ripple_out:hover .difl_adv_btn_border_anim::before {
+  animation-name: dfab_anim_border_ripple_out;
+}
+
+@-webkit-keyframes dfab_anim_border_ripple_out {
+  from {
+    opacity: 1;
+  }
+  to {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0
+  }
+}
+
+@keyframes dfab_anim_border_ripple_out {
+  from {
+    opacity: 1;
+  }
+  to {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0
+  }
+}
+
+/*Border Slide Left*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_slide_left .difl_adv_btn_border_anim {
+  background-color: var(--dfab-border-hover-background-color);
+  z-index: 1;
+  width: 10px;
+  transition-property: all;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_slide_left .difl_adv_btn_border_anim,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_slide_left:not(.builder_view):hover .difl_adv_btn_border_anim {
+  width: 100%;
+}
+/*Border Slide Right*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_slide_right .difl_adv_btn_border_anim {
+  background-color: var(--dfab-border-hover-background-color);
+  right: 0;
+  top: 0;
+  left: unset;
+  z-index: 1;
+  width: 10px;
+  transition-property: all;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_slide_right .difl_adv_btn_border_anim,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_slide_right:not(.builder_view):hover .difl_adv_btn_border_anim {
+  width: 100%;
+}
+
+/*Border Outline Anim 1*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_1 {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_1 .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_1 .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform: scaleX(1);
+  pointer-events: none;
+  z-index: 8;
+  border-radius: inherit;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_1 .difl_adv_btn_border_anim::after {
+  transform-origin: left;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_1 .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+  transform-origin: right;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_1 .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_1 .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  transform: scaleY(1);
+  z-index: 8;
+  border-radius: inherit;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+  transition-delay: var(--dfab-border-hover-background-transtion-delay);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_1 .difl_adv_btn_border_anim_2::before {
+  transform-origin: bottom;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_1 .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+  transform-origin: top;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_1 .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_1 .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_1:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_1:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  transform: scaleY(0);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_1 .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_1 .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_1:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_1:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleX(0);
+}
+
+/*Border Outline Anim 12*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_12 {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_12 .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_12 .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform: scaleX(1);
+  pointer-events: none;
+  z-index: 8;
+  border-radius: inherit;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_12 .difl_adv_btn_border_anim::after {
+  transform-origin: right;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_12 .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+  transform-origin: left;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_12 .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_12 .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  transform: scaleY(1);
+  z-index: 8;
+  border-radius: inherit;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_12 .difl_adv_btn_border_anim_2::before {
+  transform-origin: top;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_12 .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+  transform-origin: bottom;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_12 .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_12 .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_12:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_12:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  transform: scaleY(0);
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_12 .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_12 .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_12:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_12:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleX(0);
+}
+
+/*Border Outline Anim CC 2*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_2 .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_2 .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20px;
+  pointer-events: none;
+  transition-property: width;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_2 .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+  left: auto;
+  right: 0;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_2 .difl_adv_btn_border_anim_2 {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_2 .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_2 .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: height var(--dfab-border-hover-background-transtion-time) var(--dfab-border-hover-background-transition-timimg-function);
+  transition-delay: var(--dfab-border-hover-background-transtion-delay);
+  height: 20px;
+  width: 2px;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_2 .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_2 .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_2 .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_2:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_2:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  height: 100%;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_2 .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_2 .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_2:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_2:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  width: 100%;
+}
+
+/*Border Outline Anim CC 22*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_22 .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_22 .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  right: 0;
+  position: absolute;
+  top: 0;
+  width: 20px;
+  pointer-events: none;
+  transition-property: width;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_22 .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+  left: 0;
+  right: auto;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_22 .difl_adv_btn_border_anim_2 {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_22 .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_22 .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  transition: height var(--dfab-border-hover-background-transtion-time) var(--dfab-border-hover-background-transition-timimg-function);
+  transition-delay: var(--dfab-border-hover-background-transtion-delay);
+  height: 20px;
+  width: 2px;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_22 .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+  top: 0;
+  bottom: auto;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_22 .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_22 .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_22:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_22:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  height: 100%;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_22 .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_22 .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_22:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_22:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  width: 100%;
+}
+
+/*Border Outline Anim CC 3*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_3 {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_3 .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_3 .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+  transform: scaleX(0);
+  pointer-events: none;
+  z-index: 8;
+  border-radius: inherit;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_3 .difl_adv_btn_border_anim::after {
+  transform-origin: right;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_3 .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+  transform-origin: left;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_3 .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_3 .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: transform var(--dfab-border-hover-background-transtion-time) var(--dfab-border-hover-background-transition-timimg-function);
+  transition-delay: var(--dfab-border-hover-background-transtion-delay);
+  height: 0;
+  width: 2px;
+  transform: scaleY(0);
+  z-index: 8;
+  border-radius: inherit;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_3 .difl_adv_btn_border_anim_2::before {
+  transform-origin: top;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_3 .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+  transform-origin: bottom;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_3 .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_3 .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_3:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_3:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  transform: scaleY(1);
+  height: 100%;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_3 .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_3 .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_3:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_3:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleX(1);
+  width: 100%;
+}
+
+/*Border Outline Anim CC 32*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_32 {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_32 .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_32 .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+  transform: scaleX(0);
+  pointer-events: none;
+  z-index: 8;
+  border-radius: inherit;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_32 .difl_adv_btn_border_anim::after {
+  transform-origin: left;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_32 .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+  transform-origin: right;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_32 .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_32 .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 2px;
+  transform: scaleY(0);
+  z-index: 8;
+  border-radius: inherit;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_32 .difl_adv_btn_border_anim_2::before {
+  transform-origin: bottom;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_32 .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+  transform-origin: top;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_32 .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_32 .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_32:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_32:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  transform: scaleY(1);
+  height: 100%;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_32 .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_32 .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_32:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_32:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleX(1);
+  width: 100%;
+}
+
+/*Border Outline Anim CC 4*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_4 {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_4 .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_4 .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+  transform: scaleX(0);
+  pointer-events: none;
+  z-index: 8;
+  border-radius: inherit;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_4 .difl_adv_btn_border_anim::after {
+  transform-origin: left;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_4 .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+  transform-origin: right;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_4 .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_4 .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 2px;
+  transform: scaleY(0);
+  z-index: 8;
+  border-radius: inherit;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_4 .difl_adv_btn_border_anim_2::before {
+  transform-origin: top;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_4 .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+  transform-origin: bottom;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_4 .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_4 .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_4:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_4:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  transform: scaleY(1);
+  height: 100%;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_4 .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_4 .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_4:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_4:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleX(1);
+  width: 100%;
+}
+
+/*Border Outline Anim CC 42*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_42 {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_42 .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_42 .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+  transform: scaleX(0);
+  pointer-events: none;
+  z-index: 8;
+  border-radius: inherit;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_42 .difl_adv_btn_border_anim::after {
+  transform-origin: right;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_42 .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+  transform-origin: left;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_42 .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_42 .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 2px;
+  transform: scaleY(0);
+  z-index: 8;
+  border-radius: inherit;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_42 .difl_adv_btn_border_anim_2::before {
+  transform-origin: bottom;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_42 .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+  transform-origin: top;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_42 .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_42 .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_42:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_42:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  transform: scaleY(1);
+  height: 100%;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_42 .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_42 .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_42:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_42:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleX(1);
+  width: 100%;
+}
+
+/*Border Outline Anim Center*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_center {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_center .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_center .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  /*left: 0;*/
+  position: absolute;
+  top: 0;
+  width: 0;
+  transform: scaleX(0);
+  pointer-events: none;
+  z-index: 8;
+  border-radius: inherit;
+  left: 50%;
+  right: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+  transition-delay: var(--dfab-border-hover-background-transtion-delay);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_center .difl_adv_btn_border_anim::after {
+  /*transform-origin: right;*/
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_center .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_center .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_center .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  height: 0;
+  width: 2px;
+  transform: scaleY(0);
+  z-index: 8;
+  border-radius: inherit;
+  top: 50%;
+  bottom: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_center .difl_adv_btn_border_anim_2::before {
+  /*transform-origin: top;*/
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_center .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_center .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_center .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_center:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_center:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  transform: scaleY(1);
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_center .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_center .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_center:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_center:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleX(1);
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+
+/*Border Outline Anim Left*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_left {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_left .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_left .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  position: absolute;
+  top: 0;
+  width: 0;
+  transform: scaleX(0);
+  pointer-events: none;
+  z-index: 8;
+  border-radius: inherit;
+  left: 0;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_left .difl_adv_btn_border_anim::after {
+  transform-origin: left;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_left .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+  transform-origin: left;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_left .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_left .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  height: 0;
+  width: 2px;
+  transform: scaleY(0);
+  z-index: 8;
+  border-radius: inherit;
+  top: 50%;
+  bottom: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_left .difl_adv_btn_border_anim_2::before {
+  /*transform-origin: top;*/
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_left .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_left .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_left .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_left:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_left:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  transform: scaleY(1);
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_left .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_left .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_left:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_left:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleX(1);
+  width: 100%;
+}
+
+/*Border Outline Anim Right*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_right {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_right .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_right .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  position: absolute;
+  top: 0;
+  width: 0;
+  transform: scaleX(0);
+  pointer-events: none;
+  z-index: 8;
+  border-radius: inherit;
+  left: 0;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_right .difl_adv_btn_border_anim::after {
+  transform-origin: right;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_right .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+  transform-origin: right;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_right .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_right .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  height: 0;
+  width: 2px;
+  transform: scaleY(0);
+  z-index: 8;
+  border-radius: inherit;
+  top: 50%;
+  bottom: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_right .difl_adv_btn_border_anim_2::before {
+  /*transform-origin: top;*/
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_right .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_right .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_right .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_right:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_right:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  transform: scaleY(1);
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_right .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_right .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_right:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_right:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleX(1);
+  width: 100%;
+}
+
+/*Border Outline Anim Top*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  /*left: 0;*/
+  position: absolute;
+  top: 0;
+  width: 0;
+  transform: scaleX(0);
+  pointer-events: none;
+  z-index: 8;
+  border-radius: inherit;
+  left: 50%;
+  right: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top .difl_adv_btn_border_anim::after {
+  /*transform-origin: right;*/
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  height: 0;
+  width: 2px;
+  transform: scaleY(0);
+  z-index: 8;
+  border-radius: inherit;
+  top: 50%;
+  bottom: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top .difl_adv_btn_border_anim_2::before {
+  transform-origin: top;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+  transform-origin: top;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_top .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_top .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  transform: scaleY(1);
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_top .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_top .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleX(1);
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+/*Border Outline Anim Bottom*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  /*left: 0;*/
+  position: absolute;
+  top: 0;
+  width: 0;
+  transform: scaleX(0);
+  pointer-events: none;
+  z-index: 8;
+  border-radius: inherit;
+  left: 50%;
+  right: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom .difl_adv_btn_border_anim::after {
+  /*transform-origin: right;*/
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  height: 0;
+  width: 2px;
+  transform: scaleY(0);
+  z-index: 8;
+  border-radius: inherit;
+  top: 50%;
+  bottom: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom .difl_adv_btn_border_anim_2::before {
+  transform-origin: bottom;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+  transform-origin: bottom;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_bottom .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_bottom .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  transform: scaleY(1);
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_bottom .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_bottom .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleX(1);
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+/*Border Outline Anim Vertical*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_vertical {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_vertical .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_vertical .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  /*left: 0;*/
+  position: absolute;
+  top: 0;
+  width: 0;
+  transform: scaleX(0);
+  pointer-events: none;
+  z-index: 8;
+  border-radius: inherit;
+  left: 50%;
+  right: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_vertical .difl_adv_btn_border_anim::after {
+  /*transform-origin: right;*/
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_vertical .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_vertical .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_vertical .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_vertical:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_vertical:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleX(1);
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+/*Border Outline Anim Horizontal*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_horizontal {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_horizontal .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_horizontal .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  height: 0;
+  width: 2px;
+  transform: scaleY(0);
+  z-index: 8;
+  border-radius: inherit;
+  top: 50%;
+  bottom: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_horizontal .difl_adv_btn_border_anim::before {
+  /*transform-origin: top;*/
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_horizontal .difl_adv_btn_border_anim::after {
+  left: auto;
+  right: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_horizontal .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_horizontal .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_horizontal:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_horizontal:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleY(1);
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+/*Border Outline Anim From Top Left*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_left {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_left .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_left .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  /*left: 0;*/
+  position: absolute;
+  top: 0;
+  width: 0;
+  transform: scaleX(0);
+  pointer-events: none;
+  z-index: 8;
+  border-radius: inherit;
+  left: 50%;
+  right: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_left .difl_adv_btn_border_anim::after {
+  transform-origin: left;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_left .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+  transform-origin: left;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_left .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_left .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  height: 0;
+  width: 2px;
+  transform: scaleY(0);
+  z-index: 8;
+  border-radius: inherit;
+  top: 50%;
+  bottom: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_left .difl_adv_btn_border_anim_2::before {
+  transform-origin: top;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_left .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+  transform-origin: top;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_top_left .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_top_left .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_left:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_left:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  transform: scaleY(1);
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_top_left .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_top_left .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_left:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_left:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleX(1);
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+/*Border Outline Anim From Top Right*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_right {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_right .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_right .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  /*left: 0;*/
+  position: absolute;
+  top: 0;
+  width: 0;
+  transform: scaleX(0);
+  pointer-events: none;
+  z-index: 8;
+  border-radius: inherit;
+  left: 50%;
+  right: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_right .difl_adv_btn_border_anim::after {
+  transform-origin: right;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_right .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+  transform-origin: right;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_right .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_right .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  height: 0;
+  width: 2px;
+  transform: scaleY(0);
+  z-index: 8;
+  border-radius: inherit;
+  top: 50%;
+  bottom: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_right .difl_adv_btn_border_anim_2::before {
+  transform-origin: top;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_right .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+  transform-origin: top;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_top_right .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_top_right .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_right:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_right:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  transform: scaleY(1);
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_top_right .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_top_right .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_right:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_top_right:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleX(1);
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+/*Border Outline Anim From Bottom Left*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_left {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_left .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_left .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  /*left: 0;*/
+  position: absolute;
+  top: 0;
+  width: 0;
+  transform: scaleX(0);
+  pointer-events: none;
+  z-index: 8;
+  border-radius: inherit;
+  left: 50%;
+  right: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_left .difl_adv_btn_border_anim::after {
+  transform-origin: left;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_left .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+  transform-origin: left;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_left .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_left .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  height: 0;
+  width: 2px;
+  transform: scaleY(0);
+  z-index: 8;
+  border-radius: inherit;
+  top: 50%;
+  bottom: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_left .difl_adv_btn_border_anim_2::before {
+  transform-origin: bottom;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_left .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+  transform-origin: bottom;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_bottom_left .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_bottom_left .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_left:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_left:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  transform: scaleY(1);
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_bottom_left .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_bottom_left .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_left:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_left:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleX(1);
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+/*Border Outline Anim From Bottom Right*/
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_right {
+  overflow: hidden;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_right .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_right .difl_adv_btn_border_anim::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  height: 2px;
+  /*left: 0;*/
+  position: absolute;
+  top: 0;
+  width: 0;
+  transform: scaleX(0);
+  pointer-events: none;
+  z-index: 8;
+  border-radius: inherit;
+  left: 50%;
+  right: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_right .difl_adv_btn_border_anim::after {
+  transform-origin: right;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_right .difl_adv_btn_border_anim::before {
+  bottom: 0;
+  top: auto;
+  transform-origin: right;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_right .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_right .difl_adv_btn_border_anim_2::before {
+  background-color: var(--dfab-border-hover-background-color);
+  content: "";
+  left: 0;
+  position: absolute;
+  height: 0;
+  width: 2px;
+  transform: scaleY(0);
+  z-index: 8;
+  border-radius: inherit;
+  top: 50%;
+  bottom: 50%;
+  transition-property: transform;
+  transition-duration: var(--dfab-border-hover-background-transtion-time);
+  transition-timing-function: var(--dfab-border-hover-background-transition-timimg-function);
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_right .difl_adv_btn_border_anim_2::before {
+  transform-origin: bottom;
+}
+
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_right .difl_adv_btn_border_anim_2::after {
+  left: auto;
+  right: 0;
+  transform-origin: bottom;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_bottom_right .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_bottom_right .difl_adv_btn_border_anim_2::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_right:not(.builder_view):hover .difl_adv_btn_border_anim_2::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_right:not(.builder_view):hover .difl_adv_btn_border_anim_2::before {
+  transform: scaleY(1);
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_bottom_right .difl_adv_btn_border_anim::after,
+.difl_advanced_button.et_vb_hover .difl_advanced_button_container.dfab_border_outline_bottom_right .difl_adv_btn_border_anim::before,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_right:not(.builder_view):hover .difl_adv_btn_border_anim::after,
+.difl_advanced_button .difl_advanced_button_container.dfab_border_outline_bottom_right:not(.builder_view):hover .difl_adv_btn_border_anim::before {
+  transform: scaleX(1);
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+
+/*---- 2D Effect ---*/
+/*Animation Effect*/
+.difl_advanced_button .difl_advanced_button_container.dfab__animate {
+  -webkit-animation-duration: var( --dfab-two-d-animation-duration, 1s);
+  animation-duration: var(--dfab-two-d-animation-duration, 1s);
+  -webkit-animation-delay: var(--dfab-two-d-animation-delay, 0s);
+  animation-delay: var(--dfab-two-d-animation-delay, 0s);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 53%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  40%, 43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0) scaleY(1.1);
+    transform: translate3d(0, -30px, 0) scaleY(1.1)
+  }
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0) scaleY(1.05);
+    transform: translate3d(0, -15px, 0) scaleY(1.05)
+  }
+  80% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translateZ(0) scaleY(.95);
+    transform: translateZ(0) scaleY(.95)
+  }
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0) scaleY(1.02);
+    transform: translate3d(0, -4px, 0) scaleY(1.02)
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  40%, 43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0) scaleY(1.1);
+    transform: translate3d(0, -30px, 0) scaleY(1.1)
+  }
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0) scaleY(1.05);
+    transform: translate3d(0, -15px, 0) scaleY(1.05)
+  }
+  80% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translateZ(0) scaleY(.95);
+    transform: translateZ(0) scaleY(.95)
+  }
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0) scaleY(1.02);
+    transform: translate3d(0, -4px, 0) scaleY(1.02)
+  }
+}
+
+.difl_advanced_button .difl_advanced_button_container.builder_view.dfab_bounce,
+.difl_advanced_button .difl_advanced_button_container.dfab_bounce:not(.builder_view):hover {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom
+}
+
+@-webkit-keyframes flash {
+  0%, 50%, to {
+    opacity: 1
+  }
+  25%, 75% {
+    opacity: 0
+  }
+}
+
+@keyframes flash {
+  0%, 50%, to {
+    opacity: 1
+  }
+  25%, 75% {
+    opacity: 0
+  }
+}
+
+.difl_advanced_button .difl_advanced_button_container.builder_view.dfab_flash,
+.difl_advanced_button .difl_advanced_button_container.dfab_flash:not(.builder_view):hover {
+  -webkit-animation-name: flash;
+  animation-name: flash
+}
+
+@-webkit-keyframes pulse {
+  0%, to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05)
+  }
+}
+
+@keyframes pulse {
+  0%, to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05)
+  }
+}
+
+.difl_advanced_button .difl_advanced_button_container.builder_view.dfab_pulse,
+.difl_advanced_button .difl_advanced_button_container.dfab_pulse:not(.builder_view):hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  animation-timing-function: ease-in-out
+}
+
+@-webkit-keyframes rubberBand {
+  0%, to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, .75, 1);
+    transform: scale3d(1.25, .75, 1)
+  }
+  40% {
+    -webkit-transform: scale3d(.75, 1.25, 1);
+    transform: scale3d(.75, 1.25, 1)
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, .85, 1);
+    transform: scale3d(1.15, .85, 1)
+  }
+  65% {
+    -webkit-transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(.95, 1.05, 1)
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, .95, 1)
+  }
+}
+
+@keyframes rubberBand {
+  0%, to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, .75, 1);
+    transform: scale3d(1.25, .75, 1)
+  }
+  40% {
+    -webkit-transform: scale3d(.75, 1.25, 1);
+    transform: scale3d(.75, 1.25, 1)
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, .85, 1);
+    transform: scale3d(1.15, .85, 1)
+  }
+  65% {
+    -webkit-transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(.95, 1.05, 1)
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, .95, 1)
+  }
+}
+
+.difl_advanced_button .difl_advanced_button_container.builder_view.dfab_rubberBand,
+.difl_advanced_button .difl_advanced_button_container.dfab_rubberBand:not(.builder_view):hover {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand
+}
+
+@-webkit-keyframes headShake {
+  0%, 50% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+  6.5% {
+    -webkit-transform: translateX(-6px) rotateY(-9deg);
+    transform: translateX(-6px) rotateY(-9deg)
+  }
+  18.5% {
+    -webkit-transform: translateX(5px) rotateY(7deg);
+    transform: translateX(5px) rotateY(7deg)
+  }
+  31.5% {
+    -webkit-transform: translateX(-3px) rotateY(-5deg);
+    transform: translateX(-3px) rotateY(-5deg)
+  }
+  43.5% {
+    -webkit-transform: translateX(2px) rotateY(3deg);
+    transform: translateX(2px) rotateY(3deg)
+  }
+}
+
+@keyframes headShake {
+  0%, 50% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+  6.5% {
+    -webkit-transform: translateX(-6px) rotateY(-9deg);
+    transform: translateX(-6px) rotateY(-9deg)
+  }
+  18.5% {
+    -webkit-transform: translateX(5px) rotateY(7deg);
+    transform: translateX(5px) rotateY(7deg)
+  }
+  31.5% {
+    -webkit-transform: translateX(-3px) rotateY(-5deg);
+    transform: translateX(-3px) rotateY(-5deg)
+  }
+  43.5% {
+    -webkit-transform: translateX(2px) rotateY(3deg);
+    transform: translateX(2px) rotateY(3deg)
+  }
+}
+
+.difl_advanced_button .difl_advanced_button_container.builder_view.dfab_headShake,
+.difl_advanced_button .difl_advanced_button_container.dfab_headShake:not(.builder_view):hover {
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: headShake;
+  animation-name: headShake
+}
+
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg)
+  }
+  40% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg)
+  }
+  60% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg)
+  }
+  80% {
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg)
+  }
+  to {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg)
+  }
+  40% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg)
+  }
+  60% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg)
+  }
+  80% {
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg)
+  }
+  to {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+
+.difl_advanced_button .difl_advanced_button_container.builder_view.dfab_swing,
+.difl_advanced_button .difl_advanced_button_container.dfab_swing:not(.builder_view):hover {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+  animation-name: swing
+}
+
+@-webkit-keyframes tada {
+  0%, to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+  10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate(-3deg);
+    transform: scale3d(.9, .9, .9) rotate(-3deg)
+  }
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg)
+  }
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg)
+  }
+}
+
+@keyframes tada {
+  0%, to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+  10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate(-3deg);
+    transform: scale3d(.9, .9, .9) rotate(-3deg)
+  }
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg)
+  }
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg)
+  }
+}
+
+.difl_advanced_button .difl_advanced_button_container.builder_view.dfab_tada,
+.difl_advanced_button .difl_advanced_button_container.dfab_tada:not(.builder_view):hover {
+  -webkit-animation-name: tada;
+  animation-name: tada
+}
+
+@-webkit-keyframes wobble {
+  0%, to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  15% {
+    -webkit-transform: translate3d(-25%, 0, 0) rotate(-5deg);
+    transform: translate3d(-25%, 0, 0) rotate(-5deg)
+  }
+  30% {
+    -webkit-transform: translate3d(20%, 0, 0) rotate(3deg);
+    transform: translate3d(20%, 0, 0) rotate(3deg)
+  }
+  45% {
+    -webkit-transform: translate3d(-15%, 0, 0) rotate(-3deg);
+    transform: translate3d(-15%, 0, 0) rotate(-3deg)
+  }
+  60% {
+    -webkit-transform: translate3d(10%, 0, 0) rotate(2deg);
+    transform: translate3d(10%, 0, 0) rotate(2deg)
+  }
+  75% {
+    -webkit-transform: translate3d(-5%, 0, 0) rotate(-1deg);
+    transform: translate3d(-5%, 0, 0) rotate(-1deg)
+  }
+}
+
+@keyframes wobble {
+  0%, to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  15% {
+    -webkit-transform: translate3d(-25%, 0, 0) rotate(-5deg);
+    transform: translate3d(-25%, 0, 0) rotate(-5deg)
+  }
+  30% {
+    -webkit-transform: translate3d(20%, 0, 0) rotate(3deg);
+    transform: translate3d(20%, 0, 0) rotate(3deg)
+  }
+  45% {
+    -webkit-transform: translate3d(-15%, 0, 0) rotate(-3deg);
+    transform: translate3d(-15%, 0, 0) rotate(-3deg)
+  }
+  60% {
+    -webkit-transform: translate3d(10%, 0, 0) rotate(2deg);
+    transform: translate3d(10%, 0, 0) rotate(2deg)
+  }
+  75% {
+    -webkit-transform: translate3d(-5%, 0, 0) rotate(-1deg);
+    transform: translate3d(-5%, 0, 0) rotate(-1deg)
+  }
+}
+
+.difl_advanced_button .difl_advanced_button_container.builder_view.dfab_wobble,
+.difl_advanced_button .difl_advanced_button_container.dfab_wobble:not(.builder_view):hover {
+  -webkit-animation-name: wobble;
+  animation-name: wobble
+}
+
+@-webkit-keyframes jello {
+  0%, 11.1%, to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  22.2% {
+    -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+    transform: skewX(-12.5deg) skewY(-12.5deg)
+  }
+  33.3% {
+    -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+    transform: skewX(6.25deg) skewY(6.25deg)
+  }
+  44.4% {
+    -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+    transform: skewX(-3.125deg) skewY(-3.125deg)
+  }
+  55.5% {
+    -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+    transform: skewX(1.5625deg) skewY(1.5625deg)
+  }
+  66.6% {
+    -webkit-transform: skewX(-.78125deg) skewY(-.78125deg);
+    transform: skewX(-.78125deg) skewY(-.78125deg)
+  }
+  77.7% {
+    -webkit-transform: skewX(.390625deg) skewY(.390625deg);
+    transform: skewX(.390625deg) skewY(.390625deg)
+  }
+  88.8% {
+    -webkit-transform: skewX(-.1953125deg) skewY(-.1953125deg);
+    transform: skewX(-.1953125deg) skewY(-.1953125deg)
+  }
+}
+
+@keyframes jello {
+  0%, 11.1%, to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  22.2% {
+    -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+    transform: skewX(-12.5deg) skewY(-12.5deg)
+  }
+  33.3% {
+    -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+    transform: skewX(6.25deg) skewY(6.25deg)
+  }
+  44.4% {
+    -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+    transform: skewX(-3.125deg) skewY(-3.125deg)
+  }
+  55.5% {
+    -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+    transform: skewX(1.5625deg) skewY(1.5625deg)
+  }
+  66.6% {
+    -webkit-transform: skewX(-.78125deg) skewY(-.78125deg);
+    transform: skewX(-.78125deg) skewY(-.78125deg)
+  }
+  77.7% {
+    -webkit-transform: skewX(.390625deg) skewY(.390625deg);
+    transform: skewX(.390625deg) skewY(.390625deg)
+  }
+  88.8% {
+    -webkit-transform: skewX(-.1953125deg) skewY(-.1953125deg);
+    transform: skewX(-.1953125deg) skewY(-.1953125deg)
+  }
+}
+
+.difl_advanced_button .difl_advanced_button_container.builder_view.dfab_jello,
+.difl_advanced_button .difl_advanced_button_container.dfab_jello:not(.builder_view):hover {
+  -webkit-animation-name: jello;
+  animation-name: jello;
+  -webkit-transform-origin: center;
+  transform-origin: center
+}
+
+@-webkit-keyframes heartBeat {
+  0%, 28%, 70% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+  14%, 42% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3)
+  }
+}
+
+@keyframes heartBeat {
+  0%, 28%, 70% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+  14%, 42% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3)
+  }
+}
+
+.difl_advanced_button .difl_advanced_button_container.builder_view.dfab_heartBeat,
+.difl_advanced_button .difl_advanced_button_container.dfab_heartBeat:not(.builder_view):hover {
+  -webkit-animation-name: heartBeat;
+  animation-name: heartBeat;
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+  -webkit-animation-duration: calc(1s * 1.3);
+  animation-duration: calc(1s * 1.3);
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out
+}
+
+/************
+  Tooltip
+************/
+.et_pb_row .et_pb_column:has(.tippy-box) {
+  z-index: inherit;
+}
+.tippy-box{
+  overflow: visible !important;
+  border-width: 0px;
+  border-color:#333;
+  border-style: solid;
+  z-index: 999999999999999;
+}
+.tippy-box img{
+  border-radius: inherit;
+}
+.tippy-box ul,.tippy-box ol {
+  padding: 0 0 0px 1em !important;
+  line-height: 20px;
+}
+
+.tippy-box, .tippy-box h1,.tippy-box h2, .tippy-box h3,.tippy-box h4,.tippy-box h5,.tippy-box h6,.tippy-box a, .tippy-box ul , .tippy-box ol {
+  color: #fff;
+  text-align: left;
+}
+.tippy-box h1{
+  font-size: 32px;
+}
+.tippy-box h2{
+  font-size: 28px;
+}
+.tippy-box h3{
+  font-size: 24px;
+}
+.tippy-box h4{
+  font-size: 20px;
+}
+.tippy-box h5{
+  font-size: 16px;
+}
+.tippy-box h6{
+  font-size: 14px;
+}
+.tippy-box blockquote {
+  margin:0;
+  padding:0;
+  border-left: 5px solid !important;
+  padding-left: 20px;
+}

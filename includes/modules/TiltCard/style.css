@@ -1,0 +1,25 @@
+
+.difl_tiltcard {
+    transform-style: preserve-3d;
+}
+.difl_tiltcard:hover {
+    
+}
+/* .dgdf_tiltcard > div:first-child {
+    transform: translateZ(50px) scale(0.9);
+} */
+.et-fb-component-settings.et-fb-component-settings--module {
+    z-index: 99;
+}
+
+.df_tc_image_container img,
+.df_tc_button {
+    border-style: solid;
+    border-width: 0;
+}
+.df_tc_image_container img {
+    vertical-align: top;
+}
+.df_tc_button {
+    display: inline-block;
+}

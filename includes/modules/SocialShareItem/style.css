@@ -1,0 +1,298 @@
+.difl_social_share_item{
+    line-height: 0;
+}
+
+.difl_social_share_item_wrapper {
+    --df-ss-icon-font-size:16px;
+    border-style: solid;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-decoration: none;
+}
+.difl_social_share_item_wrapper:hover{
+    z-index: 10;
+}
+
+.difl_social_share_content_container{
+    /*overflow: hidden;*/
+}
+
+.difl_social_share_content{
+    /*background: #0c6ca0;*/
+    /*padding: 0 20px;*/
+    /*border-radius: 0 16px 16px 0;*/
+    border-style: solid;
+
+}
+.difl_social_share_content .difl_social_share_text{
+    font-size: 12px;
+    line-height: 1.7em;
+    color: #fff;
+    display: block;
+}
+
+.difl_social_share_icon{
+    height: calc( 2 * var(--df-ss-icon-font-size) );
+    width: calc( 2 * var(--df-ss-icon-font-size) );
+    text-align: center;
+    /*background: #000;*/
+    color: #fff;
+    z-index: 2;
+    border-style: solid;
+    overflow: hidden;
+}
+.difl_social_share_icon i{
+    font-size: var(--df-ss-icon-font-size);
+    line-height: calc( 2 * var(--df-ss-icon-font-size) );
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*line-height: unset !important;*/
+}
+
+.difl_social_share_icon i:before{
+    height: calc( 2 * var(--df-ss-icon-font-size) );
+    width: calc( 2 * var(--df-ss-icon-font-size) );
+    content: '\f232';
+    font-family: ETmodules;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    text-align: center;
+}
+.difl_social_share_icon img{
+    height: calc( 2 * var(--df-ss-icon-font-size) );
+    width: calc( 2 * var(--df-ss-icon-font-size) );
+}
+
+
+.difl_social_share_icon .df-social-share-fa-icon:before {
+    font-family: FontAwesome;
+}
+
+.difl_social_share_icon .df-social-share-telegram:before {
+    content: "\F3FE"
+}
+
+.difl_social_share_icon .df-social-share-amazon:before {
+    content: "\F270"
+}
+
+.difl_social_share_icon .df-social-share-bandcamp:before {
+    content: "\F2D5"
+}
+
+.difl_social_share_icon .df-social-share-bitbucket:before {
+    content: "\F171"
+}
+
+.difl_social_share_icon .df-social-share-behance:before {
+    content: "\F1B4"
+}
+
+.difl_social_share_icon .df-social-share-buffer:before {
+    content: "\F837"
+}
+
+.difl_social_share_icon .df-social-share-codepen:before {
+    content: "\F1CB"
+}
+
+.difl_social_share_icon .df-social-share-deviantart:before {
+    content: "\F1BD"
+}
+
+.difl_social_share_icon .df-social-share-flipboard:before {
+    content: "\F44D"
+}
+
+.difl_social_share_icon .df-social-share-foursquare:before {
+    content: "\F180"
+}
+
+.difl_social_share_icon .df-social-share-github:before {
+    content: "\F09B"
+}
+
+.difl_social_share_icon .df-social-share-goodreads:before {
+    content: "\F3A9"
+}
+
+.difl_social_share_icon .df-social-share-google:before {
+    content: "\F1A0"
+}
+
+.difl_social_share_icon .df-social-share-houzz:before {
+    content: "\F27C"
+}
+
+.difl_social_share_icon .df-social-share-itunes:before {
+    content: "\F3B5"
+}
+
+.difl_social_share_icon .df-social-share-last_fm:before {
+    content: "\F202"
+}
+
+.difl_social_share_icon .df-social-share-line:before {
+    content: "\F3C0"
+}
+
+.difl_social_share_icon .df-social-share-medium:before,
+.difl_social_share_icon .df-social-share-meetup:before {
+    content: "\F3C7"
+}
+
+.difl_social_share_icon .df-social-share-odnoklassniki:before {
+    content: "\F263"
+}
+
+.difl_social_share_icon .df-social-share-patreon:before {
+    content: "\F3D9"
+}
+
+.difl_social_share_icon .df-social-share-periscope:before {
+    content: "\F3DA"
+}
+
+.difl_social_share_icon .df-social-share-quora:before {
+    content: "\F2C4"
+}
+
+.difl_social_share_icon .df-social-share-researchgate:before {
+    content: "\F4F8"
+}
+
+.difl_social_share_icon .df-social-share-reddit:before {
+    content: "\F281"
+}
+
+.difl_social_share_icon .df-social-share-snapchat:before {
+    content: "\F2AC"
+}
+
+.difl_social_share_icon .df-social-share-soundcloud:before {
+    content: "\F1BE"
+}
+
+.difl_social_share_icon .df-social-share-spotify:before {
+    content: "\F1BC"
+}
+
+.difl_social_share_icon .df-social-share-steam:before {
+    content: "\F3F6"
+}
+
+.difl_social_share_icon .df-social-share-tripadvisor:before {
+    content: "\F262"
+}
+
+.difl_social_share_icon .df-social-share-tiktok:before {
+    content: "\E07B"
+}
+
+.difl_social_share_icon .df-social-share-twitch:before {
+    content: "\F1E8"
+}
+
+.difl_social_share_icon .df-social-share-vk:before {
+    content: "\F189"
+}
+
+.difl_social_share_icon .df-social-share-weibo:before {
+    content: "\F18A"
+}
+
+.difl_social_share_icon .df-social-share-whatsapp:before {
+    content: "\F232"
+}
+
+.difl_social_share_icon .df-social-share-xing:before {
+    content: "\F168"
+}
+
+.difl_social_share_icon .df-social-share-yelp:before {
+    content: "\F1E9"
+}
+
+.difl_social_share_icon .df-social-share-pinterest:before {
+    content: "\E095"
+}
+
+.difl_social_share_icon .df-social-share-linkedin:before {
+    content: "\E09D"
+}
+
+.difl_social_share_icon .df-social-share-tumblr:before {
+    content: "\E097"
+}
+
+.difl_social_share_icon .df-social-share-skype:before {
+    content: "\E0A2"
+}
+
+.difl_social_share_icon .df-social-share-flikr:before {
+    content: "\E0A6"
+}
+
+.difl_social_share_icon .df-social-share-myspace:before {
+    content: "\E0A1"
+}
+
+.difl_social_share_icon .df-social-share-dribbble:before {
+    content: "\E09B"
+}
+
+.difl_social_share_icon .df-social-share-youtube:before {
+    content: "\E0A3"
+}
+
+.difl_social_share_icon .df-social-share-vimeo:before {
+    content: "\E09C"
+}
+
+.difl_social_share_icon .df-social-share-facebook:before {
+    content: "\e093"
+}
+
+.difl_social_share_icon .df-social-share-twitter:before {
+    content: "\e094"
+}
+
+.difl_social_share_icon .df-social-share-google-plus:before {
+    content: "\e096"
+}
+
+.difl_social_share_icon .df-social-share-instagram:before {
+    content: "\e09a"
+}
+
+.difl_social_share_icon .df-social-share-rss:before {
+    content: "\e09e"
+}
+.difl_social_share_icon .df-social-share-stumbleupon:before {
+    content: "\e098"
+}
+.difl_social_share_icon .df-social-share-digg:before {
+    font-family: FontAwesome !important;
+    content: "\f1a6"
+}
+.difl_social_share_icon .df-social-share-mix:before {
+    font-family: FontAwesome !important;
+    content: "\f3cb"
+}
+.difl_social_share_icon .df-social-share-pocket:before {
+    font-family: FontAwesome !important;
+    content: "\f265"
+}
+.difl_social_share_icon .df-social-share-email:before {
+    content: "\e010"
+}
+.difl_social_share_icon .df-social-share-print:before {
+    content: "\e103"
+}

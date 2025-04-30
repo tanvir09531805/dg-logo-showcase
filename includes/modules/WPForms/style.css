@@ -1,0 +1,58 @@
+.difl_wpforms .wpforms-form .wpforms-field-container select option {
+    color:#333 !important;
+}
+
+div.wpforms-container-full .wpforms-form .choices__input.choices__input--cloned {
+    background-color: transparent;
+}
+
+/* Conflict */
+.difl_wpforms .wpforms-container{
+    margin: 0px auto !important;
+}
+
+/* .difl_wpforms .wpforms-container .wpforms-field {
+    padding: 0px !important;
+    overflow: hidden !important;
+} */
+
+/* .difl_wpforms .wpforms-container .wpforms-form input[type="text"],
+.difl_wpforms .wpforms-container .wpforms-form input[type="email"],
+.difl_wpforms .wpforms-container .wpforms-form input[type="number"],
+.difl_wpforms .wpforms-container .wpforms-form input[type="tel"],
+.difl_wpforms .wpforms-container .wpforms-form input[type="password"],
+.difl_wpforms .wpforms-container .wpforms-form input[type="textarea"],
+.difl_wpforms .wpforms-container .wpforms-form input[type="textarea:focus"]
+{
+    border: 1px solid rgba( 0, 0, 0, 0.25 ) !important;
+    border-radius: 0px !important;
+    margin-bottom: 15px;
+} */
+
+/* .difl_wpforms .wpforms-container .wpforms-form input[type="radio"],
+.difl_wpforms .wpforms-container .wpforms-form input[type="checkbox"]{
+    margin-left: 3px !important;
+}
+
+.difl_wpforms .wpforms-container .wpforms-form label.wpforms-field-label,
+.difl_wpforms .wpforms-container .wpforms-field-radio,
+.difl_wpforms .wpforms-container .wpforms-field-checkbox{
+    margin: 15px 0px;
+} */
+
+
+
+.difl_wpforms .wpforms-container .wpforms-submit-container [type="submit"]{
+    height: auto !important;
+    border-width: 0px !important;
+    border-style: solid !important;
+    border-color: #333 !important;
+}
+
+.difl_wpforms .wpforms-container .wpforms-submit-container [type="submit"]:hover{
+    background: #066aab !important;
+}
+
+/* Conflict */
+
+

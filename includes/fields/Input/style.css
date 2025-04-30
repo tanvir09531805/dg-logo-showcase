@@ -1,4 +1,4 @@
-input.dgls-input {
+input.myex-input {
   background: #f1f5f9;
   max-height: 30px;
   border: 0;
@@ -15,27 +15,27 @@ input.dgls-input {
   width: 100%;
 }
 
-input.dgls-input:focus {
+input.myex-input:focus {
   background: #e6ecf2;
 }
 
-input.dgls-input::-webkit-input-placeholder {
+input.myex-input::-webkit-input-placeholder {
   color: #98a7b8;
 }
 
-input.dgls-input:-moz-placeholder {
+input.myex-input:-moz-placeholder {
   color: #98a7b8;
 }
 
-input.dgls-input::-moz-placeholder {
+input.myex-input::-moz-placeholder {
   color: #98a7b8;
 }
 
-input.dgls-input:-ms-input-placeholder {
+input.myex-input:-ms-input-placeholder {
   color: #98a7b8;
 }
 
-input.dgls-input[readonly] {
+input.myex-input[readonly] {
   background: #ffffff !important;
   border: 1px solid #eaedf0 !important;
   cursor: not-allowed;

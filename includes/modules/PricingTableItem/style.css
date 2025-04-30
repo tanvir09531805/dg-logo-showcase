@@ -1,0 +1,415 @@
+
+.difl_pricingtable.et-fb-has-svg-icon .et-fb-icon svg, .difl_pricingtable.et-fb-has-svg-icon .et-fb-icon.et-fb-icon--svg {
+    fill: none !important;
+}
+
+.et_pb_module.difl_pricingtable {
+    position: relative;
+    overflow: visible;
+}
+
+.difl_pricingtable .et_pb_module_inner {
+    position: static;
+}
+
+.et_pb_module.difl_pricingtable .et_pb_module.difl_pricingtableitem {
+    margin-block-end: .625rem;
+}
+
+.difl_pricingtableitem .item-feature, .difl_pricingtableitem .item-ribbon:has(.ribbon_icon) {
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+}
+
+.difl_pricingtableitem .item-feature.icon-left, .difl_pricingtableitem .item-ribbon.icon-right {
+    flex-direction: row-reverse;
+}
+
+.difl_pricingtableitem .item-feature.icon-top, .difl_pricingtableitem .item-ribbon.icon-bottom {
+    flex-direction: column-reverse;
+}
+
+.difl_pricingtableitem .item-feature.icon-bottom, .difl_pricingtableitem .item-ribbon.icon-top {
+    flex-direction: column;
+}
+
+.difl_pricingtableitem .item-feature .et-pb-icon, .difl_pricingtableitem .item-ribbon .et-pb-icon {
+    height: fit-content;
+    width: fit-content;
+    font-size: 1rem;
+}
+
+.tippy-arrow {
+    color: currentColor;
+}
+
+
+/*Text*/
+.difl_pricingtableitem .item-text p:empty:not(:last-of-type) {
+    padding-bottom: 0;
+}
+
+/*Price*/
+.difl_pricingtableitem .item-price {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.difl_pricingtableitem .item-price .price {
+    font-size: 14px;
+    font-weight: 400;
+    vertical-align: middle;
+}
+
+.difl_pricingtableitem .item-price .price_prefix.top, .difl_pricingtableitem .item-price .price_suffix.top {
+    vertical-align: top;
+}
+
+.difl_pricingtableitem .item-price .price_prefix.middle, .difl_pricingtableitem .item-price .price_suffix.middle {
+    vertical-align: middle;
+}
+
+.difl_pricingtableitem .item-price .price_prefix.bottom, .difl_pricingtableitem .price_suffix.bottom {
+    vertical-align: bottom;
+}
+
+.difl_pricingtableitem .item-price:has(.original-price.back) {
+    flex-direction: row-reverse;
+}
+
+.difl_pricingtableitem .item-price:has(.original-price.front) {
+    flex-direction: row;
+}
+
+.difl_pricingtableitem .item-price.left:has(.original-price.front){
+    justify-content: flex-start;
+}
+
+.difl_pricingtableitem .item-price.right:has(.original-price.front){
+    justify-content: flex-end;
+}
+
+.difl_pricingtableitem .et_pb_module_inner .item-price.right:has(.original-price.back) {
+    justify-content: flex-start;
+}
+
+.difl_pricingtableitem .et_pb_module_inner .item-price.left:has(.original-price.back) {
+    justify-content: flex-end;
+}
+
+
+/*Button*/
+
+.difl_pricingtableitem .item-button {
+    width: max-content;
+}
+
+.difl_pricingtableitem .item-button.full-width {
+    width: 100%;
+    text-align: center;
+}
+
+.difl_pricingtableitem .item-button:not(.full-width) {
+    display: grid;
+    width: 100%;
+}
+
+.difl_pricingtableitem .item-button:not(.full-width).center {
+    place-content: center;
+}
+
+.difl_pricingtableitem .item-button:not(.full-width).right {
+    place-content: end;
+}
+
+.difl_pricingtableitem .item-button:not(.full-width).left {
+    place-content: start;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+    .difl_pricingtableitem .item-button:not(.full-width).tablet-left {
+        place-content: start;
+    }
+
+    .difl_pricingtableitem .item-button:not(.full-width).tablet-right {
+        place-content: end;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .difl_pricingtableitem .item-button:not(.full-width).phone-left {
+        place-content: start;
+    }
+
+    .difl_pricingtableitem .item-button:not(.full-width).phone-right {
+        place-content: end;
+    }
+}
+
+.difl_pricingtableitem .item-button .et_pb_button {
+    display: block;
+    width: 100%;
+}
+
+.difl_pricingtableitem .item-button .button-badge {
+    display: block;
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+    border-style: solid;
+}
+
+.difl_pricingtableitem .item-button .button-badge.bottom {
+    order: 1;
+}
+
+.difl_pricingtableitem .item-button .button-badge.center {
+    margin: auto;
+}
+
+.difl_pricingtableitem .item-button .button-badge.right {
+    margin-left: auto;
+}
+
+@keyframes difl_bounce_in {
+    0% {
+        transform: scale(1);
+    }
+
+    3% {
+        transform: scale(.7);
+    }
+
+    6% {
+        transform: scale(1.05);
+    }
+
+    9% {
+        transform: scale(.9);
+    }
+
+    12% {
+        transform: scale(1);
+    }
+
+    47% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+.difl_pricingtableitem .item-button .button-badge.difl_bounce_in, .difl_pricingtableitem:has(.item-ribbon.difl_bounce_in) {
+    animation: difl_bounce_in 7s ease-in-out infinite;
+}
+
+.et_pb_module.difl_pricingtableitem:has(.item-ribbon) {
+    width: fit-content;
+    position: absolute !important;
+    z-index: 999;
+}
+
+.et_pb_module.difl_pricingtableitem:has(.item-ribbon.top_left) {
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: auto;
+}
+
+.et_pb_module.difl_pricingtableitem:has(.item-ribbon.top_right) {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+}
+
+.et_pb_module.difl_pricingtableitem:has(.item-ribbon.bottom_left) {
+    bottom: 0;
+    left: 0;
+    top: auto;
+    right: auto;
+}
+
+.et_pb_module.difl_pricingtableitem:has(.item-ribbon.bottom_right) {
+    bottom: 0;
+    right: 0;
+    top: auto;
+    left: auto;
+}
+
+
+.difl_pricingtableitem:has(.item-ribbon) .ribbon_text {
+    left: 0;
+    text-align: center;
+    position: relative;
+}
+
+.difl_pricingtableitem:has(.item-ribbon) .ribbon_text.horizontal {
+    display: inline-block;
+}
+
+.difl_pricingtableitem:has(.item-ribbon) .ribbon_text.vertical {
+    writing-mode: vertical-lr;
+    vertical-align: middle;
+    transform: rotate(180deg);
+}
+
+.difl_pricingtableitem:has(.item-ribbon img) .ribbon_text {
+    position: absolute;
+}
+
+/*Icon*/
+
+.difl_pricingtableitem .item-icon .et-pb-icon{
+    border-style: solid;
+}
+
+.et_pb_module.difl_pricingtable .difl_pricingtableitem .item-icon.right {
+    text-align: right;
+}
+
+.et_pb_module.difl_pricingtable .difl_pricingtableitem .item-icon.center {
+    text-align: center;
+}
+
+.et_pb_module.difl_pricingtable .difl_pricingtableitem .item-icon.left {
+    text-align: left;
+}
+
+.et_pb_module.difl_pricingtable .difl_pricingtableitem .item-image {
+    display: flex;
+}
+
+.difl_pricingtableitem .item-image img, .item-feature .feature_icon {
+    border-style: solid;
+}
+
+.et_pb_module.difl_pricingtable .difl_pricingtableitem .item-image.left, .et_pb_module.difl_pricingtable .difl_pricingtableitem .item-price.left, .et_pb_module.difl_pricingtable .difl_pricingtableitem .item-rating.left {
+    justify-content: flex-start;
+}
+
+.et_pb_module.difl_pricingtable .difl_pricingtableitem .item-image.center, .et_pb_module.difl_pricingtable .difl_pricingtableitem .item-price.center, .et_pb_module.difl_pricingtable .difl_pricingtableitem .item-rating.center {
+    justify-content: center;
+}
+
+.et_pb_module.difl_pricingtable .difl_pricingtableitem .item-image.right, .et_pb_module.difl_pricingtable .difl_pricingtableitem .item-price.right, .et_pb_module.difl_pricingtable .difl_pricingtableitem .item-rating.right {
+    justify-content: flex-end;
+}
+
+
+/*Divider*/
+
+.et_pb_module.difl_pricingtable .difl_pricingtableitem .item-divider {
+    display: inline-block;
+    width: 100%;
+}
+
+.difl_pricingtableitem .item-divider {
+    background: #0a4b78;
+}
+
+/*Rating*/
+
+.difl_pricingtableitem .item-rating .rating {
+    font-size: 1rem;
+}
+
+.difl_pricingtableitem .item-rating .rating.fill {
+    color: #FFD700;
+}
+
+.difl_pricingtableitem .item-rating label {
+    font-size: 1rem;
+}
+
+.difl_pricingtableitem .item-rating > svg {
+    position: absolute;
+}
+
+.difl_pricingtableitem .item-rating {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+/* Inactive */
+.difl_pricingtableitem span.df_rating_icon_fill,
+.difl_pricingtableitem span.df_rating_icon_empty {
+    display: inline-block;
+    position: relative;
+    font-style: normal;
+    cursor: default;
+}
+
+.difl_pricingtableitem .item-rating .star span.df_rating_icon_fill::before {
+    content: "★";
+    display: block;
+    font-family: inherit;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.difl_pricingtableitem .item-rating .star span.df_fill_9::after,
+.difl_pricingtableitem .item-rating .star span.df_fill_1::before {
+    width: 10% !important;
+}
+
+.difl_pricingtableitem .item-rating .star span.df_fill_8::after,
+.difl_pricingtableitem .item-rating .star span.df_fill_2::before {
+    width: 20% !important;
+}
+
+.difl_pricingtableitem .item-rating .star span.df_fill_7::after,
+.difl_pricingtableitem .item-rating .star span.df_fill_3::before {
+    width: 30% !important;
+}
+
+.difl_pricingtableitem .item-rating .star span.df_fill_6::after,
+.difl_pricingtableitem .item-rating .star span.df_fill_4::before {
+    width: 40% !important;
+}
+
+.difl_pricingtableitem .item-rating .star span.df_fill_5::after,
+.difl_pricingtableitem .item-rating .star span.df_fill_5::before {
+    width: 50% !important;
+}
+
+.difl_pricingtableitem .item-rating .star span.df_fill_6::before,
+.difl_pricingtableitem .item-rating .star span.df_fill_4::after {
+    width: 60% !important;
+}
+
+.difl_pricingtableitem .item-rating .star span.df_fill_7::before,
+.difl_pricingtableitem .item-rating .star span.df_fill_3::after {
+    width: 70% !important;
+}
+
+.difl_pricingtableitem .item-rating .star span.df_fill_8::before,
+.difl_pricingtableitem .item-rating .star span.df_fill_2::after {
+    width: 80% !important;
+}
+
+.difl_pricingtableitem .item-rating .star span.df_fill_9::before,
+.difl_pricingtableitem .item-rating .star span.df_fill_1::after {
+    width: 90% !important;
+}
+
+.difl_pricingtableitem .tippy-content {
+    max-width: 100%;
+    width: max-content;
+}
+
+.difl_pricingtableitem .tippy-content p {
+    padding-bottom: 0 !important;
+}

@@ -1,0 +1,1333 @@
+{
+  "name": "difl/advanced-button",
+  "d4Shortcode": "difl_advanced_button",
+  "title": "Advanced Button",
+  "titles": "Advanced Buttons",
+  "moduleIcon": "difl/advanced-button",
+  "moduleClassName": "difl_advanced_button",
+  "moduleOrderClassName": "difl_advanced_button",
+  "category": "module",
+  "folder": "diviflash-modules",
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}} .difl_advanced_button_container",
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Advanced Button by DiviFlash"
+            }
+          }
+        },
+        "decoration": {
+          "border": {
+            "desktop": {
+              "value": {
+                "radius": {
+                  "topLeft": "3px",
+                  "topRight": "3px",
+                  "bottomLeft": "3px",
+                  "bottomRight": "3px"
+                },
+                "styles": {
+                  "all": {
+                    "width": "2px",
+                    "color": "#2ea3f2",
+                    "style": "solid"
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "desktop": {
+              "value": {
+                "padding": {
+                  "top": "5px",
+                  "right": "14px",
+                  "bottom": "5px",
+                  "left": "14px"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "border": {
+          "selector": "{{selector}} .difl_advanced_button_container"
+        },
+        "boxShadow": {
+          "selector": "{{selector}} .difl_advanced_button_container"
+        },
+        "background": {
+          "selector": "{{selector}} .difl_advanced_button_container"
+        },
+        "spacing": {
+          "selector": "{{selector}} .difl_advanced_button_container"
+        },
+        "sizing": {
+          "selector": "{{selector}} .difl_advanced_button_container"
+        },
+        "filters": {
+          "selector": "{{selector}} .difl_advanced_button_container"
+        },
+        "transform": {
+          "selector": "{{selector}} .difl_advanced_button_container"
+        },
+        "animation": {
+          "selector": "{{selector}} .difl_advanced_button_container"
+        }
+      }
+    },
+    "button_text": {
+      "type": "object",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "Click Here"
+          }
+        }
+      }
+    },
+    "button_sub_text": {
+      "type": "object"
+    },
+    "use_button_icon": {
+      "type": "object",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "on"
+          }
+        }
+      }
+    },
+    "button_icon": {
+      "type": "object",
+      "innerContent": {},
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "type": "divi",
+              "unicode": "&#x35;",
+              "weight": "400"
+            }
+          }
+        }
+      }
+    },
+    "button_image": {
+      "type": "object",
+      "innerContent": {},
+      "selector": "{{selector}} .df_ab_blurb_image img",
+      "decoration": {
+        "border": {},
+        "filters": {}
+      }
+    },
+    "media_placement": {
+      "type": "object",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "desktop": {
+            "value": "media_right"
+          }
+        }
+      }
+    },
+    "sub_text_placement": {
+      "type": "object",
+      "innerContent": {}
+    },
+    "two_d_hover_effects": {
+      "type": "object",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "dfab_none"
+          }
+        }
+      }
+    },
+    "bg_hover_effects": {
+      "type": "object",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "dfab_none"
+          }
+        }
+      }
+    },
+    "bg_hover_effect_directions": {
+      "type": "object",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "dfab_left"
+          }
+        }
+      }
+    },
+    "bg_hover_skew_effect_directions": {
+      "type": "object",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "dfab_top_left"
+          }
+        }
+      }
+    },
+    "bg_hover_effect_hyper": {
+      "type": "object",
+      "innerContent": {},
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      }
+    },
+    "bg_hover_hypen_color": {
+      "type": "object",
+      "default": {
+        "decoration": {
+          "desktop": {
+            "value": "#333333"
+          }
+        }
+      }
+    },
+    "bg_hover_effect_bounce": {
+      "type": "object",
+      "innerContent": {}
+    },
+    "bg_hover_background_color": {
+      "type": "object",
+      "decoration": {}
+    },
+    "bg_hover_background_secondary_color": {
+      "type": "object",
+      "decoration": {}
+    },
+    "border_hover_effects": {
+      "type": "object",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "dfab_none"
+          }
+        }
+      }
+    },
+    "border_hover_color": {
+      "type": "object",
+      "decoration": {}
+    },
+    "media_hover_effects": {
+      "type": "object",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "dfab_none"
+          }
+        }
+      }
+    },
+    "media_hover_effect_directions": {
+      "type": "object",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "dfab_mr_left"
+          }
+        }
+      }
+    },
+    "buttonAnimationTransition": {
+      "type": "object",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "desktop": {
+            "value": {
+              "two_d_transition_duration": "0.5",
+              "two_d_transition_delay": "0.0",
+              "bg_transition_duration": "0.5",
+              "bg_transition_delay": "0.0",
+              "bg_transition_timing_function": "ease",
+              "stroke_transition_duration": "0.5",
+              "stroke_transition_delay": "0.0",
+              "stroke_transition_timing_function": "ease",
+              "media_transition_duration": "0.5",
+              "media_transition_delay": "0.0",
+              "media_transition_timing_function": "ease"
+            }
+          }
+        }
+      }
+    },
+    "alignment": {
+      "type": "object",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "button_alignment": {
+            "desktop": {
+              "value": "left"
+            }
+          },
+          "button_content_alignment": {
+            "desktop": {
+              "value": "center"
+            }
+          }
+        }
+      }
+    },
+    "design_media": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "icon_color": {
+            "desktop": {
+              "value": "#2ea3f2"
+            }
+          },
+          "button_icon_size": {
+            "desktop": {
+              "value": "20px"
+            }
+          },
+          "media_background_color": {
+            "desktop": {
+              "value": ""
+            }
+          },
+          "media_wrapper_width": {
+            "desktop": {
+              "value": "30px"
+            }
+          },
+          "media_wrapper_height": {
+            "desktop": {
+              "value": "30px"
+            }
+          },
+          "border": {},
+          "boxShadow": {},
+          "spacing": {}
+        }
+      },
+      "styleProps": {
+        "border": {
+          "selector": "{{selector}} .difl_advanced_button_container .difl_adv_btn_wrapper .difl_adv_btn_media_wrapper"
+        },
+        "boxShadow": {
+          "selector": "{{selector}} .difl_advanced_button_container .difl_adv_btn_wrapper .difl_adv_btn_media_wrapper"
+        },
+        "spacing": {
+          "selector": "{{selector}} .difl_advanced_button_container .difl_adv_btn_wrapper .difl_adv_btn_media_wrapper"
+        }
+      }
+    },
+    "text": {
+      "type": "object",
+      "selector": "{{selector}} .difl_advanced_button_container .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper .difl_adv_btn_text, {{selector}} .difl_advanced_button_container .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper .difl_adv_btn_text_hover",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "spacing": {}
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .difl_advanced_button_container .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper .difl_adv_btn_text, {{selector}} .difl_advanced_button_container .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper .difl_adv_btn_text_hover",
+              "hover": "{{selector}} .difl_advanced_button_container{{:hover}} .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper .difl_adv_btn_text, {{selector}} .difl_advanced_button_container{{:hover}} .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper .difl_adv_btn_text_hover"
+            }
+          },
+          "important": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": true
+                }
+              }
+            }
+          }
+        },
+        "spacing": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .difl_advanced_button_container .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper .difl_adv_btn_text, {{selector}} .difl_advanced_button_container .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper .difl_adv_btn_text_hover",
+              "hover": "{{selector}} .difl_advanced_button_container{{:hover}} .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper .difl_adv_btn_text, {{selector}} .difl_advanced_button_container{{:hover}} .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper .difl_adv_btn_text_hover"
+            }
+          }
+        }
+      }
+    },
+    "sub_text": {
+      "type": "object",
+      "selector": "{{selector}} .difl_advanced_button_container .difl_adv_btn_sub_text, {{selector}} .difl_advanced_button_container .difl_adv_btn_sub_text_hover",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "spacing": {}
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .difl_advanced_button_container .difl_adv_btn_sub_text, {{selector}} .difl_advanced_button_container .difl_adv_btn_sub_text_hover",
+              "hover": "{{selector}} .difl_advanced_button_container{{:hover}} .difl_adv_btn_sub_text, {{selector}} .difl_advanced_button_container{{:hover}} .difl_adv_btn_sub_text_hover"
+            }
+          },
+          "important": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": true
+                }
+              }
+            }
+          }
+        },
+        "spacing": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .difl_advanced_button_container .difl_adv_btn_sub_text, {{selector}} .difl_advanced_button_container .difl_adv_btn_sub_text_hover",
+              "hover": "{{selector}} .difl_advanced_button_container{{:hover}} .difl_adv_btn_sub_text, {{selector}} .difl_advanced_button_container{{:hover}} .difl_adv_btn_sub_text_hover"
+            }
+          }
+        }
+      }
+    },
+    "button_link": {
+      "type": "object",
+      "innerContent": {},
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "button_link_type": "link_url",
+              "button_link_url": "",
+              "button_link_download": "",
+              "button_link_email": "",
+              "button_link_phone": "",
+              "button_url_new_window": "off"
+            }
+          }
+        }
+      }
+    },
+    "content_container_spacing": {
+      "type": "object",
+      "selector": "{{selector}} .difl_advanced_button_container .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "spacing": {}
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .difl_advanced_button_container .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper",
+              "hover": "{{selector}} .difl_advanced_button_container{{:hover}} .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper"
+            }
+          }
+        }
+      }
+    },
+    "main_tooltip": {
+      "type": "object",
+      "innerContent": {
+        "field_tooltip_enable": {}
+      }
+    },
+    "main_tooltip_settings": {
+      "type": "object",
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "field_tooltip_disable_on_mobile": "on",
+              "field_tooltip_arrow": "on",
+              "field_tooltip_placement": "top",
+              "field_tooltip_animation": "fade",
+              "field_tooltip_trigger": "mouseenter focus",
+              "field_tooltip_interactive": "on",
+              "field_tooltip_interactive_border": "2",
+              "field_tooltip_content_delay": "300",
+              "field_tooltip_interactive_debounce": "0",
+              "field_tooltip_follow_cursor": "off",
+              "field_tooltip_custom_maxwidth": "350",
+              "field_tooltip_offset_enable": "off",
+              "field_tooltip_offset_skidding": 0,
+              "field_tooltip_offset_distance": 10
+            }
+          }
+        }
+      }
+    },
+    "design_tooltip": {
+      "type": "object",
+      "decoration": {
+        "border": {},
+        "boxShadow": {},
+        "spacing": {},
+        "background": {}
+      },
+      "default": {
+        "decoration": {
+          "field_tooltip_arrow_color": {},
+          "field_tooltip_background": {},
+          "border": {},
+          "boxShadow": {}
+        }
+      },
+      "styleProps": {
+        "border": {
+          "selector": ".tippy-box[data-theme~='{{selector}}']"
+        },
+        "boxShadow": {
+          "selector": ".tippy-box[data-theme~='{{selector}}']"
+        },
+        "spacing": {
+          "selector": ".tippy-box[data-theme~='{{selector}}']"
+        },
+        "background": {
+          "selector": ".tippy-box[data-theme~='{{selector}}']"
+        }
+      }
+    },
+    "design_tooltip_text": {
+      "type": "object",
+      "selector": ".tippy-box[data-theme~='{{selector}}']",
+      "decoration": {
+        "body": {},
+        "a": {},
+        "ul": {},
+        "ol": {},
+        "quota": {}
+      },
+      "default": {
+        "decoration": {
+          "body": {
+            "font": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "size": "16px",
+                    "lineHeight": "18px"
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "font": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "size": "16px",
+                    "lineHeight": "18px"
+                  }
+                }
+              }
+            }
+          },
+          "ul": {
+            "font": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "size": "16px",
+                    "lineHeight": "18px"
+                  }
+                }
+              }
+            }
+          },
+          "ol": {
+            "font": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "size": "16px",
+                    "lineHeight": "18px"
+                  }
+                }
+              }
+            }
+          },
+          "quota": {
+            "font": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "size": "16px",
+                    "lineHeight": "18px"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "body": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": ".tippy-box[data-theme~='{{selector}}']",
+                "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}}"
+              }
+            },
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "a": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": ".tippy-box[data-theme~='{{selector}}'] a",
+                "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} a"
+              }
+            },
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ul": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": ".tippy-box[data-theme~='{{selector}}'] ul li",
+                "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} ul li"
+              }
+            },
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ol": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": ".tippy-box[data-theme~='{{selector}}'] ol li",
+                "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} ol li"
+              }
+            },
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "quota": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": ".tippy-box[data-theme~='{{selector}}'] blockquote",
+                "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} blockquote"
+              }
+            },
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "design_tooltip_text_body": {
+      "type": "object",
+      "selector": ".tippy-box[data-theme~='{{selector}}']",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "size": "16px",
+                  "lineHeight": "18px"
+                }
+              }
+            }
+          }
+        },
+        "styleProps": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": ".tippy-box[data-theme~='{{selector}}']",
+                "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}}"
+              }
+            },
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "design_tooltip_text_a": {
+      "type": "object",
+      "selector": ".tippy-box[data-theme~='{{selector}}'] a",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "size": "16px",
+                  "lineHeight": "18px"
+                }
+              }
+            }
+          }
+        },
+        "styleProps": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": ".tippy-box[data-theme~='{{selector}}'] a",
+                "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} a"
+              }
+            },
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "design_tooltip_text_ul": {
+      "type": "object",
+      "selector": ".tippy-box[data-theme~='{{selector}}'] ul li",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "size": "16px",
+                  "lineHeight": "18px"
+                }
+              }
+            }
+          }
+        },
+        "styleProps": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": ".tippy-box[data-theme~='{{selector}}'] ul li",
+                "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} ul li"
+              }
+            },
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "design_tooltip_text_ol": {
+      "type": "object",
+      "selector": ".tippy-box[data-theme~='{{selector}}'] ol li",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "size": "16px",
+                  "lineHeight": "18px"
+                }
+              }
+            }
+          }
+        },
+        "styleProps": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": ".tippy-box[data-theme~='{{selector}}'] ol li",
+                "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} ol li"
+              }
+            },
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "design_tooltip_text_quota": {
+      "type": "object",
+      "selector": ".tippy-box[data-theme~='{{selector}}'] blockquote",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "size": "16px",
+                  "lineHeight": "18px"
+                }
+              }
+            }
+          }
+        },
+        "styleProps": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": ".tippy-box[data-theme~='{{selector}}'] blockquote",
+                "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} blockquote"
+              }
+            },
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "design_tooltip_header": {
+      "type": "object",
+      "selector": ".tippy-box[data-theme~='{{selector}}']",
+      "h1": {
+        "decoration": {
+          "font": {}
+        }
+      },
+      "decoration": {
+        "h1": {},
+        "h2": {},
+        "h3": {},
+        "h4": {},
+        "h5": {},
+        "h6": {}
+      },
+      "default": {
+        "decoration": {
+          "h1": {
+            "font": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "size": "32px",
+                    "lineHeight": "32px"
+                  }
+                }
+              }
+            }
+          },
+          "h2": {
+            "font": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "size": "32px",
+                    "lineHeight": "32px"
+                  }
+                }
+              }
+            }
+          },
+          "h3": {
+            "font": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "size": "32px",
+                    "lineHeight": "32px"
+                  }
+                }
+              }
+            }
+          },
+          "h4": {
+            "font": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "size": "32px",
+                    "lineHeight": "32px"
+                  }
+                }
+              }
+            }
+          },
+          "h5": {
+            "font": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "size": "32px",
+                    "lineHeight": "32px"
+                  }
+                }
+              }
+            }
+          },
+          "h6": {
+            "font": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "size": "32px",
+                    "lineHeight": "32px"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "h1": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": ".tippy-box[data-theme~='{{selector}}'] h1",
+                "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} h1"
+              }
+            },
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "h2": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": ".tippy-box[data-theme~='{{selector}}'] h2",
+                "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} h2"
+              }
+            },
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "h3": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": ".tippy-box[data-theme~='{{selector}}'] h3",
+                "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} h3"
+              }
+            },
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "h4": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": ".tippy-box[data-theme~='{{selector}}'] h4",
+                "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} h4"
+              }
+            },
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "h5": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": ".tippy-box[data-theme~='{{selector}}'] h5",
+                "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} h5"
+              }
+            },
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "h6": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": ".tippy-box[data-theme~='{{selector}}'] h6",
+                "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} h6"
+              }
+            },
+            "important": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "color": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "design_tooltip_header_h1": {
+      "type": "object",
+      "selector": ".tippy-box[data-theme~='{{selector}}'] h1",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "size": "32px",
+                  "lineHeight": "32px"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": ".tippy-box[data-theme~='{{selector}}'] h1",
+              "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} h1"
+            }
+          },
+          "important": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "design_tooltip_header_h2": {
+      "type": "object",
+      "selector": ".tippy-box[data-theme~='{{selector}}'] h2",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "size": "32px",
+                  "lineHeight": "32px"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": ".tippy-box[data-theme~='{{selector}}'] h2",
+              "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} h2"
+            }
+          },
+          "important": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "design_tooltip_header_h3": {
+      "type": "object",
+      "selector": ".tippy-box[data-theme~='{{selector}}'] h3",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "size": "32px",
+                  "lineHeight": "32px"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": ".tippy-box[data-theme~='{{selector}}'] h3",
+              "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} h3"
+            }
+          },
+          "important": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "design_tooltip_header_h4": {
+      "type": "object",
+      "selector": ".tippy-box[data-theme~='{{selector}}'] h4",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "size": "32px",
+                  "lineHeight": "32px"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": ".tippy-box[data-theme~='{{selector}}'] h4",
+              "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} h4"
+            }
+          },
+          "important": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "design_tooltip_header_h5": {
+      "type": "object",
+      "selector": ".tippy-box[data-theme~='{{selector}}'] h5",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "size": "32px",
+                  "lineHeight": "32px"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": ".tippy-box[data-theme~='{{selector}}'] h5",
+              "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} h5"
+            }
+          },
+          "important": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "design_tooltip_header_h6": {
+      "type": "object",
+      "selector": ".tippy-box[data-theme~='{{selector}}'] h6",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "size": "32px",
+                  "lineHeight": "32px"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": ".tippy-box[data-theme~='{{selector}}'] h6",
+              "hover": ".tippy-box[data-theme~='{{selector}}']{{:hover}} h6"
+            }
+          },
+          "important": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": true
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "customCssFields": {
+    "text": {
+      "label": "Text",
+      "subName": "text",
+      "selectorSuffix": " a.difl_advanced_button_container .difl_adv_btn_text_wrapper .difl_adv_btn_text"
+    },
+    "sub_text": {
+      "label": "Sub Text",
+      "subName": "sub_text",
+      "selectorSuffix": " .difl_adv_btn_wrapper .difl_adv_btn_sub_text"
+    },
+    "media_container": {
+      "label": "Media Container",
+      "subName": "media_container",
+      "selectorSuffix": " .difl_adv_btn_wrapper .difl_adv_btn_media_wrapper"
+    }
+  }
+}

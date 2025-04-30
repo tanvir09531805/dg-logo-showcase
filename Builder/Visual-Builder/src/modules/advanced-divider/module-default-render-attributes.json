@@ -1,0 +1,183 @@
+{
+    "separator": {
+        "decoration": {
+            "font": {
+                "font": {
+                    "desktop": {
+                        "value": {
+                            "size": "16px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "divider_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "solid"
+            }
+        }
+    },
+    "use_multiple_line": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "line_number": {
+        "innerContent": {
+            "desktop": {
+                "value": "2"
+            }
+        }
+    },
+    "multiple_line_gap": {
+        "innerContent": {
+            "desktop": {
+                "value": "10px"
+            }
+        }
+    },
+    "separetor_type": {
+        "innerContent": {
+            "desktop": {
+                "value": "icon"
+            }
+        }
+    },
+    "title_tag": {
+        "innerContent": {
+            "desktop": {
+                "value": "h3"
+            }
+        }
+    },
+    "lottie_file_options": {
+        "innerContent": {
+            "desktop": {
+                "value": "external"
+            }
+        }
+    },
+    "animation_trigger": {
+        "innerContent": {
+            "desktop": {
+                "value": "none"
+            }
+        }
+    },
+    "stop_on_mouse_out": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "loop": {
+        "innerContent": {
+            "desktop": {
+                "value": "on"
+            }
+        }
+    },
+    "speed": {
+        "innerContent": {
+            "desktop": {
+                "value": "1"
+            }
+        }
+    },
+    "direction_reverse": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "renderer": {
+        "innerContent": {
+            "desktop": {
+                "value": "svg"
+            }
+        }
+    },
+    "use_image_as_icon": {
+        "innerContent": {
+            "desktop": {
+                "value": "off"
+            }
+        }
+    },
+    "image_as_icon_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "30px"
+            }
+        }
+    },
+    "lottie_image_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "80px"
+            }
+        }
+    },
+    "icon_size": {
+        "innerContent": {
+            "desktop": {
+                "value": "30px"
+            }
+        }
+    },
+    "divider_line_color": {
+        "innerContent": {
+            "desktop": {
+                "value": "#2ea3f2"
+            }
+        }
+    },
+    "divider_line_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "3px"
+            }
+        }
+    },
+    "divider_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "100%"
+            }
+        }
+    },
+    "divider_left_line_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "50%"
+            }
+        }
+    },
+    "divider_right_line_width": {
+        "innerContent": {
+            "desktop": {
+                "value": "50%"
+            }
+        }
+    },
+    "divider_line_spacing": {
+        "innerContent": {
+            "desktop": {
+                "value": "0px"
+            }
+        }
+    },
+    "line_placement": {
+        "innerContent": {
+            "desktop": {
+                "value": "center"
+            }
+        }
+    }
+}

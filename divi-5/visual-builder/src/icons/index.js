@@ -1,0 +1,8 @@
+export * as DiviFlashIcon from './diviflash';
+export * as BentoGridIcon from './bento-grid';
+export * as AdvancedButtonIcon from './advanced-button';
+export * as SocialShareIcon from './social-share';
+export * as ImageRevealIcon from './image-reveal';
+export * as AvatarStackIcon from './avatar-stack';
+export * as InlineContentsIcon from './inline-contents';
+export * as ACFGalleryIcon from './acf-gallery';

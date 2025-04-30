@@ -1,0 +1,11 @@
+table.df_dt_content th.df_dt_table_body_column_cell.badge{
+    position: relative;
+}
+table.df_dt_content th.df_dt_table_body_column_cell.badge .table_badge{
+    transform: translateY(-100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: crimson;
+}
+

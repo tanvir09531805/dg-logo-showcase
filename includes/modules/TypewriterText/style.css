@@ -1,0 +1,45 @@
+.df-twt-container .df-twt:not(blockquote) {
+    font-size: 14px;
+    line-height: 1.7em;
+    border: 0px solid;
+}
+blockquote.df-twt {
+    border-left: 5px solid;
+    border-color: #2ea3f2;
+}
+.df-twt .prefix,
+.df-twt .df-twt-element,
+.df-twt .suffix {
+    border: 0px solid;
+}
+.df-twt .prefix,
+.df-twt .df-twt-element,
+.df-twt .suffix,
+.df-twt > div {
+    display: inline-block;
+}
+.df-twt > div {
+    display: inline;
+}
+
+.df-twt-element .Typewriter__cursor {
+    -webkit-animation: blink-animation 1s infinite;
+    animation: blink-animation 1s infinite;
+}
+.Typewriter__wrapper:before {
+    content: ".";
+    display: inline-block;
+    visibility: hidden;
+    width: 0;
+}
+
+@keyframes blink-animation {
+    0% { visibility: hidden; }
+    50% { visibility: visible; }
+    50% { visibility: hidden; }
+}
+@-webkit-keyframes blink-animation {
+    0% { visibility: hidden; }
+    50% { visibility: visible; }
+    50% { visibility: hidden; }
+}

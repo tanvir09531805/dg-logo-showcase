@@ -1,0 +1,17 @@
+{
+  "name": "divi/diviflash5",
+  "autoload": {
+    "psr-4": {
+      "DIVIFLASH5\\": "server/"
+    }
+  },
+  "require": {}
+}
+    "name": "divi/diviflash",
+    "autoload": {
+        "psr-4": {
+            "DIFL\\D5\\Modules\\": "server/Modules/"
+        }
+    },
+    "require": {}
+}

@@ -1,0 +1,190 @@
+.difl-divider-wrapper hr {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+.difl-divider-solid .difl-divider-left hr,
+.difl-divider-solid .difl-divider-right hr {
+    border-top-style: solid;
+}
+.difl-divider-double .difl-divider-left hr,
+.difl-divider-double .difl-divider-right hr {
+    border-top-style: double;
+}
+.difl-divider-dashed .difl-divider-left hr,
+.difl-divider-dashed .difl-divider-right hr {
+    border-top-style: dashed;
+}
+.difl-divider-dotted .difl-divider-left hr,
+.difl-divider-dotted .difl-divider-right hr {
+    border-top-style: dotted;
+}
+.difl-divider-groove .difl-divider-left hr,
+.difl-divider-groove .difl-divider-right hr {
+    border-top-style: groove;
+}
+.difl-divider-ridge .difl-divider-left hr,
+.difl-divider-ridge .difl-divider-right hr {
+    border-top-style: ridge;
+}
+.difl-divider-wrapper-separator {
+    width: 100%;
+    position: relative;
+    display: table;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.difl-divider-wrapper-separator .difl-divider-wrapper-separator-divider {
+    text-align: center;
+    display: block;
+    line-height: 0px;
+}
+.difl-divider-wrapper-separator .difl-divider-wrapper-separator-divider .difl-divider-inner {
+    display: inline-block;
+    width: 400px;
+}
+.difl-divider-wrapper-separator .difl-divider-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+.difl-divider-wrapper-separator .difl-divider-wrapper-separator-divider .difl-divider-left-side hr,
+.difl-divider-wrapper-separator .difl-divider-wrapper-separator-divider .difl-divider-right-side hr {
+    margin: 0;
+    border-top-color: #222;
+    width: 100%;
+    display: inline-block;
+}
+.difl-divider-wrapper-separator .difl-divider-icon-container {
+    text-align: center;
+}
+.difl-divider-wrapper-separator .difl-divider-left,
+.difl-divider-wrapper-separator .difl-divider-right{
+    vertical-align: middle;
+    line-height: 0;
+}
+
+.difl-divider-wrapper-separator .difl-divider-icon-wrap .difl-divider-icon img {
+    display: flex;
+}
+
+.difl-divider-wrapper-separator .difl-divider-icon i,
+.difl-divider-wrapper-separator .difl-divider-icon svg,
+.difl-divider-wrapper-separator .difl-divider-icon-text {
+    margin: 0;
+    border-color: #000;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.difl-divider-shadow .difl-divider-left-side hr,
+.difl-divider-shadow .difl-divider-right-side hr {
+    height: 6px;
+    -webkit-box-shadow: 0 10px 10px -10px #8c8b8b inset;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
+    border: 0 !important;
+}
+.difl-divider-gradient .difl-divider-left-side hr,
+.difl-divider-gradient .difl-divider-right-side hr {
+    height: 3px;
+    background-image: linear-gradient(right, #ca1e1e, #009e42, #1f0000);
+    border: 0 !important;
+}
+.difl-divider-gradient .difl-divider-left-side hr {
+    -webkit-border-top-left-radius: 50%;
+    border-top-left-radius: 50%;
+    -webkit-border-bottom-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+.difl-divider-gradient .difl-divider-right-side hr {
+    -webkit-border-top-right-radius: 50%;
+    border-top-right-radius: 50%;
+    -webkit-border-bottom-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.difl-divider-curvedbot .difl-divider-left-side hr,
+.difl-divider-curvedbot .difl-divider-right-side hr {
+    height: 1em;
+    border-style: solid;
+    border-color: #222;
+    border-width: 1px 0 0 0;
+}
+.difl-divider-curvedbot .difl-divider-left-side hr {
+    -webkit-border-top-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.difl-divider-curvedbot .difl-divider-right-side hr {
+    -webkit-border-top-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.difl-divider-curvedtop .difl-divider-left-side hr,
+.difl-divider-curvedtop .difl-divider-right-side hr {
+    height: 1em;
+    border-style: solid; 
+}
+.difl-divider-curvedtop .difl-divider-left-side hr {
+    -webkit-border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.difl-divider-curvedtop .difl-divider-right-side hr {
+    -webkit-border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.difl-divider-container.difl-divider-curvedtop .difl-divider-left-side hr,
+.difl-divider-container.difl-divider-curvedtop .difl-divider-right-side hr {
+    border-top-width: 0 !important;
+    border-bottom-width: 2px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+.difl_divider .difl-divider-custom .difl-divider-left-side hr,
+.difl_divider .difl-divider-custom .difl-divider-right-side hr {
+    border-style: solid;
+    border-width:0px;
+    border-color:#333;
+}
+.difl_divider .difl-divider-icon{
+    border-style: solid;
+    border-width:0px;
+    border-color:#333;
+}
+.difl_divider .difl-divider-icon img{
+    max-width: 300px;
+    line-height: 0;
+}
+
+/* Default background for shadow, custom , gradient*/
+
+.difl-divider-custom .difl-divider-right-side hr,
+.difl-divider-custom .difl-divider-left-side hr,
+.difl-divider-shadow .difl-divider-right-side hr,
+.difl-divider-shadow .difl-divider-left-side hr,
+.difl-divider-gradient .difl-divider-right-side hr,
+.difl-divider-gradient .difl-divider-left-side hr{
+    background-color: #333;
+}
+.difl_divider .difl-divider-icon-text {
+    padding-bottom: 0;
+}
+
+/* Custom Type and No Icon */
+
+/* default title text style */
+.difl-divider-icon .difl-divider-icon-text{
+    font-size: 16px !important;
+}
+.difl-divider-wrapper-separator .difl-divider-left hr:not(:last-child),
+.difl-divider-wrapper-separator .difl-divider-right hr:not(:last-child){
+    margin-bottom:5px;
+}
+/* .difl-divider-wrapper-separator .difl-divider-left hr:last-child,
+.difl-divider-wrapper-separator .difl-divider-right hr:last-child{
+    margin-bottom:2px;
+} */
+
+/* fixed for builder svg hide*/
+.difl-divider-content-wrapper.icon-type-text .difl-divider-icon svg {
+    display: none;
+}

@@ -1,0 +1,147 @@
+/* .difl_productgrid .df_productgrid_container .df-products-wrap.layout-grid {
+    display: flex;
+    flex-wrap: wrap;
+} */
+.difl_productgrid .df_productgrid_container ul.products {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;   
+}
+
+.difl_productitem {
+    overflow: hidden;
+}
+
+.difl_productgrid .woocommerce ul.products li.product,
+.difl_productgrid .woocommerce-page ul.products li.product{
+    float:none !important;
+    margin: 0px !important;
+}
+.layout-grid ul.products li.product {
+    height: 100%;
+}
+
+.difl_productgrid .difl_productitem.et_pb_module {
+    display: none;
+}
+
+/* Badge */
+.difl_productgrid .woocommerce ul.products li.product span.df-onsale,
+.difl_productgrid .woocommerce-page ul.products li.product span.df-onsale{
+    font-size: 16px;
+    border: 0px solid #333;
+    line-height: 26px;
+}
+
+/* pagination */
+.difl_productgrid .woocommerce nav.woocommerce-pagination{
+    border:none;
+    line-height: 0px;
+
+}
+.difl_productgrid .woocommerce nav.woocommerce-pagination ul{
+    border: 0;
+    margin: 0;
+}
+.difl_productgrid .woocommerce-page .woocommerce-pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.difl_productgrid .woocommerce-page .woocommerce-pagination::after {
+    display: none;
+}
+
+.difl_productgrid .woocommerce .woocommerce-result-count,
+.difl_productgrid .woocommerce .woocommerce-ordering select,
+.difl_productgrid .woocommerce-page nav.woocommerce-pagination .page-numbers{
+    font-size: 14px;
+    color:#333;
+    border:0 solid #333;
+}
+
+.difl_productgrid .woocommerce-page .woocommerce-pagination .page-numbers:last-child {
+    margin-right: 0px !important;
+}
+
+.difl_productgrid .woocommerce nav.woocommerce-pagination ul li a,
+.difl_productgrid .woocommerce nav.woocommerce-pagination ul li span.current,
+.woocommerce nav.woocommerce-pagination ul li span.page-numbers.dots{
+    color:#333;
+    display: block;
+    font-size:14px;
+    border-color: #333;
+    border-style: solid;
+    padding:0px;
+    padding:5px 10px;
+
+}
+
+.difl_productgrid .woocommerce nav.woocommerce-pagination ul li a.page-numbers span{
+    padding:0px
+}
+
+.difl_productgrid .woocommerce nav.woocommerce-pagination ul li{
+    border-right: 0px;
+}
+.difl_productgrid .woocommerce nav.woocommerce-pagination ul li a.page-numbers span.et-pb-icon{
+    display: block !important;
+    font-size: 14px;
+    
+}
+.et_pb_extra_column_main .difl_productgrid .woocommerce nav.woocommerce-pagination ul li a.page-numbers span.et-pb-icon{
+    line-height: inherit;
+}
+
+/* Height Equal */
+.difl_productgrid .layout-grid ul.products li.df-equal-height.product {
+    height: auto !important;
+}
+
+.df-product-outer-wrap{
+    border: 0px solid;
+}
+
+.df-equal-height .df-product-outer-wrap,
+.df-equal-height .df-product-inner-wrap {
+    height: 100%;
+}
+
+.difl_productgrid ul.products li.product.first {
+    padding-left: 0;
+}
+
+.difl_productgrid ul.products li.product.last {
+    padding-right: 0;
+}
+
+/*  Apply for product image in our module */
+.woocommerce ul.products li.product a.df-hover-effect img {
+    margin-bottom: 0px !important;
+}
+
+/*  Apply for product rating in our module */
+.df_productgrid_container .woocommerce .products .star-rating, 
+.df_productgrid_container .woocommerce-page .products .star-rating {
+    margin: 0px !important;
+    display: inline-block;
+}
+
+.difl_productgrid .woocommerce-page ul.products li.product .onsale, 
+.difl_productgrid .woocommerce ul.products li.product .onsale{
+    display: none;
+}
+
+.difl_productgrid .woocommerce ul.products li.product span.df-onsale{
+    padding:5px 5px;
+    position: absolute;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    z-index: 9;   
+    background-color: tomato;
+}
+.difl_productgrid .woocommerce ul.products::after, .woocommerce ul.products::before, 
+.difl_productgrid .woocommerce-page ul.products::after, .woocommerce-page ul.products::before{
+    display: none !important;
+}

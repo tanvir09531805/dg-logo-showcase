@@ -1,0 +1,115 @@
+
+.headline-animation {
+  position: relative;
+  font-size: 24px;
+}
+.headline-animation > span {
+  display: inline-block;
+  vertical-align: middle;
+  border-style: solid;
+  line-height: 1em;
+}
+.headline-animation .infix {
+  box-sizing: content-box;
+}
+.words-wrapper {
+  position: relative;
+  transition: all .3s ease;
+}
+.words-wrapper > span {
+  position: absolute;
+  white-space: nowrap;
+  display: inline-block;
+  left:0;
+}
+.words-wrapper > span.first-element {
+  position: relative;
+} 
+.words-wrapper > span > span{
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+}
+
+/* Type Letter Flip */
+.headline-animation.type-letter-flip .words-wrapper > span > span {
+  transform-origin: 100% 100%;
+}
+
+
+/*******************
+  word animation
+ ******************/
+ .headline-animation.word .words-wrapper {
+  /* perspective: 1000px; */
+  /* -ms-perspective: 1000px; */
+  /* -webkit-perspective: 1000px; */
+   transition: all .3s ease;
+   min-width:5px;
+   -webkit-font-smoothing: antialiased !important;
+ }
+ .headline-animation.word .words-wrapper span:first-child {
+   position: relative;
+ }
+ .headline-animation.word .words-wrapper > span {
+   opacity: 0;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+   -webkit-font-smoothing: antialiased !important;
+   line-height: 1em;
+   font: inherit !important;
+  color:inherit !important;
+  text-decoration: inherit !important;
+ }
+ .headline-animation.type-word-rotate .words-wrapper > span {
+  transform-origin: center bottom;
+ }
+ .position-relative {
+   position: relative !important;
+ }
+ .position-absolute {
+   position:absolute !important;
+ }
+
+ /*******************
+  letter animation
+ ******************/
+ .headline-animation.letter .words-wrapper {
+  perspective: 500px;
+  transition: all .3s ease;
+  min-width:5px;
+}
+.headline-animation.letter .words-wrapper > span {
+  font: inherit !important;
+  line-height: inherit !important;
+  color: inherit !important;
+}
+.headline-animation.letter .words-wrapper > span > span {
+  opacity: 0;
+  font: inherit !important;
+  line-height: inherit !important;
+  color: inherit !important;
+}
+.headline-animation.letter .words-wrapper > span:first-child {
+  position: relative;
+}
+/* Dynamic content fixed*/
+.headline-animation span.prefix span,
+.headline-animation span.suffix span {
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    text-transform: inherit !important;
+    text-align: inherit !important;
+    color: inherit !important;
+    text-shadow: inherit !important;
+    margin-top: initial !important;
+    margin-bottom: initial !important;
+    margin-left: initial !important;
+    margin-right: initial !important;
+    padding-top: initial !important;
+    padding-bottom: initial !important;
+    padding-left: initial !important;
+    padding-right: initial !important;
+}

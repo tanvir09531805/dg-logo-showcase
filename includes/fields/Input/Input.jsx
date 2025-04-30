@@ -6,7 +6,7 @@ import './style.css';
 
 class Input extends Component {
 
-  static slug = 'dgls_input';
+  static slug = 'myex_input';
 
   /**
    * Handle input value change.
@@ -20,11 +20,11 @@ class Input extends Component {
   render() {
     return(
       <input
-        id={`dgls-input-${this.props.name}`}
+        id={`myex-input-${this.props.name}`}
         name={this.props.name}
         value={this.props.value}
         type='text'
-        className='dgls-input'
+        className='myex-input'
         onChange={this._onChange}
         placeholder='Your text here ...'
       />

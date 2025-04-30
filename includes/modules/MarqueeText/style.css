@@ -1,0 +1,52 @@
+.difl_marqueetext .df_marqueetext_wrapper {
+  overflow: hidden;
+}
+
+.difl_marqueetext .difl_marqueetextitem {
+  display: inline-block;
+}
+
+.difl_marqueetext .difl_marqueetextitem.et_pb_module {
+  margin-bottom: 0%;
+}
+
+.difl_marqueetext .df_marquee_list,
+.difl_marqueetext .df_marquee_text {
+  display: flex;
+  align-items: center;
+}
+
+.difl_marqueetext .df_marquee_text>*:not(.df_marquee_text_icon) {
+  margin: 0px 10px 0px 10px;
+  color: #333;
+  line-height: 1.7em;
+  padding-bottom: 0;
+}
+
+.difl_marqueetext .df_marquee_text.enable_text_clip>*:not(.df_marquee_media) {
+  -webkit-text-fill-color: transparent;
+}
+
+.difl_marqueetext .df_marquee_text .df_marquee_media {
+  border-width: 0px;
+  border-style: solid;
+  border-color: #333;
+  line-height: 1;
+  text-align: center;
+}
+
+.difl_marqueetext .df_marquee_text .df_marquee_media>* {
+  vertical-align: middle;
+}
+
+.difl_marqueetext .df_marquee_text .df_marquee_text_img {
+  width: 20px;
+}
+
+.difl_marqueetext .df_marquee_notice {
+  display: block;
+  background-color: #eeeeee;
+  padding: 10px 20px;
+  text-align: center;
+  width: auto;
+}

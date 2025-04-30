@@ -1,0 +1,82 @@
+.btn-repeater-add { 
+    width: 100%;
+    padding: 9px 0;
+    background: transparent;
+    cursor: pointer;
+}
+.repeater-item {
+    margin: 10px 0;
+}
+.repeater-item .repeater-item-heading{
+    padding: 11px 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f1f5f9;
+    border: none !important;
+}
+.repeater-item .repeater-item-content {
+    padding: 11px 25px;
+    margin: 10px 0;
+    border: 1px solid #ebebeb !important;
+}
+.repeater-item-content .content-heading {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.repeater-settings {
+    padding: 0 0 15px;
+}
+.repeater-item-content .content-heading .close{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.repeater-item-content .content-heading .close:before{
+    right: 0;
+    font-size: 16px;
+    color: #b5b5b5;
+    top: 50%;
+    margin-top: -.5em;
+    font-family: ETmodules !important;
+    font-weight: 400 !important;
+    content: "\4d" !important;
+}
+.repeater-item .expend-button:before {
+    right: 0;
+    font-size: 16px;
+    color: #b5b5b5;
+    top: 50%;
+    margin-top: -.5em;
+    font-family: ETmodules !important;
+    font-weight: 400 !important;
+    content: "\33" !important;
+}
+.repeater-item .delete-button,
+.repeater-item .expend-button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.repeater-item .delete-button:before {
+    right: 0;
+    font-size: 16px;
+    color: #b5b5b5;
+    top: 50%;
+    margin-top: -.5em;
+    font-family: ETmodules !important;
+    font-weight: 400 !important;
+    content: "\e019"!important;
+}
+.setting-label {
+    display: block;
+    color: #32373c;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    white-space: nowrap;
+    cursor: default;
+}

@@ -1,0 +1,94 @@
+.difl_hoverbox {
+    overflow: hidden;
+    display: flex;
+}
+.difl_hoverbox > div {
+    width: 100%;
+    height: auto;
+}
+.df_hb_container {
+    height: 100%;
+    position: relative;
+}
+.difl_hoverbox .df_hb_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.difl_hoverbox .df_hb_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.difl_hoverbox .title {
+    font-size: 22px;
+    border-style: solid;
+    border-width: 0px;
+    padding-bottom: 0px;
+}
+.difl_hoverbox .subtitle {
+    font-size: 18px;
+    border-style: solid;
+    border-width: 0px;
+    padding-bottom: 0px;
+}
+.difl_hoverbox .content {
+    font-size: 14px;
+    line-height: 1.7em;
+    border-style: solid;
+    border-width: 0px;
+}
+.difl_hoverbox span {
+    display: inline-block;
+}
+.df_hb_button {
+    display: inline-block;
+    border-style: solid;
+    border-width: 0px;
+}
+
+/* hover */
+.difl_hoverbox .df_hb_background {
+    transform: scale(1);
+    transition: all .3s cubic-bezier(.57,.21,.69,1);
+}
+.difl_hoverbox:hover .df_hb_background {
+    /* transform: scale(1.1); */
+}
+/* .df_hb_container .hb_content_container {
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all .3s cubic-bezier(.57,.21,.69,1);
+}
+.difl_hoverbox:hover .hb_content_container {
+    transform: translateY(0px);
+    opacity: 1;
+} */
+.df_hb_def_content {
+    transition: all .3s cubic-bezier(.57,.21,.69,1);
+    opacity: 1;
+    transform: translateY(0px);
+}
+.df_hb_def_content_hover {
+    transition: all .3s cubic-bezier(.57,.21,.69,1);
+    opacity: 0;
+    transform: translateY(60px);
+    position: absolute;
+    width: 100%;
+}
+.difl_hoverbox .df_hb_container.hover .df_hb_def_content,
+.difl_hoverbox:hover .df_hb_def_content {
+    opacity: 0;
+    transform: translateY(60px);
+}
+.difl_hoverbox .df_hb_container.hover .df_hb_def_content_hover,
+.difl_hoverbox:hover .df_hb_def_content_hover {
+    opacity: 1;
+    transform: translateY(0px);
+}

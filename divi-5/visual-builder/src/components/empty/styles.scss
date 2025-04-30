@@ -1,0 +1,16 @@
+.difl__empty{
+  width: 100%;
+  height: auto;
+  background: rgba(121, 54, 255, 0.1);
+  border-radius: 4px;
+  padding: 10px 40px 10px 40px;
+
+  &__message{
+    &__text{
+      font-size: 18px;
+      font-weight: 600;
+      font-family: inherit;
+      color: rgba(121, 54, 255, 1);
+    }
+  }
+}

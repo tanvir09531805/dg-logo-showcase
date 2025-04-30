@@ -1,0 +1,290 @@
+
+.difl_postlistitem {
+    overflow: hidden;
+}
+.df-postlist-featured-image {
+    display: flex;
+    align-items: center;
+}
+.difl_postlist .df-post-item.equal-height,
+.difl_postlist .df-post-item.equal-height > div {
+    align-items: stretch !important;
+}
+.df-postlist-featured-image .df-post-image-wrap {
+    flex-basis: 100%;
+}
+.df-postlist-featured-image img{
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+.difl_postlist .df-post-title {
+    font-size: 22px;
+    line-height: 1.5em;
+}
+.df-pl-icon {
+    font-family: ETmodules;
+    speak: none;
+    font-weight: 400;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 30px;
+    font-style: normal;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    border: 0px solid;
+}
+/* equal height */
+.difl_postlist .equal-height .df-post-image-wrap {
+    height: 100%;
+}
+.difl_postlist .equal-height .df-post-image-wrap a {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.difl_postlist .df-post-item.equal-height .df-postlist-featured-image a {
+    min-height: 250px;
+}
+/* layout */
+.difl_postlist {
+    --collapse-value: 50px;
+    --align-items: stretch;
+    --flex-direction: row;
+    --order-2: 2;
+    --image-col-size: 50%;
+    --gap: 30px;
+}
+.difl_postlist .df-posts-wrap {
+    display: flex;
+    flex-direction: column;
+    gap:var(--gap);
+}
+.difl_postlist .df-post-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: var(--flex-direction);
+    align-items: var(--align-items);
+    border: 0px solid;
+}
+.difl_postlist .df-post-item.has-icon {
+    align-items: flex-start;
+}
+.difl_postlist .df-postlist-featured-image {
+    width: var(--image-col-size);
+}
+.difl_postlist .df-post-outer-wrap {
+    width: calc(100% - var(--image-col-size));
+}
+.difl_postlist .no-thumbnail .df-post-outer-wrap {
+    width: 100%;
+}
+.difl_postlist .df-posts-wrap.list-layout-2 .df-postlist-featured-image {
+    order: var(--order-2);
+}
+.difl_postlist .df-posts-wrap.list-layout-3 .df-post-item:nth-child(even) .df-postlist-featured-image {
+    order: var(--order-2);
+}
+.difl_postlist .df-post-item.layout-collapse .df-postlist-featured-image {
+    z-index: 1;
+}
+.difl_postlist .df-post-item.layout-collapse .df-post-outer-wrap {
+    z-index: 2;
+    position: relative;
+}
+/* collapse */
+.difl_postlist .df-posts-wrap.list-layout-1 .df-post-item.layout-collapse > div:nth-child(odd) {
+    transform: translateX(var(--collapse-value));
+}
+.difl_postlist .df-posts-wrap.list-layout-1 .df-post-item.layout-collapse > div:nth-child(even) {
+    transform: translateX(calc(var(--collapse-value) * -1));
+}
+.difl_postlist .df-posts-wrap.list-layout-2 .df-post-item.layout-collapse > div:nth-child(odd) {
+    transform: translateX(calc(var(--collapse-value) * -1));
+}
+.difl_postlist .df-posts-wrap.list-layout-2 .df-post-item.layout-collapse > div:nth-child(even) {
+    transform: translateX(var(--collapse-value));
+}
+.difl_postlist .df-posts-wrap.list-layout-3 .df-post-item.layout-collapse:nth-child(even) .df-postlist-featured-image, .difl_postlist .df-posts-wrap.list-layout-3 .df-post-item.layout-collapse:nth-child(odd) .df-post-outer-wrap {
+    transform: translateX(calc(var(--collapse-value) * -1));
+}
+.difl_postlist .df-posts-wrap.list-layout-3 .df-post-item.layout-collapse:nth-child(odd) .df-postlist-featured-image, .difl_postlist .df-posts-wrap.list-layout-3 .df-post-item.layout-collapse:nth-child(even) .df-post-outer-wrap {
+    transform: translateX(var(--collapse-value));
+}
+
+.difl_postlist .difl_postlistitem.et_pb_module {
+    display: none;
+}
+.df-postlist-bg-on-hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+.df-postlist-bg-on-hover > div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scale(1);
+    transition: transform 1.3s ease;
+    z-index: -1;
+}
+.df-hover-trigger:hover .df-postlist-bg-on-hover > div {
+    transform: scale(1.5);
+}
+/* pagination */
+.difl_postlist .df-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.difl_postlist .df-pagination::after {
+    display: none;
+}
+.difl_postlist .df-pagination .page-numbers {
+    font-size: 16px;
+    border: 0px solid;
+    margin-right: 10px;
+}
+.difl_postlist .df-pagination .page-numbers:last-child {
+    margin-right: 0px !important;
+}
+.difl_postlist .df-pagination a.older::before,
+.difl_postlist .df-pagination a.prev::before  {
+    font-family: 'ETmodules';
+    content: '4';
+    speak: none;
+    font-weight: normal;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    margin-right: 5px;
+}
+.difl_postlist .df-pagination a.newer::after,
+.difl_postlist .df-pagination a.next::after {
+    font-family: 'ETmodules';
+    content: '5';
+    speak: none;
+    font-weight: normal;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    margin-left: 5px;
+}
+.difl_postlist .df-postlist-featured-image .df-item-wrap {
+    margin-bottom: 0;
+}
+.difl_postlist .df-post-outer-wrap{
+    border: 0px solid;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+.difl_postlist .df-post-inner-wrap {
+    flex-basis: 100%;
+}
+.difl_postlist .df-item-wrap {
+    margin-bottom: 10px;
+}
+.df-item-wrap {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.difl_postlist .df-postlist-featured-image .df-item-wrap {
+    margin-bottom: 0;
+}
+
+/* hover scale animation */
+.difl_postlist .df-post-item .df-postlist-featured-image a {
+    transition: all .3s;
+}
+.difl_postlist .df-post-item:hover .df-postlist-featured-image .df-image-zoom-in {
+    transform: scale(1.25);
+}
+.difl_postlist .df-postlist-featured-image .df-image-zoom-out {
+    transform: scale(1.25);
+}
+.difl_postlist .df-post-item:hover .df-postlist-featured-image .df-image-zoom-out {
+    transform: scale(1);
+}
+.difl_postlist .df-postlist-featured-image .df-image-pan-up {
+    transform-origin: top;
+    transform: scale(1.2) translate(0, 0);
+}
+.difl_postlist .df-post-item:hover .df-postlist-featured-image .df-image-pan-up {
+    transform: scale(1.2) translate(0, -15%);
+}
+.difl_postlist .df-postlist-featured-image .df-image-pan-down {
+    transform-origin: bottom;
+    transform: scale(1.2) translate(0, 0);
+}
+.difl_postlist .df-post-item:hover .df-postlist-featured-image .df-image-pan-down {
+    transform: scale(1.2) translate(0, 15%);
+}
+.difl_postlist .df-postlist-featured-image .df-image-pan-left {
+    transform-origin: left;
+    transform: scale(1.2) translate(0, 0);
+}
+.difl_postlist .df-post-item:hover .df-postlist-featured-image .df-image-pan-left {
+    transform: scale(1.2) translate(-15%, 0);
+}
+.difl_postlist .df-image-pan-right {
+    transform-origin: right;
+    transform: scale(1.2) translate(0, 0);
+}
+.difl_postlist .df-post-item:hover .df-postlist-featured-image .df-image-pan-right {
+    transform: scale(1.2) translate(15%, 0);
+}
+.difl_postlist .df-post-item:hover .df-postlist-featured-image .df-image-blur {
+    filter: blur(4px);
+    transform: scale(1.1);
+}
+.difl_postlist .df-postlist-featured-image .df-image-rotate-left {
+    transform: scale(1) translate(0, 0);
+}
+.difl_postlist .df-post-item:hover .df-postlist-featured-image .df-image-rotate-left {
+    transform: scale(1.5) rotate(-15deg);
+}
+.difl_postlist .df-postlist-featured-image .df-image-rotate-right {
+    transform: scale(1) translate(0, 0);
+}
+.difl_postlist .df-post-item:hover .df-postlist-featured-image .df-image-rotate-right {
+    transform: scale(1.5) rotate(15deg);
+}
+
+/* post auther */
+.difl_postlist .df-post-author-wrap .author-image {
+    display: flex;
+    align-items: center;
+}

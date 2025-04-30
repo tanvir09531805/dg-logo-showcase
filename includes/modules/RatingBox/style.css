@@ -1,0 +1,121 @@
+/* Border */
+.difl_ratingbox .df_rating_box_container * {
+  border-width: 0px;
+  border-style: solid;
+  border-color: #333;
+}
+
+.df_rating_wrapper{
+  box-sizing: border-box;
+}
+
+/* Icon */
+.difl_ratingbox .df_rating_icon {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.difl_ratingbox .df_rating_icon span.et-pb-icon{
+  margin-top: -5px;
+  line-height: 1em;
+  font-size: 30px;
+}
+
+/* Inactive */
+.difl_ratingbox span.df_rating_icon_fill,
+.difl_ratingbox span.df_rating_icon_empty {
+  display: inline-block;
+  position: relative;
+  font-style: normal;
+  cursor: default;
+}
+
+.difl_ratingbox .df_rating_icon span.df_rating_icon_fill::before {
+  content: "★";
+  display: block;
+  font-family: inherit;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.difl_ratingbox .df_rating_icon span.df_fill_1::before,
+.difl_ratingbox .df_rating_icon span.df_fill_9::after {
+  width: 10% !important;
+}
+.difl_ratingbox .df_rating_icon span.df_fill_2::before,
+.difl_ratingbox .df_rating_icon span.df_fill_8::after {
+  width: 20% !important;
+}
+.difl_ratingbox .df_rating_icon span.df_fill_3::before,
+.difl_ratingbox .df_rating_icon span.df_fill_7::after {
+  width: 30% !important;
+}
+.difl_ratingbox .df_rating_icon span.df_fill_4::before,
+.difl_ratingbox .df_rating_icon span.df_fill_6::after {
+  width: 40% !important;
+}
+.difl_ratingbox .df_rating_icon span.df_fill_5::before,
+.difl_ratingbox .df_rating_icon span.df_fill_5::after {
+  width: 50% !important;
+}
+.difl_ratingbox .df_rating_icon span.df_fill_6::before,
+.difl_ratingbox .df_rating_icon span.df_fill_4::after {
+  width: 60% !important;
+}
+.difl_ratingbox .df_rating_icon span.df_fill_7::before,
+.difl_ratingbox .df_rating_icon span.df_fill_3::after {
+  width: 70% !important;
+}
+.difl_ratingbox .df_rating_icon span.df_fill_8::before,
+.difl_ratingbox .df_rating_icon span.df_fill_2::after {
+  width: 80% !important;
+}
+.difl_ratingbox .df_rating_icon span.df_fill_9::before,
+.difl_ratingbox .df_rating_icon span.df_fill_1::after {
+  width: 90% !important;
+}
+
+.difl_ratingbox .df_rating_icon span.df_rating_icon_empty::after {
+  content: "☆";
+  display: block;
+  font-family: inherit;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+  right: 0px !important;
+  left: auto !important;
+}
+
+
+/* Rating number */
+.difl_ratingbox .df_rating_number {
+  color: #000;
+  margin: 0px 5px;
+  line-height: 1m;
+  font-size: 20px;
+}
+
+/* Title & Content */
+.difl_ratingbox .df_rating_box_container .df_rating_wrapper .df_rating_title {
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.7em;
+  padding-bottom: 0px;
+}
+.difl_ratingbox .df_rating_box_container .df_rating_content {
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.7em;
+}
+.difl_ratingbox .df_rating_box_container .df_rating_content p {
+  padding-bottom: 0px;
+}
+
+.difl_ratingbox .df_rating_box_container .df_rating_content ul{
+  list-style-position: inside;
+  padding: 0px;
+}

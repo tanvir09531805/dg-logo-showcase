@@ -1,0 +1,531 @@
+/* image hover */
+.df-products-outer-wrap.c4-izmir {
+    display: block;
+}
+
+.df-products-image-wrap {
+    overflow: hidden;
+}
+
+/* hover styles */
+.df-hover-effect {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    /* border-radius: 3px; */
+    display: block;
+}
+
+.df-hover-effect *,
+.df-hover-effect :after,
+.df-hover-effect :before,
+.df-hover-effect:after,
+.df-hover-effect:before {
+    box-sizing: border-box;
+    transition: all 0.6s ease !important;
+}
+
+.df-hover-effect figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+    z-index: 1;
+}
+
+.df-hover-effect img {
+    object-fit: cover;
+    max-width: 100%;
+    /* width: 100%; */
+    height: 100%;
+}
+
+.df-hover-trigger:focus .df-image-zoom-in img,
+.df-hover-trigger:hover .df-image-zoom-in img,
+:focus > .df-image-zoom-in img {
+    transform: scale(1.25);
+}
+
+.df-image-zoom-out img {
+    transform: scale(1.25);
+}
+
+.df-hover-trigger:focus .df-image-zoom-out img,
+.df-hover-trigger:hover .df-image-zoom-out img,
+:focus > .df-image-zoom-out img {
+    transform: scale(1);
+}
+
+.df-image-pan-up img {
+    transform-origin: top;
+    transform: scale(1.2) translate(0, 0);
+}
+
+.df-hover-trigger:focus .df-image-pan-up img,
+.df-hover-trigger:hover .df-image-pan-up img,
+:focus > .df-image-pan-up img {
+    transform: scale(1.2) translate(0, -15%);
+}
+
+.df-image-pan-down img {
+    transform-origin: bottom;
+    transform: scale(1.2) translate(0, 0);
+}
+
+.df-hover-trigger:hover .df-image-pan-down img,
+:focus > .df-image-pan-down img {
+    transform: scale(1.2) translate(0, 15%);
+}
+
+.df-image-pan-left img {
+    transform-origin: left;
+    transform: scale(1.2) translate(0, 0);
+}
+
+.df-hover-trigger:focus .df-image-pan-left img,
+.df-hover-trigger:hover .df-image-pan-left img,
+:focus > .df-image-pan-left img {
+    transform: scale(1.2) translate(-15%, 0);
+}
+
+.df-image-pan-right img {
+    transform-origin: right;
+    transform: scale(1.2) translate(0, 0);
+}
+
+.df-hover-trigger:focus .df-image-pan-right img,
+.df-hover-trigger:hover .df-image-pan-right img,
+:focus > .df-image-pan-right img {
+    transform: scale(1.2) translate(15%, 0);
+}
+
+.df-hover-trigger:focus .df-image-blur img,
+.df-hover-trigger:hover .df-image-blur img,
+:focus > .df-image-blur img {
+    filter: blur(4px);
+    transform: scale(1.1);
+}
+
+.df-image-rotate-left img {
+    transform: scale(1.1) translate(0, 0);
+}
+
+.df-hover-trigger:focus .df-image-rotate-left img,
+.df-hover-trigger:hover .df-image-rotate-left img,
+:focus > .df-image-rotate-left img {
+    transform: scale(1.3) rotate(-15deg);
+}
+
+.df-image-rotate-right img {
+    transform: scale(1.1) translate(0, 0);
+}
+
+.df-hover-trigger:focus .df-image-rotate-right img,
+.df-hover-trigger:hover .df-image-rotate-right img,
+:focus > .df-image-rotate-right img {
+    transform: scale(1.3) rotate(15deg);
+}
+
+.df-hover-effect .df-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.df-hover-trigger:hover .df-hover-effect .df-overlay,
+:focus > .df-hover-trigger .df-hover-effect .df-overlay {
+    opacity: 1;
+}
+
+.df-icon-overlay{
+    font-family: 'ETmodules';
+    speak: none;
+    font-weight: normal;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    opacity: 0;
+    font-size: 35px;
+}
+
+.df-icon-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+    z-index: 1;
+}
+
+/* icon reveal */
+.df-fade-up {
+    transform: translateY(1.5rem);
+}
+
+.df-fade-down {
+    transform: translateY(-1.5rem);
+}
+
+.df-fade-left {
+    transform: translateX(1.5rem);
+}
+
+.df-fade-right {
+    transform: translateX(-1.5rem);
+}
+
+.df-hover-trigger:hover .df-icon-overlay{
+    opacity: 1;
+    transform: translate(0);
+}
+
+.df-rotate-up-right {
+    transform-origin: bottom left;
+    transform: rotate(90deg);
+}
+
+.df-rotate-up-left {
+    transform-origin: bottom right;
+    transform: rotate(-90deg);
+}
+
+.df-rotate-down-right {
+    transform-origin: top left;
+    transform: rotate(-90deg);
+}
+
+.df-rotate-down-left {
+    transform-origin: top right;
+    transform: rotate(90deg);
+}
+
+.df-zoom-in {
+    transform: scale(.3);
+}
+
+.df-hover-trigger:hover .df-icon-overlay{
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* icon */
+.df-item-wrap .et-pb-icon {
+    margin-right: 4px;
+}
+/* Image as icon */
+.woocommerce ul.products li.product .df-item-wrap a img.df_product_icon_image {
+    margin-bottom: 0px !important;
+}
+.woocommerce ul.products li.product .df-item-wrap.only_icon_in_cart a img.df_product_icon_image{
+   /* margin: 0 auto!important; */
+}
+/* read more */
+.df-products-read-more { 
+    display: block; 
+}
+
+.df-products-read-more span {
+    vertical-align: middle;
+}
+
+/* default spacing */
+.df-products-categories-wrap,
+.df-products-tags-wrap,
+.df-products-title-wrap, 
+.df-products-image-wrap, 
+.df-products-content-wrap, 
+.df-products-button-wrap,
+.df-products-custom-text {
+    margin-bottom: 12px;
+}
+
+/* meta icon */
+.df_productgrid_container .df-item-wrap .et-pb-icon{
+    /* font-family: ETmodules !important; */
+    display: inline-block;
+}
+.df_productgrid_container .df-item-wrap:not(.df-products-button-wrap) .et-pb-icon {
+    vertical-align: middle;
+}
+
+.df-hide-overlay {
+    opacity: 0;
+}
+
+.df-product-outer-wrap > .et_main_video_container {
+    position: relative;
+}
+
+/* common */
+.df-product-outer-wrap {
+    position: relative;
+}
+
+.df-item-wrap {
+    overflow: hidden;
+}
+
+.df-item-wrap,
+.df-product-inner-wrap {
+    border: 0px solid;
+}
+
+.df-product-inner-wrap {
+    z-index: 1;
+}
+
+.df-product-inner-wrap,
+.df-product-outer-wrap {
+    overflow: hidden;
+}
+
+.df-product-title {
+    padding-bottom: 0px;
+}
+
+.df-product-title-wrap,
+.df-product-image-wrap,
+.df-product-content-wrap,
+.df-product-button-wrap,
+.df-product-read-more,
+.df-product-custom-text,
+.df-product-categories-wrap {
+    position: relative;
+    border: 0px solid;
+}
+.df-product-image-wrap{
+    overflow: visible;
+}
+
+.df-product-ele-divider {
+    position: relative;
+    border: 0px solid;
+    height: 3px;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.df-empty-element {
+    display: none;
+}
+
+/*remove default add to cart style */
+
+.df-item-wrap.df-product-add-to-cart-wrap a.add_to_cart_button:after{
+    content:''
+}
+
+.df-product-add-to-cart-wrap a.button.add_to_cart_button img {
+    /* max-width: 10%; */
+    position: relative;
+    /* float: right; */
+}
+.woocommerce-page .df-product-add-to-cart-wrap a.button.add_to_cart_button,
+.woocommerce .df-product-add-to-cart-wrap a.button.add_to_cart_button{
+    display: inline-block;
+    width: 100%;
+    color: #666;
+    background:transparent;
+    line-height: 1.7em;
+    padding: 0 3px;
+    font-size:14px;
+    margin-top: 0px;
+    margin-bottom:0px;
+    border-width: 0px;
+    border-color:#333;
+    border-radius: 0;
+}
+
+.woocommerce-page .df-product-add-to-cart-wrap a.button.add_to_cart_button:hover
+.woocommerce .df-product-add-to-cart-wrap a.button.add_to_cart_button:hover{
+    padding:0px 0px;
+    background:transparent;
+    border:0px;
+}
+.df-item-wrap a.df_button{
+    display: inline-block;
+    padding:0 3px;
+    line-height: 1.7em;
+}
+
+.df-product-add-to-cart-wrap a.button.add_to_cart_button{
+    overflow: visible !important;
+}
+.woocommerce ul.products li.product .df-product-outer-wrap .button{
+    margin-top: 0px;
+ }
+ .df-item-wrap.df-product-custom-text,
+ .df-item-wrap.df-product-categories-wrap,
+ .df-item-wrap.df-product-tags-wrap,
+ .df-item-wrap.df-product-price-wrap,
+ .df-item-wrap.df-product-rating-wrap{
+     padding:3px 3px;
+ }
+
+ 
+.df-product-title,
+.df-product-title a,
+.df-item-wrap > span:not(.et-pb-icon , .df-sale-badge),
+.df-item-wrap a,
+.df-item-wrap,
+.df-item-wrap p, 
+.df-product-read-more, 
+.df-product-custom-text,
+.woocommerce ul.products li.product .df-item-wrap.df-product-price-wrap .df-product-price.price,
+.df-item-wrap.df-product-add-to-cart-wrap a.add_to_cart_button.df_button,
+.woocommerce ul.products li.product .price ins{
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+}
+.woocommerce ul.products li.product .df-item-wrap.df-product-price-wrap .df-product-price.price{
+    color: inherit !important;
+}
+.df-product-title,
+.df-product-title a,
+.df-item-wrap > span:not(.et-pb-icon , .df-sale-badge),
+.df-item-wrap a,
+.df-item-wrap,
+.df-item-wrap p, 
+.df-product-read-more, 
+.df-product-custom-text,
+.woocommerce ul.products li.product .df-item-wrap.df-product-price-wrap .df-product-price.price,
+.df-item-wrap.df-product-add-to-cart-wrap a.add_to_cart_button.df_button{
+    font-family: inherit;
+}
+.woocommerce ul.products li.product .df-product-title.woocommerce-loop-product__title,
+.woocommerce ul.products li.product h3.df-product-title{
+     padding:0px;
+}
+
+.df-product-inner-wrap span.after-sale-text{
+    margin-left:5px;
+}
+/* Ajax Add to cart apply */
+.woocommerce .df-product-add-to-cart-wrap a.added_to_cart,
+.woocommerce-page .df-product-add-to-cart-wrap a.added_to_cart{
+    padding-top: 0px;
+    transition: all 1s ease-out;
+    padding: 0 3px;
+}
+.woocommerce-page .df-product-add-to-cart-wrap a.button.add_to_cart_butto.added,
+.woocommerce .df-product-add-to-cart-wrap a.button.add_to_cart_button.added{
+    display:none;
+}
+
+.woocommerce-page .df-product-add-to-cart-wrap.placement_right:not(.only_icon_in_cart) a.added_to_cart.wc-forward::after,
+.woocommerce .df-product-add-to-cart-wrap.placement_right:not(.only_icon_in_cart) a.added_to_cart.wc-forward::after{
+    font-family: fontAwesome;
+    content: "\f06e";
+    vertical-align: middle;
+    visibility: visible;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.woocommerce-page .df-product-add-to-cart-wrap.placement_left:not(.only_icon_in_cart) a.added_to_cart.wc-forward::before,
+.woocommerce .df-product-add-to-cart-wrap.placement_left:not(.only_icon_in_cart) a.added_to_cart.wc-forward::before{
+    font-family: fontAwesome;
+    content: "\f06e";
+    vertical-align: middle;
+    visibility: visible;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+.woocommerce-page .df-product-add-to-cart-wrap.only_icon_in_cart a.added_to_cart.wc-forward,
+.woocommerce .df-product-add-to-cart-wrap.only_icon_in_cart a.added_to_cart.wc-forward{
+    visibility: hidden;
+    font-size: 0px;
+    display: inherit;
+    vertical-align: middle;
+    /* overflow: hidden; */
+    /* height: 30px; */
+}
+
+.woocommerce-page .df-product-add-to-cart-wrap.only_icon_in_cart a.added_to_cart.wc-forward::after,
+.woocommerce .df-product-add-to-cart-wrap.only_icon_in_cart a.added_to_cart.wc-forward::after{
+    font-family: fontAwesome;
+    content: "\F06E";
+    position: relative;
+    line-height: inherit;
+    vertical-align: middle;
+    visibility: visible;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.df-item-wrap.df-product-add-to-cart-wrap.only_icon_in_cart {
+    position: relative;
+}
+.difl_product_carousel .woocommerce ul.products,
+.difl_product_grid .woocommerce ul.products {
+   margin-bottom: 0px;
+}
+
+/* Float Effect */
+.df-product-outer-wrap:before,
+.df-product-inner-wrap::before,
+.df-product-outer-wrap:after,
+.df-product-inner-wrap::after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+/* Image bottom gap issue fix */
+.df-item-wrap.df-product-image-wrap{
+    line-height:0 !important;
+}
+
+/* Extra Theme conflict issues fixed*/
+
+.difl_productgrid .et_pb_extra_overlay {
+    display: none;
+}
+.difl_product_carousel .et_pb_extra_overlay {
+    display: none;
+}

@@ -1,0 +1,303 @@
+/* Button styles */
+.df_fb_button {
+    border-style: solid;
+    border-width: 0px;
+    display: inline-block;
+    padding: 7px 15px;
+    /* border: 2px solid #333; */
+    font-size: 16px;
+}
+.df_fb_front,
+.df_fb_back,
+.df_fb_image_container img {
+    border-style: solid;
+    border-width: 0px;
+}
+.df_fb_image_container img {
+    vertical-align: top;
+}
+.df_flipbox_container {
+    display: flex;
+    transition: z-index, transform .3s;
+    text-decoration: none;
+    z-index: 0;
+    perspective: 1000px;
+}
+.df_flipbox_body {
+    flex: 1;
+    display: flex;
+    transform-style: preserve-3d;
+    max-width: 100%;
+}
+.df_fb_front, 
+.df_fb_back {
+    display: flex;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    min-width: 100%;
+    max-width: 100%;
+    border-width:0;
+}
+.df_fb_front .fb_inner, 
+.df_fb_back .fb_inner{
+    display: flex;
+    box-sizing: border-box;
+    min-width: 100%;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-width:0;
+    align-items: flex-start;
+}
+.df_fb_front .fb_inner > *, 
+.df_fb_back .fb_inner > * {
+    min-width: 100%;
+}
+
+
+/*******************************
+====== rotate animation
+********************************/
+/* left */
+.df_flipbox_container.rotate_left .df_fb_back {
+    transform: translateX(-100%) rotateY(180deg);
+}
+.df_flipbox_container.rotate_left:hover .df_fb_front,
+.df_flipbox_container.rotate_left.hover .df_fb_front {
+    transform: rotateY(-180deg);
+}
+.df_flipbox_container.rotate_left:hover .df_fb_back,
+.df_flipbox_container.rotate_left.hover .df_fb_back {
+    transform: translateX(-100%) rotateY(0);
+}
+/* right */
+.df_flipbox_container.rotate_right .df_fb_back {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+.df_flipbox_container.rotate_right:hover .df_fb_front,
+.df_flipbox_container.rotate_right.hover .df_fb_front {
+    transform: rotateY(180deg);
+}
+.df_flipbox_container.rotate_right:hover .df_fb_back,
+.df_flipbox_container.rotate_right.hover .df_fb_back {
+    transform: translateX(-100%) rotateY(0);
+}
+/* up */
+.df_flipbox_container.rotate_up .df_fb_back {
+    transform: translatex(-100%) rotateX(-180deg);
+}
+.df_flipbox_container.rotate_up.hover .df_fb_front,
+.df_flipbox_container.rotate_up:hover .df_fb_front {
+    transform: rotateX(180deg);
+}
+.df_flipbox_container.rotate_up:hover .df_fb_back,
+.df_flipbox_container.rotate_up.hover .df_fb_back {
+    transform: translatex(-100%) rotateX(0);
+}
+/* down */
+.df_flipbox_container.rotate_down .df_fb_back {
+    transform: translatex(-100%) rotateX(180deg);
+}
+.df_flipbox_container.rotate_down.hover .df_fb_front,
+.df_flipbox_container.rotate_down:hover .df_fb_front {
+    transform: rotateX(-180deg);
+}
+.df_flipbox_container.rotate_down:hover .df_fb_back,
+.df_flipbox_container.rotate_down.hover .df_fb_back {
+    transform: translatex(-100%) rotateX(0);
+}
+/* Floating effect */
+/* .df_flipbox_container.rotate.fb_floating_content .df_fb_front,
+.df_flipbox_container.rotate.fb_floating_content .df_fb_front .fb_inner,
+.df_flipbox_container.rotate.fb_floating_content .df_fb_back,
+.df_flipbox_container.rotate.fb_floating_content .df_fb_back .fb_inner
+{
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+} */
+.df_flipbox_container.rotate.fb_floating_content * {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+/*******************************
+====== slide animation
+********************************/
+.df_flipbox_container.slide .df_fb_back{
+    transition: all .6s ease-in-out;
+}
+/* slide left */
+.df_flipbox_container.slide.slide_left.hover .df_fb_back,
+.df_flipbox_container.slide.slide_left:hover .df_fb_back {
+    transform: translateX(-100%);
+    z-index: 2;
+}
+
+/* Handle title overlap*/
+
+.df_flipbox_container.slide:hover .df_fb_front .title, .df_flipbox_container.fade:hover .df_fb_front .title{
+    visibility: hidden;
+}
+/* slide right */
+.df_flipbox_container.slide.slide_right .df_fb_back {
+    transform: translateX(-201%);
+}
+.df_flipbox_container.slide.slide_right.hover .df_fb_back,
+.df_flipbox_container.slide.slide_right:hover .df_fb_back {
+    transform: translateX(-100%);
+    z-index: 2; 
+}
+/* slide up */
+.df_flipbox_container.slide.slide_up .df_fb_back {
+    transform: translateX(-100%) translateY(101%);
+}
+.df_flipbox_container.slide.slide_up.hover .df_fb_back,
+.df_flipbox_container.slide.slide_up:hover .df_fb_back {
+    transform: translateX(-100%) translateY(0);
+    z-index: 2; 
+}
+/* slide down */
+.df_flipbox_container.slide.slide_down .df_fb_back {
+    transform: translateX(-100%) translateY(-101%);
+}
+.df_flipbox_container.slide.slide_down.hover .df_fb_back,
+.df_flipbox_container.slide.slide_down:hover .df_fb_back {
+    transform: translateX(-100%) translateY(0);
+    z-index: 2; 
+}
+
+/*******************************
+====== zoom animation
+********************************/
+
+/* zoom center */
+.df_flipbox_container.zoom.zoom_center .df_fb_front {
+    /* transition: all .6s ease-in-out; */
+    transform: scale(1);
+    z-index: 1;
+}
+.df_flipbox_container.zoom.zoom_center .df_fb_back{
+    /* transition: all .6s ease-in-out; */
+    transform: translateX(-100%) scale(0);
+    opacity: 0;
+    z-index: 0;
+}
+.df_flipbox_container.zoom.zoom_center.hover .df_fb_front,
+.df_flipbox_container.zoom.zoom_center:hover .df_fb_front{
+    transform: scale(0);
+    opacity: 0;
+}
+.df_flipbox_container.zoom.zoom_center.hover .df_fb_back,
+.df_flipbox_container.zoom.zoom_center:hover .df_fb_back {
+    transform: translateX(-100%) scale(1);
+    opacity: 1;
+}
+/* zoom left */
+.df_flipbox_container.zoom.zoom_left .df_fb_front {
+    /* transition: all .6s ease-in-out; */
+    transform: translateX(0) scale(1);
+    z-index: 1;
+}
+.df_flipbox_container.zoom.zoom_left .df_fb_back{
+    /* transition: all .6s ease-in-out; */
+    transform: translateX(-145%) scale(0);
+    opacity: 0;
+    z-index: 0;
+}
+.df_flipbox_container.zoom.zoom_left.hover .df_fb_front,
+.df_flipbox_container.zoom.zoom_left:hover .df_fb_front{
+    transform: translateX(-45%) scale(0);
+    opacity: 0;
+}
+.df_flipbox_container.zoom.zoom_left.hover .df_fb_back,
+.df_flipbox_container.zoom.zoom_left:hover .df_fb_back {
+    transform: translateX(-100%) scale(1);
+    opacity: 1;
+}
+/* zoom right */
+.df_flipbox_container.zoom.zoom_right .df_fb_front {
+    /* transition: all .6s ease-in-out; */
+    transform: translateX(0) scale(1);
+    z-index: 1;
+}
+.df_flipbox_container.zoom.zoom_right .df_fb_back{
+    /* transition: all .6s ease-in-out; */
+    transform: translateX(-45%) scale(0);
+    opacity: 0;
+    z-index: 0;
+}
+.df_flipbox_container.zoom.zoom_right.hover .df_fb_front,
+.df_flipbox_container.zoom.zoom_right:hover .df_fb_front{
+    transform: translateX(45%) scale(0);
+    opacity: 0;
+}
+.df_flipbox_container.zoom.zoom_right.hover .df_fb_back,
+.df_flipbox_container.zoom.zoom_right:hover .df_fb_back {
+    transform: translateX(-100%) scale(1);
+    opacity: 1;
+}
+/* zoom up */
+.df_flipbox_container.zoom.zoom_up .df_fb_front {
+    /* transition: all .6s ease-in-out; */
+    transform: translateX(0) scale(1);
+    z-index: 1;
+}
+.df_flipbox_container.zoom.zoom_up .df_fb_back{
+    /* transition: all .6s ease-in-out; */
+    transform: translateX(-100%) translateY(45%) scale(0);
+    opacity: 0;
+    z-index: 0;
+}
+.df_flipbox_container.zoom.zoom_up.hover .df_fb_front,
+.df_flipbox_container.zoom.zoom_up:hover .df_fb_front{
+    transform: translateY(45%) scale(0);
+    opacity: 0;
+}
+.df_flipbox_container.zoom.zoom_up.hover .df_fb_back,
+.df_flipbox_container.zoom.zoom_up:hover .df_fb_back {
+    transform: translateX(-100%) translateY(0) scale(1);
+    opacity: 1;
+}
+/* zoom down */
+.df_flipbox_container.zoom.zoom_down .df_fb_front {
+    /* transition: all .6s ease-in-out; */
+    transform: translateX(0) scale(1);
+    z-index: 1;
+}
+.df_flipbox_container.zoom.zoom_down .df_fb_back{
+    /* transition: all .6s ease-in-out; */
+    transform: translateX(-100%) translateY(-45%) scale(0);
+    opacity: 0;
+    z-index: 0;
+}
+.df_flipbox_container.zoom.zoom_down.hover .df_fb_front,
+.df_flipbox_container.zoom.zoom_down:hover .df_fb_front{
+    transform: translateY(-45%) scale(0);
+    opacity: 0;
+}
+.df_flipbox_container.zoom.zoom_down.hover .df_fb_back,
+.df_flipbox_container.zoom.zoom_down:hover .df_fb_back {
+    transform: translateX(-100%) translateY(0) scale(1);
+    opacity: 1;
+}
+
+/*******************************
+====== fade animation
+********************************/
+.df_flipbox_container.fade .df_fb_front{
+    opacity: 1;
+    z-index: 1;
+    /* transition: all .6s ease-in-out; */
+}
+.df_flipbox_container.fade .df_fb_back{
+    opacity: 0;
+    z-index: 0;
+    /* transition: all .6s ease-in-out; */
+    transform: translateX(-100%);
+}
+.df_flipbox_container.fade.hover .df_fb_back,
+.df_flipbox_container.fade:hover .df_fb_back {
+    opacity: 1;
+    z-index: 2;
+}
+
+

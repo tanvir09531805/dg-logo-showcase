@@ -1,0 +1,60 @@
+.df_highlighter_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    grid-gap: 5px;
+    max-height: 250px;
+    overflow-y: auto;
+    scrollbar-color: #4c5866 #fff;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+}
+.df_highlighter_row::-webkit-scrollbar {
+    width: 5px !important;
+}
+.df_highlighter_row::-webkit-scrollbar-track {
+    width: 7px !important;
+}
+.df_highlighter_row::-webkit-scrollbar-thumb {
+    /*background: #4c5866 !important;*/
+    background-color: #2b87da !important;
+    border-radius: 3px !important;
+}
+.df_highlighter_cell {
+    background: #F1F5F9;
+    transition: all .2s ease;
+    padding: 10px;
+    border: 1px solid transparent;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.df_highlighter_cell:hover{
+    border: 1px solid rgba(43, 135, 218, 0.3);
+}
+
+.df_text_highlighter_selector_wrapper svg {
+    overflow: visible;
+    width: 65%;
+}
+.df_highlighter_cell:hover svg path{
+    stroke: #2b87da;
+    stroke-width: 20px;
+}
+.df_highlighter_cell.df_hlc_active svg path{
+    stroke: #2b87da;
+    stroke-width: 25px;
+}
+
+.df_text_highlighter_selector_wrapper svg path {
+    stroke-width: 15px;
+    stroke: #91A7B6;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.df_text_highlighter_selector_wrapper .strikethrough {
+    stroke-width: 6px;
+}

@@ -1,0 +1,162 @@
+.et-fb-form__toggle[data-name="loader"] .et-fb-form__group .et-fb-multiple-buttons-container {
+    width: 100% !important;
+}
+.difl_cptgrid .df_cptgrid_container .df-cpts-wrap.layout-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+.difl_cptgrid .df_cptgrid_container .df-cpts-wrap {
+    /* justify-content: space-between; */
+    margin-left: -20px; /* same as padding-left on .df-cpt-item */
+    margin-right: -20px; /* same as padding-right on .df-cpt-item */
+    transition: height 700ms;
+}
+.difl_cptitem {
+    overflow: hidden;
+}
+
+.difl_cptgrid .df-cpt-item{
+    width: 33.33%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.layout-grid .df-cpt-item {
+    height: 100%;
+}
+
+.difl_cptgrid .difl_cptitem.et_pb_module {
+    display: none;
+}
+
+.df-cpt-bg-on-hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+.df-cpt-bg-on-hover > div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scale(1);
+    transition: transform 1.3s ease;
+    z-index: -1;
+}
+.df-hover-trigger:hover .df-cpt-bg-on-hover > div {
+    transform: scale(1.5);
+}
+/* pagination */
+.df-pagination {
+    display: flex;
+    justify-content: center;
+}
+.df-pagination::after {
+    display: none !important;
+}
+.df-pagination .page-numbers {
+    font-size: 16px;
+    border: 0px solid;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.df-pagination .page-numbers:last-child {
+    margin-right: 0px !important;
+}
+.df-pagination a.older::before,
+.df-pagination a.prev::before {
+    font-family: 'ETmodules';
+    content: '4';
+    speak: none;
+    font-weight: normal;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    margin-right: 5px;
+}
+.df-pagination a.newer::after,
+.df-pagination a.next::after {
+    font-family: 'ETmodules';
+    content: '5';
+    speak: none;
+    font-weight: normal;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    margin-left: 5px;
+}
+.df-pagination.only_icon a.newer::after,
+.df-pagination.only_icon a.next::after,
+.df-pagination.only_icon a.older::before,
+.df-pagination.only_icon a.prev::before {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Height Equal */
+.difl_cptgrid .layout-grid .df-cpt-item.df-equal-height {
+    height: auto;
+}
+.df-cpt-outer-wrap{
+    border: 0px solid;
+}
+
+.difl_cptgrid .df-equal-height .df-cpt-outer-wrap,
+.difl_cptgrid .df-equal-height .df-cpt-inner-wrap {
+    height: 100%;
+}
+.df-equal-height {
+    /* height: 100%; */
+}
+
+/* empty content */
+.df-empty-element {
+    display: none;
+}
+.df-cpt-title,
+.df-cpt-title a,
+.df-item-wrap > span,
+.df-item-wrap a,
+.df-item-wrap,
+.df-item-wrap p, 
+.df-cpt-read-more, 
+.df-cpt-custom-text {
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    text-align: inherit;
+}
+.df-cpt-title,
+.df-cpt-title a,
+.df-item-wrap > span:not(.et-pb-icon),
+.df-item-wrap a,
+.df-item-wrap,
+.df-item-wrap p, 
+.df-cpt-read-more, 
+.df-cpt-custom-text {
+    font-family: inherit;
+}

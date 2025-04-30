@@ -1,0 +1,30 @@
+
+.df-menu-item-position-selector {
+    /* background: #f1f5f9;
+    padding: 10px; */
+}
+.df-menu-item-position-selector .df-row {
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+    border: 1px dashed #c9cacb; */
+}
+.df-menu-item-position-selector .df-row:last-child {
+    margin-bottom: 0;
+}
+.df-menu-item-position-selector .df-item-cell{
+    /* flex-basis: calc(33.33% - 5px);
+    height: 30px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .2s ease; */
+}
+.df-menu-item-position-selector .df-item-cell.active {
+    background: #2b87da;
+    color: #fff;
+}

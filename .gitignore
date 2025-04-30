@@ -2,18 +2,15 @@
 
 # dependencies
 /node_modules
-
+*.vscode
+apps/**/node_modules
 # testing
 /coverage
-
+/marketplace-phpcs
 # production
+/production
 /scripts/bundle.min.js
-/scripts/builder-bundle.min.js
-/scripts/frontend-bundle.min.js
 /styles/bundle.min.css
-/styles/backend-style.min.css
-/styles/style-dbp.min.css
-/styles/style.min.css
 asset-manifest.json
 *.map
 
@@ -27,3 +24,14 @@ asset-manifest.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+scripts/builder-bundle.min.js
+scripts/frontend-bundle.min.js
+styles/style-dbp.min.css
+styles/style.min.css
+Builder/**/node_modules
+
+
+divi-5/**/node_modules
+divi-5/**/package-lock.json
+divi-5/**/build
+divi-5/**/modules-json

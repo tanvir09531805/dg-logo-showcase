@@ -1,0 +1,159 @@
+.df_gravity_form {
+    --checkbox-size: 20px;
+    --checkbox-border-color: #333;
+    --checkbox-tick-color: #333;
+    --checkbox-border-width: 1px;
+    --checkbox-background: transparent;
+    --checkbox-gap: 0px;
+    --radio-size: 15px;
+    --radio-dot-color: #333;
+    --radio-border-color: #333;
+    --radio-border-width: 1px;
+    --radio-background: transparent;
+    --radio-gap: 0px;
+    --radio-border-radius: 50%;
+    --consent-checkbox-size: 20px;
+    --consent-checkbox-border-color: #333;
+    --consent-checkbox-tick-color: #333;
+    --consent-checkbox-border-width: 1px;
+    --consent-checkbox-background: transparent;
+    --consent-description-background: transparent;
+    --consent-description-bordercolor: #ddd;
+}
+.df_gravity_form .gform_wrapper .gfield_label.gform-field-label {
+    display: block;
+}
+.df_gravity_form .gform_wrapper.gravity-theme .field_sublabel_below .ginput_complex {
+    align-items: center;
+}
+/* select */
+.df_gravity_form .gform_wrapper.gravity-theme .chosen-container-multi .chosen-choices li.search-field input[type=text] {
+    color: inherit;
+}
+/* checkbox gap */
+.df_gravity_form form .gfield_checkbox .gchoice:not(:last-child){
+    margin-bottom: var(--checkbox-gap) !important;
+}
+.df_gravity_form form .ginput_container:not(.ginput_container_consent) input[type="checkbox"] {
+    appearance: none;
+    position: relative;
+    vertical-align: middle;
+    box-sizing: content-box;
+    width: var(--checkbox-size);
+    height: var(--checkbox-size);
+    border: var(--checkbox-border-width) solid var(--checkbox-border-color);
+    background-color: var(--checkbox-background);
+}
+.df_gravity_form form input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: ETModules;
+    content: "N";
+    line-height: 1;
+    font-size: var(--checkbox-size);
+    color: var(--checkbox-tick-color)
+}
+/* consent checkbox gap */
+.df_gravity_form form .gfield--type-consent input[type="checkbox"] {
+    appearance: none;
+    position: relative;
+    vertical-align: middle;
+    box-sizing: content-box;
+    width: var(--consent-checkbox-size);
+    height: var(--consent-checkbox-size);
+    border: var(--consent-checkbox-border-width) solid var(--consent-checkbox-border-color);
+    background-color: var(--consent-checkbox-background);
+}
+.df_gravity_form .gfield--type-consent input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: ETModules;
+    content: "N";
+    line-height: 1;
+    font-size: var(--consent-checkbox-size);
+    color: var(--consent-checkbox-tick-color)
+}
+.df_gravity_form form .gfield--type-consent .gfield_description {
+    background-color: var(--consent-description-background);
+    border-color: var(--consent-description-bordercolor) !important;
+}
+/* radio */
+.df_gravity_form form .gfield_radio .gchoice:not(:last-child){
+    margin-bottom: var(--radio-gap);
+}
+.df_gravity_form form input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    border: var(--radio-border-width) solid var(--radio-border-color);
+    vertical-align: middle;
+    box-sizing: content-box;
+    width: var(--radio-size) !important;
+    height: var(--radio-size) !important;
+    border-radius: var(--radio-border-radius);
+    background-color: var(--radio-background);
+}
+.df_gravity_form form input[type="radio"]:checked::before {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: var(--radio-dot-color);
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    border-radius: inherit;
+    content: "";
+}
+/* submit */
+.gform_wrapper.gravity-theme .gform_footer button, 
+.gform_wrapper.gravity-theme .gform_footer input, 
+.gform_wrapper.gravity-theme .gform_page_footer button, 
+.gform_wrapper.gravity-theme .gform_page_footer input {
+    border: 2px solid;
+}
+/* confirmation */
+.df_gravity_form .gform_confirmation_message {
+    border: 0px solid;
+}
+/* section */
+.df_gravity_form .gsection {
+    border-width: 0px !important;
+    border-style: solid;
+    border-color: #ccc;
+}
+.df_gravity_form .gform_wrapper.gravity-theme .top_label .gsection_description {
+    margin-bottom: 0;
+}
+/* heading */
+.df_gravity_form .gform_heading {
+    border-width: 0px;
+    border-style: solid;
+}
+.df_gravity_form .gform_heading .gform_required_legend .gfield_required_asterisk {
+    font-size: inherit;
+    color: inherit !important;
+    line-height: inherit !important;
+    font-family: inherit;
+}
+/* footer */
+.df_gravity_form .gform_page_footer {
+    display: flex;
+}
+/* error box */
+.df_gravity_form .gform_wrapper.gravity-theme .gform_validation_errors>ol a {
+    color: inherit;
+}
+/* required text */
+.df_gravity_form .gfield_required {
+    font-style: unset !important;
+    line-height: 1em !important;
+    letter-spacing: 0 !important;
+}
+/* pagination */
+.df_gravity_form .gf_step_number::before,
+.df_gravity_form .gf_step_number::after {
+    max-width: 100%;
+    max-height: 100%;
+}

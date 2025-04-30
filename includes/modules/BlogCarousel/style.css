@@ -1,0 +1,126 @@
+.df_blogcarousel_container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.df_blogcarousel_container .swiper-container {
+    order: 1;
+    width: 100%;
+}
+.df_blogcarousel_container .swiper-pagination {
+    order: 2;
+    width: 100%;
+}
+.df_blogcarousel_container .swiper-slide {
+    align-self: flex-start;
+    height: auto;
+}
+/* background on hover with scale */ 
+.df-blogcarousel-bg-on-hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+.df-blogcarousel-bg-on-hover > div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scale(1);
+    transition: transform 1.3s ease;
+    z-index: -1;
+}
+.df-hover-trigger:hover .df-blogcarousel-bg-on-hover > div {
+    transform: scale(1.5);
+}
+/* Arrows */
+.df_bc_arrows {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    pointer-events: none;
+    order: 2;
+    width:100%;
+}
+.df_bc_arrows div {
+    background-image: none;
+}
+.df_bc_arrows .swiper-button-prev {
+    order: 1;
+}
+.df_bc_arrows .swiper-button-next {
+    order: 2;
+}
+.df_bc_arrows .swiper-button-next, 
+.df_bc_arrows .swiper-button-prev {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-top: 0;
+    pointer-events: all;
+}
+.df_bc_arrows > div {
+    background-color: #ffffff;
+    width: auto;
+    height: 100%;
+    padding: 7px;
+    background-image: none;
+}
+.df_bc_arrows > div:after {
+    content: attr(data-icon);
+    font-family: ETmodules;
+    text-indent: 0;
+    font-size: 39px;
+    line-height: 1;
+}
+.df_bc_arrows {
+    z-index: 9;
+}
+.difl_blogcarousel .arrow-middle .df_bc_arrows * {
+    pointer-events: none;
+    transition-delay: .3s !important;
+}
+.difl_blogcarousel.df-ele-hover .df_bc_arrows *,
+.difl_blogcarousel:hover .df_bc_arrows * {
+    pointer-events: all;
+}
+/* Dots styles */
+.difl_blogcarousel .swiper-pagination{
+    position: relative !important;
+    pointer-events: none;
+    margin-top: 30px;
+}
+.difl_blogcarousel .swiper-pagination span {
+    margin-right: 8px;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    transition: all .3s ease;
+    pointer-events: all;
+    display: inline-block;
+	vertical-align: top;
+}
+.difl_blogcarousel .swiper-pagination span:last-child {
+    margin-right: 0px;
+}
+/* image */
+/* .difl_blogcarousel .df-item-wrap img {
+    display: block;
+} */
+
+.difl_blogcarousel > div {
+    display: flex;
+    flex-direction: column;
+}
+.difl_blogcarousel .df_blogcarousel_container {
+    order: 1;
+}
+.difl_blogcarousel .swiper-pagination {
+    order: 1;
+}

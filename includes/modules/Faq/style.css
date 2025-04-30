@@ -1,0 +1,37 @@
+/* FAQ */
+.difl_faq .df_faq_wrapper{
+    box-sizing: border-box;
+    display: grid;
+    gap: 20px;
+    width: auto;
+}
+.difl_faq .df_faq_wrapper:not(.grid_layout){
+  grid-template-columns: auto;
+}
+
+.difl_faq .df_faq_wrapper .et_pb_module.difl_faqitem{
+  margin-bottom: 0;
+  width: inherit;
+  display: flex;
+}
+
+div.difl_faq div.df_faq_wrapper .et_pb_module.difl_faqitem {
+  margin-bottom: 0;
+}
+
+body.et_pb_pagebuilder_layout div#et-boc div.difl_faq div.df_faq_wrapper .et_pb_module.difl_faqitem {
+ margin-bottom: 0% !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .difl_faq .df_faq_wrapper:not(.grid_layout) {
+    gap: 5px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.df_faq_wrapper .column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

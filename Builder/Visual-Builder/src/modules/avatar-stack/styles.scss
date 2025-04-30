@@ -1,0 +1,172 @@
+.et-vb-builder-bar-wrap [role=button][value="difl/avatar-stack"] svg *[fill]:not(.et-vb-svg-nofill),
+.et-vb-builder-bar-wrap [type=button][value="difl/avatar-stack"] svg *[fill]:not(.et-vb-svg-nofill),
+.et-vb-modal-wrapper [role=button][value="difl/avatar-stack"] svg *[fill]:not(.et-vb-svg-nofill),
+.et-vb-modal-wrapper [type=button][value="difl/avatar-stack"]:not(.et-vb-modal-responsive-state-picker-option,.et-vb-code-button) svg *[fill]:not(.et-vb-svg-nofill) {
+  fill: none !important;
+}
+
+.et-vb-module-picker-options button[value^="difl/avatar-stack"] svg path{
+  stroke: #6346d0 !important;
+}
+.et-vb-module-picker-options button[value^="difl/avatar-stack"]:hover svg path{
+  fill: none !important;
+}
+
+:root{
+  /*--df-avatarStack-trans-x-normal: 0px;*/
+  /*--df-avatarStack-trans-y-normal: 0px;*/
+
+  /*--df-avatarStack-rotate-x-normal: 0deg;*/
+  /*--df-avatarStack-rotate-y-normal: 0deg;*/
+  /*--df-avatarStack-rotate-z-normal: 0deg;*/
+
+  /*Item*/
+  /*--df-avatarStack-item-transition-duration: 300ms;*/
+  /*--df-avatarStack-item-transition-delay: 0ms;*/
+  /*--df-avatarStack-item-transition-easing: ease-out;*/
+
+  /*--df-avatarStack-item-trans-x-normal: 0px;*/
+  /*--df-avatarStack-item-trans-y-normal: 0px;*/
+
+  /*--df-avatarStack-item-rotate-x-normal: 0deg;*/
+  /*--df-avatarStack-item-rotate-y-normal: 0deg;*/
+  /*--df-avatarStack-item-rotate-z-normal: 0deg;*/
+
+  /*--df-avatarStack-item-scale-x-normal: 1;*/
+  /*--df-avatarStack-item-scale-y-normal: 1;*/
+
+  /*--df-avatarStack-item-skew-x-normal: 0deg;*/
+  /*--df-avatarStack-item-skew-y-normal: 0deg;*/
+
+  /*    !*Hover*!*/
+  /*    --df-avatarStack-item-trans-x-hover: 0px;*/
+  /*    --df-avatarStack-item-trans-y-hover: 0px;*/
+
+  /*    --df-avatarStack-item-rotate-x-hover: 0deg;*/
+  /*    --df-avatarStack-item-rotate-y-hover: 0deg;*/
+  /*    --df-avatarStack-item-rotate-z-hover: 0deg;*/
+
+  /*    --df-avatarStack-item-scale-x-hover: 1;*/
+  /*    --df-avatarStack-item-scale-y-hover: 1;*/
+
+  /*    --df-avatarStack-item-skew-x-hover: 0deg;*/
+  /*    --df-avatarStack-item-skew-y-hover: 0deg;*/
+}
+.difl_avatar_stack .difl_avatar_stack_container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.difl_avatar_stack.et_vb_hover #difl-avatar-stack-container .difl_avatar_stack_item,
+.difl_avatar_stack #difl-avatar-stack-container:hover .difl_avatar_stack_item{
+  margin-left: 0;
+}
+
+.difl_avatar_stack.et_vb_hover #difl-avatar-stack-container .difl_avatar_stack_item .difl_avatar_stack_item_wrapper,
+.difl_avatar_stack #difl-avatar-stack-container:hover .difl_avatar_stack_item .difl_avatar_stack_item_wrapper {
+  transform: translate(
+                  var(--df-avatarStack-trans-x-normal, 0px),
+                  var(--df-avatarStack-trans-y-normal, 0px)
+  )
+  rotateX(var(--df-avatarStack-rotate-x-normal, 0deg))
+  rotateY(var(--df-avatarStack-rotate-y-normal, 0deg))
+  rotateZ(var(--df-avatarStack-rotate-z-normal, 0deg));
+}
+
+.difl_avatar_stack.et_vb_hover #difl-avatar-stack-container .difl_avatar_stack_item .difl_avatar_stack_item_wrapper,
+.difl_avatar_stack #difl-avatar-stack-container .difl_avatar_stack_item:hover .difl_avatar_stack_item_wrapper {
+  transform: translate(
+                  var(--df-avatarStack-item-trans-x-hover, var(--df-avatarStack-item-trans-x-normal, 0)),
+                  var(--df-avatarStack-item-trans-y-hover, var(--df-avatarStack-item-trans-y-normal, 0))
+  )
+  rotateX(
+                  var(--df-avatarStack-item-rotate-x-hover, var(--df-avatarStack-item-rotate-x-normal, 0))
+  )
+  rotateY(
+                  var(--df-avatarStack-item-rotate-y-hover, var(--df-avatarStack-item-rotate-y-normal, 0))
+  )
+  rotateZ(
+                  var(--df-avatarStack-item-rotate-z-hover, var(--df-avatarStack-item-rotate-z-normal, 0))
+  )
+  scaleX(
+                  var(--df-avatarStack-item-scale-x-hover, var(--df-avatarStack-item-scale-x-normal, 1))
+  )
+  scaleY(
+                  var(--df-avatarStack-item-scale-y-hover, var(--df-avatarStack-item-scale-y-normal, 1))
+  )
+  skewX(
+                  var(--df-avatarStack-item-skew-x-hover, var(--df-avatarStack-item-skew-x-normal, 0))
+  )
+  skewY(
+                  var(--df-avatarStack-item-skew-y-hover, var(--df-avatarStack-item-skew-y-normal, 0))
+  );
+  transition-delay: var(--df-avatarStack-item-transition-delay, 0ms);
+}
+
+.difl_avatar_stack #difl-avatar-stack-container .difl_avatar_stack_item{
+  -webkit-transition: all var(--df-avatarStack-item-transition-duration, 300ms) var(--df-avatarStack-item-transition-easing, ease-out);
+  transition: all var(--df-avatarStack-item-transition-duration, 300ms) var(--df-avatarStack-item-transition-easing, ease-out);
+}
+.difl_avatar_stack #difl-avatar-stack-container .difl_avatar_stack_item .difl_avatar_stack_item_wrapper{
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all var(--df-avatarStack-item-transition-duration, 300ms) var(--df-avatarStack-item-transition-easing, ease-out);
+  transition: all var(--df-avatarStack-item-transition-duration, 300ms) var(--df-avatarStack-item-transition-easing, ease-out);
+}
+
+.difl_avatar_stack .difl_avatar_stack_empty_content{
+  background:#eee;
+  padding: 10px 20px;
+}
+
+/************
+  Tooltip
+************/
+.et_pb_row .et_pb_column:has(.tippy-box) {
+  z-index: inherit;
+}
+.tippy-box{
+  overflow: visible !important;
+  border-width: 0px;
+  border-color:#333;
+  border-style: solid;
+  z-index: 999999999999999;
+}
+.tippy-box img{
+  border-radius: inherit;
+}
+.tippy-box ul,.tippy-box ol {
+  padding: 0 0 0px 1em !important;
+  line-height: 20px;
+}
+
+.tippy-box, .tippy-box h1,.tippy-box h2, .tippy-box h3,.tippy-box h4,.tippy-box h5,.tippy-box h6,.tippy-box a, .tippy-box ul , .tippy-box ol {
+  color: #fff;
+  text-align: left;
+}
+.tippy-box h1{
+  font-size: 32px;
+}
+.tippy-box h2{
+  font-size: 28px;
+}
+.tippy-box h3{
+  font-size: 24px;
+}
+.tippy-box h4{
+  font-size: 20px;
+}
+.tippy-box h5{
+  font-size: 16px;
+}
+.tippy-box h6{
+  font-size: 14px;
+}
+.tippy-box blockquote {
+  margin:0;
+  padding:0;
+  border-left: 5px solid !important;
+  padding-left: 20px;
+}

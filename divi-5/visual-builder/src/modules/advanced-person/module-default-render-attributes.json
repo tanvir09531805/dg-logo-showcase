@@ -1,0 +1,115 @@
+{
+  "style_type": {
+    "innerContent": {
+      "desktop": {
+        "value": "default_style"
+      }
+    }
+  },
+  "enable_alternative_photo": {
+    "innerContent": {
+      "desktop": {
+        "value": "off"
+      }
+    }
+  },
+  "enable_icon_on_overlay": {
+    "innerContent": {
+      "desktop": {
+        "value": "off"
+      }
+    }
+  },
+  "content_position": {
+    "innerContent": {
+      "desktop": {
+        "value": "c4-layout-top-left"
+      }
+    }
+  },
+  "always_show_icon": {
+    "innerContent": {
+      "desktop": {
+        "value": "off"
+      }
+    }
+  },
+  "icon_reveal_caption": {
+    "innerContent": {
+      "desktop": {
+        "value": "c4-fade-up"
+      }
+    }
+  },
+  "image_force_to_fullwidth": {
+    "innerContent": {
+      "desktop": {
+        "value": "off"
+      }
+    }
+  },
+  "image_scale_type": {
+    "innerContent": {
+      "desktop": {
+        "value": "no-image-scale"
+      }
+    }
+  },
+  "overlay": {
+    "innerContent": {
+      "desktop": {
+        "value": "off"
+      }
+    }
+  },
+  "anim_direction": {
+    "innerContent": {
+      "desktop": {
+        "value": "bottom"
+      }
+    }
+  },
+
+  "border_anim": {
+    "innerContent": {
+      "desktop": {
+        "value": "off"
+      }
+    }
+  },
+  "border_anm_style": {
+    "innerContent": {
+      "desktop": {
+        "value": "c4-border-fade"
+      }
+    }
+  },
+  "ap_name_tag": {
+    "innerContent": {
+      "desktop": {
+        "value": "h4"
+      }
+    }
+  },
+  "ap_role_tag": {
+    "innerContent": {
+      "desktop": {
+        "value": "h5"
+      }
+    }
+  },
+  "make_vertical_icon": {
+    "innerContent": {
+      "desktop": {
+        "value": "off"
+      }
+    }
+  },
+  "make_full_with_icon": {
+    "innerContent": {
+      "desktop": {
+        "value": "off"
+      }
+    }
+  }
+}

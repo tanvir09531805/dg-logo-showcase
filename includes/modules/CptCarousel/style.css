@@ -1,0 +1,131 @@
+.df_cptcarousel_container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.df_cptcarousel_container .swiper-container {
+    order: 1;
+    width: 100%;
+}
+.df_cptcarousel_container .swiper-pagination {
+    order: 2;
+    width: 100%;
+}
+.df_cptcarousel_container .swiper-slide {
+    align-self: flex-start;
+    height: auto;
+}
+
+/* background on hover with scale */ 
+.df-cptcarousel-bg-on-hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+.df-cptcarousel-bg-on-hover > div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scale(1);
+    transition: transform 1.3s ease;
+    z-index: -1;
+}
+.df-hover-trigger:hover .df-cptcarousel-bg-on-hover > div {
+    transform: scale(1.5);
+}
+/* Arrows */
+.df_cptc_arrows {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    pointer-events: none;
+    order: 2;
+    width:100%;
+}
+.df_cptc_arrows div {
+    background-image: none;
+}
+.df_cptc_arrows .swiper-button-prev {
+    order: 1;
+}
+.df_cptc_arrows .swiper-button-next {
+    order: 2;
+}
+.df_cptc_arrows .swiper-button-next, 
+.df_cptc_arrows .swiper-button-prev {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-top: 0;
+    pointer-events: all;
+}
+.df_cptc_arrows > div {
+    background-color: #ffffff;
+    width: auto;
+    height: 100%;
+    padding: 7px;
+    background-image: none;
+}
+.df_cptc_arrows > div:after {
+    content: attr(data-icon);
+    font-family: ETmodules;
+    text-indent: 0;
+    font-size: 39px;
+    line-height: 1;
+}
+.df_cptc_arrows {
+    z-index: 9;
+}
+.difl_cptcarousel .arrow-middle .df_cptc_arrows * {
+    pointer-events: none;
+    transition-delay: .3s !important;
+}
+.difl_cptcarousel.df-ele-hover .df_cptc_arrows *,
+.difl_cptcarousel:hover .df_cptc_arrows * {
+    pointer-events: all;
+}
+/* Dots styles */
+.difl_cptcarousel .swiper-pagination{
+    position: relative !important;
+    pointer-events: none;
+    margin-top: 30px;
+}
+.difl_cptcarousel .swiper-pagination span {
+    margin-right: 8px;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    transition: all .3s ease;
+    pointer-events: all;
+    display: inline-block;
+	vertical-align: top;
+}
+.difl_cptcarousel .swiper-pagination span:last-child {
+    margin-right: 0px;
+}
+/* image */
+/* .difl_cptcarousel .df-item-wrap img {
+    display: block;
+} */
+
+.difl_cptcarousel > div {
+    display: flex;
+    flex-direction: column;
+}
+.difl_cptcarousel .df_cptcarousel_container {
+    order: 1;
+}
+.difl_cptcarousel .swiper-pagination {
+    order: 1;
+}
+.difl_cptcarousel .df-equal-height .df-cpt-outer-wrap,
+.difl_cptcarousel .df-equal-height .df-cpt-inner-wrap {
+    height: 100%;
+}

@@ -1,0 +1,21 @@
+span.df_cci_btn_text_icon_wrap {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+span.df_cci_btn_text_icon_wrap .df_cci_btn_text {
+    order: 1;
+}
+span.df_cci_btn_text_icon_wrap.df_cci_btn_place_left .df_cci_btn_icon {
+    order: 0;
+}
+span.df_cci_btn_text_icon_wrap.df_cci_btn_place_right .df_cci_btn_icon {
+    order: 2;
+}
+span.df_cci_btn_text_icon_wrap .df_cci_btn_icon {
+    font-family: 'ETmodules';
+}
+a.df_cci_button span.df_cci_btn_icon.df_cci_btn_hover_on {
+    font-size: 0px;
+    transition: 0.3s;
+}

@@ -1,0 +1,284 @@
+.difl_scrollimage *{
+    border-width:0px;
+    border-style:solid;
+    border-color:#333;
+  }
+
+.df_scroll_image_container {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.df_scroll_image_container .df_scroll_image_holder {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.df_scroll_image_container .df_scroll_image_holder .df_scroll_image {
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+}
+
+/* .df_scroll_image_container .df_scroll_image_holder.df_device_slider .df_scroll_image {
+   z-index: -1;
+} */
+
+.df_scroll_image_container .df_scroll_image_holder .df_scroll_image.df_scroll_image_bottom_top {
+    background-position: bottom;
+    min-height: 320px;
+}
+.df_scroll_image_container .df_scroll_image_holder .df_scroll_image.df_scroll_image_bottom_top:hover {
+    background-position: center top !important;
+}
+.df_scroll_image_container .df_scroll_image_holder .df_scroll_image.df_scroll_image_top_bottom {
+    background-position: top;
+    min-height: 320px;
+}
+.df_scroll_image_container .df_scroll_image_holder .df_scroll_image.df_scroll_image_top_bottom:hover {
+    background-position: center bottom !important;
+}
+.df_scroll_image_container .df_scroll_image_holder .df_scroll_image.df_scroll_image_left_right {
+    background-position: right;
+    min-width: 320px;
+}
+.df_scroll_image_container .df_scroll_image_holder .df_scroll_image.df_scroll_image_left_right:hover {
+    background-position: center left !important;
+}
+.df_scroll_image_container .df_scroll_image_holder .df_scroll_image.df_scroll_image_right_left {
+    background-position: left;
+    min-width: 320px;
+}
+.df_scroll_image_container .df_scroll_image_holder .df_scroll_image.df_scroll_image_right_left:hover {
+    background-position: center right !important;
+}
+.df_scroll_image_container .df_device_slider {
+    position: relative;
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_safari {
+    padding: 4.2% .07% 0% 0.1%;
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_chrome {
+    padding: 5.4% .07% 0 0.1%;
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_chrome_dark {
+    padding: 5.4% .07% 0 0.1%;
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_opera {
+    padding: 5.4% .07% 0 0.1%;
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_opera_dark {
+    padding: 5.4% .07% 0 0.1%;
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_firefox {
+    padding: 5.4% .07% 0 0.1%;
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_firefox_dark {
+    padding: 5.4% .07% 0 0.1%;
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_edge {
+    padding: 5.4% .07% 0 0.1%;
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_edge_dark {
+    padding: 5.4% .07% 0 0.1%
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_desktop {
+    padding: 3.6% 3.7% 31% 3.7%;
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_laptop {
+    padding: 3.1% 14.7% 11.8% 14.8%;
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_laptop2 {
+    padding: 3% 16.2% 10% 15.8%;
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_macbookpro {
+    padding: 4% 11.8% 6.7% 11.8%;
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_macbook {
+    padding: 2% 11.4% 5% 11.5%;
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_tablet{
+    padding: 10.4% 6.2% 13.5% 5.3%; 
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_ipad{
+    padding: 11.5% 6.2% 11.4% 6.1%;
+}
+.df_scroll_image_container .df_device_slider.df_device_slider_phone{
+    padding: 5.8% 5.7% 5.9% 5%;
+}
+
+.df_scroll_image_container .df_device_slider_device {
+    pointer-events: initial;
+    overflow: hidden;
+}
+.df_scroll_image_container .df_scroll_image_holder .df_device_slider_device .df_scroll_image {
+    min-height: auto;
+}
+.df_scroll_image_container .df_device_slider_device img.frame_image {
+    top: 0;
+    left: 0;
+    position: absolute;
+    max-width: 100%;
+    width: 100%;
+}
+.df_scroll_image_holder .df_scroll_image_lightbox_item {
+    /* opacity: 0; */
+    transition: opacity 350ms cubic-bezier(0.24, 0.85, 0.58, 1);
+}
+.df_scroll_image_holder:hover .df_scroll_image_lightbox_item {
+    opacity: 1;
+}
+
+/* Caption */
+.df_scroll_image_container .df_scroll_image_caption {
+    font-size:14px;
+    line-height: 1.7em;
+    padding:5px;
+    color: #333;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #774e4c;
+    overflow: hidden;
+    z-index: 99;
+    position: relative;
+}
+.df_scroll_image_caption p{
+    padding-bottom:0px
+}
+
+/* Badge */
+.df_scroll_image_badge {
+    color: #333;
+    border-style: solid;
+    border-width: 0px;
+    box-sizing: border-box;
+    position: absolute;
+    height: auto;
+    vertical-align: middle;
+    background: #1e87f0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.df_scroll_image_badge .badge_icon.et-pb-icon{
+    font-size: 14px;
+}
+
+.df_scroll_image_badge.show_badge_on_hover {
+    display:none;
+    transition: display 300ms linear;
+}
+.df_scroll_image_wrapper:hover .df_scroll_image_badge.show_badge_on_hover{
+    display:block
+}
+
+.df_scroll_image_badge.hide_badge_on_hover {
+    display:block;
+    transition: display 300ms linear;
+}
+.df_scroll_image_wrapper:hover .df_scroll_image_badge.hide_badge_on_hover{
+    display:none
+}
+
+/* link */
+.df_scroll_image_container .df_scroll_image_holder .df_link_icon{
+    display: flex;
+    color: #666;
+    position: relative;
+    cursor: pointer;
+}
+.df_scroll_image_container .df_link_area{
+    position: absolute;
+    z-index: 99;
+}
+.df_link_area.show_on_hover {
+    display:none;
+    transition: display 300ms linear;
+}
+.df_scroll_image_holder:hover .df_link_area.show_on_hover{
+    display:block
+}
+
+.df_link_area.hide_on_hover {
+    display:block;
+    transition: display 300ms linear;
+}
+.df_scroll_image_holder:hover .df_link_area.hide_on_hover{
+    display:none
+}
+
+.df_scroll_image_container .df-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: z-index 300ms step-start, opacity 300ms linear;
+}
+
+.df_scroll_image_holder:hover .df-overlay {
+    opacity: 0;
+    z-index: -1;
+    transition: z-index 300ms step-end, opacity 300ms linear;
+}
+/*lightbox and link */
+.df_scroll_image_wrapper.link_lightbox .df_scroll_image {
+    cursor: pointer;
+}
+
+.df_responsive_width.scroll_image_section {
+    position: relative;
+}
+.df_responsive_width {
+    max-width: 100%!important; 
+    height: auto;
+}
+.df_responsive_width, .df_responsive_height {
+    box-sizing: border-box;
+}
+.df_device_slider_device img.frame_image{   
+    max-width: 100%;
+    height: auto;
+}
+
+.df_link_area .et-pb-icon.df-sl-link-icon, 
+.df_link_area .df_link_icon .df_sm_image_icon{
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+.df_link_area.horizontal_motion .et-pb-icon.df-sl-link-icon,
+.df_link_area.horizontal_motion .df_link_icon .df_sm_image_icon{
+    -webkit-animation-name: difl-scroll-horizontal;
+    animation-name: difl-scroll-horizontal;
+}
+.df_link_area.vertical_motion .et-pb-icon.df-sl-link-icon,
+.df_link_area.vertical_motion .df_link_icon .df_sm_image_icon{
+    -webkit-animation-name: difl-scroll-vertical;
+    animation-name: difl-scroll-vertical;
+}
+
+@-webkit-keyframes difl-scroll-vertical{0%{-webkit-transform:translateY(0);transform:translateY(0)}to{-webkit-transform:translateY(5px);transform:translateY(5px)}}@keyframes difl-scroll-vertical{0%{-webkit-transform:translateY(0);transform:translateY(0)}to{-webkit-transform:translateY(5px);transform:translateY(5px)}}
+@-webkit-keyframes difl-scroll-horizontal{0%{-webkit-transform:translateX(0);transform:translateX(0)}to{-webkit-transform:translateX(5px);transform:translateX(5px)}}@keyframes difl-scroll-horizontal{0%{-webkit-transform:translateX(0);transform:translateX(0)}to{-webkit-transform:translateX(5px);transform:translateX(5px)}}

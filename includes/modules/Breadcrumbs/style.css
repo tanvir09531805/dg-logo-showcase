@@ -1,0 +1,59 @@
+.df_breadcrumbs_container * {
+    border-width: 0px;
+    border-style: solid;
+    border-color:#333;
+    box-sizing: border-box;
+  }
+
+ul.df-breadcrumbs {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.df-breadcrumbs li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+ul.df-breadcrumbs li a,
+ul.df-breadcrumbs li span.df-breadcrumbs-separator-icon,
+ul.df-breadcrumbs li span.df-breadcrumbs-text {
+    display: block;
+    font-size: 16px;
+}
+
+.difl_breadcrumbs .et-pb-icon.df-home-icon,
+.et-db #et-boc .et-l .difl_breadcrumbs .et-pb-icon.df-home-icon,
+.difl_breadcrumbs .et-pb-icon.df-inner-icon,
+.et-db #et-boc .et-l .difl_breadcrumbs .et-pb-icon.df-inner-icon{
+    font-size: 16px;
+    vertical-align: middle;
+}
+.df-breadcrumbs-item .df-breadcrumbs-text {
+    line-height: 1.7em;
+}
+.df-breadcrumbs-separator .df-breadcrumbs-separator-text{
+    line-height: 1.7em;
+}
+.df-breadcrumbs-separator .df-breadcrumbs-separator-icon{
+    line-height: 1.7em;
+}
+.difl_breadcrumbs .df-separator-icon,
+.et-db #et-boc .et-l .et-pb-icon.df-separator-icon{
+    font-size:inherit;
+    vertical-align: middle;
+    margin-top: -4px;
+    /* line-height: inherit; */
+}
+.df-breadcrumbs-item a,
+.df-breadcrumbs-item.df-breadcrumbs-start a,
+.df-breadcrumbs-item.df-breadcrumbs-end a{
+    /* line-height: 1.7em; */
+    letter-spacing: 0;
+}
+/* Overflow Issue */
+.difl_breadcrumbs .df_breadcrumbs_container li.df-breadcrumbs-item {
+    overflow: unset !important;
+}

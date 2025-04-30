@@ -1,0 +1,37 @@
+.difl_bento_grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //flex-wrap: wrap;
+  //height: 800px;
+  //width: 100%;
+
+  &__inner {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 16px;
+
+      .__title{
+        z-index: 2;
+        font-size:24px;
+        font-weight:bold;
+        color: #fff;
+      }
+      .__sub_title{
+        z-index: 2;
+        font-size:18px;
+        font-weight:bold;
+        color: #fff;
+      }
+      .__content{
+        z-index: 2;
+        font-size:14px;
+        color: #fff;
+
+      }
+
+  }
+}

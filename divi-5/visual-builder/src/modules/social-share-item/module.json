@@ -1,0 +1,270 @@
+{
+  "name": "difl/social-share-item",
+  "d4Shortcode": "difl_social_share_item",
+  "title": "Social Share Item",
+  "titles": "Social Share Item",
+  "moduleClassName": "difl_social_share_item",
+  "moduleOrderClassName": "difl_social_share_item",
+  "category": "child-module",
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Social Share Item"
+            }
+          }
+        },
+        "decoration": {
+          "spacing": {
+            "desktop": {
+              "value": {
+                "padding": {
+                  "top": "5px",
+                  "right": "14px",
+                  "bottom": "5px",
+                  "left": "14px"
+                }
+              }
+            }
+          },
+          "background": {
+            "desktop": {
+              "value": {
+                "color": ""
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "selector": "{{selector}}.difl_social_share_item_wrapper"
+        },
+        "border": {
+          "selector": "{{selector}}.difl_social_share_item_wrapper"
+        },
+        "boxShadow": {
+          "selector": "{{selector}}.difl_social_share_item_wrapper"
+        },
+        "spacing": {
+          "selector": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper"
+        }
+      }
+    },
+    "main_content": {
+      "type": "object",
+      "innerContent": {}
+    },
+    "social_network": {
+      "type": "object",
+      "innerContent": {},
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": ""
+          }
+        }
+      }
+    },
+    "use_custom_image_icon": {
+      "type": "object",
+      "innerContent": {},
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      }
+    },
+    "src": {
+      "type": "object",
+      "innerContent": {},
+      "render": true
+    },
+    "custom_label": {
+      "type": "object",
+      "innerContent": {},
+      "decoration": {
+        "spacing": {}
+      },
+      "default": {
+        "decoration": {
+          "spacing": {}
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .difl_advanced_button_container .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper .difl_adv_btn_text, {{selector}} .difl_advanced_button_container .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper .difl_adv_btn_text_hover",
+              "hover": "{{selector}} .difl_advanced_button_container{{:hover}} .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper .difl_adv_btn_text, {{selector}} .difl_advanced_button_container{{:hover}} .difl_adv_btn_wrapper .difl_adv_btn_text_wrapper .difl_adv_btn_text_hover"
+            }
+          },
+          "important": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": true
+                }
+              }
+            }
+          }
+        },
+        "spacing": {
+          "propertySelectors": {
+            "desktop": {
+              "value": {
+                "margin": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper .difl_social_share_content_container, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_content_container",
+                "padding": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper .difl_social_share_content, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_content"
+              }
+            }
+          }
+        }
+      }
+    },
+    "icon": {
+      "type": "object",
+      "decoration": {
+        "spacing": {},
+        "background": {},
+        "border": {},
+        "boxShadow": {},
+        "font": {
+          "textShadow": {}
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "selectors": {
+            "desktop": {
+              "value": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper .difl_social_share_icon, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_icon",
+              "hover": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}{{:hover}}.difl_social_share_item_wrapper .difl_social_share_icon, {{selector}}{{:hover}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_icon"
+            }
+          }
+        },
+        "background": {
+          "selectors": {
+            "desktop": {
+              "value": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper .difl_social_share_icon, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_icon",
+              "hover": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper{{:hover}} .difl_social_share_icon, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper{{:hover}} .difl_social_share_icon"
+            }
+          }
+        },
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper .difl_social_share_icon, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_icon",
+              "hover": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper{{:hover}} .difl_social_share_icon, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper{{:hover}} .difl_social_share_icon"
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper .difl_social_share_icon, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_icon",
+              "hover": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper{{:hover}} .difl_social_share_icon, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper{{:hover}} .difl_social_share_icon"
+            }
+          }
+        },
+        "font": {
+          "selector": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper .difl_social_share_icon i:before, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_icon i:before"
+        }
+      }
+    },
+    "label": {
+      "type": "object",
+      "selector": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper .difl_social_share_content .difl_social_share_text, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_content .difl_social_share_text",
+      "decoration": {},
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper .difl_social_share_content .difl_social_share_text, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_content .difl_social_share_text",
+              "hover": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper{{:hover}} .difl_social_share_content .difl_social_share_text, {{selector}}#difl-social-share-item-wrapper{{:hover}}.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_content .difl_social_share_text"
+            }
+          },
+          "important": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "label_container": {
+      "type": "object",
+      "decoration": {
+        "background": {},
+        "border": {},
+        "boxShadow": {},
+        "spacing": {}
+      },
+      "styleProps": {
+        "background": {
+          "selectors": {
+            "desktop": {
+              "value": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper .difl_social_share_content, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_content",
+              "hover": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper{{:hover}} .difl_social_share_content, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper{{:hover}} .difl_social_share_content"
+            }
+          }
+        },
+        "border": {
+          "selector": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper .difl_social_share_content, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_content"
+        },
+        "boxShadow": {
+          "selector": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper .difl_social_share_content, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_content"
+        },
+        "spacing": {
+          "propertySelectors": {
+            "desktop": {
+              "value": {
+                "margin": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper .difl_social_share_content_container, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_content_container",
+                "padding": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}.difl_social_share_item_wrapper .difl_social_share_content, {{selector}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_content"
+              },
+              "hover": {
+                "margin": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}{{:hover}}.difl_social_share_item_wrapper .difl_social_share_content_container, {{selector}}{{:hover}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_content_container",
+                "padding": ".difl_social_share #difl-social-share-container.difl_social_share_container {{selector}}{{:hover}}.difl_social_share_item_wrapper .difl_social_share_content, {{selector}}{{:hover}}#difl-social-share-item-wrapper.difl_temp_1.difl_temp_2.difl_social_share_item_wrapper .difl_social_share_content"
+              }
+            }
+          }
+        }
+      }
+    },
+    "icon_color": {
+      "type": "object",
+      "decoration": {}
+    },
+    "use_icon_font_size": {
+      "type": "object",
+      "innerContent": {},
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      }
+    },
+    "icon_font_size": {
+      "type": "object",
+      "decoration": {},
+      "default": {
+        "decoration": {
+          "desktop": {
+            "value": "16px"
+          }
+        }
+      }
+    }
+  },
+  "customCssFields": {}
+}
