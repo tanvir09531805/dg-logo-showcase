@@ -160,7 +160,7 @@ class FilterableCPT implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/filterable-cpt';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/filterable-cpt';
 
         add_action(
             'init',

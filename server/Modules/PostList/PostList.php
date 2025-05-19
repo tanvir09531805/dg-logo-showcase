@@ -160,7 +160,7 @@ class PostList implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/post-list';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/post-list';
 
         add_action(
             'init',

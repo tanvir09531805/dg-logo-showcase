@@ -160,7 +160,7 @@ class BusinessHours implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/business-hours';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/business-hours';
 
         add_action(
             'init',

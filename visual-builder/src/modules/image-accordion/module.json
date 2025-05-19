@@ -183,14 +183,7 @@
             }
         }
     },
-    "customCssFields": {
-        "title": {
-            "label": "Label 1"
-        },
-        "content": {
-            "label": "Label 2"
-        }
-    },
+    "customCssFields": {},
     "attributes": {
         "module": {
             "type": "object",
@@ -693,6 +686,12 @@
                             "sticky": false,
                             "hover": false,
                             "responsive": false
+                        },
+                        "priority": 10,
+                        "defaultAttr": {
+                            "desktop": {
+                                "value": "horizontal"
+                            }
                         },
                         "component": {
                             "type": "field",

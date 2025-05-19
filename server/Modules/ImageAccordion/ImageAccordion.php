@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ImageAccordion Module class.
  *
@@ -26,13 +27,16 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
  *
  * @package DIVIFLASH5\Modules\ImageAccordion
  */
-class ImageAccordion implements DependencyInterface {
+class ImageAccordion implements DependencyInterface
+{
 
-  public static function custom_css() {
-        return \WP_Block_Type_Registry::get_instance()->get_registered( 'difl/imageaccordion' )->customCssFields;
+    public static function custom_css()
+    {
+        return \WP_Block_Type_Registry::get_instance()->get_registered('difl/imageaccordion')->customCssFields;
     }
 
-  public static function module_classnames( $args ) {
+    public static function module_classnames($args)
+    {
         $classnames_instance = $args['classnamesInstance'];
         $attrs               = $args['attrs'];
 
@@ -63,7 +67,8 @@ class ImageAccordion implements DependencyInterface {
         );
     }
 
-  public static function module_script_data( $args ) {
+    public static function module_script_data($args)
+    {
         $elements = $args['elements'];
 
         // Element Script Data Options.
@@ -74,7 +79,8 @@ class ImageAccordion implements DependencyInterface {
         );
     }
 
-  public static function module_styles( $args ) {
+    public static function module_styles($args)
+    {
         $attrs    = $args['attrs'] ?? [];
         $elements = $args['elements'];
         $settings = $args['settings'] ?? [];
@@ -124,7 +130,7 @@ class ImageAccordion implements DependencyInterface {
         );
     }
 
-  public static function render_callback($attrs, $content, $block, $elements)
+    public static function render_callback($attrs, $content, $block, $elements)
     {
 
 
@@ -150,17 +156,17 @@ class ImageAccordion implements DependencyInterface {
                 'parentId' => $parent->id ?? '',
                 'parentName' => $parent->blockName ?? '',
                 'children' => $elements->style_components(
-        [
-            'attrName' => 'module',
-        ]
-    ) . $content."hi",
+                    [
+                        'attrName' => 'module',
+                    ]
+                ) . $content . "hi",
             ]
         );
     }
 
-  public function load()
+    public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/image-accordion';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/image-accordion';
 
         add_action(
             'init',
@@ -168,10 +174,10 @@ class ImageAccordion implements DependencyInterface {
                 ModuleRegistration::register_module(
                     $module_json_folder_path,
                     [
-                        'render_callback' => [ ImageAccordion::class, 'render_callback' ],
-          ]
-        );
-      }
+                        'render_callback' => [ImageAccordion::class, 'render_callback'],
+                    ]
+                );
+            }
         );
     }
 }

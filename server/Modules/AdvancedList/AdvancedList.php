@@ -160,7 +160,7 @@ class AdvancedList implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/advanced-list';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/advanced-list';
 
         add_action(
             'init',

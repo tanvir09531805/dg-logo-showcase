@@ -160,7 +160,7 @@ class LogoCarouselItem implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/logo-carousel-item';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/logo-carousel-item';
 
         add_action(
             'init',

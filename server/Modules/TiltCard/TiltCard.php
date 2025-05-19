@@ -160,7 +160,7 @@ class TiltCard implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/tilt-card';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/tilt-card';
 
         add_action(
             'init',

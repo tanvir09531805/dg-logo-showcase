@@ -160,7 +160,7 @@ class InstagramFeedCarousel implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/instagram-feed-carousel';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/instagram-feed-carousel';
 
         add_action(
             'init',

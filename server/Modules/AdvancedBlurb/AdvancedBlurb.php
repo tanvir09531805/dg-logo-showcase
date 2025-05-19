@@ -160,7 +160,7 @@ class AdvancedBlurb implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/advanced-blurb';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/advanced-blurb';
 
         add_action(
             'init',

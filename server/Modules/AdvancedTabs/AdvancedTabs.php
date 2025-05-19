@@ -160,7 +160,7 @@ class AdvancedTabs implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/advanced-tabs';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/advanced-tabs';
 
         add_action(
             'init',

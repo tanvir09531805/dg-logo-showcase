@@ -2,9 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 
-// Divi package dependencies.
-// Renderer - HTML
-const { ModuleContainer } = window?.divi?.module;
+import { ModuleContainer, ChildModulesContainer } from '@divi/module';
 
 import { moduleClassnames } from "./module-classnames";
 import { ModuleStyles } from "./module-styles";

@@ -161,14 +161,7 @@
             }
         }
     },
-    "customCssFields": {
-        "title": {
-            "label": "Label 1"
-        },
-        "content": {
-            "label": "Label 2"
-        }
-    },
+    "customCssFields": {},
     "attributes": {
         "module": {
             "type": "object",

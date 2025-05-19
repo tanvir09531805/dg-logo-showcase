@@ -160,7 +160,7 @@ class MarqueeText implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/marquee-text';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/marquee-text';
 
         add_action(
             'init',

@@ -160,7 +160,7 @@ class AdvancedHeading implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/advanced-heading';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/advanced-heading';
 
         add_action(
             'init',

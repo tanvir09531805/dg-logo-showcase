@@ -160,7 +160,7 @@ class ContentToggle implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/content-toggle';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/content-toggle';
 
         add_action(
             'init',

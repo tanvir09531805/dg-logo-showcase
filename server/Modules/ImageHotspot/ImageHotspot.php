@@ -160,7 +160,7 @@ class ImageHotspot implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/image-hotspot';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/image-hotspot';
 
         add_action(
             'init',

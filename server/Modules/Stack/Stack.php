@@ -160,7 +160,7 @@ class Stack implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/stack';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/stack';
 
         add_action(
             'init',

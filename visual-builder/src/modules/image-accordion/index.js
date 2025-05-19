@@ -7,14 +7,12 @@ import { __ } from "@wordpress/i18n";
 export const imageAccordionMetadata = metadata;
 
 export const imageAccordion = {
-  renderers: {
-    edit: ImageAccordionEdit,
-  },
-  placeholderContent:placeholderContent,
-  conversionOutline,
+    renderers: {
+        edit: ImageAccordionEdit,
+    },
+    placeholderContent: placeholderContent,
+    conversionOutline,
 };
-
-
 
 function checkVisiblity(props) {
     const attrObj = props.attrName.split('.');
@@ -53,19 +51,21 @@ function checkVisiblity(props) {
     return status_show_if && status_show_if_not;
 }
 
+const arrowNext = ({ attrs, }) => "on" === attrs.arrow_next_icon_use_icon?.innerContent?.desktop?.value;
 
 //handle innerContent component show_if && show_if_not condition
-window.vendor.wp.hooks.addFilter(
-    'divi.moduleLibrary.moduleAttributes.difl.imageaccordion',
-    'difl',
-    (attributes, metadata) => {
-        Object.entries(attributes).forEach(([key, singleAttr]) => {
-            if (singleAttr.show_if || singleAttr.show_if_not) {
-                if (singleAttr.settings.innerContent) {
-                    attributes[key].settings.innerContent.item.visible = checkVisiblity
-                }
+window.vendor.wp.hooks.addFilter('divi.moduleLibrary.moduleAttributes.difl.imageaccordion', 'difl', (attributes, metadata) => {
+    Object.entries(attributes).forEach(([key, singleAttr]) => {
+        if (singleAttr.show_if || singleAttr.show_if_not) {
+            if (singleAttr.settings.innerContent) {
+                attributes[key].settings.innerContent.item.visible = checkVisiblity
             }
-        })
-        return attributes;
-    }
-);
+        }
+    })
+
+    // attributes.arrowNextIcon.settings.innerContent.items.arrow_next_icon_icon_size.visible = arrowNext;
+    // attributes.arrowNextIcon.settings.decoration.icon.items.arrowNextIcon.component.props.visible = arrowNext;
+    // metadata.settings.groups.design_overlay.component.props.visible = (({ attrs }) => (('default_style' === (attrs?.style_type?.innerContent?.desktop?.value ?? "default_style")) && 'off' === (attrs?.enable_alternative_photo?.innerContent?.desktop?.value ?? "off")));
+
+    return attributes;
+});

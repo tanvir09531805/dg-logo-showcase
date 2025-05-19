@@ -160,7 +160,7 @@ class TableRow implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/table-row';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/table-row';
 
         add_action(
             'init',

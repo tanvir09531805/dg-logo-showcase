@@ -160,7 +160,7 @@ class FloatingImages implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/floating-images';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/floating-images';
 
         add_action(
             'init',

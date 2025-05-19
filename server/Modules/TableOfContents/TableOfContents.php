@@ -160,7 +160,7 @@ class TableOfContents implements DependencyInterface {
 
   public function load()
     {
-        $module_json_folder_path = DIFL5_JSON_PATH . '/table-ofcontents';
+        $module_json_folder_path = DIFL_MODULES_JSON_PATH . '/table-ofcontents';
 
         add_action(
             'init',
