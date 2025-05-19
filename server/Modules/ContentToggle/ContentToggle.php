@@ -2,10 +2,10 @@
 /**
  * ContentToggle Module class.
  *
- * @package DIVIFLASH5\Modules\ContentToggle;
+ * @package DIFL\Server\Modules\ContentToggle;
  */
 
-namespace DIVIFLASH5\Modules\ContentToggle;
+namespace DIFL\Server\Modules\ContentToggle;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class ContentToggle
  *
- * @package DIVIFLASH5\Modules\ContentToggle
+ * @package DIFL\Server\Modules\ContentToggle
  */
 class ContentToggle implements DependencyInterface {
 

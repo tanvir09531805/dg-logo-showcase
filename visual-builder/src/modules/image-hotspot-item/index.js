@@ -1,17 +1,14 @@
 import { ImageHotspotItemEdit } from './edit';
 import metadata from './module.json';
-import placeholderContent from './module-default-render-attributes.json';
 import { conversionOutline } from './conversion-outline';
 import { __ } from "@wordpress/i18n";
 
-export const imageHotspotItemMetadata = metadata;
-
 export const imageHotspotItem = {
-  renderers: {
-    edit: ImageHotspotItemEdit,
-  },
-  placeholderContent:placeholderContent,
-  conversionOutline,
+    metadata: metadata,
+    renderers: {
+        edit: ImageHotspotItemEdit,
+    },
+    conversionOutline,
 };
 
 
@@ -55,17 +52,13 @@ function checkVisiblity(props) {
 
 
 //handle innerContent component show_if && show_if_not condition
-window.vendor.wp.hooks.addFilter(
-    'divi.moduleLibrary.moduleAttributes.difl.imagehotspotitem',
-    'difl',
-    (attributes, metadata) => {
-        Object.entries(attributes).forEach(([key, singleAttr]) => {
-            if (singleAttr.show_if || singleAttr.show_if_not) {
-                if (singleAttr.settings.innerContent) {
-                    attributes[key].settings.innerContent.item.visible = checkVisiblity
-                }
+window.vendor.wp.hooks.addFilter('divi.moduleLibrary.moduleAttributes.difl.imagehotspotitem', 'difl', (attributes, metadata) => {
+    Object.entries(attributes).forEach(([key, singleAttr]) => {
+        if (singleAttr.show_if || singleAttr.show_if_not) {
+            if (singleAttr.settings.innerContent) {
+                attributes[key].settings.innerContent.item.visible = checkVisiblity
             }
-        })
-        return attributes;
-    }
-);
+        }
+    })
+    return attributes;
+});

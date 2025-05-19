@@ -2,10 +2,10 @@
 /**
  * PostItem Module class.
  *
- * @package DIVIFLASH5\Modules\PostItem;
+ * @package DIFL\Server\Modules\PostItem;
  */
 
-namespace DIVIFLASH5\Modules\PostItem;
+namespace DIFL\Server\Modules\PostItem;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class PostItem
  *
- * @package DIVIFLASH5\Modules\PostItem
+ * @package DIFL\Server\Modules\PostItem
  */
 class PostItem implements DependencyInterface {
 

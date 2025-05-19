@@ -2,7 +2,7 @@ const convertInlineValue = (value) => {
   return _.isString(value) ? value.split(',') : [];
 };
 
-const convertIcon = (value) => {
+const D4ToD5Icon = (value) => {
   value = value.split('|');
   value = {
     unicode: value[0],
@@ -12,7 +12,7 @@ const convertIcon = (value) => {
   return value;
 };
 
-const convertSpacing = (value) => {
+const D4ToD5Spacing = (value) => {
   value = value.split('|');
   value = {
     top: value[0],
@@ -108,25 +108,25 @@ export const conversionOutline = {
         nav_description_margin: "nav_description_margin.decoration.spacing.*.margin"
     },
     valueExpansionFunctionMap: {
-        button_margin: convertSpacing,
-        button_padding: convertSpacing,
-        nav_wrapper_margin: convertSpacing,
-        nav_wrapper_padding: convertSpacing,
-        at_content_wrapper_margin: convertSpacing,
-        at_content_wrapper_padding: convertSpacing,
-        image_wrapper_margin: convertSpacing,
-        image_wrapper_padding: convertSpacing,
-        nav_item_margin: convertSpacing,
-        nav_item_padding: convertSpacing,
-        nav_item_first_margin: convertSpacing,
-        nav_item_last_margin: convertSpacing,
-        nav_item_active_margin: convertSpacing,
-        nav_item_active_padding: convertSpacing,
-        content_margin: convertSpacing,
-        content_padding: convertSpacing,
-        nav_icon_margin: convertSpacing,
-        nav_title_margin: convertSpacing,
-        nav_description_margin: convertSpacing
+        button_margin: D4ToD5Spacing,
+        button_padding: D4ToD5Spacing,
+        nav_wrapper_margin: D4ToD5Spacing,
+        nav_wrapper_padding: D4ToD5Spacing,
+        at_content_wrapper_margin: D4ToD5Spacing,
+        at_content_wrapper_padding: D4ToD5Spacing,
+        image_wrapper_margin: D4ToD5Spacing,
+        image_wrapper_padding: D4ToD5Spacing,
+        nav_item_margin: D4ToD5Spacing,
+        nav_item_padding: D4ToD5Spacing,
+        nav_item_first_margin: D4ToD5Spacing,
+        nav_item_last_margin: D4ToD5Spacing,
+        nav_item_active_margin: D4ToD5Spacing,
+        nav_item_active_padding: D4ToD5Spacing,
+        content_margin: D4ToD5Spacing,
+        content_padding: D4ToD5Spacing,
+        nav_icon_margin: D4ToD5Spacing,
+        nav_title_margin: D4ToD5Spacing,
+        nav_description_margin: D4ToD5Spacing
     }
 }
 };

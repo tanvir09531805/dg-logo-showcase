@@ -2,7 +2,7 @@ const convertInlineValue = (value) => {
   return _.isString(value) ? value.split(',') : [];
 };
 
-const convertIcon = (value) => {
+const D4ToD5Icon = (value) => {
   value = value.split('|');
   value = {
     unicode: value[0],
@@ -12,7 +12,7 @@ const convertIcon = (value) => {
   return value;
 };
 
-const convertSpacing = (value) => {
+const D4ToD5Spacing = (value) => {
   value = value.split('|');
   value = {
     top: value[0],
@@ -109,17 +109,17 @@ export const conversionOutline = {
         item_padding: "item_padding.decoration.spacing.*.padding"
     },
     valueExpansionFunctionMap: {
-        arrow_prev_margin: convertSpacing,
-        arrow_prev_padding: convertSpacing,
-        arrow_next_margin: convertSpacing,
-        arrow_next_padding: convertSpacing,
-        dots_wrapper_margin: convertSpacing,
-        dots_wrapper_padding: convertSpacing,
-        wrapper_margin: convertSpacing,
-        wrapper_padding: convertSpacing,
-        item_wrapper_padding: convertSpacing,
-        item_margin: convertSpacing,
-        item_padding: convertSpacing
+        arrow_prev_margin: D4ToD5Spacing,
+        arrow_prev_padding: D4ToD5Spacing,
+        arrow_next_margin: D4ToD5Spacing,
+        arrow_next_padding: D4ToD5Spacing,
+        dots_wrapper_margin: D4ToD5Spacing,
+        dots_wrapper_padding: D4ToD5Spacing,
+        wrapper_margin: D4ToD5Spacing,
+        wrapper_padding: D4ToD5Spacing,
+        item_wrapper_padding: D4ToD5Spacing,
+        item_margin: D4ToD5Spacing,
+        item_padding: D4ToD5Spacing
     }
 }
 };

@@ -2,7 +2,7 @@ const convertInlineValue = (value) => {
   return _.isString(value) ? value.split(',') : [];
 };
 
-const convertIcon = (value) => {
+const D4ToD5Icon = (value) => {
   value = value.split('|');
   value = {
     unicode: value[0],
@@ -12,7 +12,7 @@ const convertIcon = (value) => {
   return value;
 };
 
-const convertSpacing = (value) => {
+const D4ToD5Spacing = (value) => {
   value = value.split('|');
   value = {
     top: value[0],
@@ -133,23 +133,23 @@ export const conversionOutline = {
         active_link_border_on_parent: "active_link_border_on_parent.innerContent.*"
     },
     valueExpansionFunctionMap: {
-        heading_spacing_h1_margin: convertSpacing,
-        heading_spacing_h1_padding: convertSpacing,
-        heading_spacing_h2_margin: convertSpacing,
-        heading_spacing_h2_padding: convertSpacing,
-        heading_spacing_h3_margin: convertSpacing,
-        heading_spacing_h3_padding: convertSpacing,
-        heading_spacing_h4_margin: convertSpacing,
-        heading_spacing_h4_padding: convertSpacing,
-        heading_spacing_h5_margin: convertSpacing,
-        heading_spacing_h5_padding: convertSpacing,
-        heading_spacing_h6_margin: convertSpacing,
-        heading_spacing_h6_padding: convertSpacing,
-        header_spacing_margin: convertSpacing,
-        header_spacing_padding: convertSpacing,
-        content_spacing_margin: convertSpacing,
-        content_spacing_padding: convertSpacing,
-        active_spacing_padding: convertSpacing
+        heading_spacing_h1_margin: D4ToD5Spacing,
+        heading_spacing_h1_padding: D4ToD5Spacing,
+        heading_spacing_h2_margin: D4ToD5Spacing,
+        heading_spacing_h2_padding: D4ToD5Spacing,
+        heading_spacing_h3_margin: D4ToD5Spacing,
+        heading_spacing_h3_padding: D4ToD5Spacing,
+        heading_spacing_h4_margin: D4ToD5Spacing,
+        heading_spacing_h4_padding: D4ToD5Spacing,
+        heading_spacing_h5_margin: D4ToD5Spacing,
+        heading_spacing_h5_padding: D4ToD5Spacing,
+        heading_spacing_h6_margin: D4ToD5Spacing,
+        heading_spacing_h6_padding: D4ToD5Spacing,
+        header_spacing_margin: D4ToD5Spacing,
+        header_spacing_padding: D4ToD5Spacing,
+        content_spacing_margin: D4ToD5Spacing,
+        content_spacing_padding: D4ToD5Spacing,
+        active_spacing_padding: D4ToD5Spacing
     }
 }
 };

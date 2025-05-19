@@ -2,10 +2,10 @@
 /**
  * InlineContentItem Module class.
  *
- * @package DIVIFLASH5\Modules\InlineContentItem;
+ * @package DIFL\Server\Modules\InlineContentItem;
  */
 
-namespace DIVIFLASH5\Modules\InlineContentItem;
+namespace DIFL\Server\Modules\InlineContentItem;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class InlineContentItem
  *
- * @package DIVIFLASH5\Modules\InlineContentItem
+ * @package DIFL\Server\Modules\InlineContentItem
  */
 class InlineContentItem implements DependencyInterface {
 

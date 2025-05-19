@@ -2,7 +2,7 @@ const convertInlineValue = (value) => {
   return _.isString(value) ? value.split(',') : [];
 };
 
-const convertIcon = (value) => {
+const D4ToD5Icon = (value) => {
   value = value.split('|');
   value = {
     unicode: value[0],
@@ -12,7 +12,7 @@ const convertIcon = (value) => {
   return value;
 };
 
-const convertSpacing = (value) => {
+const D4ToD5Spacing = (value) => {
   value = value.split('|');
   value = {
     top: value[0],
@@ -214,34 +214,34 @@ export const conversionOutline = {
         loader_background: "loader_background.innerContent.*"
     },
     valueExpansionFunctionMap: {
-        filter_buttons_margin: convertSpacing,
-        filter_buttons_padding: convertSpacing,
-        filter_button_active_margin: convertSpacing,
-        filter_button_active_padding: convertSpacing,
-        multi_filter_dropdown_container_margin: convertSpacing,
-        multi_filter_dropdown_container_padding: convertSpacing,
-        multi_filter_checkbox_field_margin: convertSpacing,
-        multi_filter_checkbox_field_padding: convertSpacing,
-        load_more_margin: convertSpacing,
-        load_more_padding: convertSpacing,
-        wrapper_margin: convertSpacing,
-        wrapper_padding: convertSpacing,
-        item_wrapper_padding: convertSpacing,
-        item_margin: convertSpacing,
-        item_padding: convertSpacing,
-        search_bar_wrapper_margin: convertSpacing,
-        search_bar_wrapper_padding: convertSpacing,
-        search_bar_input_padding: convertSpacing,
-        search_bar_button_margin: convertSpacing,
-        search_bar_button_padding: convertSpacing,
-        search_bar_button_icon_margin: convertSpacing,
-        multi_filter_container_margin: convertSpacing,
-        multi_filter_container_padding: convertSpacing,
-        multi_filter_input_margin: convertSpacing,
-        multi_filter_input_padding: convertSpacing,
-        multi_filter_label_margin: convertSpacing,
-        multi_filter_label_padding: convertSpacing,
-        loader_spinning_margin: convertSpacing
+        filter_buttons_margin: D4ToD5Spacing,
+        filter_buttons_padding: D4ToD5Spacing,
+        filter_button_active_margin: D4ToD5Spacing,
+        filter_button_active_padding: D4ToD5Spacing,
+        multi_filter_dropdown_container_margin: D4ToD5Spacing,
+        multi_filter_dropdown_container_padding: D4ToD5Spacing,
+        multi_filter_checkbox_field_margin: D4ToD5Spacing,
+        multi_filter_checkbox_field_padding: D4ToD5Spacing,
+        load_more_margin: D4ToD5Spacing,
+        load_more_padding: D4ToD5Spacing,
+        wrapper_margin: D4ToD5Spacing,
+        wrapper_padding: D4ToD5Spacing,
+        item_wrapper_padding: D4ToD5Spacing,
+        item_margin: D4ToD5Spacing,
+        item_padding: D4ToD5Spacing,
+        search_bar_wrapper_margin: D4ToD5Spacing,
+        search_bar_wrapper_padding: D4ToD5Spacing,
+        search_bar_input_padding: D4ToD5Spacing,
+        search_bar_button_margin: D4ToD5Spacing,
+        search_bar_button_padding: D4ToD5Spacing,
+        search_bar_button_icon_margin: D4ToD5Spacing,
+        multi_filter_container_margin: D4ToD5Spacing,
+        multi_filter_container_padding: D4ToD5Spacing,
+        multi_filter_input_margin: D4ToD5Spacing,
+        multi_filter_input_padding: D4ToD5Spacing,
+        multi_filter_label_margin: D4ToD5Spacing,
+        multi_filter_label_padding: D4ToD5Spacing,
+        loader_spinning_margin: D4ToD5Spacing
     }
 }
 };

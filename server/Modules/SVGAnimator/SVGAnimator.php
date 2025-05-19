@@ -2,10 +2,10 @@
 /**
  * SVGAnimator Module class.
  *
- * @package DIVIFLASH5\Modules\SVGAnimator;
+ * @package DIFL\Server\Modules\SVGAnimator;
  */
 
-namespace DIVIFLASH5\Modules\SVGAnimator;
+namespace DIFL\Server\Modules\SVGAnimator;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class SVGAnimator
  *
- * @package DIVIFLASH5\Modules\SVGAnimator
+ * @package DIFL\Server\Modules\SVGAnimator
  */
 class SVGAnimator implements DependencyInterface {
 

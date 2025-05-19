@@ -2,10 +2,10 @@
 /**
  * TestimonialCarouselItem Module class.
  *
- * @package DIVIFLASH5\Modules\TestimonialCarouselItem;
+ * @package DIFL\Server\Modules\TestimonialCarouselItem;
  */
 
-namespace DIVIFLASH5\Modules\TestimonialCarouselItem;
+namespace DIFL\Server\Modules\TestimonialCarouselItem;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class TestimonialCarouselItem
  *
- * @package DIVIFLASH5\Modules\TestimonialCarouselItem
+ * @package DIFL\Server\Modules\TestimonialCarouselItem
  */
 class TestimonialCarouselItem implements DependencyInterface {
 

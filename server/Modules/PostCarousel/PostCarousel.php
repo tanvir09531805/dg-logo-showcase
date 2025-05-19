@@ -2,10 +2,10 @@
 /**
  * PostCarousel Module class.
  *
- * @package DIVIFLASH5\Modules\PostCarousel;
+ * @package DIFL\Server\Modules\PostCarousel;
  */
 
-namespace DIVIFLASH5\Modules\PostCarousel;
+namespace DIFL\Server\Modules\PostCarousel;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class PostCarousel
  *
- * @package DIVIFLASH5\Modules\PostCarousel
+ * @package DIFL\Server\Modules\PostCarousel
  */
 class PostCarousel implements DependencyInterface {
 

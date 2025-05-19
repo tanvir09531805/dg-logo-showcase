@@ -1,20 +1,16 @@
 import { AdvancedGalleryEdit } from './edit';
 import metadata from './module.json';
-import placeholderContent from './module-default-render-attributes.json';
 import { conversionOutline } from './conversion-outline';
 import { __ } from "@wordpress/i18n";
 
-export const advancedGalleryMetadata = metadata;
-
 export const advancedGallery = {
+    metadata: metadata,
+    childrenName: ['difl/imagegalleryitem'],
   renderers: {
     edit: AdvancedGalleryEdit,
   },
-  placeholderContent:placeholderContent,
   conversionOutline,
 };
-
-
 
 function checkVisiblity(props) {
     const attrObj = props.attrName.split('.');

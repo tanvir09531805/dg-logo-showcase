@@ -2,10 +2,10 @@
 /**
  * InstagramFeedCarousel Module class.
  *
- * @package DIVIFLASH5\Modules\InstagramFeedCarousel;
+ * @package DIFL\Server\Modules\InstagramFeedCarousel;
  */
 
-namespace DIVIFLASH5\Modules\InstagramFeedCarousel;
+namespace DIFL\Server\Modules\InstagramFeedCarousel;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class InstagramFeedCarousel
  *
- * @package DIVIFLASH5\Modules\InstagramFeedCarousel
+ * @package DIFL\Server\Modules\InstagramFeedCarousel
  */
 class InstagramFeedCarousel implements DependencyInterface {
 

@@ -2,10 +2,10 @@
 /**
  * ScrollImage Module class.
  *
- * @package DIVIFLASH5\Modules\ScrollImage;
+ * @package DIFL\Server\Modules\ScrollImage;
  */
 
-namespace DIVIFLASH5\Modules\ScrollImage;
+namespace DIFL\Server\Modules\ScrollImage;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class ScrollImage
  *
- * @package DIVIFLASH5\Modules\ScrollImage
+ * @package DIFL\Server\Modules\ScrollImage
  */
 class ScrollImage implements DependencyInterface {
 

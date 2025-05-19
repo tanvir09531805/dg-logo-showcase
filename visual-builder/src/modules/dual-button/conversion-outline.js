@@ -2,7 +2,7 @@ const convertInlineValue = (value) => {
   return _.isString(value) ? value.split(',') : [];
 };
 
-const convertIcon = (value) => {
+const D4ToD5Icon = (value) => {
   value = value.split('|');
   value = {
     unicode: value[0],
@@ -12,7 +12,7 @@ const convertIcon = (value) => {
   return value;
 };
 
-const convertSpacing = (value) => {
+const D4ToD5Spacing = (value) => {
   value = value.split('|');
   value = {
     top: value[0],
@@ -90,16 +90,16 @@ export const conversionOutline = {
         alignment: "alignment.innerContent.*"
     },
     valueExpansionFunctionMap: {
-        left_button_wrapper_margin: convertSpacing,
-        left_button_wrapper_padding: convertSpacing,
-        right_button_wrapper_margin: convertSpacing,
-        right_button_wrapper_padding: convertSpacing,
-        left_button_margin: convertSpacing,
-        left_button_padding: convertSpacing,
-        right_button_margin: convertSpacing,
-        right_button_padding: convertSpacing,
-        button_separator_margin: convertSpacing,
-        button_separator_padding: convertSpacing
+        left_button_wrapper_margin: D4ToD5Spacing,
+        left_button_wrapper_padding: D4ToD5Spacing,
+        right_button_wrapper_margin: D4ToD5Spacing,
+        right_button_wrapper_padding: D4ToD5Spacing,
+        left_button_margin: D4ToD5Spacing,
+        left_button_padding: D4ToD5Spacing,
+        right_button_margin: D4ToD5Spacing,
+        right_button_padding: D4ToD5Spacing,
+        button_separator_margin: D4ToD5Spacing,
+        button_separator_padding: D4ToD5Spacing
     }
 }
 };

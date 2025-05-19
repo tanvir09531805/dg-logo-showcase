@@ -2,10 +2,10 @@
 /**
  * AdvancedGalleryItem Module class.
  *
- * @package DIVIFLASH5\Modules\AdvancedGalleryItem;
+ * @package DIFL\Server\Modules\AdvancedGalleryItem;
  */
 
-namespace DIVIFLASH5\Modules\AdvancedGalleryItem;
+namespace DIFL\Server\Modules\AdvancedGalleryItem;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class AdvancedGalleryItem
  *
- * @package DIVIFLASH5\Modules\AdvancedGalleryItem
+ * @package DIFL\Server\Modules\AdvancedGalleryItem
  */
 class AdvancedGalleryItem implements DependencyInterface {
 

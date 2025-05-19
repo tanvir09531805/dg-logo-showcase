@@ -2,10 +2,10 @@
 /**
  * VerticalMenu Module class.
  *
- * @package DIVIFLASH5\Modules\VerticalMenu;
+ * @package DIFL\Server\Modules\VerticalMenu;
  */
 
-namespace DIVIFLASH5\Modules\VerticalMenu;
+namespace DIFL\Server\Modules\VerticalMenu;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class VerticalMenu
  *
- * @package DIVIFLASH5\Modules\VerticalMenu
+ * @package DIFL\Server\Modules\VerticalMenu
  */
 class VerticalMenu implements DependencyInterface {
 

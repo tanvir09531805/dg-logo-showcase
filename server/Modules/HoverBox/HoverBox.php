@@ -2,10 +2,10 @@
 /**
  * HoverBox Module class.
  *
- * @package DIVIFLASH5\Modules\HoverBox;
+ * @package DIFL\Server\Modules\HoverBox;
  */
 
-namespace DIVIFLASH5\Modules\HoverBox;
+namespace DIFL\Server\Modules\HoverBox;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class HoverBox
  *
- * @package DIVIFLASH5\Modules\HoverBox
+ * @package DIFL\Server\Modules\HoverBox
  */
 class HoverBox implements DependencyInterface {
 

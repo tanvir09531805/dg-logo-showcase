@@ -2,10 +2,10 @@
 /**
  * AdvancedButton Module class.
  *
- * @package DIVIFLASH5\Modules\AdvancedButton;
+ * @package DIFL\Server\Modules\AdvancedButton;
  */
 
-namespace DIVIFLASH5\Modules\AdvancedButton;
+namespace DIFL\Server\Modules\AdvancedButton;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class AdvancedButton
  *
- * @package DIVIFLASH5\Modules\AdvancedButton
+ * @package DIFL\Server\Modules\AdvancedButton
  */
 class AdvancedButton implements DependencyInterface {
 

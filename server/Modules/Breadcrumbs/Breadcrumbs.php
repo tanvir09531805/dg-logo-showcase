@@ -2,10 +2,10 @@
 /**
  * Breadcrumbs Module class.
  *
- * @package DIVIFLASH5\Modules\Breadcrumbs;
+ * @package DIFL\Server\Modules\Breadcrumbs;
  */
 
-namespace DIVIFLASH5\Modules\Breadcrumbs;
+namespace DIFL\Server\Modules\Breadcrumbs;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class Breadcrumbs
  *
- * @package DIVIFLASH5\Modules\Breadcrumbs
+ * @package DIFL\Server\Modules\Breadcrumbs
  */
 class Breadcrumbs implements DependencyInterface {
 

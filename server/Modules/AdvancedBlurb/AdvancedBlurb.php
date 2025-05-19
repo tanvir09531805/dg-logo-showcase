@@ -2,10 +2,10 @@
 /**
  * AdvancedBlurb Module class.
  *
- * @package DIVIFLASH5\Modules\AdvancedBlurb;
+ * @package DIFL\Server\Modules\AdvancedBlurb;
  */
 
-namespace DIVIFLASH5\Modules\AdvancedBlurb;
+namespace DIFL\Server\Modules\AdvancedBlurb;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class AdvancedBlurb
  *
- * @package DIVIFLASH5\Modules\AdvancedBlurb
+ * @package DIFL\Server\Modules\AdvancedBlurb
  */
 class AdvancedBlurb implements DependencyInterface {
 

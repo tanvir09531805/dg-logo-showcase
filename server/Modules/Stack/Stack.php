@@ -2,10 +2,10 @@
 /**
  * Stack Module class.
  *
- * @package DIVIFLASH5\Modules\Stack;
+ * @package DIFL\Server\Modules\Stack;
  */
 
-namespace DIVIFLASH5\Modules\Stack;
+namespace DIFL\Server\Modules\Stack;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class Stack
  *
- * @package DIVIFLASH5\Modules\Stack
+ * @package DIFL\Server\Modules\Stack
  */
 class Stack implements DependencyInterface {
 

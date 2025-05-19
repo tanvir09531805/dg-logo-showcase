@@ -2,10 +2,10 @@
 /**
  * LogoCarouselItem Module class.
  *
- * @package DIVIFLASH5\Modules\LogoCarouselItem;
+ * @package DIFL\Server\Modules\LogoCarouselItem;
  */
 
-namespace DIVIFLASH5\Modules\LogoCarouselItem;
+namespace DIFL\Server\Modules\LogoCarouselItem;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class LogoCarouselItem
  *
- * @package DIVIFLASH5\Modules\LogoCarouselItem
+ * @package DIFL\Server\Modules\LogoCarouselItem
  */
 class LogoCarouselItem implements DependencyInterface {
 

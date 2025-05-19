@@ -2,10 +2,10 @@
 /**
  * AdvancedPricingTable Module class.
  *
- * @package DIVIFLASH5\Modules\AdvancedPricingTable;
+ * @package DIFL\Server\Modules\AdvancedPricingTable;
  */
 
-namespace DIVIFLASH5\Modules\AdvancedPricingTable;
+namespace DIFL\Server\Modules\AdvancedPricingTable;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class AdvancedPricingTable
  *
- * @package DIVIFLASH5\Modules\AdvancedPricingTable
+ * @package DIFL\Server\Modules\AdvancedPricingTable
  */
 class AdvancedPricingTable implements DependencyInterface {
 

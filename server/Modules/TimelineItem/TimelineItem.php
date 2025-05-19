@@ -2,10 +2,10 @@
 /**
  * TimelineItem Module class.
  *
- * @package DIVIFLASH5\Modules\TimelineItem;
+ * @package DIFL\Server\Modules\TimelineItem;
  */
 
-namespace DIVIFLASH5\Modules\TimelineItem;
+namespace DIFL\Server\Modules\TimelineItem;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class TimelineItem
  *
- * @package DIVIFLASH5\Modules\TimelineItem
+ * @package DIFL\Server\Modules\TimelineItem
  */
 class TimelineItem implements DependencyInterface {
 

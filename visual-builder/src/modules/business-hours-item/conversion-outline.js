@@ -2,7 +2,7 @@ const convertInlineValue = (value) => {
   return _.isString(value) ? value.split(',') : [];
 };
 
-const convertIcon = (value) => {
+const D4ToD5Icon = (value) => {
   value = value.split('|');
   value = {
     unicode: value[0],
@@ -12,7 +12,7 @@ const convertIcon = (value) => {
   return value;
 };
 
-const convertSpacing = (value) => {
+const D4ToD5Spacing = (value) => {
   value = value.split('|');
   value = {
     top: value[0],
@@ -81,20 +81,20 @@ export const conversionOutline = {
         day_time_separetor_margin: "day_time_separetor_margin.decoration.spacing.*.margin"
     },
     valueExpansionFunctionMap: {
-        item_padding: convertSpacing,
-        day_margin: convertSpacing,
-        day_padding: convertSpacing,
-        time_margin: convertSpacing,
-        time_padding: convertSpacing,
-        start_time_margin: convertSpacing,
-        start_time_padding: convertSpacing,
-        end_time_margin: convertSpacing,
-        end_time_padding: convertSpacing,
-        time_separetor_margin: convertSpacing,
-        time_separetor_padding: convertSpacing,
-        item_wrapper_margin: convertSpacing,
-        item_wrapper_padding: convertSpacing,
-        day_time_separetor_margin: convertSpacing
+        item_padding: D4ToD5Spacing,
+        day_margin: D4ToD5Spacing,
+        day_padding: D4ToD5Spacing,
+        time_margin: D4ToD5Spacing,
+        time_padding: D4ToD5Spacing,
+        start_time_margin: D4ToD5Spacing,
+        start_time_padding: D4ToD5Spacing,
+        end_time_margin: D4ToD5Spacing,
+        end_time_padding: D4ToD5Spacing,
+        time_separetor_margin: D4ToD5Spacing,
+        time_separetor_padding: D4ToD5Spacing,
+        item_wrapper_margin: D4ToD5Spacing,
+        item_wrapper_padding: D4ToD5Spacing,
+        day_time_separetor_margin: D4ToD5Spacing
     }
 }
 };

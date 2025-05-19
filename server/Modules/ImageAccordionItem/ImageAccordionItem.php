@@ -2,10 +2,10 @@
 /**
  * ImageAccordionItem Module class.
  *
- * @package DIVIFLASH5\Modules\ImageAccordionItem;
+ * @package DIFL\Server\Modules\ImageAccordionItem;
  */
 
-namespace DIVIFLASH5\Modules\ImageAccordionItem;
+namespace DIFL\Server\Modules\ImageAccordionItem;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class ImageAccordionItem
  *
- * @package DIVIFLASH5\Modules\ImageAccordionItem
+ * @package DIFL\Server\Modules\ImageAccordionItem
  */
 class ImageAccordionItem implements DependencyInterface {
 

@@ -2,10 +2,10 @@
 /**
  * ImageCarousel Module class.
  *
- * @package DIVIFLASH5\Modules\ImageCarousel;
+ * @package DIFL\Server\Modules\ImageCarousel;
  */
 
-namespace DIVIFLASH5\Modules\ImageCarousel;
+namespace DIFL\Server\Modules\ImageCarousel;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class ImageCarousel
  *
- * @package DIVIFLASH5\Modules\ImageCarousel
+ * @package DIFL\Server\Modules\ImageCarousel
  */
 class ImageCarousel implements DependencyInterface {
 

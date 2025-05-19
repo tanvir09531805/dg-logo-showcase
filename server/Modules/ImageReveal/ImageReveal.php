@@ -2,10 +2,10 @@
 /**
  * ImageReveal Module class.
  *
- * @package DIVIFLASH5\Modules\ImageReveal;
+ * @package DIFL\Server\Modules\ImageReveal;
  */
 
-namespace DIVIFLASH5\Modules\ImageReveal;
+namespace DIFL\Server\Modules\ImageReveal;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class ImageReveal
  *
- * @package DIVIFLASH5\Modules\ImageReveal
+ * @package DIFL\Server\Modules\ImageReveal
  */
 class ImageReveal implements DependencyInterface {
 

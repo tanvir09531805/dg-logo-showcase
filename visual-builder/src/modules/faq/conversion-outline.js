@@ -2,7 +2,7 @@ const convertInlineValue = (value) => {
   return _.isString(value) ? value.split(',') : [];
 };
 
-const convertIcon = (value) => {
+const D4ToD5Icon = (value) => {
   value = value.split('|');
   value = {
     unicode: value[0],
@@ -12,7 +12,7 @@ const convertIcon = (value) => {
   return value;
 };
 
-const convertSpacing = (value) => {
+const D4ToD5Spacing = (value) => {
   value = value.split('|');
   value = {
     top: value[0],
@@ -119,23 +119,23 @@ export const conversionOutline = {
         ans_button_padding: "ans_button_padding.decoration.spacing.*.padding"
     },
     valueExpansionFunctionMap: {
-        faq_wrapper_margin: convertSpacing,
-        faq_wrapper_padding: convertSpacing,
-        faq_item_wrapper_margin: convertSpacing,
-        faq_item_wrapper_padding: convertSpacing,
-        que_wrapper_margin: convertSpacing,
-        que_wrapper_padding: convertSpacing,
-        que_text_margin: convertSpacing,
-        que_icon_margin: convertSpacing,
-        que_icon_padding: convertSpacing,
-        que_img_margin: convertSpacing,
-        que_img_padding: convertSpacing,
-        ans_wrapper_margin: convertSpacing,
-        ans_wrapper_padding: convertSpacing,
-        ans_text_padding: convertSpacing,
-        ans_img_padding: convertSpacing,
-        ans_button_margin: convertSpacing,
-        ans_button_padding: convertSpacing
+        faq_wrapper_margin: D4ToD5Spacing,
+        faq_wrapper_padding: D4ToD5Spacing,
+        faq_item_wrapper_margin: D4ToD5Spacing,
+        faq_item_wrapper_padding: D4ToD5Spacing,
+        que_wrapper_margin: D4ToD5Spacing,
+        que_wrapper_padding: D4ToD5Spacing,
+        que_text_margin: D4ToD5Spacing,
+        que_icon_margin: D4ToD5Spacing,
+        que_icon_padding: D4ToD5Spacing,
+        que_img_margin: D4ToD5Spacing,
+        que_img_padding: D4ToD5Spacing,
+        ans_wrapper_margin: D4ToD5Spacing,
+        ans_wrapper_padding: D4ToD5Spacing,
+        ans_text_padding: D4ToD5Spacing,
+        ans_img_padding: D4ToD5Spacing,
+        ans_button_margin: D4ToD5Spacing,
+        ans_button_padding: D4ToD5Spacing
     }
 }
 };

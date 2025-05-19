@@ -2,7 +2,7 @@ const convertInlineValue = (value) => {
   return _.isString(value) ? value.split(',') : [];
 };
 
-const convertIcon = (value) => {
+const D4ToD5Icon = (value) => {
   value = value.split('|');
   value = {
     unicode: value[0],
@@ -12,7 +12,7 @@ const convertIcon = (value) => {
   return value;
 };
 
-const convertSpacing = (value) => {
+const D4ToD5Spacing = (value) => {
   value = value.split('|');
   value = {
     top: value[0],
@@ -144,28 +144,28 @@ export const conversionOutline = {
         last_social_margin: "last_social_margin.decoration.spacing.*.margin"
     },
     valueExpansionFunctionMap: {
-        module_wrapper_margin: convertSpacing,
-        module_wrapper_padding: convertSpacing,
-        image_wrapper_margin: convertSpacing,
-        image_wrapper_padding: convertSpacing,
-        content_margin: convertSpacing,
-        content_padding: convertSpacing,
-        details_wrapper_margin: convertSpacing,
-        details_wrapper_padding: convertSpacing,
-        social_wrapper_margin: convertSpacing,
-        social_wrapper_padding: convertSpacing,
-        name_margin: convertSpacing,
-        name_padding: convertSpacing,
-        role_margin: convertSpacing,
-        role_padding: convertSpacing,
-        description_margin: convertSpacing,
-        description_padding: convertSpacing,
-        image_margin: convertSpacing,
-        image_padding: convertSpacing,
-        social_margin: convertSpacing,
-        social_padding: convertSpacing,
-        first_social_margin: convertSpacing,
-        last_social_margin: convertSpacing
+        module_wrapper_margin: D4ToD5Spacing,
+        module_wrapper_padding: D4ToD5Spacing,
+        image_wrapper_margin: D4ToD5Spacing,
+        image_wrapper_padding: D4ToD5Spacing,
+        content_margin: D4ToD5Spacing,
+        content_padding: D4ToD5Spacing,
+        details_wrapper_margin: D4ToD5Spacing,
+        details_wrapper_padding: D4ToD5Spacing,
+        social_wrapper_margin: D4ToD5Spacing,
+        social_wrapper_padding: D4ToD5Spacing,
+        name_margin: D4ToD5Spacing,
+        name_padding: D4ToD5Spacing,
+        role_margin: D4ToD5Spacing,
+        role_padding: D4ToD5Spacing,
+        description_margin: D4ToD5Spacing,
+        description_padding: D4ToD5Spacing,
+        image_margin: D4ToD5Spacing,
+        image_padding: D4ToD5Spacing,
+        social_margin: D4ToD5Spacing,
+        social_padding: D4ToD5Spacing,
+        first_social_margin: D4ToD5Spacing,
+        last_social_margin: D4ToD5Spacing
     }
 }
 };

@@ -2,10 +2,10 @@
 /**
  * FilterableCPT Module class.
  *
- * @package DIVIFLASH5\Modules\FilterableCPT;
+ * @package DIFL\Server\Modules\FilterableCPT;
  */
 
-namespace DIVIFLASH5\Modules\FilterableCPT;
+namespace DIFL\Server\Modules\FilterableCPT;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class FilterableCPT
  *
- * @package DIVIFLASH5\Modules\FilterableCPT
+ * @package DIFL\Server\Modules\FilterableCPT
  */
 class FilterableCPT implements DependencyInterface {
 

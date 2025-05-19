@@ -2,10 +2,10 @@
 /**
  * AdvancedCarousel Module class.
  *
- * @package DIVIFLASH5\Modules\AdvancedCarousel;
+ * @package DIFL\Server\Modules\AdvancedCarousel;
  */
 
-namespace DIVIFLASH5\Modules\AdvancedCarousel;
+namespace DIFL\Server\Modules\AdvancedCarousel;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class AdvancedCarousel
  *
- * @package DIVIFLASH5\Modules\AdvancedCarousel
+ * @package DIFL\Server\Modules\AdvancedCarousel
  */
 class AdvancedCarousel implements DependencyInterface {
 

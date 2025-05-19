@@ -2,10 +2,10 @@
 /**
  * ProductCarousel Module class.
  *
- * @package DIVIFLASH5\Modules\ProductCarousel;
+ * @package DIFL\Server\Modules\ProductCarousel;
  */
 
-namespace DIVIFLASH5\Modules\ProductCarousel;
+namespace DIFL\Server\Modules\ProductCarousel;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class ProductCarousel
  *
- * @package DIVIFLASH5\Modules\ProductCarousel
+ * @package DIFL\Server\Modules\ProductCarousel
  */
 class ProductCarousel implements DependencyInterface {
 

@@ -2,10 +2,10 @@
 /**
  * Table Module class.
  *
- * @package DIVIFLASH5\Modules\Table;
+ * @package DIFL\Server\Modules\Table;
  */
 
-namespace DIVIFLASH5\Modules\Table;
+namespace DIFL\Server\Modules\Table;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class Table
  *
- * @package DIVIFLASH5\Modules\Table
+ * @package DIFL\Server\Modules\Table
  */
 class Table implements DependencyInterface {
 

@@ -2,10 +2,10 @@
 /**
  * JustifiedGallery Module class.
  *
- * @package DIVIFLASH5\Modules\JustifiedGallery;
+ * @package DIFL\Server\Modules\JustifiedGallery;
  */
 
-namespace DIVIFLASH5\Modules\JustifiedGallery;
+namespace DIFL\Server\Modules\JustifiedGallery;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class JustifiedGallery
  *
- * @package DIVIFLASH5\Modules\JustifiedGallery
+ * @package DIFL\Server\Modules\JustifiedGallery
  */
 class JustifiedGallery implements DependencyInterface {
 

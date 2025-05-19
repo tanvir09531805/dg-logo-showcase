@@ -2,10 +2,10 @@
 /**
  * WPFormsStyler Module class.
  *
- * @package DIVIFLASH5\Modules\WPFormsStyler;
+ * @package DIFL\Server\Modules\WPFormsStyler;
  */
 
-namespace DIVIFLASH5\Modules\WPFormsStyler;
+namespace DIFL\Server\Modules\WPFormsStyler;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class WPFormsStyler
  *
- * @package DIVIFLASH5\Modules\WPFormsStyler
+ * @package DIFL\Server\Modules\WPFormsStyler
  */
 class WPFormsStyler implements DependencyInterface {
 

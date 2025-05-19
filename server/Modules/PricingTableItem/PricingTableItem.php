@@ -2,10 +2,10 @@
 /**
  * PricingTableItem Module class.
  *
- * @package DIVIFLASH5\Modules\PricingTableItem;
+ * @package DIFL\Server\Modules\PricingTableItem;
  */
 
-namespace DIVIFLASH5\Modules\PricingTableItem;
+namespace DIFL\Server\Modules\PricingTableItem;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class PricingTableItem
  *
- * @package DIVIFLASH5\Modules\PricingTableItem
+ * @package DIFL\Server\Modules\PricingTableItem
  */
 class PricingTableItem implements DependencyInterface {
 

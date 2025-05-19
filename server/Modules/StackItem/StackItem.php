@@ -2,10 +2,10 @@
 /**
  * StackItem Module class.
  *
- * @package DIVIFLASH5\Modules\StackItem;
+ * @package DIFL\Server\Modules\StackItem;
  */
 
-namespace DIVIFLASH5\Modules\StackItem;
+namespace DIFL\Server\Modules\StackItem;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class StackItem
  *
- * @package DIVIFLASH5\Modules\StackItem
+ * @package DIFL\Server\Modules\StackItem
  */
 class StackItem implements DependencyInterface {
 

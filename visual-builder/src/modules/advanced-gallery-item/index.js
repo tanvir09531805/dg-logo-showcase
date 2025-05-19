@@ -1,16 +1,13 @@
 import { AdvancedGalleryItemEdit } from './edit';
 import metadata from './module.json';
-import placeholderContent from './module-default-render-attributes.json';
 import { conversionOutline } from './conversion-outline';
 import { __ } from "@wordpress/i18n";
 
-export const advancedGalleryItemMetadata = metadata;
-
 export const advancedGalleryItem = {
+    metadata: metadata,
   renderers: {
     edit: AdvancedGalleryItemEdit,
   },
-  placeholderContent:placeholderContent,
   conversionOutline,
 };
 

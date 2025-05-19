@@ -2,10 +2,10 @@
 /**
  * PostList Module class.
  *
- * @package DIVIFLASH5\Modules\PostList;
+ * @package DIFL\Server\Modules\PostList;
  */
 
-namespace DIVIFLASH5\Modules\PostList;
+namespace DIFL\Server\Modules\PostList;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class PostList
  *
- * @package DIVIFLASH5\Modules\PostList
+ * @package DIFL\Server\Modules\PostList
  */
 class PostList implements DependencyInterface {
 

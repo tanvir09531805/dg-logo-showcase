@@ -2,10 +2,10 @@
 /**
  * FlipBox Module class.
  *
- * @package DIVIFLASH5\Modules\FlipBox;
+ * @package DIFL\Server\Modules\FlipBox;
  */
 
-namespace DIVIFLASH5\Modules\FlipBox;
+namespace DIFL\Server\Modules\FlipBox;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class FlipBox
  *
- * @package DIVIFLASH5\Modules\FlipBox
+ * @package DIFL\Server\Modules\FlipBox
  */
 class FlipBox implements DependencyInterface {
 

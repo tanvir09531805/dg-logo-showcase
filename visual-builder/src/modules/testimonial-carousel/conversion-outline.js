@@ -2,7 +2,7 @@ const convertInlineValue = (value) => {
   return _.isString(value) ? value.split(',') : [];
 };
 
-const convertIcon = (value) => {
+const D4ToD5Icon = (value) => {
   value = value.split('|');
   value = {
     unicode: value[0],
@@ -12,7 +12,7 @@ const convertIcon = (value) => {
   return value;
 };
 
-const convertSpacing = (value) => {
+const D4ToD5Spacing = (value) => {
   value = value.split('|');
   value = {
     top: value[0],
@@ -132,26 +132,26 @@ export const conversionOutline = {
         quote_wrapper_padding: "quote_wrapper_padding.decoration.spacing.*.padding"
     },
     valueExpansionFunctionMap: {
-        arrow_prev_margin: convertSpacing,
-        arrow_prev_padding: convertSpacing,
-        arrow_next_margin: convertSpacing,
-        arrow_next_padding: convertSpacing,
-        wrapper_margin: convertSpacing,
-        wrapper_padding: convertSpacing,
-        item_wrapper_margin: convertSpacing,
-        item_wrapper_padding: convertSpacing,
-        author_box_margin: convertSpacing,
-        author_box_padding: convertSpacing,
-        rating_margin: convertSpacing,
-        rating_padding: convertSpacing,
-        text_margin: convertSpacing,
-        text_padding: convertSpacing,
-        logo_margin: convertSpacing,
-        author_image_margin: convertSpacing,
-        quote_icon_margin: convertSpacing,
-        quote_icon_padding: convertSpacing,
-        quote_wrapper_margin: convertSpacing,
-        quote_wrapper_padding: convertSpacing
+        arrow_prev_margin: D4ToD5Spacing,
+        arrow_prev_padding: D4ToD5Spacing,
+        arrow_next_margin: D4ToD5Spacing,
+        arrow_next_padding: D4ToD5Spacing,
+        wrapper_margin: D4ToD5Spacing,
+        wrapper_padding: D4ToD5Spacing,
+        item_wrapper_margin: D4ToD5Spacing,
+        item_wrapper_padding: D4ToD5Spacing,
+        author_box_margin: D4ToD5Spacing,
+        author_box_padding: D4ToD5Spacing,
+        rating_margin: D4ToD5Spacing,
+        rating_padding: D4ToD5Spacing,
+        text_margin: D4ToD5Spacing,
+        text_padding: D4ToD5Spacing,
+        logo_margin: D4ToD5Spacing,
+        author_image_margin: D4ToD5Spacing,
+        quote_icon_margin: D4ToD5Spacing,
+        quote_icon_padding: D4ToD5Spacing,
+        quote_wrapper_margin: D4ToD5Spacing,
+        quote_wrapper_padding: D4ToD5Spacing
     }
 }
 };

@@ -1,29 +1,4 @@
-const convertInlineValue = (value) => {
-  return _.isString(value) ? value.split(',') : [];
-};
-
-const convertIcon = (value) => {
-  value = value.split('|');
-  value = {
-    unicode: value[0],
-    type: value[2],
-    weight: value[4],
-  };
-  return value;
-};
-
-const convertSpacing = (value) => {
-  value = value.split('|');
-  value = {
-    top: value[0],
-    right: value[1],
-    bottom: value[2],
-    left: value[3],
-    syncHorizontal: value[4],
-    syncVertical: value[5],
-  };
-  return value;
-};
+import { D4ToD5Background, D4ToD5Spacing, D4ToD5Icon } from "../../helper/conversion";
 
 export const conversionOutline = {
     module: {
@@ -151,28 +126,28 @@ export const conversionOutline = {
         badge_text_1_padding: "badge_text_1_padding.decoration.spacing.*.padding"
     },
     valueExpansionFunctionMap: {
-        wrapper_margin: convertSpacing,
-        wrapper_padding: convertSpacing,
-        blurb_img_margin: convertSpacing,
-        button_wrapper_margin: convertSpacing,
-        button_wrapper_padding: convertSpacing,
-        badge_wrapper_margin: convertSpacing,
-        content_area_margin: convertSpacing,
-        content_area_padding: convertSpacing,
-        title_margin: convertSpacing,
-        title_padding: convertSpacing,
-        sub_title_margin: convertSpacing,
-        sub_title_padding: convertSpacing,
-        content_margin: convertSpacing,
-        content_padding: convertSpacing,
-        button_margin: convertSpacing,
-        button_padding: convertSpacing,
-        button_icon_margin: convertSpacing,
-        badge_margin: convertSpacing,
-        badge_padding: convertSpacing,
-        badge_icon_margin: convertSpacing,
-        badge_text_1_margin: convertSpacing,
-        badge_text_1_padding: convertSpacing
+        wrapper_margin: D4ToD5Spacing,
+        wrapper_padding: D4ToD5Spacing,
+        blurb_img_margin: D4ToD5Spacing,
+        button_wrapper_margin: D4ToD5Spacing,
+        button_wrapper_padding: D4ToD5Spacing,
+        badge_wrapper_margin: D4ToD5Spacing,
+        content_area_margin: D4ToD5Spacing,
+        content_area_padding: D4ToD5Spacing,
+        title_margin: D4ToD5Spacing,
+        title_padding: D4ToD5Spacing,
+        sub_title_margin: D4ToD5Spacing,
+        sub_title_padding: D4ToD5Spacing,
+        content_margin: D4ToD5Spacing,
+        content_padding: D4ToD5Spacing,
+        button_margin: D4ToD5Spacing,
+        button_padding: D4ToD5Spacing,
+        button_icon_margin: D4ToD5Spacing,
+        badge_margin: D4ToD5Spacing,
+        badge_padding: D4ToD5Spacing,
+        badge_icon_margin: D4ToD5Spacing,
+        badge_text_1_margin: D4ToD5Spacing,
+        badge_text_1_padding: D4ToD5Spacing
     }
 }
 };

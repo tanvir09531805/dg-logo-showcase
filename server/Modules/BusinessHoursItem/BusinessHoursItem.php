@@ -2,10 +2,10 @@
 /**
  * BusinessHoursItem Module class.
  *
- * @package DIVIFLASH5\Modules\BusinessHoursItem;
+ * @package DIFL\Server\Modules\BusinessHoursItem;
  */
 
-namespace DIVIFLASH5\Modules\BusinessHoursItem;
+namespace DIFL\Server\Modules\BusinessHoursItem;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class BusinessHoursItem
  *
- * @package DIVIFLASH5\Modules\BusinessHoursItem
+ * @package DIFL\Server\Modules\BusinessHoursItem
  */
 class BusinessHoursItem implements DependencyInterface {
 

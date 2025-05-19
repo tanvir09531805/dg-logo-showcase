@@ -1,16 +1,14 @@
 import { ImageHotspotEdit } from './edit';
 import metadata from './module.json';
-import placeholderContent from './module-default-render-attributes.json';
 import { conversionOutline } from './conversion-outline';
 import { __ } from "@wordpress/i18n";
 
-export const imageHotspotMetadata = metadata;
-
 export const imageHotspot = {
+    metadata: metadata,
+  childrenName: ['difl/imagehotspotitem'],
   renderers: {
     edit: ImageHotspotEdit,
   },
-  placeholderContent:placeholderContent,
   conversionOutline,
 };
 

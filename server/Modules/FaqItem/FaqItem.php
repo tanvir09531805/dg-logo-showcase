@@ -2,10 +2,10 @@
 /**
  * FaqItem Module class.
  *
- * @package DIVIFLASH5\Modules\FaqItem;
+ * @package DIFL\Server\Modules\FaqItem;
  */
 
-namespace DIVIFLASH5\Modules\FaqItem;
+namespace DIFL\Server\Modules\FaqItem;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class FaqItem
  *
- * @package DIVIFLASH5\Modules\FaqItem
+ * @package DIFL\Server\Modules\FaqItem
  */
 class FaqItem implements DependencyInterface {
 

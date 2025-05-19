@@ -2,10 +2,10 @@
 /**
  * DualButton Module class.
  *
- * @package DIVIFLASH5\Modules\DualButton;
+ * @package DIFL\Server\Modules\DualButton;
  */
 
-namespace DIVIFLASH5\Modules\DualButton;
+namespace DIFL\Server\Modules\DualButton;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class DualButton
  *
- * @package DIVIFLASH5\Modules\DualButton
+ * @package DIFL\Server\Modules\DualButton
  */
 class DualButton implements DependencyInterface {
 

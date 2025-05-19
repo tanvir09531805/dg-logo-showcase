@@ -2,10 +2,10 @@
 /**
  * ImageHover Module class.
  *
- * @package DIVIFLASH5\Modules\ImageHover;
+ * @package DIFL\Server\Modules\ImageHover;
  */
 
-namespace DIVIFLASH5\Modules\ImageHover;
+namespace DIFL\Server\Modules\ImageHover;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class ImageHover
  *
- * @package DIVIFLASH5\Modules\ImageHover
+ * @package DIFL\Server\Modules\ImageHover
  */
 class ImageHover implements DependencyInterface {
 

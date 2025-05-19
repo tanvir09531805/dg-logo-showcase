@@ -2,10 +2,10 @@
 /**
  * TypingText Module class.
  *
- * @package DIVIFLASH5\Modules\TypingText;
+ * @package DIFL\Server\Modules\TypingText;
  */
 
-namespace DIVIFLASH5\Modules\TypingText;
+namespace DIFL\Server\Modules\TypingText;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class TypingText
  *
- * @package DIVIFLASH5\Modules\TypingText
+ * @package DIFL\Server\Modules\TypingText
  */
 class TypingText implements DependencyInterface {
 

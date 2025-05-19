@@ -11,8 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
   die( 'Direct access forbidden.' );
 }
 
-use DIVIFLASH5\Modules\ScrollTextReveal\ScrollTextReveal;
-use DIVIFLASH5\Modules\VerticalMenu\VerticalMenu;
+use DIFL\Server\Modules\ScrollTextReveal\ScrollTextReveal;
+use DIFL\Server\Modules\VerticalMenu\VerticalMenu;
 
 add_action(
     'divi_module_library_modules_dependency_tree',

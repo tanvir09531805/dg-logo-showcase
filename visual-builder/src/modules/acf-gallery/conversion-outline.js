@@ -1,29 +1,4 @@
-const convertInlineValue = (value) => {
-  return _.isString(value) ? value.split(',') : [];
-};
-
-const convertIcon = (value) => {
-  value = value.split('|');
-  value = {
-    unicode: value[0],
-    type: value[2],
-    weight: value[4],
-  };
-  return value;
-};
-
-const convertSpacing = (value) => {
-  value = value.split('|');
-  value = {
-    top: value[0],
-    right: value[1],
-    bottom: value[2],
-    left: value[3],
-    syncHorizontal: value[4],
-    syncVertical: value[5],
-  };
-  return value;
-};
+import { D4ToD5Background, D4ToD5Spacing, D4ToD5Icon } from "../../helper/conversion";
 
 export const conversionOutline = {
     module: {
@@ -122,14 +97,14 @@ export const conversionOutline = {
         pagination_number_padding: "pagination_number_padding.decoration.spacing.*.padding"
     },
     valueExpansionFunctionMap: {
-        title_padding: convertSpacing,
-        description_padding: convertSpacing,
-        load_more_margin: convertSpacing,
-        load_more_padding: convertSpacing,
-        pagination_margin: convertSpacing,
-        pagination_padding: convertSpacing,
-        pagination_number_margin: convertSpacing,
-        pagination_number_padding: convertSpacing
+        title_padding: D4ToD5Spacing,
+        description_padding: D4ToD5Spacing,
+        load_more_margin: D4ToD5Spacing,
+        load_more_padding: D4ToD5Spacing,
+        pagination_margin: D4ToD5Spacing,
+        pagination_padding: D4ToD5Spacing,
+        pagination_number_margin: D4ToD5Spacing,
+        pagination_number_padding: D4ToD5Spacing
     }
 }
 };

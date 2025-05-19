@@ -1,16 +1,13 @@
 import { ACFGalleryEdit } from './edit';
 import metadata from './module.json';
-import placeholderContent from './module-default-render-attributes.json';
 import { conversionOutline } from './conversion-outline';
 import { __ } from "@wordpress/i18n";
 
-export const aCFGalleryMetadata = metadata;
-
 export const aCFGallery = {
+    metadata: metadata,
     renderers: {
         edit: ACFGalleryEdit,
     },
-    placeholderContent: placeholderContent,
     conversionOutline,
 };
 

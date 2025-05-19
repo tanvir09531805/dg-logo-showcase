@@ -2,10 +2,10 @@
 /**
  * PostGrid Module class.
  *
- * @package DIVIFLASH5\Modules\PostGrid;
+ * @package DIFL\Server\Modules\PostGrid;
  */
 
-namespace DIVIFLASH5\Modules\PostGrid;
+namespace DIFL\Server\Modules\PostGrid;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class PostGrid
  *
- * @package DIVIFLASH5\Modules\PostGrid
+ * @package DIFL\Server\Modules\PostGrid
  */
 class PostGrid implements DependencyInterface {
 

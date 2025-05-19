@@ -2,10 +2,10 @@
 /**
  * CPTCarousel Module class.
  *
- * @package DIVIFLASH5\Modules\CPTCarousel;
+ * @package DIFL\Server\Modules\CPTCarousel;
  */
 
-namespace DIVIFLASH5\Modules\CPTCarousel;
+namespace DIFL\Server\Modules\CPTCarousel;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class CPTCarousel
  *
- * @package DIVIFLASH5\Modules\CPTCarousel
+ * @package DIFL\Server\Modules\CPTCarousel
  */
 class CPTCarousel implements DependencyInterface {
 

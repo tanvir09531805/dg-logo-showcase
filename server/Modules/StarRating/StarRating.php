@@ -2,10 +2,10 @@
 /**
  * StarRating Module class.
  *
- * @package DIVIFLASH5\Modules\StarRating;
+ * @package DIFL\Server\Modules\StarRating;
  */
 
-namespace DIVIFLASH5\Modules\StarRating;
+namespace DIFL\Server\Modules\StarRating;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class StarRating
  *
- * @package DIVIFLASH5\Modules\StarRating
+ * @package DIFL\Server\Modules\StarRating
  */
 class StarRating implements DependencyInterface {
 

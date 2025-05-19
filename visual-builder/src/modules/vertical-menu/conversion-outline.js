@@ -2,7 +2,7 @@ const convertInlineValue = (value) => {
   return _.isString(value) ? value.split(',') : [];
 };
 
-const convertIcon = (value) => {
+const D4ToD5Icon = (value) => {
   value = value.split('|');
   value = {
     unicode: value[0],
@@ -12,7 +12,7 @@ const convertIcon = (value) => {
   return value;
 };
 
-const convertSpacing = (value) => {
+const D4ToD5Spacing = (value) => {
   value = value.split('|');
   value = {
     top: value[0],
@@ -114,16 +114,16 @@ export const conversionOutline = {
         style_settings__badge__alignment: "style_settings__badge__alignment.innerContent.*"
     },
     valueExpansionFunctionMap: {
-        style_settings__hamburger__wrapper_spacing_margin: convertSpacing,
-        style_settings__hamburger__wrapper_spacing_padding: convertSpacing,
-        style_settings__menu__item_spacing_padding: convertSpacing,
-        style_settings__menu__item_icon_spacing_margin: convertSpacing,
-        style_settings__sub_menu__item_spacing_padding: convertSpacing,
-        style_settings__sub_menu__item_icon_spacing_margin: convertSpacing,
-        style_settings__sub_menu__wrapper_spacing_padding: convertSpacing,
-        style_settings__mega_menu__wrapper_spacing_padding: convertSpacing,
-        style_settings__mega_menu__items_spacing_padding: convertSpacing,
-        style_settings__mega_menu__items_icon_spacing_margin: convertSpacing
+        style_settings__hamburger__wrapper_spacing_margin: D4ToD5Spacing,
+        style_settings__hamburger__wrapper_spacing_padding: D4ToD5Spacing,
+        style_settings__menu__item_spacing_padding: D4ToD5Spacing,
+        style_settings__menu__item_icon_spacing_margin: D4ToD5Spacing,
+        style_settings__sub_menu__item_spacing_padding: D4ToD5Spacing,
+        style_settings__sub_menu__item_icon_spacing_margin: D4ToD5Spacing,
+        style_settings__sub_menu__wrapper_spacing_padding: D4ToD5Spacing,
+        style_settings__mega_menu__wrapper_spacing_padding: D4ToD5Spacing,
+        style_settings__mega_menu__items_spacing_padding: D4ToD5Spacing,
+        style_settings__mega_menu__items_icon_spacing_margin: D4ToD5Spacing
     }
 }
 };

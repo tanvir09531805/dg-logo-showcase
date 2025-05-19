@@ -1,16 +1,13 @@
 import { InstagramFeedEdit } from './edit';
 import metadata from './module.json';
-import placeholderContent from './module-default-render-attributes.json';
 import { conversionOutline } from './conversion-outline';
 import { __ } from "@wordpress/i18n";
 
-export const instagramFeedMetadata = metadata;
-
 export const instagramFeed = {
+    metadata: metadata,
   renderers: {
     edit: InstagramFeedEdit,
   },
-  placeholderContent:placeholderContent,
   conversionOutline,
 };
 

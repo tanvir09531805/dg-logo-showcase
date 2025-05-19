@@ -2,10 +2,10 @@
 /**
  * ProductItem Module class.
  *
- * @package DIVIFLASH5\Modules\ProductItem;
+ * @package DIFL\Server\Modules\ProductItem;
  */
 
-namespace DIVIFLASH5\Modules\ProductItem;
+namespace DIFL\Server\Modules\ProductItem;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class ProductItem
  *
- * @package DIVIFLASH5\Modules\ProductItem
+ * @package DIFL\Server\Modules\ProductItem
  */
 class ProductItem implements DependencyInterface {
 

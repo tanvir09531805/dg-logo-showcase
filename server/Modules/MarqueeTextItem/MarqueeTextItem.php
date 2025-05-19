@@ -2,10 +2,10 @@
 /**
  * MarqueeTextItem Module class.
  *
- * @package DIVIFLASH5\Modules\MarqueeTextItem;
+ * @package DIFL\Server\Modules\MarqueeTextItem;
  */
 
-namespace DIVIFLASH5\Modules\MarqueeTextItem;
+namespace DIFL\Server\Modules\MarqueeTextItem;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class MarqueeTextItem
  *
- * @package DIVIFLASH5\Modules\MarqueeTextItem
+ * @package DIFL\Server\Modules\MarqueeTextItem
  */
 class MarqueeTextItem implements DependencyInterface {
 

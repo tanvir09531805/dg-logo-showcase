@@ -2,10 +2,10 @@
 /**
  * AdvancedDivider Module class.
  *
- * @package DIVIFLASH5\Modules\AdvancedDivider;
+ * @package DIFL\Server\Modules\AdvancedDivider;
  */
 
-namespace DIVIFLASH5\Modules\AdvancedDivider;
+namespace DIFL\Server\Modules\AdvancedDivider;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class AdvancedDivider
  *
- * @package DIVIFLASH5\Modules\AdvancedDivider
+ * @package DIFL\Server\Modules\AdvancedDivider
  */
 class AdvancedDivider implements DependencyInterface {
 

@@ -2,10 +2,10 @@
 /**
  * PackeryGallery Module class.
  *
- * @package DIVIFLASH5\Modules\PackeryGallery;
+ * @package DIFL\Server\Modules\PackeryGallery;
  */
 
-namespace DIVIFLASH5\Modules\PackeryGallery;
+namespace DIFL\Server\Modules\PackeryGallery;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class PackeryGallery
  *
- * @package DIVIFLASH5\Modules\PackeryGallery
+ * @package DIFL\Server\Modules\PackeryGallery
  */
 class PackeryGallery implements DependencyInterface {
 

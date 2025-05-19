@@ -2,10 +2,10 @@
 /**
  * AdvancedList Module class.
  *
- * @package DIVIFLASH5\Modules\AdvancedList;
+ * @package DIFL\Server\Modules\AdvancedList;
  */
 
-namespace DIVIFLASH5\Modules\AdvancedList;
+namespace DIFL\Server\Modules\AdvancedList;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class AdvancedList
  *
- * @package DIVIFLASH5\Modules\AdvancedList
+ * @package DIFL\Server\Modules\AdvancedList
  */
 class AdvancedList implements DependencyInterface {
 

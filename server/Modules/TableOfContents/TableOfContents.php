@@ -2,10 +2,10 @@
 /**
  * TableOfContents Module class.
  *
- * @package DIVIFLASH5\Modules\TableOfContents;
+ * @package DIFL\Server\Modules\TableOfContents;
  */
 
-namespace DIVIFLASH5\Modules\TableOfContents;
+namespace DIFL\Server\Modules\TableOfContents;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class TableOfContents
  *
- * @package DIVIFLASH5\Modules\TableOfContents
+ * @package DIFL\Server\Modules\TableOfContents
  */
 class TableOfContents implements DependencyInterface {
 

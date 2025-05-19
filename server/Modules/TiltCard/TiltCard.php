@@ -2,10 +2,10 @@
 /**
  * TiltCard Module class.
  *
- * @package DIVIFLASH5\Modules\TiltCard;
+ * @package DIFL\Server\Modules\TiltCard;
  */
 
-namespace DIVIFLASH5\Modules\TiltCard;
+namespace DIFL\Server\Modules\TiltCard;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class TiltCard
  *
- * @package DIVIFLASH5\Modules\TiltCard
+ * @package DIFL\Server\Modules\TiltCard
  */
 class TiltCard implements DependencyInterface {
 

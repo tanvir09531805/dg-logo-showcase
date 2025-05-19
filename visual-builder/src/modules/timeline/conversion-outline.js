@@ -2,7 +2,7 @@ const convertInlineValue = (value) => {
   return _.isString(value) ? value.split(',') : [];
 };
 
-const convertIcon = (value) => {
+const D4ToD5Icon = (value) => {
   value = value.split('|');
   value = {
     unicode: value[0],
@@ -12,7 +12,7 @@ const convertIcon = (value) => {
   return value;
 };
 
-const convertSpacing = (value) => {
+const D4ToD5Spacing = (value) => {
   value = value.split('|');
   value = {
     top: value[0],
@@ -176,26 +176,26 @@ export const conversionOutline = {
         line_bottom_wrapper_padding: "line_bottom_wrapper_padding.decoration.spacing.*.padding"
     },
     valueExpansionFunctionMap: {
-        timeline_button_margin: convertSpacing,
-        timeline_button_padding: convertSpacing,
-        timeline_title_margin: convertSpacing,
-        timeline_title_padding: convertSpacing,
-        timeline_subtitle_margin: convertSpacing,
-        timeline_subtitle_padding: convertSpacing,
-        item_wrapper_margin: convertSpacing,
-        item_wrapper_padding: convertSpacing,
-        timeline_content_margin: convertSpacing,
-        timeline_content_padding: convertSpacing,
-        timeline_media_item_margin: convertSpacing,
-        timeline_media_item_padding: convertSpacing,
-        date_wrapper_margin: convertSpacing,
-        date_wrapper_padding: convertSpacing,
-        date_title_margin: convertSpacing,
-        date_subtitle_margin: convertSpacing,
-        line_top_wrapper_margin: convertSpacing,
-        line_top_wrapper_padding: convertSpacing,
-        line_bottom_wrapper_margin: convertSpacing,
-        line_bottom_wrapper_padding: convertSpacing
+        timeline_button_margin: D4ToD5Spacing,
+        timeline_button_padding: D4ToD5Spacing,
+        timeline_title_margin: D4ToD5Spacing,
+        timeline_title_padding: D4ToD5Spacing,
+        timeline_subtitle_margin: D4ToD5Spacing,
+        timeline_subtitle_padding: D4ToD5Spacing,
+        item_wrapper_margin: D4ToD5Spacing,
+        item_wrapper_padding: D4ToD5Spacing,
+        timeline_content_margin: D4ToD5Spacing,
+        timeline_content_padding: D4ToD5Spacing,
+        timeline_media_item_margin: D4ToD5Spacing,
+        timeline_media_item_padding: D4ToD5Spacing,
+        date_wrapper_margin: D4ToD5Spacing,
+        date_wrapper_padding: D4ToD5Spacing,
+        date_title_margin: D4ToD5Spacing,
+        date_subtitle_margin: D4ToD5Spacing,
+        line_top_wrapper_margin: D4ToD5Spacing,
+        line_top_wrapper_padding: D4ToD5Spacing,
+        line_bottom_wrapper_margin: D4ToD5Spacing,
+        line_bottom_wrapper_padding: D4ToD5Spacing
     }
 }
 };

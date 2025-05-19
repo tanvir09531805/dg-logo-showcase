@@ -1,29 +1,4 @@
-const convertInlineValue = (value) => {
-  return _.isString(value) ? value.split(',') : [];
-};
-
-const convertIcon = (value) => {
-  value = value.split('|');
-  value = {
-    unicode: value[0],
-    type: value[2],
-    weight: value[4],
-  };
-  return value;
-};
-
-const convertSpacing = (value) => {
-  value = value.split('|');
-  value = {
-    top: value[0],
-    right: value[1],
-    bottom: value[2],
-    left: value[3],
-    syncHorizontal: value[4],
-    syncVertical: value[5],
-  };
-  return value;
-};
+import { D4ToD5Background, D4ToD5Spacing, D4ToD5Icon } from "../../helper/conversion";
 
 export const conversionOutline = {
     module: {
@@ -114,15 +89,15 @@ export const conversionOutline = {
         load_more_padding: "load_more_padding.decoration.spacing.*.padding"
     },
     valueExpansionFunctionMap: {
-        instagram_user_info_padding: convertSpacing,
-        instagram_user_profile_picture_margin: convertSpacing,
-        instagram_user_profile_picture_padding: convertSpacing,
-        instagram_user_name_margin: convertSpacing,
-        instagram_post_date_margin: convertSpacing,
-        instagram_icon_margin: convertSpacing,
-        title_padding: convertSpacing,
-        load_more_margin: convertSpacing,
-        load_more_padding: convertSpacing
+        instagram_user_info_padding: D4ToD5Spacing,
+        instagram_user_profile_picture_margin: D4ToD5Spacing,
+        instagram_user_profile_picture_padding: D4ToD5Spacing,
+        instagram_user_name_margin: D4ToD5Spacing,
+        instagram_post_date_margin: D4ToD5Spacing,
+        instagram_icon_margin: D4ToD5Spacing,
+        title_padding: D4ToD5Spacing,
+        load_more_margin: D4ToD5Spacing,
+        load_more_padding: D4ToD5Spacing
     }
 }
 };

@@ -2,10 +2,10 @@
 /**
  * AnimatedHeading Module class.
  *
- * @package DIVIFLASH5\Modules\AnimatedHeading;
+ * @package DIFL\Server\Modules\AnimatedHeading;
  */
 
-namespace DIVIFLASH5\Modules\AnimatedHeading;
+namespace DIFL\Server\Modules\AnimatedHeading;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class AnimatedHeading
  *
- * @package DIVIFLASH5\Modules\AnimatedHeading
+ * @package DIFL\Server\Modules\AnimatedHeading
  */
 class AnimatedHeading implements DependencyInterface {
 

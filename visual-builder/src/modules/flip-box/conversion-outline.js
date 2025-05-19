@@ -2,7 +2,7 @@ const convertInlineValue = (value) => {
   return _.isString(value) ? value.split(',') : [];
 };
 
-const convertIcon = (value) => {
+const D4ToD5Icon = (value) => {
   value = value.split('|');
   value = {
     unicode: value[0],
@@ -12,7 +12,7 @@ const convertIcon = (value) => {
   return value;
 };
 
-const convertSpacing = (value) => {
+const D4ToD5Spacing = (value) => {
   value = value.split('|');
   value = {
     top: value[0],
@@ -129,30 +129,30 @@ export const conversionOutline = {
         button_padding: "button_padding.decoration.spacing.*.padding"
     },
     valueExpansionFunctionMap: {
-        container_margin: convertSpacing,
-        container_padding: convertSpacing,
-        front_wrapper_padding: convertSpacing,
-        back_wrapper_padding: convertSpacing,
-        img_container_front_margin: convertSpacing,
-        img_container_front_padding: convertSpacing,
-        icon_front_margin: convertSpacing,
-        icon_front_padding: convertSpacing,
-        img_container_back_margin: convertSpacing,
-        img_container_back_padding: convertSpacing,
-        icon_back_margin: convertSpacing,
-        icon_back_padding: convertSpacing,
-        title_front_margin: convertSpacing,
-        title_front_padding: convertSpacing,
-        title_back_margin: convertSpacing,
-        title_back_padding: convertSpacing,
-        text_front_margin: convertSpacing,
-        text_front_padding: convertSpacing,
-        text_back_margin: convertSpacing,
-        text_back_padding: convertSpacing,
-        button_wrapper_margin: convertSpacing,
-        button_wrapper_padding: convertSpacing,
-        button_margin: convertSpacing,
-        button_padding: convertSpacing
+        container_margin: D4ToD5Spacing,
+        container_padding: D4ToD5Spacing,
+        front_wrapper_padding: D4ToD5Spacing,
+        back_wrapper_padding: D4ToD5Spacing,
+        img_container_front_margin: D4ToD5Spacing,
+        img_container_front_padding: D4ToD5Spacing,
+        icon_front_margin: D4ToD5Spacing,
+        icon_front_padding: D4ToD5Spacing,
+        img_container_back_margin: D4ToD5Spacing,
+        img_container_back_padding: D4ToD5Spacing,
+        icon_back_margin: D4ToD5Spacing,
+        icon_back_padding: D4ToD5Spacing,
+        title_front_margin: D4ToD5Spacing,
+        title_front_padding: D4ToD5Spacing,
+        title_back_margin: D4ToD5Spacing,
+        title_back_padding: D4ToD5Spacing,
+        text_front_margin: D4ToD5Spacing,
+        text_front_padding: D4ToD5Spacing,
+        text_back_margin: D4ToD5Spacing,
+        text_back_padding: D4ToD5Spacing,
+        button_wrapper_margin: D4ToD5Spacing,
+        button_wrapper_padding: D4ToD5Spacing,
+        button_margin: D4ToD5Spacing,
+        button_padding: D4ToD5Spacing
     }
 }
 };

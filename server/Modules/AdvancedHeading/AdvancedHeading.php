@@ -2,10 +2,10 @@
 /**
  * AdvancedHeading Module class.
  *
- * @package DIVIFLASH5\Modules\AdvancedHeading;
+ * @package DIFL\Server\Modules\AdvancedHeading;
  */
 
-namespace DIVIFLASH5\Modules\AdvancedHeading;
+namespace DIFL\Server\Modules\AdvancedHeading;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class AdvancedHeading
  *
- * @package DIVIFLASH5\Modules\AdvancedHeading
+ * @package DIFL\Server\Modules\AdvancedHeading
  */
 class AdvancedHeading implements DependencyInterface {
 

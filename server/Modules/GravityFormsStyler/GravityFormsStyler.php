@@ -2,10 +2,10 @@
 /**
  * GravityFormsStyler Module class.
  *
- * @package DIVIFLASH5\Modules\GravityFormsStyler;
+ * @package DIFL\Server\Modules\GravityFormsStyler;
  */
 
-namespace DIVIFLASH5\Modules\GravityFormsStyler;
+namespace DIFL\Server\Modules\GravityFormsStyler;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class GravityFormsStyler
  *
- * @package DIVIFLASH5\Modules\GravityFormsStyler
+ * @package DIFL\Server\Modules\GravityFormsStyler
  */
 class GravityFormsStyler implements DependencyInterface {
 

@@ -2,10 +2,10 @@
 /**
  * FAQ Module class.
  *
- * @package DIVIFLASH5\Modules\FAQ;
+ * @package DIFL\Server\Modules\FAQ;
  */
 
-namespace DIVIFLASH5\Modules\FAQ;
+namespace DIFL\Server\Modules\FAQ;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class FAQ
  *
- * @package DIVIFLASH5\Modules\FAQ
+ * @package DIFL\Server\Modules\FAQ
  */
 class FAQ implements DependencyInterface {
 

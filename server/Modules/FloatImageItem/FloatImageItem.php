@@ -2,10 +2,10 @@
 /**
  * FloatImageItem Module class.
  *
- * @package DIVIFLASH5\Modules\FloatImageItem;
+ * @package DIFL\Server\Modules\FloatImageItem;
  */
 
-namespace DIVIFLASH5\Modules\FloatImageItem;
+namespace DIFL\Server\Modules\FloatImageItem;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class FloatImageItem
  *
- * @package DIVIFLASH5\Modules\FloatImageItem
+ * @package DIFL\Server\Modules\FloatImageItem
  */
 class FloatImageItem implements DependencyInterface {
 

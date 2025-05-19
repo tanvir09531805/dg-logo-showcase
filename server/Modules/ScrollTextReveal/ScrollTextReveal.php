@@ -2,10 +2,10 @@
 /**
  * ScrollTextReveal Module class.
  *
- * @package DIVIFLASH5\Modules\ScrollTextReveal;
+ * @package DIFL\Server\Modules\ScrollTextReveal;
  */
 
-namespace DIVIFLASH5\Modules\ScrollTextReveal;
+namespace DIFL\Server\Modules\ScrollTextReveal;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class ScrollTextReveal
  *
- * @package DIVIFLASH5\Modules\ScrollTextReveal
+ * @package DIFL\Server\Modules\ScrollTextReveal
  */
 class ScrollTextReveal implements DependencyInterface {
 

@@ -2,10 +2,10 @@
 /**
  * AdvancedMenu Module class.
  *
- * @package DIVIFLASH5\Modules\AdvancedMenu;
+ * @package DIFL\Server\Modules\AdvancedMenu;
  */
 
-namespace DIVIFLASH5\Modules\AdvancedMenu;
+namespace DIFL\Server\Modules\AdvancedMenu;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class AdvancedMenu
  *
- * @package DIVIFLASH5\Modules\AdvancedMenu
+ * @package DIFL\Server\Modules\AdvancedMenu
  */
 class AdvancedMenu implements DependencyInterface {
 

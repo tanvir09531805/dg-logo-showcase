@@ -2,10 +2,10 @@
 /**
  * InstagramFeed Module class.
  *
- * @package DIVIFLASH5\Modules\InstagramFeed;
+ * @package DIFL\Server\Modules\InstagramFeed;
  */
 
-namespace DIVIFLASH5\Modules\InstagramFeed;
+namespace DIFL\Server\Modules\InstagramFeed;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class InstagramFeed
  *
- * @package DIVIFLASH5\Modules\InstagramFeed
+ * @package DIFL\Server\Modules\InstagramFeed
  */
 class InstagramFeed implements DependencyInterface {
 

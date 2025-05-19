@@ -2,10 +2,10 @@
 /**
  * AdvancedPerson Module class.
  *
- * @package DIVIFLASH5\Modules\AdvancedPerson;
+ * @package DIFL\Server\Modules\AdvancedPerson;
  */
 
-namespace DIVIFLASH5\Modules\AdvancedPerson;
+namespace DIFL\Server\Modules\AdvancedPerson;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class AdvancedPerson
  *
- * @package DIVIFLASH5\Modules\AdvancedPerson
+ * @package DIFL\Server\Modules\AdvancedPerson
  */
 class AdvancedPerson implements DependencyInterface {
 

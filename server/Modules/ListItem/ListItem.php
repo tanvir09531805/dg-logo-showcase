@@ -2,10 +2,10 @@
 /**
  * ListItem Module class.
  *
- * @package DIVIFLASH5\Modules\ListItem;
+ * @package DIFL\Server\Modules\ListItem;
  */
 
-namespace DIVIFLASH5\Modules\ListItem;
+namespace DIFL\Server\Modules\ListItem;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class ListItem
  *
- * @package DIVIFLASH5\Modules\ListItem
+ * @package DIFL\Server\Modules\ListItem
  */
 class ListItem implements DependencyInterface {
 

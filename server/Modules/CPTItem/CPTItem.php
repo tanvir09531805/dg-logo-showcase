@@ -2,10 +2,10 @@
 /**
  * CPTItem Module class.
  *
- * @package DIVIFLASH5\Modules\CPTItem;
+ * @package DIFL\Server\Modules\CPTItem;
  */
 
-namespace DIVIFLASH5\Modules\CPTItem;
+namespace DIFL\Server\Modules\CPTItem;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class CPTItem
  *
- * @package DIVIFLASH5\Modules\CPTItem
+ * @package DIFL\Server\Modules\CPTItem
  */
 class CPTItem implements DependencyInterface {
 

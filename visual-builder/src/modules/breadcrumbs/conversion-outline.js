@@ -2,7 +2,7 @@ const convertInlineValue = (value) => {
   return _.isString(value) ? value.split(',') : [];
 };
 
-const convertIcon = (value) => {
+const D4ToD5Icon = (value) => {
   value = value.split('|');
   value = {
     unicode: value[0],
@@ -12,7 +12,7 @@ const convertIcon = (value) => {
   return value;
 };
 
-const convertSpacing = (value) => {
+const D4ToD5Spacing = (value) => {
   value = value.split('|');
   value = {
     top: value[0],
@@ -98,17 +98,17 @@ export const conversionOutline = {
         active_page_padding: "active_page_padding.decoration.spacing.*.padding"
     },
     valueExpansionFunctionMap: {
-        breadcrumbs_margin: convertSpacing,
-        breadcrumbs_padding: convertSpacing,
-        home_margin: convertSpacing,
-        home_padding: convertSpacing,
-        home_icon_margin: convertSpacing,
-        separator_margin: convertSpacing,
-        separator_padding: convertSpacing,
-        pages_margin: convertSpacing,
-        pages_padding: convertSpacing,
-        active_page_margin: convertSpacing,
-        active_page_padding: convertSpacing
+        breadcrumbs_margin: D4ToD5Spacing,
+        breadcrumbs_padding: D4ToD5Spacing,
+        home_margin: D4ToD5Spacing,
+        home_padding: D4ToD5Spacing,
+        home_icon_margin: D4ToD5Spacing,
+        separator_margin: D4ToD5Spacing,
+        separator_padding: D4ToD5Spacing,
+        pages_margin: D4ToD5Spacing,
+        pages_padding: D4ToD5Spacing,
+        active_page_margin: D4ToD5Spacing,
+        active_page_padding: D4ToD5Spacing
     }
 }
 };

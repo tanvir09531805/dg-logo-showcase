@@ -2,10 +2,10 @@
 /**
  * ProductGrid Module class.
  *
- * @package DIVIFLASH5\Modules\ProductGrid;
+ * @package DIFL\Server\Modules\ProductGrid;
  */
 
-namespace DIVIFLASH5\Modules\ProductGrid;
+namespace DIFL\Server\Modules\ProductGrid;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class ProductGrid
  *
- * @package DIVIFLASH5\Modules\ProductGrid
+ * @package DIFL\Server\Modules\ProductGrid
  */
 class ProductGrid implements DependencyInterface {
 

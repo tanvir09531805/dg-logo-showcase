@@ -2,10 +2,10 @@
 /**
  * ContactForm7Styler Module class.
  *
- * @package DIVIFLASH5\Modules\ContactForm7Styler;
+ * @package DIFL\Server\Modules\ContactForm7Styler;
  */
 
-namespace DIVIFLASH5\Modules\ContactForm7Styler;
+namespace DIFL\Server\Modules\ContactForm7Styler;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class ContactForm7Styler
  *
- * @package DIVIFLASH5\Modules\ContactForm7Styler
+ * @package DIFL\Server\Modules\ContactForm7Styler
  */
 class ContactForm7Styler implements DependencyInterface {
 

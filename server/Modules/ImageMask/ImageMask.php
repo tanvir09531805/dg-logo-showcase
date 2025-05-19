@@ -2,10 +2,10 @@
 /**
  * ImageMask Module class.
  *
- * @package DIVIFLASH5\Modules\ImageMask;
+ * @package DIFL\Server\Modules\ImageMask;
  */
 
-namespace DIVIFLASH5\Modules\ImageMask;
+namespace DIFL\Server\Modules\ImageMask;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class ImageMask
  *
- * @package DIVIFLASH5\Modules\ImageMask
+ * @package DIFL\Server\Modules\ImageMask
  */
 class ImageMask implements DependencyInterface {
 

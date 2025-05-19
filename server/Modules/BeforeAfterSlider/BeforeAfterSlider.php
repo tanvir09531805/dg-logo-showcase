@@ -2,10 +2,10 @@
 /**
  * BeforeAfterSlider Module class.
  *
- * @package DIVIFLASH5\Modules\BeforeAfterSlider;
+ * @package DIFL\Server\Modules\BeforeAfterSlider;
  */
 
-namespace DIVIFLASH5\Modules\BeforeAfterSlider;
+namespace DIFL\Server\Modules\BeforeAfterSlider;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class BeforeAfterSlider
  *
- * @package DIVIFLASH5\Modules\BeforeAfterSlider
+ * @package DIFL\Server\Modules\BeforeAfterSlider
  */
 class BeforeAfterSlider implements DependencyInterface {
 

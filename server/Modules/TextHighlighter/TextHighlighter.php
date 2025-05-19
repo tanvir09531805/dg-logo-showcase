@@ -2,10 +2,10 @@
 /**
  * TextHighlighter Module class.
  *
- * @package DIVIFLASH5\Modules\TextHighlighter;
+ * @package DIFL\Server\Modules\TextHighlighter;
  */
 
-namespace DIVIFLASH5\Modules\TextHighlighter;
+namespace DIFL\Server\Modules\TextHighlighter;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class TextHighlighter
  *
- * @package DIVIFLASH5\Modules\TextHighlighter
+ * @package DIFL\Server\Modules\TextHighlighter
  */
 class TextHighlighter implements DependencyInterface {
 

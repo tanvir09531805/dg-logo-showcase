@@ -2,10 +2,10 @@
 /**
  * DataTable Module class.
  *
- * @package DIVIFLASH5\Modules\DataTable;
+ * @package DIFL\Server\Modules\DataTable;
  */
 
-namespace DIVIFLASH5\Modules\DataTable;
+namespace DIFL\Server\Modules\DataTable;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class DataTable
  *
- * @package DIVIFLASH5\Modules\DataTable
+ * @package DIFL\Server\Modules\DataTable
  */
 class DataTable implements DependencyInterface {
 

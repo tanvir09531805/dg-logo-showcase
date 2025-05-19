@@ -2,7 +2,7 @@ const convertInlineValue = (value) => {
   return _.isString(value) ? value.split(',') : [];
 };
 
-const convertIcon = (value) => {
+const D4ToD5Icon = (value) => {
   value = value.split('|');
   value = {
     unicode: value[0],
@@ -12,7 +12,7 @@ const convertIcon = (value) => {
   return value;
 };
 
-const convertSpacing = (value) => {
+const D4ToD5Spacing = (value) => {
   value = value.split('|');
   value = {
     top: value[0],
@@ -272,30 +272,30 @@ export const conversionOutline = {
         mslide_item_padding: "mslide_item_padding.decoration.spacing.*.padding"
     },
     valueExpansionFunctionMap: {
-        mmenu_trigger_padding: convertSpacing,
-        mslide_button_margin: convertSpacing,
-        mslide_button_padding: convertSpacing,
-        menu_item_margin: convertSpacing,
-        menu_item_padding: convertSpacing,
-        submenu_item_margin: convertSpacing,
-        submenu_item_padding: convertSpacing,
-        megamenu_container_padding: convertSpacing,
-        megamenu_item_margin: convertSpacing,
-        megamenu_item_padding: convertSpacing,
-        menu_1st_parent_icon_margin: convertSpacing,
-        menu_1st_parent_icon_padding: convertSpacing,
-        menu_2nd_parent_icon_margin: convertSpacing,
-        menu_2nd_parent_icon_padding: convertSpacing,
-        menu_3rd_parent_icon_margin: convertSpacing,
-        menu_3rd_parent_icon_padding: convertSpacing,
-        menu_1st_child_icon_margin: convertSpacing,
-        menu_1st_child_icon_padding: convertSpacing,
-        menu_2nd_child_icon_margin: convertSpacing,
-        menu_2nd_child_icon_padding: convertSpacing,
-        menu_3rd_child_icon_margin: convertSpacing,
-        menu_3rd_child_icon_padding: convertSpacing,
-        mslide_item_margin: convertSpacing,
-        mslide_item_padding: convertSpacing
+        mmenu_trigger_padding: D4ToD5Spacing,
+        mslide_button_margin: D4ToD5Spacing,
+        mslide_button_padding: D4ToD5Spacing,
+        menu_item_margin: D4ToD5Spacing,
+        menu_item_padding: D4ToD5Spacing,
+        submenu_item_margin: D4ToD5Spacing,
+        submenu_item_padding: D4ToD5Spacing,
+        megamenu_container_padding: D4ToD5Spacing,
+        megamenu_item_margin: D4ToD5Spacing,
+        megamenu_item_padding: D4ToD5Spacing,
+        menu_1st_parent_icon_margin: D4ToD5Spacing,
+        menu_1st_parent_icon_padding: D4ToD5Spacing,
+        menu_2nd_parent_icon_margin: D4ToD5Spacing,
+        menu_2nd_parent_icon_padding: D4ToD5Spacing,
+        menu_3rd_parent_icon_margin: D4ToD5Spacing,
+        menu_3rd_parent_icon_padding: D4ToD5Spacing,
+        menu_1st_child_icon_margin: D4ToD5Spacing,
+        menu_1st_child_icon_padding: D4ToD5Spacing,
+        menu_2nd_child_icon_margin: D4ToD5Spacing,
+        menu_2nd_child_icon_padding: D4ToD5Spacing,
+        menu_3rd_child_icon_margin: D4ToD5Spacing,
+        menu_3rd_child_icon_padding: D4ToD5Spacing,
+        mslide_item_margin: D4ToD5Spacing,
+        mslide_item_padding: D4ToD5Spacing
     }
 }
 };

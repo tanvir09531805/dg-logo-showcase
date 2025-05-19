@@ -2,10 +2,10 @@
 /**
  * TableRow Module class.
  *
- * @package DIVIFLASH5\Modules\TableRow;
+ * @package DIFL\Server\Modules\TableRow;
  */
 
-namespace DIVIFLASH5\Modules\TableRow;
+namespace DIFL\Server\Modules\TableRow;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class TableRow
  *
- * @package DIVIFLASH5\Modules\TableRow
+ * @package DIFL\Server\Modules\TableRow
  */
 class TableRow implements DependencyInterface {
 

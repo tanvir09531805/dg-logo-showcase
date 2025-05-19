@@ -2,10 +2,10 @@
 /**
  * Lottie Module class.
  *
- * @package DIVIFLASH5\Modules\Lottie;
+ * @package DIFL\Server\Modules\Lottie;
  */
 
-namespace DIVIFLASH5\Modules\Lottie;
+namespace DIFL\Server\Modules\Lottie;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class Lottie
  *
- * @package DIVIFLASH5\Modules\Lottie
+ * @package DIFL\Server\Modules\Lottie
  */
 class Lottie implements DependencyInterface {
 

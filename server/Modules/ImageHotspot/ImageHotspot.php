@@ -2,10 +2,10 @@
 /**
  * ImageHotspot Module class.
  *
- * @package DIVIFLASH5\Modules\ImageHotspot;
+ * @package DIFL\Server\Modules\ImageHotspot;
  */
 
-namespace DIVIFLASH5\Modules\ImageHotspot;
+namespace DIFL\Server\Modules\ImageHotspot;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class ImageHotspot
  *
- * @package DIVIFLASH5\Modules\ImageHotspot
+ * @package DIFL\Server\Modules\ImageHotspot
  */
 class ImageHotspot implements DependencyInterface {
 

@@ -2,7 +2,7 @@ const convertInlineValue = (value) => {
   return _.isString(value) ? value.split(',') : [];
 };
 
-const convertIcon = (value) => {
+const D4ToD5Icon = (value) => {
   value = value.split('|');
   value = {
     unicode: value[0],
@@ -12,7 +12,7 @@ const convertIcon = (value) => {
   return value;
 };
 
-const convertSpacing = (value) => {
+const D4ToD5Spacing = (value) => {
   value = value.split('|');
   value = {
     top: value[0],
@@ -166,32 +166,32 @@ export const conversionOutline = {
         time_colon: "time_colon.innerContent.*"
     },
     valueExpansionFunctionMap: {
-        heading_margin: convertSpacing,
-        heading_padding: convertSpacing,
-        input_margin: convertSpacing,
-        input_padding: convertSpacing,
-        select_margin: convertSpacing,
-        select_padding: convertSpacing,
-        textarea_margin: convertSpacing,
-        textarea_padding: convertSpacing,
-        button_margin: convertSpacing,
-        button_padding: convertSpacing,
-        section_margin: convertSpacing,
-        section_padding: convertSpacing,
-        section_title_padding: convertSpacing,
-        section_description_padding: convertSpacing,
-        progress_margin: convertSpacing,
-        progress_padding: convertSpacing,
-        confirm_margin: convertSpacing,
-        confirm_padding: convertSpacing,
-        error_box_global_margin: convertSpacing,
-        error_box_global_padding: convertSpacing,
-        error_box_margin: convertSpacing,
-        error_box_padding: convertSpacing,
-        time_input_margin: convertSpacing,
-        time_input_padding: convertSpacing,
-        time_select_margin: convertSpacing,
-        time_select_padding: convertSpacing
+        heading_margin: D4ToD5Spacing,
+        heading_padding: D4ToD5Spacing,
+        input_margin: D4ToD5Spacing,
+        input_padding: D4ToD5Spacing,
+        select_margin: D4ToD5Spacing,
+        select_padding: D4ToD5Spacing,
+        textarea_margin: D4ToD5Spacing,
+        textarea_padding: D4ToD5Spacing,
+        button_margin: D4ToD5Spacing,
+        button_padding: D4ToD5Spacing,
+        section_margin: D4ToD5Spacing,
+        section_padding: D4ToD5Spacing,
+        section_title_padding: D4ToD5Spacing,
+        section_description_padding: D4ToD5Spacing,
+        progress_margin: D4ToD5Spacing,
+        progress_padding: D4ToD5Spacing,
+        confirm_margin: D4ToD5Spacing,
+        confirm_padding: D4ToD5Spacing,
+        error_box_global_margin: D4ToD5Spacing,
+        error_box_global_padding: D4ToD5Spacing,
+        error_box_margin: D4ToD5Spacing,
+        error_box_padding: D4ToD5Spacing,
+        time_input_margin: D4ToD5Spacing,
+        time_input_padding: D4ToD5Spacing,
+        time_select_margin: D4ToD5Spacing,
+        time_select_padding: D4ToD5Spacing
     }
 }
 };

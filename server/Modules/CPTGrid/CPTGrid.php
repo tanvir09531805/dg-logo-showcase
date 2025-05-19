@@ -2,10 +2,10 @@
 /**
  * CPTGrid Module class.
  *
- * @package DIVIFLASH5\Modules\CPTGrid;
+ * @package DIFL\Server\Modules\CPTGrid;
  */
 
-namespace DIVIFLASH5\Modules\CPTGrid;
+namespace DIFL\Server\Modules\CPTGrid;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class CPTGrid
  *
- * @package DIVIFLASH5\Modules\CPTGrid
+ * @package DIFL\Server\Modules\CPTGrid
  */
 class CPTGrid implements DependencyInterface {
 

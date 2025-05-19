@@ -2,10 +2,10 @@
 /**
  * SocialShare Module class.
  *
- * @package DIVIFLASH5\Modules\SocialShare;
+ * @package DIFL\Server\Modules\SocialShare;
  */
 
-namespace DIVIFLASH5\Modules\SocialShare;
+namespace DIFL\Server\Modules\SocialShare;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class SocialShare
  *
- * @package DIVIFLASH5\Modules\SocialShare
+ * @package DIFL\Server\Modules\SocialShare
  */
 class SocialShare implements DependencyInterface {
 

@@ -2,10 +2,10 @@
 /**
  * AdvancedTabs Module class.
  *
- * @package DIVIFLASH5\Modules\AdvancedTabs;
+ * @package DIFL\Server\Modules\AdvancedTabs;
  */
 
-namespace DIVIFLASH5\Modules\AdvancedTabs;
+namespace DIFL\Server\Modules\AdvancedTabs;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class AdvancedTabs
  *
- * @package DIVIFLASH5\Modules\AdvancedTabs
+ * @package DIFL\Server\Modules\AdvancedTabs
  */
 class AdvancedTabs implements DependencyInterface {
 

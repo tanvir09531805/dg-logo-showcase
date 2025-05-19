@@ -2,7 +2,7 @@ const convertInlineValue = (value) => {
   return _.isString(value) ? value.split(',') : [];
 };
 
-const convertIcon = (value) => {
+const D4ToD5Icon = (value) => {
   value = value.split('|');
   value = {
     unicode: value[0],
@@ -12,7 +12,7 @@ const convertIcon = (value) => {
   return value;
 };
 
-const convertSpacing = (value) => {
+const D4ToD5Spacing = (value) => {
   value = value.split('|');
   value = {
     top: value[0],
@@ -83,14 +83,14 @@ export const conversionOutline = {
         suffix_background: "suffix_background.innerContent.*"
     },
     valueExpansionFunctionMap: {
-        heading_margin: convertSpacing,
-        heading_padding: convertSpacing,
-        prefix_margin: convertSpacing,
-        prefix_padding: convertSpacing,
-        infix_margin: convertSpacing,
-        infix_padding: convertSpacing,
-        suffix_margin: convertSpacing,
-        suffix_padding: convertSpacing
+        heading_margin: D4ToD5Spacing,
+        heading_padding: D4ToD5Spacing,
+        prefix_margin: D4ToD5Spacing,
+        prefix_padding: D4ToD5Spacing,
+        infix_margin: D4ToD5Spacing,
+        infix_padding: D4ToD5Spacing,
+        suffix_margin: D4ToD5Spacing,
+        suffix_padding: D4ToD5Spacing
     }
 }
 };

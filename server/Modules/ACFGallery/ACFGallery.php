@@ -2,10 +2,10 @@
 /**
  * ACFGallery Module class.
  *
- * @package DIVIFLASH5\Modules\ACFGallery;
+ * @package DIFL\Server\Modules\ACFGallery;
  */
 
-namespace DIVIFLASH5\Modules\ACFGallery;
+namespace DIFL\Server\Modules\ACFGallery;
 
 if (!defined('ABSPATH')) {
     die('Direct access forbidden.');
@@ -24,7 +24,7 @@ use ET\Builder\Packages\ModuleLibrary\ModuleRegistration;
 /**
  * Class ACFGallery
  *
- * @package DIVIFLASH5\Modules\ACFGallery
+ * @package DIFL\Server\Modules\ACFGallery
  */
 class ACFGallery implements DependencyInterface {
 

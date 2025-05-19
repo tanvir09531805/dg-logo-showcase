@@ -1,29 +1,4 @@
-const convertInlineValue = (value) => {
-  return _.isString(value) ? value.split(',') : [];
-};
-
-const convertIcon = (value) => {
-  value = value.split('|');
-  value = {
-    unicode: value[0],
-    type: value[2],
-    weight: value[4],
-  };
-  return value;
-};
-
-const convertSpacing = (value) => {
-  value = value.split('|');
-  value = {
-    top: value[0],
-    right: value[1],
-    bottom: value[2],
-    left: value[3],
-    syncHorizontal: value[4],
-    syncVertical: value[5],
-  };
-  return value;
-};
+import { D4ToD5Background, D4ToD5Spacing, D4ToD5Icon } from "../../helper/conversion";
 
 export const conversionOutline = {
     module: {
@@ -119,16 +94,16 @@ export const conversionOutline = {
         caption_padding: "caption_padding.decoration.spacing.*.padding"
     },
     valueExpansionFunctionMap: {
-        arrow_prev_margin: convertSpacing,
-        arrow_prev_padding: convertSpacing,
-        arrow_next_margin: convertSpacing,
-        arrow_next_padding: convertSpacing,
-        wrapper_margin: convertSpacing,
-        wrapper_padding: convertSpacing,
-        item_wrapper_margin: convertSpacing,
-        item_wrapper_padding: convertSpacing,
-        caption_margin: convertSpacing,
-        caption_padding: convertSpacing
+        arrow_prev_margin: D4ToD5Spacing,
+        arrow_prev_padding: D4ToD5Spacing,
+        arrow_next_margin: D4ToD5Spacing,
+        arrow_next_padding: D4ToD5Spacing,
+        wrapper_margin: D4ToD5Spacing,
+        wrapper_padding: D4ToD5Spacing,
+        item_wrapper_margin: D4ToD5Spacing,
+        item_wrapper_padding: D4ToD5Spacing,
+        caption_margin: D4ToD5Spacing,
+        caption_padding: D4ToD5Spacing
     }
 }
 };
